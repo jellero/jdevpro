@@ -1,0 +1,213 @@
+%PDF-1.4
+%JDEVPRO
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 6 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+endobj
+7 0 obj
+<< /Length 7982 >>
+stream
+0.090 0.620 0.700 rg 0.00 0.00 220.00 842.00 re f
+BT /F2 10.00 Tf 1.000 1.000 1.000 rg 24.00 790.00 Td (CONTATTI) Tj ET
+0.800 0.950 0.960 RG 0.60 w 24.00 782.00 m 195.00 782.00 l S
+BT /F2 7.40 Tf 1.000 1.000 1.000 rg 24.00 764.00 Td (Localita) Tj ET
+BT /F1 7.20 Tf 1.000 1.000 1.000 rg 24.00 755.00 Td (Tolmezzo \(UD\), Italia) Tj ET
+BT /F2 7.40 Tf 1.000 1.000 1.000 rg 24.00 740.00 Td (Telefono) Tj ET
+BT /F1 7.20 Tf 1.000 1.000 1.000 rg 24.00 731.00 Td (+39 345 4656749) Tj ET
+BT /F2 7.40 Tf 1.000 1.000 1.000 rg 24.00 716.00 Td (Email) Tj ET
+BT /F1 7.20 Tf 1.000 1.000 1.000 rg 24.00 707.00 Td (j.ellero@gmail.com) Tj ET
+BT /F2 7.40 Tf 1.000 1.000 1.000 rg 24.00 692.00 Td (GitHub) Tj ET
+BT /F1 7.20 Tf 1.000 1.000 1.000 rg 24.00 683.00 Td (github.com/jellero) Tj ET
+BT /F2 7.40 Tf 1.000 1.000 1.000 rg 24.00 668.00 Td (LinkedIn) Tj ET
+BT /F1 7.20 Tf 1.000 1.000 1.000 rg 24.00 659.00 Td (linkedin.com/in/jacopo-ellero-a006499a) Tj ET
+BT /F2 9.40 Tf 1.000 1.000 1.000 rg 24.00 640.00 Td (PUNTI DI FORZA) Tj ET
+0.780 0.940 0.960 RG 0.50 w 24.00 636.00 m 194.00 636.00 l S
+BT /F2 8.30 Tf 1.000 1.000 1.000 rg 24.00 624.00 Td (Backend & API) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 613.50 Td (Servizi, REST API, integrazioni) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 604.50 Td (B2B/B2C) Tj ET
+BT /F2 8.30 Tf 1.000 1.000 1.000 rg 24.00 590.50 Td (Production Operations) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 580.00 Td (Linux, analisi log, hardening,) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 571.00 Td (troubleshooting) Tj ET
+BT /F2 8.30 Tf 1.000 1.000 1.000 rg 24.00 557.00 Td (Systems Integration) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 546.50 Td (Provider, clienti, fornitori,) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 537.50 Td (software terzi) Tj ET
+BT /F2 8.30 Tf 1.000 1.000 1.000 rg 24.00 523.50 Td (Data & Messaging) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 513.00 Td (PostgreSQL/MySQL, Redis, RabbitMQ) Tj ET
+BT /F2 8.30 Tf 1.000 1.000 1.000 rg 24.00 499.00 Td (Delivery) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 488.50 Td (Docker, CI/CD, deploy e rollback) Tj ET
+BT /F2 9.40 Tf 1.000 1.000 1.000 rg 24.00 474.50 Td (LINGUE) Tj ET
+0.780 0.940 0.960 RG 0.50 w 24.00 470.50 m 194.00 470.50 l S
+BT /F2 8.30 Tf 1.000 1.000 1.000 rg 24.00 458.50 Td (Italiano) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 448.00 Td (Madrelingua) Tj ET
+BT /F2 8.30 Tf 1.000 1.000 1.000 rg 24.00 434.00 Td (Inglese) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 423.50 Td (B1 - Intermedio) Tj ET
+BT /F2 27.00 Tf 0.050 0.070 0.090 rg 242.00 790.00 Td (JACOPO) Tj ET
+BT /F2 27.00 Tf 0.050 0.070 0.090 rg 242.00 759.00 Td (ELLERO) Tj ET
+BT /F2 11.20 Tf 0.090 0.620 0.700 rg 242.00 742.00 Td (SOFTWARE ENGINEER) Tj ET
+BT /F1 8.50 Tf 0.320 0.380 0.430 rg 242.00 730.00 Td (Backend | Systems Integration | Production Operations) Tj ET
+0.090 0.620 0.700 RG 1.00 w 242.00 720.00 m 570.00 720.00 l S
+BT /F2 10.20 Tf 0.090 0.620 0.700 rg 242.00 702.00 Td (PROFILO) Tj ET
+0.120 0.620 0.680 RG 0.90 w 242.00 697.00 m 570.00 697.00 l S
+BT /F1 8.20 Tf 0.050 0.070 0.090 rg 242.00 683.00 Td (Software Engineer con esperienza nello sviluppo backend, nelle) Tj ET
+BT /F1 8.20 Tf 0.050 0.070 0.090 rg 242.00 672.60 Td (integrazioni tra sistemi e nella gestione operativa di applicazioni in) Tj ET
+BT /F1 8.20 Tf 0.050 0.070 0.090 rg 242.00 662.20 Td (produzione. Lavoro tra codice, infrastruttura e processi aziendali:) Tj ET
+BT /F1 8.20 Tf 0.050 0.070 0.090 rg 242.00 651.80 Td (progetto API e servizi, integro piattaforme esterne, mantengo sistemi) Tj ET
+BT /F1 8.20 Tf 0.050 0.070 0.090 rg 242.00 641.40 Td (legacy critici e seguo il troubleshooting end-to-end. Mi interfaccio) Tj ET
+BT /F1 8.20 Tf 0.050 0.070 0.090 rg 242.00 631.00 Td (direttamente con business, clienti, fornitori e sviluppatori esterni,) Tj ET
+BT /F1 8.20 Tf 0.050 0.070 0.090 rg 242.00 620.60 Td (traducendo requisiti e problemi operativi in soluzioni tecniche) Tj ET
+BT /F1 8.20 Tf 0.050 0.070 0.090 rg 242.00 610.20 Td (verificabili.) Tj ET
+BT /F2 10.20 Tf 0.090 0.620 0.700 rg 242.00 591.80 Td (ESPERIENZA PROFESSIONALE) Tj ET
+0.120 0.620 0.680 RG 0.90 w 242.00 586.80 m 570.00 586.80 l S
+BT /F2 9.30 Tf 0.050 0.070 0.090 rg 242.00 572.80 Td (Space 1999 | Software Engineer - IT Operations & Integrations) Tj ET
+BT /F1 7.70 Tf 0.320 0.380 0.430 rg 242.00 562.30 Td (Giugno 2024 - Presente) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 244.00 552.30 Td (\225 Sviluppo e manutenzione di gestionali e servizi per operazioni) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 253.00 542.80 Td (B2B/e-commerce: cataloghi, ordini, acquisti, spedizioni, automazioni) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 253.00 533.30 Td (operative e integrazioni con marketplace, fornitori e corrieri.) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 244.00 521.80 Td (\225 Gestione tecnica di sistemi Linux in produzione e database ad alto) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 253.00 512.30 Td (volume: monitoraggio, analisi log, hardening, manutenzione, pulizia,) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 253.00 502.80 Td (troubleshooting e supporto ai rilasci.) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 244.00 491.30 Td (\225 Raccolta requisiti e confronto diretto con il business su) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 253.00 481.80 Td (aggiornamenti, correzioni e nuove integrazioni.) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 244.00 470.30 Td (\225 Coordinamento tecnico con clienti e fornitori internazionali su) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 253.00 460.80 Td (parametri, anomalie e problemi di integrazione.) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 244.00 449.30 Td (\225 Progettazione, documentazione e fornitura di API per l'accesso) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 253.00 439.80 Td (controllato ai sistemi gestionali.) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 244.00 428.30 Td (\225 Supporto ai colleghi nella diagnosi e risoluzione di problemi) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 253.00 418.80 Td (applicativi, infrastrutturali e operativi.) Tj ET
+BT /F2 9.30 Tf 0.050 0.070 0.090 rg 242.00 403.30 Td (Azienda di automazione industriale | Software Developer /) Tj ET
+BT /F2 9.30 Tf 0.050 0.070 0.090 rg 242.00 392.80 Td (Industrial Automation & IoT) Tj ET
+BT /F1 7.70 Tf 0.320 0.380 0.430 rg 242.00 382.30 Td (2022 - 2023) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 244.00 372.30 Td (\225 Sviluppo e integrazione di sistemi di automazione con PLC, software) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 253.00 362.80 Td (embedded in C, sensoristica e acquisizione/analisi dati.) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 244.00 351.30 Td (\225 Comunicazione industriale e IoT tramite RS-485, gateway seriali) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 253.00 341.80 Td (RS-485/MQTT, Wi-Fi e Bluetooth.) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 244.00 330.30 Td (\225 Integrazione machine-to-cloud e collegamento tra runtime CODESYS e) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 253.00 320.80 Td (server applicativi per scambio dati, comandi e sincronizzazione.) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 244.00 309.30 Td (\225 Troubleshooting, collaudo e messa in servizio di dispositivi, gateway) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 253.00 299.80 Td (e sistemi integrati.) Tj ET
+BT /F2 9.30 Tf 0.050 0.070 0.090 rg 242.00 284.30 Td (Experenti S.r.l. | Software Developer & IT Support) Tj ET
+BT /F1 7.70 Tf 0.320 0.380 0.430 rg 242.00 273.80 Td (2021 - 2022) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 244.00 263.80 Td (\225 Progettazione e sviluppo di API per applicazioni aziendali e) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 253.00 254.30 Td (realizzazione di un portale di automazione.) Tj ET
+BT /F1 7.60 Tf 0.050 0.070 0.090 rg 244.00 242.80 Td (\225 Supporto hardware, help desk e assistenza tecnica agli utenti.) Tj ET
+BT /F1 6.50 Tf 0.320 0.380 0.430 rg 250.00 18.00 Td (Jacopo Ellero | Curriculum Vitae | aggiornato ottobre 2026) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Length 7953 >>
+stream
+0.090 0.620 0.700 rg 0.00 0.00 220.00 842.00 re f
+BT /F2 9.40 Tf 1.000 1.000 1.000 rg 24.00 790.00 Td (STACK TECNICO) Tj ET
+0.780 0.940 0.960 RG 0.50 w 24.00 786.00 m 194.00 786.00 l S
+BT /F2 8.30 Tf 1.000 1.000 1.000 rg 24.00 774.00 Td (Linguaggi) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 763.50 Td (PHP | Python | Go |) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 754.50 Td (JavaScript/TypeScript | C/C++ |) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 745.50 Td (Kotlin) Tj ET
+BT /F2 8.30 Tf 1.000 1.000 1.000 rg 24.00 731.50 Td (Backend) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 721.00 Td (Django/DRF | FastAPI | Symfony) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 712.00 Td (components | REST APIs) Tj ET
+BT /F2 8.30 Tf 1.000 1.000 1.000 rg 24.00 698.00 Td (Database) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 687.50 Td (PostgreSQL | MySQL/MariaDB | MSSQL |) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 678.50 Td (SQLite) Tj ET
+BT /F2 8.30 Tf 1.000 1.000 1.000 rg 24.00 664.50 Td (Messaging & async) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 654.00 Td (RabbitMQ | Redis | Celery | MQTT) Tj ET
+BT /F2 8.30 Tf 1.000 1.000 1.000 rg 24.00 640.00 Td (Infra & DevOps) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 629.50 Td (Linux/Ubuntu | Nginx | PHP-FPM |) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 620.50 Td (Docker/Compose | Git) Tj ET
+BT /F2 8.30 Tf 1.000 1.000 1.000 rg 24.00 606.50 Td (CI & qualita) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 596.00 Td (GitHub Actions | Azure DevOps |) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 587.00 Td (PHPUnit/pytest | PHPStan | test di) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 578.00 Td (integrazione) Tj ET
+BT /F2 8.30 Tf 1.000 1.000 1.000 rg 24.00 564.00 Td (Sicurezza) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 553.50 Td (Hardening | gestione segreti | OWASP) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 544.50 Td (| audit | backup/recovery) Tj ET
+BT /F2 8.30 Tf 1.000 1.000 1.000 rg 24.00 530.50 Td (Industrial & IoT) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 520.00 Td (RS-485 | MQTT | PLC/CODESYS | Wi-Fi) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 511.00 Td (| Bluetooth/BLE | Modbus | OBD-II |) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 502.00 Td (HTTP/HTTPS) Tj ET
+BT /F2 9.40 Tf 1.000 1.000 1.000 rg 24.00 488.00 Td (FORMAZIONE) Tj ET
+0.780 0.940 0.960 RG 0.50 w 24.00 484.00 m 194.00 484.00 l S
+BT /F2 8.30 Tf 1.000 1.000 1.000 rg 24.00 472.00 Td (Perito Industriale per l'Informatica) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 461.50 Td (ITI Galileo Galilei - Gorizia |) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 452.50 Td (2001-2004) Tj ET
+BT /F2 8.30 Tf 1.000 1.000 1.000 rg 24.00 438.50 Td (Studi universitari in ambito ICT) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 428.00 Td (Percorso non concluso: 120/180 CFU,) Tj ET
+BT /F1 7.50 Tf 1.000 1.000 1.000 rg 24.00 419.00 Td (18/26 esami) Tj ET
+BT /F2 10.20 Tf 0.090 0.620 0.700 rg 242.00 790.00 Td (ESPERIENZE PRECEDENTI) Tj ET
+0.120 0.620 0.680 RG 0.90 w 242.00 785.00 m 570.00 785.00 l S
+BT /F2 9.20 Tf 0.050 0.070 0.090 rg 242.00 771.00 Td (Coworking "Artu Servizi Creativi" | Full Stack Developer & IT Operations) Tj ET
+BT /F1 7.60 Tf 0.320 0.380 0.430 rg 242.00 760.00 Td (2014 - 2020) Tj ET
+BT /F1 7.50 Tf 0.050 0.070 0.090 rg 244.00 750.00 Td (\225 Sviluppo e manutenzione di siti web ed e-commerce; gestione) Tj ET
+BT /F1 7.50 Tf 0.050 0.070 0.090 rg 253.00 740.62 Td (dell'infrastruttura IT aziendale.) Tj ET
+BT /F1 7.50 Tf 0.050 0.070 0.090 rg 244.00 729.25 Td (\225 Supporto software/hardware e assistenza tecnica generale.) Tj ET
+BT /F2 9.20 Tf 0.050 0.070 0.090 rg 242.00 711.88 Td (Docenza di Informatica | Docente) Tj ET
+BT /F1 7.60 Tf 0.320 0.380 0.430 rg 242.00 700.88 Td (2009 - 2013) Tj ET
+BT /F1 7.50 Tf 0.050 0.070 0.090 rg 244.00 690.88 Td (\225 Corsi base e avanzati su strumenti e concetti informatici; supporto) Tj ET
+BT /F1 7.50 Tf 0.050 0.070 0.090 rg 253.00 681.50 Td (agli studenti.) Tj ET
+BT /F2 10.20 Tf 0.090 0.620 0.700 rg 242.00 664.12 Td (PROGETTI TECNICI SELEZIONATI) Tj ET
+0.120 0.620 0.680 RG 0.90 w 242.00 659.12 m 570.00 659.12 l S
+BT /F2 8.50 Tf 0.050 0.070 0.090 rg 242.00 645.12 Td (Welora / Welora Automation - PHP 8.4, Go, PostgreSQL, Redis, RabbitMQ,) Tj ET
+BT /F2 8.50 Tf 0.050 0.070 0.090 rg 242.00 635.62 Td (Docker) Tj ET
+BT /F1 7.50 Tf 0.050 0.070 0.090 rg 242.00 626.12 Td (Piattaforma gestionale multi-tenant con motore event-driven separato:) Tj ET
+BT /F1 7.50 Tf 0.050 0.070 0.090 rg 242.00 616.73 Td (contratti versionati, transactional outbox, idempotenza, job durevoli,) Tj ET
+BT /F1 7.50 Tf 0.050 0.070 0.090 rg 242.00 607.33 Td (osservabilita e test end-to-end cross-service.) Tj ET
+BT /F2 8.50 Tf 0.050 0.070 0.090 rg 242.00 591.93 Td (HAPA / HAPA Automation per Space 1999 - PHP, PostgreSQL, RabbitMQ,) Tj ET
+BT /F2 8.50 Tf 0.050 0.070 0.090 rg 242.00 582.43 Td (Docker) Tj ET
+BT /F1 7.50 Tf 0.050 0.070 0.090 rg 242.00 572.93 Td (Sistema per cataloghi, ordini, acquisti e spedizioni con integrazioni) Tj ET
+BT /F1 7.50 Tf 0.050 0.070 0.090 rg 242.00 563.53 Td (marketplace, fornitori e corrieri; adapter esterni, retry/backoff,) Tj ET
+BT /F1 7.50 Tf 0.050 0.070 0.090 rg 242.00 554.13 Td (riconciliazione, secret storage e configurazione versionata.) Tj ET
+BT /F2 8.50 Tf 0.050 0.070 0.090 rg 242.00 538.73 Td (JD Industry - PHP, MariaDB, REST API) Tj ET
+BT /F1 7.50 Tf 0.050 0.070 0.090 rg 242.00 529.23 Td (Soluzioni per piu aziende manifatturiere: gestione commesse, integrazione) Tj ET
+BT /F1 7.50 Tf 0.050 0.070 0.090 rg 242.00 519.83 Td (macchine industriali, API, polling e scheduler, raccolta dati di) Tj ET
+BT /F1 7.50 Tf 0.050 0.070 0.090 rg 242.00 510.43 Td (produzione/allarmi, riconciliazione e reportistica.) Tj ET
+BT /F2 8.50 Tf 0.050 0.070 0.090 rg 242.00 495.03 Td (AKIOS Kernel - C, CMake, embedded security) Tj ET
+BT /F1 7.50 Tf 0.050 0.070 0.090 rg 242.00 485.53 Td (Firmware layer per BK7238 con verifica crittografica degli aggiornamenti,) Tj ET
+BT /F1 7.50 Tf 0.050 0.070 0.090 rg 242.00 476.13 Td (storage A/B, trial/rollback, recovery locale e protezione anti-brick.) Tj ET
+BT /F2 8.50 Tf 0.050 0.070 0.090 rg 242.00 460.73 Td (Sentry Bee / Vehylo - C, FastAPI, MQTT, Kotlin, Android) Tj ET
+BT /F1 7.50 Tf 0.050 0.070 0.090 rg 242.00 451.23 Td (R&D su sensori, telemetria e acquisizione dati: anomaly detection, MQTT,) Tj ET
+BT /F1 7.50 Tf 0.050 0.070 0.090 rg 242.00 441.83 Td (diagnostica OBD-II/BLE e mapping dinamico dei segnali.) Tj ET
+BT /F2 10.20 Tf 0.090 0.620 0.700 rg 242.00 426.43 Td (COMPETENZE TRASVERSALI) Tj ET
+0.120 0.620 0.680 RG 0.90 w 242.00 421.43 m 570.00 421.43 l S
+BT /F2 8.20 Tf 0.090 0.620 0.700 rg 242.00 407.43 Td (Integrazione & operations:) Tj ET
+BT /F1 7.40 Tf 0.050 0.070 0.090 rg 242.00 397.93 Td (API, gestionali, provider e dispositivi; incident analysis, logging,) Tj ET
+BT /F1 7.40 Tf 0.050 0.070 0.090 rg 242.00 388.73 Td (hardening e continuita operativa.) Tj ET
+BT /F2 8.20 Tf 0.090 0.620 0.700 rg 242.00 375.53 Td (Architettura & qualita:) Tj ET
+BT /F1 7.40 Tf 0.050 0.070 0.090 rg 242.00 366.03 Td (Sistemi modulari ed event-driven, affidabilita delle integrazioni,) Tj ET
+BT /F1 7.40 Tf 0.050 0.070 0.090 rg 242.00 356.83 Td (idempotenza, testing, CI, code review e documentazione tecnica.) Tj ET
+BT /F2 8.20 Tf 0.090 0.620 0.700 rg 242.00 343.63 Td (Interfaccia business & coordinamento:) Tj ET
+BT /F1 7.40 Tf 0.050 0.070 0.090 rg 242.00 334.13 Td (Raccolta requisiti, traduzione tecnica e coordinamento con clienti,) Tj ET
+BT /F1 7.40 Tf 0.050 0.070 0.090 rg 242.00 324.93 Td (fornitori, colleghi e sviluppatori esterni.) Tj ET
+BT /F1 6.70 Tf 0.320 0.380 0.430 rg 242.00 45.00 Td (Autorizzo il trattamento dei dati personali ai sensi del Regolamento UE 2016/679 \(GDPR\).) Tj ET
+BT /F1 6.50 Tf 0.320 0.380 0.430 rg 250.00 18.00 Td (Jacopo Ellero | Curriculum Vitae | aggiornato ottobre 2026) Tj ET
+endstream
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000018 00000 n 
+0000000067 00000 n 
+0000000130 00000 n 
+0000000227 00000 n 
+0000000329 00000 n 
+0000000465 00000 n 
+0000000601 00000 n 
+0000008634 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+16638
+%%EOF
