@@ -1,65 +1,49 @@
-/* Brand visibility */
+/* JDEVPRO brand: preserve the supplied logo exactly, without crop/stretch */
 .brand {
   width: 150px;
   height: 58px;
-  overflow: hidden;
-  border-radius: 10px;
+  overflow: visible;
+  border-radius: 0;
   flex: 0 0 auto;
 }
 .brand-logo {
   width: 100% !important;
   height: 100% !important;
   max-width: none !important;
-  object-fit: cover !important;
-  object-position: center 54% !important;
+  object-fit: contain !important;
+  object-position: center !important;
   display: block;
 }
 .hero-brand-logo {
   display: block !important;
-  width: min(590px, 92vw) !important;
-  aspect-ratio: 1.965 / 1 !important;
-  overflow: hidden !important;
+  width: min(620px, 92vw) !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  overflow: visible !important;
   margin: 0 0 30px !important;
-  border-radius: 18px !important;
-  background: #000 !important;
-  box-shadow: 0 24px 70px rgba(0,0,0,.34) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
 }
 .hero-brand-logo img {
   width: 100% !important;
-  height: 100% !important;
+  height: auto !important;
   max-width: none !important;
-  object-fit: cover !important;
-  object-position: center 54% !important;
+  object-fit: contain !important;
+  object-position: center !important;
   border-radius: 0 !important;
   box-shadow: none !important;
 }
 
-/* Secondary showcase projects: same visual language, no dump/list section */
-.showcase-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap: 18px;
-  margin-top: 18px;
-}
-.showcase-card {
-  min-height: 255px;
-  background:
-    radial-gradient(circle at 90% 10%, rgba(86,200,255,.09), transparent 35%),
-    rgba(255,255,255,.035);
-}
-.showcase-card .project-meta span:first-child { color: var(--cyan); }
-.showcase-card h3 { font-size: 1.7rem; }
-.showcase-card .card-link { margin-top: auto; padding-top: 24px; }
-
+/* Web projects use the same project-card hierarchy as every other public project. */
 @media (max-width: 900px) {
   .brand { width: 132px; height: 52px; }
-  .hero-brand-logo { width: min(520px, 92vw) !important; }
+  .hero-brand-logo { width: min(560px, 92vw) !important; }
 }
 @media (max-width: 760px) {
-  .brand { width: 118px; height: 46px; }
+  .brand { width: 112px; height: 46px; }
   .hero-brand-logo {
     width: min(430px, 92vw) !important;
     margin-bottom: 22px !important;
   }
-  .showcase-grid { grid-template-columns: 1fr; }
 }
