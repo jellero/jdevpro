@@ -1,0 +1,139 @@
+name: Apply JDEVPRO branding and AKIOS
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/brand-akios-update.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply branding and AKIOS prominence
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import base64, re
+
+          LOGO_B64 = '''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'''
+          asset = Path('assets/logo-jdevpro.webp')
+          asset.parent.mkdir(parents=True, exist_ok=True)
+          asset.write_bytes(base64.b64decode(LOGO_B64))
+
+          cards = {
+            'index.html': '''<article class="featured-project reveal akios-featured">
+<div class="featured-copy">
+<div class="project-meta"><span>FLAGSHIP · IOT LIFECYCLE</span><span>AKIOS.CLOUD</span></div>
+<h3>AKIOS</h3>
+<p class="project-lead">Baseline di lifecycle on-device per vendor IoT: provisioning resiliente, OTA in trial con health gate, rollback e recovery deterministici, con tracciabilità operativa e senza imporre una migrazione cloud.</p>
+<p>Standardizza il livello di lifecycle tra famiglie di dispositivi e SoC mantenendo separati core invariants, system app aggiornabili e integrazioni vendor. Il percorso è incrementale: PoC su un device, pilot su una famiglia, rollout con profili hardware ed evidence pack.</p>
+<div class="tags"><span>IoT lifecycle</span><span>OTA</span><span>health gates</span><span>rollback</span><span>recovery</span><span>CRA / ETSI</span></div>
+<div class="project-actions"><a class="button light" href="https://akios.cloud/" rel="noreferrer" target="_blank">Apri AKIOS ↗</a></div>
+</div>
+<div aria-label="AKIOS lifecycle model" class="terminal">
+<div class="terminal-bar"><span></span><span></span><span></span><b>akios::lifecycle</b></div>
+<pre><code>$ lifecycle
+provision → trial → health
+failure   → rollback → recovery
+
+$ boundary
+device lifecycle  AKIOS
+cloud + product   vendor
+
+$ evidence
+logs → decisions → repeatable tests</code></pre>
+</div>
+</article>
+''',
+            'en.html': '''<article class="featured-project reveal akios-featured">
+<div class="featured-copy">
+<div class="project-meta"><span>FLAGSHIP · IOT LIFECYCLE</span><span>AKIOS.CLOUD</span></div>
+<h3>AKIOS</h3>
+<p class="project-lead">An on-device lifecycle baseline for IoT vendors: resilient provisioning, health-gated trial OTA, deterministic rollback and recovery, with operational traceability and no forced cloud migration.</p>
+<p>It standardizes the lifecycle layer across device families and SoCs while keeping core invariants, transactionally updatable system apps and vendor integrations clearly separated. Adoption is incremental: device PoC, family pilot, then rollout with hardware profiles and evidence packs.</p>
+<div class="tags"><span>IoT lifecycle</span><span>OTA</span><span>health gates</span><span>rollback</span><span>recovery</span><span>CRA / ETSI</span></div>
+<div class="project-actions"><a class="button light" href="https://akios.cloud/" rel="noreferrer" target="_blank">Open AKIOS ↗</a></div>
+</div>
+<div aria-label="AKIOS lifecycle model" class="terminal">
+<div class="terminal-bar"><span></span><span></span><span></span><b>akios::lifecycle</b></div>
+<pre><code>$ lifecycle
+provision → trial → health
+failure   → rollback → recovery
+
+$ boundary
+device lifecycle  AKIOS
+cloud + product   vendor
+
+$ evidence
+logs → decisions → repeatable tests</code></pre>
+</div>
+</article>
+'''
+          }
+
+          for name in ('index.html', 'en.html'):
+              p = Path(name)
+              text = p.read_text(encoding='utf-8')
+
+              text = re.sub(
+                  r'<a aria-label="JDEVPRO home" class="brand" href="#top">\s*<span class="brand-mark">J</span>\s*<span>JDEVPRO</span>\s*</a>',
+                  '<a aria-label="JDEVPRO home" class="brand" href="#top"><img class="brand-logo" src="assets/logo-jdevpro.webp" alt="JDEVPRO"></a>',
+                  text,
+                  count=1,
+                  flags=re.S,
+              )
+
+              if 'class="hero-brand"' not in text:
+                  text = text.replace(
+                      '<div class="hero-copy reveal">',
+                      '<div class="hero-copy reveal">\n<a class="hero-brand" href="#top" aria-label="JDEVPRO"><img src="assets/logo-jdevpro.webp" alt="JDEVPRO"></a>',
+                      1,
+                  )
+
+              if '>AKIOS ↗</a>' not in text:
+                  marker = '<div aria-label="Profili esterni" class="hero-links">' if name == 'index.html' else '<div aria-label="External profiles" class="hero-links">'
+                  text = text.replace(marker, marker + '\n<a href="https://akios.cloud/" rel="noreferrer" target="_blank">AKIOS ↗</a>', 1)
+
+              if '<h3>AKIOS</h3>' not in text:
+                  text = text.replace('<article class="featured-project reveal">', cards[name] + '<article class="featured-project reveal">', 1)
+
+              footer_anchor = '<div><a href="privacy.html">Privacy</a>' if name == 'index.html' else '<div><a href="privacy-en.html">Privacy</a>'
+              if footer_anchor in text and 'footer-grid' in text and '>AKIOS</a>' not in text[text.rfind('<footer'):]:
+                  text = text.replace(footer_anchor, footer_anchor + '<a href="https://akios.cloud/" rel="noreferrer" target="_blank">AKIOS</a>', 1)
+
+              p.write_text(text, encoding='utf-8')
+
+          css = Path('styles.css')
+          c = css.read_text(encoding='utf-8')
+          if '.brand-logo {' not in c:
+              c += '''\n\n/* JDEVPRO identity + flagship project */
+.brand-logo { width: 174px; height: auto; display: block; object-fit: contain; }
+.hero-brand { display: inline-block; margin: 0 0 24px; text-decoration: none; }
+.hero-brand img { width: min(330px, 72vw); height: auto; display: block; filter: drop-shadow(0 14px 30px rgba(0,0,0,.28)); }
+.akios-featured { border-color: rgba(86,200,255,.22); background: radial-gradient(circle at 68% 30%, rgba(86,200,255,.10), transparent 28%), radial-gradient(circle at 20% 80%, rgba(45,212,191,.07), transparent 30%), var(--navy-2); }
+.featured-project + .featured-project { margin-top: 18px; }
+@media (max-width: 760px) {
+  .brand-logo { width: 145px; }
+  .hero-brand { margin-bottom: 18px; }
+  .hero-brand img { width: min(280px, 78vw); }
+}
+'''
+              css.write_text(c, encoding='utf-8')
+
+          # Remove this one-time workflow before committing the actual site change.
+          Path('.github/workflows/brand-akios-update.yml').unlink(missing_ok=True)
+          PY
+      - name: Commit changes
+        shell: bash
+        run: |
+          git config user.name "jellero"
+          git config user.email "j.ellero@gmail.com"
+          git add -A
+          git commit -m "Integrate JDEVPRO logo and feature AKIOS" || exit 0
+          git push
