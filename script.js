@@ -82,7 +82,7 @@
       logo.className = 'hero-brand-logo';
       logo.href = '#top';
       logo.setAttribute('aria-label', 'JDEVPRO');
-      logo.innerHTML = '<img src="assets/logo-jdevpro.webp" alt="JDEVPRO Developer">';
+      logo.innerHTML = '<img src="assets/logo-jdevpro.png" alt="JDEVPRO Developer">';
       heroCopy.prepend(logo);
     }
 
