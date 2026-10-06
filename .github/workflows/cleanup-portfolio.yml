@@ -1,0 +1,66 @@
+name: Cleanup portfolio
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/cleanup-portfolio.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Remove low-priority showcase cards and keep broader systems wording
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          def remove_card(text, title, filename):
+              marker = f'<h3>{title}</h3>'
+              idx = text.find(marker)
+              if idx == -1:
+                  raise SystemExit(f'Missing {title} in {filename}')
+              start = text.rfind('<article class="project-card reveal">', 0, idx)
+              end = text.find('</article>', idx)
+              if start == -1 or end == -1:
+                  raise SystemExit(f'Could not isolate {title} card in {filename}')
+              end += len('</article>')
+              while end < len(text) and text[end] in '\r\n':
+                  end += 1
+              return text[:start] + text[end:]
+
+          for filename in ('index.html', 'en.html'):
+              p = Path(filename)
+              text = p.read_text(encoding='utf-8')
+              text = remove_card(text, 'Bioapicoltura Pura', filename)
+              text = remove_card(text, 'Dream Studio Design', filename)
+              if '<span>CONNECTED SYSTEMS</span>' not in text or 'END-TO-END' not in text:
+                  raise SystemExit(f'Connected systems wording missing in {filename}')
+              if 'ARCHITECTURE VIEW' in text:
+                  raise SystemExit(f'Old architecture wording still present in {filename}')
+              p.write_text(text, encoding='utf-8')
+
+          p = Path('script.js')
+          text = p.read_text(encoding='utf-8')
+          start_marker = "    const bio = [...projectsSection.querySelectorAll('.more-links a')]"
+          end_marker = "    const footerLinks = document.querySelector('.footer-grid > div:last-child');"
+          start = text.find(start_marker)
+          if start != -1:
+              end = text.find(end_marker, start)
+              if end == -1:
+                  raise SystemExit('Could not isolate obsolete Bioapicoltura script block')
+              text = text[:start] + end_marker + text[end + len(end_marker):]
+              p.write_text(text, encoding='utf-8')
+          PY
+      - name: Commit cleanup and remove temporary workflow
+        run: |
+          git config user.name "jellero"
+          git config user.email "j.ellero@gmail.com"
+          git rm .github/workflows/cleanup-portfolio.yml
+          git add index.html en.html script.js
+          git commit -m "Refine portfolio focus and remove showcase cards"
+          git push
