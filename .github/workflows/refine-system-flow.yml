@@ -14,170 +14,34 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Replace hero integration card
+      - name: Replace integration card
+        env:
+          OLD_IT: PGRpdiBhcmlhLWxhYmVsPSJTaXN0ZW1pIGNvbm5lc3NpIEpERVZQUk8iIGNsYXNzPSJzeXN0ZW0tY2FyZCByZXZlYWwiPgo8ZGl2IGNsYXNzPSJzeXN0ZW0tY2FyZC1oZWFkIj4KPHNwYW4+Q09OTkVDVEVEIFNZU1RFTVM8L3NwYW4+CjxzcGFuIGNsYXNzPSJzdGF0dXMiPjxpPjwvaT4gRU5ELVRPLUVORDwvc3Bhbj4KPC9kaXY+CjxkaXYgY2xhc3M9InN5c3RlbS1kaWFncmFtIj4KPGRpdiBjbGFzcz0ibm9kZSBub2RlLWNvcmUiPgo8c21hbGw+Q09OVFJPTDwvc21hbGw+CjxzdHJvbmc+U29mdHdhcmUgJmFtcDsgQVBJPC9zdHJvbmc+CjxzcGFuPkJhY2tlbmQgwrcgRGF0YWJhc2UgwrcgQXV0b21hdGlvbjwvc3Bhbj4KPC9kaXY+CjxkaXYgY2xhc3M9ImNvbm5lY3Rpb24gYzEiPjwvZGl2Pgo8ZGl2IGNsYXNzPSJjb25uZWN0aW9uIGMyIj48L2Rpdj4KPGRpdiBjbGFzcz0iY29ubmVjdGlvbiBjMyI+PC9kaXY+CjxkaXYgY2xhc3M9Im5vZGUgbm9kZS1hIj48c21hbGw+T1Q8L3NtYWxsPjxzdHJvbmc+TWFjY2hpbmU8L3N0cm9uZz48c3Bhbj5QTEMgwrcgSE1JIMK3IFJTLTQ4NTwvc3Bhbj48L2Rpdj4KPGRpdiBjbGFzcz0ibm9kZSBub2RlLWIiPjxzbWFsbD5FREdFPC9zbWFsbD48c3Ryb25nPkRpc3Bvc2l0aXZpPC9zdHJvbmc+PHNwYW4+TVFUVCDCtyBCTEUgwrcgc2Vuc29yaTwvc3Bhbj48L2Rpdj4KPGRpdiBjbGFzcz0ibm9kZSBub2RlLWMiPjxzbWFsbD5PUFM8L3NtYWxsPjxzdHJvbmc+SW5mcmFzdHJ1dHR1cmE8L3N0cm9uZz48c3Bhbj5MaW51eCDCtyByZXRlIMK3IG1vbml0b3Jpbmc8L3NwYW4+PC9kaXY+CjwvZGl2Pgo8ZGl2IGNsYXNzPSJzeXN0ZW0tZm9vdGVyIj4KPHNwYW4+RGFsIGRhdG8gYWwgY29tYW5kby48L3NwYW4+CjxzcGFuPkRhbGxhIG1hY2NoaW5hIGFsIGNsb3VkLjwvc3Bhbj4KPC9kaXY+CjwvZGl2Pg==
+          NEW_IT: PGRpdiBhcmlhLWxhYmVsPSJJbnRlZ3JhemlvbmUgZW5kLXRvLWVuZCBKREVWUFJPIiBjbGFzcz0ic3lzdGVtLWNhcmQgc3lzdGVtLWZsb3ctY2FyZCByZXZlYWwiPgo8ZGl2IGNsYXNzPSJzeXN0ZW0tZmxvdy1pbnRybyI+CjxwIGNsYXNzPSJzeXN0ZW0tZmxvdy1raWNrZXIiPklOVEVHUkFaSU9ORSBFTkQtVE8tRU5EPC9wPgo8aDI+U29mdHdhcmUsIG1hY2NoaW5lLCBkaXNwb3NpdGl2aSBlIGluZnJhc3RydXR0dXJhLjwvaDI+CjxwPlByb2dldHRvIGlsIGNvbGxlZ2FtZW50byB0cmEgaSBsaXZlbGxpLCBub24gc29sdGFudG8gaWwgc2luZ29sbyBjb21wb25lbnRlLjwvcD4KPC9kaXY+CjxkaXYgY2xhc3M9InN5c3RlbS1mbG93LWxpc3QiPgo8ZGl2IGNsYXNzPSJzeXN0ZW0tZmxvdy1yb3ciPjxzbWFsbD5TT0ZUV0FSRTwvc21hbGw+PHN0cm9uZz5CYWNrZW5kIMK3IEFQSSDCtyBEYXRhYmFzZSDCtyBBdXRvbWF6aW9uaTwvc3Ryb25nPjwvZGl2Pgo8ZGl2IGNsYXNzPSJzeXN0ZW0tZmxvdy1yb3ciPjxzbWFsbD5JTkRVU1RSSUE8L3NtYWxsPjxzdHJvbmc+UExDIMK3IEhNSSDCtyBDT0RFU1lTIMK3IFJTLTQ4NTwvc3Ryb25nPjwvZGl2Pgo8ZGl2IGNsYXNzPSJzeXN0ZW0tZmxvdy1yb3ciPjxzbWFsbD5FREdFIC8gSW9UPC9zbWFsbD48c3Ryb25nPk1RVFQgwrcgQkxFIMK3IFNlbnNvcmkgwrcgR2F0ZXdheTwvc3Ryb25nPjwvZGl2Pgo8ZGl2IGNsYXNzPSJzeXN0ZW0tZmxvdy1yb3ciPjxzbWFsbD5PUFM8L3NtYWxsPjxzdHJvbmc+TGludXggwrcgUmV0ZSDCtyBNb25pdG9yaW5nIMK3IENsb3VkPC9zdHJvbmc+PC9kaXY+CjwvZGl2Pgo8cCBjbGFzcz0ic3lzdGVtLWZsb3ctZm9vdGVyIj5EYXRpLCBjb21hbmRpIGUgc3RhdG8gYXR0cmF2ZXJzYW5vIGwnaW50ZXJvIHNpc3RlbWEuPC9wPgo8L2Rpdj4=
+          OLD_EN: PGRpdiBhcmlhLWxhYmVsPSJKREVWUFJPIGNvbm5lY3RlZCBzeXN0ZW1zIiBjbGFzcz0ic3lzdGVtLWNhcmQgcmV2ZWFsIj4KPGRpdiBjbGFzcz0ic3lzdGVtLWNhcmQtaGVhZCI+CjxzcGFuPkNPTk5FQ1RFRCBTWVNURU1TPC9zcGFuPgo8c3BhbiBjbGFzcz0ic3RhdHVzIj48aT48L2k+IEVORC1UTy1FTkQ8L3NwYW4+CjwvZGl2Pgo8ZGl2IGNsYXNzPSJzeXN0ZW0tZGlhZ3JhbSI+CjxkaXYgY2xhc3M9Im5vZGUgbm9kZS1jb3JlIj4KPHNtYWxsPkNPTlRST0w8L3NtYWxsPgo8c3Ryb25nPlNvZnR3YXJlICZhbXA7IEFQSTwvc3Ryb25nPgo8c3Bhbj5CYWNrZW5kIMK3IERhdGFiYXNlIMK3IEF1dG9tYXRpb248L3NwYW4+CjwvZGl2Pgo8ZGl2IGNsYXNzPSJjb25uZWN0aW9uIGMxIj48L2Rpdj4KPGRpdiBjbGFzcz0iY29ubmVjdGlvbiBjMiI+PC9kaXY+CjxkaXYgY2xhc3M9ImNvbm5lY3Rpb24gYzMiPjwvZGl2Pgo8ZGl2IGNsYXNzPSJub2RlIG5vZGUtYSI+PHNtYWxsPk9UPC9zbWFsbD48c3Ryb25nPk1hY2hpbmVzPC9zdHJvbmc+PHNwYW4+UExDIMK3IEhNSSDCtyBSUy00ODU8L3NwYW4+PC9kaXY+CjxkaXYgY2xhc3M9Im5vZGUgbm9kZS1iIj48c21hbGw+RURHRTwvc21hbGw+PHN0cm9uZz5EZXZpY2VzPC9zdHJvbmc+PHNwYW4+TVFUVCDCtyBCTEUgwrcgc2Vuc29yczwvc3Bhbj48L2Rpdj4KPGRpdiBjbGFzcz0ibm9kZSBub2RlLWMiPjxzbWFsbD5PUFM8L3NtYWxsPjxzdHJvbmc+SW5mcmFzdHJ1Y3R1cmU8L3N0cm9uZz48c3Bhbj5MaW51eCDCtyBuZXR3b3JraW5nIMK3IG1vbml0b3Jpbmc8L3NwYW4+PC9kaXY+CjwvZGl2Pgo8ZGl2IGNsYXNzPSJzeXN0ZW0tZm9vdGVyIj4KPHNwYW4+RnJvbSBkYXRhIHRvIGNvbW1hbmQuPC9zcGFuPgo8c3Bhbj5Gcm9tIG1hY2hpbmUgdG8gY2xvdWQuPC9zcGFuPgo8L2Rpdj4KPC9kaXY+
+          NEW_EN: PGRpdiBhcmlhLWxhYmVsPSJKREVWUFJPIGVuZC10by1lbmQgaW50ZWdyYXRpb24iIGNsYXNzPSJzeXN0ZW0tY2FyZCBzeXN0ZW0tZmxvdy1jYXJkIHJldmVhbCI+CjxkaXYgY2xhc3M9InN5c3RlbS1mbG93LWludHJvIj4KPHAgY2xhc3M9InN5c3RlbS1mbG93LWtpY2tlciI+RU5ELVRPLUVORCBJTlRFR1JBVElPTjwvcD4KPGgyPlNvZnR3YXJlLCBtYWNoaW5lcywgZGV2aWNlcyBhbmQgaW5mcmFzdHJ1Y3R1cmUuPC9oMj4KPHA+SSBkZXNpZ24gdGhlIGNvbm5lY3Rpb24gYmV0d2VlbiBsYXllcnMsIG5vdCBqdXN0IHRoZSBpbmRpdmlkdWFsIGNvbXBvbmVudC48L3A+CjwvZGl2Pgo8ZGl2IGNsYXNzPSJzeXN0ZW0tZmxvdy1saXN0Ij4KPGRpdiBjbGFzcz0ic3lzdGVtLWZsb3ctcm93Ij48c21hbGw+U09GVFdBUkU8L3NtYWxsPjxzdHJvbmc+QmFja2VuZCDCtyBBUElzIMK3IERhdGFiYXNlcyDCtyBBdXRvbWF0aW9uPC9zdHJvbmc+PC9kaXY+CjxkaXYgY2xhc3M9InN5c3RlbS1mbG93LXJvdyI+PHNtYWxsPklORFVTVFJZPC9zbWFsbD48c3Ryb25nPlBMQyDCtyBITUkgwrcgQ09ERVNZUyDCtyBSUy00ODU8L3N0cm9uZz48L2Rpdj4KPGRpdiBjbGFzcz0ic3lzdGVtLWZsb3ctcm93Ij48c21hbGw+RURHRSAvIElvVDwvc21hbGw+PHN0cm9uZz5NUVRUIMK3IEJMRSDCtyBTZW5zb3JzIMK3IEdhdGV3YXlzPC9zdHJvbmc+PC9kaXY+CjxkaXYgY2xhc3M9InN5c3RlbS1mbG93LXJvdyI+PHNtYWxsPk9QUzwvc21hbGw+PHN0cm9uZz5MaW51eCDCtyBOZXR3b3JraW5nIMK3IE1vbml0b3JpbmcgwrcgQ2xvdWQ8L3N0cm9uZz48L2Rpdj4KPC9kaXY+CjxwIGNsYXNzPSJzeXN0ZW0tZmxvdy1mb290ZXIiPkRhdGEsIGNvbW1hbmRzIGFuZCBzdGF0ZSBtb3ZlIGFjcm9zcyB0aGUgd2hvbGUgc3lzdGVtLjwvcD4KPC9kaXY+
+          FLOW_CSS: Ci8qIFN5c3RlbSBpbnRlZ3JhdGlvbiBjYXJkIHYyICovCi5zeXN0ZW0tZmxvdy1jYXJkIHsKICBwYWRkaW5nOiAzMHB4OwogIG92ZXJmbG93OiBoaWRkZW47CiAgYmFja2dyb3VuZDoKICAgIHJhZGlhbC1ncmFkaWVudChjaXJjbGUgYXQgMTAwJSAwJSwgcmdiYSg0NSwyMTIsMTkxLC4xMiksIHRyYW5zcGFyZW50IDM0JSksCiAgICBsaW5lYXItZ3JhZGllbnQoMTQ1ZGVnLCByZ2JhKDI1NSwyNTUsMjU1LC4wNyksIHJnYmEoMjU1LDI1NSwyNTUsLjAyNSkpOwp9Ci5zeXN0ZW0tZmxvdy1pbnRybyB7IG1heC13aWR0aDogNTIwcHg7IH0KLnN5c3RlbS1mbG93LWtpY2tlciB7CiAgbWFyZ2luOiAwIDAgMTJweDsKICBjb2xvcjogdmFyKC0tdGVhbCk7CiAgZm9udDogODAwIC42OHJlbS8xLjIgdWktbW9ub3NwYWNlLCBTRk1vbm8tUmVndWxhciwgTWVubG8sIG1vbm9zcGFjZTsKICBsZXR0ZXItc3BhY2luZzogLjE0ZW07Cn0KLnN5c3RlbS1mbG93LWNhcmQgaDIgewogIG1hcmdpbjogMDsKICBjb2xvcjogI2ZmZjsKICBmb250LXNpemU6IGNsYW1wKDEuNjVyZW0sIDIuOHZ3LCAyLjM1cmVtKTsKICBsaW5lLWhlaWdodDogMS4wODsKICBsZXR0ZXItc3BhY2luZzogLS4wMzVlbTsKfQouc3lzdGVtLWZsb3ctaW50cm8gPiBwOmxhc3QtY2hpbGQgewogIG1hcmdpbjogMTRweCAwIDA7CiAgY29sb3I6ICM5MWE3Yjc7CiAgZm9udC1zaXplOiAuOXJlbTsKICBsaW5lLWhlaWdodDogMS41NTsKfQouc3lzdGVtLWZsb3ctbGlzdCB7CiAgZGlzcGxheTogZ3JpZDsKICBnYXA6IDhweDsKICBtYXJnaW4tdG9wOiAyOHB4Owp9Ci5zeXN0ZW0tZmxvdy1yb3cgewogIGRpc3BsYXk6IGdyaWQ7CiAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiA5MnB4IDFmcjsKICBnYXA6IDE0cHg7CiAgYWxpZ24taXRlbXM6IGNlbnRlcjsKICBwYWRkaW5nOiAxM3B4IDE0cHg7CiAgYm9yZGVyOiAxcHggc29saWQgcmdiYSgyNTUsMjU1LDI1NSwuMDkpOwogIGJvcmRlci1yYWRpdXM6IDEycHg7CiAgYmFja2dyb3VuZDogcmdiYSg1LDE1LDI3LC41Nik7Cn0KLnN5c3RlbS1mbG93LXJvdyBzbWFsbCB7CiAgY29sb3I6IHZhcigtLXRlYWwpOwogIGZvbnQ6IDgwMCAuNnJlbS8xLjIgdWktbW9ub3NwYWNlLCBTRk1vbm8tUmVndWxhciwgTWVubG8sIG1vbm9zcGFjZTsKICBsZXR0ZXItc3BhY2luZzogLjFlbTsKfQouc3lzdGVtLWZsb3ctcm93IHN0cm9uZyB7CiAgY29sb3I6ICNkOGUzZWE7CiAgZm9udC1zaXplOiAuNzZyZW07CiAgbGluZS1oZWlnaHQ6IDEuMzU7CiAgZm9udC13ZWlnaHQ6IDY1MDsKfQouc3lzdGVtLWZsb3ctZm9vdGVyIHsKICBtYXJnaW46IDIwcHggMCAwOwogIHBhZGRpbmctdG9wOiAxN3B4OwogIGJvcmRlci10b3A6IDFweCBzb2xpZCByZ2JhKDI1NSwyNTUsMjU1LC4wOSk7CiAgY29sb3I6ICM3Zjk1YTU7CiAgZm9udDogNjAwIC42OHJlbS8xLjQgdWktbW9ub3NwYWNlLCBTRk1vbm8tUmVndWxhciwgTWVubG8sIG1vbm9zcGFjZTsKfQpAbWVkaWEgKG1heC13aWR0aDogNzYwcHgpIHsKICAuc3lzdGVtLWZsb3ctY2FyZCB7IHBhZGRpbmc6IDIycHg7IH0KICAuc3lzdGVtLWZsb3ctcm93IHsgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnI7IGdhcDogNXB4OyB9CiAgLnN5c3RlbS1mbG93LXJvdyBzdHJvbmcgeyBmb250LXNpemU6IC44cmVtOyB9Cn0K
         run: |
           python - <<'PY'
+          import base64, os
           from pathlib import Path
-
-          replacements = {
-            'index.html': (
-'''<div aria-label="Sistemi connessi JDEVPRO" class="system-card reveal">
-<div class="system-card-head">
-<span>CONNECTED SYSTEMS</span>
-<span class="status"><i></i> END-TO-END</span>
-</div>
-<div class="system-diagram">
-<div class="node node-core">
-<small>CONTROL</small>
-<strong>Software &amp; API</strong>
-<span>Backend · Database · Automation</span>
-</div>
-<div class="connection c1"></div>
-<div class="connection c2"></div>
-<div class="connection c3"></div>
-<div class="node node-a"><small>OT</small><strong>Macchine</strong><span>PLC · HMI · RS-485</span></div>
-<div class="node node-b"><small>EDGE</small><strong>Dispositivi</strong><span>MQTT · BLE · sensori</span></div>
-<div class="node node-c"><small>OPS</small><strong>Infrastruttura</strong><span>Linux · rete · monitoring</span></div>
-</div>
-<div class="system-footer">
-<span>Dal dato al comando.</span>
-<span>Dalla macchina al cloud.</span>
-</div>
-</div>''',
-'''<div aria-label="Integrazione end-to-end JDEVPRO" class="system-card system-flow-card reveal">
-<div class="system-flow-intro">
-<p class="system-flow-kicker">INTEGRAZIONE END-TO-END</p>
-<h2>Software, macchine, dispositivi e infrastruttura.</h2>
-<p>Progetto il collegamento tra i livelli, non soltanto il singolo componente.</p>
-</div>
-<div class="system-flow-list">
-<div class="system-flow-row"><small>SOFTWARE</small><strong>Backend · API · Database · Automazioni</strong></div>
-<div class="system-flow-row"><small>INDUSTRIA</small><strong>PLC · HMI · CODESYS · RS-485</strong></div>
-<div class="system-flow-row"><small>EDGE / IoT</small><strong>MQTT · BLE · Sensori · Gateway</strong></div>
-<div class="system-flow-row"><small>OPS</small><strong>Linux · Rete · Monitoring · Cloud</strong></div>
-</div>
-<p class="system-flow-footer">Dati, comandi e stato attraversano l'intero sistema.</p>
-</div>'''),
-            'en.html': (
-'''<div aria-label="JDEVPRO connected systems" class="system-card reveal">
-<div class="system-card-head">
-<span>CONNECTED SYSTEMS</span>
-<span class="status"><i></i> END-TO-END</span>
-</div>
-<div class="system-diagram">
-<div class="node node-core">
-<small>CONTROL</small>
-<strong>Software &amp; API</strong>
-<span>Backend · Database · Automation</span>
-</div>
-<div class="connection c1"></div>
-<div class="connection c2"></div>
-<div class="connection c3"></div>
-<div class="node node-a"><small>OT</small><strong>Machines</strong><span>PLC · HMI · RS-485</span></div>
-<div class="node node-b"><small>EDGE</small><strong>Devices</strong><span>MQTT · BLE · sensors</span></div>
-<div class="node node-c"><small>OPS</small><strong>Infrastructure</strong><span>Linux · networking · monitoring</span></div>
-</div>
-<div class="system-footer">
-<span>From data to command.</span>
-<span>From machine to cloud.</span>
-</div>
-</div>''',
-'''<div aria-label="JDEVPRO end-to-end integration" class="system-card system-flow-card reveal">
-<div class="system-flow-intro">
-<p class="system-flow-kicker">END-TO-END INTEGRATION</p>
-<h2>Software, machines, devices and infrastructure.</h2>
-<p>I design the connection between layers, not just the individual component.</p>
-</div>
-<div class="system-flow-list">
-<div class="system-flow-row"><small>SOFTWARE</small><strong>Backend · APIs · Databases · Automation</strong></div>
-<div class="system-flow-row"><small>INDUSTRY</small><strong>PLC · HMI · CODESYS · RS-485</strong></div>
-<div class="system-flow-row"><small>EDGE / IoT</small><strong>MQTT · BLE · Sensors · Gateways</strong></div>
-<div class="system-flow-row"><small>OPS</small><strong>Linux · Networking · Monitoring · Cloud</strong></div>
-</div>
-<p class="system-flow-footer">Data, commands and state move across the whole system.</p>
-</div>''')
+          pairs = {
+              'index.html': (os.environ['OLD_IT'], os.environ['NEW_IT']),
+              'en.html': (os.environ['OLD_EN'], os.environ['NEW_EN']),
           }
-
-          for filename, (old, new) in replacements.items():
+          for filename, (old_b64, new_b64) in pairs.items():
               p = Path(filename)
               text = p.read_text(encoding='utf-8')
+              old = base64.b64decode(old_b64).decode('utf-8')
+              new = base64.b64decode(new_b64).decode('utf-8')
               if old not in text:
-                  raise SystemExit(f'Expected old integration block not found in {filename}')
+                  raise SystemExit(f'Expected integration block not found in {filename}')
               p.write_text(text.replace(old, new, 1), encoding='utf-8')
-
           p = Path('overrides.css')
           css = p.read_text(encoding='utf-8')
           marker = '/* System integration card v2 */'
           if marker not in css:
-              css += r'''
-
-/* System integration card v2 */
-.system-flow-card {
-  padding: 30px;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 100% 0%, rgba(45,212,191,.12), transparent 34%),
-    linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.025));
-}
-.system-flow-intro { max-width: 520px; }
-.system-flow-kicker {
-  margin: 0 0 12px;
-  color: var(--teal);
-  font: 800 .68rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
-  letter-spacing: .14em;
-}
-.system-flow-card h2 {
-  margin: 0;
-  color: #fff;
-  font-size: clamp(1.65rem, 2.8vw, 2.35rem);
-  line-height: 1.08;
-  letter-spacing: -.035em;
-}
-.system-flow-intro > p:last-child {
-  margin: 14px 0 0;
-  color: #91a7b7;
-  font-size: .9rem;
-  line-height: 1.55;
-}
-.system-flow-list {
-  display: grid;
-  gap: 8px;
-  margin-top: 28px;
-}
-.system-flow-row {
-  display: grid;
-  grid-template-columns: 92px 1fr;
-  gap: 14px;
-  align-items: center;
-  padding: 13px 14px;
-  border: 1px solid rgba(255,255,255,.09);
-  border-radius: 12px;
-  background: rgba(5,15,27,.56);
-}
-.system-flow-row small {
-  color: var(--teal);
-  font: 800 .6rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
-  letter-spacing: .1em;
-}
-.system-flow-row strong {
-  color: #d8e3ea;
-  font-size: .76rem;
-  line-height: 1.35;
-  font-weight: 650;
-}
-.system-flow-footer {
-  margin: 20px 0 0;
-  padding-top: 17px;
-  border-top: 1px solid rgba(255,255,255,.09);
-  color: #7f95a5;
-  font: 600 .68rem/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
-}
-@media (max-width: 760px) {
-  .system-flow-card { padding: 22px; }
-  .system-flow-row { grid-template-columns: 1fr; gap: 5px; }
-  .system-flow-row strong { font-size: .8rem; }
-}
-'''
+              css += base64.b64decode(os.environ['FLOW_CSS']).decode('utf-8')
               p.write_text(css, encoding='utf-8')
           PY
       - name: Commit changes and remove temporary workflow
@@ -186,7 +50,7 @@ jobs:
           git config user.email "j.ellero@gmail.com"
           git rm .github/workflows/refine-system-flow.yml
           git add index.html en.html overrides.css
-          git commit -m "Replace architecture diagram with end-to-end integration flow"
+          git commit -m "Replace diagram with end-to-end integration flow"
           git push
       - name: Remove accidental temporary branches
         continue-on-error: true
