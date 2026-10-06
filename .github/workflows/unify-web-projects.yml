@@ -1,0 +1,40 @@
+name: Unify web projects
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/unify-web-projects.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Merge showcase cards into main project grid
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          for name in ('index.html', 'en.html'):
+              p = Path(name)
+              text = p.read_text(encoding='utf-8')
+              marker = '</article>\n</div>\n<div class="showcase-grid">\n<article class="project-card showcase-card reveal">'
+              replacement = '</article>\n<article class="project-card reveal">'
+              if marker in text:
+                  text = text.replace(marker, replacement, 1)
+              text = text.replace('<article class="project-card showcase-card reveal">', '<article class="project-card reveal">')
+              p.write_text(text, encoding='utf-8')
+
+          Path('.github/workflows/unify-web-projects.yml').unlink(missing_ok=True)
+          PY
+      - name: Commit changes
+        run: |
+          git config user.name "jellero"
+          git config user.email "j.ellero@gmail.com"
+          git add index.html en.html .github/workflows/unify-web-projects.yml
+          git commit -m "Integrate web showcase projects into main portfolio grid" || exit 0
+          git push
