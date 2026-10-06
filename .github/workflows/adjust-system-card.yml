@@ -1,0 +1,48 @@
+name: Adjust systems card
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/adjust-system-card.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  adjust:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Broaden hero system card wording
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          replacements = {
+              'index.html': [
+                  ('aria-label="Schema di integrazione JDEVPRO"', 'aria-label="Sistemi connessi JDEVPRO"'),
+                  ('<span>ARCHITECTURE VIEW</span>', '<span>CONNECTED SYSTEMS</span>'),
+                  ('<span class="status"><i></i> LIVE</span>', '<span class="status"><i></i> END-TO-END</span>'),
+              ],
+              'en.html': [
+                  ('aria-label="JDEVPRO integration architecture"', 'aria-label="JDEVPRO connected systems"'),
+                  ('<span>ARCHITECTURE VIEW</span>', '<span>CONNECTED SYSTEMS</span>'),
+                  ('<span class="status"><i></i> LIVE</span>', '<span class="status"><i></i> END-TO-END</span>'),
+              ],
+          }
+          for filename, pairs in replacements.items():
+              p = Path(filename)
+              text = p.read_text(encoding='utf-8')
+              for old, new in pairs:
+                  if old not in text:
+                      raise SystemExit(f'Missing expected text in {filename}: {old}')
+                  text = text.replace(old, new)
+              p.write_text(text, encoding='utf-8')
+          PY
+      - name: Commit changes
+        run: |
+          git config user.name "jellero"
+          git config user.email "j.ellero@gmail.com"
+          git add index.html en.html
+          git commit -m "Broaden hero card from architecture to connected systems"
+          git push
