@@ -1,0 +1,28 @@
+name: Finalize JDEVPRO logo
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/finalize-logo.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Point site to supplied PNG
+        run: |
+          sed -i 's#assets/logo-jdevpro\.webp#assets/logo-jdevpro.png#g' index.html en.html script.js
+          rm -f assets/logo-jdevpro-header.webp assets/logo-jdevpro-hero.webp
+          rm -f .github/workflows/finalize-logo.yml
+      - name: Commit final logo wiring
+        run: |
+          git config user.name "jellero"
+          git config user.email "j.ellero@gmail.com"
+          git add -A
+          git commit -m "Use supplied JDEVPRO PNG directly" || exit 0
+          git push
