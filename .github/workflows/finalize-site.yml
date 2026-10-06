@@ -1,0 +1,165 @@
+name: Finalize portfolio site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/finalize-site.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Finalize static pages
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          akios_it = '''<article class="featured-project reveal akios-featured">
+<div class="featured-copy">
+<div class="project-meta"><span>FLAGSHIP · EMBEDDED / IoT LIFECYCLE</span><span>AKIOS.CLOUD</span></div>
+<h3>AKIOS</h3>
+<p class="project-lead">Firmware/lifecycle layer nativo per dispositivi IoT: separa il livello di sopravvivenza del device dal sistema aggiornabile, con verifica crittografica, slot A/B, trial controllato, rollback e recovery locale.</p>
+<p>Il BIOS AKIOS mantiene gli invarianti critici del dispositivo mentre il System resta sostituibile e firmato. Sul BK7238 gestisce selezione A/B, health gate, metadata ridondanti, recovery Wi-Fi locale e aggiornamenti che non possono distruggere contemporaneamente il percorso di recupero e l'ultima versione valida.</p>
+<div class="tags"><span>embedded C</span><span>BK7238</span><span>signed updates</span><span>A/B</span><span>health gate</span><span>rollback</span><span>recovery</span></div>
+<div class="project-actions"><a class="button light" href="https://akios.cloud/" rel="noreferrer" target="_blank">Visita AKIOS.cloud ↗</a></div>
+</div>
+<div aria-label="Modello lifecycle AKIOS" class="terminal">
+<div class="terminal-bar"><span></span><span></span><span></span><b>akios::lifecycle</b></div>
+<pre><code>$ boot
+stage-0 → AKIOS BIOS → verified System
+
+$ update
+candidate → verify → trial → health
+
+$ failure
+rollback → last-known-good
+no valid system → local recovery
+
+$ invariant
+update must preserve recovery</code></pre>
+</div>
+</article>
+'''
+
+          akios_en = '''<article class="featured-project reveal akios-featured">
+<div class="featured-copy">
+<div class="project-meta"><span>FLAGSHIP · EMBEDDED / IoT LIFECYCLE</span><span>AKIOS.CLOUD</span></div>
+<h3>AKIOS</h3>
+<p class="project-lead">A native firmware/lifecycle layer for IoT devices that separates the device-survival layer from the replaceable System, with cryptographic verification, A/B slots, controlled trial boot, rollback and local recovery.</p>
+<p>The AKIOS BIOS keeps the device's critical invariants below the replaceable signed System. On BK7238 it manages A/B selection, health gates, redundant metadata, local Wi-Fi recovery and update flows designed so an update cannot destroy both the recovery path and the last-known-good System.</p>
+<div class="tags"><span>embedded C</span><span>BK7238</span><span>signed updates</span><span>A/B</span><span>health gate</span><span>rollback</span><span>recovery</span></div>
+<div class="project-actions"><a class="button light" href="https://akios.cloud/" rel="noreferrer" target="_blank">Visit AKIOS.cloud ↗</a></div>
+</div>
+<div aria-label="AKIOS lifecycle model" class="terminal">
+<div class="terminal-bar"><span></span><span></span><span></span><b>akios::lifecycle</b></div>
+<pre><code>$ boot
+stage-0 → AKIOS BIOS → verified System
+
+$ update
+candidate → verify → trial → health
+
+$ failure
+rollback → last-known-good
+no valid system → local recovery
+
+$ invariant
+update must preserve recovery</code></pre>
+</div>
+</article>
+'''
+
+          for filename, is_en in [('index.html', False), ('en.html', True)]:
+              p = Path(filename)
+              text = p.read_text(encoding='utf-8')
+
+              # Header identity uses the real JDEVPRO logo.
+              text = re.sub(
+                  r'<a aria-label="JDEVPRO home" class="brand" href="#top">\s*<span class="brand-mark">J</span>\s*<span>JDEVPRO</span>\s*</a>',
+                  '<a aria-label="JDEVPRO home" class="brand" href="#top"><img class="brand-logo" src="assets/logo-jdevpro.webp" alt="JDEVPRO Developer"></a>',
+                  text,
+                  count=1,
+                  flags=re.S,
+              )
+
+              # Full logo in hero, only once.
+              if 'class="hero-brand-logo"' not in text:
+                  text = text.replace(
+                      '<div class="hero-copy reveal">',
+                      '<div class="hero-copy reveal">\n<a class="hero-brand-logo" href="#top" aria-label="JDEVPRO"><img src="assets/logo-jdevpro.webp" alt="JDEVPRO Developer — Realizzazione progetti impossibili"></a>',
+                      1,
+                  )
+
+              # AKIOS visible immediately in the main profile links.
+              hero_marker = '<div aria-label="External profiles" class="hero-links">' if is_en else '<div aria-label="Profili esterni" class="hero-links">'
+              if 'href="https://akios.cloud/"' not in text[text.find(hero_marker):text.find(hero_marker)+900]:
+                  text = text.replace(hero_marker, hero_marker + '\n<a href="https://akios.cloud/" rel="noreferrer" target="_blank">AKIOS ↗</a>', 1)
+
+              # AKIOS is a flagship project, not a minor card.
+              if 'class="featured-project reveal akios-featured"' not in text:
+                  text = text.replace('<article class="featured-project reveal">', akios_en if is_en else akios_it, 1)
+
+              # Oryzeno must point to its public site, not the repository.
+              text = text.replace('href="https://github.com/jellero/Oryzeno" rel="noreferrer" target="_blank">Open project ↗</a>', 'href="https://jellero.github.io/Oryzeno/" rel="noreferrer" target="_blank">Website ↗</a>')
+              text = text.replace('href="https://github.com/jellero/Oryzeno" rel="noreferrer" target="_blank">Apri progetto ↗</a>', 'href="https://jellero.github.io/Oryzeno/" rel="noreferrer" target="_blank">Apri il sito ↗</a>')
+
+              # Lauco Experience: public site first, repository second.
+              if 'href="https://www.laucoexperience.it/"' not in text:
+                  if is_en:
+                      old = '<a class="card-link" href="https://github.com/jellero/laucoexperience" rel="noreferrer" target="_blank">Open repository ↗</a>'
+                      new = '<div class="dual-links"><a class="card-link" href="https://www.laucoexperience.it/" rel="noreferrer" target="_blank">Website ↗</a><a class="card-link secondary" href="https://github.com/jellero/laucoexperience" rel="noreferrer" target="_blank">Repository ↗</a></div>'
+                  else:
+                      old = '<a class="card-link" href="https://github.com/jellero/laucoexperience" rel="noreferrer" target="_blank">Apri repository ↗</a>'
+                      new = '<div class="dual-links"><a class="card-link" href="https://www.laucoexperience.it/" rel="noreferrer" target="_blank">Sito ↗</a><a class="card-link secondary" href="https://github.com/jellero/laucoexperience" rel="noreferrer" target="_blank">Repository ↗</a></div>'
+                  text = text.replace(old, new, 1)
+
+              # Bioapicoltura must use the production domain.
+              text = text.replace('https://jellero.github.io/apicolturapura/', 'https://apicolturapura.it/')
+              text = text.replace('Sito vetrina · GitHub Pages ↗', 'Sito vetrina ↗')
+              text = text.replace('Showcase website · GitHub Pages ↗', 'Showcase website ↗')
+
+              # AKIOS also remains visible in the footer.
+              footer_start = text.rfind('<footer')
+              if footer_start != -1 and 'https://akios.cloud/' not in text[footer_start:]:
+                  privacy = '<div><a href="privacy-en.html">Privacy</a>' if is_en else '<div><a href="privacy.html">Privacy</a>'
+                  text = text.replace(privacy, privacy + '<a href="https://akios.cloud/" rel="noreferrer" target="_blank">AKIOS</a>', 1)
+
+              p.write_text(text, encoding='utf-8')
+
+          css = Path('styles.css')
+          c = css.read_text(encoding='utf-8')
+          if '.brand-logo {' not in c:
+              c += '''\n\n/* JDEVPRO identity and flagship project */
+.brand-logo { width: 190px; max-height: 52px; object-fit: contain; object-position: left center; display: block; }
+.hero-brand-logo { display: inline-block; margin: 0 0 24px; text-decoration: none; }
+.hero-brand-logo img { width: min(430px, 80vw); height: auto; display: block; border-radius: 14px; box-shadow: 0 18px 50px rgba(0,0,0,.22); }
+.akios-featured { border-color: rgba(86,200,255,.28); background: radial-gradient(circle at 72% 28%, rgba(86,200,255,.12), transparent 30%), radial-gradient(circle at 18% 82%, rgba(45,212,191,.08), transparent 30%), var(--navy-2); }
+.akios-featured .project-meta span:first-child { color: var(--cyan); }
+.featured-project + .featured-project { margin-top: 18px; }
+@media (max-width: 760px) {
+  .brand-logo { width: 155px; max-height: 44px; }
+  .hero-brand-logo { margin-bottom: 18px; }
+  .hero-brand-logo img { width: min(350px, 88vw); }
+}
+'''
+              css.write_text(c, encoding='utf-8')
+
+          # Remove the accidentally-created text placeholder and this one-time workflow.
+          Path('assets/logo-jdevpro-wordmark.webp').unlink(missing_ok=True)
+          Path('.github/workflows/finalize-site.yml').unlink(missing_ok=True)
+          PY
+
+      - name: Commit final site state
+        shell: bash
+        run: |
+          git config user.name "jellero"
+          git config user.email "j.ellero@gmail.com"
+          git add -A
+          git commit -m "Finalize JDEVPRO portfolio links and branding" || exit 0
+          git push
