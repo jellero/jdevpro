@@ -149,3 +149,17 @@ h1 span { color: var(--teal); }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .reveal { opacity: 1; transform: none; transition: none; } .button { transition: none; } }
 @media (max-width: 980px) { .hero { min-height: auto; } .hero-layout, .featured-project, .profile-grid, .contact-card { grid-template-columns: 1fr; } .system-card { max-width: 620px; } .pillar-grid, .project-grid, .domain-grid { grid-template-columns: repeat(2, 1fr); } .featured-project { gap: 28px; } .profile-grid { gap: 40px; } .profile-grid .section-heading { position: static; } .contact-card { gap: 24px; } .more-work { grid-template-columns: 1fr; } }
 @media (max-width: 760px) { .shell { width: min(100% - 28px, var(--max)); } .site-header { padding: 12px 0; background: rgba(7,17,31,.72); backdrop-filter: blur(16px); } .menu-toggle { display: block; } .nav { position: absolute; top: 58px; left: 14px; right: 14px; display: none; flex-direction: column; align-items: stretch; gap: 0; background: #0a1727; border: 1px solid rgba(255,255,255,.1); border-radius: 16px; padding: 10px; box-shadow: 0 20px 50px rgba(0,0,0,.35); } .nav.open { display: flex; } .nav a { padding: 12px 14px; } .nav-cta { border-radius: 10px; } .hero { padding: 120px 0 70px; } h1 { font-size: clamp(3rem, 15vw, 4.6rem); } .hero-layout { gap: 42px; } .system-diagram { min-height: 360px; } .node { padding: 11px 12px; } .node-core { width: 180px; } .node-a { left: 4%; top: 7%; } .node-b { right: 3%; top: 18%; } .node-c { right: 6%; bottom: 8%; } .principle-grid { grid-template-columns: 1fr; } .principle-grid p, .principle-grid p:not(:first-child) { padding: 20px 0; border-right: 0; border-bottom: 1px solid var(--line); } .section { padding: 78px 0; } .pillar-grid, .project-grid, .domain-grid { grid-template-columns: 1fr; } .pillar { min-height: auto; } .featured-project { padding: 26px; } .project-card { min-height: 320px; } .more-links a { flex-direction: column; gap: 4px; } .more-links span { text-align: left; } .contact-card { padding: 30px; } .footer-grid { grid-template-columns: 1fr; } .footer-grid > div, .footer-grid > div:nth-child(2), .footer-grid > div:last-child { justify-content: flex-start; flex-wrap: wrap; } }
+
+
+/* JDEVPRO identity and flagship project */
+.brand-logo { width: 190px; max-height: 52px; object-fit: contain; object-position: left center; display: block; }
+.hero-brand-logo { display: inline-block; margin: 0 0 24px; text-decoration: none; }
+.hero-brand-logo img { width: min(430px, 80vw); height: auto; display: block; border-radius: 14px; box-shadow: 0 18px 50px rgba(0,0,0,.22); }
+.akios-featured { border-color: rgba(86,200,255,.28); background: radial-gradient(circle at 72% 28%, rgba(86,200,255,.12), transparent 30%), radial-gradient(circle at 18% 82%, rgba(45,212,191,.08), transparent 30%), var(--navy-2); }
+.akios-featured .project-meta span:first-child { color: var(--cyan); }
+.featured-project + .featured-project { margin-top: 18px; }
+@media (max-width: 760px) {
+  .brand-logo { width: 155px; max-height: 44px; }
+  .hero-brand-logo { margin-bottom: 18px; }
+  .hero-brand-logo img { width: min(350px, 88vw); }
+}

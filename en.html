@@ -27,10 +27,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header" data-header="">
 <div class="shell nav-wrap">
-<a aria-label="JDEVPRO home" class="brand" href="#top">
-<span class="brand-mark">J</span>
-<span>JDEVPRO</span>
-</a>
+<a aria-label="JDEVPRO home" class="brand" href="#top"><img class="brand-logo" src="assets/logo-jdevpro.webp" alt="JDEVPRO Developer"></a>
 <button aria-expanded="false" aria-label="Open menu" class="menu-toggle" data-menu-toggle="" type="button">
 <span></span><span></span><span></span>
 </button>
@@ -49,6 +46,7 @@
 <div aria-hidden="true" class="hero-grid"></div>
 <div class="shell hero-layout">
 <div class="hero-copy reveal">
+<a class="hero-brand-logo" href="#top" aria-label="JDEVPRO"><img src="assets/logo-jdevpro.webp" alt="JDEVPRO Developer — Realizzazione progetti impossibili"></a>
 <p class="eyebrow">Software engineer · Systems integration · Industrial &amp; IoT</p>
 <h1>Software, integrations and <span>connected systems.</span></h1>
 <p class="hero-lead">I design and build systems that connect backends, APIs, business software, machines, devices, data and infrastructure. The goal is not to make a single component work: it is to make the whole system work reliably.</p>
@@ -57,6 +55,7 @@
 <a class="button ghost" href="mailto:info@jdevpro.it">Discuss your problem</a>
 </div>
 <div aria-label="External profiles" class="hero-links">
+<a href="https://akios.cloud/" rel="noreferrer" target="_blank">AKIOS ↗</a>
 <a href="https://github.com/jellero" rel="noreferrer" target="_blank">GitHub ↗</a>
 <a href="https://www.linkedin.com/in/jacopo-ellero-a006499a/" rel="noreferrer" target="_blank">LinkedIn ↗</a>
 <a href="cv-en.html" target="_blank" rel="noreferrer">Resume / CV ↗</a>
@@ -148,7 +147,32 @@
 <h2>Verifiable code and systems, not just claims.</h2>
 <p>A selection of public projects. Where a demo or public website exists, there is a direct link; otherwise the link points to the technical repository.</p>
 </div>
-<article class="featured-project reveal">
+<article class="featured-project reveal akios-featured">
+<div class="featured-copy">
+<div class="project-meta"><span>FLAGSHIP · EMBEDDED / IoT LIFECYCLE</span><span>AKIOS.CLOUD</span></div>
+<h3>AKIOS</h3>
+<p class="project-lead">A native firmware/lifecycle layer for IoT devices that separates the device-survival layer from the replaceable System, with cryptographic verification, A/B slots, controlled trial boot, rollback and local recovery.</p>
+<p>The AKIOS BIOS keeps the device's critical invariants below the replaceable signed System. On BK7238 it manages A/B selection, health gates, redundant metadata, local Wi-Fi recovery and update flows designed so an update cannot destroy both the recovery path and the last-known-good System.</p>
+<div class="tags"><span>embedded C</span><span>BK7238</span><span>signed updates</span><span>A/B</span><span>health gate</span><span>rollback</span><span>recovery</span></div>
+<div class="project-actions"><a class="button light" href="https://akios.cloud/" rel="noreferrer" target="_blank">Visit AKIOS.cloud ↗</a></div>
+</div>
+<div aria-label="AKIOS lifecycle model" class="terminal">
+<div class="terminal-bar"><span></span><span></span><span></span><b>akios::lifecycle</b></div>
+<pre><code>$ boot
+stage-0 → AKIOS BIOS → verified System
+
+$ update
+candidate → verify → trial → health
+
+$ failure
+rollback → last-known-good
+no valid system → local recovery
+
+$ invariant
+update must preserve recovery</code></pre>
+</div>
+</article>
+
 <div class="featured-copy">
 <div class="project-meta"><span>R&amp;D · OPERATING SYSTEMS</span><span>2026</span></div>
 <h3>ORYVAEL</h3>
@@ -210,14 +234,14 @@ verify → constrain → release</code></pre>
 <h3>Oryzeno OpenLink</h3>
 <p>Low-power essential satellite connectivity concept for plants, sensors, cameras, remote infrastructure and emergency scenarios.</p>
 <div class="tags"><span>satellite</span><span>edge</span><span>MQTT/API</span></div>
-<a class="card-link" href="https://github.com/jellero/Oryzeno" rel="noreferrer" target="_blank">Open project ↗</a>
+<a class="card-link" href="https://jellero.github.io/Oryzeno/" rel="noreferrer" target="_blank">Website ↗</a>
 </article>
 <article class="project-card reveal">
 <div class="project-meta"><span>WEB PLATFORM</span><span>Slim · PHP · i18n</span></div>
 <h3>Lauco Experience</h3>
 <p>Multilingual web platform with back office, editorial content, AI-assisted workflows, APIs, rollback-capable deployment and four-language content management.</p>
 <div class="tags"><span>Slim 4</span><span>MariaDB</span><span>AI workflow</span></div>
-<a class="card-link" href="https://github.com/jellero/laucoexperience" rel="noreferrer" target="_blank">Open repository ↗</a>
+<div class="dual-links"><a class="card-link" href="https://www.laucoexperience.it/" rel="noreferrer" target="_blank">Website ↗</a><a class="card-link secondary" href="https://github.com/jellero/laucoexperience" rel="noreferrer" target="_blank">Repository ↗</a></div>
 </article>
 </div>
 <div class="more-work reveal">
@@ -226,7 +250,7 @@ verify → constrain → release</code></pre>
 <h3>From digital products to focused web projects.</h3>
 </div>
 <div class="more-links">
-<a href="https://jellero.github.io/apicolturapura/" rel="noreferrer" target="_blank"><strong>Bioapicoltura Pura</strong><span>Showcase website · GitHub Pages ↗</span></a>
+<a href="https://apicolturapura.it/" rel="noreferrer" target="_blank"><strong>Bioapicoltura Pura</strong><span>Showcase website ↗</span></a>
 <a href="https://jellero.github.io/dream/" rel="noreferrer" target="_blank"><strong>Dream Studio Design</strong><span>Multi-page showcase website ↗</span></a>
 <a href="https://github.com/jellero" rel="noreferrer" target="_blank"><strong>All repositories</strong><span>Full GitHub profile ↗</span></a>
 </div>
@@ -286,7 +310,7 @@ verify → constrain → release</code></pre>
 <div class="shell footer-grid">
 <div><strong>JDEVPRO</strong><span>Software · Integration · Industrial &amp; IoT</span></div>
 <div><span>VAT ID IT02783420306</span><span>© <span data-year=""></span> JDEVPRO</span></div>
-<div><a href="privacy-en.html">Privacy</a><a href="https://github.com/jellero" rel="noreferrer" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/jacopo-ellero-a006499a/" rel="noreferrer" target="_blank">LinkedIn</a></div>
+<div><a href="privacy-en.html">Privacy</a><a href="https://akios.cloud/" rel="noreferrer" target="_blank">AKIOS</a><a href="https://github.com/jellero" rel="noreferrer" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/jacopo-ellero-a006499a/" rel="noreferrer" target="_blank">LinkedIn</a></div>
 </div>
 </footer>
 <script src="script.js"></script>
