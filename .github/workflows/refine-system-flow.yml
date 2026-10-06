@@ -1,0 +1,194 @@
+name: Refine integration card
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/refine-system-flow.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  refine:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replace hero integration card
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          replacements = {
+            'index.html': (
+'''<div aria-label="Sistemi connessi JDEVPRO" class="system-card reveal">
+<div class="system-card-head">
+<span>CONNECTED SYSTEMS</span>
+<span class="status"><i></i> END-TO-END</span>
+</div>
+<div class="system-diagram">
+<div class="node node-core">
+<small>CONTROL</small>
+<strong>Software &amp; API</strong>
+<span>Backend · Database · Automation</span>
+</div>
+<div class="connection c1"></div>
+<div class="connection c2"></div>
+<div class="connection c3"></div>
+<div class="node node-a"><small>OT</small><strong>Macchine</strong><span>PLC · HMI · RS-485</span></div>
+<div class="node node-b"><small>EDGE</small><strong>Dispositivi</strong><span>MQTT · BLE · sensori</span></div>
+<div class="node node-c"><small>OPS</small><strong>Infrastruttura</strong><span>Linux · rete · monitoring</span></div>
+</div>
+<div class="system-footer">
+<span>Dal dato al comando.</span>
+<span>Dalla macchina al cloud.</span>
+</div>
+</div>''',
+'''<div aria-label="Integrazione end-to-end JDEVPRO" class="system-card system-flow-card reveal">
+<div class="system-flow-intro">
+<p class="system-flow-kicker">INTEGRAZIONE END-TO-END</p>
+<h2>Software, macchine, dispositivi e infrastruttura.</h2>
+<p>Progetto il collegamento tra i livelli, non soltanto il singolo componente.</p>
+</div>
+<div class="system-flow-list">
+<div class="system-flow-row"><small>SOFTWARE</small><strong>Backend · API · Database · Automazioni</strong></div>
+<div class="system-flow-row"><small>INDUSTRIA</small><strong>PLC · HMI · CODESYS · RS-485</strong></div>
+<div class="system-flow-row"><small>EDGE / IoT</small><strong>MQTT · BLE · Sensori · Gateway</strong></div>
+<div class="system-flow-row"><small>OPS</small><strong>Linux · Rete · Monitoring · Cloud</strong></div>
+</div>
+<p class="system-flow-footer">Dati, comandi e stato attraversano l'intero sistema.</p>
+</div>'''),
+            'en.html': (
+'''<div aria-label="JDEVPRO connected systems" class="system-card reveal">
+<div class="system-card-head">
+<span>CONNECTED SYSTEMS</span>
+<span class="status"><i></i> END-TO-END</span>
+</div>
+<div class="system-diagram">
+<div class="node node-core">
+<small>CONTROL</small>
+<strong>Software &amp; API</strong>
+<span>Backend · Database · Automation</span>
+</div>
+<div class="connection c1"></div>
+<div class="connection c2"></div>
+<div class="connection c3"></div>
+<div class="node node-a"><small>OT</small><strong>Machines</strong><span>PLC · HMI · RS-485</span></div>
+<div class="node node-b"><small>EDGE</small><strong>Devices</strong><span>MQTT · BLE · sensors</span></div>
+<div class="node node-c"><small>OPS</small><strong>Infrastructure</strong><span>Linux · networking · monitoring</span></div>
+</div>
+<div class="system-footer">
+<span>From data to command.</span>
+<span>From machine to cloud.</span>
+</div>
+</div>''',
+'''<div aria-label="JDEVPRO end-to-end integration" class="system-card system-flow-card reveal">
+<div class="system-flow-intro">
+<p class="system-flow-kicker">END-TO-END INTEGRATION</p>
+<h2>Software, machines, devices and infrastructure.</h2>
+<p>I design the connection between layers, not just the individual component.</p>
+</div>
+<div class="system-flow-list">
+<div class="system-flow-row"><small>SOFTWARE</small><strong>Backend · APIs · Databases · Automation</strong></div>
+<div class="system-flow-row"><small>INDUSTRY</small><strong>PLC · HMI · CODESYS · RS-485</strong></div>
+<div class="system-flow-row"><small>EDGE / IoT</small><strong>MQTT · BLE · Sensors · Gateways</strong></div>
+<div class="system-flow-row"><small>OPS</small><strong>Linux · Networking · Monitoring · Cloud</strong></div>
+</div>
+<p class="system-flow-footer">Data, commands and state move across the whole system.</p>
+</div>''')
+          }
+
+          for filename, (old, new) in replacements.items():
+              p = Path(filename)
+              text = p.read_text(encoding='utf-8')
+              if old not in text:
+                  raise SystemExit(f'Expected old integration block not found in {filename}')
+              p.write_text(text.replace(old, new, 1), encoding='utf-8')
+
+          p = Path('overrides.css')
+          css = p.read_text(encoding='utf-8')
+          marker = '/* System integration card v2 */'
+          if marker not in css:
+              css += r'''
+
+/* System integration card v2 */
+.system-flow-card {
+  padding: 30px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(45,212,191,.12), transparent 34%),
+    linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.025));
+}
+.system-flow-intro { max-width: 520px; }
+.system-flow-kicker {
+  margin: 0 0 12px;
+  color: var(--teal);
+  font: 800 .68rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .14em;
+}
+.system-flow-card h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.65rem, 2.8vw, 2.35rem);
+  line-height: 1.08;
+  letter-spacing: -.035em;
+}
+.system-flow-intro > p:last-child {
+  margin: 14px 0 0;
+  color: #91a7b7;
+  font-size: .9rem;
+  line-height: 1.55;
+}
+.system-flow-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 28px;
+}
+.system-flow-row {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 13px 14px;
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 12px;
+  background: rgba(5,15,27,.56);
+}
+.system-flow-row small {
+  color: var(--teal);
+  font: 800 .6rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .1em;
+}
+.system-flow-row strong {
+  color: #d8e3ea;
+  font-size: .76rem;
+  line-height: 1.35;
+  font-weight: 650;
+}
+.system-flow-footer {
+  margin: 20px 0 0;
+  padding-top: 17px;
+  border-top: 1px solid rgba(255,255,255,.09);
+  color: #7f95a5;
+  font: 600 .68rem/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+@media (max-width: 760px) {
+  .system-flow-card { padding: 22px; }
+  .system-flow-row { grid-template-columns: 1fr; gap: 5px; }
+  .system-flow-row strong { font-size: .8rem; }
+}
+'''
+              p.write_text(css, encoding='utf-8')
+          PY
+      - name: Commit changes and remove temporary workflow
+        run: |
+          git config user.name "jellero"
+          git config user.email "j.ellero@gmail.com"
+          git rm .github/workflows/refine-system-flow.yml
+          git add index.html en.html overrides.css
+          git commit -m "Replace architecture diagram with end-to-end integration flow"
+          git push
+      - name: Remove accidental temporary branches
+        continue-on-error: true
+        run: |
+          git push origin --delete tmp-cname-fix tmp-cname-fix2 tmp-cname-fix3 tmp-cname-fix4 tmp-cname-fix5 || true
