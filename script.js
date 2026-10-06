@@ -160,14 +160,6 @@
       }
     }
 
-    const bio = [...projectsSection.querySelectorAll('.more-links a')]
-      .find((link) => link.querySelector('strong')?.textContent.trim() === 'Bioapicoltura Pura');
-    if (bio) {
-      bio.href = 'https://apicolturapura.it/';
-      const label = bio.querySelector('span');
-      if (label) label.textContent = isEnglish ? 'Showcase website ↗' : 'Sito vetrina ↗';
-    }
-
     const footerLinks = document.querySelector('.footer-grid > div:last-child');
     if (footerLinks && !footerLinks.querySelector('a[href="https://akios.cloud/"]')) {
       const a = document.createElement('a');
