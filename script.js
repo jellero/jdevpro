@@ -1,48 +1,183 @@
 (() => {
-  const header = document.querySelector('[data-header]');
-  const menuToggle = document.querySelector('[data-menu-toggle]');
-  const nav = document.querySelector('[data-nav]');
-  const year = document.querySelector('[data-year]');
+  const ready = (fn) => document.readyState === 'loading'
+    ? document.addEventListener('DOMContentLoaded', fn, { once: true })
+    : fn();
 
-  if (year) year.textContent = new Date().getFullYear();
+  ready(() => {
+    const header = document.querySelector('[data-header]');
+    const menuToggle = document.querySelector('[data-menu-toggle]');
+    const nav = document.querySelector('[data-nav]');
+    const year = document.querySelector('[data-year]');
 
-  const syncHeader = () => {
-    if (header) header.classList.toggle('scrolled', window.scrollY > 24);
-  };
-  syncHeader();
-  window.addEventListener('scroll', syncHeader, { passive: true });
+    if (year) year.textContent = new Date().getFullYear();
 
-  if (menuToggle && nav) {
-    menuToggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      menuToggle.setAttribute('aria-expanded', String(open));
-    });
+    const syncHeader = () => {
+      if (header) header.classList.toggle('scrolled', window.scrollY > 24);
+    };
+    syncHeader();
+    window.addEventListener('scroll', syncHeader, { passive: true });
 
-    nav.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
+    if (menuToggle && nav) {
+      menuToggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(open));
       });
-    });
-  }
 
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const items = document.querySelectorAll('.reveal');
-
-  if (prefersReducedMotion || !('IntersectionObserver' in window)) {
-    items.forEach((item) => item.classList.add('visible'));
-  } else {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
+      nav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    }
 
-    items.forEach((item) => observer.observe(item));
-  }
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const items = document.querySelectorAll('.reveal');
+
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      items.forEach((item) => item.classList.add('visible'));
+    } else {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+      items.forEach((item) => observer.observe(item));
+    }
+  });
+})();
+
+(() => {
+  const ready = (fn) => document.readyState === 'loading'
+    ? document.addEventListener('DOMContentLoaded', fn, { once: true })
+    : fn();
+
+  ready(() => {
+    const projectsSection = document.querySelector('#progetti');
+    if (!projectsSection) return;
+
+    const isEnglish = (document.documentElement.lang || 'it').toLowerCase().startsWith('en');
+
+    if (!document.getElementById('jdevpro-portfolio-overrides')) {
+      const style = document.createElement('style');
+      style.id = 'jdevpro-portfolio-overrides';
+      style.textContent = `
+        .hero-brand-logo{display:inline-block;margin:0 0 24px;text-decoration:none}
+        .hero-brand-logo img{width:min(430px,80vw);height:auto;display:block;border-radius:14px;box-shadow:0 18px 50px rgba(0,0,0,.22)}
+        .akios-featured{border-color:rgba(86,200,255,.28)!important;background:radial-gradient(circle at 72% 28%,rgba(86,200,255,.12),transparent 30%),radial-gradient(circle at 18% 82%,rgba(45,212,191,.08),transparent 30%),var(--navy-2)!important}
+        .akios-featured .project-meta span:first-child{color:var(--cyan)}
+        .featured-project + .featured-project{margin-top:18px}
+        @media(max-width:760px){.hero-brand-logo{margin-bottom:18px}.hero-brand-logo img{width:min(350px,88vw)}}
+      `;
+      document.head.appendChild(style);
+    }
+
+    const heroCopy = document.querySelector('.hero-copy');
+    if (heroCopy && !heroCopy.querySelector('.hero-brand-logo')) {
+      const logo = document.createElement('a');
+      logo.className = 'hero-brand-logo';
+      logo.href = '#top';
+      logo.setAttribute('aria-label', 'JDEVPRO');
+      logo.innerHTML = '<img src="assets/logo-jdevpro.webp" alt="JDEVPRO Developer">';
+      heroCopy.prepend(logo);
+    }
+
+    const heroLinks = document.querySelector('.hero-links');
+    if (heroLinks && !heroLinks.querySelector('a[href="https://akios.cloud/"]')) {
+      const akiosLink = document.createElement('a');
+      akiosLink.href = 'https://akios.cloud/';
+      akiosLink.target = '_blank';
+      akiosLink.rel = 'noreferrer';
+      akiosLink.textContent = 'AKIOS ↗';
+      heroLinks.prepend(akiosLink);
+    }
+
+    const sectionShell = projectsSection.querySelector('.shell');
+    const firstFeatured = sectionShell?.querySelector('.featured-project');
+    if (sectionShell && firstFeatured && !sectionShell.querySelector('.akios-featured')) {
+      const article = document.createElement('article');
+      article.className = 'featured-project reveal visible akios-featured';
+      article.innerHTML = isEnglish ? `
+        <div class="featured-copy">
+          <div class="project-meta"><span>FLAGSHIP · EMBEDDED / IoT LIFECYCLE</span><span>AKIOS.CLOUD</span></div>
+          <h3>AKIOS</h3>
+          <p class="project-lead">A native firmware and lifecycle layer for IoT devices that separates the device-survival layer from the replaceable System, with cryptographic verification, A/B slots, controlled trial boot, rollback and local recovery.</p>
+          <p>The AKIOS BIOS keeps critical device invariants below the replaceable signed System. On BK7238 it manages A/B selection, health gates, redundant metadata, local Wi-Fi recovery and update flows designed so an update cannot destroy both the recovery path and the last-known-good System.</p>
+          <div class="tags"><span>embedded C</span><span>BK7238</span><span>signed updates</span><span>A/B</span><span>health gate</span><span>rollback</span><span>recovery</span></div>
+          <div class="project-actions"><a class="button light" href="https://akios.cloud/" rel="noreferrer" target="_blank">Visit AKIOS.cloud ↗</a></div>
+        </div>
+        <div aria-label="AKIOS lifecycle model" class="terminal">
+          <div class="terminal-bar"><span></span><span></span><span></span><b>akios::lifecycle</b></div>
+          <pre><code>$ boot\nstage-0 → AKIOS BIOS → verified System\n\n$ update\ncandidate → verify → trial → health\n\n$ failure\nrollback → last-known-good\nno valid system → local recovery\n\n$ invariant\nupdate must preserve recovery</code></pre>
+        </div>` : `
+        <div class="featured-copy">
+          <div class="project-meta"><span>FLAGSHIP · EMBEDDED / IoT LIFECYCLE</span><span>AKIOS.CLOUD</span></div>
+          <h3>AKIOS</h3>
+          <p class="project-lead">Firmware e lifecycle layer nativo per dispositivi IoT: separa il livello di sopravvivenza del device dal System sostituibile, con verifica crittografica, slot A/B, trial controllato, rollback e recovery locale.</p>
+          <p>Il BIOS AKIOS mantiene gli invarianti critici del dispositivo sotto il System firmato e sostituibile. Sul BK7238 gestisce selezione A/B, health gate, metadata ridondanti, recovery Wi-Fi locale e aggiornamenti progettati affinché non possano distruggere insieme il percorso di recupero e l'ultima versione valida.</p>
+          <div class="tags"><span>embedded C</span><span>BK7238</span><span>signed updates</span><span>A/B</span><span>health gate</span><span>rollback</span><span>recovery</span></div>
+          <div class="project-actions"><a class="button light" href="https://akios.cloud/" rel="noreferrer" target="_blank">Visita AKIOS.cloud ↗</a></div>
+        </div>
+        <div aria-label="Modello lifecycle AKIOS" class="terminal">
+          <div class="terminal-bar"><span></span><span></span><span></span><b>akios::lifecycle</b></div>
+          <pre><code>$ boot\nstage-0 → AKIOS BIOS → verified System\n\n$ update\ncandidate → verify → trial → health\n\n$ failure\nrollback → last-known-good\nno valid system → local recovery\n\n$ invariant\nupdate must preserve recovery</code></pre>
+        </div>`;
+      firstFeatured.before(article);
+    }
+
+    const findCard = (title) => [...projectsSection.querySelectorAll('.project-card')]
+      .find((card) => card.querySelector('h3')?.textContent.trim() === title);
+
+    const oryzeno = findCard('Oryzeno OpenLink');
+    if (oryzeno) {
+      const link = oryzeno.querySelector('.card-link');
+      if (link) {
+        link.href = 'https://jellero.github.io/Oryzeno/';
+        link.textContent = isEnglish ? 'Website ↗' : 'Apri il sito ↗';
+      }
+    }
+
+    const lauco = findCard('Lauco Experience');
+    if (lauco && !lauco.querySelector('a[href="https://www.laucoexperience.it/"]')) {
+      const repo = lauco.querySelector('.card-link');
+      if (repo) {
+        const wrap = document.createElement('div');
+        wrap.className = 'dual-links';
+        const website = document.createElement('a');
+        website.className = 'card-link';
+        website.href = 'https://www.laucoexperience.it/';
+        website.target = '_blank';
+        website.rel = 'noreferrer';
+        website.textContent = isEnglish ? 'Website ↗' : 'Sito ↗';
+        repo.classList.add('secondary');
+        repo.textContent = 'Repository ↗';
+        repo.before(wrap);
+        wrap.append(website, repo);
+      }
+    }
+
+    const bio = [...projectsSection.querySelectorAll('.more-links a')]
+      .find((link) => link.querySelector('strong')?.textContent.trim() === 'Bioapicoltura Pura');
+    if (bio) {
+      bio.href = 'https://apicolturapura.it/';
+      const label = bio.querySelector('span');
+      if (label) label.textContent = isEnglish ? 'Showcase website ↗' : 'Sito vetrina ↗';
+    }
+
+    const footerLinks = document.querySelector('.footer-grid > div:last-child');
+    if (footerLinks && !footerLinks.querySelector('a[href="https://akios.cloud/"]')) {
+      const a = document.createElement('a');
+      a.href = 'https://akios.cloud/';
+      a.target = '_blank';
+      a.rel = 'noreferrer';
+      a.textContent = 'AKIOS';
+      footerLinks.prepend(a);
+    }
+  });
 })();
 
 (() => {
@@ -50,11 +185,13 @@
   const STORAGE_KEY = 'jdevpro_cookie_consent_v1';
   const CONSENT_VERSION = 1;
   const isEnglish = (document.documentElement.lang || 'it').toLowerCase().startsWith('en');
+  const ready = (fn) => document.readyState === 'loading'
+    ? document.addEventListener('DOMContentLoaded', fn, { once: true })
+    : fn();
 
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function gtag() { window.dataLayer.push(arguments); };
 
-  // Basic Google Consent Mode: no Google tag is loaded before explicit consent.
   window.gtag('consent', 'default', {
     analytics_storage: 'denied',
     ad_storage: 'denied',
@@ -203,10 +340,13 @@
     document.body.appendChild(preferencesTrigger);
     banner.querySelector('[data-cookie-reject]').addEventListener('click', () => writeConsent('rejected'));
     banner.querySelector('[data-cookie-accept]').addEventListener('click', () => writeConsent('accepted'));
-    document.querySelectorAll('[data-cookie-settings]').forEach((el) => el.addEventListener('click', (event) => { event.preventDefault(); showBanner(); }));
+    document.querySelectorAll('[data-cookie-settings]').forEach((el) => el.addEventListener('click', (event) => {
+      event.preventDefault();
+      showBanner();
+    }));
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
+  ready(() => {
     buildUi();
     const saved = readConsent();
     if (saved) {
