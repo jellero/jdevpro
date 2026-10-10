@@ -1,36 +1,43 @@
 # JDEVPRO
 
-Nuovo sito pubblico JDEVPRO, riposizionato su **software engineering, systems integration, industrial IoT e connected infrastructure**.
+Sito pubblico JDEVPRO, focalizzato su **software engineering, backend, systems integration, industrial software/IoT e production operations**.
 
-## Obiettivo
+## Posizionamento
 
-Il sito evita di presentare ogni tecnologia o impianto come un servizio indipendente. Il posizionamento principale è:
+Il sito non presenta ogni tecnologia, impianto o dispositivo come un servizio indipendente. Il messaggio principale è:
 
-> Software, integrazioni e sistemi connessi.
+> **Software che collega sistemi reali.**
 
-Fotovoltaico, reti, accessi, hospitality, macchine e IoT rimangono come **ambiti applicativi** di una competenza centrale: progettare e mantenere sistemi che collegano software, dati e mondo reale.
+Fotovoltaico, reti, hospitality, dispositivi, macchine e siti remoti restano presenti come **ambiti applicativi**. Il nucleo della proposta è progettare, integrare e mantenere sistemi che collegano software, dati, macchine e infrastruttura.
 
-## Progetti collegati
+## Struttura dei contenuti
 
-La pagina include collegamenti ai progetti pubblici e, quando disponibili, alle rispettive GitHub Pages:
+Tre aree principali:
 
-- ORYVAEL / ORYVAEL Web
-- JD Industry
-- Sentry-Bee
-- Vehylo Web
-- Welora Web
-- Lauco Experience
-- Space1999 prototype
-- Bioapicoltura Pura
+1. **Backend & Systems Integration** — API, database, provider, processi asincroni, automazioni e integrazioni B2B/B2C.
+2. **Industrial Software & IoT** — PLC, CODESYS, embedded C, RS-485/RS-232, MQTT, gateway, machine-to-cloud e dati di produzione.
+3. **Production & Connected Infrastructure** — Linux, Docker, CI/CD, logging, hardening, monitoring, backup/recovery e networking.
 
-## Struttura
+I progetti in homepage sono ordinati per coerenza con questo posizionamento:
 
-- `index.html` — sito principale
+- **JD Industry** — industrial software e machine integration;
+- **AKIOS** — embedded/IoT lifecycle e affidabilità;
+- **Welora** — backend, automation e sistemi asincroni;
+- **Sentry-Bee** — field IoT e telemetria;
+- **Vehylo** — connected vehicle e data acquisition.
+
+ORYVAEL, Oryzeno e Lauco Experience rimangono visibili come R&D/altri lavori, ma non dominano più il messaggio commerciale.
+
+## File principali
+
+- `index.html` — homepage italiana
+- `en.html` — homepage inglese
 - `styles.css` — design responsive
-- `script.js` — menu, header e reveal progressivo
-- `privacy.html` — informativa essenziale
+- `overrides.css` — logo e system flow card
+- `script.js` — menu, reveal, analytics e consenso cookie
+- `cv.html` / `cv-en.html` — CV web
 
-Non sono richiesti framework, build step o dipendenze esterne.
+Il sito è statico e non richiede framework o build step.
 
 ## Anteprima locale
 
@@ -39,7 +46,3 @@ python -m http.server 8000
 ```
 
 Poi apri `http://localhost:8000`.
-
-## Pubblicazione
-
-Il repository può essere pubblicato su GitHub Pages, Cloudflare Pages, Netlify o su un normale web server statico. Per il dominio `jdevpro.it`, configurare il dominio solo quando DNS e hosting di destinazione sono stati definiti.
