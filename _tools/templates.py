@@ -116,7 +116,12 @@ PRICE_EN = {"Collegamento di una macchina": "Connecting one machine", "Dati macc
             "Assistenza e controllo da remoto": "Support and remote monitoring", "Configurazione dell'impianto": "System configuration",
             "Assistenza e aggiornamenti": "Support and updates", "Configurazione del centralino": "Phone system configuration",
             "Assistenza e modifiche": "Support and changes", "Controllo da remoto": "Remote monitoring",
-            "telecamere e dispositivi esclusi": "cameras and devices excluded", "telefoni esclusi": "phones excluded", "apparati esclusi": "equipment excluded"}
+            "telecamere e dispositivi esclusi": "cameras and devices excluded", "telefoni esclusi": "phones excluded", "apparati esclusi": "equipment excluded",
+            "fino a 6 camere · dispositivi esclusi": "up to 6 rooms · devices excluded", "per struttura": "per property",
+            "fino a 4 telecamere · dispositivi esclusi": "up to 4 cameras · devices excluded", "per impianto": "per system",
+            "Centralino Asterisk configurato": "Asterisk phone system set up",
+            "fino a 10 interni · nessuna licenza · telefoni esclusi": "up to 10 extensions · no licence · phones excluded",
+            "fino a 10 interni": "up to 10 extensions", "per sito · apparati esclusi": "per site · equipment excluded", "per sito": "per site"}
 
 ADDRESS = {"@type": "PostalAddress", "addressLocality": "Tolmezzo", "postalCode": "33028", "addressRegion": "UD",
            "addressCountry": "IT"}

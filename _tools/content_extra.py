@@ -22,20 +22,20 @@ PRICES = {
     ("Monitoraggio e manutenzione", 50, "al mese", ""),
   ],
   "automazione-hotel-bnb.html": [
-    ("Progetto e configurazione", 800, "una tantum", "dispositivi esclusi"),
-    ("Assistenza e controllo da remoto", 30, "al mese", ""),
+    ("Progetto e configurazione", 900, "una tantum", "fino a 6 camere · dispositivi esclusi"),
+    ("Assistenza e controllo da remoto", 39, "al mese", "per struttura"),
   ],
   "videosorveglianza-citofonia-accessi.html": [
-    ("Configurazione dell'impianto", 600, "una tantum", "telecamere e dispositivi esclusi"),
-    ("Assistenza e aggiornamenti", 20, "al mese", ""),
+    ("Configurazione dell'impianto", 600, "una tantum", "fino a 4 telecamere · dispositivi esclusi"),
+    ("Assistenza e aggiornamenti", 29, "al mese", "per impianto"),
   ],
   "centralini-voip-telefonia.html": [
-    ("Configurazione del centralino", 500, "una tantum", "telefoni esclusi"),
-    ("Assistenza e modifiche", 30, "al mese", ""),
+    ("Centralino Asterisk configurato", 700, "una tantum", "fino a 10 interni · nessuna licenza · telefoni esclusi"),
+    ("Assistenza e modifiche", 39, "al mese", "fino a 10 interni"),
   ],
   "internet-offgrid-siti-remoti.html": [
-    ("Progetto e configurazione", 800, "una tantum", "apparati esclusi"),
-    ("Controllo da remoto", 20, "al mese", ""),
+    ("Progetto e configurazione", 900, "una tantum", "per sito · apparati esclusi"),
+    ("Controllo da remoto", 29, "al mese", "per sito"),
   ],
   "siti-web-piattaforme.html": [
     ("Sito con pannello di gestione", 1200, "una tantum", ""),
@@ -526,6 +526,7 @@ EN_PAGES = {
     faq=[("Can I keep my numbers?", "Yes, by porting them to a VoIP carrier."),
          ("Do I need a special line?", "A stable Internet connection is enough; with many simultaneous calls we check bandwidth."),
          ("Can the intercom ring on my mobile?", "Yes, with SIP intercoms connected to the phone system: answer and open from anywhere."),
+         ("How much do licences cost?", "With Asterisk there is no licence: you only pay for setup, support and your VoIP carrier's call charges. With 3CX the annual licence is set by 3CX's price list, based on the number of simultaneous calls."),
          ("Do you record calls?", "Only where needed and in line with privacy rules, informing callers."),
          ("Do you install the cabling?", INSTALLERS_EN)],
   ),

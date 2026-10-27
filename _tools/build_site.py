@@ -397,6 +397,7 @@ PAGES = [
       ("Posso tenere i miei numeri?", "Sì, con la portabilità del numero verso un operatore VoIP."),
       ("Serve una linea particolare?", "Basta una connessione Internet stabile; con molte chiamate contemporanee verifichiamo la banda."),
       ("Il citofono può suonare sul cellulare?", "Sì, con citofoni SIP collegati al centralino: rispondi e apri anche da fuori."),
+      ("Quanto costano le licenze?", "Con Asterisk nessuna licenza: paghi solo configurazione, assistenza e il traffico dell'operatore VoIP. Con 3CX la licenza annuale è quella del listino 3CX, in base alle chiamate contemporanee."),
       ("Registrate le chiamate?", "Solo dove serve e nel rispetto della privacy, con informativa a chi chiama."),
       ("Fate anche i cablaggi?", INSTALLERS),
     ],
