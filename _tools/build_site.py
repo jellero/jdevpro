@@ -229,7 +229,7 @@ PAGES = [
       ("Sentry-Bee · monitoraggio sul campo", "Centralina con sensori, connessione 4G e alimentazione solare: i dati arrivano anche da siti senza rete né corrente.", "https://github.com/jellero/sentry-bee"),
       ("Telecamera autonoma a basso consumo", "Fotocamera con connessione NB-IoT pensata per siti senza rete fissa.", None),
       ("Welora · clima delle camere", "Termostati collegati al gestionale della struttura, con avvisi di comfort e comandi per singola camera.", "https://welora.it/"),
-      ("AKIOS · aggiornamenti sicuri dei dispositivi", "Aggiornamenti da remoto: se un aggiornamento fallisce, il dispositivo torna da solo alla versione precedente.", "https://akios.cloud/"),
+      ("AKIOS · ciclo di vita sicuro dei dispositivi IoT", "Il nostro prodotto per i produttori di dispositivi: aggiornamenti firmati in prova, ritorno automatico all'ultima versione buona e ripristino locale dal telefono. Già operativo sui chip Beken BK7238.", "https://akios.cloud/"),
     ],
     chips=["Sensori e contatori", "Fotovoltaico e accumuli", "Domotica", "Allarmi sul telefono", "Funziona anche offline"],
     faq=[

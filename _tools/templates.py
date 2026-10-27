@@ -295,7 +295,7 @@ def home(lang="it"):
                  steps=[("Analisi", "Capiamo i sistemi che hai e cosa deve cambiare."), ("Prezzo fisso a fasi", "Sai cosa paghi prima di iniziare."),
                         ("Consegna rapida", "Si parte dalla parte più utile, provata sul lavoro reale."), ("Canone di assistenza", "Backup, aggiornamenti e interventi senza sorprese.")],
                  proof=[("10 macchine in produzione", "Collegate al gestionale a Tolmezzo, tra falegnamerie e stamperie."), ("JD Industry", "Gestionale di produzione collegato a macchine SCM ed Essetre."),
-                        ("Welora", "Gestionale per strutture ricettive: prenotazioni, accessi, clima, pagamenti, adempimenti."), ("E-commerce e marketplace", "Gestionale collegato a fornitore, marketplace e corriere.")],
+                        ("Welora", "Gestionale per strutture ricettive: prenotazioni, accessi, clima, pagamenti, adempimenti."), ("E-commerce e marketplace", "Gestionale collegato a fornitore, marketplace e corriere."), ("AKIOS", "Aggiornamenti sicuri e ripristino per dispositivi IoT, per i produttori europei.")],
                  who='<strong>JDEVPRO</strong> è l\'attività di Jacopo Ellero, sviluppatore e integratore di sistemi. <a href="chi-sono.html">Chi sono →</a>',
                  title="JDEVPRO · Gestionali, macchine 4.0 e IoT in Friuli",
                  desc="Gestionali su misura, macchine 4.0, integrazioni, IoT, automazione hotel e B&B, videosorveglianza e internet offgrid in Friuli Venezia Giulia.")
@@ -310,7 +310,7 @@ def home(lang="it"):
                  steps=[("Analysis", "We understand your systems and what must change."), ("Fixed price in phases", "You know the cost before we start."),
                         ("Fast delivery", "We start from the most useful part, tested on real work."), ("Support plan", "Backups, updates and fixes without surprises.")],
                  proof=[("10 machines in production", "Connected to business software in Tolmezzo, across woodworking and metal pressing companies."), ("JD Industry", "Production management connected to SCM and Essetre machines."),
-                        ("Welora", "Hospitality software: bookings, access, climate, payments, compliance."), ("E-commerce and marketplaces", "Business software connected to supplier, marketplaces and courier.")],
+                        ("Welora", "Hospitality software: bookings, access, climate, payments, compliance."), ("E-commerce and marketplaces", "Business software connected to supplier, marketplaces and courier."), ("AKIOS", "Secure updates and recovery for IoT devices, for European manufacturers.")],
                  who='<strong>JDEVPRO</strong> is the business of Jacopo Ellero, software developer and systems integrator. <a href="en-about.html">About me →</a>',
                  title="JDEVPRO · Business software, machines 4.0 and IoT, Italy",
                  desc="Custom business software, machines 4.0, integrations, IoT, hotel automation, video surveillance and off-grid internet in north-east Italy.")
@@ -845,6 +845,13 @@ def about(lang="it"):
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">{a['path_e']}</p><h2>{a['path_h']}</h2></div>
 <ol class="timeline reveal">{path}</ol>
+</div>
+</section>
+<section class="section section-tight section-dark akios-section">
+<div class="shell split">
+<div class="section-heading reveal"><p class="eyebrow">{a['akios_e']}</p><h2>{a['akios_h']}</h2>
+<ul class="akios-points">{"".join(f"<li>{x}</li>" for x in a["akios_points"])}</ul></div>
+<div class="research-copy reveal">{"".join(f"<p>{x}</p>" for x in a["akios_p"])}<div class="hero-actions">{"".join(f'<a class="button {"primary" if i == 0 else "ghost"}" href="{l}" rel="noreferrer" target="_blank">{n}</a>' for i, (n, l) in enumerate(a["akios_links"]))}</div></div>
 </div>
 </section>
 <section class="section section-tight section-dark">

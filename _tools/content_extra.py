@@ -380,7 +380,7 @@ EN_PAGES = {
     examples=[("Sentry-Bee · field monitoring", "Sensor unit with 4G connectivity and solar power: data arrives even from sites without network or mains power.", "https://github.com/jellero/sentry-bee"),
               ("Low-power autonomous camera", "Camera with NB-IoT connectivity for sites without fixed network.", None),
               ("Welora · room climate", "Thermostats connected to the property's software, with comfort alerts and per-room control.", "https://welora.it/"),
-              ("AKIOS · secure device updates", "Remote updates: if an update fails, the device rolls back by itself.", "https://akios.cloud/")],
+              ("AKIOS · secure IoT device lifecycle", "Our product for device makers: signed trial updates, automatic rollback to the last good version and local recovery from a phone. Already running on Beken BK7238 chips.", "https://akios.cloud/")],
     chips=["Sensors and meters", "PV and batteries", "Smart building", "Phone alarms", "Works offline"],
     faq=[("Does it work without Internet?", "Yes. Data is stored on site and sent when the connection is back."),
          ("Which brands can be integrated?", "All those with public APIs, such as Tuya, Aqara, Honeywell, Shelly, Netatmo, Philips Hue, Fronius, SMA or SolarEdge. If a device only has an app or web panel, we automate its calls; if it only has a serial or Modbus port, we use a bridge program."),

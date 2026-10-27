@@ -223,3 +223,13 @@
 /* Ricerca */
 .research-copy p { color: #b8c8d4; font-size: 1.02rem; margin: 0 0 16px; }
 .research-copy .button { margin-top: 8px; }
+
+/* AKIOS */
+.akios-section { background: radial-gradient(circle at 80% 20%, rgba(86,200,255,.12), transparent 35%), var(--navy); }
+.akios-section .eyebrow { color: var(--cyan); }
+.akios-points { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 8px; }
+.akios-points li { padding: 8px 12px; border: 1px solid rgba(86,200,255,.25); border-radius: 10px; color: #d8e3ea; font-size: .9rem; }
+.akios-section + .section-dark { border-top: 1px solid rgba(255,255,255,.06); }
+.proof-grid { grid-template-columns: repeat(5, 1fr); }
+@media (max-width: 1100px) { .proof-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 760px) { .proof-grid { grid-template-columns: 1fr; } }

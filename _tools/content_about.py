@@ -42,11 +42,18 @@ ABOUT = {
     projects=[
       ("Welora", "Piattaforma gestionale multi-struttura con motore di automazione separato.", "https://welora.it/"),
       ("JD Industry", "Gestionale di produzione collegato alle macchine.", "interconnessione-macchine-industria-4-0.html"),
-      ("AKIOS", "Firmware e ciclo di vita sicuro dei dispositivi IoT.", "https://akios.cloud/"),
       ("Sentry-Bee", "Monitoraggio sul campo con sensori, LTE e MQTT.", "https://github.com/jellero/sentry-bee"),
       ("Vehylo", "Diagnostica veicolo via OBD-II e Bluetooth.", "https://jellero.github.io/vehylo-web/"),
       ("Lauco Experience", "Portale turistico in quattro lingue con backoffice.", "https://www.laucoexperience.it/"),
     ],
+    akios_e="Prodotto", akios_h="AKIOS: dispositivi IoT che si aggiornano senza rompersi.",
+    akios_p=[
+      "AKIOS è il mio prodotto per i produttori di dispositivi IoT: uno strato che vive dentro il dispositivo e ne governa tutto il ciclo di vita, dalla prima configurazione agli aggiornamenti, fino al ripristino quando qualcosa va storto.",
+      "Ogni aggiornamento è firmato e verificato, parte in prova e viene confermato solo se il dispositivo funziona; altrimenti torna da solo all'ultima versione buona. Se non c'è più un sistema valido, il dispositivo apre una rete di ripristino locale e si recupera dal telefono, senza essere mai bloccato.",
+      "Il firmware è già operativo sui chip Beken BK7238, molto diffusi nei dispositivi Wi-Fi, e AKIOS è proposto ai produttori europei con un programma pilota: un dispositivo, un perimetro chiaro, prova su hardware reale. È pensato per chi deve garantire aggiornamenti sicuri per anni, come chiede il Cyber Resilience Act europeo.",
+    ],
+    akios_points=["Aggiornamenti firmati e verificati", "Prova, conferma o ritorno automatico", "Ripristino locale dal telefono", "Nessun cambio di cloud obbligato"],
+    akios_links=[("Scopri AKIOS ↗", "https://akios.cloud/"), ("Programma pilota ↗", "https://akios-pilot.com/")],
     research_e="Ricerca", research_h="ORYVAEL: un sistema operativo dove l'intelligenza artificiale lavora, ma non comanda.",
     research_p=[
       "ORYVAEL è il progetto di ricerca più ambizioso che porto avanti: un sistema operativo pensato per l'intelligenza artificiale, in cui l'AI può progettare, scrivere, provare e mantenere software, mentre l'autorità resta sempre nelle mani delle persone.",
@@ -100,11 +107,18 @@ ABOUT = {
     projects=[
       ("Welora", "Multi-property management platform with a separate automation engine.", "https://welora.it/"),
       ("JD Industry", "Production management connected to machines.", "en-machine-interconnection.html"),
-      ("AKIOS", "Firmware and secure lifecycle for IoT devices.", "https://akios.cloud/"),
       ("Sentry-Bee", "Field monitoring with sensors, LTE and MQTT.", "https://github.com/jellero/sentry-bee"),
       ("Vehylo", "Vehicle diagnostics over OBD-II and Bluetooth.", "https://jellero.github.io/vehylo-web/"),
       ("Lauco Experience", "Four-language tourism portal with back office.", "https://www.laucoexperience.it/"),
     ],
+    akios_e="Product", akios_h="AKIOS: IoT devices that update without breaking.",
+    akios_p=[
+      "AKIOS is my product for IoT device makers: a layer living inside the device that governs its whole lifecycle, from first setup to updates and recovery when something goes wrong.",
+      "Every update is signed and verified, starts as a trial and is committed only if the device works; otherwise it rolls back by itself to the last good version. If no valid system is left, the device opens a local recovery network and is restored from a phone, never bricked.",
+      "The firmware already runs on Beken BK7238 chips, widely used in Wi-Fi devices, and AKIOS is offered to European manufacturers through a pilot programme: one device, a clear scope, validation on real hardware. It is built for makers who must guarantee secure updates for years, as the EU Cyber Resilience Act requires.",
+    ],
+    akios_points=["Signed and verified updates", "Trial, commit or automatic rollback", "Local recovery from a phone", "No forced cloud migration"],
+    akios_links=[("Discover AKIOS ↗", "https://akios.cloud/"), ("Pilot programme ↗", "https://akios-pilot.com/")],
     research_e="Research", research_h="ORYVAEL: an operating system where AI does the work, but does not rule.",
     research_p=[
       "ORYVAEL is my most ambitious research project: an AI-native operating system where artificial intelligence can design, write, test and maintain software, while authority always stays with people.",
