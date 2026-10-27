@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Machine interconnection 4.0 and data collection | JDEVPRO</title>
-<meta content="We connect machines (SCM, Essetre, Modbus, APIs) to business software: jobs, times and real costs. 10 machines already in production." name="description"/>
+<meta content="We connect any machine to business software, Industry 4.0 or older: OPC UA, MTConnect, PLCs, Modbus, serial or sensors. Real job costs. 10 in production." name="description"/>
 <meta content="#07111f" name="theme-color"/>
 <meta content="index,follow" name="robots"/>
 <link href="https://www.jdevpro.it/en-machine-interconnection.html" rel="canonical"/>
@@ -13,9 +13,9 @@
 <link href="assets/icon-180.png" rel="apple-touch-icon"/>
 <link href="styles.css?v=8fa5eb32" rel="stylesheet"/>
 <link href="overrides.css?v=2353238d" rel="stylesheet"/>
-<link href="pages.css?v=73c42f36" rel="stylesheet"/>
+<link href="pages.css?v=35a5875f" rel="stylesheet"/>
 <meta property="og:title" content="Machine interconnection 4.0 and data collection | JDEVPRO"/>
-<meta property="og:description" content="We connect machines (SCM, Essetre, Modbus, APIs) to business software: jobs, times and real costs. 10 machines already in production."/>
+<meta property="og:description" content="We connect any machine to business software, Industry 4.0 or older: OPC UA, MTConnect, PLCs, Modbus, serial or sensors. Real job costs. 10 in production."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://www.jdevpro.it/en-machine-interconnection.html"/>
 <meta property="og:image" content="https://www.jdevpro.it/assets/og-jdevpro.jpg"/>
@@ -32,7 +32,7 @@
  "@type": "Service",
  "name": "Industry 4.0 machine interconnection",
  "serviceType": "Industry 4.0 machine interconnection",
- "description": "We connect machines (SCM, Essetre, Modbus, APIs) to business software: jobs, times and real costs. 10 machines already in production.",
+ "description": "We connect any machine to business software, Industry 4.0 or older: OPC UA, MTConnect, PLCs, Modbus, serial or sensors. Real job costs. 10 in production.",
  "url": "https://www.jdevpro.it/en-machine-interconnection.html",
  "provider": {
   "@id": "https://www.jdevpro.it/#jdevpro"
@@ -90,15 +90,15 @@
    "name": "Which machines does it work with?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "We have already connected SCM machines with Maestro Active and Essetre/Tecnoessetre. For other brands we check interfaces and protocols before any quote."
+    "text": "Any machine, of any brand: if it has an interface (OPC UA, MTConnect, PLC, Modbus, web interface or serial port) we use it; if not, we add sensors and meters. We already have SCM machines with Maestro Active and Essetre/Tecnoessetre in production. Before quoting we check what yours offers."
    }
   },
   {
    "@type": "Question",
-   "name": "What if the machine has no API?",
+   "name": "What if the machine is old or has no interface?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "It can still be connected: through the supervisor's web interface, if available, or with a bridge program reading the serial or Modbus port."
+    "text": "It can still be connected: with a bridge program on the serial or Modbus port, or with sensors and meters detecting status, cycles and consumption. On older machines the connection serves times, costs and production; for incentives the asset requirements apply, to be checked with your appraiser."
    }
   },
   {
@@ -201,9 +201,9 @@
 <div class="shell page-hero-copy reveal">
 <nav aria-label="Breadcrumb" class="breadcrumb"><a href="en.html">Home</a><span>/</span><a href="en-industry.html">Industry</a><span>/</span><span aria-current="page">Machine interconnection 4.0</span></nav>
 <p class="eyebrow">Machine interconnection · Industry 4.0</p>
-<h1>Machine interconnection 4.0: <span>from the machine to your software.</span></h1>
-<p class="hero-lead">We read data from your machines and bring it where it is needed: status, jobs, production, alarms and real costs per job. Without touching the machine program.</p>
-<ul class="hero-stats"><li><div class="stat"><strong>10</strong><span>machines connected in production in Tolmezzo</span></div></li><li><div class="stat"><strong class="stat-long">Woodworking · metal pressing</strong><span>the sectors they work in</span></div></li><li><div class="stat"><strong class="stat-long">SCM · Essetre</strong><span>machines already connected to JD Industry</span></div></li></ul>
+<h1>Machine interconnection 4.0: <span>any machine, connected to your software.</span></h1>
+<p class="hero-lead">We connect machines of any brand, new or with years of work behind them, and bring the data where it is needed: status, jobs, production, alarms and real costs per job. Without touching the machine program.</p>
+<ul class="hero-stats"><li><div class="stat"><strong>10</strong><span>machines connected in production in Tolmezzo</span></div></li><li><div class="stat"><strong>Any brand</strong><span>Industry 4.0 and older machines, with or without an interface</span></div></li><li><div class="stat"><strong class="stat-long">SCM · Essetre</strong><span>machines already connected to JD Industry</span></div></li></ul>
 
 <div class="hero-actions">
 <a class="button primary" href="#contatto">Let's talk</a>
@@ -217,7 +217,8 @@
 <ul class="problem-list reveal">
 <li><strong>The machine is new but not connected.</strong> Without interconnection to company systems you risk losing Italian Industry 4.0 tax incentives.</li>
 <li><strong>Times and costs are estimated by hand.</strong> Machine hours, scrap and consumption end up in Excel, if at all.</li>
-<li><strong>The supplier does not connect your software.</strong> The machine has APIs, but nobody uses them to bring data to the office.</li>
+<li><strong>The supplier does not connect your software.</strong> The machine has interfaces, but nobody uses them to bring data to the office.</li>
+<li><strong>The machine is old and has no interface.</strong> It can still be connected, with sensors and meters detecting status, cycles, times and consumption.</li>
 </ul>
 </div>
 </section>
@@ -236,17 +237,18 @@
 </section>
 <section class="section section-tight section-paper">
 <div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">What we can integrate</p><h2>If it has an interface, it can be connected.</h2><p>Three routes, depending on what the system offers.</p></div>
-<div class="tier-grid">
+<div class="section-heading reveal"><p class="eyebrow">What we can integrate</p><h2>If it has an interface, it can be connected.</h2><p>Four routes, depending on what the system offers.</p></div>
+<div class="tier-grid tier-grid-4">
 <article class="tier reveal"><span class="competence-num">01</span><h3>Public APIs</h3><p>Full integration: read, write, events and notifications, with the service's official credentials.</p></article>
 <article class="tier reveal"><span class="competence-num">02</span><h3>Web interfaces without public APIs</h3><p>If a service is used from a browser, we automate the same calls its web panel makes, within the service's terms of use.</p></article>
 <article class="tier reveal"><span class="competence-num">03</span><h3>Serial and Modbus</h3><p>For devices without a network or with industrial protocols, a small bridge program reads the serial or Modbus port and delivers data to your systems.</p></article>
+<article class="tier reveal"><span class="competence-num">04</span><h3>Added sensors</h3><p>For machines and plants with no interface at all, old ones included: sensors and meters detect status, cycles, times and consumption and bring them into your systems.</p></article>
 </div>
 <div class="system-groups catalog">
-<div class="system-group reveal"><h3>Machines with web interfaces</h3><ul><li>SCM Maestro Active</li><li>Essetre / Tecnoessetre</li><li>Line supervisors with APIs</li></ul></div>
-<div class="system-group reveal"><h3>Industrial protocols</h3><ul><li>Modbus TCP</li><li>Modbus RTU over RS-485</li><li>OPC UA</li><li>MQTT</li></ul></div>
+<div class="system-group reveal"><h3>Machines and CNC controls</h3><ul><li>OPC UA and MTConnect</li><li>Siemens, Fanuc and Heidenhain controls</li><li>SCM Maestro Active, Essetre / Tecnoessetre</li><li>Line supervisors with web interface or API</li></ul></div>
+<div class="system-group reveal"><h3>PLCs and industrial protocols</h3><ul><li>Siemens S7, Beckhoff, Omron and Schneider PLCs</li><li>CODESYS runtime</li><li>Modbus TCP and Modbus RTU over RS-485</li><li>MQTT</li></ul></div>
 <div class="system-group reveal"><h3>Serial links</h3><ul><li>RS-485 / RS-232</li><li>Serial-to-network converters</li><li>Bridge program on PC or NAS</li></ul></div>
-<div class="system-group reveal"><h3>Sensors and meters</h3><ul><li>Energy meters</li><li>Power analysers</li><li>Temperature, pressure and humidity sensors</li></ul></div>
+<div class="system-group reveal"><h3>Machines without interfaces</h3><ul><li>Cycle and status sensors</li><li>Stack light reading</li><li>Energy meters and power analysers</li><li>Temperature, pressure and humidity sensors</li></ul></div>
 </div>
 <p class="catalog-note">Examples of services and devices that can be integrated. Names and trademarks belong to their owners; before each project we check access, limits and terms of use.</p>
 </div>
@@ -256,7 +258,7 @@
 <div class="section-heading reveal"><p class="eyebrow">Method</p><h2>How it works.</h2></div>
 <ol class="method-steps reveal">
 <li><strong>Compatibility check</strong><span>Brand, model, available interfaces and network. Before any quote.</span></li>
-<li><strong>Installation</strong><span>Connection and setup on your network, in a few days for machines with documented interfaces.</span></li>
+<li><strong>Installation</strong><span>Connection and setup on your network: a few days if the machine already has an interface, a little longer if sensors are needed.</span></li>
 <li><strong>Testing on real data</strong><span>We verify status, production and jobs with the machine at work.</span></li>
 <li><strong>Support when needed</strong><span>On-request help when the machine or the software changes.</span></li>
 </ol>
@@ -266,7 +268,7 @@
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">Indicative prices</p><h2>Where it starts.</h2></div>
 <div>
-<div class="price-grid"><div class="price reveal"><span>Connecting one machine</span><strong>from €1,500</strong><small>one-off · per machine type with documented interfaces</small></div></div>
+<div class="price-grid"><div class="price reveal"><span>Connecting one machine</span><strong>from €1,500</strong><small>one-off · per machine type · any sensors excluded</small></div></div>
 <p class="price-extra">No monthly fee: later work is agreed when needed. The sworn technical appraisal required for the Italian hyper-depreciation, signed by a registered engineer or technical expert, is excluded.</p>
 <p class="catalog-note">Indicative starting prices. Quotes are fixed-price, after checking what is really needed.</p>
 </div>
@@ -280,7 +282,7 @@
 <article class="example reveal"><h3>JD Industry · SCM edge bander with Maestro Active</h3><p>Real-time status and alarms, jobs opened and closed on the machine, automatic production import and real cost per job.</p></article>
 <article class="example reveal"><h3>JD Industry · Essetre/Tecnoessetre CNC</h3><p>Several machines on one screen, events linked to jobs, work file upload, stock and offcuts, printable cost reports.</p></article>
 </div>
-<div class="chips reveal" aria-label="Tech"><span>SCM Maestro Active</span><span>Essetre</span><span>Modbus</span><span>OPC UA</span><span>MQTT</span><span>RS-485</span><span>On-site server or NAS</span></div>
+<div class="chips reveal" aria-label="Tech"><span>Any brand</span><span>OPC UA</span><span>MTConnect</span><span>PLCs</span><span>Modbus</span><span>MQTT</span><span>RS-485</span><span>Sensors on old machines</span><span>On-site server or NAS</span></div>
 </div>
 </section>
 <section class="section section-tight">
@@ -290,8 +292,8 @@
 <details class="faq-item"><summary>Is interconnection needed for Italian Industry 4.0 incentives?</summary><p>The 2026–2028 super-depreciation requires the asset to be interconnected with the company information system or supply network. We build the connection and document it; the final assessment is up to your appraiser.</p></details>
 <details class="faq-item"><summary>Do I need to change my business software?</summary><p>No. Machine data goes into a dedicated application and, where needed, is passed to the software you already use.</p></details>
 <details class="faq-item"><summary>Do you modify the machine program?</summary><p>No. We only read and write through the interfaces provided by the manufacturer.</p></details>
-<details class="faq-item"><summary>Which machines does it work with?</summary><p>We have already connected SCM machines with Maestro Active and Essetre/Tecnoessetre. For other brands we check interfaces and protocols before any quote.</p></details>
-<details class="faq-item"><summary>What if the machine has no API?</summary><p>It can still be connected: through the supervisor's web interface, if available, or with a bridge program reading the serial or Modbus port.</p></details>
+<details class="faq-item"><summary>Which machines does it work with?</summary><p>Any machine, of any brand: if it has an interface (OPC UA, MTConnect, PLC, Modbus, web interface or serial port) we use it; if not, we add sensors and meters. We already have SCM machines with Maestro Active and Essetre/Tecnoessetre in production. Before quoting we check what yours offers.</p></details>
+<details class="faq-item"><summary>What if the machine is old or has no interface?</summary><p>It can still be connected: with a bridge program on the serial or Modbus port, or with sensors and meters detecting status, cycles and consumption. On older machines the connection serves times, costs and production; for incentives the asset requirements apply, to be checked with your appraiser.</p></details>
 <details class="faq-item"><summary>Do you do the wiring?</summary><p>Wiring, lines and electrical panels are installed by licensed electricians under Italian law (DM 37/08), whom we work with. We take care of devices, configuration, software and data.</p></details>
 </div>
 </div>

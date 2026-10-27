@@ -53,6 +53,8 @@ PRICES, CITIES, GUIDES, TEST = EXTRA["PRICES"], EXTRA["CITIES"], EXTRA["GUIDES"]
 PRICE_NOTES = EXTRA["PRICE_NOTES"]
 GUIDES = GUIDES + runpy.run_path(str(pathlib.Path(__file__).with_name("content_guides_more.py")))["MORE_GUIDES"]
 EN_SLUG, EN_PAGES, EN_TIERS = EXTRA["EN_SLUG"], EXTRA["EN_PAGES"], EXTRA["EN_TIERS"]
+SENSOR_TIER = {"it": ("Sensori aggiunti", "Per macchine e impianti senza nessuna interfaccia, anche vecchi: sensori e contatori rilevano stato, cicli, tempi e consumi e li portano nei vostri sistemi."),
+               "en": ("Added sensors", "For machines and plants with no interface at all, old ones included: sensors and meters detect status, cycles, times and consumption and bring them into your systems.")}
 TODAY = datetime.date.today().isoformat()
 
 import hashlib
@@ -112,7 +114,7 @@ PRICE_EN = {"Collegamento di una macchina": "Connecting one machine", "Dati macc
             "Progetto e configurazione": "Design and configuration", "Dati, allarmi e manutenzione": "Data, alarms and maintenance",
             "Integrazione tra due sistemi": "Integration between two systems", "Monitoraggio e manutenzione": "Monitoring and maintenance",
             "Sito con pannello di gestione": "Website with management panel", "Hosting e manutenzione": "Hosting and maintenance",
-            "per tipo di macchina con interfacce documentate": "per machine type with documented interfaces", "per macchina": "per machine",
+            "per tipo di macchina · eventuali sensori esclusi": "per machine type · any sensors excluded", "per macchina": "per machine",
             "a prezzo fisso, sulla parte più utile": "fixed price, on the most useful part", "dispositivi esclusi": "devices excluded",
             "per dispositivo": "per device", "con API pubbliche": "with public APIs", "": "",
             "Assistenza e controllo da remoto": "Support and remote monitoring", "Configurazione dell'impianto": "System configuration",
@@ -631,12 +633,18 @@ def service(p, lang="it"):
     reach = ""
     if p.get("catalog"):
         tiers_src = TIERS if lang == "it" else EN_TIERS
+        reach_p, grid = u["reach_p"], "tier-grid"
+        # macchine e impianti senza interfaccia: si aggiungono sensori
+        if it_slug in ("interconnessione-macchine-industria-4-0.html", "monitoraggio-iot.html"):
+            tiers_src = tiers_src + [SENSOR_TIER[lang]]
+            reach_p = reach_p.replace("Tre strade", "Quattro strade").replace("Three routes", "Four routes")
+            grid = "tier-grid tier-grid-4"
         tiers = "\n".join(
             f'<article class="tier reveal"><span class="competence-num">0{i}</span><h3>{a}</h3><p>{b}</p></article>'
             for i, (a, b) in enumerate(tiers_src, 1))
         if it_slug in TECH_TIERS:
-            intro = f"""<div class="section-heading reveal"><p class="eyebrow">{u['reach_e']}</p><h2>{u['reach_h']}</h2><p>{u['reach_p']}</p></div>
-<div class="tier-grid">
+            intro = f"""<div class="section-heading reveal"><p class="eyebrow">{u['reach_e']}</p><h2>{u['reach_h']}</h2><p>{reach_p}</p></div>
+<div class="{grid}">
 {tiers}
 </div>"""
         else:

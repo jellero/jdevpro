@@ -338,3 +338,6 @@
 .price-extra { margin: 14px 0 0; color: var(--ink-soft); font-size: .9rem; line-height: 1.5; }
 .price-extra a { color: var(--accent); }
 .legal-updated { margin-top: 28px; color: var(--ink-soft); font-size: .88rem; }
+.tier-grid.tier-grid-4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 1180px) { .tier-grid.tier-grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 980px) { .tier-grid.tier-grid-4 { grid-template-columns: 1fr; } }

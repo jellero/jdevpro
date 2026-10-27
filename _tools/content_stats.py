@@ -38,10 +38,10 @@ STATS = {
   },
   "interconnessione-macchine-industria-4-0.html": {
     "it": [("10", "macchine collegate in produzione a Tolmezzo", None),
-           ("Falegnamerie · stamperie", "i settori in cui lavorano", None),
+           ("Qualsiasi marca", "macchine 4.0 e anche datate, con o senza interfaccia", None),
            ("SCM · Essetre", "macchine già collegate al gestionale JD Industry", None)],
     "en": [("10", "machines connected in production in Tolmezzo", None),
-           ("Woodworking · metal pressing", "the sectors they work in", None),
+           ("Any brand", "Industry 4.0 and older machines, with or without an interface", None),
            ("SCM · Essetre", "machines already connected to JD Industry", None)],
   },
   "monitoraggio-iot.html": {
