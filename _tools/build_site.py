@@ -300,7 +300,7 @@ PAGES = [
     eyebrow="Videosorveglianza · Citofonia · Accessi",
     h1="Videosorveglianza, citofonia e accessi: <span>tutto sul telefono.</span>",
     lead="Telecamere che distinguono una persona da un gatto, videocitofoni che suonano sul cellulare, accessi con riconoscimento facciale e targhe, cancelli e porte comandati da remoto e collegati a prenotazioni, turni o fornitori.",
-    proof="Decine di impianti Ubiquiti installati: antenne, telecamere, citofoni e controllo accessi con riconoscimento facciale e targhe.",
+    proof="Decine di impianti Ubiquiti installati in aziende di vario tipo: antenne, telecamere, citofoni e controllo accessi con riconoscimento facciale e targhe.",
     problems=[
       ("Troppi falsi allarmi.", "Foglie, ombre e animali fanno scattare notifiche che nessuno guarda più."),
       ("Registrazioni che nessuno consulta.", "Quando serve, cercare un evento in ore di video è impossibile."),
@@ -379,7 +379,7 @@ PAGES = [
       ("Configurazione e portabilità", "Interni, app e citofoni configurati; numeri trasferiti senza interruzioni."),
       ("Assistenza", "Modifiche a orari e regole, aggiornamenti e supporto."),
     ],
-    proof="Installati in strutture ricettive, aziende e ristoranti, con Asterisk e 3CX e telefoni Grandstream e Yealink.",
+    proof="Installati in aziende, alberghi e ristoranti, con Asterisk e 3CX e telefoni Grandstream e Yealink.",
     examples=[
       ("Strutture ricettive", "Centralini VoIP con Asterisk o 3CX e telefoni Grandstream e Yealink per reception e uffici.", None),
       ("Aziende", "Centralini con interni in ufficio e sul cellulare, risponditore e smistamento delle chiamate.", None),
@@ -404,6 +404,7 @@ PAGES = [
     desc="Internet dove la linea non arriva: 4G/5G, satellite, ponti radio, energia solare e controllo da remoto per baite, rifugi, cantieri e impianti.",
     service_type="Connettività offgrid per siti remoti",
     eyebrow="Internet offgrid · Siti remoti",
+    proof="Installiamo connessioni con Ubiquiti, MikroTik e Starlink.",
     h1="Internet offgrid: <span>connessi anche dove la linea non arriva.</span>",
     lead="Portiamo la connessione in baite, rifugi, cantieri, impianti e aziende agricole: 4G/5G, satellite o ponte radio, alimentati dal sole quando serve, e controllabili da remoto.",
     problems=[
@@ -420,7 +421,7 @@ PAGES = [
       ("Telecamere e sensori", "Videosorveglianza e sensori anche dove non c'è né rete né corrente."),
     ],
     catalog=[
-      ("Connessione", ["Ponti radio e antenne Ubiquiti", "Router 4G/5G", "Teltonika", "Starlink", "NB-IoT per sensori"]),
+      ("Connessione", ["Ponti radio e antenne Ubiquiti", "Router MikroTik", "Starlink", "Router 4G/5G", "Teltonika", "NB-IoT per sensori"]),
       ("Energia", ["Victron Energy", "Pannelli solari e batterie", "Monitoraggio della batteria"]),
       ("Controllo", ["Riavvio da remoto", "Avvisi sul telefono", "Accesso sicuro VPN"]),
     ],
@@ -432,7 +433,8 @@ PAGES = [
     ],
     examples=[
       ("Antenne e ponti radio Ubiquiti", "Decine di impianti installati: collegamenti radio che portano Internet e telecamere tra edifici e siti distanti.", None),
-      ("Oryzeno OpenLink · connettività remota", "Studio di connettività per siti remoti via satellite ed edge.", "https://jellero.github.io/Oryzeno/"),
+      ("Starlink", "Connessione satellitare per baite, rifugi, cantieri e siti dove non arriva né la linea fissa né un buon segnale mobile.", None),
+      ("Reti MikroTik", "Router e reti MikroTik: più linee insieme, riserva 4G/5G quando la linea principale cade e accesso sicuro da remoto.", None),
     ],
     chips=["4G / 5G", "Satellite", "Ponti radio", "Solare e batterie", "Riavvio da remoto"],
     faq=[
