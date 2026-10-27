@@ -193,6 +193,7 @@ PAGES = [
     desc="Integriamo domotica e IoT (Tuya, Aqara, Honeywell, Shelly, Netatmo), inverter e contatori Modbus con cruscotti, allarmi e gestionale.",
     service_type="Sistemi di monitoraggio IoT",
     eyebrow="IoT · Sensori · Energia",
+    proof="Sensori e gateway in ambito industriale, termostati collegati in alberghi e affittacamere.",
     h1="Monitoraggio IoT: <span>sensori collegati ai tuoi sistemi.</span>",
     lead="Progettiamo sistemi che raccolgono dati da sensori e dispositivi, li portano in un cruscotto o nel gestionale e avvisano quando qualcosa non va. Anche dove la rete è debole o manca la corrente.",
     problems=[
@@ -210,7 +211,7 @@ PAGES = [
     ],
     systems=[
       ("Connettività", ["Rete mobile 4G e NB-IoT", "Wi-Fi", "Bluetooth", "RS-485 / Modbus"]),
-      ("Dispositivi e domotica", ["Tuya / Smart Life", "Home Assistant", "Termostati", "Diagnostica veicoli OBD-II"]),
+      ("Dispositivi e domotica", ["Tuya / Smart Life", "Home Assistant", "Termostati"]),
       ("Cruscotti e dati", ["Cruscotti web", "Allarmi e notifiche", "Storico dei dati"]),
     ],
     catalog=[
@@ -226,7 +227,8 @@ PAGES = [
       ("Manutenzione con canone", "Controllo da remoto, aggiornamenti e assistenza."),
     ],
     examples=[
-      ("Welora · clima delle camere", "Termostati collegati al gestionale della struttura, con avvisi di comfort e comandi per singola camera.", "https://welora.it/"),
+      ("Sensori e gateway in ambito industriale", "Sensori su RS-485, gateway seriali e MQTT, invio dei dati al cloud, collaudo e messa in servizio.", None),
+      ("Clima camera per camera", "In alberghi e affittacamere: termostati collegati alle prenotazioni, con avvisi di comfort e comandi per singola camera.", "automazione-hotel-bnb.html"),
       ("AKIOS · ciclo di vita sicuro dei dispositivi IoT", "Il nostro prodotto per i produttori di dispositivi: aggiornamenti firmati in prova, ritorno automatico all'ultima versione buona e ripristino locale dal telefono. Già operativo sui chip Beken BK7238.", "https://akios.cloud/"),
     ],
     chips=["Sensori e contatori", "Fotovoltaico e accumuli", "Domotica", "Allarmi sul telefono", "Funziona anche offline"],
