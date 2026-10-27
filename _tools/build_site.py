@@ -248,6 +248,7 @@ PAGES = [
     desc="Automazione per hotel e B&B: check-in online, accessi con codice, clima e consumi per camera, Alloggiati Web, ISTAT, pagamenti e prenotazioni collegate.",
     service_type="Automazione per strutture ricettive",
     eyebrow="Hotel · B&B · Case vacanza",
+    proof="Clima camera per camera già in funzione in alberghi e affittacamere; centralini VoIP installati negli alberghi.",
     h1="Automazione per hotel e B&B: <span>meno lavoro manuale, ospiti più sereni.</span>",
     lead="Colleghiamo prenotazioni, accessi, clima, consumi e adempimenti in un unico flusso. L'ospite riceve il codice, entra, trova la camera alla temperatura giusta; tu non rincorri chiavi, termostati e portali.",
     problems=[
@@ -277,7 +278,8 @@ PAGES = [
     ],
     examples=[
       ("Welora · gestionale per strutture ricettive", "Planning, prenotazioni, pulizie, portale ospiti, check-in online con verifica dei documenti, pagamenti, Alloggiati Web e ISTAT.", "https://welora.it/"),
-      ("Welora · clima delle camere", "Termostati collegati alle prenotazioni: avvisi di comfort e comandi per singola camera.", "https://welora.it/"),
+      ("Clima camera per camera", "In alberghi e affittacamere: termostati collegati alle prenotazioni, avvisi di comfort e comandi per singola camera.", None),
+      ("Centralini VoIP negli alberghi", "Centralini Asterisk o 3CX con telefoni Grandstream e Yealink per reception e uffici.", "centralini-voip-telefonia.html"),
       ("Lauco Experience · portale turistico", "Sito in quattro lingue con pannello di gestione, eventi, percorsi e notifiche.", "https://www.laucoexperience.it/"),
     ],
     chips=["Check-in online", "Codici di accesso", "Termostati", "Consumi", "Alloggiati Web", "Pagamenti online"],
@@ -317,7 +319,7 @@ PAGES = [
     catalog=[
       ("Ubiquiti UniFi", ["UniFi Protect", "UniFi Access", "Citofoni UniFi", "Antenne e ponti radio Ubiquiti", "Reti UniFi"]),
       ("Altre telecamere e registratori", ["Hikvision", "Dahua", "Reolink", "Axis", "Telecamere ONVIF / RTSP"]),
-      ("Analisi video", ["Frigate", "Riconoscimento persone e veicoli", "Zone e linee virtuali"]),
+      ("Analisi video", ["Frigate", "Riconoscimento di persone e veicoli", "Riconoscimento facciale", "Lettura targhe", "Zone e linee virtuali"]),
       ("Cancelli e automazioni", ["Nice", "CAME", "BFT", "FAAC", "Shelly", "Apricancello GSM"]),
       ("Videocitofoni", ["2N", "Comelit", "BTicino", "Akuvox", "Hikvision", "Dahua", "Citofoni SIP"]),
       ("Avvisi e collegamenti", ["Notifiche sul telefono", "Telegram", "WhatsApp", "Home Assistant"]),
@@ -333,7 +335,7 @@ PAGES = [
       ("Citofonia e controllo accessi UniFi", "Videocitofoni e accessi UniFi con riconoscimento facciale, badge e aperture da telefono, con lo storico di ogni ingresso.", None),
       ("Antenne e ponti radio Ubiquiti", "Collegamenti radio per portare rete e telecamere tra edifici, cancelli e aree esterne.", None),
     ],
-    chips=["Persone e veicoli", "Avvisi con foto", "Cancelli da telefono", "Codici temporanei", "Registrazione in sede"],
+    chips=["Persone, volti e targhe", "Avvisi con foto", "Cancelli da telefono", "Codici temporanei", "Registrazione in sede"],
     faq=[
       ("È a norma di privacy?", "Progettiamo nel rispetto del GDPR: cartelli, tempi di conservazione e accessi alle immagini. Il riconoscimento facciale tratta dati biometrici e si usa solo con le basi giuridiche e le valutazioni d'impatto richieste. Nelle aziende con dipendenti servono anche l'accordo sindacale o l'autorizzazione dell'Ispettorato del lavoro, che restano a carico del titolare."),
       ("Posso usare le telecamere che ho già?", "Spesso sì, se supportano gli standard ONVIF o RTSP. Verifichiamo prima di proporre nuovi apparecchi."),
@@ -381,7 +383,7 @@ PAGES = [
     ],
     proof="Installati in aziende, alberghi e ristoranti, con Asterisk e 3CX e telefoni Grandstream e Yealink.",
     examples=[
-      ("Strutture ricettive", "Centralini VoIP con Asterisk o 3CX e telefoni Grandstream e Yealink per reception e uffici.", None),
+      ("Alberghi", "Centralini VoIP con Asterisk o 3CX e telefoni Grandstream e Yealink per reception e uffici.", None),
       ("Aziende", "Centralini con interni in ufficio e sul cellulare, risponditore e smistamento delle chiamate.", None),
       ("Ristoranti", "Centralini VoIP con telefoni Grandstream e Yealink per gestire le chiamate in sala e in cassa.", None),
     ],
