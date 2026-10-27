@@ -37,7 +37,7 @@ AREAS = {
          h1="Per chi gestisce una struttura: <span>accessi, sicurezza e comfort da remoto.</span>",
          lead="Hotel, B&B, uffici, aziende, baite e abitazioni: colleghiamo telecamere, citofoni, cancelli, termostati, telefoni e connessione, e li comandi dal telefono. Con installatori abilitati per la parte elettrica.",
          who=["Hotel, B&B e case vacanza", "Uffici e aziende", "Condomini e abitazioni", "Baite, rifugi e cantieri", "Aziende agricole e siti isolati"],
-         proof=[("Welora", "Il nostro gestionale per strutture ricettive, tutto incluso a 29 € al mese."),
+         proof=[("Welora", "Il nostro gestionale per strutture ricettive, tutto incluso a 29 € al mese: in arrivo il 15 febbraio 2027."),
                 ("Decine di impianti Ubiquiti", "In aziende di vario tipo: antenne, telecamere, citofoni e controllo accessi con riconoscimento facciale e targhe."),
                 ("Clima camera per camera", "In alberghi e affittacamere: termostati collegati alle prenotazioni, con avvisi di comfort."),
                 ("Centralini VoIP installati", "In aziende, alberghi e ristoranti, con Asterisk e 3CX e telefoni Grandstream e Yealink."),
@@ -77,7 +77,7 @@ AREAS = {
          h1="For property managers: <span>access, security and comfort, remotely.</span>",
          lead="Hotels, B&Bs, offices, companies, huts and homes: we connect cameras, intercoms, gates, thermostats, phones and connectivity, and you control them from your phone. With licensed electricians for the electrical work.",
          who=["Hotels, B&Bs and holiday homes", "Offices and companies", "Apartment buildings and homes", "Huts, refuges and building sites", "Farms and isolated sites"],
-         proof=[("Welora", "Our hospitality management software, everything included for €29 a month."),
+         proof=[("Welora", "Our hospitality management software, everything included for €29 a month: launching on 15 February 2027."),
                 ("Dozens of Ubiquiti systems", "In all kinds of companies: antennas, cameras, intercoms and access control with face and plate recognition."),
                 ("Room-by-room climate", "In hotels and guest houses: thermostats tied to bookings, with comfort alerts."),
                 ("VoIP phone systems installed", "In companies, hotels and restaurants, with Asterisk and 3CX and Grandstream and Yealink phones."),
@@ -125,8 +125,8 @@ WHERE_PAGE = dict(slug="dove-lavoriamo.html", nav="Dove lavoriamo",
 
 CALLOUTS = {
   "automazione-hotel-bnb.html": {
-    "it": ("Il gestionale per strutture ricettive lo abbiamo fatto noi: <strong>Welora</strong>. PMS, canali, check-in, pagamenti, fatture e automazioni, tutto incluso a 29 € al mese.", "Scopri Welora ↗", "https://welora.it/"),
-    "en": ("We built the hospitality management software ourselves: <strong>Welora</strong>. PMS, channels, check-in, payments, invoices and automation, all included for €29 a month.", "Discover Welora ↗", "https://welora.it/"),
+    "it": ("Il gestionale per strutture ricettive lo abbiamo fatto noi: <strong>Welora</strong>. PMS, canali, check-in, pagamenti, fatture e automazioni, tutto incluso a 29 € al mese, in arrivo il 15 febbraio 2027.", "Scopri Welora ↗", "https://welora.it/"),
+    "en": ("We built the hospitality management software ourselves: <strong>Welora</strong>. PMS, channels, check-in, payments, invoices and automation, all included for €29 a month, launching on 15 February 2027.", "Discover Welora ↗", "https://welora.it/"),
   },
 }
 

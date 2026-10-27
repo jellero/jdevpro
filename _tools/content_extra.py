@@ -356,7 +356,7 @@ EN_PAGES = {
     steps=[("System map", "Which programs exist, which data must flow and when."),
            ("Flow design", "Formats, possible errors, checks and responsibilities."),
            ("Development and testing", "Tests with real data before going live."),
-           ("Monitoring plan", "Ongoing checks and fixes when a system changes.")],
+           ("Monitoring", "Ongoing checks and fixes when a system changes; a monthly fee only if the integration runs on our server.")],
     examples=[("Business software connected to supplier, marketplaces and courier", "For a company buying from a supplier and reselling online: supplier catalogue, SellRapido, IBS, Temu and GLS courier connected. Offers, orders, purchases and shipments without manual steps.", None),
               ("Welora · bookings and portals", "Bookings imported from Booking.com and availability updated, without losing data when a service is down.", "https://welora.it/"),
               ("Welora · payments, invoices and compliance", "Payments and refunds with Stripe, guest document checks, e-invoices, Alloggiati Web, ISTAT and WhatsApp Business.", "https://welora.it/")],

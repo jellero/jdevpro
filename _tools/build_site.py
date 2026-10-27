@@ -167,7 +167,7 @@ PAGES = [
       ("Mappa dei sistemi", "Quali programmi ci sono, quali dati devono passare e quando."),
       ("Progetto del flusso", "Formati, errori possibili, controlli e responsabilità."),
       ("Sviluppo e collaudo", "Prove con dati reali prima di andare in produzione."),
-      ("Monitoraggio con canone", "Controllo continuo e interventi quando un sistema cambia."),
+      ("Monitoraggio", "Controllo continuo e interventi quando un sistema cambia; canone solo se l'integrazione gira sul nostro server."),
     ],
     examples=[
       ("Gestionale collegato a fornitore, marketplace e corriere", "Per un'azienda che compra da un fornitore e rivende online: catalogo del fornitore, SellRapido, IBS, Temu e corriere GLS collegati. Offerte, ordini, acquisti e spedizioni senza passaggi manuali.", None),
