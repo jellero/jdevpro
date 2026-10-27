@@ -4,6 +4,7 @@ import runpy
 
 EXTRA = runpy.run_path(str(pathlib.Path(__file__).with_name("content_extra.py")))
 ABOUT = runpy.run_path(str(pathlib.Path(__file__).with_name("content_about.py")))["ABOUT"]
+PRODUCTS = runpy.run_path(str(pathlib.Path(__file__).with_name("content_products.py")))["PRODUCTS"]
 PRICES, CITIES, GUIDES, TEST = EXTRA["PRICES"], EXTRA["CITIES"], EXTRA["GUIDES"], EXTRA["TEST"]
 EN_SLUG, EN_PAGES, EN_TIERS = EXTRA["EN_SLUG"], EXTRA["EN_PAGES"], EXTRA["EN_TIERS"]
 TODAY = datetime.date.today().isoformat()
@@ -163,6 +164,12 @@ def header(current, lang="it", home=False, switch=None):
     links = (f'<div class="nav-group{" is-current" if in_services else ""}">'
              f'<a class="nav-group-label" href="{home_slug}#competenze">{u["services"]} <span aria-hidden="true">▾</span></a>'
              f'<div class="nav-sub">\n{sub}\n</div></div>')
+    prods = PRODUCTS[lang]
+    in_prods = any(x["slug"] == current for x in prods)
+    psub = "\n".join(f'<a href="{x["slug"]}"{" aria-current=\"page\"" if x["slug"] == current else ""}>{x["nav"]}</a>' for x in prods)
+    links += (f'\n<div class="nav-group{" is-current" if in_prods else ""}">'
+              f'<a class="nav-group-label" href="{home_slug}#prodotti">{"Prodotti" if lang == "it" else "Products"} <span aria-hidden="true">▾</span></a>'
+              f'<div class="nav-sub">\n{psub}\n</div></div>')
     if lang == "it":
         links += f'\n<a href="guide.html"{" aria-current=\"page\"" if current == "guide.html" else ""}>Guide</a>'
     ab = ABOUT[lang]
@@ -216,6 +223,7 @@ def footer(lang="it"):
     if lang == "it":
         links += '<a href="guide.html">Guide</a>'
         local = '<div class="footer-local">' + "".join(f'<a href="{c["slug"]}">{c["name"]}</a>' for c in CITIES) + "</div>"
+    links += "".join(f'<a href="{x["slug"]}">{x["nav"]}</a>' for x in PRODUCTS[lang])
     links += f'<a href="{ABOUT[lang]["slug"]}">{ABOUT[lang]["nav"]}</a>'
     return f"""<footer class="footer">
 <div class="shell footer-grid footer-wide">
@@ -374,7 +382,7 @@ def home(lang="it"):
 <p class="proof-who reveal">{t['who']}</p>
 </div>
 </section>
-{extra}{contact(lang)}</main>
+{products_home(lang)}{extra}{contact(lang)}</main>
 """
     slug = "index.html" if lang == "it" else "en.html"
     org = ORG if lang == "it" else dict(ORG, description="Industry 4.0 machine interconnection, custom business software, IoT, software integrations and websites for companies in north-east Italy.")
@@ -464,7 +472,7 @@ def service(p, lang="it"):
 {f'<p class="hero-proof">{p["proof"]}</p>' if p.get("proof") else ''}
 <div class="hero-actions">
 <a class="button primary" href="#contatto">{u['talk']}</a>
-<a class="button ghost" href="#esempi">{u['see_examples']}</a>
+{f'<a class="button ghost" href="#esempi">{u["see_examples"]}</a>' if p["examples"] else ''}
 </div>
 </div>
 </section>
@@ -492,7 +500,7 @@ def service(p, lang="it"):
 </ol>
 </div>
 </section>
-{price_block(it_slug, lang)}<section class="section section-tight section-dark" id="esempi">
+{price_block(it_slug, lang)}{f'''<section class="section section-tight section-dark" id="esempi">
 <div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">{u['examples']}</p><h2>{u['examples_h']}</h2></div>
 <div class="example-grid">
@@ -501,7 +509,7 @@ def service(p, lang="it"):
 <div class="chips reveal" aria-label="Tech">{chips}</div>
 </div>
 </section>
-<section class="section section-tight">
+''' if p["examples"] else ''}<section class="section section-tight">
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">{u['faq']}</p><h2>{u['faq_h']}</h2></div>
 <div class="faq reveal">
@@ -851,13 +859,13 @@ def about(lang="it"):
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">{a['akios_e']}</p><h2>{a['akios_h']}</h2>
 <ul class="akios-points">{"".join(f"<li>{x}</li>" for x in a["akios_points"])}</ul></div>
-<div class="research-copy reveal">{"".join(f"<p>{x}</p>" for x in a["akios_p"])}<div class="hero-actions">{"".join(f'<a class="button {"primary" if i == 0 else "ghost"}" href="{l}" rel="noreferrer" target="_blank">{n}</a>' for i, (n, l) in enumerate(a["akios_links"]))}</div></div>
+<div class="research-copy reveal">{"".join(f"<p>{x}</p>" for x in a["akios_p"])}<div class="hero-actions"><a class="button primary" href="{PRODUCTS[lang][0]['slug']}">{UI[lang]['more'].replace(' →', '')}</a>{"".join(f'<a class="button ghost" href="{l}" rel="noreferrer" target="_blank">{n}</a>' for n, l in a["akios_links"])}</div></div>
 </div>
 </section>
 <section class="section section-tight section-dark">
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">{a['research_e']}</p><h2>{a['research_h']}</h2></div>
-<div class="research-copy reveal">{"".join(f"<p>{x}</p>" for x in a["research_p"])}<a class="button primary" href="{a['research_link'][1]}" rel="noreferrer" target="_blank">{a['research_link'][0]}</a></div>
+<div class="research-copy reveal">{"".join(f"<p>{x}</p>" for x in a["research_p"])}<div class="hero-actions"><a class="button primary" href="{PRODUCTS[lang][1]['slug']}">{UI[lang]['more'].replace(' →', '')}</a><a class="button ghost" href="{a['research_link'][1]}" rel="noreferrer" target="_blank">{a['research_link'][0]}</a></div></div>
 </div>
 </section>
 <section class="section section-tight section-paper">
@@ -872,6 +880,136 @@ def about(lang="it"):
 """
     return head(a["title"], a["desc"], a["slug"], jsonld, lang,
                 alternates=[("it", ABOUT["it"]["slug"]), ("en", ABOUT["en"]["slug"])]) + body + footer(lang)
+
+
+# ---------------------------------------------------------------- prodotti (AKIOS, ORYVAEL)
+
+def product_counterpart(pr, lang):
+    other = "en" if lang == "it" else "it"
+    return next(x for x in PRODUCTS[other] if x["key"] == pr["key"])["slug"]
+
+
+def product_block(b, bg):
+    kind = b[0]
+    if kind == "cards":
+        _, eyebrow, h2, intro, items = b
+        cards = "".join(f'<article class="outcome reveal"><h3>{t}</h3><p>{d}</p></article>' for t, d in items)
+        intro_html = f"<p>{intro}</p>" if intro else ""
+        return f"""<section class="section section-tight {bg}">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">{eyebrow}</p><h2>{h2}</h2>{intro_html}</div>
+<div class="outcome-grid">{cards}</div>
+</div>
+</section>
+"""
+    if kind == "flow":
+        _, eyebrow, h2, steps = b
+        li = "".join(f"<li><strong>{t}</strong><span>{d}</span></li>" for t, d in steps)
+        return f"""<section class="section section-tight {bg}">
+<div class="shell split">
+<div class="section-heading reveal"><p class="eyebrow">{eyebrow}</p><h2>{h2}</h2></div>
+<ol class="method-steps reveal">{li}</ol>
+</div>
+</section>
+"""
+    if kind == "split":
+        _, eyebrow, h2, paragraphs, points = b
+        pts = "".join(f"<li>{x}</li>" for x in points)
+        paras = "".join(f"<p>{x}</p>" for x in paragraphs)
+        return f"""<section class="section section-tight {bg}">
+<div class="shell split">
+<div class="section-heading reveal"><p class="eyebrow">{eyebrow}</p><h2>{h2}</h2><ul class="product-points">{pts}</ul></div>
+<div class="profile-copy reveal">{paras}</div>
+</div>
+</section>
+"""
+    if kind == "compare":
+        _, eyebrow, h2, (lt, li_), (rt, ri) = b
+        left = "".join(f"<li>{x}</li>" for x in li_)
+        right = "".join(f"<li>{x}</li>" for x in ri)
+        return f"""<section class="section section-tight {bg}">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">{eyebrow}</p><h2>{h2}</h2></div>
+<div class="compare-grid reveal"><div class="compare-col yes"><h3>{lt}</h3><ul>{left}</ul></div><div class="compare-col no"><h3>{rt}</h3><ul>{right}</ul></div></div>
+</div>
+</section>
+"""
+    if kind == "status":
+        _, eyebrow, h2, items, note = b
+        li = "".join(f"<li>{x}</li>" for x in items)
+        return f"""<section class="section section-tight section-dark">
+<div class="shell split">
+<div class="section-heading reveal"><p class="eyebrow">{eyebrow}</p><h2>{h2}</h2></div>
+<div class="reveal"><ul class="status-list">{li}</ul><p class="status-note">{note}</p></div>
+</div>
+</section>
+"""
+    raise ValueError(kind)
+
+
+def product_page(pr, lang):
+    u = UI[lang]
+    home_slug = "index.html" if lang == "it" else "en.html"
+    url = url_of(pr["slug"])
+    other = product_counterpart(pr, lang)
+    bgs = ["section-white", "section-paper"]
+    blocks = "".join(product_block(b, bgs[i % 2]) for i, b in enumerate(pr["blocks"]))
+    buttons = "".join(f'<a class="button {"primary" if i == 0 else "ghost"}" href="{l}" rel="noreferrer" target="_blank">{n}</a>'
+                      for i, (n, l) in enumerate(pr["links"]))
+    buttons += f'<a class="button ghost" href="#contatto">{u["talk"]}</a>'
+    others = "".join(f'<a href="{x["slug"]}"><strong>{x["nav"]}</strong><span>{x["card"]}</span></a>'
+                     for x in PRODUCTS[lang] if x["key"] != pr["key"])
+    if pr["key"] == "akios":
+        main_ld = {"@context": "https://schema.org", "@type": "Product", "name": "AKIOS", "description": pr["desc"], "url": url,
+                   "brand": {"@type": "Brand", "name": "AKIOS"}, "manufacturer": {"@id": ORG_ID}, "sameAs": ["https://akios.cloud/", "https://akios-pilot.com/"]}
+    else:
+        main_ld = {"@context": "https://schema.org", "@type": "ResearchProject", "name": "ORYVAEL", "description": pr["desc"], "url": url,
+                   "founder": {"@type": "Person", "name": "Jacopo Ellero"}, "sameAs": ["https://jellero.github.io/ORYVAEL-web/", "https://github.com/jellero/ORYVAEL"]}
+    jsonld = [main_ld,
+              {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+                  {"@type": "ListItem", "position": 1, "name": u["home"], "item": url_of(home_slug)},
+                  {"@type": "ListItem", "position": 2, "name": pr["nav"], "item": url}]},
+              ORG_REF]
+    other_label = "Altri prodotti" if lang == "it" else "Other products"
+    body = f"""{header(pr['slug'], lang, switch=other)}<main id="main">
+<section class="hero page-hero product-hero product-{pr['key']}">
+<div aria-hidden="true" class="hero-grid"></div>
+<div class="shell page-hero-copy reveal">
+<nav aria-label="{u['crumbs']}" class="breadcrumb"><a href="{home_slug}">{u['home']}</a><span>/</span><span aria-current="page">{pr['nav']}</span></nav>
+<p class="eyebrow">{pr['eyebrow']}</p>
+<h1>{pr['h1']}</h1>
+<p class="hero-lead">{pr['lead']}</p>
+<div class="hero-actions">{buttons}</div>
+</div>
+</section>
+{blocks}{contact(lang)}<section class="section section-tight related">
+<div class="shell">
+<p class="eyebrow">{other_label}</p>
+<div class="related-grid">{others}</div>
+</div>
+</section>
+</main>
+"""
+    alternates = [("it", next(x for x in PRODUCTS["it"] if x["key"] == pr["key"])["slug"]),
+                  ("en", next(x for x in PRODUCTS["en"] if x["key"] == pr["key"])["slug"])]
+    return head(pr["title"], pr["desc"], pr["slug"], jsonld, lang, alternates=alternates) + body + footer(lang)
+
+
+def products_home(lang):
+    if lang == "it":
+        e, h, p = "Prodotti e ricerca", "Non solo progetti per i clienti.", "Due progetti nostri, con pagine dedicate."
+    else:
+        e, h, p = "Products and research", "Not only client projects.", "Two projects of our own, each with its own page."
+    cards = "".join(f'<a class="product-card product-card-{x["key"]} reveal" href="{x["slug"]}"><span class="eyebrow">{x["eyebrow"]}</span>'
+                    f'<strong>{x["nav"]}</strong><span class="product-card-text">{x["card"]}</span><span class="competence-more">{UI[lang]["more"]}</span></a>'
+                    for x in PRODUCTS[lang])
+    return f"""<section class="section section-tight section-dark" id="prodotti">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">{e}</p><h2>{h}</h2><p>{p}</p></div>
+<div class="product-grid">{cards}</div>
+</div>
+</section>
+"""
 
 
 # ---------------------------------------------------------------- scrittura
@@ -895,6 +1033,9 @@ for g in GUIDES:
 write("guide.html", guide_index())
 write(TEST["slug"], test_page())
 write("chi-sono.html", about("it"))
+for _lang in ("it", "en"):
+    for _pr in PRODUCTS[_lang]:
+        write(_pr["slug"], product_page(_pr, _lang))
 write("en-about.html", about("en"))
 write("404.html", not_found())
 for old, target in OLD_URLS.items():
@@ -902,7 +1043,7 @@ for old, target in OLD_URLS.items():
 
 urls = (["", "en.html"] + [p["slug"] for p in PAGES] + [EN_SLUG[p["slug"]] for p in PAGES]
         + [c["slug"] for c in CITIES] + ["guide.html", TEST["slug"]] + [g["slug"] for g in GUIDES]
-        + ["chi-sono.html", "en-about.html", "cv.html", "cv-en.html", "privacy.html", "privacy-en.html", "cookie-policy.html", "cookie-policy-en.html"])
+        + [x["slug"] for l in ("it", "en") for x in PRODUCTS[l]] + ["chi-sono.html", "en-about.html", "cv.html", "cv-en.html", "privacy.html", "privacy-en.html", "cookie-policy.html", "cookie-policy-en.html"])
 sitemap = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 sitemap += [f"  <url><loc>{BASE}{u}</loc><lastmod>{TODAY}</lastmod></url>" for u in urls]
 sitemap.append("</urlset>")
