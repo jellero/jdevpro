@@ -8,7 +8,7 @@ Blocchi: ("cards", eyebrow, h2, intro, [(titolo, testo)]), ("flow", eyebrow, h2,
 PRODUCTS = {
   "it": [
     dict(
-      key="welora", slug="welora.html", nav="Welora",
+      key="welora", slug="https://welora.it/", external=True, nav="Welora",
       title="Welora: gestionale per strutture ricettive a 29 € al mese | JDEVPRO",
       desc="Welora riunisce PMS, booking engine, canali, check-in, pagamenti, fatture, pulizie, cassa e automazioni per B&B e hotel. 29 € al mese, tutto incluso.",
       card="Il gestionale completo per B&B, affittacamere e hotel: tutto incluso a 29 € al mese.",
@@ -49,7 +49,7 @@ PRODUCTS = {
       ],
     ),
     dict(
-      key="akios", slug="akios.html", nav="AKIOS",
+      key="akios", slug="https://akios.cloud/", external=True, nav="AKIOS",
       title="AKIOS: aggiornamenti sicuri e ripristino per dispositivi IoT | JDEVPRO",
       desc="AKIOS governa il ciclo di vita dei dispositivi IoT: aggiornamenti firmati in prova, ritorno automatico e ripristino locale. Per produttori europei e CRA.",
       card="Aggiornamenti firmati, ritorno automatico e ripristino locale per i dispositivi IoT dei produttori europei.",
@@ -140,7 +140,7 @@ PRODUCTS = {
   ],
   "en": [
     dict(
-      key="welora", slug="en-welora.html", nav="Welora",
+      key="welora", slug="https://welora.it/", external=True, nav="Welora",
       title="Welora: property management software for €29/month | JDEVPRO",
       desc="Welora brings PMS, booking engine, channels, check-in, payments, invoices, housekeeping, till and automation together for B&Bs and hotels. €29/month, all in.",
       card="Complete management software for B&Bs, guest houses and hotels: everything included for €29 a month.",
@@ -181,7 +181,7 @@ PRODUCTS = {
       ],
     ),
     dict(
-      key="akios", slug="en-akios.html", nav="AKIOS",
+      key="akios", slug="https://akios.cloud/", external=True, nav="AKIOS",
       title="AKIOS: secure updates and recovery for IoT devices | JDEVPRO",
       desc="AKIOS governs the IoT device lifecycle: signed trial updates, automatic rollback and local recovery. For European manufacturers facing the CRA.",
       card="Signed updates, automatic rollback and local recovery for European manufacturers' IoT devices.",

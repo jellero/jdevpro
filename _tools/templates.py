@@ -166,7 +166,7 @@ def header(current, lang="it", home=False, switch=None):
              f'<div class="nav-sub">\n{sub}\n</div></div>')
     prods = PRODUCTS[lang]
     in_prods = any(x["slug"] == current for x in prods)
-    psub = "\n".join(f'<a href="{x["slug"]}"{" aria-current=\"page\"" if x["slug"] == current else ""}>{x["nav"]}</a>' for x in prods)
+    psub = "\n".join(f'<a href="{x["slug"]}"{ext(x["slug"])}{" aria-current=\"page\"" if x["slug"] == current else ""}>{x["nav"]}{" ↗" if x.get("external") else ""}</a>' for x in prods)
     links += (f'\n<div class="nav-group{" is-current" if in_prods else ""}">'
               f'<a class="nav-group-label" href="{home_slug}#prodotti">{"Prodotti" if lang == "it" else "Products"} <span aria-hidden="true">▾</span></a>'
               f'<div class="nav-sub">\n{psub}\n</div></div>')
@@ -223,7 +223,7 @@ def footer(lang="it"):
     if lang == "it":
         links += '<a href="guide.html">Guide</a>'
         local = '<div class="footer-local">' + "".join(f'<a href="{c["slug"]}">{c["name"]}</a>' for c in CITIES) + "</div>"
-    links += "".join(f'<a href="{x["slug"]}">{x["nav"]}</a>' for x in PRODUCTS[lang])
+    links += "".join(f'<a href="{x["slug"]}"{ext(x["slug"])}>{x["nav"]}</a>' for x in PRODUCTS[lang])
     links += f'<a href="{ABOUT[lang]["slug"]}">{ABOUT[lang]["nav"]}</a>'
     return f"""<footer class="footer">
 <div class="shell footer-grid footer-wide">
@@ -859,7 +859,7 @@ def about(lang="it"):
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">{a['akios_e']}</p><h2>{a['akios_h']}</h2>
 <ul class="akios-points">{"".join(f"<li>{x}</li>" for x in a["akios_points"])}</ul></div>
-<div class="research-copy reveal">{"".join(f"<p>{x}</p>" for x in a["akios_p"])}<div class="hero-actions"><a class="button primary" href="{product_slug(lang, 'akios')}">{UI[lang]['more'].replace(' →', '')}</a>{"".join(f'<a class="button ghost" href="{l}" rel="noreferrer" target="_blank">{n}</a>' for n, l in a["akios_links"])}</div></div>
+<div class="research-copy reveal">{"".join(f"<p>{x}</p>" for x in a["akios_p"])}<div class="hero-actions">{"".join(f'<a class="button {"primary" if i == 0 else "ghost"}" href="{l}" rel="noreferrer" target="_blank">{n}</a>' for i, (n, l) in enumerate(a["akios_links"]))}</div></div>
 </div>
 </section>
 <section class="section section-tight section-dark">
@@ -883,6 +883,10 @@ def about(lang="it"):
 
 
 # ---------------------------------------------------------------- prodotti (AKIOS, ORYVAEL)
+
+def ext(href):
+    return ' rel="noreferrer" target="_blank"' if href.startswith("http") else ""
+
 
 def product_slug(lang, key):
     return next(x for x in PRODUCTS[lang] if x["key"] == key)["slug"]
@@ -961,7 +965,7 @@ def product_page(pr, lang):
     buttons = "".join(f'<a class="button {"primary" if i == 0 else "ghost"}" href="{l}" rel="noreferrer" target="_blank">{n}</a>'
                       for i, (n, l) in enumerate(pr["links"]))
     buttons += f'<a class="button ghost" href="#contatto">{u["talk"]}</a>'
-    others = "".join(f'<a href="{x["slug"]}"><strong>{x["nav"]}</strong><span>{x["card"]}</span></a>'
+    others = "".join(f'<a href="{x["slug"]}"{ext(x["slug"])}><strong>{x["nav"]}</strong><span>{x["card"]}</span></a>'
                      for x in PRODUCTS[lang] if x["key"] != pr["key"])
     if pr["key"] == "welora":
         main_ld = {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Welora", "description": pr["desc"], "url": url,
@@ -1009,8 +1013,8 @@ def products_home(lang):
         e, h, p = "Prodotti e ricerca", "Non solo progetti per i clienti.", "Tre progetti nostri, con pagine dedicate."
     else:
         e, h, p = "Products and research", "Not only client projects.", "Three projects of our own, each with its own page."
-    cards = "".join(f'<a class="product-card product-card-{x["key"]} reveal" href="{x["slug"]}"><span class="eyebrow">{x["eyebrow"]}</span>'
-                    f'<strong>{x["nav"]}</strong><span class="product-card-text">{x["card"]}</span><span class="competence-more">{UI[lang]["more"]}</span></a>'
+    cards = "".join(f'<a class="product-card product-card-{x["key"]} reveal" href="{x["slug"]}"{ext(x["slug"])}><span class="eyebrow">{x["eyebrow"]}</span>'
+                    f'<strong>{x["nav"]}</strong><span class="product-card-text">{x["card"]}</span><span class="competence-more">{(x["slug"].split("//")[1].rstrip("/") + " ↗") if x.get("external") else UI[lang]["more"]}</span></a>'
                     for x in PRODUCTS[lang])
     return f"""<section class="section section-tight section-dark" id="prodotti">
 <div class="shell">
@@ -1044,7 +1048,8 @@ write(TEST["slug"], test_page())
 write("chi-sono.html", about("it"))
 for _lang in ("it", "en"):
     for _pr in PRODUCTS[_lang]:
-        write(_pr["slug"], product_page(_pr, _lang))
+        if not _pr.get("external"):
+            write(_pr["slug"], product_page(_pr, _lang))
 write("en-about.html", about("en"))
 write("404.html", not_found())
 for old, target in OLD_URLS.items():
@@ -1052,7 +1057,7 @@ for old, target in OLD_URLS.items():
 
 urls = (["", "en.html"] + [p["slug"] for p in PAGES] + [EN_SLUG[p["slug"]] for p in PAGES]
         + [c["slug"] for c in CITIES] + ["guide.html", TEST["slug"]] + [g["slug"] for g in GUIDES]
-        + [x["slug"] for l in ("it", "en") for x in PRODUCTS[l]] + ["chi-sono.html", "en-about.html", "cv.html", "cv-en.html", "privacy.html", "privacy-en.html", "cookie-policy.html", "cookie-policy-en.html"])
+        + [x["slug"] for l in ("it", "en") for x in PRODUCTS[l] if not x.get("external")] + ["chi-sono.html", "en-about.html", "cv.html", "cv-en.html", "privacy.html", "privacy-en.html", "cookie-policy.html", "cookie-policy-en.html"])
 sitemap = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 sitemap += [f"  <url><loc>{BASE}{u}</loc><lastmod>{TODAY}</lastmod></url>" for u in urls]
 sitemap.append("</urlset>")
