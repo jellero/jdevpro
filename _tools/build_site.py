@@ -378,7 +378,12 @@ PAGES = [
       ("Configurazione e portabilità", "Interni, app e citofoni configurati; numeri trasferiti senza interruzioni."),
       ("Assistenza", "Modifiche a orari e regole, aggiornamenti e supporto."),
     ],
-    examples=[],
+    proof="Installati in strutture ricettive, aziende e ristoranti, con Asterisk e 3CX e telefoni Grandstream e Yealink.",
+    examples=[
+      ("Strutture ricettive", "Centralini VoIP con Asterisk o 3CX e telefoni Grandstream e Yealink per reception e uffici.", None),
+      ("Aziende", "Centralini con interni in ufficio e sul cellulare, risponditore e smistamento delle chiamate.", None),
+      ("Ristoranti", "Centralini VoIP con telefoni Grandstream e Yealink per gestire le chiamate in sala e in cassa.", None),
+    ],
     chips=["Centralino in cloud", "App su cellulare", "Risponditore automatico", "Citofoni SIP", "Chiamate nel gestionale"],
     faq=[
       ("Posso tenere i miei numeri?", "Sì, con la portabilità del numero verso un operatore VoIP."),

@@ -21,6 +21,22 @@ PRICES = {
     ("Integrazione tra due sistemi", 800, "una tantum", "con API pubbliche"),
     ("Monitoraggio e manutenzione", 50, "al mese", ""),
   ],
+  "automazione-hotel-bnb.html": [
+    ("Progetto e configurazione", 800, "una tantum", "dispositivi esclusi"),
+    ("Assistenza e controllo da remoto", 30, "al mese", ""),
+  ],
+  "videosorveglianza-citofonia-accessi.html": [
+    ("Configurazione dell'impianto", 600, "una tantum", "telecamere e dispositivi esclusi"),
+    ("Assistenza e aggiornamenti", 20, "al mese", ""),
+  ],
+  "centralini-voip-telefonia.html": [
+    ("Configurazione del centralino", 500, "una tantum", "telefoni esclusi"),
+    ("Assistenza e modifiche", 30, "al mese", ""),
+  ],
+  "internet-offgrid-siti-remoti.html": [
+    ("Progetto e configurazione", 800, "una tantum", "apparati esclusi"),
+    ("Controllo da remoto", 20, "al mese", ""),
+  ],
   "siti-web-piattaforme.html": [
     ("Sito con pannello di gestione", 1200, "una tantum", ""),
     ("Hosting e manutenzione", 30, "al mese", ""),
@@ -488,7 +504,10 @@ EN_PAGES = {
            ("Plan", "Phone system, lines, phones and routing rules."),
            ("Setup and porting", "Extensions, apps and intercoms configured; numbers moved without downtime."),
            ("Support", "Changes to hours and rules, updates and help.")],
-    examples=[],
+    proof="Installed in hospitality, companies and restaurants, with Asterisk and 3CX and Grandstream and Yealink phones.",
+    examples=[("Hospitality", "VoIP phone systems with Asterisk or 3CX and Grandstream and Yealink phones for reception and offices.", None),
+              ("Companies", "Phone systems with extensions in the office and on mobile, auto attendant and call routing.", None),
+              ("Restaurants", "VoIP phone systems with Grandstream and Yealink phones to handle calls at the floor and the till.", None)],
     chips=["Cloud phone system", "Mobile app", "Auto attendant", "SIP intercoms", "Calls in your software"],
     faq=[("Can I keep my numbers?", "Yes, by porting them to a VoIP carrier."),
          ("Do I need a special line?", "A stable Internet connection is enough; with many simultaneous calls we check bandwidth."),

@@ -54,8 +54,8 @@ UI = {
              price_e="Prezzi indicativi", price_h="Da dove si parte.", from_="da", per_month="al mese", once="una tantum",
              price_note="Prezzi di partenza indicativi. Il preventivo è a prezzo fisso, dopo aver verificato cosa serve davvero.",
              c_eyebrow="Contatto", c_h="Raccontaci cosa devi collegare.",
-             c_p="Descrivici i sistemi che hai, cosa vuoi ottenere e i tempi. Ti rispondiamo per iscritto con domande mirate o con una proposta.",
-             c_steps='<li><strong>Scrivici</strong> i sistemi presenti e l\'obiettivo, anche in poche righe.</li><li><strong>Ti rispondiamo</strong> con domande mirate o una proposta di incontro.</li><li><strong>Definiamo</strong> insieme perimetro, tempi e modalità di lavoro.</li>',
+             c_p="Descrivici i sistemi che hai, cosa vuoi ottenere e i tempi. Ti rispondiamo per iscritto entro 24 ore, con domande mirate o con una proposta.",
+             c_steps='<li><strong>Scrivici</strong> i sistemi presenti e l\'obiettivo, anche in poche righe.</li><li><strong>Ti rispondiamo entro 24 ore</strong> con domande mirate o una proposta di incontro.</li><li><strong>Definiamo</strong> insieme perimetro, tempi e modalità di lavoro.</li>',
              c_steps_label="Come funziona", c_mail="Scrivici una email", copy="Copia", copied="Copiato ✓",
              wa="Scrivici su WhatsApp ↗",
              li="Oppure su LinkedIn ↗", where="Tolmezzo (UD) · Friuli Venezia Giulia · Veneto · anche da remoto",
@@ -75,8 +75,8 @@ UI = {
              price_e="Indicative prices", price_h="Where it starts.", from_="from", per_month="per month", once="one-off",
              price_note="Indicative starting prices. Quotes are fixed-price, after checking what is really needed.",
              c_eyebrow="Contact", c_h="Tell us what you need to connect.",
-             c_p="Describe your systems, what you want to achieve and your timeline. We reply in writing with focused questions or a proposal.",
-             c_steps="<li><strong>Write to us</strong> about your current systems and goal, even in a few lines.</li><li><strong>We reply</strong> with focused questions or a proposal for a meeting.</li><li><strong>We define</strong> scope, timeline and way of working together.</li>",
+             c_p="Describe your systems, what you want to achieve and your timeline. We reply in writing within 24 hours, with focused questions or a proposal.",
+             c_steps="<li><strong>Write to us</strong> about your current systems and goal, even in a few lines.</li><li><strong>We reply within 24 hours</strong> with focused questions or a proposal for a meeting.</li><li><strong>We define</strong> scope, timeline and way of working together.</li>",
              c_steps_label="How it works", c_mail="Send us an email", copy="Copy", copied="Copied ✓",
              wa="Message us on WhatsApp ↗",
              li="Or on LinkedIn ↗", where="Tolmezzo (Udine), Italy · north-east Italy · remote projects",
@@ -91,7 +91,11 @@ PRICE_EN = {"Collegamento di una macchina": "Connecting one machine", "Dati macc
             "Sito con pannello di gestione": "Website with management panel", "Hosting e manutenzione": "Hosting and maintenance",
             "per tipo di macchina con interfacce documentate": "per machine type with documented interfaces", "per macchina": "per machine",
             "a prezzo fisso, sulla parte più utile": "fixed price, on the most useful part", "dispositivi esclusi": "devices excluded",
-            "per dispositivo": "per device", "con API pubbliche": "with public APIs", "": ""}
+            "per dispositivo": "per device", "con API pubbliche": "with public APIs", "": "",
+            "Assistenza e controllo da remoto": "Support and remote monitoring", "Configurazione dell'impianto": "System configuration",
+            "Assistenza e aggiornamenti": "Support and updates", "Configurazione del centralino": "Phone system configuration",
+            "Assistenza e modifiche": "Support and changes", "Controllo da remoto": "Remote monitoring",
+            "telecamere e dispositivi esclusi": "cameras and devices excluded", "telefoni esclusi": "phones excluded", "apparati esclusi": "equipment excluded"}
 
 ADDRESS = {"@type": "PostalAddress", "addressLocality": "Tolmezzo", "postalCode": "33028", "addressRegion": "UD",
            "addressCountry": "IT"}
@@ -607,7 +611,9 @@ def service(p, lang="it"):
 """
     chips = "".join(f"<span>{c}</span>" for c in p["chips"])
     faq = "\n".join(f'<details class="faq-item"><summary>{q}</summary><p>{a}</p></details>' for q, a in p["faq"])
-    related = "".join(f'<a href="{o["href"]}"><strong>{o["card_title"]}</strong><span>{o["card_who"]}</span></a>' for o in pages_for(lang) if o["href"] != p["slug"])
+    same = [s for s in area_services(lang, area["key"]) if s["href"] != p["slug"]]
+    related = "".join(f'<a href="{o["href"]}"><strong>{o["card_title"]}</strong><span>{o["card_who"]}</span></a>' for o in same)
+    other_areas = "".join(f'<a href="{o["slug"]}"><strong>{o["nav"]}</strong><span>{o["card"]}</span></a>' for o in AREAS[lang] if o["key"] != area["key"])
     guide_links = ""
     if lang == "it":
         gl = [g for g in GUIDES if g["cta"] == it_slug]
@@ -676,8 +682,10 @@ def service(p, lang="it"):
 </section>
 {contact(lang)}<section class="section section-tight related">
 <div class="shell">
-{guide_links}<p class="eyebrow">{u['others']}</p>
+{guide_links}<p class="eyebrow">{("Nella stessa area: " if lang == "it" else "In the same area: ") + area["nav"]}</p>
 <div class="related-grid">{related}</div>
+<p class="eyebrow local-eyebrow">{"Altre aree" if lang == "it" else "Other areas"}</p>
+<div class="related-grid">{other_areas}</div>
 </div>
 </section>
 </main>
