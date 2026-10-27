@@ -49,6 +49,7 @@ def area_services(lang, key):
 def cur(flag):
     return ' aria-current="page"' if flag else ""
 PRICES, CITIES, GUIDES, TEST = EXTRA["PRICES"], EXTRA["CITIES"], EXTRA["GUIDES"], EXTRA["TEST"]
+PRICE_NOTES = EXTRA["PRICE_NOTES"]
 GUIDES = GUIDES + runpy.run_path(str(pathlib.Path(__file__).with_name("content_guides_more.py")))["MORE_GUIDES"]
 EN_SLUG, EN_PAGES, EN_TIERS = EXTRA["EN_SLUG"], EXTRA["EN_PAGES"], EXTRA["EN_TIERS"]
 TODAY = datetime.date.today().isoformat()
@@ -121,7 +122,17 @@ PRICE_EN = {"Collegamento di una macchina": "Connecting one machine", "Dati macc
             "fino a 4 telecamere · dispositivi esclusi": "up to 4 cameras · devices excluded", "per impianto": "per system",
             "Centralino Asterisk configurato": "Asterisk phone system set up",
             "fino a 10 interni · nessuna licenza · telefoni esclusi": "up to 10 extensions · no licence · phones excluded",
-            "fino a 10 interni": "up to 10 extensions", "per sito · apparati esclusi": "per site · equipment excluded", "per sito": "per site"}
+            "fino a 10 interni": "up to 10 extensions", "per sito · apparati esclusi": "per site · equipment excluded", "per sito": "per site",
+            "Impianto base configurato": "Basic system set up",
+            "Cloud Key, una telecamera e switch inclusi · cablaggio escluso": "Cloud Key, one camera and switch included · cabling excluded",
+            "nessuna licenza · telefoni esclusi": "no licence · phones excluded",
+            "Server, aggiornamenti e assistenza": "Server, updates and support",
+            "Installazione Starlink professionale": "Professional Starlink installation",
+            "kit e abbonamento Starlink esclusi": "Starlink kit and plan excluded",
+            "Fotovoltaico off-grid per la connettività": "Off-grid solar for connectivity",
+            "per router, antenne e telecamere · cablaggi esclusi": "for routers, antennas and cameras · cabling excluded",
+            "Fotovoltaico off-grid a 230 V": "Off-grid solar at 230 V",
+            "corrente di casa · cablaggi esclusi": "household power · cabling excluded"}
 
 ADDRESS = {"@type": "PostalAddress", "addressLocality": "Tolmezzo", "postalCode": "33028", "addressRegion": "UD",
            "addressCountry": "IT"}
@@ -327,6 +338,7 @@ def price_block(it_slug, lang):
 <div class="section-heading reveal"><p class="eyebrow">{u['price_e']}</p><h2>{u['price_h']}</h2></div>
 <div>
 <div class="price-grid">{''.join(items)}</div>
+{(lambda n: f'<p class="price-extra">{n}</p>' if n else '')(PRICE_NOTES.get(it_slug, {}).get(lang))}
 <p class="catalog-note">{u['price_note']}</p>
 </div>
 </div>
@@ -766,7 +778,7 @@ def city(c):
 <li><strong>Analisi in azienda</strong><span>Vediamo macchine, programmi e processi dove lavorano davvero.</span></li>
 <li><strong>Proposta a prezzo fisso</strong><span>Fasi chiare, si parte dalla parte più utile.</span></li>
 <li><strong>Sviluppo e collaudo</strong><span>Sviluppo da remoto, collaudo sul posto con i dati reali.</span></li>
-<li><strong>Assistenza continua</strong><span>Canone mensile con backup, aggiornamenti e interventi.</span></li>
+<li><strong>Assistenza nel tempo</strong><span>Per gestionali, integrazioni e siti un canone con backup e aggiornamenti; per macchine e impianti interventi quando servono.</span></li>
 </ol>
 </div>
 </section>

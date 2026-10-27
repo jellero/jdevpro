@@ -55,7 +55,7 @@ PAGES = [
       ("Verifica di compatibilità", "Marca, modello, interfacce disponibili e rete. Prima di qualsiasi preventivo."),
       ("Installazione", "Collegamento e configurazione nella rete aziendale, in pochi giorni per macchine con interfacce documentate."),
       ("Collaudo sui dati reali", "Verifichiamo stato, produzione e commesse con la macchina al lavoro."),
-      ("Assistenza con canone", "Aggiornamenti, backup e interventi quando la macchina o il gestionale cambiano."),
+      ("Assistenza quando serve", "Interventi su richiesta quando la macchina o il gestionale cambiano."),
     ],
     examples=[
       ("10 macchine in produzione a Tolmezzo", "Falegnamerie e stamperie con macchine collegate al gestionale: stato, produzione, commesse e costi senza fogli Excel.", None),
@@ -279,7 +279,7 @@ PAGES = [
       ("Sopralluogo", "Camere, accessi, impianti e programmi che usi oggi."),
       ("Progetto", "Cosa automatizzare, con quali dispositivi e in che ordine."),
       ("Installazione e prove", "Dispositivi configurati e collegati, prove con prenotazioni reali."),
-      ("Assistenza", "Controllo da remoto e interventi durante la stagione."),
+      ("Assistenza", "Interventi su richiesta durante la stagione, anche da remoto."),
     ],
     examples=[
       ("Welora · gestionale per strutture ricettive", "Planning, prenotazioni, pulizie, portale ospiti, check-in online con verifica dei documenti, pagamenti, Alloggiati Web e ISTAT.", "https://welora.it/"),
@@ -333,7 +333,7 @@ PAGES = [
       ("Sopralluogo", "Aree da controllare, accessi, rete e alimentazione."),
       ("Progetto", "Telecamere, regole di avviso e accessi, nel rispetto della privacy."),
       ("Installazione e configurazione", "Telecamere e automazioni configurate, avvisi provati sul posto."),
-      ("Assistenza", "Controllo da remoto, aggiornamenti e modifiche alle regole."),
+      ("Assistenza", "Aggiornamenti e modifiche alle regole su richiesta, anche da remoto."),
     ],
     examples=[
       ("Videosorveglianza UniFi Protect", "Decine di impianti Ubiquiti installati: telecamere con riconoscimento di persone, veicoli e targhe, avvisi sul telefono e registrazione in sede.", None),
@@ -437,7 +437,7 @@ PAGES = [
       ("Sopralluogo e misure", "Segnale disponibile, distanze, consumi e alimentazione."),
       ("Progetto", "Tipo di connessione, antenne, energia e protezioni."),
       ("Installazione e prove", "Apparati configurati e provati sul posto."),
-      ("Controllo da remoto", "Monitoraggio continuo e interventi a distanza."),
+      ("Controllo da remoto", "Stato visibile dal telefono e interventi a distanza quando servono."),
     ],
     examples=[
       ("Ponti radio Ubiquiti e MikroTik", "Collegamenti radio che portano Internet e telecamere tra edifici e siti distanti, con antenne Ubiquiti e MikroTik.", None),

@@ -7,7 +7,6 @@ INSTALLERS_EN = "Wiring, lines and electrical panels are installed by licensed e
 PRICES = {
   "interconnessione-macchine-industria-4-0.html": [
     ("Collegamento di una macchina", 1500, "una tantum", "per tipo di macchina con interfacce documentate"),
-    ("Dati macchina e assistenza", 50, "al mese", "per macchina"),
   ],
   "gestionale-su-misura.html": [
     ("Prima versione del gestionale", 3000, "una tantum", "a prezzo fisso, sulla parte più utile"),
@@ -23,19 +22,18 @@ PRICES = {
   ],
   "automazione-hotel-bnb.html": [
     ("Progetto e configurazione", 900, "una tantum", "fino a 6 camere · dispositivi esclusi"),
-    ("Assistenza e controllo da remoto", 39, "al mese", "per struttura"),
   ],
   "videosorveglianza-citofonia-accessi.html": [
-    ("Configurazione dell'impianto", 600, "una tantum", "fino a 4 telecamere · dispositivi esclusi"),
-    ("Assistenza e aggiornamenti", 29, "al mese", "per impianto"),
+    ("Impianto base configurato", 500, "una tantum", "Cloud Key, una telecamera e switch inclusi · cablaggio escluso"),
   ],
   "centralini-voip-telefonia.html": [
-    ("Centralino Asterisk configurato", 700, "una tantum", "fino a 10 interni · nessuna licenza · telefoni esclusi"),
-    ("Assistenza e modifiche", 39, "al mese", "fino a 10 interni"),
+    ("Centralino Asterisk configurato", 500, "una tantum", "nessuna licenza · telefoni esclusi"),
+    ("Server, aggiornamenti e assistenza", 15, "al mese", "fino a 10 interni"),
   ],
   "internet-offgrid-siti-remoti.html": [
-    ("Progetto e configurazione", 900, "una tantum", "per sito · apparati esclusi"),
-    ("Controllo da remoto", 29, "al mese", "per sito"),
+    ("Installazione Starlink professionale", 200, "una tantum", "kit e abbonamento Starlink esclusi"),
+    ("Fotovoltaico off-grid per la connettività", 500, "una tantum", "per router, antenne e telecamere · cablaggi esclusi"),
+    ("Fotovoltaico off-grid a 230 V", 1500, "una tantum", "corrente di casa · cablaggi esclusi"),
   ],
   "siti-web-piattaforme.html": [
     ("Sito con pannello di gestione", 1200, "una tantum", ""),
@@ -275,7 +273,7 @@ EN_PAGES = {
     steps=[("Compatibility check", "Brand, model, available interfaces and network. Before any quote."),
            ("Installation", "Connection and setup on your network, in a few days for machines with documented interfaces."),
            ("Testing on real data", "We verify status, production and jobs with the machine at work."),
-           ("Support plan", "Updates, backups and fixes when the machine or the software changes.")],
+           ("Support when needed", "On-request help when the machine or the software changes.")],
     examples=[("10 machines in production in Tolmezzo", "Woodworking and metal pressing companies with machines connected to their business software: status, production, jobs and costs without spreadsheets.", None),
               ("JD Industry · SCM edge bander with Maestro Active", "Real-time status and alarms, jobs opened and closed on the machine, automatic production import and real cost per job.", None),
               ("JD Industry · Essetre/Tecnoessetre CNC", "Several machines on one screen, events linked to jobs, work file upload, stock and offcuts, printable cost reports.", None)],
@@ -440,7 +438,7 @@ EN_PAGES = {
     steps=[("Site survey", "Rooms, access, installations and the programs you use today."),
            ("Plan", "What to automate, with which devices and in which order."),
            ("Installation and tests", "Devices configured and connected, tested with real bookings."),
-           ("Support", "Remote monitoring and help during the season.")],
+           ("Support", "On-request help during the season, remotely too.")],
     examples=[("Welora · hospitality software", "Planning, bookings, housekeeping, guest portal, online check-in with document checks, payments, Alloggiati Web and ISTAT.", "https://welora.it/"),
               ("Room-by-room climate", "In hotels and guest houses: thermostats tied to bookings, comfort alerts and per-room control.", None),
               ("VoIP phone systems in hotels", "Asterisk or 3CX phone systems with Grandstream and Yealink phones for reception and offices.", "en-voip-phone-systems.html"),
@@ -480,7 +478,7 @@ EN_PAGES = {
     steps=[("Site survey", "Areas to monitor, access points, network and power."),
            ("Plan", "Cameras, alert rules and access, in line with privacy rules."),
            ("Installation and setup", "Cameras and automation configured, alerts tested on site."),
-           ("Support", "Remote monitoring, updates and rule changes.")],
+           ("Support", "Updates and rule changes on request, remotely too.")],
     examples=[("UniFi Protect video surveillance", "Dozens of Ubiquiti systems installed: cameras with person, vehicle and plate recognition, phone alerts and on-site recording.", None),
               ("UniFi intercoms and access control", "UniFi video intercoms and access with face recognition, badges and phone opening, with a log of every entry.", None),
               ("Ubiquiti antennas and radio links", "Radio links bringing network and cameras between buildings, gates and outdoor areas.", None)],
@@ -556,7 +554,7 @@ EN_PAGES = {
     steps=[("Survey and measurements", "Available signal, distances, consumption and power."),
            ("Plan", "Type of connection, antennas, power and protections."),
            ("Installation and tests", "Equipment configured and tested on site."),
-           ("Remote control", "Continuous monitoring and remote intervention.")],
+           ("Remote control", "Status visible on your phone and remote help when needed.")],
     examples=[("Ubiquiti and MikroTik radio links", "Radio links bringing Internet and cameras between buildings and distant sites, with Ubiquiti and MikroTik antennas.", None),
               ("Off-grid power, properly sized", "We have built off-grid systems above 6 kW: that is why even a small system powering routers, antennas or cameras is sized on real consumption and on the months with least sun; electrical work by licensed installers.", None),
               ("Starlink", "Satellite connectivity for huts, refuges, building sites and places with no fixed line and weak mobile signal.", None)],
@@ -597,4 +595,22 @@ EN_PAGES = {
          ("Do you manage hosting?", "Yes, with a monthly plan covering hosting, security, backups and updates."),
          ("Can the site connect to business software?", "Yes: bookings, customer areas and data can come directly from your software.")],
   ),
+}
+
+PRICE_NOTES = {
+  "interconnessione-macchine-industria-4-0.html": {
+    "it": "Nessun canone: gli interventi successivi si concordano quando servono.",
+    "en": "No monthly fee: later work is agreed when needed."},
+  "automazione-hotel-bnb.html": {
+    "it": "Nessun canone sull'impianto: paghi l'installazione e gli interventi quando servono.",
+    "en": "No monthly fee on the system: you pay for the installation and for help when needed."},
+  "videosorveglianza-citofonia-accessi.html": {
+    "it": "Il cablaggio si quota a parte in base al numero di punti ed è realizzato da installatori abilitati. Nessun canone: paghi l'impianto e gli interventi quando servono.",
+    "en": "Cabling is quoted separately based on the number of points and done by licensed installers. No monthly fee: you pay for the system and for help when needed."},
+  "centralini-voip-telefonia.html": {
+    "it": 'Il centralino gira sul nostro server: niente licenze e niente costi per utente. Preferisci 3CX? La licenza annuale segue il <a href="https://www.3cx.com/ordering/pricing/pricelist/" rel="noreferrer" target="_blank">listino ufficiale 3CX ↗</a>, in base alle chiamate contemporanee.',
+    "en": 'The phone system runs on our server: no licences and no per-user fees. Prefer 3CX? The annual licence follows the <a href="https://www.3cx.com/ordering/pricing/pricelist/" rel="noreferrer" target="_blank">official 3CX price list ↗</a>, based on simultaneous calls.'},
+  "internet-offgrid-siti-remoti.html": {
+    "it": "Eventuali cablaggi elettrici sono quotati a parte e realizzati da installatori abilitati. Nessun canone sull'impianto.",
+    "en": "Any electrical cabling is quoted separately and done by licensed installers. No monthly fee on the system."},
 }
