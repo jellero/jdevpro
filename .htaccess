@@ -17,3 +17,8 @@ RewriteRule ^cookie-policy-en/?$ /cookie-policy-en.html [R=301,L]
 </IfModule>
 
 ErrorDocument 404 /404.html
+
+# Il generatore non va servito al pubblico
+<IfModule mod_rewrite.c>
+RewriteRule ^_tools/ - [F,L]
+</IfModule>
