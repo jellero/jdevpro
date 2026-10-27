@@ -13,7 +13,7 @@
 <link href="assets/icon-180.png" rel="apple-touch-icon"/>
 <link href="styles.css?v=8fa5eb32" rel="stylesheet"/>
 <link href="overrides.css?v=2353238d" rel="stylesheet"/>
-<link href="pages.css?v=3fb38d61" rel="stylesheet"/>
+<link href="pages.css?v=5d17703e" rel="stylesheet"/>
 <meta property="og:title" content="Automation for hotels, B&amp;Bs and holiday homes | JDEVPRO"/>
 <meta property="og:description" content="Hotel and B&amp;B automation: online check-in, code access, room climate and energy, Alloggiati Web, ISTAT, payments and connected bookings."/>
 <meta property="og:type" content="website"/>
@@ -98,6 +98,12 @@
   {
    "@type": "ListItem",
    "position": 2,
+   "name": "Properties and buildings",
+   "item": "https://www.jdevpro.it/en-properties-buildings.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
    "name": "Hotel and B&B automation",
    "item": "https://www.jdevpro.it/en-hotel-bnb-automation.html"
   }
@@ -128,18 +134,29 @@
 <a aria-label="JDEVPRO home" class="brand" href="en.html"><img class="brand-logo" src="assets/logo-jdevpro-header.png" alt="JDEVPRO" width="440" height="259"></a>
 <button aria-expanded="false" aria-label="Open menu" class="menu-toggle" data-menu-toggle="" type="button"><span></span><span></span><span></span></button>
 <nav aria-label="Main navigation" class="nav" data-nav="">
-<div class="nav-group is-current"><a class="nav-group-label" href="en.html#competenze">Services <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<div class="nav-group"><a class="nav-group-label" href="en-industry.html">Industry <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<a class="nav-sub-all" href="en-industry.html">Whole area →</a>
 <a href="en-machine-interconnection.html">Machine interconnection 4.0</a>
 <a href="en-custom-business-software.html">Custom business software</a>
 <a href="en-software-integration-api.html">Integrations and automation</a>
 <a href="en-iot-monitoring.html">IoT and energy monitoring</a>
+</div></div>
+<div class="nav-group is-current"><a class="nav-group-label" href="en-properties-buildings.html">Properties and buildings <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<a class="nav-sub-all" href="en-properties-buildings.html">Whole area →</a>
 <a href="en-hotel-bnb-automation.html" aria-current="page">Hotel and B&B automation</a>
 <a href="en-video-surveillance-intercom-access.html">Video surveillance, intercoms and access</a>
 <a href="en-voip-phone-systems.html">VoIP phone systems</a>
 <a href="en-offgrid-internet.html">Off-grid internet and remote sites</a>
+<a href="en-iot-monitoring.html">IoT and energy monitoring</a>
+</div></div>
+<div class="nav-group"><a class="nav-group-label" href="en-software-web.html">Software and web <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<a class="nav-sub-all" href="en-software-web.html">Whole area →</a>
+<a href="en-custom-business-software.html">Custom business software</a>
+<a href="en-software-integration-api.html">Integrations and automation</a>
 <a href="en-websites-platforms.html">Websites and platforms</a>
 </div></div>
-<div class="nav-group"><a class="nav-group-label" href="en.html#prodotti">Products <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<div class="nav-group"><a class="nav-group-label" href="en-products.html">Products <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<a class="nav-sub-all" href="en-products.html">All products →</a>
 <a href="https://welora.it/" rel="noreferrer" target="_blank">Welora ↗</a>
 <a href="https://akios.cloud/" rel="noreferrer" target="_blank">AKIOS ↗</a>
 <a href="en-oryvael.html">ORYVAEL</a>
@@ -154,11 +171,12 @@
 <section class="hero page-hero">
 <div aria-hidden="true" class="hero-grid"></div>
 <div class="shell page-hero-copy reveal">
-<nav aria-label="Breadcrumb" class="breadcrumb"><a href="en.html">Home</a><span>/</span><span aria-current="page">Hotel and B&B automation</span></nav>
+<nav aria-label="Breadcrumb" class="breadcrumb"><a href="en.html">Home</a><span>/</span><a href="en-properties-buildings.html">Properties and buildings</a><span>/</span><span aria-current="page">Hotel and B&B automation</span></nav>
 <p class="eyebrow">Hotels · B&Bs · Holiday homes</p>
 <h1>Hotel and B&B automation: <span>less manual work, happier guests.</span></h1>
 <p class="hero-lead">We connect bookings, access, climate, energy and compliance in one flow. Guests receive their code, walk in and find the room at the right temperature; you stop chasing keys, thermostats and portals.</p>
 
+<p class="hero-callout">We built the hospitality management software ourselves: <strong>Welora</strong>. PMS, channels, check-in, payments, invoices and automation, all included for €29 a month. <a href="https://welora.it/" rel="noreferrer" target="_blank">Discover Welora ↗</a></p>
 <div class="hero-actions">
 <a class="button primary" href="#contatto">Let's talk</a>
 <a class="button ghost" href="#esempi">See real examples</a>
@@ -190,12 +208,7 @@
 </section>
 <section class="section section-tight section-paper">
 <div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">What we can integrate</p><h2>If it has an interface, it can be connected.</h2><p>Three routes, depending on what the system offers.</p></div>
-<div class="tier-grid">
-<article class="tier reveal"><span class="competence-num">01</span><h3>Public APIs</h3><p>Full integration: read, write, events and notifications, with the service's official credentials.</p></article>
-<article class="tier reveal"><span class="competence-num">02</span><h3>Web interfaces without public APIs</h3><p>If a service is used from a browser, we automate the same calls its web panel makes, within the service's terms of use.</p></article>
-<article class="tier reveal"><span class="competence-num">03</span><h3>Serial and Modbus</h3><p>For devices without a network or with industrial protocols, a small bridge program reads the serial or Modbus port and delivers data to your systems.</p></article>
-</div>
+<div class="section-heading reveal"><p class="eyebrow">What we can integrate</p><h2>Compatible brands and systems.</h2></div>
 <div class="system-groups catalog">
 <div class="system-group reveal"><h3>Locks and access</h3><ul><li>Nuki</li><li>Code locks</li><li>Gate openers and smart relays</li><li>Card readers</li></ul></div>
 <div class="system-group reveal"><h3>Climate and smart building</h3><ul><li>Tuya / Smart Life</li><li>Honeywell / Resideo</li><li>Netatmo</li><li>Daikin</li><li>Shelly</li><li>Home Assistant</li></ul></div>
@@ -265,10 +278,10 @@
 <footer class="footer">
 <div class="shell footer-grid footer-wide">
 <div><strong>JDEVPRO</strong><span>Jacopo Ellero · Tolmezzo, Italy</span></div>
-<div class="footer-links"><a href="en-machine-interconnection.html">Machine interconnection 4.0</a><a href="en-custom-business-software.html">Custom business software</a><a href="en-software-integration-api.html">Integrations and automation</a><a href="en-iot-monitoring.html">IoT and energy monitoring</a><a href="en-hotel-bnb-automation.html">Hotel and B&B automation</a><a href="en-video-surveillance-intercom-access.html">Video surveillance, intercoms and access</a><a href="en-voip-phone-systems.html">VoIP phone systems</a><a href="en-offgrid-internet.html">Off-grid internet and remote sites</a><a href="en-websites-platforms.html">Websites and platforms</a><a href="https://welora.it/" rel="noreferrer" target="_blank">Welora</a><a href="https://akios.cloud/" rel="noreferrer" target="_blank">AKIOS</a><a href="en-oryvael.html">ORYVAEL</a><a href="en-about.html">About</a></div>
+<div class="footer-links"><a href="en-industry.html">Industry</a><a href="en-properties-buildings.html">Properties and buildings</a><a href="en-software-web.html">Software and web</a><a href="en-products.html">Products</a><a href="en-about.html">About</a></div>
 <div><span>P.IVA IT02783420306</span><a href="privacy-en.html">Privacy</a><a href="cookie-policy-en.html">Cookie</a><a href="cv-en.html">CV</a><a href="https://github.com/jellero" rel="noreferrer" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/jacopo-ellero-a006499a/" rel="noreferrer" target="_blank">LinkedIn</a></div>
 </div>
-
+<div class="shell"><div class="footer-local"><a href="en-machine-interconnection.html">Machine interconnection 4.0</a><a href="en-custom-business-software.html">Custom business software</a><a href="en-software-integration-api.html">Integrations and automation</a><a href="en-iot-monitoring.html">IoT and energy monitoring</a><a href="en-hotel-bnb-automation.html">Hotel and B&B automation</a><a href="en-video-surveillance-intercom-access.html">Video surveillance, intercoms and access</a><a href="en-voip-phone-systems.html">VoIP phone systems</a><a href="en-offgrid-internet.html">Off-grid internet and remote sites</a><a href="en-websites-platforms.html">Websites and platforms</a></div></div>
 </footer>
 <script src="script.js?v=f75662cd"></script>
 </body>

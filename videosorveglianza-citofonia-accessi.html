@@ -13,7 +13,7 @@
 <link href="assets/icon-180.png" rel="apple-touch-icon"/>
 <link href="styles.css?v=8fa5eb32" rel="stylesheet"/>
 <link href="overrides.css?v=2353238d" rel="stylesheet"/>
-<link href="pages.css?v=3fb38d61" rel="stylesheet"/>
+<link href="pages.css?v=5d17703e" rel="stylesheet"/>
 <meta property="og:title" content="Videosorveglianza, citofonia e controllo accessi | JDEVPRO"/>
 <meta property="og:description" content="Videosorveglianza intelligente, videocitofoni che suonano sul cellulare e controllo accessi da remoto: porte, cancelli e codici collegati ai tuoi sistemi."/>
 <meta property="og:type" content="website"/>
@@ -106,6 +106,12 @@
   {
    "@type": "ListItem",
    "position": 2,
+   "name": "Strutture ed edifici",
+   "item": "https://www.jdevpro.it/strutture-edifici.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
    "name": "Videosorveglianza, citofonia e accessi",
    "item": "https://www.jdevpro.it/videosorveglianza-citofonia-accessi.html"
   }
@@ -136,18 +142,29 @@
 <a aria-label="JDEVPRO home" class="brand" href="index.html"><img class="brand-logo" src="assets/logo-jdevpro-header.png" alt="JDEVPRO" width="440" height="259"></a>
 <button aria-expanded="false" aria-label="Apri menu" class="menu-toggle" data-menu-toggle="" type="button"><span></span><span></span><span></span></button>
 <nav aria-label="Navigazione principale" class="nav" data-nav="">
-<div class="nav-group is-current"><a class="nav-group-label" href="index.html#competenze">Competenze <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<div class="nav-group"><a class="nav-group-label" href="industria.html">Industria <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<a class="nav-sub-all" href="industria.html">Tutta l'area →</a>
 <a href="interconnessione-macchine-industria-4-0.html">Interconnessione macchine 4.0</a>
 <a href="gestionale-su-misura.html">Gestionali su misura</a>
 <a href="integrazione-software-api.html">Integrazioni e automazioni</a>
 <a href="monitoraggio-iot.html">Monitoraggio IoT ed energia</a>
+</div></div>
+<div class="nav-group is-current"><a class="nav-group-label" href="strutture-edifici.html">Strutture ed edifici <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<a class="nav-sub-all" href="strutture-edifici.html">Tutta l'area →</a>
 <a href="automazione-hotel-bnb.html">Automazione per hotel e B&B</a>
 <a href="videosorveglianza-citofonia-accessi.html" aria-current="page">Videosorveglianza, citofonia e accessi</a>
 <a href="centralini-voip-telefonia.html">Centralini VoIP e telefonia</a>
 <a href="internet-offgrid-siti-remoti.html">Internet offgrid e siti remoti</a>
+<a href="monitoraggio-iot.html">Monitoraggio IoT ed energia</a>
+</div></div>
+<div class="nav-group"><a class="nav-group-label" href="software-web.html">Software e web <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<a class="nav-sub-all" href="software-web.html">Tutta l'area →</a>
+<a href="gestionale-su-misura.html">Gestionali su misura</a>
+<a href="integrazione-software-api.html">Integrazioni e automazioni</a>
 <a href="siti-web-piattaforme.html">Siti e piattaforme web</a>
 </div></div>
-<div class="nav-group"><a class="nav-group-label" href="index.html#prodotti">Prodotti <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<div class="nav-group"><a class="nav-group-label" href="prodotti.html">Prodotti <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<a class="nav-sub-all" href="prodotti.html">Tutti i prodotti →</a>
 <a href="https://welora.it/" rel="noreferrer" target="_blank">Welora ↗</a>
 <a href="https://akios.cloud/" rel="noreferrer" target="_blank">AKIOS ↗</a>
 <a href="oryvael.html">ORYVAEL</a>
@@ -163,10 +180,11 @@
 <section class="hero page-hero">
 <div aria-hidden="true" class="hero-grid"></div>
 <div class="shell page-hero-copy reveal">
-<nav aria-label="Percorso" class="breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">Videosorveglianza, citofonia e accessi</span></nav>
+<nav aria-label="Percorso" class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="strutture-edifici.html">Strutture ed edifici</a><span>/</span><span aria-current="page">Videosorveglianza, citofonia e accessi</span></nav>
 <p class="eyebrow">Videosorveglianza · Citofonia · Accessi</p>
 <h1>Videosorveglianza, citofonia e accessi: <span>tutto sul telefono.</span></h1>
 <p class="hero-lead">Telecamere che distinguono una persona da un gatto, videocitofoni che suonano sul cellulare, cancelli e porte comandati da remoto e collegati a prenotazioni, turni o fornitori.</p>
+
 
 <div class="hero-actions">
 <a class="button primary" href="#contatto">Parliamone</a>
@@ -199,12 +217,7 @@
 </section>
 <section class="section section-tight section-paper">
 <div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">Cosa possiamo integrare</p><h2>Se ha un'interfaccia, si può collegare.</h2><p>Tre strade, a seconda di cosa offre il sistema da collegare.</p></div>
-<div class="tier-grid">
-<article class="tier reveal"><span class="competence-num">01</span><h3>API pubbliche</h3><p>Integrazione completa: lettura, scrittura, eventi e notifiche, con le credenziali ufficiali del servizio.</p></article>
-<article class="tier reveal"><span class="competence-num">02</span><h3>Interfacce web senza API pubbliche</h3><p>Se un servizio si usa dal browser, ne automatizziamo le stesse chiamate del pannello web, nel rispetto delle condizioni d'uso.</p></article>
-<article class="tier reveal"><span class="competence-num">03</span><h3>Seriale e Modbus</h3><p>Per dispositivi senza rete o con protocolli industriali, un piccolo programma ponte legge la porta seriale o Modbus e porta i dati nei vostri sistemi.</p></article>
-</div>
+<div class="section-heading reveal"><p class="eyebrow">Cosa possiamo integrare</p><h2>Marche e sistemi compatibili.</h2></div>
 <div class="system-groups catalog">
 <div class="system-group reveal"><h3>Telecamere e registratori</h3><ul><li>Hikvision</li><li>Dahua</li><li>Reolink</li><li>Axis</li><li>Ubiquiti UniFi Protect</li><li>Telecamere ONVIF / RTSP</li></ul></div>
 <div class="system-group reveal"><h3>Analisi video</h3><ul><li>Frigate</li><li>Riconoscimento persone e veicoli</li><li>Zone e linee virtuali</li></ul></div>
@@ -275,10 +288,10 @@
 <footer class="footer">
 <div class="shell footer-grid footer-wide">
 <div><strong>JDEVPRO</strong><span>Jacopo Ellero · Tolmezzo (UD)</span></div>
-<div class="footer-links"><a href="interconnessione-macchine-industria-4-0.html">Interconnessione macchine 4.0</a><a href="gestionale-su-misura.html">Gestionali su misura</a><a href="integrazione-software-api.html">Integrazioni e automazioni</a><a href="monitoraggio-iot.html">Monitoraggio IoT ed energia</a><a href="automazione-hotel-bnb.html">Automazione per hotel e B&B</a><a href="videosorveglianza-citofonia-accessi.html">Videosorveglianza, citofonia e accessi</a><a href="centralini-voip-telefonia.html">Centralini VoIP e telefonia</a><a href="internet-offgrid-siti-remoti.html">Internet offgrid e siti remoti</a><a href="siti-web-piattaforme.html">Siti e piattaforme web</a><a href="guide.html">Guide</a><a href="https://welora.it/" rel="noreferrer" target="_blank">Welora</a><a href="https://akios.cloud/" rel="noreferrer" target="_blank">AKIOS</a><a href="oryvael.html">ORYVAEL</a><a href="chi-sono.html">Chi sono</a></div>
+<div class="footer-links"><a href="industria.html">Industria</a><a href="strutture-edifici.html">Strutture ed edifici</a><a href="software-web.html">Software e web</a><a href="prodotti.html">Prodotti</a><a href="guide.html">Guide</a><a href="dove-lavoriamo.html">Dove lavoriamo</a><a href="chi-sono.html">Chi sono</a></div>
 <div><span>P.IVA IT02783420306</span><a href="privacy.html">Privacy</a><a href="cookie-policy.html">Cookie</a><a href="cv.html">CV</a><a href="https://github.com/jellero" rel="noreferrer" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/jacopo-ellero-a006499a/" rel="noreferrer" target="_blank">LinkedIn</a></div>
 </div>
-<div class="shell"><div class="footer-local"><a href="software-gestionali-integrazioni-udine.html">Udine</a><a href="software-gestionali-integrazioni-pordenone.html">Pordenone</a><a href="software-gestionali-integrazioni-trieste-gorizia.html">Trieste e Gorizia</a></div></div>
+<div class="shell"><div class="footer-local"><a href="interconnessione-macchine-industria-4-0.html">Interconnessione macchine 4.0</a><a href="gestionale-su-misura.html">Gestionali su misura</a><a href="integrazione-software-api.html">Integrazioni e automazioni</a><a href="monitoraggio-iot.html">Monitoraggio IoT ed energia</a><a href="automazione-hotel-bnb.html">Automazione per hotel e B&B</a><a href="videosorveglianza-citofonia-accessi.html">Videosorveglianza, citofonia e accessi</a><a href="centralini-voip-telefonia.html">Centralini VoIP e telefonia</a><a href="internet-offgrid-siti-remoti.html">Internet offgrid e siti remoti</a><a href="siti-web-piattaforme.html">Siti e piattaforme web</a><a href="software-gestionali-integrazioni-udine.html">Udine</a><a href="software-gestionali-integrazioni-pordenone.html">Pordenone</a><a href="software-gestionali-integrazioni-trieste-gorizia.html">Trieste e Gorizia</a></div></div>
 </footer>
 <script src="script.js?v=f75662cd"></script>
 </body>
