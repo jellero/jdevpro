@@ -132,7 +132,10 @@ PRICE_EN = {"Collegamento di una macchina": "Connecting one machine", "Dati macc
             "Fotovoltaico off-grid per la connettività": "Off-grid solar for connectivity",
             "per router, antenne e telecamere · cablaggi esclusi": "for routers, antennas and cameras · cabling excluded",
             "Fotovoltaico off-grid a 230 V": "Off-grid solar at 230 V",
-            "corrente di casa · cablaggi esclusi": "household power · cabling excluded"}
+            "corrente di casa · cablaggi esclusi": "household power · cabling excluded",
+            "Cruscotto e allarmi sul nostro server": "Dashboard and alarms on our server", "per impianto": "per system",
+            "Server, monitoraggio e manutenzione": "Server, monitoring and maintenance", "se gira sul nostro server": "if it runs on our server",
+            "Telecamera aggiuntiva configurata": "Additional camera set up", "per telecamera · cablaggio escluso": "per camera · cabling excluded"}
 
 ADDRESS = {"@type": "PostalAddress", "addressLocality": "Tolmezzo", "postalCode": "33028", "addressRegion": "UD",
            "addressCountry": "IT"}

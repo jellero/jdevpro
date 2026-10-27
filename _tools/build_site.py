@@ -225,7 +225,7 @@ PAGES = [
       ("Sopralluogo e obiettivi", "Cosa misurare, dove, con quale alimentazione e connessione."),
       ("Scelta dei dispositivi", "Sensori e gateway adatti, anche riusando quelli che hai già."),
       ("Installazione e cruscotto", "Dati, allarmi e collegamento ai tuoi sistemi."),
-      ("Manutenzione con canone", "Controllo da remoto, aggiornamenti e assistenza."),
+      ("Manutenzione", "Controllo da remoto, aggiornamenti e assistenza; canone solo se il cruscotto è sul nostro server."),
     ],
     examples=[
       ("Sensori e gateway in ambito industriale", "Sensori su RS-485, gateway seriali e MQTT, invio dei dati al cloud, collaudo e messa in servizio.", None),
@@ -397,7 +397,7 @@ PAGES = [
       ("Posso tenere i miei numeri?", "Sì, con la portabilità del numero verso un operatore VoIP."),
       ("Serve una linea particolare?", "Basta una connessione Internet stabile; con molte chiamate contemporanee verifichiamo la banda."),
       ("Il citofono può suonare sul cellulare?", "Sì, con citofoni SIP collegati al centralino: rispondi e apri anche da fuori."),
-      ("Quanto costano le licenze?", "Con Asterisk nessuna licenza: paghi solo configurazione, assistenza e il traffico dell'operatore VoIP. Con 3CX la licenza annuale è quella del listino 3CX, in base alle chiamate contemporanee."),
+      ("Quanto costano le licenze?", "Con Asterisk nessuna licenza: paghi solo configurazione, assistenza e il traffico dell'operatore VoIP. Con 3CX l'edizione SMB Free è gratuita fino a 10 utenti; oltre, la licenza annuale segue il listino 3CX, in base alle chiamate contemporanee."),
       ("Registrate le chiamate?", "Solo dove serve e nel rispetto della privacy, con informativa a chi chiama."),
       ("Fate anche i cablaggi?", INSTALLERS),
     ],

@@ -10,21 +10,22 @@ PRICES = {
   ],
   "gestionale-su-misura.html": [
     ("Prima versione del gestionale", 3000, "una tantum", "a prezzo fisso, sulla parte più utile"),
-    ("Hosting, backup e assistenza", 100, "al mese", ""),
+    ("Hosting, backup e assistenza", 50, "al mese", ""),
   ],
   "monitoraggio-iot.html": [
     ("Progetto e configurazione", 1000, "una tantum", "dispositivi esclusi"),
-    ("Dati, allarmi e manutenzione", 10, "al mese", "per dispositivo"),
+    ("Cruscotto e allarmi sul nostro server", 15, "al mese", "per impianto"),
   ],
   "integrazione-software-api.html": [
     ("Integrazione tra due sistemi", 800, "una tantum", "con API pubbliche"),
-    ("Monitoraggio e manutenzione", 50, "al mese", ""),
+    ("Server, monitoraggio e manutenzione", 15, "al mese", "se gira sul nostro server"),
   ],
   "automazione-hotel-bnb.html": [
     ("Progetto e configurazione", 900, "una tantum", "fino a 6 camere · dispositivi esclusi"),
   ],
   "videosorveglianza-citofonia-accessi.html": [
     ("Impianto base configurato", 500, "una tantum", "Cloud Key, una telecamera e switch inclusi · cablaggio escluso"),
+    ("Telecamera aggiuntiva configurata", 150, "una tantum", "per telecamera · cablaggio escluso"),
   ],
   "centralini-voip-telefonia.html": [
     ("Centralino Asterisk configurato", 500, "una tantum", "nessuna licenza · telefoni esclusi"),
@@ -397,7 +398,7 @@ EN_PAGES = {
     steps=[("Site survey and goals", "What to measure, where, with which power and connectivity."),
            ("Device selection", "Suitable sensors and gateways, reusing existing ones where possible."),
            ("Installation and dashboard", "Data, alarms and connection to your systems."),
-           ("Maintenance plan", "Remote monitoring, updates and support.")],
+           ("Maintenance", "Remote monitoring, updates and support; a monthly fee only if the dashboard runs on our server.")],
     examples=[
               ("Sensors and gateways in industrial settings", "RS-485 sensors, serial and MQTT gateways, data sent to the cloud, testing and commissioning.", None),
               ("Power sized on real consumption", "Sensors and equipment powered by the sun, with panels and batteries sized on real consumption and on the months with least sun. We have built on-grid and off-grid PV systems above 6 kW, so we can size small ones too; electrical work by licensed installers.", None),
@@ -524,7 +525,7 @@ EN_PAGES = {
     faq=[("Can I keep my numbers?", "Yes, by porting them to a VoIP carrier."),
          ("Do I need a special line?", "A stable Internet connection is enough; with many simultaneous calls we check bandwidth."),
          ("Can the intercom ring on my mobile?", "Yes, with SIP intercoms connected to the phone system: answer and open from anywhere."),
-         ("How much do licences cost?", "With Asterisk there is no licence: you only pay for setup, support and your VoIP carrier's call charges. With 3CX the annual licence is set by 3CX's price list, based on the number of simultaneous calls."),
+         ("How much do licences cost?", "With Asterisk there is no licence: you only pay for setup, support and your VoIP carrier's call charges. With 3CX, the SMB Free edition is free up to 10 users; beyond that the annual licence follows 3CX's price list, based on simultaneous calls."),
          ("Do you record calls?", "Only where needed and in line with privacy rules, informing callers."),
          ("Do you install the cabling?", INSTALLERS_EN)],
   ),
@@ -599,8 +600,8 @@ EN_PAGES = {
 
 PRICE_NOTES = {
   "interconnessione-macchine-industria-4-0.html": {
-    "it": "Nessun canone: gli interventi successivi si concordano quando servono.",
-    "en": "No monthly fee: later work is agreed when needed."},
+    "it": "Nessun canone: gli interventi successivi si concordano quando servono. Esclusa la perizia tecnica asseverata per l'iperammortamento, firmata da un ingegnere o perito iscritto all'albo.",
+    "en": "No monthly fee: later work is agreed when needed. The sworn technical appraisal required for the Italian hyper-depreciation, signed by a registered engineer or technical expert, is excluded."},
   "automazione-hotel-bnb.html": {
     "it": "Nessun canone sull'impianto: paghi l'installazione e gli interventi quando servono.",
     "en": "No monthly fee on the system: you pay for the installation and for help when needed."},
@@ -608,9 +609,12 @@ PRICE_NOTES = {
     "it": "Il cablaggio si quota a parte in base al numero di punti ed è realizzato da installatori abilitati. Nessun canone: paghi l'impianto e gli interventi quando servono.",
     "en": "Cabling is quoted separately based on the number of points and done by licensed installers. No monthly fee: you pay for the system and for help when needed."},
   "centralini-voip-telefonia.html": {
-    "it": 'Il centralino gira sul nostro server: niente licenze e niente costi per utente. Preferisci 3CX? La licenza annuale segue il <a href="https://www.3cx.com/ordering/pricing/pricelist/" rel="noreferrer" target="_blank">listino ufficiale 3CX ↗</a>, in base alle chiamate contemporanee.',
-    "en": 'The phone system runs on our server: no licences and no per-user fees. Prefer 3CX? The annual licence follows the <a href="https://www.3cx.com/ordering/pricing/pricelist/" rel="noreferrer" target="_blank">official 3CX price list ↗</a>, based on simultaneous calls.'},
+    "it": 'Il canone copre il centralino sul nostro server, senza licenze né costi per utente; con il centralino in sede non c\'è canone. Traffico e numeri si pagano all\'operatore VoIP che scegli. Preferisci 3CX? Fino a 10 utenti c\'è l\'edizione gratuita SMB Free; oltre, la licenza è annuale, per l\'intero sistema e in base alle chiamate contemporanee, secondo il <a href="https://www.3cx.com/ordering/pricing/pricelist/" rel="noreferrer" target="_blank">listino ufficiale 3CX ↗</a>.',
+    "en": 'The monthly fee covers the phone system on our server, with no licences or per-user fees; with an on-site system there is no monthly fee. Calls and numbers are paid to the VoIP carrier you choose. Prefer 3CX? Up to 10 users there is the free SMB Free edition; beyond that the licence is annual, for the whole system and based on simultaneous calls, according to the <a href="https://www.3cx.com/ordering/pricing/pricelist/" rel="noreferrer" target="_blank">official 3CX price list ↗</a>.'},
   "internet-offgrid-siti-remoti.html": {
-    "it": "Eventuali cablaggi elettrici sono quotati a parte e realizzati da installatori abilitati. Nessun canone sull'impianto.",
-    "en": "Any electrical cabling is quoted separately and done by licensed installers. No monthly fee on the system."},
+    "it": "Ponti radio e router 4G/5G si quotano dopo il sopralluogo, in base a distanza, visibilità e segnale. Eventuali cablaggi elettrici sono quotati a parte e realizzati da installatori abilitati. Nessun canone sull'impianto.",
+    "en": "Radio links and 4G/5G routers are quoted after the site survey, based on distance, line of sight and signal. Any electrical cabling is quoted separately and done by licensed installers. No monthly fee on the system."},
+  "monitoraggio-iot.html": {
+    "it": "Con il cruscotto installato in sede non c'è canone.",
+    "en": "With the dashboard installed on site there is no monthly fee."},
 }
