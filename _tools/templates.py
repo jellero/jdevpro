@@ -11,59 +11,61 @@ TODAY = datetime.date.today().isoformat()
 import hashlib
 ASSET_V = {n: hashlib.sha1((REPO / n).read_bytes()).hexdigest()[:8] for n in ("styles.css", "overrides.css", "pages.css", "script.js")}
 
-WA_EN = "https://wa.me/393454656749?text=" + quote("Hi Jacopo, I'm writing from the JDEVPRO website about a project.")
+WA_EN = "https://wa.me/393454656749?text=" + quote("Hello, I'm writing from the JDEVPRO website about a project.")
 MAILTO_EN = ("mailto:info@jdevpro.it?subject=" + quote("Project enquiry - JDEVPRO") + "&amp;body=" + quote(
-    "Hi Jacopo,\n\nExisting systems:\n\nWhat I want to achieve:\n\nRough timeline:\n\nCompany / contact:\n"))
+    "Hello,\n\nExisting systems:\n\nWhat I want to achieve:\n\nRough timeline:\n\nCompany / contact:\n"))
 
 UI = {
   "it": dict(lang="it", locale="it_IT", skip="Vai al contenuto", menu="Apri menu", navlabel="Navigazione principale",
              contact="Contatto", guides="Guide", home="Home", crumbs="Percorso", more="Approfondisci →",
+             services="Competenze", all_services="Tutte le competenze",
              talk="Parliamone", see_examples="Vedi esempi reali", problem="Il problema", recognise="Ti riconosci?",
-             get="Cosa ottieni", get_h="Cosa faccio, in concreto.", method="Metodo", method_h="Come funziona.",
-             examples="Esempi reali", examples_h="Dai miei progetti.", faq="Domande frequenti",
+             get="Cosa ottieni", get_h="Cosa facciamo, in concreto.", method="Metodo", method_h="Come funziona.",
+             examples="Esempi reali", examples_h="Dai nostri progetti.", faq="Domande frequenti",
              faq_h="Le risposte prima della domanda.", others="Altre competenze", visit="Visita ↗",
-             sys_e="Sistemi già collegati", sys_h="Cosa ho già integrato nei miei progetti.",
-             reach_e="Cosa posso integrare", reach_h="Se ha un'interfaccia, si può collegare.",
+             sys_e="Sistemi già collegati", sys_h="Cosa abbiamo già integrato.",
+             reach_e="Cosa possiamo integrare", reach_h="Se ha un'interfaccia, si può collegare.",
              reach_p="Tre strade, a seconda di cosa offre il sistema da collegare.",
-             reach_note="Esempi di servizi e dispositivi integrabili. Nomi e marchi appartengono ai rispettivi proprietari; prima di ogni progetto verifico accessi, limiti e condizioni d'uso.",
+             reach_note="Esempi di servizi e dispositivi integrabili. Nomi e marchi appartengono ai rispettivi proprietari; prima di ogni progetto verifichiamo accessi, limiti e condizioni d'uso.",
              price_e="Prezzi indicativi", price_h="Da dove si parte.", from_="da", per_month="al mese", once="una tantum",
              price_note="Prezzi di partenza indicativi. Il preventivo è a prezzo fisso, dopo aver verificato cosa serve davvero.",
-             c_eyebrow="Contatto", c_h="Raccontami cosa devi collegare.",
-             c_p="Descrivimi i sistemi che hai, cosa vuoi ottenere e i tempi. Ti rispondo per iscritto con domande mirate o con una proposta.",
-             c_steps='<li><strong>Scrivimi</strong> i sistemi presenti e l\'obiettivo, anche in poche righe.</li><li><strong>Ti rispondo</strong> con domande mirate o una proposta di call conoscitiva.</li><li><strong>Definiamo</strong> insieme perimetro, tempi e modalità di lavoro.</li>',
-             c_steps_label="Come funziona", c_mail="Scrivimi una email", copy="Copia", copied="Copiato ✓",
-             wa="WhatsApp · solo messaggi ↗", wa_note="Non rispondo alle chiamate: scrivimi e ti rispondo appena posso.",
-             li="Oppure scrivimi su LinkedIn ↗", where="Tolmezzo (UD) · Friuli Venezia Giulia · Veneto · anche da remoto",
+             c_eyebrow="Contatto", c_h="Raccontaci cosa devi collegare.",
+             c_p="Descrivici i sistemi che hai, cosa vuoi ottenere e i tempi. Ti rispondiamo per iscritto con domande mirate o con una proposta.",
+             c_steps='<li><strong>Scrivici</strong> i sistemi presenti e l\'obiettivo, anche in poche righe.</li><li><strong>Ti rispondiamo</strong> con domande mirate o una proposta di incontro.</li><li><strong>Definiamo</strong> insieme perimetro, tempi e modalità di lavoro.</li>',
+             c_steps_label="Come funziona", c_mail="Scrivici una email", copy="Copia", copied="Copiato ✓",
+             wa="Scrivici su WhatsApp ↗",
+             li="Oppure su LinkedIn ↗", where="Tolmezzo (UD) · Friuli Venezia Giulia · Veneto · anche da remoto",
              f_who="Jacopo Ellero · Tolmezzo (UD)", privacy="privacy.html", cookie="cookie-policy.html", cv="cv.html",
              mailto=MAILTO, wa_url=WA),
   "en": dict(lang="en", locale="en_GB", skip="Skip to content", menu="Open menu", navlabel="Main navigation",
              contact="Contact", guides="Guides", home="Home", crumbs="Breadcrumb", more="Learn more →",
+             services="Services", all_services="All services",
              talk="Let's talk", see_examples="See real examples", problem="The problem", recognise="Sound familiar?",
-             get="What you get", get_h="What I do, in practice.", method="Method", method_h="How it works.",
-             examples="Real examples", examples_h="From my projects.", faq="FAQ",
+             get="What you get", get_h="What we do, in practice.", method="Method", method_h="How it works.",
+             examples="Real examples", examples_h="From our projects.", faq="FAQ",
              faq_h="Answers before you ask.", others="Other services", visit="Visit ↗",
-             sys_e="Already connected", sys_h="What I have already integrated in my projects.",
-             reach_e="What I can integrate", reach_h="If it has an interface, it can be connected.",
+             sys_e="Already connected", sys_h="What we have already integrated.",
+             reach_e="What we can integrate", reach_h="If it has an interface, it can be connected.",
              reach_p="Three routes, depending on what the system offers.",
-             reach_note="Examples of services and devices that can be integrated. Names and trademarks belong to their owners; before each project I check access, limits and terms of use.",
+             reach_note="Examples of services and devices that can be integrated. Names and trademarks belong to their owners; before each project we check access, limits and terms of use.",
              price_e="Indicative prices", price_h="Where it starts.", from_="from", per_month="per month", once="one-off",
              price_note="Indicative starting prices. Quotes are fixed-price, after checking what is really needed.",
-             c_eyebrow="Contact", c_h="Tell me what you need to connect.",
-             c_p="Describe your systems, what you want to achieve and your timeline. I reply in writing with focused questions or a proposal.",
-             c_steps="<li><strong>Write to me</strong> about your current systems and goal, even in a few lines.</li><li><strong>I reply</strong> with focused questions or a proposal for an intro call.</li><li><strong>We define</strong> scope, timeline and way of working together.</li>",
-             c_steps_label="How it works", c_mail="Send me an email", copy="Copy", copied="Copied ✓",
-             wa="WhatsApp · messages only ↗", wa_note="I don't take calls: send a message and I'll reply as soon as I can.",
-             li="Or message me on LinkedIn ↗", where="Tolmezzo (Udine), Italy · north-east Italy · remote projects",
+             c_eyebrow="Contact", c_h="Tell us what you need to connect.",
+             c_p="Describe your systems, what you want to achieve and your timeline. We reply in writing with focused questions or a proposal.",
+             c_steps="<li><strong>Write to us</strong> about your current systems and goal, even in a few lines.</li><li><strong>We reply</strong> with focused questions or a proposal for a meeting.</li><li><strong>We define</strong> scope, timeline and way of working together.</li>",
+             c_steps_label="How it works", c_mail="Send us an email", copy="Copy", copied="Copied ✓",
+             wa="Message us on WhatsApp ↗",
+             li="Or on LinkedIn ↗", where="Tolmezzo (Udine), Italy · north-east Italy · remote projects",
              f_who="Jacopo Ellero · Tolmezzo, Italy", privacy="privacy-en.html", cookie="cookie-policy-en.html", cv="cv-en.html",
              mailto=MAILTO_EN, wa_url=WA_EN),
 }
 
 PRICE_EN = {"Collegamento di una macchina": "Connecting one machine", "Dati macchina e assistenza": "Machine data and support",
             "Prima versione del gestionale": "First version of the software", "Hosting, backup e assistenza": "Hosting, backups and support",
-            "Progetto e installazione": "Design and installation", "Dati, allarmi e manutenzione": "Data, alarms and maintenance",
+            "Progetto e configurazione": "Design and configuration", "Dati, allarmi e manutenzione": "Data, alarms and maintenance",
             "Integrazione tra due sistemi": "Integration between two systems", "Monitoraggio e manutenzione": "Monitoring and maintenance",
             "Sito con pannello di gestione": "Website with management panel", "Hosting e manutenzione": "Hosting and maintenance",
-            "per tipo di macchina con API documentate": "per machine type with documented APIs", "per macchina": "per machine",
+            "per tipo di macchina con interfacce documentate": "per machine type with documented interfaces", "per macchina": "per machine",
             "a prezzo fisso, sulla parte più utile": "fixed price, on the most useful part", "dispositivi esclusi": "devices excluded",
             "per dispositivo": "per device", "con API pubbliche": "with public APIs", "": ""}
 
@@ -81,7 +83,7 @@ ORG = {
                  {"@type": "City", "name": "Udine"}, {"@type": "City", "name": "Pordenone"},
                  {"@type": "City", "name": "Trieste"}, {"@type": "City", "name": "Gorizia"},
                  {"@type": "AdministrativeArea", "name": "Veneto"}, {"@type": "Country", "name": "Italia"}],
-  "description": "Interconnessione macchine 4.0, gestionali su misura, IoT, integrazioni software e siti web per aziende del Friuli Venezia Giulia e del Veneto.",
+  "description": "Interconnessione macchine 4.0, gestionali su misura, integrazioni, IoT, automazione per hotel e B&B, videosorveglianza, internet offgrid e siti web per aziende del Friuli Venezia Giulia e del Veneto.",
   "knowsLanguage": ["it", "en"],
   "sameAs": ["https://github.com/jellero", LI],
   "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Competenze JDEVPRO", "itemListElement": [
@@ -154,8 +156,13 @@ def head(title, desc, slug, jsonld, lang="it", alternates=None, robots="index,fo
 def header(current, lang="it", home=False, switch=None):
     u = UI[lang]
     home_slug = "index.html" if lang == "it" else "en.html"
-    links = "\n".join(
-        f'<a href="{p["href"]}"{" aria-current=\"page\"" if p["href"] == current else ""}>{p["nav"]}</a>' for p in pages_for(lang))
+    pages = pages_for(lang)
+    in_services = any(p["href"] == current for p in pages)
+    sub = "\n".join(
+        f'<a href="{p["href"]}"{" aria-current=\"page\"" if p["href"] == current else ""}>{p["card_title"]}</a>' for p in pages)
+    links = (f'<div class="nav-group{" is-current" if in_services else ""}">'
+             f'<a class="nav-group-label" href="{home_slug}#competenze">{u["services"]} <span aria-hidden="true">▾</span></a>'
+             f'<div class="nav-sub">\n{sub}\n</div></div>')
     if lang == "it":
         links += f'\n<a href="guide.html"{" aria-current=\"page\"" if current == "guide.html" else ""}>Guide</a>'
     ab = ABOUT[lang]
@@ -194,7 +201,6 @@ def contact(lang="it"):
 <a class="button light big" href="{u['mailto']}">{u['c_mail']}</a>
 <button class="contact-copy" type="button" data-copy-email="{EMAIL}" data-copied-label="{u['copied']}"><span>{EMAIL}</span><em>{u['copy']}</em></button>
 <a class="contact-whatsapp" href="{u['wa_url']}" rel="noreferrer" target="_blank">{u['wa']}</a>
-<small class="contact-note">{u['wa_note']}</small>
 <a class="contact-alt" href="{LI}" rel="noreferrer" target="_blank">{u['li']}</a>
 <span>{u['where']}</span>
 </div>
@@ -205,7 +211,7 @@ def contact(lang="it"):
 
 def footer(lang="it"):
     u = UI[lang]
-    links = "".join(f'<a href="{p["href"]}">{p["nav"]}</a>' for p in pages_for(lang))
+    links = "".join(f'<a href="{p["href"]}">{p["card_title"]}</a>' for p in pages_for(lang))
     local = ""
     if lang == "it":
         links += '<a href="guide.html">Guide</a>'
@@ -272,7 +278,7 @@ def home(lang="it"):
     u = UI[lang]
     pages = pages_for(lang)
     cards = "\n".join(f"""<a class="competence-card reveal" href="{p['href']}">
-<span class="competence-num">0{i}</span>
+<span class="competence-num">{i:02d}</span>
 <h3>{p['card_title']}</h3>
 <p>{p['card_who']}</p>
 <ul>{''.join(f'<li>{x}</li>' for x in p['card_points'])}</ul>
@@ -280,45 +286,45 @@ def home(lang="it"):
 </a>""" for i, p in enumerate(pages, 1))
     if lang == "it":
         t = dict(eyebrow="Software su misura e integrazioni · Friuli Venezia Giulia",
-                 h1="Collego macchine, gestionali e dispositivi. <span>E li tengo funzionanti.</span>",
-                 lead="Sono Jacopo Ellero, da Tolmezzo. Sviluppo gestionali su misura, collego macchine e sensori ai sistemi aziendali e seguo tutto in produzione, per aziende del Friuli Venezia Giulia e del Veneto.",
-                 b1="Scegli cosa ti serve", b2="Scrivimi", ce="Competenze", ch="Cinque modi per far lavorare meglio i tuoi sistemi.",
-                 cp="Ogni competenza ha una pagina dedicata con esempi reali, metodo, prezzi indicativi e domande frequenti.",
-                 cta_h="Non sai quale ti serve?", cta_p="Descrivimi il problema in poche righe: ti dico io da dove partire.", cta_m="Scrivimi →",
-                 me="Come lavoro", mh="Prezzo chiaro, consegna rapida, assistenza continua.",
-                 steps=[("Analisi", "Capisco i sistemi che hai e cosa deve cambiare."), ("Prezzo fisso a fasi", "Sai cosa paghi prima di iniziare."),
+                 h1="Colleghiamo macchine, gestionali e dispositivi. <span>E li teniamo funzionanti.</span>",
+                 lead="JDEVPRO nasce a Tolmezzo con Jacopo Ellero. Sviluppiamo gestionali su misura, colleghiamo macchine, sensori e impianti ai sistemi aziendali e seguiamo tutto in produzione, per aziende e strutture del Friuli Venezia Giulia e del Veneto.",
+                 b1="Scegli cosa ti serve", b2="Scrivici", ce="Competenze", ch="Un solo interlocutore per macchine, software e dispositivi.",
+                 cp="Ogni competenza ha una pagina dedicata con esempi reali, metodo e domande frequenti.",
+                 cta_h="Non sai quale ti serve?", cta_p="Descrivici il problema in poche righe: ti diciamo noi da dove partire.", cta_m="Scrivici →",
+                 me="Come lavoriamo", mh="Prezzo chiaro, consegna rapida, assistenza continua.",
+                 steps=[("Analisi", "Capiamo i sistemi che hai e cosa deve cambiare."), ("Prezzo fisso a fasi", "Sai cosa paghi prima di iniziare."),
                         ("Consegna rapida", "Si parte dalla parte più utile, provata sul lavoro reale."), ("Canone di assistenza", "Backup, aggiornamenti e interventi senza sorprese.")],
-                 proof=[("JD Industry", "Gestionale di produzione collegato a macchine SCM ed Essetre."), ("Welora", "Piattaforma gestionale con 25 moduli e oltre 370 file di test automatici."),
-                        ("Marketplace", "Gestionale collegato a fornitore, marketplace e corriere."), ("Lauco Experience", "Portale in quattro lingue con backoffice, notifiche e newsletter.")],
+                 proof=[("10 macchine in produzione", "Collegate al gestionale a Tolmezzo, tra falegnamerie e stamperie."), ("JD Industry", "Gestionale di produzione collegato a macchine SCM ed Essetre."),
+                        ("Welora", "Gestionale per strutture ricettive: prenotazioni, accessi, clima, pagamenti, adempimenti."), ("E-commerce e marketplace", "Gestionale collegato a fornitore, marketplace e corriere.")],
                  who='<strong>JDEVPRO</strong> è l\'attività di Jacopo Ellero, sviluppatore e integratore di sistemi. <a href="chi-sono.html">Chi sono →</a>',
                  title="JDEVPRO · Gestionali, macchine 4.0 e IoT in Friuli",
-                 desc="Gestionali su misura, interconnessione macchine 4.0, IoT, integrazioni e siti web per aziende del Friuli Venezia Giulia e del Veneto. Jacopo Ellero.")
+                 desc="Gestionali su misura, macchine 4.0, integrazioni, IoT, automazione hotel e B&B, videosorveglianza e internet offgrid in Friuli Venezia Giulia.")
     else:
         t = dict(eyebrow="Custom software and integrations · North-east Italy",
-                 h1="I connect machines, business software and devices. <span>And keep them running.</span>",
-                 lead="I'm Jacopo Ellero, based in Tolmezzo, Friuli. I build custom business software, connect machines and sensors to company systems and look after everything in production, for companies in north-east Italy and remotely.",
-                 b1="Choose what you need", b2="Write to me", ce="Services", ch="Five ways to make your systems work better.",
-                 cp="Each service has its own page with real examples, method, indicative prices and FAQ.",
-                 cta_h="Not sure which one?", cta_p="Describe the problem in a few lines: I'll tell you where to start.", cta_m="Write to me →",
-                 me="How I work", mh="Clear prices, fast delivery, ongoing support.",
-                 steps=[("Analysis", "I understand your systems and what must change."), ("Fixed price in phases", "You know the cost before we start."),
+                 h1="We connect machines, business software and devices. <span>And keep them running.</span>",
+                 lead="JDEVPRO was founded in Tolmezzo, Friuli, by Jacopo Ellero. We build custom business software, connect machines, sensors and installations to company systems and look after everything in production, for companies and properties in north-east Italy and remotely.",
+                 b1="Choose what you need", b2="Write to us", ce="Services", ch="One partner for machines, software and devices.",
+                 cp="Each service has its own page with real examples, method and FAQ.",
+                 cta_h="Not sure which one?", cta_p="Describe the problem in a few lines: we'll tell you where to start.", cta_m="Write to us →",
+                 me="How we work", mh="Clear prices, fast delivery, ongoing support.",
+                 steps=[("Analysis", "We understand your systems and what must change."), ("Fixed price in phases", "You know the cost before we start."),
                         ("Fast delivery", "We start from the most useful part, tested on real work."), ("Support plan", "Backups, updates and fixes without surprises.")],
-                 proof=[("JD Industry", "Production management connected to SCM and Essetre machines."), ("Welora", "Business platform with 25 modules and over 370 automated test files."),
-                        ("Marketplaces", "Business software connected to supplier, marketplaces and courier."), ("Lauco Experience", "Four-language portal with back office, notifications and newsletter.")],
+                 proof=[("10 machines in production", "Connected to business software in Tolmezzo, across woodworking and metal pressing companies."), ("JD Industry", "Production management connected to SCM and Essetre machines."),
+                        ("Welora", "Hospitality software: bookings, access, climate, payments, compliance."), ("E-commerce and marketplaces", "Business software connected to supplier, marketplaces and courier.")],
                  who='<strong>JDEVPRO</strong> is the business of Jacopo Ellero, software developer and systems integrator. <a href="en-about.html">About me →</a>',
                  title="JDEVPRO · Business software, machines 4.0 and IoT, Italy",
-                 desc="Custom business software, Industry 4.0 machine interconnection, IoT, integrations and websites for companies in north-east Italy. Jacopo Ellero.")
+                 desc="Custom business software, machines 4.0, integrations, IoT, hotel automation, video surveillance and off-grid internet in north-east Italy.")
     steps = "".join(f"<li><strong>{a}</strong><span>{b}</span></li>" for a, b in t["steps"])
     proof = "".join(f"<div><strong>{a}</strong><span>{b}</span></div>" for a, b in t["proof"])
     extra = ""
     if lang == "it":
         g = "".join(f'<a href="{x["slug"]}"><strong>{x["short"]}</strong><span>{x["desc"]}</span></a>' for x in [TEST] + GUIDES)
-        c = "".join(f'<a href="{x["slug"]}"><strong>{x["name"]}</strong><span>{x["area"].capitalize()}</span></a>' for x in CITIES)
+        c = "".join(f'<a href="{x["slug"]}"><strong>{x["name"]}</strong><span>{x["area_title"]}</span></a>' for x in CITIES)
         extra = f"""<section class="section section-tight section-white">
 <div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">Guide e strumenti</p><h2>Per capire prima di chiedere.</h2></div>
 <div class="related-grid">{g}</div>
-<p class="eyebrow local-eyebrow">Dove lavoro</p>
+<p class="eyebrow local-eyebrow">Dove lavoriamo</p>
 <div class="related-grid cities-grid">{c}</div>
 </div>
 </section>
@@ -455,6 +461,7 @@ def service(p, lang="it"):
 <p class="eyebrow">{p['eyebrow']}</p>
 <h1>{p['h1']}</h1>
 <p class="hero-lead">{p['lead']}</p>
+{f'<p class="hero-proof">{p["proof"]}</p>' if p.get("proof") else ''}
 <div class="hero-actions">
 <a class="button primary" href="#contatto">{u['talk']}</a>
 <a class="button ghost" href="#esempi">{u['see_examples']}</a>
@@ -536,18 +543,18 @@ def city(c):
 <div aria-hidden="true" class="hero-grid"></div>
 <div class="shell page-hero-copy reveal">
 <nav aria-label="Percorso" class="breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">{c['name']}</span></nav>
-<p class="eyebrow">{c['area'].capitalize()}</p>
+<p class="eyebrow">{c['area_title']}</p>
 <h1>Software, gestionali e integrazioni a <span>{c['name']}.</span></h1>
 <p class="hero-lead">{c['lead']}</p>
 <div class="hero-actions">
 <a class="button primary" href="#contatto">Parliamone</a>
-<a class="button ghost" href="#competenze">Cosa faccio</a>
+<a class="button ghost" href="#competenze">Cosa facciamo</a>
 </div>
 </div>
 </section>
 <section class="section section-tight section-paper">
 <div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">Settori</p><h2>Cosa faccio per le aziende della {c['area']}.</h2></div>
+<div class="section-heading reveal"><p class="eyebrow">Settori</p><h2>Cosa facciamo per le aziende della {c['area']}.</h2></div>
 <div class="outcome-grid">
 {sectors}
 </div>
@@ -555,9 +562,9 @@ def city(c):
 </section>
 <section class="section section-tight section-white">
 <div class="shell split">
-<div class="section-heading reveal"><p class="eyebrow">Come lavoro</p><h2>Vicino quando serve, da remoto il resto.</h2></div>
+<div class="section-heading reveal"><p class="eyebrow">Come lavoriamo</p><h2>Vicini quando serve, da remoto il resto.</h2></div>
 <ol class="method-steps reveal">
-<li><strong>Analisi in azienda</strong><span>Vedo macchine, software e processi dove lavorano davvero.</span></li>
+<li><strong>Analisi in azienda</strong><span>Vediamo macchine, programmi e processi dove lavorano davvero.</span></li>
 <li><strong>Proposta a prezzo fisso</strong><span>Fasi chiare, si parte dalla parte più utile.</span></li>
 <li><strong>Sviluppo e collaudo</strong><span>Sviluppo da remoto, collaudo sul posto con i dati reali.</span></li>
 <li><strong>Assistenza continua</strong><span>Canone mensile con backup, aggiornamenti e interventi.</span></li>
@@ -566,8 +573,8 @@ def city(c):
 </section>
 <section class="section section-tight" id="competenze">
 <div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">Competenze</p><h2>Le cinque cose che faccio.</h2></div>
-<div class="related-grid related-five">{services}</div>
+<div class="section-heading reveal"><p class="eyebrow">Competenze</p><h2>Cosa facciamo.</h2></div>
+<div class="related-grid">{services}</div>
 </div>
 </section>
 <section class="section section-tight section-white">
@@ -610,7 +617,7 @@ def guide(g):
 <div aria-hidden="true" class="hero-grid"></div>
 <div class="shell page-hero-copy reveal">
 <nav aria-label="Percorso" class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="guide.html">Guide</a><span>/</span><span aria-current="page">{g['short']}</span></nav>
-<p class="eyebrow">Guida · Jacopo Ellero</p>
+<p class="eyebrow">Guida JDEVPRO</p>
 <h1>{g['h1']}</h1>
 <p class="hero-lead">{g['intro']}</p>
 </div>
@@ -678,7 +685,7 @@ TEST_JS = """<script>
       text = '<strong>Interconnessione parziale.</strong> Alcuni requisiti tecnici sembrano mancare: conviene completarli prima della perizia.';
     }
     out.className = 'quiz-result ' + cls;
-    out.innerHTML = text + ' <a href="interconnessione-macchine-industria-4-0.html#contatto">Scrivimi per una verifica \\u2192</a>';
+    out.innerHTML = text + ' <a href="interconnessione-macchine-industria-4-0.html#contatto">Scrivici per una verifica \\u2192</a>';
   });
 })();
 </script>
@@ -737,7 +744,7 @@ def not_found():
 </div>
 </section>
 <section class="section section-tight section-white">
-<div class="shell"><div class="related-grid related-five">{''.join(f'<a href="/{p["slug"]}"><strong>{p["card_title"]}</strong><span>{p["card_who"]}</span></a>' for p in PAGES)}</div></div>
+<div class="shell"><div class="related-grid">{''.join(f'<a href="/{p["slug"]}"><strong>{p["card_title"]}</strong><span>{p["card_who"]}</span></a>' for p in PAGES)}</div></div>
 </section>
 </main>
 """

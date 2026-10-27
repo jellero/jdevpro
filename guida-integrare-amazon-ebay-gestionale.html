@@ -13,7 +13,7 @@
 <link href="assets/icon-180.png" rel="apple-touch-icon"/>
 <link href="styles.css?v=8fa5eb32" rel="stylesheet"/>
 <link href="overrides.css?v=2353238d" rel="stylesheet"/>
-<link href="pages.css?v=08443ec9" rel="stylesheet"/>
+<link href="pages.css?v=f4211b53" rel="stylesheet"/>
 <meta property="og:title" content="Collegare Amazon ed eBay al gestionale: come funziona | JDEVPRO"/>
 <meta property="og:description" content="Cosa si sincronizza tra gestionale, Amazon ed eBay, come funzionano le API, connettori o integrazione diretta e come evitare vendite senza merce."/>
 <meta property="og:type" content="website"/>
@@ -94,11 +94,16 @@
 <a aria-label="JDEVPRO home" class="brand" href="index.html"><img class="brand-logo" src="assets/logo-jdevpro-header.png" alt="JDEVPRO" width="440" height="259"></a>
 <button aria-expanded="false" aria-label="Apri menu" class="menu-toggle" data-menu-toggle="" type="button"><span></span><span></span><span></span></button>
 <nav aria-label="Navigazione principale" class="nav" data-nav="">
-<a href="interconnessione-macchine-industria-4-0.html">Macchine 4.0</a>
-<a href="gestionale-su-misura.html">Gestionali</a>
-<a href="monitoraggio-iot.html">IoT</a>
-<a href="integrazione-software-api.html">Integrazioni</a>
-<a href="siti-web-piattaforme.html">Siti web</a>
+<div class="nav-group"><a class="nav-group-label" href="index.html#competenze">Competenze <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<a href="interconnessione-macchine-industria-4-0.html">Interconnessione macchine 4.0</a>
+<a href="gestionale-su-misura.html">Gestionali su misura</a>
+<a href="integrazione-software-api.html">Integrazioni e automazioni</a>
+<a href="monitoraggio-iot.html">Monitoraggio IoT ed energia</a>
+<a href="automazione-hotel-bnb.html">Automazione per hotel e B&B</a>
+<a href="videosorveglianza-cancelli.html">Videosorveglianza e cancelli</a>
+<a href="internet-offgrid-siti-remoti.html">Internet offgrid e siti remoti</a>
+<a href="siti-web-piattaforme.html">Siti e piattaforme web</a>
+</div></div>
 <a href="guide.html">Guide</a>
 <a href="chi-sono.html">Chi sono</a>
 <a class="nav-cta" href="index.html#contatto">Contatto</a>
@@ -110,7 +115,7 @@
 <div aria-hidden="true" class="hero-grid"></div>
 <div class="shell page-hero-copy reveal">
 <nav aria-label="Percorso" class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="guide.html">Guide</a><span>/</span><span aria-current="page">Collegare Amazon ed eBay al gestionale</span></nav>
-<p class="eyebrow">Guida · Jacopo Ellero</p>
+<p class="eyebrow">Guida JDEVPRO</p>
 <h1>Collegare Amazon ed eBay al gestionale: <span>come funziona.</span></h1>
 <p class="hero-lead">Vendere su più marketplace con il gestionale scollegato significa ricopiare ordini e rischiare di vendere merce che non c'è. Ecco cosa si collega e come farlo in modo affidabile.</p>
 </div>
@@ -118,15 +123,15 @@
 <section class="section section-tight section-white">
 <div class="shell article">
 <h2>Cosa si sincronizza</h2>
-<ul><li>catalogo e offerte: titoli, attributi, immagini, categorie;</li><li>prezzi e disponibilità, aggiornati da una sola fonte;</li><li>ordini, clienti e indirizzi importati in automatico;</li><li>spedizioni: etichette, tracking e stato verso il marketplace;</li><li>resi, rimborsi e documenti fiscali.</li></ul>
+<ul><li>catalogo e offerte: titoli, caratteristiche, immagini, categorie;</li><li>prezzi e disponibilità, aggiornati da una sola fonte;</li><li>ordini, clienti e indirizzi importati in automatico;</li><li>spedizioni: etichette, tracciamento e stato verso il marketplace;</li><li>resi, rimborsi e documenti fiscali.</li></ul>
 <h2>Le API dei marketplace</h2>
 <p>Amazon mette a disposizione la Selling Partner API: serve la registrazione come sviluppatore e l'autorizzazione del venditore. eBay offre le Sell API (inventario, ordini, spedizioni) con autorizzazione OAuth. Shopify, WooCommerce e PrestaShop hanno API pubbliche documentate.</p>
-<p>Ogni API ha limiti di chiamata: l'integrazione deve rispettarli, rallentare quando serve e riprovare senza creare doppioni.</p>
-<h2>Connettore multicanale o integrazione diretta</h2>
-<p>Un connettore multicanale (per esempio SellRapido) gestisce più marketplace da un unico punto: conviene quando i canali sono tanti. L'integrazione diretta conviene quando servono regole tue, pochi canali o dati che il connettore non gestisce. Spesso la soluzione migliore è mista: gestionale collegato al connettore, più qualche integrazione diretta.</p>
-<h2>Come la rendo affidabile</h2>
-<ul><li>il gestionale resta la fonte di verità per prodotti, prezzi e ordini;</li><li>un servizio di integrazione separato parla con marketplace, fornitori e corrieri;</li><li>code e tentativi ripetuti: se un marketplace è lento, niente si perde;</li><li>controlli anti-doppione su ogni ordine e ogni aggiornamento;</li><li>credenziali cifrate e storico di ogni chiamata.</li></ul>
-<p>È l'architettura che uso nel gestionale per la rivendita sui marketplace che ho sviluppato, collegato a fornitore, SellRapido, IBS, Temu e corriere GLS.</p>
+<p>Ogni API ha limiti di chiamata: il collegamento deve rispettarli, rallentare quando serve e riprovare senza creare doppioni.</p>
+<h2>Connettore multicanale o collegamento diretto</h2>
+<p>Un connettore multicanale (per esempio SellRapido) gestisce più marketplace da un unico punto: conviene quando i canali sono tanti. Il collegamento diretto conviene quando servono regole vostre, pochi canali o dati che il connettore non gestisce. Spesso la soluzione migliore è mista.</p>
+<h2>Come lo rendiamo affidabile</h2>
+<ul><li>il gestionale resta l'unica fonte per prodotti, prezzi e ordini;</li><li>un servizio separato parla con marketplace, fornitori e corrieri;</li><li>se un marketplace è lento o fermo, i dati aspettano e niente si perde;</li><li>controlli anti-doppione su ogni ordine e ogni aggiornamento;</li><li>password e chiavi custodite in modo sicuro, con lo storico di ogni chiamata.</li></ul>
+<p>È l'impostazione che usiamo nel gestionale per la vendita sui marketplace che abbiamo sviluppato, collegato a fornitore, SellRapido, IBS, Temu e corriere GLS.</p>
 <h2>Errori da evitare</h2>
 <ul><li>aggiornare la disponibilità da più punti diversi;</li><li>importare gli ordini a mano "solo per ora";</li><li>ignorare i limiti di chiamata e farsi bloccare;</li><li>non avere uno storico per capire cosa è successo a un ordine.</li></ul>
 <div class="article-cta">
@@ -139,16 +144,15 @@
 <div class="shell contact-card reveal">
 <div>
 <p class="eyebrow">Contatto</p>
-<h2>Raccontami cosa devi collegare.</h2>
-<p>Descrivimi i sistemi che hai, cosa vuoi ottenere e i tempi. Ti rispondo per iscritto con domande mirate o con una proposta.</p>
-<ol class="contact-steps" aria-label="Come funziona"><li><strong>Scrivimi</strong> i sistemi presenti e l'obiettivo, anche in poche righe.</li><li><strong>Ti rispondo</strong> con domande mirate o una proposta di call conoscitiva.</li><li><strong>Definiamo</strong> insieme perimetro, tempi e modalità di lavoro.</li></ol>
+<h2>Raccontaci cosa devi collegare.</h2>
+<p>Descrivici i sistemi che hai, cosa vuoi ottenere e i tempi. Ti rispondiamo per iscritto con domande mirate o con una proposta.</p>
+<ol class="contact-steps" aria-label="Come funziona"><li><strong>Scrivici</strong> i sistemi presenti e l'obiettivo, anche in poche righe.</li><li><strong>Ti rispondiamo</strong> con domande mirate o una proposta di incontro.</li><li><strong>Definiamo</strong> insieme perimetro, tempi e modalità di lavoro.</li></ol>
 </div>
 <div class="contact-actions">
-<a class="button light big" href="mailto:info@jdevpro.it?subject=Richiesta%20progetto%20-%20JDEVPRO&amp;body=Ciao%20Jacopo%2C%0A%0ASistemi%20gi%C3%A0%20presenti%3A%0A%0ACosa%20vorrei%20ottenere%3A%0A%0ATempistiche%20indicative%3A%0A%0AAzienda%20/%20riferimento%3A%0A">Scrivimi una email</a>
+<a class="button light big" href="mailto:info@jdevpro.it?subject=Richiesta%20progetto%20-%20JDEVPRO&amp;body=Buongiorno%2C%0A%0ASistemi%20gi%C3%A0%20presenti%3A%0A%0ACosa%20vorrei%20ottenere%3A%0A%0ATempistiche%20indicative%3A%0A%0AAzienda%20/%20riferimento%3A%0A">Scrivici una email</a>
 <button class="contact-copy" type="button" data-copy-email="info@jdevpro.it" data-copied-label="Copiato ✓"><span>info@jdevpro.it</span><em>Copia</em></button>
-<a class="contact-whatsapp" href="https://wa.me/393454656749?text=Ciao%20Jacopo%2C%20ti%20scrivo%20dal%20sito%20JDEVPRO%20per%20un%20progetto." rel="noreferrer" target="_blank">WhatsApp · solo messaggi ↗</a>
-<small class="contact-note">Non rispondo alle chiamate: scrivimi e ti rispondo appena posso.</small>
-<a class="contact-alt" href="https://www.linkedin.com/in/jacopo-ellero-a006499a/" rel="noreferrer" target="_blank">Oppure scrivimi su LinkedIn ↗</a>
+<a class="contact-whatsapp" href="https://wa.me/393454656749?text=Ciao%2C%20vi%20scrivo%20dal%20sito%20JDEVPRO%20per%20un%20progetto." rel="noreferrer" target="_blank">Scrivici su WhatsApp ↗</a>
+<a class="contact-alt" href="https://www.linkedin.com/in/jacopo-ellero-a006499a/" rel="noreferrer" target="_blank">Oppure su LinkedIn ↗</a>
 <span>Tolmezzo (UD) · Friuli Venezia Giulia · Veneto · anche da remoto</span>
 </div>
 </div>
@@ -157,7 +161,7 @@
 <footer class="footer">
 <div class="shell footer-grid footer-wide">
 <div><strong>JDEVPRO</strong><span>Jacopo Ellero · Tolmezzo (UD)</span></div>
-<div class="footer-links"><a href="interconnessione-macchine-industria-4-0.html">Macchine 4.0</a><a href="gestionale-su-misura.html">Gestionali</a><a href="monitoraggio-iot.html">IoT</a><a href="integrazione-software-api.html">Integrazioni</a><a href="siti-web-piattaforme.html">Siti web</a><a href="guide.html">Guide</a><a href="chi-sono.html">Chi sono</a></div>
+<div class="footer-links"><a href="interconnessione-macchine-industria-4-0.html">Interconnessione macchine 4.0</a><a href="gestionale-su-misura.html">Gestionali su misura</a><a href="integrazione-software-api.html">Integrazioni e automazioni</a><a href="monitoraggio-iot.html">Monitoraggio IoT ed energia</a><a href="automazione-hotel-bnb.html">Automazione per hotel e B&B</a><a href="videosorveglianza-cancelli.html">Videosorveglianza e cancelli</a><a href="internet-offgrid-siti-remoti.html">Internet offgrid e siti remoti</a><a href="siti-web-piattaforme.html">Siti e piattaforme web</a><a href="guide.html">Guide</a><a href="chi-sono.html">Chi sono</a></div>
 <div><span>P.IVA IT02783420306</span><a href="privacy.html">Privacy</a><a href="cookie-policy.html">Cookie</a><a href="cv.html">CV</a><a href="https://github.com/jellero" rel="noreferrer" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/jacopo-ellero-a006499a/" rel="noreferrer" target="_blank">LinkedIn</a></div>
 </div>
 <div class="shell"><div class="footer-local"><a href="software-gestionali-integrazioni-udine.html">Udine</a><a href="software-gestionali-integrazioni-pordenone.html">Pordenone</a><a href="software-gestionali-integrazioni-trieste-gorizia.html">Trieste e Gorizia</a></div></div>

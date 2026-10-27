@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Integrare un sistema senza API: web, seriale e Modbus | JDEVPRO</title>
-<meta content="Come collegare software, macchine e dispositivi che non hanno API pubbliche: interfacce web, file, database, porte seriali e Modbus RS-485." name="description"/>
+<meta content="Come collegare programmi, macchine e dispositivi che non hanno API pubbliche: interfacce web, file, database, porte seriali e Modbus RS-485." name="description"/>
 <meta content="#07111f" name="theme-color"/>
 <meta content="index,follow" name="robots"/>
 <link href="https://www.jdevpro.it/guida-integrare-sistemi-senza-api.html" rel="canonical"/>
@@ -13,9 +13,9 @@
 <link href="assets/icon-180.png" rel="apple-touch-icon"/>
 <link href="styles.css?v=8fa5eb32" rel="stylesheet"/>
 <link href="overrides.css?v=2353238d" rel="stylesheet"/>
-<link href="pages.css?v=08443ec9" rel="stylesheet"/>
+<link href="pages.css?v=f4211b53" rel="stylesheet"/>
 <meta property="og:title" content="Integrare un sistema senza API: web, seriale e Modbus | JDEVPRO"/>
-<meta property="og:description" content="Come collegare software, macchine e dispositivi che non hanno API pubbliche: interfacce web, file, database, porte seriali e Modbus RS-485."/>
+<meta property="og:description" content="Come collegare programmi, macchine e dispositivi che non hanno API pubbliche: interfacce web, file, database, porte seriali e Modbus RS-485."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://www.jdevpro.it/guida-integrare-sistemi-senza-api.html"/>
 <meta property="og:image" content="https://www.jdevpro.it/assets/og-jdevpro.jpg"/>
@@ -28,7 +28,7 @@
  "@context": "https://schema.org",
  "@type": "Article",
  "headline": "Integrare un sistema senza API",
- "description": "Come collegare software, macchine e dispositivi che non hanno API pubbliche: interfacce web, file, database, porte seriali e Modbus RS-485.",
+ "description": "Come collegare programmi, macchine e dispositivi che non hanno API pubbliche: interfacce web, file, database, porte seriali e Modbus RS-485.",
  "url": "https://www.jdevpro.it/guida-integrare-sistemi-senza-api.html",
  "inLanguage": "it",
  "datePublished": "2026-10-27",
@@ -94,11 +94,16 @@
 <a aria-label="JDEVPRO home" class="brand" href="index.html"><img class="brand-logo" src="assets/logo-jdevpro-header.png" alt="JDEVPRO" width="440" height="259"></a>
 <button aria-expanded="false" aria-label="Apri menu" class="menu-toggle" data-menu-toggle="" type="button"><span></span><span></span><span></span></button>
 <nav aria-label="Navigazione principale" class="nav" data-nav="">
-<a href="interconnessione-macchine-industria-4-0.html">Macchine 4.0</a>
-<a href="gestionale-su-misura.html">Gestionali</a>
-<a href="monitoraggio-iot.html">IoT</a>
-<a href="integrazione-software-api.html">Integrazioni</a>
-<a href="siti-web-piattaforme.html">Siti web</a>
+<div class="nav-group"><a class="nav-group-label" href="index.html#competenze">Competenze <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<a href="interconnessione-macchine-industria-4-0.html">Interconnessione macchine 4.0</a>
+<a href="gestionale-su-misura.html">Gestionali su misura</a>
+<a href="integrazione-software-api.html">Integrazioni e automazioni</a>
+<a href="monitoraggio-iot.html">Monitoraggio IoT ed energia</a>
+<a href="automazione-hotel-bnb.html">Automazione per hotel e B&B</a>
+<a href="videosorveglianza-cancelli.html">Videosorveglianza e cancelli</a>
+<a href="internet-offgrid-siti-remoti.html">Internet offgrid e siti remoti</a>
+<a href="siti-web-piattaforme.html">Siti e piattaforme web</a>
+</div></div>
 <a href="guide.html">Guide</a>
 <a href="chi-sono.html">Chi sono</a>
 <a class="nav-cta" href="index.html#contatto">Contatto</a>
@@ -110,25 +115,25 @@
 <div aria-hidden="true" class="hero-grid"></div>
 <div class="shell page-hero-copy reveal">
 <nav aria-label="Percorso" class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="guide.html">Guide</a><span>/</span><span aria-current="page">Integrare un sistema senza API</span></nav>
-<p class="eyebrow">Guida · Jacopo Ellero</p>
+<p class="eyebrow">Guida JDEVPRO</p>
 <h1>Integrare un sistema senza API: <span>le strade possibili.</span></h1>
-<p class="hero-lead">Molti software e dispositivi non hanno API pubbliche. Non significa che non si possano collegare: significa scegliere la strada giusta e renderla affidabile.</p>
+<p class="hero-lead">Molti programmi e dispositivi non hanno API pubbliche. Non significa che non si possano collegare: significa scegliere la strada giusta e renderla affidabile.</p>
 </div>
 </section>
 <section class="section section-tight section-white">
 <div class="shell article">
 <h2>1. API pubbliche, quando ci sono</h2>
-<p>È la strada migliore: integrazione completa in lettura e scrittura, con eventi e webhook e credenziali ufficiali. Prima di tutto verifico se il sistema le offre, anche a pagamento o su richiesta al produttore.</p>
+<p>È la strada migliore: collegamento completo in lettura e scrittura, con notifiche e credenziali ufficiali. Prima di tutto verifichiamo se il sistema le offre, anche a pagamento o su richiesta al produttore.</p>
 <h2>2. Interfacce web senza API pubbliche</h2>
-<p>Se un servizio si usa dal browser, il browser parla con il server attraverso chiamate precise. Posso automatizzare le stesse chiamate: accesso, lettura dei dati, invio dei comandi.</p>
-<ul><li>prima verifico le condizioni d'uso del servizio;</li><li>uso un account dedicato, con i permessi minimi;</li><li>controllo automatico che le chiamate funzionino ancora dopo gli aggiornamenti del servizio;</li><li>avvisi immediati se qualcosa cambia.</li></ul>
+<p>Se un servizio si usa dal browser, il browser parla con il server attraverso chiamate precise. Possiamo automatizzare le stesse chiamate: accesso, lettura dei dati, invio dei comandi.</p>
+<ul><li>prima verifichiamo le condizioni d'uso del servizio;</li><li>usiamo un account dedicato, con i permessi minimi;</li><li>controlliamo in automatico che le chiamate funzionino ancora dopo gli aggiornamenti del servizio;</li><li>avvisi immediati se qualcosa cambia.</li></ul>
 <h2>3. Seriale e Modbus</h2>
-<p>Macchine, inverter, contatori e sensori industriali spesso parlano solo su porta seriale RS-485 o RS-232, spesso con protocollo Modbus RTU, oppure su Modbus TCP in rete. Un piccolo middleware legge i registri del dispositivo e porta i dati nel sistema aziendale tramite API o MQTT.</p>
-<ul><li>il middleware gira su un PC industriale, un NAS o un gateway dedicato;</li><li>i dati vengono conservati localmente se la rete cade;</li><li>la mappa dei registri viene documentata, così chiunque può verificarla.</li></ul>
+<p>Macchine, inverter, contatori e sensori industriali spesso comunicano solo su porta seriale RS-485 o RS-232, spesso con protocollo Modbus RTU, oppure su Modbus TCP in rete. Un piccolo programma ponte legge i valori del dispositivo e li porta nel sistema aziendale.</p>
+<ul><li>il programma ponte gira su un PC industriale, un NAS o un gateway dedicato;</li><li>i dati vengono conservati sul posto se la rete cade;</li><li>la mappa dei valori letti viene documentata, così chiunque può verificarla.</li></ul>
 <h2>4. File, database e cartelle condivise</h2>
-<p>Molti gestionali esportano file (CSV, XML, Excel) o scrivono in un database. Si possono leggere e scrivere in modo controllato, con anteprima, controllo dei duplicati e storico delle importazioni.</p>
-<h2>Come scelgo la strada</h2>
-<p>In ordine: API ufficiali, poi file o database, poi interfacce web, poi seriale o Modbus per i dispositivi fisici. Scelgo la strada più stabile e più facile da mantenere, non la più veloce da scrivere.</p>
+<p>Molti gestionali esportano file (CSV, XML, Excel) o scrivono in un database. Si possono leggere e scrivere in modo controllato, con anteprima, controllo dei doppioni e storico delle importazioni.</p>
+<h2>Come scegliamo la strada</h2>
+<p>In ordine: API ufficiali, poi file o database, poi interfacce web, poi seriale o Modbus per i dispositivi fisici. Scegliamo la strada più stabile e più facile da mantenere, non la più veloce da scrivere.</p>
 <div class="article-cta">
 <p><strong>Ti serve una mano?</strong> Integrazioni e automazioni: metodo, esempi e prezzi indicativi.</p>
 <a class="button primary" href="integrazione-software-api.html">Vai alla pagina →</a>
@@ -139,16 +144,15 @@
 <div class="shell contact-card reveal">
 <div>
 <p class="eyebrow">Contatto</p>
-<h2>Raccontami cosa devi collegare.</h2>
-<p>Descrivimi i sistemi che hai, cosa vuoi ottenere e i tempi. Ti rispondo per iscritto con domande mirate o con una proposta.</p>
-<ol class="contact-steps" aria-label="Come funziona"><li><strong>Scrivimi</strong> i sistemi presenti e l'obiettivo, anche in poche righe.</li><li><strong>Ti rispondo</strong> con domande mirate o una proposta di call conoscitiva.</li><li><strong>Definiamo</strong> insieme perimetro, tempi e modalità di lavoro.</li></ol>
+<h2>Raccontaci cosa devi collegare.</h2>
+<p>Descrivici i sistemi che hai, cosa vuoi ottenere e i tempi. Ti rispondiamo per iscritto con domande mirate o con una proposta.</p>
+<ol class="contact-steps" aria-label="Come funziona"><li><strong>Scrivici</strong> i sistemi presenti e l'obiettivo, anche in poche righe.</li><li><strong>Ti rispondiamo</strong> con domande mirate o una proposta di incontro.</li><li><strong>Definiamo</strong> insieme perimetro, tempi e modalità di lavoro.</li></ol>
 </div>
 <div class="contact-actions">
-<a class="button light big" href="mailto:info@jdevpro.it?subject=Richiesta%20progetto%20-%20JDEVPRO&amp;body=Ciao%20Jacopo%2C%0A%0ASistemi%20gi%C3%A0%20presenti%3A%0A%0ACosa%20vorrei%20ottenere%3A%0A%0ATempistiche%20indicative%3A%0A%0AAzienda%20/%20riferimento%3A%0A">Scrivimi una email</a>
+<a class="button light big" href="mailto:info@jdevpro.it?subject=Richiesta%20progetto%20-%20JDEVPRO&amp;body=Buongiorno%2C%0A%0ASistemi%20gi%C3%A0%20presenti%3A%0A%0ACosa%20vorrei%20ottenere%3A%0A%0ATempistiche%20indicative%3A%0A%0AAzienda%20/%20riferimento%3A%0A">Scrivici una email</a>
 <button class="contact-copy" type="button" data-copy-email="info@jdevpro.it" data-copied-label="Copiato ✓"><span>info@jdevpro.it</span><em>Copia</em></button>
-<a class="contact-whatsapp" href="https://wa.me/393454656749?text=Ciao%20Jacopo%2C%20ti%20scrivo%20dal%20sito%20JDEVPRO%20per%20un%20progetto." rel="noreferrer" target="_blank">WhatsApp · solo messaggi ↗</a>
-<small class="contact-note">Non rispondo alle chiamate: scrivimi e ti rispondo appena posso.</small>
-<a class="contact-alt" href="https://www.linkedin.com/in/jacopo-ellero-a006499a/" rel="noreferrer" target="_blank">Oppure scrivimi su LinkedIn ↗</a>
+<a class="contact-whatsapp" href="https://wa.me/393454656749?text=Ciao%2C%20vi%20scrivo%20dal%20sito%20JDEVPRO%20per%20un%20progetto." rel="noreferrer" target="_blank">Scrivici su WhatsApp ↗</a>
+<a class="contact-alt" href="https://www.linkedin.com/in/jacopo-ellero-a006499a/" rel="noreferrer" target="_blank">Oppure su LinkedIn ↗</a>
 <span>Tolmezzo (UD) · Friuli Venezia Giulia · Veneto · anche da remoto</span>
 </div>
 </div>
@@ -157,7 +161,7 @@
 <footer class="footer">
 <div class="shell footer-grid footer-wide">
 <div><strong>JDEVPRO</strong><span>Jacopo Ellero · Tolmezzo (UD)</span></div>
-<div class="footer-links"><a href="interconnessione-macchine-industria-4-0.html">Macchine 4.0</a><a href="gestionale-su-misura.html">Gestionali</a><a href="monitoraggio-iot.html">IoT</a><a href="integrazione-software-api.html">Integrazioni</a><a href="siti-web-piattaforme.html">Siti web</a><a href="guide.html">Guide</a><a href="chi-sono.html">Chi sono</a></div>
+<div class="footer-links"><a href="interconnessione-macchine-industria-4-0.html">Interconnessione macchine 4.0</a><a href="gestionale-su-misura.html">Gestionali su misura</a><a href="integrazione-software-api.html">Integrazioni e automazioni</a><a href="monitoraggio-iot.html">Monitoraggio IoT ed energia</a><a href="automazione-hotel-bnb.html">Automazione per hotel e B&B</a><a href="videosorveglianza-cancelli.html">Videosorveglianza e cancelli</a><a href="internet-offgrid-siti-remoti.html">Internet offgrid e siti remoti</a><a href="siti-web-piattaforme.html">Siti e piattaforme web</a><a href="guide.html">Guide</a><a href="chi-sono.html">Chi sono</a></div>
 <div><span>P.IVA IT02783420306</span><a href="privacy.html">Privacy</a><a href="cookie-policy.html">Cookie</a><a href="cv.html">CV</a><a href="https://github.com/jellero" rel="noreferrer" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/jacopo-ellero-a006499a/" rel="noreferrer" target="_blank">LinkedIn</a></div>
 </div>
 <div class="shell"><div class="footer-local"><a href="software-gestionali-integrazioni-udine.html">Udine</a><a href="software-gestionali-integrazioni-pordenone.html">Pordenone</a><a href="software-gestionali-integrazioni-trieste-gorizia.html">Trieste e Gorizia</a></div></div>

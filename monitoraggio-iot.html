@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Integrazione IoT e domotica: energia e Modbus | JDEVPRO</title>
-<meta content="Integro domotica e IoT (Tuya, Aqara, Honeywell, Shelly, Netatmo), inverter e contatori Modbus RS-485 con cruscotti, allarmi e gestionale." name="description"/>
+<meta content="Integriamo domotica e IoT (Tuya, Aqara, Honeywell, Shelly, Netatmo), inverter e contatori Modbus con cruscotti, allarmi e gestionale." name="description"/>
 <meta content="#07111f" name="theme-color"/>
 <meta content="index,follow" name="robots"/>
 <link href="https://www.jdevpro.it/monitoraggio-iot.html" rel="canonical"/>
@@ -13,9 +13,9 @@
 <link href="assets/icon-180.png" rel="apple-touch-icon"/>
 <link href="styles.css?v=8fa5eb32" rel="stylesheet"/>
 <link href="overrides.css?v=2353238d" rel="stylesheet"/>
-<link href="pages.css?v=08443ec9" rel="stylesheet"/>
+<link href="pages.css?v=f4211b53" rel="stylesheet"/>
 <meta property="og:title" content="Integrazione IoT e domotica: energia e Modbus | JDEVPRO"/>
-<meta property="og:description" content="Integro domotica e IoT (Tuya, Aqara, Honeywell, Shelly, Netatmo), inverter e contatori Modbus RS-485 con cruscotti, allarmi e gestionale."/>
+<meta property="og:description" content="Integriamo domotica e IoT (Tuya, Aqara, Honeywell, Shelly, Netatmo), inverter e contatori Modbus con cruscotti, allarmi e gestionale."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://www.jdevpro.it/monitoraggio-iot.html"/>
 <meta property="og:image" content="https://www.jdevpro.it/assets/og-jdevpro.jpg"/>
@@ -32,7 +32,7 @@
  "@type": "Service",
  "name": "Sistemi di monitoraggio IoT",
  "serviceType": "Sistemi di monitoraggio IoT",
- "description": "Integro domotica e IoT (Tuya, Aqara, Honeywell, Shelly, Netatmo), inverter e contatori Modbus RS-485 con cruscotti, allarmi e gestionale.",
+ "description": "Integriamo domotica e IoT (Tuya, Aqara, Honeywell, Shelly, Netatmo), inverter e contatori Modbus con cruscotti, allarmi e gestionale.",
  "url": "https://www.jdevpro.it/monitoraggio-iot.html",
  "provider": {
   "@id": "https://www.jdevpro.it/#jdevpro"
@@ -45,7 +45,7 @@
  "offers": [
   {
    "@type": "Offer",
-   "name": "Progetto e installazione",
+   "name": "Progetto e configurazione",
    "priceCurrency": "EUR",
    "priceSpecification": {
     "@type": "PriceSpecification",
@@ -76,7 +76,7 @@
    "name": "Funziona anche senza Internet?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Sì. I dati vengono salvati localmente e inviati quando la connessione torna disponibile."
+    "text": "Sì. I dati vengono salvati sul posto e inviati quando la connessione torna disponibile."
    }
   },
   {
@@ -84,7 +84,7 @@
    "name": "Posso usare i sensori che ho già?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Spesso sì. Verifico protocolli e interfacce prima di proporre dispositivi nuovi."
+    "text": "Spesso sì. Verifichiamo protocolli e interfacce prima di proporre dispositivi nuovi."
    }
   },
   {
@@ -92,7 +92,7 @@
    "name": "Quali marche si possono integrare?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Tutte quelle con API pubbliche, come Tuya, Aqara, Honeywell, Shelly, Netatmo, Philips Hue, Fronius, SMA o SolarEdge. Se un dispositivo ha solo un'app o un pannello web, ne automatizzo le chiamate; se ha solo una porta seriale o Modbus, uso un middleware."
+    "text": "Tutte quelle con API pubbliche, come Tuya, Aqara, Honeywell, Shelly, Netatmo, Philips Hue, Fronius, SMA o SolarEdge. Se un dispositivo ha solo un'app o un pannello web, ne automatizziamo le chiamate; se ha solo una porta seriale o Modbus, usiamo un programma ponte."
    }
   },
   {
@@ -105,10 +105,10 @@
   },
   {
    "@type": "Question",
-   "name": "Chi segue l'impianto dopo l'installazione?",
+   "name": "Fate anche i cablaggi?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Io, con un canone che copre controllo da remoto, aggiornamenti e assistenza."
+    "text": "Cablaggi, linee e quadri elettrici sono realizzati da installatori abilitati secondo il DM 37/08, con cui collaboriamo. Noi curiamo dispositivi, configurazione, software e dati."
    }
   }
  ]
@@ -128,7 +128,7 @@
   {
    "@type": "ListItem",
    "position": 2,
-   "name": "Monitoraggio IoT",
+   "name": "Monitoraggio IoT ed energia",
    "item": "https://www.jdevpro.it/monitoraggio-iot.html"
   }
  ]
@@ -158,11 +158,16 @@
 <a aria-label="JDEVPRO home" class="brand" href="index.html"><img class="brand-logo" src="assets/logo-jdevpro-header.png" alt="JDEVPRO" width="440" height="259"></a>
 <button aria-expanded="false" aria-label="Apri menu" class="menu-toggle" data-menu-toggle="" type="button"><span></span><span></span><span></span></button>
 <nav aria-label="Navigazione principale" class="nav" data-nav="">
-<a href="interconnessione-macchine-industria-4-0.html">Macchine 4.0</a>
-<a href="gestionale-su-misura.html">Gestionali</a>
-<a href="monitoraggio-iot.html" aria-current="page">IoT</a>
-<a href="integrazione-software-api.html">Integrazioni</a>
-<a href="siti-web-piattaforme.html">Siti web</a>
+<div class="nav-group is-current"><a class="nav-group-label" href="index.html#competenze">Competenze <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<a href="interconnessione-macchine-industria-4-0.html">Interconnessione macchine 4.0</a>
+<a href="gestionale-su-misura.html">Gestionali su misura</a>
+<a href="integrazione-software-api.html">Integrazioni e automazioni</a>
+<a href="monitoraggio-iot.html" aria-current="page">Monitoraggio IoT ed energia</a>
+<a href="automazione-hotel-bnb.html">Automazione per hotel e B&B</a>
+<a href="videosorveglianza-cancelli.html">Videosorveglianza e cancelli</a>
+<a href="internet-offgrid-siti-remoti.html">Internet offgrid e siti remoti</a>
+<a href="siti-web-piattaforme.html">Siti e piattaforme web</a>
+</div></div>
 <a href="guide.html">Guide</a>
 <a href="chi-sono.html">Chi sono</a>
 <span aria-label="Lingua" class="language-switch"><strong aria-current="page">IT</strong><span>/</span><a href="en-iot-monitoring.html" hreflang="en">EN</a></span>
@@ -174,10 +179,11 @@
 <section class="hero page-hero">
 <div aria-hidden="true" class="hero-grid"></div>
 <div class="shell page-hero-copy reveal">
-<nav aria-label="Percorso" class="breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">Monitoraggio IoT</span></nav>
-<p class="eyebrow">IoT · Sensori · Monitoraggio</p>
+<nav aria-label="Percorso" class="breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">Monitoraggio IoT ed energia</span></nav>
+<p class="eyebrow">IoT · Sensori · Energia</p>
 <h1>Monitoraggio IoT: <span>sensori collegati ai tuoi sistemi.</span></h1>
-<p class="hero-lead">Progetto sistemi che raccolgono dati da sensori e dispositivi, li portano in un cruscotto o nel gestionale e avvisano quando qualcosa non va. Anche dove la rete è debole o manca la corrente.</p>
+<p class="hero-lead">Progettiamo sistemi che raccolgono dati da sensori e dispositivi, li portano in un cruscotto o nel gestionale e avvisano quando qualcosa non va. Anche dove la rete è debole o manca la corrente.</p>
+
 <div class="hero-actions">
 <a class="button primary" href="#contatto">Parliamone</a>
 <a class="button ghost" href="#esempi">Vedi esempi reali</a>
@@ -196,43 +202,42 @@
 </section>
 <section class="section section-tight section-paper">
 <div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">Cosa ottieni</p><h2>Cosa faccio, in concreto.</h2></div>
+<div class="section-heading reveal"><p class="eyebrow">Cosa ottieni</p><h2>Cosa facciamo, in concreto.</h2></div>
 <div class="outcome-grid">
-<article class="outcome reveal"><h3>Raccolta dati da sensori</h3><p>RS-485/Modbus, MQTT, Wi-Fi, Bluetooth/BLE, LTE e NB-IoT.</p></article>
+<article class="outcome reveal"><h3>Raccolta dati da sensori</h3><p>Sensori via cavo, Wi-Fi, Bluetooth o rete mobile, anche industriali Modbus.</p></article>
 <article class="outcome reveal"><h3>Cruscotti e allarmi</h3><p>Soglie, notifiche e storico consultabili da computer e telefono.</p></article>
 <article class="outcome reveal"><h3>Energia</h3><p>Consumi, fotovoltaico, accumuli, inverter e pompe di calore.</p></article>
-<article class="outcome reveal"><h3>Siti remoti</h3><p>Alimentazione solare, buffering dei dati quando manca la rete, connessione LTE.</p></article>
-<article class="outcome reveal"><h3>Termostati e domotica</h3><p>Dispositivi Tuya/Smart Life e Home Assistant integrati nel gestionale.</p></article>
-<article class="outcome reveal"><h3>Aggiornamenti sicuri</h3><p>Firmware firmato con rollback e recovery locale per i dispositivi.</p></article>
+<article class="outcome reveal"><h3>Siti remoti</h3><p>Alimentazione solare, dati conservati quando manca la rete, connessione mobile.</p></article>
+<article class="outcome reveal"><h3>Termostati e domotica</h3><p>Dispositivi Tuya/Smart Life e Home Assistant collegati al gestionale.</p></article>
+<article class="outcome reveal"><h3>Aggiornamenti sicuri</h3><p>Dispositivi aggiornabili da remoto, con ritorno automatico alla versione precedente se qualcosa va storto.</p></article>
 </div>
 </div>
 </section>
 <section class="section section-tight section-white">
 <div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">Sistemi già collegati</p><h2>Cosa ho già integrato nei miei progetti.</h2></div>
+<div class="section-heading reveal"><p class="eyebrow">Sistemi già collegati</p><h2>Cosa abbiamo già integrato.</h2></div>
 <div class="system-groups">
-<div class="system-group reveal"><h3>Microcontrollori</h3><ul><li>STM32</li><li>Raspberry Pi Pico / RP2040</li><li>Beken BK7238</li><li>Firmware in C</li></ul></div>
-<div class="system-group reveal"><h3>Connettività</h3><ul><li>LTE Cat-1</li><li>NB-IoT</li><li>Wi-Fi</li><li>Bluetooth / BLE</li><li>RS-485 / Modbus</li></ul></div>
-<div class="system-group reveal"><h3>Dati e cloud</h3><ul><li>MQTT con TLS</li><li>Mosquitto</li><li>Python / FastAPI</li><li>PostgreSQL</li><li>Cruscotti e allarmi</li></ul></div>
-<div class="system-group reveal"><h3>Dispositivi e domotica</h3><ul><li>Tuya / Smart Life</li><li>Home Assistant</li><li>Termostati</li><li>OBD-II per veicoli</li></ul></div>
+<div class="system-group reveal"><h3>Connettività</h3><ul><li>Rete mobile 4G e NB-IoT</li><li>Wi-Fi</li><li>Bluetooth</li><li>RS-485 / Modbus</li></ul></div>
+<div class="system-group reveal"><h3>Dispositivi e domotica</h3><ul><li>Tuya / Smart Life</li><li>Home Assistant</li><li>Termostati</li><li>Diagnostica veicoli OBD-II</li></ul></div>
+<div class="system-group reveal"><h3>Cruscotti e dati</h3><ul><li>Cruscotti web</li><li>Allarmi e notifiche</li><li>Storico dei dati</li></ul></div>
 </div>
 </div>
 </section>
 <section class="section section-tight section-paper">
 <div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">Cosa posso integrare</p><h2>Se ha un'interfaccia, si può collegare.</h2><p>Tre strade, a seconda di cosa offre il sistema da collegare.</p></div>
+<div class="section-heading reveal"><p class="eyebrow">Cosa possiamo integrare</p><h2>Se ha un'interfaccia, si può collegare.</h2><p>Tre strade, a seconda di cosa offre il sistema da collegare.</p></div>
 <div class="tier-grid">
-<article class="tier reveal"><span class="competence-num">01</span><h3>API pubbliche</h3><p>Integrazione completa: lettura, scrittura, eventi e webhook, con le credenziali ufficiali del servizio.</p></article>
-<article class="tier reveal"><span class="competence-num">02</span><h3>Interfacce web senza API pubbliche</h3><p>Se un servizio si usa dal browser, ne automatizzo le stesse chiamate del pannello web, nel rispetto delle condizioni d'uso.</p></article>
-<article class="tier reveal"><span class="competence-num">03</span><h3>Seriale e Modbus</h3><p>Per dispositivi senza rete o con protocolli industriali, un middleware legge RS-485/RS-232 e Modbus RTU/TCP e porta i dati via API o MQTT.</p></article>
+<article class="tier reveal"><span class="competence-num">01</span><h3>API pubbliche</h3><p>Integrazione completa: lettura, scrittura, eventi e notifiche, con le credenziali ufficiali del servizio.</p></article>
+<article class="tier reveal"><span class="competence-num">02</span><h3>Interfacce web senza API pubbliche</h3><p>Se un servizio si usa dal browser, ne automatizziamo le stesse chiamate del pannello web, nel rispetto delle condizioni d'uso.</p></article>
+<article class="tier reveal"><span class="competence-num">03</span><h3>Seriale e Modbus</h3><p>Per dispositivi senza rete o con protocolli industriali, un piccolo programma ponte legge la porta seriale o Modbus e porta i dati nei vostri sistemi.</p></article>
 </div>
 <div class="system-groups catalog">
 <div class="system-group reveal"><h3>Domotica e clima</h3><ul><li>Tuya / Smart Life</li><li>Aqara</li><li>Honeywell / Resideo</li><li>Google Nest</li><li>Netatmo</li><li>Philips Hue</li><li>Shelly</li><li>Daikin</li><li>Somfy</li><li>Nuki</li><li>Home Assistant</li><li>Zigbee2MQTT</li></ul></div>
 <div class="system-group reveal"><h3>Energia e fotovoltaico</h3><ul><li>Fronius</li><li>SMA</li><li>SolarEdge</li><li>Huawei FusionSolar</li><li>Victron Energy</li><li>Contatori e analizzatori Modbus</li></ul></div>
-<div class="system-group reveal"><h3>Sensori e campo</h3><ul><li>Sensori industriali RS-485</li><li>Stazioni meteo Ecowitt</li><li>LoRaWAN / The Things Network</li><li>Gateway LTE e NB-IoT</li></ul></div>
-<div class="system-group reveal"><h3>Protocolli</h3><ul><li>MQTT</li><li>Modbus RTU / TCP</li><li>RS-485 / RS-232</li><li>HTTP / REST</li><li>Bluetooth / BLE</li><li>Zigbee tramite bridge</li></ul></div>
+<div class="system-group reveal"><h3>Sensori e campo</h3><ul><li>Sensori industriali RS-485</li><li>Stazioni meteo Ecowitt</li><li>LoRaWAN</li><li>Gateway 4G e NB-IoT</li></ul></div>
+<div class="system-group reveal"><h3>Protocolli</h3><ul><li>MQTT</li><li>Modbus RTU / TCP</li><li>RS-485 / RS-232</li><li>HTTP / REST</li><li>Bluetooth</li><li>Zigbee tramite bridge</li></ul></div>
 </div>
-<p class="catalog-note">Esempi di servizi e dispositivi integrabili. Nomi e marchi appartengono ai rispettivi proprietari; prima di ogni progetto verifico accessi, limiti e condizioni d'uso.</p>
+<p class="catalog-note">Esempi di servizi e dispositivi integrabili. Nomi e marchi appartengono ai rispettivi proprietari; prima di ogni progetto verifichiamo accessi, limiti e condizioni d'uso.</p>
 </div>
 </section>
 <section class="section section-tight section-white">
@@ -250,33 +255,32 @@
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">Prezzi indicativi</p><h2>Da dove si parte.</h2></div>
 <div>
-<div class="price-grid"><div class="price reveal"><span>Progetto e installazione</span><strong>da 1.000 €</strong><small>una tantum · dispositivi esclusi</small></div><div class="price reveal"><span>Dati, allarmi e manutenzione</span><strong>da 10 €</strong><small>al mese · per dispositivo</small></div></div>
+<div class="price-grid"><div class="price reveal"><span>Progetto e configurazione</span><strong>da 1.000 €</strong><small>una tantum · dispositivi esclusi</small></div><div class="price reveal"><span>Dati, allarmi e manutenzione</span><strong>da 10 €</strong><small>al mese · per dispositivo</small></div></div>
 <p class="catalog-note">Prezzi di partenza indicativi. Il preventivo è a prezzo fisso, dopo aver verificato cosa serve davvero.</p>
 </div>
 </div>
 </section>
 <section class="section section-tight section-dark" id="esempi">
 <div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">Esempi reali</p><h2>Dai miei progetti.</h2></div>
+<div class="section-heading reveal"><p class="eyebrow">Esempi reali</p><h2>Dai nostri progetti.</h2></div>
 <div class="example-grid">
-<article class="example reveal"><h3>Sentry-Bee · monitoraggio sul campo</h3><p>Firmware per STM32 con sensori RS-485, modem LTE, MQTT con TLS, buffering dei dati, backend FastAPI e alimentazione solare con batterie LiFePO4.</p><a class="card-link" href="https://github.com/jellero/sentry-bee" rel="noreferrer" target="_blank">Visita ↗</a></article>
-<article class="example reveal"><h3>Webcam autonoma a basso consumo</h3><p>Firmware per Raspberry Pi Pico con fotocamera e connessione NB-IoT, pensata per siti senza rete fissa.</p></article>
-<article class="example reveal"><h3>Vehylo · diagnostica veicolo</h3><p>App Android che legge i dati del veicolo via OBD-II e Bluetooth, con mapping dinamico dei segnali.</p></article>
-<article class="example reveal"><h3>Welora · clima delle camere</h3><p>Termostati collegati al gestionale della struttura, con avvisi di comfort e comandi manuali per singola camera.</p><a class="card-link" href="https://welora.it/" rel="noreferrer" target="_blank">Visita ↗</a></article>
-<article class="example reveal"><h3>AKIOS · ciclo di vita dei dispositivi IoT</h3><p>Firmware con verifica crittografica, doppio slot A/B, rollback e recovery locale.</p><a class="card-link" href="https://akios.cloud/" rel="noreferrer" target="_blank">Visita ↗</a></article>
+<article class="example reveal"><h3>Sentry-Bee · monitoraggio sul campo</h3><p>Centralina con sensori, connessione 4G e alimentazione solare: i dati arrivano anche da siti senza rete né corrente.</p><a class="card-link" href="https://github.com/jellero/sentry-bee" rel="noreferrer" target="_blank">Visita ↗</a></article>
+<article class="example reveal"><h3>Telecamera autonoma a basso consumo</h3><p>Fotocamera con connessione NB-IoT pensata per siti senza rete fissa.</p></article>
+<article class="example reveal"><h3>Welora · clima delle camere</h3><p>Termostati collegati al gestionale della struttura, con avvisi di comfort e comandi per singola camera.</p><a class="card-link" href="https://welora.it/" rel="noreferrer" target="_blank">Visita ↗</a></article>
+<article class="example reveal"><h3>AKIOS · aggiornamenti sicuri dei dispositivi</h3><p>Aggiornamenti da remoto: se un aggiornamento fallisce, il dispositivo torna da solo alla versione precedente.</p><a class="card-link" href="https://akios.cloud/" rel="noreferrer" target="_blank">Visita ↗</a></article>
 </div>
-<div class="chips reveal" aria-label="Tech"><span>MQTT / TLS</span><span>RS-485 / Modbus</span><span>LTE / NB-IoT</span><span>Wi-Fi</span><span>Bluetooth / BLE</span><span>STM32</span><span>RP2040</span><span>Embedded C</span><span>Python / FastAPI</span><span>OTA firmato</span></div>
+<div class="chips reveal" aria-label="Tech"><span>Sensori e contatori</span><span>Fotovoltaico e accumuli</span><span>Domotica</span><span>Allarmi sul telefono</span><span>Funziona anche offline</span></div>
 </div>
 </section>
 <section class="section section-tight">
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">Domande frequenti</p><h2>Le risposte prima della domanda.</h2></div>
 <div class="faq reveal">
-<details class="faq-item"><summary>Funziona anche senza Internet?</summary><p>Sì. I dati vengono salvati localmente e inviati quando la connessione torna disponibile.</p></details>
-<details class="faq-item"><summary>Posso usare i sensori che ho già?</summary><p>Spesso sì. Verifico protocolli e interfacce prima di proporre dispositivi nuovi.</p></details>
-<details class="faq-item"><summary>Quali marche si possono integrare?</summary><p>Tutte quelle con API pubbliche, come Tuya, Aqara, Honeywell, Shelly, Netatmo, Philips Hue, Fronius, SMA o SolarEdge. Se un dispositivo ha solo un'app o un pannello web, ne automatizzo le chiamate; se ha solo una porta seriale o Modbus, uso un middleware.</p></details>
+<details class="faq-item"><summary>Funziona anche senza Internet?</summary><p>Sì. I dati vengono salvati sul posto e inviati quando la connessione torna disponibile.</p></details>
+<details class="faq-item"><summary>Posso usare i sensori che ho già?</summary><p>Spesso sì. Verifichiamo protocolli e interfacce prima di proporre dispositivi nuovi.</p></details>
+<details class="faq-item"><summary>Quali marche si possono integrare?</summary><p>Tutte quelle con API pubbliche, come Tuya, Aqara, Honeywell, Shelly, Netatmo, Philips Hue, Fronius, SMA o SolarEdge. Se un dispositivo ha solo un'app o un pannello web, ne automatizziamo le chiamate; se ha solo una porta seriale o Modbus, usiamo un programma ponte.</p></details>
 <details class="faq-item"><summary>I dati sono al sicuro?</summary><p>Le comunicazioni sono cifrate e i dispositivi stanno su reti separate da quelle dell'ufficio.</p></details>
-<details class="faq-item"><summary>Chi segue l'impianto dopo l'installazione?</summary><p>Io, con un canone che copre controllo da remoto, aggiornamenti e assistenza.</p></details>
+<details class="faq-item"><summary>Fate anche i cablaggi?</summary><p>Cablaggi, linee e quadri elettrici sono realizzati da installatori abilitati secondo il DM 37/08, con cui collaboriamo. Noi curiamo dispositivi, configurazione, software e dati.</p></details>
 </div>
 </div>
 </section>
@@ -284,16 +288,15 @@
 <div class="shell contact-card reveal">
 <div>
 <p class="eyebrow">Contatto</p>
-<h2>Raccontami cosa devi collegare.</h2>
-<p>Descrivimi i sistemi che hai, cosa vuoi ottenere e i tempi. Ti rispondo per iscritto con domande mirate o con una proposta.</p>
-<ol class="contact-steps" aria-label="Come funziona"><li><strong>Scrivimi</strong> i sistemi presenti e l'obiettivo, anche in poche righe.</li><li><strong>Ti rispondo</strong> con domande mirate o una proposta di call conoscitiva.</li><li><strong>Definiamo</strong> insieme perimetro, tempi e modalità di lavoro.</li></ol>
+<h2>Raccontaci cosa devi collegare.</h2>
+<p>Descrivici i sistemi che hai, cosa vuoi ottenere e i tempi. Ti rispondiamo per iscritto con domande mirate o con una proposta.</p>
+<ol class="contact-steps" aria-label="Come funziona"><li><strong>Scrivici</strong> i sistemi presenti e l'obiettivo, anche in poche righe.</li><li><strong>Ti rispondiamo</strong> con domande mirate o una proposta di incontro.</li><li><strong>Definiamo</strong> insieme perimetro, tempi e modalità di lavoro.</li></ol>
 </div>
 <div class="contact-actions">
-<a class="button light big" href="mailto:info@jdevpro.it?subject=Richiesta%20progetto%20-%20JDEVPRO&amp;body=Ciao%20Jacopo%2C%0A%0ASistemi%20gi%C3%A0%20presenti%3A%0A%0ACosa%20vorrei%20ottenere%3A%0A%0ATempistiche%20indicative%3A%0A%0AAzienda%20/%20riferimento%3A%0A">Scrivimi una email</a>
+<a class="button light big" href="mailto:info@jdevpro.it?subject=Richiesta%20progetto%20-%20JDEVPRO&amp;body=Buongiorno%2C%0A%0ASistemi%20gi%C3%A0%20presenti%3A%0A%0ACosa%20vorrei%20ottenere%3A%0A%0ATempistiche%20indicative%3A%0A%0AAzienda%20/%20riferimento%3A%0A">Scrivici una email</a>
 <button class="contact-copy" type="button" data-copy-email="info@jdevpro.it" data-copied-label="Copiato ✓"><span>info@jdevpro.it</span><em>Copia</em></button>
-<a class="contact-whatsapp" href="https://wa.me/393454656749?text=Ciao%20Jacopo%2C%20ti%20scrivo%20dal%20sito%20JDEVPRO%20per%20un%20progetto." rel="noreferrer" target="_blank">WhatsApp · solo messaggi ↗</a>
-<small class="contact-note">Non rispondo alle chiamate: scrivimi e ti rispondo appena posso.</small>
-<a class="contact-alt" href="https://www.linkedin.com/in/jacopo-ellero-a006499a/" rel="noreferrer" target="_blank">Oppure scrivimi su LinkedIn ↗</a>
+<a class="contact-whatsapp" href="https://wa.me/393454656749?text=Ciao%2C%20vi%20scrivo%20dal%20sito%20JDEVPRO%20per%20un%20progetto." rel="noreferrer" target="_blank">Scrivici su WhatsApp ↗</a>
+<a class="contact-alt" href="https://www.linkedin.com/in/jacopo-ellero-a006499a/" rel="noreferrer" target="_blank">Oppure su LinkedIn ↗</a>
 <span>Tolmezzo (UD) · Friuli Venezia Giulia · Veneto · anche da remoto</span>
 </div>
 </div>
@@ -301,14 +304,14 @@
 <section class="section section-tight related">
 <div class="shell">
 <p class="eyebrow">Altre competenze</p>
-<div class="related-grid"><a href="interconnessione-macchine-industria-4-0.html"><strong>Interconnessione macchine 4.0</strong><span>Falegnamerie, mobilifici, aziende manifatturiere con macchine CNC.</span></a><a href="gestionale-su-misura.html"><strong>Gestionali su misura</strong><span>Piccole e medie imprese che lavorano con Excel o con un gestionale che non si adatta.</span></a><a href="integrazione-software-api.html"><strong>Integrazioni e automazioni</strong><span>Aziende con gestionale, e-commerce, marketplace, corrieri e portali che devono scambiarsi dati.</span></a><a href="siti-web-piattaforme.html"><strong>Siti e piattaforme web</strong><span>Aziende ed enti che vogliono un sito da gestire in autonomia, collegato ai propri sistemi.</span></a></div>
+<div class="related-grid"><a href="interconnessione-macchine-industria-4-0.html"><strong>Interconnessione macchine 4.0</strong><span>Falegnamerie, stamperie, mobilifici e aziende manifatturiere con macchine CNC.</span></a><a href="gestionale-su-misura.html"><strong>Gestionali su misura</strong><span>Piccole e medie imprese che lavorano con Excel o con un gestionale che non si adatta.</span></a><a href="integrazione-software-api.html"><strong>Integrazioni e automazioni</strong><span>Aziende con gestionale, e-commerce, marketplace, corrieri e portali che devono scambiarsi dati.</span></a><a href="automazione-hotel-bnb.html"><strong>Automazione per hotel e B&B</strong><span>Hotel, B&B, case vacanza e affittacamere che vogliono meno lavoro manuale.</span></a><a href="videosorveglianza-cancelli.html"><strong>Videosorveglianza e cancelli</strong><span>Aziende, strutture e abitazioni che vogliono controllare accessi e aree anche da remoto.</span></a><a href="internet-offgrid-siti-remoti.html"><strong>Internet offgrid e siti remoti</strong><span>Baite, rifugi, cantieri, impianti e aziende agricole senza linea fissa o senza rete elettrica.</span></a><a href="siti-web-piattaforme.html"><strong>Siti e piattaforme web</strong><span>Aziende ed enti che vogliono un sito da gestire in autonomia, collegato ai propri sistemi.</span></a></div>
 </div>
 </section>
 </main>
 <footer class="footer">
 <div class="shell footer-grid footer-wide">
 <div><strong>JDEVPRO</strong><span>Jacopo Ellero · Tolmezzo (UD)</span></div>
-<div class="footer-links"><a href="interconnessione-macchine-industria-4-0.html">Macchine 4.0</a><a href="gestionale-su-misura.html">Gestionali</a><a href="monitoraggio-iot.html">IoT</a><a href="integrazione-software-api.html">Integrazioni</a><a href="siti-web-piattaforme.html">Siti web</a><a href="guide.html">Guide</a><a href="chi-sono.html">Chi sono</a></div>
+<div class="footer-links"><a href="interconnessione-macchine-industria-4-0.html">Interconnessione macchine 4.0</a><a href="gestionale-su-misura.html">Gestionali su misura</a><a href="integrazione-software-api.html">Integrazioni e automazioni</a><a href="monitoraggio-iot.html">Monitoraggio IoT ed energia</a><a href="automazione-hotel-bnb.html">Automazione per hotel e B&B</a><a href="videosorveglianza-cancelli.html">Videosorveglianza e cancelli</a><a href="internet-offgrid-siti-remoti.html">Internet offgrid e siti remoti</a><a href="siti-web-piattaforme.html">Siti e piattaforme web</a><a href="guide.html">Guide</a><a href="chi-sono.html">Chi sono</a></div>
 <div><span>P.IVA IT02783420306</span><a href="privacy.html">Privacy</a><a href="cookie-policy.html">Cookie</a><a href="cv.html">CV</a><a href="https://github.com/jellero" rel="noreferrer" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/jacopo-ellero-a006499a/" rel="noreferrer" target="_blank">LinkedIn</a></div>
 </div>
 <div class="shell"><div class="footer-local"><a href="software-gestionali-integrazioni-udine.html">Udine</a><a href="software-gestionali-integrazioni-pordenone.html">Pordenone</a><a href="software-gestionali-integrazioni-trieste-gorizia.html">Trieste e Gorizia</a></div></div>
