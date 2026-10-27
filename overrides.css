@@ -98,3 +98,17 @@
   .system-flow-row { grid-template-columns: 1fr; gap: 5px; }
   .system-flow-row strong { font-size: .8rem; }
 }
+
+.contact-steps { list-style: none; counter-reset: step; margin: 28px 0 0; padding: 0; display: grid; gap: 12px; max-width: 650px; }
+.contact-steps li { counter-increment: step; position: relative; padding-left: 40px; color: #9bb0bf; font-size: .92rem; }
+.contact-steps li::before { content: counter(step); position: absolute; left: 0; top: -1px; width: 26px; height: 26px; display: grid; place-items: center; border-radius: 8px; background: rgba(45,212,191,.12); color: var(--teal); font: 800 .75rem/1 ui-monospace, monospace; }
+.contact-steps strong { color: #fff; }
+.contact-copy { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 16px; border: 1px solid rgba(255,255,255,.18); border-radius: 11px; background: rgba(255,255,255,.04); color: #fff; font: inherit; font-size: .88rem; cursor: pointer; }
+.contact-actions .contact-copy span { color: #fff; font-size: .88rem; }
+.contact-copy em { font-style: normal; color: var(--teal); font-weight: 800; font-size: .78rem; }
+.contact-copy:hover { border-color: var(--teal); }
+.contact-alt { color: var(--teal); text-decoration: none; font-size: .85rem; font-weight: 800; }
+.contact-alt:hover { text-decoration: underline; }
+.contact-whatsapp { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 11px; background: #25d366; color: #052e16; text-decoration: none; font-size: .88rem; font-weight: 800; }
+.contact-whatsapp:hover { background: #3ee07a; }
+.contact-note { color: #7890a1; font-size: .77rem; margin-top: -6px; }

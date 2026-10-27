@@ -349,3 +349,20 @@
     }
   });
 })();
+
+(() => {
+  document.querySelectorAll('[data-copy-email]').forEach((button) => {
+    const label = button.querySelector('em');
+    const original = label ? label.textContent : '';
+    button.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(button.dataset.copyEmail);
+        if (label) label.textContent = button.dataset.copiedLabel;
+      } catch (error) {
+        window.location.href = `mailto:${button.dataset.copyEmail}`;
+        return;
+      }
+      setTimeout(() => { if (label) label.textContent = original; }, 2000);
+    });
+  });
+})();
