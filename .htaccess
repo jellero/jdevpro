@@ -1,0 +1,19 @@
+# Usato solo se il server passa le richieste ad Apache (Plesk nginx + Apache).
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Un solo indirizzo: https://www.jdevpro.it
+RewriteCond %{HTTP_HOST} ^jdevpro\.it$ [NC]
+RewriteRule ^(.*)$ https://www.jdevpro.it/$1 [R=301,L]
+
+# Indirizzi del sito precedente ancora presenti su Google
+RewriteRule ^privacy-policy/?$ /privacy.html [R=301,L]
+RewriteRule ^privacy-policy\.html$ /privacy.html [R=301,L]
+RewriteRule ^privacy/?$ /privacy.html [R=301,L]
+RewriteRule ^cookie-policy/?$ /cookie-policy.html [R=301,L]
+RewriteRule ^privacy-policy-en/?$ /privacy-en.html [R=301,L]
+RewriteRule ^privacy-en/?$ /privacy-en.html [R=301,L]
+RewriteRule ^cookie-policy-en/?$ /cookie-policy-en.html [R=301,L]
+</IfModule>
+
+ErrorDocument 404 /404.html
