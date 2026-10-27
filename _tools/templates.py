@@ -7,6 +7,9 @@ PRICES, CITIES, GUIDES, TEST = EXTRA["PRICES"], EXTRA["CITIES"], EXTRA["GUIDES"]
 EN_SLUG, EN_PAGES, EN_TIERS = EXTRA["EN_SLUG"], EXTRA["EN_PAGES"], EXTRA["EN_TIERS"]
 TODAY = datetime.date.today().isoformat()
 
+import hashlib
+ASSET_V = {n: hashlib.sha1((REPO / n).read_bytes()).hexdigest()[:8] for n in ("styles.css", "overrides.css", "pages.css", "script.js")}
+
 WA_EN = "https://wa.me/393454656749?text=" + quote("Hi Jacopo, I'm writing from the JDEVPRO website about a project.")
 MAILTO_EN = ("mailto:info@jdevpro.it?subject=" + quote("Project enquiry - JDEVPRO") + "&amp;body=" + quote(
     "Hi Jacopo,\n\nExisting systems:\n\nWhat I want to achieve:\n\nRough timeline:\n\nCompany / contact:\n"))
@@ -128,9 +131,9 @@ def head(title, desc, slug, jsonld, lang="it", alternates=None, robots="index,fo
 <link href="favicon.ico" rel="icon" sizes="any"/>
 <link href="assets/icon-32.png" rel="icon" type="image/png" sizes="32x32"/>
 <link href="assets/icon-180.png" rel="apple-touch-icon"/>
-<link href="styles.css" rel="stylesheet"/>
-<link href="overrides.css" rel="stylesheet"/>
-<link href="pages.css" rel="stylesheet"/>
+<link href="styles.css?v={ASSET_V['styles.css']}" rel="stylesheet"/>
+<link href="overrides.css?v={ASSET_V['overrides.css']}" rel="stylesheet"/>
+<link href="pages.css?v={ASSET_V['pages.css']}" rel="stylesheet"/>
 <meta property="og:title" content="{escape(title)}"/>
 <meta property="og:description" content="{escape(desc)}"/>
 <meta property="og:type" content="website"/>
@@ -212,7 +215,7 @@ def footer(lang="it"):
 </div>
 {f'<div class="shell">{local}</div>' if local else ''}
 </footer>
-<script src="script.js"></script>
+<script src="script.js?v={ASSET_V['script.js']}"></script>
 </body>
 </html>
 """
@@ -736,7 +739,7 @@ def not_found():
 """
     html = head("Pagina non trovata | JDEVPRO", "La pagina cercata non esiste più.", "404.html", [], robots="noindex,follow") + body + footer()
     # percorsi assoluti: la 404 può essere servita da qualsiasi cartella
-    for a in ('href="styles.css"', 'href="overrides.css"', 'href="pages.css"', 'href="favicon.ico"', 'src="script.js"',
+    for a in ('href="styles.css', 'href="overrides.css', 'href="pages.css', 'href="favicon.ico"', 'src="script.js',
               'href="assets/', 'src="assets/', 'href="index.html', 'href="privacy.html"', 'href="cookie-policy.html"', 'href="cv.html"', 'href="guide.html"'):
         html = html.replace(a, a.replace('="', '="/', 1))
     for p in PAGES:
