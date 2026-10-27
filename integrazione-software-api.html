@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Integrazione software, API e marketplace | JDEVPRO</title>
-<meta content="Collego gestionali, marketplace, corrieri, fornitori, pagamenti, fatturazione elettronica e portali tramite API e webhook. Automazioni con code, retry e log. Friuli e remoto." name="description"/>
+<title>Integrazione Amazon, eBay, marketplace e gestionale | JDEVPRO</title>
+<meta content="Collego gestionale, Amazon, eBay, Shopify, WooCommerce, corrieri, pagamenti e fatturazione elettronica via API, interfacce web o seriale. Automazioni con code e log." name="description"/>
 <meta content="#07111f" name="theme-color"/>
 <meta content="index,follow" name="robots"/>
 <link href="https://www.jdevpro.it/integrazione-software-api.html" rel="canonical"/>
@@ -14,8 +14,8 @@
 <link href="styles.css" rel="stylesheet"/>
 <link href="overrides.css" rel="stylesheet"/>
 <link href="pages.css" rel="stylesheet"/>
-<meta property="og:title" content="Integrazione software, API e marketplace | JDEVPRO"/>
-<meta property="og:description" content="Collego gestionali, marketplace, corrieri, fornitori, pagamenti, fatturazione elettronica e portali tramite API e webhook. Automazioni con code, retry e log. Friuli e remoto."/>
+<meta property="og:title" content="Integrazione Amazon, eBay, marketplace e gestionale | JDEVPRO"/>
+<meta property="og:description" content="Collego gestionale, Amazon, eBay, Shopify, WooCommerce, corrieri, pagamenti e fatturazione elettronica via API, interfacce web o seriale. Automazioni con code e log."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://www.jdevpro.it/integrazione-software-api.html"/>
 <meta property="og:image" content="https://www.jdevpro.it/assets/og-jdevpro.jpg"/>
@@ -29,7 +29,7 @@
  "@type": "Service",
  "name": "Integrazione software, API e automazione dei processi",
  "serviceType": "Integrazione software, API e automazione dei processi",
- "description": "Collego gestionali, marketplace, corrieri, fornitori, pagamenti, fatturazione elettronica e portali tramite API e webhook. Automazioni con code, retry e log. Friuli e remoto.",
+ "description": "Collego gestionale, Amazon, eBay, Shopify, WooCommerce, corrieri, pagamenti e fatturazione elettronica via API, interfacce web o seriale. Automazioni con code e log.",
  "url": "https://www.jdevpro.it/integrazione-software-api.html",
  "provider": {
   "@id": "https://www.jdevpro.it/#jdevpro"
@@ -48,10 +48,18 @@
  "mainEntity": [
   {
    "@type": "Question",
-   "name": "Collegate anche marketplace e corrieri?",
+   "name": "Collegate anche Amazon, eBay e gli altri marketplace?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Sì. Ho sviluppato integrazioni con SellRapido, IBS, Temu e il corriere GLS: pubblicazione delle offerte, importazione degli ordini e spedizioni."
+    "text": "Sì. Ho già sviluppato integrazioni con SellRapido, IBS, Temu e il corriere GLS; Amazon, eBay, Shopify e gli altri marketplace con API pubbliche si collegano allo stesso modo: offerte, prezzi, disponibilità, ordini e spedizioni."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Si può integrare un servizio senza API pubbliche?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Sì. Se il servizio si usa da browser, ne automatizzo le stesse chiamate del pannello web, verificando prima le condizioni d'uso. Per dispositivi e macchine senza rete uso un middleware seriale o Modbus."
    }
   },
   {
@@ -193,6 +201,25 @@
 </div>
 </div>
 </section>
+<section class="section section-tight section-paper">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">Cosa posso integrare</p><h2>Se ha un'interfaccia, si può collegare.</h2><p>Tre strade, a seconda di cosa offre il sistema da collegare.</p></div>
+<div class="tier-grid">
+<article class="tier reveal"><span class="competence-num">01</span><h3>API pubbliche</h3><p>Integrazione completa: lettura, scrittura, eventi e webhook, con le credenziali ufficiali del servizio.</p></article>
+<article class="tier reveal"><span class="competence-num">02</span><h3>Interfacce web senza API pubbliche</h3><p>Se un servizio si usa dal browser, ne automatizzo le stesse chiamate del pannello web, nel rispetto delle condizioni d'uso.</p></article>
+<article class="tier reveal"><span class="competence-num">03</span><h3>Seriale e Modbus</h3><p>Per dispositivi senza rete o con protocolli industriali, un middleware legge RS-485/RS-232 e Modbus RTU/TCP e porta i dati via API o MQTT.</p></article>
+</div>
+<div class="system-groups catalog">
+<div class="system-group reveal"><h3>Marketplace ed e-commerce</h3><ul><li>Amazon (Selling Partner API)</li><li>eBay</li><li>Shopify</li><li>WooCommerce</li><li>PrestaShop</li><li>Magento / Adobe Commerce</li><li>Etsy</li><li>ManoMano</li><li>Zalando</li><li>Temu</li><li>IBS</li><li>SellRapido</li></ul></div>
+<div class="system-group reveal"><h3>Corrieri e spedizioni</h3><ul><li>BRT</li><li>GLS</li><li>Poste Italiane / SDA</li><li>DHL</li><li>UPS</li><li>FedEx</li></ul></div>
+<div class="system-group reveal"><h3>Pagamenti</h3><ul><li>Stripe</li><li>PayPal</li><li>Satispay</li><li>Nexi</li><li>SumUp</li></ul></div>
+<div class="system-group reveal"><h3>Fatturazione e contabilità</h3><ul><li>FatturaPA / SdI</li><li>Fatture in Cloud</li><li>Aruba Fatturazione Elettronica</li><li>Gestionali contabili via API, file o database</li></ul></div>
+<div class="system-group reveal"><h3>Prenotazioni e turismo</h3><ul><li>Booking.com</li><li>Channel manager</li><li>Alloggiati Web</li><li>ISTAT / WebTur</li></ul></div>
+<div class="system-group reveal"><h3>Comunicazioni e ufficio</h3><ul><li>WhatsApp Business</li><li>Email SMTP / IMAP</li><li>Telegram</li><li>Google Workspace</li><li>Microsoft 365</li></ul></div>
+</div>
+<p class="catalog-note">Esempi di servizi e dispositivi integrabili. Nomi e marchi appartengono ai rispettivi proprietari; prima di ogni progetto verifico accessi, limiti e condizioni d'uso.</p>
+</div>
+</section>
 <section class="section section-tight section-white">
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">Metodo</p><h2>Come funziona.</h2></div>
@@ -208,7 +235,7 @@
 <div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">Esempi reali</p><h2>Dai miei progetti.</h2></div>
 <div class="example-grid">
-<article class="example reveal"><h3>HAPA · gestionale e marketplace</h3><p>Gestionale per un'azienda che compra da un fornitore e rivende sui marketplace. Un servizio separato collega catalogo del fornitore, SellRapido, IBS, Temu e il corriere GLS: offerte, ordini, acquisti e spedizioni senza passaggi manuali.</p></article>
+<article class="example reveal"><h3>Gestionale collegato a fornitore, marketplace e corriere</h3><p>Gestionale per un'azienda che compra da un fornitore e rivende sui marketplace. Un servizio separato collega catalogo del fornitore, SellRapido, IBS, Temu e il corriere GLS: offerte, ordini, acquisti e spedizioni senza passaggi manuali.</p></article>
 <article class="example reveal"><h3>Welora Automation · motore di automazione a eventi</h3><p>Servizio in Go con RabbitMQ e PostgreSQL: lavori che sopravvivono ai riavvii, tentativi ripetuti, controlli di salute. Importa le prenotazioni da Booking.com e aggiorna le disponibilità.</p></article>
 <article class="example reveal"><h3>Welora · pagamenti, fatture e adempimenti</h3><p>Stripe Connect per incassi, preautorizzazioni e rimborsi, verifica dei documenti con Stripe Identity, generazione FatturaPA, Alloggiati Web, ISTAT e WhatsApp Business.</p><a class="card-link" href="https://welora.it/" rel="noreferrer" target="_blank">Visita ↗</a></article>
 </div>
@@ -219,7 +246,8 @@
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">Domande frequenti</p><h2>Le risposte prima della domanda.</h2></div>
 <div class="faq reveal">
-<details class="faq-item"><summary>Collegate anche marketplace e corrieri?</summary><p>Sì. Ho sviluppato integrazioni con SellRapido, IBS, Temu e il corriere GLS: pubblicazione delle offerte, importazione degli ordini e spedizioni.</p></details>
+<details class="faq-item"><summary>Collegate anche Amazon, eBay e gli altri marketplace?</summary><p>Sì. Ho già sviluppato integrazioni con SellRapido, IBS, Temu e il corriere GLS; Amazon, eBay, Shopify e gli altri marketplace con API pubbliche si collegano allo stesso modo: offerte, prezzi, disponibilità, ordini e spedizioni.</p></details>
+<details class="faq-item"><summary>Si può integrare un servizio senza API pubbliche?</summary><p>Sì. Se il servizio si usa da browser, ne automatizzo le stesse chiamate del pannello web, verificando prima le condizioni d'uso. Per dispositivi e macchine senza rete uso un middleware seriale o Modbus.</p></details>
 <details class="faq-item"><summary>E la fatturazione elettronica?</summary><p>Genero l'XML FatturaPA e lo invio tramite il tuo intermediario o il tuo programma di fatturazione, senza sostituirlo.</p></details>
 <details class="faq-item"><summary>E se il mio software non ha API?</summary><p>Si può lavorare con esportazioni di file, accesso al database o cartelle condivise. Valuto la soluzione più sicura caso per caso.</p></details>
 <details class="faq-item"><summary>Cosa succede se un sistema è fermo?</summary><p>I dati restano in coda e vengono inviati quando il sistema torna disponibile, senza doppioni.</p></details>
