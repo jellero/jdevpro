@@ -6,6 +6,24 @@ EXTRA = runpy.run_path(str(pathlib.Path(__file__).with_name("content_extra.py"))
 ABOUT = runpy.run_path(str(pathlib.Path(__file__).with_name("content_about.py")))["ABOUT"]
 PRODUCTS = runpy.run_path(str(pathlib.Path(__file__).with_name("content_products.py")))["PRODUCTS"]
 AREAS_DATA = runpy.run_path(str(pathlib.Path(__file__).with_name("content_areas.py")))
+STATS = runpy.run_path(str(pathlib.Path(__file__).with_name("content_stats.py")))["STATS"]
+
+
+def stats_html(key, lang):
+    """Numeri già realizzati in cima alla pagina."""
+    rows = STATS.get(key, {}).get(lang)
+    if not rows:
+        return ""
+    items = ""
+    for big, label, link in rows:
+        inner = f"<strong>{big}</strong><span>{label}</span>"
+        if link:
+            ext = ' rel="noreferrer" target="_blank"' if link.startswith("http") else ""
+            items += f'<li><a class="stat" href="{link}"{ext}>{inner}</a></li>'
+        else:
+            items += f'<li><div class="stat">{inner}</div></li>'
+    return f'<ul class="hero-stats">{items}</ul>'
+
 AREAS, AREA_SERVICES, PRIMARY_AREA = AREAS_DATA["AREAS"], AREAS_DATA["AREA_SERVICES"], AREAS_DATA["PRIMARY_AREA"]
 TECH_TIERS, PRODUCTS_PAGE, WHERE_PAGE, CALLOUTS = AREAS_DATA["TECH_TIERS"], AREAS_DATA["PRODUCTS_PAGE"], AREAS_DATA["WHERE_PAGE"], AREAS_DATA["CALLOUTS"]
 CARD_OVERRIDES = AREAS_DATA["CARD_OVERRIDES"]
@@ -329,7 +347,6 @@ def home(lang="it"):
                  proof=[("10 macchine in produzione", "Collegate al gestionale a Tolmezzo, tra falegnamerie e stamperie.", "interconnessione-macchine-industria-4-0.html"),
                         ("JD Industry", "Gestionale di produzione collegato a macchine SCM ed Essetre.", "industria.html"),
                         ("E-commerce e marketplace", "Gestionale collegato a fornitore, marketplace e corriere.", "integrazione-software-api.html"),
-                        ("25 impianti fotovoltaici", "20 on-grid e 5 off-grid oltre i 6 kW, monitorabili da remoto.", "monitoraggio-iot.html"),
                         ("Prodotti", "Welora, AKIOS e ORYVAEL: i nostri progetti.", "prodotti.html")],
                  who='<strong>JDEVPRO</strong> è l\'attività di Jacopo Ellero, sviluppatore e integratore di sistemi. <a href="chi-sono.html">Chi sono →</a> · <a href="dove-lavoriamo.html">Dove lavoriamo →</a>',
                  title="JDEVPRO · Gestionali, macchine 4.0 e IoT in Friuli",
@@ -343,7 +360,6 @@ def home(lang="it"):
                  proof=[("10 machines in production", "Connected to business software in Tolmezzo, across woodworking and metal pressing companies.", "en-machine-interconnection.html"),
                         ("JD Industry", "Production management connected to SCM and Essetre machines.", "en-industry.html"),
                         ("E-commerce and marketplaces", "Business software connected to supplier, marketplaces and courier.", "en-software-integration-api.html"),
-                        ("25 PV systems", "20 on-grid and 5 off-grid above 6 kW, monitored remotely.", "en-iot-monitoring.html"),
                         ("Products", "Welora, AKIOS and ORYVAEL: our own projects.", "en-products.html")],
                  who='<strong>JDEVPRO</strong> is the business of Jacopo Ellero, software developer and systems integrator. <a href="en-about.html">About me →</a>',
                  title="JDEVPRO · Business software, machines 4.0 and IoT, Italy",
@@ -371,6 +387,7 @@ def home(lang="it"):
 <a class="button primary" href="#aree">{t['b1']}</a>
 <a class="button ghost" href="#contatto">{t['b2']}</a>
 </div>
+{stats_html("home", lang)}
 </div>
 </section>
 <section class="section" id="aree">
@@ -436,6 +453,7 @@ def area_page(a, lang):
 <h1>{a['h1']}</h1>
 <p class="hero-lead">{a['lead']}</p>
 <ul class="who-chips">{who}</ul>
+{stats_html("area:" + a["key"], lang)}
 <div class="hero-actions"><a class="button primary" href="#competenze">{labels[1]}</a><a class="button ghost" href="#contatto">{u['talk']}</a></div>
 </div>
 </section>
@@ -635,7 +653,7 @@ def service(p, lang="it"):
 <p class="eyebrow">{p['eyebrow']}</p>
 <h1>{p['h1']}</h1>
 <p class="hero-lead">{p['lead']}</p>
-{f'<p class="hero-proof">{p["proof"]}</p>' if p.get("proof") else ''}
+{stats_html(it_slug, lang) or (f'<p class="hero-proof">{p["proof"]}</p>' if p.get("proof") else '')}
 {(lambda c: f'<p class="hero-callout">{c[0]} <a href="{c[2]}" rel="noreferrer" target="_blank">{c[1]}</a></p>' if c else '')(CALLOUTS.get(it_slug, {}).get(lang))}
 <div class="hero-actions">
 <a class="button primary" href="#contatto">{u['talk']}</a>
@@ -1001,6 +1019,7 @@ def about(lang="it"):
 <p class="eyebrow">{a['eyebrow']}</p>
 <h1>{a['h1']}</h1>
 <p class="hero-lead">{a['lead']}</p>
+{stats_html("about", lang)}
 </div>
 </section>
 <section class="section section-tight section-white">

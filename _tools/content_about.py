@@ -23,7 +23,7 @@ ABOUT = {
        ["Linux · Nginx · PHP-FPM · Docker/Compose", "CI/CD · Git · deploy · rollback", "Analisi log · monitoraggio · troubleshooting", "Hardening · backup · recovery", "Reti · VPN · VLAN · connettività remota"]),
     ],
     field_e="Sul campo", field_h="Formazione per lavorare in sicurezza negli impianti.",
-    field_p="Collegare macchine, sensori e dispositivi spesso significa lavorare in officina, vicino a quadri e impianti, non solo davanti a un computer. Cablaggi, linee e quadri restano agli installatori abilitati secondo il DM 37/08: io curo dispositivi, configurazione, software e dati.",
+    field_p="Collegare macchine, sensori e dispositivi spesso significa lavorare in officina, vicino a quadri e impianti, non solo davanti a un computer. Cablaggi, linee e quadri restano agli installatori abilitati secondo il DM 37/08: io curo dispositivi, configurazione, software e dati. Così sono nati i 25 impianti fotovoltaici, le 10 macchine collegate in produzione e le decine di impianti Ubiquiti.",
     certs=[
       ("PES / PAV", "Qualifica per lavori elettrici secondo la norma CEI 11-27: persona esperta e persona avvertita."),
       ("Bassa tensione", "Formazione per operare in sicurezza in presenza di impianti monofase e trifase in bassa tensione: fino a 1000 V in alternata e 1500 V in continua."),
@@ -87,7 +87,7 @@ ABOUT = {
        ["Linux · Nginx · PHP-FPM · Docker/Compose", "CI/CD · Git · deploy · rollback", "Log analysis · monitoring · troubleshooting", "Hardening · backups · recovery", "Networking · VPN · VLAN · remote connectivity"]),
     ],
     field_e="On site", field_h="Trained to work safely inside installations.",
-    field_p="Connecting machines, sensors and devices often means working in workshops, near panels and installations, not just at a computer. Wiring, lines and panels remain with electricians licensed under Italian law (DM 37/08): I take care of devices, configuration, software and data.",
+    field_p="Connecting machines, sensors and devices often means working in workshops, near panels and installations, not just at a computer. Wiring, lines and panels remain with electricians licensed under Italian law (DM 37/08): I take care of devices, configuration, software and data. That is how the 25 PV systems, the 10 machines connected in production and dozens of Ubiquiti systems were delivered.",
     certs=[
       ("PES / PAV", "Qualification for electrical work under Italian standard CEI 11-27: skilled and instructed person."),
       ("Low voltage", "Training to work safely around single- and three-phase low-voltage installations: up to 1000 V AC and 1500 V DC."),
