@@ -42,7 +42,6 @@ ABOUT = {
     projects=[
       ("Welora", "Piattaforma gestionale multi-struttura con motore di automazione separato.", "https://welora.it/"),
       ("JD Industry", "Gestionale di produzione collegato alle macchine.", "interconnessione-macchine-industria-4-0.html"),
-      ("Sentry-Bee", "Monitoraggio sul campo con sensori, LTE e MQTT.", "https://github.com/jellero/sentry-bee"),
       ("Vehylo", "Diagnostica veicolo via OBD-II e Bluetooth.", "https://jellero.github.io/vehylo-web/"),
       ("Lauco Experience", "Portale turistico in quattro lingue con backoffice.", "https://www.laucoexperience.it/"),
     ],
@@ -107,7 +106,6 @@ ABOUT = {
     projects=[
       ("Welora", "Multi-property management platform with a separate automation engine.", "https://welora.it/"),
       ("JD Industry", "Production management connected to machines.", "en-machine-interconnection.html"),
-      ("Sentry-Bee", "Field monitoring with sensors, LTE and MQTT.", "https://github.com/jellero/sentry-bee"),
       ("Vehylo", "Vehicle diagnostics over OBD-II and Bluetooth.", "https://jellero.github.io/vehylo-web/"),
       ("Lauco Experience", "Four-language tourism portal with back office.", "https://www.laucoexperience.it/"),
     ],

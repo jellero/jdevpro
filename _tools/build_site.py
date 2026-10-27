@@ -226,8 +226,6 @@ PAGES = [
       ("Manutenzione con canone", "Controllo da remoto, aggiornamenti e assistenza."),
     ],
     examples=[
-      ("Sentry-Bee · monitoraggio sul campo", "Centralina con sensori, connessione 4G e alimentazione solare: i dati arrivano anche da siti senza rete né corrente.", "https://github.com/jellero/sentry-bee"),
-      ("Telecamera autonoma a basso consumo", "Fotocamera con connessione NB-IoT pensata per siti senza rete fissa.", None),
       ("Welora · clima delle camere", "Termostati collegati al gestionale della struttura, con avvisi di comfort e comandi per singola camera.", "https://welora.it/"),
       ("AKIOS · ciclo di vita sicuro dei dispositivi IoT", "Il nostro prodotto per i produttori di dispositivi: aggiornamenti firmati in prova, ritorno automatico all'ultima versione buona e ripristino locale dal telefono. Già operativo sui chip Beken BK7238.", "https://akios.cloud/"),
     ],
@@ -301,14 +299,15 @@ PAGES = [
     service_type="Videosorveglianza, videocitofonia e controllo accessi",
     eyebrow="Videosorveglianza · Citofonia · Accessi",
     h1="Videosorveglianza, citofonia e accessi: <span>tutto sul telefono.</span>",
-    lead="Telecamere che distinguono una persona da un gatto, videocitofoni che suonano sul cellulare, cancelli e porte comandati da remoto e collegati a prenotazioni, turni o fornitori.",
+    lead="Telecamere che distinguono una persona da un gatto, videocitofoni che suonano sul cellulare, accessi con riconoscimento facciale e targhe, cancelli e porte comandati da remoto e collegati a prenotazioni, turni o fornitori.",
+    proof="Decine di impianti Ubiquiti installati: antenne, telecamere, citofoni e controllo accessi con riconoscimento facciale e targhe.",
     problems=[
       ("Troppi falsi allarmi.", "Foglie, ombre e animali fanno scattare notifiche che nessuno guarda più."),
       ("Registrazioni che nessuno consulta.", "Quando serve, cercare un evento in ore di video è impossibile."),
       ("Cancelli e chiavi da gestire.", "Fornitori, ospiti e dipendenti hanno bisogno di accessi diversi, a orari diversi."),
     ],
     outcomes=[
-      ("Riconoscimento di persone e veicoli", "Avvisi solo per gli eventi che contano, nelle zone che scegli."),
+      ("Riconoscimento di persone, volti e targhe", "Avvisi solo per gli eventi che contano, nelle zone che scegli; volti e targhe riconosciuti dove è consentito."),
       ("Avvisi con foto", "Notifica sul telefono con l'immagine dell'evento, in pochi secondi."),
       ("Ricerca per eventi", "Trovi subito chi è passato, quando e da dove, senza scorrere ore di video."),
       ("Cancelli e porte da remoto", "Apertura da telefono, codici temporanei e storico di ogni apertura."),
@@ -316,7 +315,8 @@ PAGES = [
       ("Registrazione in sede", "Le immagini restano su un registratore in azienda, non sul cloud di terzi."),
     ],
     catalog=[
-      ("Telecamere e registratori", ["Hikvision", "Dahua", "Reolink", "Axis", "Ubiquiti UniFi Protect", "Telecamere ONVIF / RTSP"]),
+      ("Ubiquiti UniFi", ["UniFi Protect", "UniFi Access", "Citofoni UniFi", "Antenne e ponti radio Ubiquiti", "Reti UniFi"]),
+      ("Altre telecamere e registratori", ["Hikvision", "Dahua", "Reolink", "Axis", "Telecamere ONVIF / RTSP"]),
       ("Analisi video", ["Frigate", "Riconoscimento persone e veicoli", "Zone e linee virtuali"]),
       ("Cancelli e automazioni", ["Nice", "CAME", "BFT", "FAAC", "Shelly", "Apricancello GSM"]),
       ("Videocitofoni", ["2N", "Comelit", "BTicino", "Akuvox", "Hikvision", "Dahua", "Citofoni SIP"]),
@@ -329,12 +329,13 @@ PAGES = [
       ("Assistenza", "Controllo da remoto, aggiornamenti e modifiche alle regole."),
     ],
     examples=[
-      ("Telecamera autonoma a basso consumo", "Fotocamera con connessione NB-IoT per siti senza rete fissa.", None),
-      ("Welora · accessi per gli ospiti", "Registro chiavi e accessi legati alle prenotazioni della struttura.", "https://welora.it/"),
+      ("Videosorveglianza UniFi Protect", "Decine di impianti Ubiquiti installati: telecamere con riconoscimento di persone, veicoli e targhe, avvisi sul telefono e registrazione in sede.", None),
+      ("Citofonia e controllo accessi UniFi", "Videocitofoni e accessi UniFi con riconoscimento facciale, badge e aperture da telefono, con lo storico di ogni ingresso.", None),
+      ("Antenne e ponti radio Ubiquiti", "Collegamenti radio per portare rete e telecamere tra edifici, cancelli e aree esterne.", None),
     ],
     chips=["Persone e veicoli", "Avvisi con foto", "Cancelli da telefono", "Codici temporanei", "Registrazione in sede"],
     faq=[
-      ("È a norma di privacy?", "Progettiamo nel rispetto del GDPR: cartelli, tempi di conservazione e accessi alle immagini. Nelle aziende con dipendenti servono anche l'accordo sindacale o l'autorizzazione dell'Ispettorato del lavoro, che restano a carico del titolare."),
+      ("È a norma di privacy?", "Progettiamo nel rispetto del GDPR: cartelli, tempi di conservazione e accessi alle immagini. Il riconoscimento facciale tratta dati biometrici e si usa solo con le basi giuridiche e le valutazioni d'impatto richieste. Nelle aziende con dipendenti servono anche l'accordo sindacale o l'autorizzazione dell'Ispettorato del lavoro, che restano a carico del titolare."),
       ("Posso usare le telecamere che ho già?", "Spesso sì, se supportano gli standard ONVIF o RTSP. Verifichiamo prima di proporre nuovi apparecchi."),
       ("Il mio cancello si può comandare da remoto?", "Quasi sempre: con il modulo del produttore o con un relè collegato alla centrale del cancello."),
       ("Il citofono può suonare sul cellulare?", "Sì, con videocitofoni IP o SIP, anche collegati al centralino VoIP: rispondi e apri da dove sei."),
@@ -419,7 +420,7 @@ PAGES = [
       ("Telecamere e sensori", "Videosorveglianza e sensori anche dove non c'è né rete né corrente."),
     ],
     catalog=[
-      ("Connessione", ["Router 4G/5G", "Teltonika", "Starlink", "Ponti radio Ubiquiti", "NB-IoT per sensori"]),
+      ("Connessione", ["Ponti radio e antenne Ubiquiti", "Router 4G/5G", "Teltonika", "Starlink", "NB-IoT per sensori"]),
       ("Energia", ["Victron Energy", "Pannelli solari e batterie", "Monitoraggio della batteria"]),
       ("Controllo", ["Riavvio da remoto", "Avvisi sul telefono", "Accesso sicuro VPN"]),
     ],
@@ -430,8 +431,7 @@ PAGES = [
       ("Controllo da remoto", "Monitoraggio continuo e interventi a distanza."),
     ],
     examples=[
-      ("Sentry-Bee · stazione solare con 4G", "Centralina con sensori, connessione mobile e alimentazione solare con batterie, pensata per siti isolati.", "https://github.com/jellero/sentry-bee"),
-      ("Telecamera autonoma NB-IoT", "Fotocamera a basso consumo che invia immagini dove non c'è rete fissa.", None),
+      ("Antenne e ponti radio Ubiquiti", "Decine di impianti installati: collegamenti radio che portano Internet e telecamere tra edifici e siti distanti.", None),
       ("Oryzeno OpenLink · connettività remota", "Studio di connettività per siti remoti via satellite ed edge.", "https://jellero.github.io/Oryzeno/"),
     ],
     chips=["4G / 5G", "Satellite", "Ponti radio", "Solare e batterie", "Riavvio da remoto"],

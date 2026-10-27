@@ -8,6 +8,7 @@ PRODUCTS = runpy.run_path(str(pathlib.Path(__file__).with_name("content_products
 AREAS_DATA = runpy.run_path(str(pathlib.Path(__file__).with_name("content_areas.py")))
 AREAS, AREA_SERVICES, PRIMARY_AREA = AREAS_DATA["AREAS"], AREAS_DATA["AREA_SERVICES"], AREAS_DATA["PRIMARY_AREA"]
 TECH_TIERS, PRODUCTS_PAGE, WHERE_PAGE, CALLOUTS = AREAS_DATA["TECH_TIERS"], AREAS_DATA["PRODUCTS_PAGE"], AREAS_DATA["WHERE_PAGE"], AREAS_DATA["CALLOUTS"]
+CARD_OVERRIDES = AREAS_DATA["CARD_OVERRIDES"]
 
 
 def area_of(lang, key):
@@ -20,9 +21,9 @@ def area_services(lang, key):
     for s in AREA_SERVICES[key]:
         if lang == "it":
             p = next(x for x in PAGES if x["slug"] == s)
-            out.append(dict(p, href=s))
+            out.append(dict(p, href=s, **CARD_OVERRIDES.get((key, s), {}).get("it", {})))
         else:
-            out.append(dict(EN_PAGES[s], href=EN_SLUG[s]))
+            out.append(dict(EN_PAGES[s], href=EN_SLUG[s], **CARD_OVERRIDES.get((key, s), {}).get("en", {})))
     return out
 
 

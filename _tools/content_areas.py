@@ -38,7 +38,7 @@ AREAS = {
          lead="Hotel, B&B, uffici, aziende, baite e abitazioni: colleghiamo telecamere, citofoni, cancelli, termostati, telefoni e connessione, e li comandi dal telefono. Con installatori abilitati per la parte elettrica.",
          who=["Hotel, B&B e case vacanza", "Uffici e aziende", "Condomini e abitazioni", "Baite, rifugi e cantieri", "Aziende agricole e siti isolati"],
          proof=[("Welora", "Il nostro gestionale per strutture ricettive, tutto incluso a 29 € al mese."),
-                ("Clima camera per camera", "Termostati collegati alle prenotazioni, con avvisi di comfort."),
+                ("Decine di impianti Ubiquiti", "Antenne, telecamere, citofoni e controllo accessi con riconoscimento facciale e targhe."),
                 ("Centralini VoIP installati", "In strutture ricettive, aziende e ristoranti, con Asterisk e 3CX e telefoni Grandstream e Yealink.")],
          guides=[]),
     dict(key="web", slug="software-web.html", nav="Software e web",
@@ -76,7 +76,7 @@ AREAS = {
          lead="Hotels, B&Bs, offices, companies, huts and homes: we connect cameras, intercoms, gates, thermostats, phones and connectivity, and you control them from your phone. With licensed electricians for the electrical work.",
          who=["Hotels, B&Bs and holiday homes", "Offices and companies", "Apartment buildings and homes", "Huts, refuges and building sites", "Farms and isolated sites"],
          proof=[("Welora", "Our hospitality management software, everything included for €29 a month."),
-                ("Room-by-room climate", "Thermostats tied to bookings, with comfort alerts."),
+                ("Dozens of Ubiquiti systems", "Antennas, cameras, intercoms and access control with face and plate recognition."),
                 ("VoIP phone systems installed", "In hospitality, companies and restaurants, with Asterisk and 3CX and Grandstream and Yealink phones.")],
          guides=[]),
     dict(key="web", slug="en-software-web.html", nav="Software and web",
@@ -123,5 +123,15 @@ CALLOUTS = {
   "automazione-hotel-bnb.html": {
     "it": ("Il gestionale per strutture ricettive lo abbiamo fatto noi: <strong>Welora</strong>. PMS, canali, check-in, pagamenti, fatture e automazioni, tutto incluso a 29 € al mese.", "Scopri Welora ↗", "https://welora.it/"),
     "en": ("We built the hospitality management software ourselves: <strong>Welora</strong>. PMS, channels, check-in, payments, invoices and automation, all included for €29 a month.", "Discover Welora ↗", "https://welora.it/"),
+  },
+}
+
+# schede competenza adattate al pubblico dell'area
+CARD_OVERRIDES = {
+  ("industria", "integrazione-software-api.html"): {
+    "it": dict(card_who="Aziende che devono far parlare gestionale, macchine, fornitori e corrieri.",
+               card_points=["Gestionale, fornitori e corrieri", "Documenti e fatture elettroniche", "Anche senza API: web, seriale, Modbus"]),
+    "en": dict(card_who="Companies that need business software, machines, suppliers and couriers to talk.",
+               card_points=["Business software, suppliers and couriers", "Documents and e-invoices", "Even without APIs: web, serial, Modbus"]),
   },
 }
