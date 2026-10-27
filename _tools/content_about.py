@@ -26,7 +26,7 @@ ABOUT = {
     field_p="Collegare macchine, quadri, sensori e dispositivi spesso significa lavorare dentro gli impianti, non solo davanti a un computer.",
     certs=[
       ("PES / PAV", "Lavori elettrici: persona esperta e persona avvertita, secondo la norma CEI 11-27."),
-      ("Bassa tensione", "Lavori elettrici su impianti e quadri in bassa tensione."),
+      ("Bassa tensione", "Lavori elettrici su impianti e quadri monofase e trifase in bassa tensione: fino a 1000 V in alternata e 1500 V in continua."),
       ("Lavori in quota", "Lavoro in quota con dispositivi di protezione anticaduta."),
       ("PLE", "Conduzione di piattaforme di lavoro mobili elevabili."),
     ],
@@ -79,7 +79,7 @@ ABOUT = {
     field_p="Connecting machines, panels, sensors and devices often means working inside installations, not just at a computer.",
     certs=[
       ("PES / PAV", "Electrical work: skilled and instructed person under Italian standard CEI 11-27."),
-      ("Low voltage", "Electrical work on low-voltage installations and panels."),
+      ("Low voltage", "Electrical work on single- and three-phase low-voltage installations and panels: up to 1000 V AC and 1500 V DC."),
       ("Work at height", "Work at height with fall-protection equipment."),
       ("MEWP (PLE)", "Operation of mobile elevating work platforms."),
     ],
