@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Integrazione software e API tra sistemi aziendali | JDEVPRO</title>
-<meta content="Collego gestionali, portali, e-commerce, provider e software esistenti tramite API e webhook. Automazioni affidabili con code, retry e log. In Friuli e da remoto." name="description"/>
+<title>Integrazione software, API e marketplace | JDEVPRO</title>
+<meta content="Collego gestionali, marketplace, corrieri, fornitori, pagamenti, fatturazione elettronica e portali tramite API e webhook. Automazioni con code, retry e log. Friuli e remoto." name="description"/>
 <meta content="#07111f" name="theme-color"/>
 <meta content="index,follow" name="robots"/>
 <link href="https://www.jdevpro.it/integrazione-software-api.html" rel="canonical"/>
@@ -14,8 +14,8 @@
 <link href="styles.css" rel="stylesheet"/>
 <link href="overrides.css" rel="stylesheet"/>
 <link href="pages.css" rel="stylesheet"/>
-<meta property="og:title" content="Integrazione software e API tra sistemi aziendali | JDEVPRO"/>
-<meta property="og:description" content="Collego gestionali, portali, e-commerce, provider e software esistenti tramite API e webhook. Automazioni affidabili con code, retry e log. In Friuli e da remoto."/>
+<meta property="og:title" content="Integrazione software, API e marketplace | JDEVPRO"/>
+<meta property="og:description" content="Collego gestionali, marketplace, corrieri, fornitori, pagamenti, fatturazione elettronica e portali tramite API e webhook. Automazioni con code, retry e log. Friuli e remoto."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://www.jdevpro.it/integrazione-software-api.html"/>
 <meta property="og:image" content="https://www.jdevpro.it/assets/og-jdevpro.jpg"/>
@@ -27,9 +27,9 @@
 {
  "@context": "https://schema.org",
  "@type": "Service",
- "name": "Integrazione software e automazione dei processi",
- "serviceType": "Integrazione software e automazione dei processi",
- "description": "Collego gestionali, portali, e-commerce, provider e software esistenti tramite API e webhook. Automazioni affidabili con code, retry e log. In Friuli e da remoto.",
+ "name": "Integrazione software, API e automazione dei processi",
+ "serviceType": "Integrazione software, API e automazione dei processi",
+ "description": "Collego gestionali, marketplace, corrieri, fornitori, pagamenti, fatturazione elettronica e portali tramite API e webhook. Automazioni con code, retry e log. Friuli e remoto.",
  "url": "https://www.jdevpro.it/integrazione-software-api.html",
  "provider": {
   "@id": "https://www.jdevpro.it/#jdevpro"
@@ -46,6 +46,22 @@
  "@context": "https://schema.org",
  "@type": "FAQPage",
  "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Collegate anche marketplace e corrieri?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Sì. Ho sviluppato integrazioni con SellRapido, IBS, Temu e il corriere GLS: pubblicazione delle offerte, importazione degli ordini e spedizioni."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "E la fatturazione elettronica?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Genero l'XML FatturaPA e lo invio tramite il tuo intermediario o il tuo programma di fatturazione, senza sostituirlo."
+   }
+  },
   {
    "@type": "Question",
    "name": "E se il mio software non ha API?",
@@ -132,9 +148,9 @@
 <div aria-hidden="true" class="hero-grid"></div>
 <div class="shell page-hero-copy reveal">
 <nav aria-label="Percorso" class="breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">Integrazioni e automazioni</span></nav>
-<p class="eyebrow">Integrazioni · API · Automazioni</p>
+<p class="eyebrow">Integrazioni · API · Marketplace · Automazioni</p>
 <h1>Integrazioni e automazioni: <span>i tuoi software si parlano.</span></h1>
-<p class="hero-lead">Collego gestionali, portali, provider e software esistenti in modo che i dati passino da soli, senza doppioni e senza perdite. E quando qualcosa si blocca, lo vedi subito.</p>
+<p class="hero-lead">Collego gestionale, marketplace, corrieri, fornitori, pagamenti, fatturazione elettronica e portali in modo che ordini, prezzi, disponibilità e documenti passino da soli. Senza doppioni, senza perdite, con lo storico di ogni passaggio.</p>
 <div class="hero-actions">
 <a class="button primary" href="#contatto">Parliamone</a>
 <a class="button ghost" href="#esempi">Vedi esempi reali</a>
@@ -145,9 +161,9 @@
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">Il problema</p><h2>Ti riconosci?</h2></div>
 <ul class="problem-list reveal">
-<li><strong>Dati ricopiati a mano.</strong> Ordini, clienti e prenotazioni passano da un programma all'altro con il copia-incolla.</li>
-<li><strong>Integrazioni che si rompono in silenzio.</strong> Te ne accorgi quando un cliente si lamenta.</li>
-<li><strong>Software vecchi senza API.</strong> Funzionano, ma nessuno sa come collegarli al resto.</li>
+<li><strong>Ordini e disponibilità ricopiati a mano.</strong> Marketplace, magazzino, fornitore e corriere non si parlano e ogni passaggio è copia-incolla.</li>
+<li><strong>Integrazioni che si rompono in silenzio.</strong> Un token scade, un'API cambia, e te ne accorgi quando un cliente si lamenta.</li>
+<li><strong>Un software diverso per ogni cosa.</strong> Pagamenti, fatture, portali e comunicazioni vivono in sistemi separati.</li>
 </ul>
 </div>
 </section>
@@ -155,12 +171,25 @@
 <div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">Cosa ottieni</p><h2>Cosa faccio, in concreto.</h2></div>
 <div class="outcome-grid">
-<article class="outcome reveal"><h3>API e webhook</h3><p>Collegamenti tra gestionali, portali, e-commerce e provider esterni.</p></article>
-<article class="outcome reveal"><h3>Sincronizzazione affidabile</h3><p>Code, tentativi ripetuti e controlli anti-doppione: niente dati persi o duplicati.</p></article>
-<article class="outcome reveal"><h3>Automazioni di processo</h3><p>Email, notifiche, documenti e attività generate dagli eventi.</p></article>
-<article class="outcome reveal"><h3>Software esistenti e legacy</h3><p>Integrazione via file, database o cartelle condivise quando le API non ci sono.</p></article>
-<article class="outcome reveal"><h3>Log e monitoraggio</h3><p>Storico di ogni passaggio e avvisi quando qualcosa si ferma.</p></article>
-<article class="outcome reveal"><h3>Server e messa in produzione</h3><p>Linux, Docker, backup, rilasci con possibilità di tornare indietro.</p></article>
+<article class="outcome reveal"><h3>Marketplace ed e-commerce</h3><p>Pubblicazione offerte, prezzi e disponibilità, importazione degli ordini, stati e riconciliazione.</p></article>
+<article class="outcome reveal"><h3>Fornitori e corrieri</h3><p>Cataloghi e ordini verso i fornitori, spedizioni, etichette e tracking dai corrieri.</p></article>
+<article class="outcome reveal"><h3>Pagamenti e fatturazione elettronica</h3><p>Incassi, preautorizzazioni, rimborsi, generazione FatturaPA e invio tramite intermediario.</p></article>
+<article class="outcome reveal"><h3>Portali e adempimenti</h3><p>Portali di prenotazione, comunicazioni obbligatorie (per esempio Alloggiati Web e ISTAT), messaggistica.</p></article>
+<article class="outcome reveal"><h3>Sincronizzazione affidabile</h3><p>Code ed eventi, tentativi ripetuti, controlli anti-doppione, limiti di chiamata rispettati: niente dati persi o duplicati.</p></article>
+<article class="outcome reveal"><h3>Credenziali protette e storico</h3><p>Token e password cifrati e mai mostrati, rotazione, log di ogni operazione e avvisi quando qualcosa si ferma.</p></article>
+</div>
+</div>
+</section>
+<section class="section section-tight section-white">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">Sistemi già collegati</p><h2>Cosa ho già integrato nei miei progetti.</h2></div>
+<div class="system-groups">
+<div class="system-group reveal"><h3>E-commerce e marketplace</h3><ul><li>SellRapido</li><li>IBS</li><li>Temu</li><li>Booking.com</li><li>Channel manager WuBook</li></ul></div>
+<div class="system-group reveal"><h3>Fornitori e logistica</h3><ul><li>API fornitori e cataloghi</li><li>Corrieri GLS</li><li>Discogs e MusicBrainz (metadati prodotto)</li></ul></div>
+<div class="system-group reveal"><h3>Pagamenti e fisco</h3><ul><li>Stripe Connect, Checkout e Identity</li><li>Fatturazione elettronica FatturaPA / SdI</li><li>Alloggiati Web</li><li>ISTAT / WebTur</li></ul></div>
+<div class="system-group reveal"><h3>Comunicazioni</h3><ul><li>WhatsApp Business</li><li>Email SMTP / IMAP</li><li>Notifiche push</li><li>Telegram</li></ul></div>
+<div class="system-group reveal"><h3>Macchine e dispositivi</h3><ul><li>SCM Maestro Active</li><li>Essetre / Tecnoessetre</li><li>Tuya / Smart Life</li><li>MQTT</li></ul></div>
+<div class="system-group reveal"><h3>Architettura</h3><ul><li>REST API e webhook</li><li>RabbitMQ</li><li>Inbox / outbox</li><li>Dead letter e retry</li><li>PostgreSQL</li></ul></div>
 </div>
 </div>
 </section>
@@ -177,18 +206,21 @@
 </section>
 <section class="section section-tight section-dark" id="esempi">
 <div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">Esempi reali</p><h2>Già fatto, già in uso.</h2></div>
+<div class="section-heading reveal"><p class="eyebrow">Esempi reali</p><h2>Dai miei progetti.</h2></div>
 <div class="example-grid">
-<article class="example reveal"><h3>Welora Automation · motore di automazione a eventi</h3><p>Servizio in Go con RabbitMQ e PostgreSQL: lavori che sopravvivono ai riavvii, tentativi ripetuti, controlli di salute. Coordina comunicazioni, portali di prenotazione, pagamenti, accessi e termostati.</p></article>
-<article class="example reveal"><h3>Welora · channel manager e importazioni</h3><p>Collegamento ai portali di prenotazione tramite channel manager e importazioni guidate da CSV e XLSX.</p><a class="card-link" href="https://welora.it/" rel="noreferrer" target="_blank">Visita ↗</a></article>
+<article class="example reveal"><h3>HAPA · gestionale e marketplace</h3><p>Gestionale per un'azienda che compra da un fornitore e rivende sui marketplace. Un servizio separato collega catalogo del fornitore, SellRapido, IBS, Temu e il corriere GLS: offerte, ordini, acquisti e spedizioni senza passaggi manuali.</p></article>
+<article class="example reveal"><h3>Welora Automation · motore di automazione a eventi</h3><p>Servizio in Go con RabbitMQ e PostgreSQL: lavori che sopravvivono ai riavvii, tentativi ripetuti, controlli di salute. Importa le prenotazioni da Booking.com e aggiorna le disponibilità.</p></article>
+<article class="example reveal"><h3>Welora · pagamenti, fatture e adempimenti</h3><p>Stripe Connect per incassi, preautorizzazioni e rimborsi, verifica dei documenti con Stripe Identity, generazione FatturaPA, Alloggiati Web, ISTAT e WhatsApp Business.</p><a class="card-link" href="https://welora.it/" rel="noreferrer" target="_blank">Visita ↗</a></article>
 </div>
-<div class="chips reveal" aria-label="Tecnologie"><span>REST API</span><span>Webhook</span><span>RabbitMQ</span><span>Code ed eventi</span><span>PostgreSQL</span><span>Go</span><span>PHP</span><span>Python</span><span>Docker</span><span>Linux / Nginx</span></div>
+<div class="chips reveal" aria-label="Tecnologie"><span>REST API</span><span>Webhook</span><span>OAuth / token</span><span>RabbitMQ</span><span>Inbox / outbox</span><span>Idempotenza</span><span>PostgreSQL</span><span>Go</span><span>PHP</span><span>Python</span><span>Docker</span><span>Linux / Nginx</span></div>
 </div>
 </section>
 <section class="section section-tight">
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">Domande frequenti</p><h2>Le risposte prima della domanda.</h2></div>
 <div class="faq reveal">
+<details class="faq-item"><summary>Collegate anche marketplace e corrieri?</summary><p>Sì. Ho sviluppato integrazioni con SellRapido, IBS, Temu e il corriere GLS: pubblicazione delle offerte, importazione degli ordini e spedizioni.</p></details>
+<details class="faq-item"><summary>E la fatturazione elettronica?</summary><p>Genero l'XML FatturaPA e lo invio tramite il tuo intermediario o il tuo programma di fatturazione, senza sostituirlo.</p></details>
 <details class="faq-item"><summary>E se il mio software non ha API?</summary><p>Si può lavorare con esportazioni di file, accesso al database o cartelle condivise. Valuto la soluzione più sicura caso per caso.</p></details>
 <details class="faq-item"><summary>Cosa succede se un sistema è fermo?</summary><p>I dati restano in coda e vengono inviati quando il sistema torna disponibile, senza doppioni.</p></details>
 <details class="faq-item"><summary>Posso vedere cosa è successo?</summary><p>Sì: ogni passaggio viene registrato e gli errori generano un avviso.</p></details>

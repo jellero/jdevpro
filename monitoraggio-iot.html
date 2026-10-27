@@ -155,12 +155,23 @@
 <div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">Cosa ottieni</p><h2>Cosa faccio, in concreto.</h2></div>
 <div class="outcome-grid">
-<article class="outcome reveal"><h3>Raccolta dati da sensori</h3><p>RS-485, MQTT, Wi-Fi, Bluetooth/BLE, LTE e gateway seriali.</p></article>
+<article class="outcome reveal"><h3>Raccolta dati da sensori</h3><p>RS-485/Modbus, MQTT, Wi-Fi, Bluetooth/BLE, LTE e NB-IoT.</p></article>
 <article class="outcome reveal"><h3>Cruscotti e allarmi</h3><p>Soglie, notifiche e storico consultabili da computer e telefono.</p></article>
 <article class="outcome reveal"><h3>Energia</h3><p>Consumi, fotovoltaico, accumuli, inverter e pompe di calore.</p></article>
 <article class="outcome reveal"><h3>Siti remoti</h3><p>Alimentazione solare, buffering dei dati quando manca la rete, connessione LTE.</p></article>
 <article class="outcome reveal"><h3>Termostati e domotica</h3><p>Dispositivi Tuya/Smart Life e Home Assistant integrati nel gestionale.</p></article>
 <article class="outcome reveal"><h3>Aggiornamenti sicuri</h3><p>Firmware firmato con rollback e recovery locale per i dispositivi.</p></article>
+</div>
+</div>
+</section>
+<section class="section section-tight section-white">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">Sistemi già collegati</p><h2>Cosa ho già integrato nei miei progetti.</h2></div>
+<div class="system-groups">
+<div class="system-group reveal"><h3>Microcontrollori</h3><ul><li>STM32</li><li>Raspberry Pi Pico / RP2040</li><li>Beken BK7238</li><li>Firmware in C</li></ul></div>
+<div class="system-group reveal"><h3>Connettività</h3><ul><li>LTE Cat-1</li><li>NB-IoT</li><li>Wi-Fi</li><li>Bluetooth / BLE</li><li>RS-485 / Modbus</li></ul></div>
+<div class="system-group reveal"><h3>Dati e cloud</h3><ul><li>MQTT con TLS</li><li>Mosquitto</li><li>Python / FastAPI</li><li>PostgreSQL</li><li>Cruscotti e allarmi</li></ul></div>
+<div class="system-group reveal"><h3>Dispositivi e domotica</h3><ul><li>Tuya / Smart Life</li><li>Home Assistant</li><li>Termostati</li><li>OBD-II per veicoli</li></ul></div>
 </div>
 </div>
 </section>
@@ -177,13 +188,15 @@
 </section>
 <section class="section section-tight section-dark" id="esempi">
 <div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">Esempi reali</p><h2>Già fatto, già in uso.</h2></div>
+<div class="section-heading reveal"><p class="eyebrow">Esempi reali</p><h2>Dai miei progetti.</h2></div>
 <div class="example-grid">
-<article class="example reveal"><h3>Sentry-Bee · monitoraggio distribuito sul campo</h3><p>Sensori RS-485, elaborazione locale, LTE, MQTT con TLS, buffering dei dati e alimentazione solare con batterie LiFePO4.</p><a class="card-link" href="https://github.com/jellero/sentry-bee" rel="noreferrer" target="_blank">Visita ↗</a></article>
+<article class="example reveal"><h3>Sentry-Bee · monitoraggio sul campo</h3><p>Firmware per STM32 con sensori RS-485, modem LTE, MQTT con TLS, buffering dei dati, backend FastAPI e alimentazione solare con batterie LiFePO4.</p><a class="card-link" href="https://github.com/jellero/sentry-bee" rel="noreferrer" target="_blank">Visita ↗</a></article>
+<article class="example reveal"><h3>Webcam autonoma a basso consumo</h3><p>Firmware per Raspberry Pi Pico con fotocamera e connessione NB-IoT, pensata per siti senza rete fissa.</p></article>
+<article class="example reveal"><h3>Vehylo · diagnostica veicolo</h3><p>App Android che legge i dati del veicolo via OBD-II e Bluetooth, con mapping dinamico dei segnali.</p></article>
 <article class="example reveal"><h3>Welora · clima delle camere</h3><p>Termostati collegati al gestionale della struttura, con avvisi di comfort e comandi manuali per singola camera.</p><a class="card-link" href="https://welora.it/" rel="noreferrer" target="_blank">Visita ↗</a></article>
 <article class="example reveal"><h3>AKIOS · ciclo di vita dei dispositivi IoT</h3><p>Firmware con verifica crittografica, doppio slot A/B, rollback e recovery locale.</p><a class="card-link" href="https://akios.cloud/" rel="noreferrer" target="_blank">Visita ↗</a></article>
 </div>
-<div class="chips reveal" aria-label="Tecnologie"><span>MQTT / TLS</span><span>RS-485</span><span>LTE / 5G</span><span>Wi-Fi</span><span>Bluetooth / BLE</span><span>Tuya / Smart Life</span><span>Home Assistant</span><span>Embedded C</span><span>Python / FastAPI</span></div>
+<div class="chips reveal" aria-label="Tecnologie"><span>MQTT / TLS</span><span>RS-485 / Modbus</span><span>LTE / NB-IoT</span><span>Wi-Fi</span><span>Bluetooth / BLE</span><span>STM32</span><span>RP2040</span><span>Embedded C</span><span>Python / FastAPI</span><span>OTA firmato</span></div>
 </div>
 </section>
 <section class="section section-tight">
@@ -218,7 +231,7 @@
 <section class="section section-tight related">
 <div class="shell">
 <p class="eyebrow">Altre competenze</p>
-<div class="related-grid"><a href="interconnessione-macchine-industria-4-0.html"><strong>Interconnessione macchine 4.0</strong><span>Falegnamerie, mobilifici, aziende manifatturiere con macchine CNC.</span></a><a href="gestionale-su-misura.html"><strong>Gestionali su misura</strong><span>Piccole e medie imprese che lavorano con Excel o con un gestionale che non si adatta.</span></a><a href="integrazione-software-api.html"><strong>Integrazioni e automazioni</strong><span>Aziende con più software che devono scambiarsi dati senza copia-incolla.</span></a><a href="siti-web-piattaforme.html"><strong>Siti e piattaforme web</strong><span>Aziende ed enti che vogliono un sito da gestire in autonomia, collegato ai propri sistemi.</span></a></div>
+<div class="related-grid"><a href="interconnessione-macchine-industria-4-0.html"><strong>Interconnessione macchine 4.0</strong><span>Falegnamerie, mobilifici, aziende manifatturiere con macchine CNC.</span></a><a href="gestionale-su-misura.html"><strong>Gestionali su misura</strong><span>Piccole e medie imprese che lavorano con Excel o con un gestionale che non si adatta.</span></a><a href="integrazione-software-api.html"><strong>Integrazioni e automazioni</strong><span>Aziende con gestionale, e-commerce, marketplace, corrieri e portali che devono scambiarsi dati.</span></a><a href="siti-web-piattaforme.html"><strong>Siti e piattaforme web</strong><span>Aziende ed enti che vogliono un sito da gestire in autonomia, collegato ai propri sistemi.</span></a></div>
 </div>
 </section>
 </main>
