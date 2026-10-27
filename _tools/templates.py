@@ -3,6 +3,7 @@ import datetime
 import runpy
 
 EXTRA = runpy.run_path(str(pathlib.Path(__file__).with_name("content_extra.py")))
+ABOUT = runpy.run_path(str(pathlib.Path(__file__).with_name("content_about.py")))["ABOUT"]
 PRICES, CITIES, GUIDES, TEST = EXTRA["PRICES"], EXTRA["CITIES"], EXTRA["GUIDES"], EXTRA["TEST"]
 EN_SLUG, EN_PAGES, EN_TIERS = EXTRA["EN_SLUG"], EXTRA["EN_PAGES"], EXTRA["EN_TIERS"]
 TODAY = datetime.date.today().isoformat()
@@ -157,6 +158,8 @@ def header(current, lang="it", home=False, switch=None):
         f'<a href="{p["href"]}"{" aria-current=\"page\"" if p["href"] == current else ""}>{p["nav"]}</a>' for p in pages_for(lang))
     if lang == "it":
         links += f'\n<a href="guide.html"{" aria-current=\"page\"" if current == "guide.html" else ""}>Guide</a>'
+    ab = ABOUT[lang]
+    links += f'\n<a href="{ab["slug"]}"{" aria-current=\"page\"" if current == ab["slug"] else ""}>{ab["nav"]}</a>'
     sw = ""
     if switch:
         if lang == "it":
@@ -207,6 +210,7 @@ def footer(lang="it"):
     if lang == "it":
         links += '<a href="guide.html">Guide</a>'
         local = '<div class="footer-local">' + "".join(f'<a href="{c["slug"]}">{c["name"]}</a>' for c in CITIES) + "</div>"
+    links += f'<a href="{ABOUT[lang]["slug"]}">{ABOUT[lang]["nav"]}</a>'
     return f"""<footer class="footer">
 <div class="shell footer-grid footer-wide">
 <div><strong>JDEVPRO</strong><span>{u['f_who']}</span></div>
@@ -286,7 +290,7 @@ def home(lang="it"):
                         ("Consegna rapida", "Si parte dalla parte più utile, provata sul lavoro reale."), ("Canone di assistenza", "Backup, aggiornamenti e interventi senza sorprese.")],
                  proof=[("JD Industry", "Gestionale di produzione collegato a macchine SCM ed Essetre."), ("Welora", "Piattaforma gestionale con 25 moduli e oltre 370 file di test automatici."),
                         ("Marketplace", "Gestionale collegato a fornitore, marketplace e corriere."), ("Lauco Experience", "Portale in quattro lingue con backoffice, notifiche e newsletter.")],
-                 who='<strong>JDEVPRO</strong> è l\'attività di Jacopo Ellero, sviluppatore e integratore di sistemi. <a href="cv.html">Leggi il curriculum →</a>',
+                 who='<strong>JDEVPRO</strong> è l\'attività di Jacopo Ellero, sviluppatore e integratore di sistemi. <a href="chi-sono.html">Chi sono →</a>',
                  title="JDEVPRO · Gestionali, macchine 4.0 e IoT in Friuli",
                  desc="Gestionali su misura, interconnessione macchine 4.0, IoT, integrazioni e siti web per aziende del Friuli Venezia Giulia e del Veneto. Jacopo Ellero.")
     else:
@@ -301,7 +305,7 @@ def home(lang="it"):
                         ("Fast delivery", "We start from the most useful part, tested on real work."), ("Support plan", "Backups, updates and fixes without surprises.")],
                  proof=[("JD Industry", "Production management connected to SCM and Essetre machines."), ("Welora", "Business platform with 25 modules and over 370 automated test files."),
                         ("Marketplaces", "Business software connected to supplier, marketplaces and courier."), ("Lauco Experience", "Four-language portal with back office, notifications and newsletter.")],
-                 who='<strong>JDEVPRO</strong> is the business of Jacopo Ellero, software developer and systems integrator. <a href="cv-en.html">Read the CV →</a>',
+                 who='<strong>JDEVPRO</strong> is the business of Jacopo Ellero, software developer and systems integrator. <a href="en-about.html">About me →</a>',
                  title="JDEVPRO · Business software, machines 4.0 and IoT, Italy",
                  desc="Custom business software, Industry 4.0 machine interconnection, IoT, integrations and websites for companies in north-east Italy. Jacopo Ellero.")
     steps = "".join(f"<li><strong>{a}</strong><span>{b}</span></li>" for a, b in t["steps"])
@@ -763,6 +767,93 @@ def redirect_stub(target):
 """
 
 
+# ---------------------------------------------------------------- chi sono
+
+def about(lang="it"):
+    a = ABOUT[lang]
+    other = ABOUT["en" if lang == "it" else "it"]["slug"]
+    home_slug = "index.html" if lang == "it" else "en.html"
+    url = url_of(a["slug"])
+    profile = "".join(f"<p>{x}</p>" for x in a["profile"])
+    skills = "\n".join(
+        f'<article class="pillar reveal"><span class="competence-num">0{i}</span><h3>{h}</h3><p>{d}</p>'
+        f'<ul>{"".join(f"<li>{x}</li>" for x in items)}</ul></article>'
+        for i, (h, d, items) in enumerate(a["skills"], 1))
+    certs = "".join(f'<article class="cert reveal"><strong>{h}</strong><span>{d}</span></article>' for h, d in a["certs"])
+    path = "".join(f'<li><span class="when">{w}</span><strong>{role}</strong><span>{d}</span></li>' for w, role, d in a["path"])
+
+    def ext_attr(link):
+        return ' rel="noreferrer" target="_blank"' if link.startswith("http") else ""
+
+    projects = "".join(
+        f'<a href="{link}"{ext_attr(link)}><strong>{n}{" ↗" if link.startswith("http") else ""}</strong><span>{d}</span></a>'
+        for n, d, link in a["projects"])
+    edu = "".join(f"<div><strong>{h}</strong><span>{d}</span></div>" for h, d in a["edu"])
+    links = "".join(
+        f'<a class="button {"primary" if i == 0 else "ghost dark"}" href="{l}"{ext_attr(l)}>{n}</a>'
+        for i, (n, l) in enumerate(a["links"]))
+    person = {"@context": "https://schema.org", "@type": "Person", "name": "Jacopo Ellero", "url": url,
+              "jobTitle": "Sviluppatore e integratore di sistemi" if lang == "it" else "Software developer and systems integrator",
+              "worksFor": {"@id": ORG_ID}, "address": ADDRESS,
+              "knowsAbout": [s[0] for s in a["skills"]],
+              "hasCredential": [{"@type": "EducationalOccupationalCredential", "name": c[0], "description": c[1]} for c in a["certs"]],
+              "sameAs": ["https://github.com/jellero", LI]}
+    jsonld = [{"@context": "https://schema.org", "@type": "ProfilePage", "url": url, "mainEntity": person},
+              {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+                  {"@type": "ListItem", "position": 1, "name": UI[lang]["home"], "item": url_of(home_slug)},
+                  {"@type": "ListItem", "position": 2, "name": a["nav"], "item": url}]},
+              ORG_REF]
+    profile_e, profile_h = ("Profilo", "Come lavoro.") if lang == "it" else ("Profile", "How I work.")
+    body = f"""{header(a['slug'], lang, switch=other)}<main id="main">
+<section class="hero page-hero">
+<div aria-hidden="true" class="hero-grid"></div>
+<div class="shell page-hero-copy reveal">
+<nav aria-label="{UI[lang]['crumbs']}" class="breadcrumb"><a href="{home_slug}">{UI[lang]['home']}</a><span>/</span><span aria-current="page">{a['nav']}</span></nav>
+<p class="eyebrow">{a['eyebrow']}</p>
+<h1>{a['h1']}</h1>
+<p class="hero-lead">{a['lead']}</p>
+</div>
+</section>
+<section class="section section-tight section-white">
+<div class="shell split">
+<div class="section-heading reveal"><p class="eyebrow">{profile_e}</p><h2>{profile_h}</h2></div>
+<div class="profile-copy reveal">{profile}<div class="hero-actions">{links}</div></div>
+</div>
+</section>
+<section class="section section-tight section-paper">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">{a['skills_e']}</p><h2>{a['skills_h']}</h2></div>
+<div class="pillar-grid">
+{skills}
+</div>
+</div>
+</section>
+<section class="section section-tight section-dark">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">{a['field_e']}</p><h2>{a['field_h']}</h2><p class="field-lead">{a['field_p']}</p></div>
+<div class="cert-grid">{certs}</div>
+</div>
+</section>
+<section class="section section-tight section-white">
+<div class="shell split">
+<div class="section-heading reveal"><p class="eyebrow">{a['path_e']}</p><h2>{a['path_h']}</h2></div>
+<ol class="timeline reveal">{path}</ol>
+</div>
+</section>
+<section class="section section-tight section-paper">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">{a['projects_e']}</p><h2>{a['projects_h']}</h2></div>
+<div class="related-grid">{projects}</div>
+<p class="eyebrow local-eyebrow">{a['edu_e']}</p>
+<div class="edu-grid reveal">{edu}</div>
+</div>
+</section>
+{contact(lang)}</main>
+"""
+    return head(a["title"], a["desc"], a["slug"], jsonld, lang,
+                alternates=[("it", ABOUT["it"]["slug"]), ("en", ABOUT["en"]["slug"])]) + body + footer(lang)
+
+
 # ---------------------------------------------------------------- scrittura
 
 def write(name, html):
@@ -783,13 +874,15 @@ for g in GUIDES:
     write(g["slug"], guide(g))
 write("guide.html", guide_index())
 write(TEST["slug"], test_page())
+write("chi-sono.html", about("it"))
+write("en-about.html", about("en"))
 write("404.html", not_found())
 for old, target in OLD_URLS.items():
     write(f"{old}/index.html", redirect_stub(target))
 
 urls = (["", "en.html"] + [p["slug"] for p in PAGES] + [EN_SLUG[p["slug"]] for p in PAGES]
         + [c["slug"] for c in CITIES] + ["guide.html", TEST["slug"]] + [g["slug"] for g in GUIDES]
-        + ["cv.html", "cv-en.html", "privacy.html", "privacy-en.html", "cookie-policy.html", "cookie-policy-en.html"])
+        + ["chi-sono.html", "en-about.html", "cv.html", "cv-en.html", "privacy.html", "privacy-en.html", "cookie-policy.html", "cookie-policy-en.html"])
 sitemap = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 sitemap += [f"  <url><loc>{BASE}{u}</loc><lastmod>{TODAY}</lastmod></url>" for u in urls]
 sitemap.append("</urlset>")
