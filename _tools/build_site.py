@@ -193,7 +193,7 @@ PAGES = [
     desc="Integriamo domotica e IoT (Tuya, Aqara, Honeywell, Shelly, Netatmo), inverter e contatori Modbus con cruscotti, allarmi e gestionale.",
     service_type="Sistemi di monitoraggio IoT",
     eyebrow="IoT · Sensori · Energia",
-    proof="Sensori e gateway in ambito industriale, termostati collegati in alberghi e affittacamere.",
+    proof="Sensori e gateway in ambito industriale, impianti solari monitorati da remoto, termostati collegati in alberghi e affittacamere.",
     h1="Monitoraggio IoT: <span>sensori collegati ai tuoi sistemi.</span>",
     lead="Progettiamo sistemi che raccolgono dati da sensori e dispositivi, li portano in un cruscotto o nel gestionale e avvisano quando qualcosa non va. Anche dove la rete è debole o manca la corrente.",
     problems=[
@@ -210,7 +210,8 @@ PAGES = [
       ("Aggiornamenti sicuri", "Dispositivi aggiornabili da remoto, con ritorno automatico alla versione precedente se qualcosa va storto."),
     ],
     systems=[
-      ("Connettività", ["Rete mobile 4G e NB-IoT", "Wi-Fi", "Bluetooth", "RS-485 / Modbus"]),
+      ("Connettività", ["Ponti radio Ubiquiti e MikroTik", "Wi-Fi", "Bluetooth", "RS-485 / Modbus"]),
+      ("Energia", ["Impianti solari monitorati da remoto", "Stato delle batterie", "Allarmi sul telefono"]),
       ("Dispositivi e domotica", ["Tuya / Smart Life", "Home Assistant", "Termostati"]),
       ("Cruscotti e dati", ["Cruscotti web", "Allarmi e notifiche", "Storico dei dati"]),
     ],
@@ -228,6 +229,7 @@ PAGES = [
     ],
     examples=[
       ("Sensori e gateway in ambito industriale", "Sensori su RS-485, gateway seriali e MQTT, invio dei dati al cloud, collaudo e messa in servizio.", None),
+      ("Impianti solari monitorati da remoto", "Pannelli e batterie con produzione, carica e allarmi visibili dal telefono, senza andare sul posto.", "internet-offgrid-siti-remoti.html"),
       ("Clima camera per camera", "In alberghi e affittacamere: termostati collegati alle prenotazioni, con avvisi di comfort e comandi per singola camera.", "automazione-hotel-bnb.html"),
       ("AKIOS · ciclo di vita sicuro dei dispositivi IoT", "Il nostro prodotto per i produttori di dispositivi: aggiornamenti firmati in prova, ritorno automatico all'ultima versione buona e ripristino locale dal telefono. Già operativo sui chip Beken BK7238.", "https://akios.cloud/"),
     ],
@@ -408,7 +410,7 @@ PAGES = [
     desc="Internet dove la linea non arriva: 4G/5G, satellite, ponti radio, energia solare e controllo da remoto per baite, rifugi, cantieri e impianti.",
     service_type="Connettività offgrid per siti remoti",
     eyebrow="Internet offgrid · Siti remoti",
-    proof="Installiamo connessioni con Ubiquiti, MikroTik e Starlink.",
+    proof="Ponti radio Ubiquiti e MikroTik e impianti solari monitorati da remoto già installati; connessioni Starlink.",
     h1="Internet offgrid: <span>connessi anche dove la linea non arriva.</span>",
     lead="Portiamo la connessione in baite, rifugi, cantieri, impianti e aziende agricole: 4G/5G, satellite o ponte radio, alimentati dal sole quando serve, e controllabili da remoto.",
     problems=[
@@ -436,9 +438,9 @@ PAGES = [
       ("Controllo da remoto", "Monitoraggio continuo e interventi a distanza."),
     ],
     examples=[
-      ("Antenne e ponti radio Ubiquiti", "Decine di impianti installati: collegamenti radio che portano Internet e telecamere tra edifici e siti distanti.", None),
+      ("Ponti radio Ubiquiti e MikroTik", "Collegamenti radio che portano Internet e telecamere tra edifici e siti distanti, con antenne Ubiquiti e MikroTik.", None),
+      ("Impianti solari monitorati da remoto", "Pannelli e batterie che alimentano gli apparati, con produzione, carica e allarmi controllabili dal telefono.", None),
       ("Starlink", "Connessione satellitare per baite, rifugi, cantieri e siti dove non arriva né la linea fissa né un buon segnale mobile.", None),
-      ("Reti MikroTik", "Router e reti MikroTik: più linee insieme, riserva 4G/5G quando la linea principale cade e accesso sicuro da remoto.", None),
     ],
     chips=["4G / 5G", "Satellite", "Ponti radio", "Solare e batterie", "Riavvio da remoto"],
     faq=[

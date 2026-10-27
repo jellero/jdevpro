@@ -313,3 +313,15 @@
 @media (max-width: 760px) { .nav { left: 14px; right: 14px; width: auto; } .proof-grid.proof-links, .proof-grid.proof-three { grid-template-columns: 1fr; } }
 
 .proof-grid.proof-three { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+/* Menu da telefono compatto: aree come voci, competenze dentro le pagine di area */
+@media (max-width: 1180px) {
+  .nav-sub { display: none !important; }
+  .nav-group { border-bottom: 0; }
+  .nav-group-label { padding: 12px 14px !important; color: #e8eef2 !important; font-size: 1rem !important; letter-spacing: 0; text-transform: none; border-radius: 10px; }
+  .nav-group-label span { display: inline !important; }
+  .nav-group-label span::before { content: ""; }
+  .nav-group.is-current > .nav-group-label { background: rgba(45,212,191,.1); color: var(--teal) !important; }
+  .nav > a { font-size: 1rem; padding: 12px 14px; }
+}
+.guide-area { color: var(--accent); text-decoration: none; }

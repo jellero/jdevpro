@@ -30,6 +30,7 @@ def area_services(lang, key):
 def cur(flag):
     return ' aria-current="page"' if flag else ""
 PRICES, CITIES, GUIDES, TEST = EXTRA["PRICES"], EXTRA["CITIES"], EXTRA["GUIDES"], EXTRA["TEST"]
+GUIDES = GUIDES + runpy.run_path(str(pathlib.Path(__file__).with_name("content_guides_more.py")))["MORE_GUIDES"]
 EN_SLUG, EN_PAGES, EN_TIERS = EXTRA["EN_SLUG"], EXTRA["EN_PAGES"], EXTRA["EN_TIERS"]
 TODAY = datetime.date.today().isoformat()
 
@@ -811,7 +812,12 @@ def guide(g):
 
 
 def guide_index():
-    items = "".join(f'<a href="{x["slug"]}"><strong>{x["short"]}</strong><span>{x["desc"]}</span></a>' for x in [TEST] + GUIDES)
+    groups = ""
+    for a in AREAS["it"]:
+        gs = [x for x in [TEST] + GUIDES if PRIMARY_AREA[x.get("cta", "interconnessione-macchine-industria-4-0.html")] == a["key"]]
+        if gs:
+            cards = "".join(f'<a href="{x["slug"]}"><strong>{x["short"]}</strong><span>{x["desc"]}</span></a>' for x in gs)
+            groups += f'<p class="eyebrow local-eyebrow"><a class="guide-area" href="{a["slug"]}">{a["nav"]} →</a></p><div class="related-grid guides-grid">{cards}</div>\n'
     jsonld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Guide JDEVPRO", "url": BASE + "guide.html",
                "hasPart": [{"@type": "Article", "headline": g["short"], "url": BASE + g["slug"]} for g in GUIDES]}, ORG_REF]
     body = f"""{header('guide.html')}<main id="main">
@@ -820,17 +826,17 @@ def guide_index():
 <div class="shell page-hero-copy reveal">
 <nav aria-label="Percorso" class="breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">Guide</span></nav>
 <p class="eyebrow">Guide e strumenti</p>
-<h1>Guide pratiche su <span>macchine, integrazioni e dati.</span></h1>
+<h1>Guide pratiche, <span>area per area.</span></h1>
 <p class="hero-lead">Spiegazioni concrete per capire cosa serve prima di chiedere un preventivo.</p>
 </div>
 </section>
 <section class="section section-tight section-white">
-<div class="shell"><div class="related-grid guides-grid">{items}</div></div>
+<div class="shell">{groups}</div>
 </section>
 {contact()}</main>
 """
-    return head("Guide su interconnessione 4.0, integrazioni e IoT | JDEVPRO",
-                "Guide pratiche su interconnessione 4.0 e iperammortamento, collegamento di Amazon ed eBay al gestionale e integrazione di sistemi senza API.",
+    return head("Guide su macchine 4.0, integrazioni, sicurezza e IoT | JDEVPRO",
+                "Guide pratiche: interconnessione 4.0, Amazon ed eBay, sistemi senza API, videosorveglianza, internet nei siti remoti, VoIP, check-in e fotovoltaico.",
                 "guide.html", jsonld) + body + footer()
 
 
