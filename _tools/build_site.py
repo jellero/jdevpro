@@ -65,7 +65,7 @@ PAGES = [
     ],
     catalog=[
       ("Macchine e controlli CNC", ["OPC UA e MTConnect", "Controlli Siemens, Fanuc, Heidenhain", "SCM Maestro Active, Essetre / Tecnoessetre", "Supervisori di linea con interfaccia web o API"]),
-      ("PLC e protocolli industriali", ["PLC Siemens S7, Beckhoff, Omron, Schneider", "Runtime CODESYS", "Modbus TCP e Modbus RTU su RS-485", "MQTT"]),
+      ("PLC e protocolli industriali", ["PLC Siemens S7, Beckhoff, Omron, Schneider", "Runtime CODESYS", "Display HMI DWIN", "Modbus TCP e Modbus RTU su RS-485", "MQTT"]),
       ("Collegamenti seriali", ["RS-485 / RS-232", "Convertitori seriale-rete", "Programma ponte su PC o NAS"]),
       ("Macchine senza interfaccia", ["Sensori di ciclo e di stato", "Lettura della lampada di segnalazione", "Contatori di energia e analizzatori di rete", "Sensori di temperatura, pressione e umidità"]),
     ],
@@ -218,7 +218,7 @@ PAGES = [
     ],
     catalog=[
       ("Domotica e clima", ["Tuya / Smart Life", "Aqara", "Honeywell / Resideo", "Google Nest", "Netatmo", "Philips Hue", "Shelly", "Daikin", "Somfy", "Nuki", "Home Assistant", "Zigbee2MQTT"]),
-      ("Energia e fotovoltaico", ["Fronius", "SMA", "SolarEdge", "Huawei FusionSolar", "Victron Energy", "Contatori e analizzatori Modbus"]),
+      ("Energia e fotovoltaico", ["Fotovoltaico Efficasa", "Fronius", "SMA", "SolarEdge", "Huawei FusionSolar", "Victron Energy", "Contatori e analizzatori Modbus"]),
       ("Sensori e campo", ["Sensori industriali RS-485", "Stazioni meteo Ecowitt", "LoRaWAN", "Gateway 4G e NB-IoT"]),
       ("Protocolli", ["MQTT", "Modbus RTU / TCP", "RS-485 / RS-232", "HTTP / REST", "Bluetooth", "Zigbee tramite bridge"]),
     ],
@@ -430,8 +430,8 @@ PAGES = [
       ("Telecamere e sensori", "Videosorveglianza e sensori anche dove non c'è né rete né corrente."),
     ],
     catalog=[
-      ("Connessione", ["Ponti radio e antenne Ubiquiti", "Router MikroTik", "Starlink", "Router 4G/5G", "Teltonika", "NB-IoT per sensori"]),
-      ("Energia", ["Victron Energy", "Pannelli solari e batterie", "Monitoraggio della batteria"]),
+      ("Connessione", ["Ponti radio e antenne Ubiquiti", "Router MikroTik", "Starlink", "Fibra FTTH Open Fiber", "Router 4G/5G", "Teltonika", "NB-IoT per sensori"]),
+      ("Energia", ["Fotovoltaico Efficasa", "Victron Energy", "Pannelli solari e batterie", "Monitoraggio della batteria"]),
       ("Controllo", ["Riavvio da remoto", "Avvisi sul telefono", "Accesso sicuro VPN"]),
     ],
     steps=[

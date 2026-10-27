@@ -358,6 +358,20 @@ def offers_ld(it_slug):
              "priceSpecification": {"@type": "PriceSpecification", "minPrice": r[1], "priceCurrency": "EUR"}} for r in rows]
 
 
+WHY = {
+    "it": dict(e="Perché JDEVPRO", h="Un elettricista installa. Un informatico programma. <span>Noi teniamo insieme il sistema.</span>",
+               p="Quando macchine, impianti, rete e software devono funzionare insieme, serve qualcuno che governi l'insieme invece di tanti fornitori separati. Progettiamo, colleghiamo e documentiamo il sistema; cablaggi e quadri li realizzano installatori abilitati con cui collaboriamo.",
+               partners="Partner: <strong>Efficasa</strong> per il fotovoltaico, <strong>Open Fiber</strong> per la fibra FTTH, <strong>DWIN</strong> per i display HMI."),
+    "en": dict(e="Why JDEVPRO", h="An electrician installs. A programmer codes. <span>We hold the whole system together.</span>",
+               p="When machines, installations, network and software have to work together, someone has to govern the whole instead of many separate suppliers. We design, connect and document the system; wiring and panels are done by licensed installers we work with.",
+               partners="Partners: <strong>Efficasa</strong> for solar, <strong>Open Fiber</strong> for FTTH fibre, <strong>DWIN</strong> for HMI displays."),
+}
+
+# fase documentazione, prima dell'assistenza, in tutti i servizi
+DOC_STEP = {"it": ("Documentazione", "Schemi, configurazioni, credenziali e procedure consegnati a te: il sistema resta comprensibile anche dopo la consegna."),
+            "en": ("Documentation", "Diagrams, configurations, credentials and procedures handed over to you: the system stays understandable after delivery.")}
+
+
 # ---------------------------------------------------------------- home
 
 def home(lang="it"):
@@ -398,6 +412,7 @@ def home(lang="it"):
 </article>
 """
     proof = "".join(f'<a href="{h}"><strong>{x}</strong><span>{d}</span></a>' for x, d, h in t["proof"])
+    w = WHY[lang]
     body = f"""{header("index.html" if lang == "it" else "en.html", lang, home=True, switch="en.html" if lang == "it" else "index.html")}<main id="main">
 <section class="hero hero-min" id="top">
 <div aria-hidden="true" class="hero-grid"></div>
@@ -418,6 +433,12 @@ def home(lang="it"):
 <div class="section-heading reveal"><p class="eyebrow">{t['ae']}</p><h2>{t['ah']}</h2></div>
 <div class="area-grid">
 {cards}</div>
+</div>
+</section>
+<section class="section section-tight section-white why-band">
+<div class="shell split">
+<div class="section-heading reveal"><p class="eyebrow">{w['e']}</p><h2>{w['h']}</h2></div>
+<div class="reveal"><p class="why-copy">{w['p']}</p><p class="why-partners">{w['partners']}</p></div>
 </div>
 </section>
 <section class="section section-tight proof-band">
@@ -610,7 +631,7 @@ def service(p, lang="it"):
       ORG_REF]
     problems = "\n".join(f'<li><strong>{a}</strong> {b}</li>' for a, b in p["problems"])
     outcomes = "\n".join(f'<article class="outcome reveal"><h3>{a}</h3><p>{b}</p></article>' for a, b in p["outcomes"])
-    steps = "\n".join(f'<li><strong>{a}</strong><span>{b}</span></li>' for a, b in p["steps"])
+    steps = "\n".join(f'<li><strong>{a}</strong><span>{b}</span></li>' for a, b in p["steps"][:-1] + [DOC_STEP[lang]] + p["steps"][-1:])
 
     def ex(t, d, link):
         more = ""
