@@ -337,3 +337,4 @@
 .hero-stats .stat strong.stat-long { font-size: clamp(1.05rem, 1.6vw, 1.3rem); }
 .price-extra { margin: 14px 0 0; color: var(--ink-soft); font-size: .9rem; line-height: 1.5; }
 .price-extra a { color: var(--accent); }
+.legal-updated { margin-top: 28px; color: var(--ink-soft); font-size: .88rem; }

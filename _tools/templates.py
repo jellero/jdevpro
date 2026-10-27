@@ -7,6 +7,7 @@ ABOUT = runpy.run_path(str(pathlib.Path(__file__).with_name("content_about.py"))
 PRODUCTS = runpy.run_path(str(pathlib.Path(__file__).with_name("content_products.py")))["PRODUCTS"]
 AREAS_DATA = runpy.run_path(str(pathlib.Path(__file__).with_name("content_areas.py")))
 STATS = runpy.run_path(str(pathlib.Path(__file__).with_name("content_stats.py")))["STATS"]
+LEGAL_DATA = runpy.run_path(str(pathlib.Path(__file__).with_name("content_legal.py")))
 
 
 def stats_html(key, lang):
@@ -993,6 +994,43 @@ def redirect_stub(target):
 """
 
 
+# ---------------------------------------------------------------- privacy e cookie
+
+def legal_page(kind, lang):
+    d = LEGAL_DATA["LEGAL"][kind][lang]
+    u = UI[lang]
+    home_slug = "index.html" if lang == "it" else "en.html"
+    sections = "\n".join(f'<h2>{h}</h2>\n' + "\n".join(render_block(b) for b in blocks) for h, blocks in d["sections"])
+    label = "Preferenze cookie" if lang == "it" else "Cookie preferences"
+    back = "Torna al sito" if lang == "it" else "Back to the site"
+    jsonld = [{"@context": "https://schema.org", "@type": "WebPage", "name": d["nav"], "description": d["desc"], "url": url_of(d["slug"]),
+               "inLanguage": lang, "about": {"@id": ORG_ID}},
+              {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+                  {"@type": "ListItem", "position": 1, "name": u["home"], "item": url_of(home_slug)},
+                  {"@type": "ListItem", "position": 2, "name": d["nav"], "item": url_of(d["slug"])}]}, ORG_REF]
+    body = f"""{header(d['slug'], lang, switch=d['other'])}<main id="main">
+<section class="hero page-hero">
+<div aria-hidden="true" class="hero-grid"></div>
+<div class="shell page-hero-copy reveal">
+<nav aria-label="{u['crumbs']}" class="breadcrumb"><a href="{home_slug}">{u['home']}</a><span>/</span><span aria-current="page">{d['nav']}</span></nav>
+<p class="eyebrow">{d['eyebrow']}</p>
+<h1>{d['h1']}</h1>
+<p class="hero-lead">{d['lead']}</p>
+</div>
+</section>
+<section class="section section-tight section-white">
+<div class="shell article">
+{sections}
+<p class="legal-updated">{LEGAL_DATA["UPDATED"][lang]}</p>
+<div class="hero-actions"><a class="button primary" href="{home_slug}">{back}</a><a class="button ghost dark" data-cookie-settings="" href="#">{label}</a></div>
+</div>
+</section>
+</main>
+"""
+    alternates = [("it", LEGAL_DATA["LEGAL"][kind]["it"]["slug"]), ("en", LEGAL_DATA["LEGAL"][kind]["en"]["slug"])]
+    return head(d["title"], d["desc"], d["slug"], jsonld, lang, alternates=alternates) + body + footer(lang)
+
+
 # ---------------------------------------------------------------- chi sono
 
 def about(lang="it"):
@@ -1269,6 +1307,9 @@ for _lang in ("it", "en"):
             write(_pr["slug"], product_page(_pr, _lang))
 write("en-about.html", about("en"))
 write("404.html", not_found())
+for _kind in ("privacy", "cookie"):
+    for _lang in ("it", "en"):
+        write(LEGAL_DATA["LEGAL"][_kind][_lang]["slug"], legal_page(_kind, _lang))
 for old, target in OLD_URLS.items():
     write(f"{old}/index.html", redirect_stub(target))
 
