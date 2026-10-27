@@ -55,10 +55,10 @@ STATS = {
   "automazione-hotel-bnb.html": {
     "it": [("Camera per camera", "clima già in funzione in alberghi e affittacamere", None),
            ("VoIP", "centralini installati negli alberghi", None),
-           ("Welora", "il nostro gestionale per strutture ricettive", "https://welora.it/")],
+           ("Decine", "impianti Ubiquiti con telecamere, citofoni e accessi", "videosorveglianza-citofonia-accessi.html")],
     "en": [("Room by room", "climate control already running in hotels and guest houses", None),
            ("VoIP", "phone systems installed in hotels", None),
-           ("Welora", "our own hospitality management software", "https://welora.it/")],
+           ("Dozens", "Ubiquiti systems with cameras, intercoms and access control", "en-video-surveillance-intercom-access.html")],
   },
   "videosorveglianza-citofonia-accessi.html": {
     "it": [("Decine", "impianti Ubiquiti installati in aziende di ogni tipo", None),
@@ -83,6 +83,30 @@ STATS = {
     "en": [("Above 6 kW", "off-grid systems already built: we size small ones properly too", None),
            ("Ubiquiti · MikroTik", "radio links already installed", None),
            ("Starlink", "satellite connections installed", None)],
+  },
+  "gestionale-su-misura.html": {
+    "it": [("Welora", "il nostro gestionale per strutture ricettive, con 25 moduli", "https://welora.it/"),
+           ("JD Industry", "gestionale di produzione collegato alle macchine in officina", "interconnessione-macchine-industria-4-0.html"),
+           ("Marketplace", "gestionale collegato a fornitore, marketplace e corriere", "integrazione-software-api.html")],
+    "en": [("Welora", "our own hospitality management software, with 25 modules", "https://welora.it/"),
+           ("JD Industry", "production software connected to workshop machines", "en-machine-interconnection.html"),
+           ("Marketplaces", "business software connected to supplier, marketplaces and courier", "en-software-integration-api.html")],
+  },
+  "integrazione-software-api.html": {
+    "it": [("SellRapido · IBS · Temu", "marketplace collegati al gestionale", None),
+           ("GLS", "corriere collegato: spedizioni senza passaggi manuali", None),
+           ("Booking.com · Stripe", "prenotazioni e pagamenti collegati in Welora", "https://welora.it/")],
+    "en": [("SellRapido · IBS · Temu", "marketplaces connected to business software", None),
+           ("GLS", "courier connected: shipments without manual steps", None),
+           ("Booking.com · Stripe", "bookings and payments connected in Welora", "https://welora.it/")],
+  },
+  "siti-web-piattaforme.html": {
+    "it": [("4 lingue", "Lauco Experience: portale turistico con pannello di gestione", "https://www.laucoexperience.it/"),
+           ("Pannello con ruoli", "posta, notifiche, newsletter e statistiche dei QR code", None),
+           ("Welora", "prenotazioni del gestionale direttamente nel sito", "https://welora.it/")],
+    "en": [("4 languages", "Lauco Experience: tourism portal with management panel", "https://www.laucoexperience.it/"),
+           ("Panel with roles", "mail, notifications, newsletters and QR code statistics", None),
+           ("Welora", "bookings from the management software straight on the website", "https://welora.it/")],
   },
   "about": {
     "it": [("10", "macchine collegate in produzione", "interconnessione-macchine-industria-4-0.html"),

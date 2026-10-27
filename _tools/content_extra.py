@@ -89,7 +89,7 @@ CITIES = [
   dict(
     slug="software-gestionali-integrazioni-trieste-gorizia.html",
     name="Trieste e Gorizia", area="Venezia Giulia", area_title="Venezia Giulia",
-    title="Software, gestionali e integrazioni a Trieste e Gorizia | JDEVPRO",
+    title="Gestionali e integrazioni a Trieste e Gorizia | JDEVPRO",
     desc="Gestionali su misura, integrazioni, IoT, videosorveglianza e siti web per aziende di Trieste e Gorizia: logistica, commercio, turismo e servizi.",
     lead="Per aziende di Trieste e Gorizia sviluppiamo gestionali su misura, integriamo programmi, marketplace e portali, colleghiamo sensori e dispositivi. Lavoriamo soprattutto da remoto, con incontri in azienda quando servono.",
     sectors=[
@@ -153,7 +153,7 @@ GUIDES = [
   ),
   dict(
     slug="guida-integrare-amazon-ebay-gestionale.html",
-    title="Collegare Amazon ed eBay al gestionale: come funziona | JDEVPRO",
+    title="Collegare Amazon ed eBay al gestionale | JDEVPRO",
     short="Collegare Amazon ed eBay al gestionale",
     desc="Cosa si sincronizza tra gestionale, Amazon ed eBay, come funzionano le API, connettori o integrazione diretta e come evitare vendite senza merce.",
     h1="Collegare Amazon ed eBay al gestionale: <span>come funziona.</span>",
@@ -187,7 +187,7 @@ GUIDES = [
   ),
   dict(
     slug="guida-integrare-sistemi-senza-api.html",
-    title="Integrare un sistema senza API: web, seriale e Modbus | JDEVPRO",
+    title="Integrare sistemi senza API: web, seriale e Modbus | JDEVPRO",
     short="Integrare un sistema senza API",
     desc="Come collegare programmi, macchine e dispositivi che non hanno API pubbliche: interfacce web, file, database, porte seriali e Modbus RS-485.",
     h1="Integrare un sistema senza API: <span>le strade possibili.</span>",
@@ -217,7 +217,7 @@ GUIDES = [
 
 TEST = dict(
   slug="test-interconnessione-4-0.html",
-  title="Test interconnessione 4.0: macchine collegate davvero? | JDEVPRO",
+  title="Test: le tue macchine sono interconnesse 4.0? | JDEVPRO",
   short="Test: le tue macchine sono interconnesse?",
   desc="Sei domande per capire se le tue macchine sono davvero interconnesse al sistema aziendale o se rischi di perdere l'iperammortamento.",
   questions=[

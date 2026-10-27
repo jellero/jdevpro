@@ -3,7 +3,7 @@
 MORE_GUIDES = [
   dict(
     slug="guida-videosorveglianza-norme.html",
-    title="Videosorveglianza, riconoscimento facciale e targhe: le regole | JDEVPRO",
+    title="Videosorveglianza, volti e targhe: le regole | JDEVPRO",
     short="Videosorveglianza: cosa chiede la legge",
     desc="Cartelli, tempi di conservazione, dipendenti, riconoscimento facciale e targhe: cosa verificare prima di installare telecamere in azienda o in struttura.",
     h1="Videosorveglianza in azienda e in struttura: <span>cosa chiede la legge.</span>",
@@ -29,7 +29,7 @@ MORE_GUIDES = [
   ),
   dict(
     slug="guida-internet-siti-remoti.html",
-    title="Starlink, 4G/5G o ponte radio: Internet nei siti remoti | JDEVPRO",
+    title="Starlink, 4G/5G o ponte radio nei siti remoti | JDEVPRO",
     short="Starlink, 4G o ponte radio: cosa scegliere",
     desc="Come portare Internet in baite, rifugi, cantieri e aziende agricole: quando conviene il 4G/5G, il ponte radio o il satellite, e come alimentare tutto col sole.",
     h1="Internet nei siti remoti: <span>Starlink, 4G/5G o ponte radio?</span>",
@@ -98,7 +98,7 @@ MORE_GUIDES = [
   ),
   dict(
     slug="guida-monitorare-fotovoltaico-consumi.html",
-    title="Monitorare fotovoltaico, batterie e consumi da remoto | JDEVPRO",
+    title="Monitorare fotovoltaico, batterie e consumi | JDEVPRO",
     short="Monitorare fotovoltaico e consumi",
     desc="Cosa monitorare in un impianto fotovoltaico con accumulo, come leggere inverter e contatori e quali avvisi impostare per accorgersi subito dei problemi.",
     h1="Fotovoltaico, batterie e consumi: <span>monitorarli da remoto.</span>",

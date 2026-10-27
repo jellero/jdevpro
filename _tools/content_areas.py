@@ -18,7 +18,7 @@ TECH_TIERS = {"interconnessione-macchine-industria-4-0.html", "integrazione-soft
 AREAS = {
   "it": [
     dict(key="industria", slug="industria.html", nav="Industria",
-         title="Software e interconnessione per l'industria in Friuli | JDEVPRO",
+         title="Software e macchine 4.0 per l'industria in Friuli | JDEVPRO",
          desc="Macchine collegate al gestionale, gestionali su misura, integrazioni e monitoraggio IoT per aziende manifatturiere. 10 macchine in produzione a Tolmezzo.",
          card="Macchine collegate al gestionale, commesse e costi reali, integrazioni e sensori per chi produce.",
          eyebrow="Industria e produzione",
@@ -118,7 +118,7 @@ PRODUCTS_PAGE = {
 }
 
 WHERE_PAGE = dict(slug="dove-lavoriamo.html", nav="Dove lavoriamo",
-                  title="Dove lavoriamo: Udine, Carnia, Pordenone, Trieste e Gorizia | JDEVPRO",
+                  title="Dove lavoriamo: Friuli Venezia Giulia e Veneto | JDEVPRO",
                   desc="JDEVPRO lavora da Tolmezzo con aziende e strutture della provincia di Udine e della Carnia, di Pordenone, Trieste e Gorizia, del Veneto e da remoto.",
                   eyebrow="Dove lavoriamo", h1="Da Tolmezzo, <span>in tutto il Friuli Venezia Giulia.</span>",
                   lead="Lavoriamo con aziende e strutture di tutta la regione e del Veneto. Veniamo sul posto per analisi, sopralluoghi e collaudi; sviluppo e assistenza li seguiamo anche da remoto.")

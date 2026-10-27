@@ -97,7 +97,7 @@ PRODUCTS = {
     ),
     dict(
       key="oryvael", slug="oryvael.html", nav="ORYVAEL",
-      title="ORYVAEL: sistema operativo per l'intelligenza artificiale | JDEVPRO",
+      title="ORYVAEL: sistema operativo nativo per l'AI | JDEVPRO",
       desc="ORYVAEL è un sistema operativo in Rust dove l'AI progetta, scrive e mantiene software, ma l'autorità resta alle persone. Ricerca di Jacopo Ellero.",
       card="Un sistema operativo in Rust dove l'intelligenza artificiale lavora, ma l'autorità resta alle persone.",
       eyebrow="Ricerca · Sistema operativo per l'intelligenza artificiale",

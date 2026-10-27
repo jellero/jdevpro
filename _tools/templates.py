@@ -16,7 +16,8 @@ def stats_html(key, lang):
         return ""
     items = ""
     for big, label, link in rows:
-        inner = f"<strong>{big}</strong><span>{label}</span>"
+        size = ' class="stat-long"' if len(big) > 12 else ""
+        inner = f"<strong{size}>{big}</strong><span>{label}</span>"
         if link:
             ext = ' rel="noreferrer" target="_blank"' if link.startswith("http") else ""
             items += f'<li><a class="stat" href="{link}"{ext}>{inner}</a></li>'
@@ -124,7 +125,7 @@ ORG = {
   "@context": "https://schema.org", "@type": "ProfessionalService", "@id": ORG_ID, "name": "JDEVPRO",
   "url": BASE, "logo": BASE + "assets/icon-512.png", "image": BASE + "assets/og-jdevpro.jpg", "email": EMAIL,
   "vatID": "IT02783420306",
-  "founder": {"@type": "Person", "name": "Jacopo Ellero", "url": BASE + "cv.html"},
+  "founder": {"@type": "Person", "name": "Jacopo Ellero", "url": BASE + "chi-sono.html"},
   "address": ADDRESS,
   "geo": {"@type": "GeoCoordinates", "latitude": 46.4057, "longitude": 13.0154},
   "areaServed": [{"@type": "AdministrativeArea", "name": "Friuli Venezia Giulia"},
@@ -344,8 +345,7 @@ def home(lang="it"):
                  lead="JDEVPRO nasce a Tolmezzo con Jacopo Ellero. Sviluppiamo gestionali su misura, colleghiamo macchine, sensori e dispositivi ai sistemi aziendali e seguiamo tutto in produzione, per aziende e strutture del Friuli Venezia Giulia e del Veneto.",
                  b1="Scegli la tua area", b2="Scrivici", ae="Da dove parti?", ah="Tre aree, un solo interlocutore.",
                  enter="Entra nell'area →",
-                 proof=[("10 macchine in produzione", "Collegate al gestionale a Tolmezzo, tra falegnamerie e stamperie.", "interconnessione-macchine-industria-4-0.html"),
-                        ("JD Industry", "Gestionale di produzione collegato a macchine SCM ed Essetre.", "industria.html"),
+                 proof=[("JD Industry", "Gestionale di produzione collegato a macchine SCM ed Essetre.", "industria.html"),
                         ("E-commerce e marketplace", "Gestionale collegato a fornitore, marketplace e corriere.", "integrazione-software-api.html"),
                         ("Prodotti", "Welora, AKIOS e ORYVAEL: i nostri progetti.", "prodotti.html")],
                  who='<strong>JDEVPRO</strong> è l\'attività di Jacopo Ellero, sviluppatore e integratore di sistemi. <a href="chi-sono.html">Chi sono →</a> · <a href="dove-lavoriamo.html">Dove lavoriamo →</a>',
@@ -357,8 +357,7 @@ def home(lang="it"):
                  lead="JDEVPRO was founded in Tolmezzo, Friuli, by Jacopo Ellero. We build custom business software, connect machines, sensors and devices to company systems and look after everything in production, for companies and properties in north-east Italy and remotely.",
                  b1="Choose your area", b2="Write to us", ae="Where do you start?", ah="Three areas, one partner.",
                  enter="Enter the area →",
-                 proof=[("10 machines in production", "Connected to business software in Tolmezzo, across woodworking and metal pressing companies.", "en-machine-interconnection.html"),
-                        ("JD Industry", "Production management connected to SCM and Essetre machines.", "en-industry.html"),
+                 proof=[("JD Industry", "Production management connected to SCM and Essetre machines.", "en-industry.html"),
                         ("E-commerce and marketplaces", "Business software connected to supplier, marketplaces and courier.", "en-software-integration-api.html"),
                         ("Products", "Welora, AKIOS and ORYVAEL: our own projects.", "en-products.html")],
                  who='<strong>JDEVPRO</strong> is the business of Jacopo Ellero, software developer and systems integrator. <a href="en-about.html">About me →</a>',
@@ -799,8 +798,8 @@ def guide(g):
     target = next(p for p in PAGES if p["slug"] == g["cta"])
     jsonld = [
       {"@context": "https://schema.org", "@type": "Article", "headline": g["short"], "description": g["desc"],
-       "url": url, "inLanguage": "it", "datePublished": "2026-10-27", "dateModified": TODAY,
-       "author": {"@type": "Person", "name": "Jacopo Ellero", "url": BASE + "cv.html"},
+       "url": url, "inLanguage": "it", "datePublished": "2026-10-27", "dateModified": "2026-10-27",
+       "author": {"@type": "Person", "name": "Jacopo Ellero", "url": BASE + "chi-sono.html"},
        "publisher": {"@id": ORG_ID}, "image": BASE + "assets/og-jdevpro.jpg"},
       {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE},
