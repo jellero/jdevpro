@@ -117,7 +117,7 @@ MORE_GUIDES = [
          "inverter fermo o in errore;",
          "consumi fuori orario."]]),
       ("Un unico cruscotto",
-       ["Produzione, accumulo e consumi nello stesso cruscotto, consultabile da computer e telefono, con lo storico per confrontare mesi e anni. Nei siti isolati lo stesso controllo vale per gli impianti solari che alimentano connessioni e telecamere."]),
+       ["Produzione, accumulo e consumi nello stesso cruscotto, consultabile da computer e telefono, con lo storico per confrontare mesi e anni. Nei siti isolati lo stesso controllo vale per gli impianti solari che alimentano connessioni e telecamere. È il metodo che usiamo sui 25 impianti fotovoltaici installati, 20 on-grid e 5 off-grid oltre i 6 kW."]),
     ],
     cta="monitoraggio-iot.html",
   ),
