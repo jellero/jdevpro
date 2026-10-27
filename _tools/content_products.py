@@ -8,6 +8,47 @@ Blocchi: ("cards", eyebrow, h2, intro, [(titolo, testo)]), ("flow", eyebrow, h2,
 PRODUCTS = {
   "it": [
     dict(
+      key="welora", slug="welora.html", nav="Welora",
+      title="Welora: gestionale per strutture ricettive a 29 € al mese | JDEVPRO",
+      desc="Welora riunisce PMS, booking engine, canali, check-in, pagamenti, fatture, pulizie, cassa e automazioni per B&B e hotel. 29 € al mese, tutto incluso.",
+      card="Il gestionale completo per B&B, affittacamere e hotel: tutto incluso a 29 € al mese.",
+      eyebrow="Prodotto · Gestionale per strutture ricettive",
+      h1="Welora: tutto il gestionale della struttura <span>a 29 € al mese.</span>",
+      lead="Welora riunisce in un solo gestionale PMS, booking engine, canali OTA, check-in digitale, pagamenti e POS, fatture, pulizie, cassa e automazioni, tutti sugli stessi dati. Per B&B, affittacamere, hotel e attività su prenotazione.",
+      links=[("Sito Welora ↗", "https://welora.it/")],
+      blocks=[
+        ("cards", "Il problema", "Non hai poche camere: hai troppi software.", "", [
+          ("Costi che si sommano", "PMS, booking engine, pagamenti, adempimenti, fatture e automazioni venduti come prodotti o moduli separati."),
+          ("Dati copiati a mano", "La stessa prenotazione passa da portali, fogli, messaggi e strumenti diversi."),
+          ("Automazioni solo per i grandi", "Le funzioni utili arrivano solo con i piani più costosi, quando invece servono da subito."),
+        ]),
+        ("cards", "Cosa comprende", "Una base completa, non un catalogo di moduli.", "", [
+          ("PMS, planning e prenotazioni", "Camere, unità, disponibilità, tariffe, restrizioni e operatività quotidiana."),
+          ("Booking engine e canali", "Vendita diretta senza commissione Welora e canali OTA sincronizzati."),
+          ("Check-in e adempimenti", "Dati e documenti degli ospiti raccolti online, Alloggiati Web e statistiche preparati."),
+          ("Pagamenti e POS da smartphone", "Checkout, preautorizzazioni, incassi e Tap to Pay su dispositivi compatibili."),
+          ("Servizi ed extra", "Colazioni, transfer, parcheggi, noleggi o trattamenti, anche senza camera."),
+          ("Corrispettivi e fatture", "Documenti commerciali e fatturazione elettronica integrati."),
+          ("Automazioni operative", "Regole che attivano messaggi, pulizie, accessi e pagamenti, con storico."),
+          ("Più strutture e ruoli", "Dati separati per sede e una visione centrale quando serve."),
+        ]),
+        ("split", "Operatività", "Quello che di solito costa un altro software, qui è già dentro.", [
+          "Si passa a Welora senza perdere dati: contatti, prenotazioni, camere, tariffe e saldi si importano da CSV o Excel, con anteprima correggibile riga per riga.",
+          "La reception ha una giornata operativa con priorità, checkout guidato, registro chiavi e consegne di turno. Le pulizie arrivano sul telefono dell'addetto con checklist. Cassa e prima nota sono collegate, con esportazione per il commercialista.",
+        ], ["Importazione guidata", "Reception e turni", "Pulizie dal telefono", "Cassa e prima nota", "Domotica e serrature"]),
+        ("split", "Prezzo", "29 € al mese, tutto incluso.", [
+          "Nessun modulo da sbloccare e nessun piano superiore. Si paga in più solo ciò che ha un costo reale: 10 € al mese per ogni canale OTA oltre il primo.",
+          "Prezzi IVA esclusa. Le commissioni dei provider esterni (pagamenti, verifica dell'identità, portali) sono a parte. In pre-lancio su welora.it si può bloccare lo sconto del 50% per 12 mesi.",
+        ], ["Tutte le funzioni incluse", "Nessuna commissione sulle prenotazioni dirette", "Passaggio da altri gestionali senza perdere dati"]),
+        ("status", "Stato", "In pre-lancio, arrivo previsto il 15 febbraio 2027.", [
+          "Piattaforma con 25 moduli, dalle prenotazioni alla cassa",
+          "Motore di automazione separato, che non perde dati se un servizio è fermo",
+          "Collegamenti con Booking.com, Stripe, Alloggiati Web, ISTAT, fatturazione elettronica, WhatsApp e termostati",
+          "Primo pilota con strutture ricettive del Friuli Venezia Giulia",
+        ], "Alcune funzioni dipendono da provider esterni e dalla modalità scelta dalla struttura."),
+      ],
+    ),
+    dict(
       key="akios", slug="akios.html", nav="AKIOS",
       title="AKIOS: aggiornamenti sicuri e ripristino per dispositivi IoT | JDEVPRO",
       desc="AKIOS governa il ciclo di vita dei dispositivi IoT: aggiornamenti firmati in prova, ritorno automatico e ripristino locale. Per produttori europei e CRA.",
@@ -98,6 +139,47 @@ PRODUCTS = {
     ),
   ],
   "en": [
+    dict(
+      key="welora", slug="en-welora.html", nav="Welora",
+      title="Welora: property management software for €29/month | JDEVPRO",
+      desc="Welora brings PMS, booking engine, channels, check-in, payments, invoices, housekeeping, till and automation together for B&Bs and hotels. €29/month, all in.",
+      card="Complete management software for B&Bs, guest houses and hotels: everything included for €29 a month.",
+      eyebrow="Product · Hospitality management software",
+      h1="Welora: all your property software <span>for €29 a month.</span>",
+      lead="Welora brings PMS, booking engine, OTA channels, digital check-in, payments and POS, invoices, housekeeping, till and automation into one system, on the same data. For B&Bs, guest houses, hotels and booking-based businesses.",
+      links=[("Welora website ↗", "https://welora.it/")],
+      blocks=[
+        ("cards", "The problem", "You don't have too few rooms: you have too many tools.", "", [
+          ("Costs that add up", "PMS, booking engine, payments, compliance, invoices and automation sold as separate products or add-ons."),
+          ("Data copied by hand", "The same booking travels through portals, spreadsheets, messages and different tools."),
+          ("Automation only for the big ones", "Useful features come only with expensive plans, when they are needed from day one."),
+        ]),
+        ("cards", "What's included", "A complete base, not a catalogue of add-ons.", "", [
+          ("PMS, planning and bookings", "Rooms, units, availability, rates, restrictions and daily operations."),
+          ("Booking engine and channels", "Direct sales with no Welora commission and synchronised OTA channels."),
+          ("Check-in and compliance", "Guest data and documents collected online, Italian police and statistics reporting prepared."),
+          ("Payments and phone POS", "Checkout, pre-authorisations, payments and Tap to Pay on compatible devices."),
+          ("Services and extras", "Breakfasts, transfers, parking, rentals or treatments, even without a room."),
+          ("Receipts and invoices", "Italian fiscal documents and e-invoicing built in."),
+          ("Operational automation", "Rules triggering messages, housekeeping, access and payments, with history."),
+          ("Multiple properties and roles", "Separate data per property and a central view when needed."),
+        ]),
+        ("split", "Operations", "What usually costs another tool is already inside.", [
+          "Switch to Welora without losing data: contacts, bookings, rooms, rates and open balances are imported from CSV or Excel, with a preview you can fix line by line.",
+          "Reception gets a prioritised daily view, guided checkout, key log and shift handovers. Housekeeping arrives on staff phones with checklists. Till and ledger are connected, with exports for the accountant.",
+        ], ["Guided import", "Reception and shifts", "Housekeeping on the phone", "Till and ledger", "Smart building and locks"]),
+        ("split", "Price", "€29 a month, all included.", [
+          "No modules to unlock and no higher plans. You only pay extra for real costs: €10 a month for each OTA channel beyond the first.",
+          "Prices exclude VAT. External provider fees (payments, identity checks, portals) are separate. During pre-launch you can lock a 50% discount for 12 months on welora.it.",
+        ], ["All features included", "No commission on direct bookings", "Switch without losing data"]),
+        ("status", "Status", "Pre-launch, expected on 15 February 2027.", [
+          "Platform with 25 modules, from bookings to the till",
+          "Separate automation engine that loses no data when a service is down",
+          "Connections with Booking.com, Stripe, Italian police and statistics portals, e-invoicing, WhatsApp and thermostats",
+          "First pilot with properties in Friuli Venezia Giulia",
+        ], "Some features depend on external providers and on the mode chosen by the property."),
+      ],
+    ),
     dict(
       key="akios", slug="en-akios.html", nav="AKIOS",
       title="AKIOS: secure updates and recovery for IoT devices | JDEVPRO",

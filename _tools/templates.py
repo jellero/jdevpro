@@ -859,13 +859,13 @@ def about(lang="it"):
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">{a['akios_e']}</p><h2>{a['akios_h']}</h2>
 <ul class="akios-points">{"".join(f"<li>{x}</li>" for x in a["akios_points"])}</ul></div>
-<div class="research-copy reveal">{"".join(f"<p>{x}</p>" for x in a["akios_p"])}<div class="hero-actions"><a class="button primary" href="{PRODUCTS[lang][0]['slug']}">{UI[lang]['more'].replace(' →', '')}</a>{"".join(f'<a class="button ghost" href="{l}" rel="noreferrer" target="_blank">{n}</a>' for n, l in a["akios_links"])}</div></div>
+<div class="research-copy reveal">{"".join(f"<p>{x}</p>" for x in a["akios_p"])}<div class="hero-actions"><a class="button primary" href="{product_slug(lang, 'akios')}">{UI[lang]['more'].replace(' →', '')}</a>{"".join(f'<a class="button ghost" href="{l}" rel="noreferrer" target="_blank">{n}</a>' for n, l in a["akios_links"])}</div></div>
 </div>
 </section>
 <section class="section section-tight section-dark">
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">{a['research_e']}</p><h2>{a['research_h']}</h2></div>
-<div class="research-copy reveal">{"".join(f"<p>{x}</p>" for x in a["research_p"])}<div class="hero-actions"><a class="button primary" href="{PRODUCTS[lang][1]['slug']}">{UI[lang]['more'].replace(' →', '')}</a><a class="button ghost" href="{a['research_link'][1]}" rel="noreferrer" target="_blank">{a['research_link'][0]}</a></div></div>
+<div class="research-copy reveal">{"".join(f"<p>{x}</p>" for x in a["research_p"])}<div class="hero-actions"><a class="button primary" href="{product_slug(lang, 'oryvael')}">{UI[lang]['more'].replace(' →', '')}</a><a class="button ghost" href="{a['research_link'][1]}" rel="noreferrer" target="_blank">{a['research_link'][0]}</a></div></div>
 </div>
 </section>
 <section class="section section-tight section-paper">
@@ -883,6 +883,10 @@ def about(lang="it"):
 
 
 # ---------------------------------------------------------------- prodotti (AKIOS, ORYVAEL)
+
+def product_slug(lang, key):
+    return next(x for x in PRODUCTS[lang] if x["key"] == key)["slug"]
+
 
 def product_counterpart(pr, lang):
     other = "en" if lang == "it" else "it"
@@ -959,7 +963,12 @@ def product_page(pr, lang):
     buttons += f'<a class="button ghost" href="#contatto">{u["talk"]}</a>'
     others = "".join(f'<a href="{x["slug"]}"><strong>{x["nav"]}</strong><span>{x["card"]}</span></a>'
                      for x in PRODUCTS[lang] if x["key"] != pr["key"])
-    if pr["key"] == "akios":
+    if pr["key"] == "welora":
+        main_ld = {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Welora", "description": pr["desc"], "url": url,
+                   "applicationCategory": "BusinessApplication", "operatingSystem": "Web",
+                   "offers": {"@type": "Offer", "price": "29", "priceCurrency": "EUR", "availability": "https://schema.org/PreOrder"},
+                   "publisher": {"@id": ORG_ID}, "sameAs": ["https://welora.it/"]}
+    elif pr["key"] == "akios":
         main_ld = {"@context": "https://schema.org", "@type": "Product", "name": "AKIOS", "description": pr["desc"], "url": url,
                    "brand": {"@type": "Brand", "name": "AKIOS"}, "manufacturer": {"@id": ORG_ID}, "sameAs": ["https://akios.cloud/", "https://akios-pilot.com/"]}
     else:
@@ -997,9 +1006,9 @@ def product_page(pr, lang):
 
 def products_home(lang):
     if lang == "it":
-        e, h, p = "Prodotti e ricerca", "Non solo progetti per i clienti.", "Due progetti nostri, con pagine dedicate."
+        e, h, p = "Prodotti e ricerca", "Non solo progetti per i clienti.", "Tre progetti nostri, con pagine dedicate."
     else:
-        e, h, p = "Products and research", "Not only client projects.", "Two projects of our own, each with its own page."
+        e, h, p = "Products and research", "Not only client projects.", "Three projects of our own, each with its own page."
     cards = "".join(f'<a class="product-card product-card-{x["key"]} reveal" href="{x["slug"]}"><span class="eyebrow">{x["eyebrow"]}</span>'
                     f'<strong>{x["nav"]}</strong><span class="product-card-text">{x["card"]}</span><span class="competence-more">{UI[lang]["more"]}</span></a>'
                     for x in PRODUCTS[lang])
