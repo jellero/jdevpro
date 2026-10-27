@@ -219,3 +219,7 @@
   .nav-sub { position: static; display: flex; min-width: 0; margin: 0 0 6px; padding: 0 0 6px; background: none; border: 0; border-bottom: 1px solid rgba(255,255,255,.08); border-radius: 0; box-shadow: none; }
   .nav-sub::before { display: none; }
 }
+
+/* Ricerca */
+.research-copy p { color: #b8c8d4; font-size: 1.02rem; margin: 0 0 16px; }
+.research-copy .button { margin-top: 8px; }

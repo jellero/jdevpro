@@ -847,6 +847,12 @@ def about(lang="it"):
 <ol class="timeline reveal">{path}</ol>
 </div>
 </section>
+<section class="section section-tight section-dark">
+<div class="shell split">
+<div class="section-heading reveal"><p class="eyebrow">{a['research_e']}</p><h2>{a['research_h']}</h2></div>
+<div class="research-copy reveal">{"".join(f"<p>{x}</p>" for x in a["research_p"])}<a class="button primary" href="{a['research_link'][1]}" rel="noreferrer" target="_blank">{a['research_link'][0]}</a></div>
+</div>
+</section>
 <section class="section section-tight section-paper">
 <div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">{a['projects_e']}</p><h2>{a['projects_h']}</h2></div>
