@@ -41,13 +41,13 @@ ABOUT = {
     projects_e="Progetti", projects_h="Cosa ho costruito.",
     projects=[
       ("Welora", "Piattaforma gestionale multi-struttura con motore di automazione separato.", "https://welora.it/"),
-      ("JD Industry", "Gestionale su misura collegato alle macchine.", "interconnessione-macchine-industria-4-0.html"),
+      ("JD Industry", "Gestionale di produzione collegato alle macchine.", "interconnessione-macchine-industria-4-0.html"),
       ("Vehylo", "Diagnostica veicolo via OBD-II e Bluetooth.", "https://jellero.github.io/vehylo-web/"),
       ("Lauco Experience", "Portale turistico in quattro lingue con backoffice.", "https://www.laucoexperience.it/"),
     ],
-    akios_e="Prodotto", akios_h="AKIOS: dispositivi IoT che si aggiornano senza rompersi.",
+    akios_e="Sviluppo", akios_h="AKIOS: dispositivi IoT che si aggiornano senza rompersi.",
     akios_p=[
-      "AKIOS è il mio prodotto per i produttori di dispositivi IoT: uno strato che vive dentro il dispositivo e ne governa tutto il ciclo di vita, dalla prima configurazione agli aggiornamenti, fino al ripristino quando qualcosa va storto.",
+      "AKIOS è il progetto che sviluppo per i produttori di dispositivi IoT: uno strato che vive dentro il dispositivo e ne governa tutto il ciclo di vita, dalla prima configurazione agli aggiornamenti, fino al ripristino quando qualcosa va storto.",
       "Ogni aggiornamento è firmato e verificato, parte in prova e viene confermato solo se il dispositivo funziona; altrimenti torna da solo all'ultima versione buona. Se non c'è più un sistema valido, il dispositivo apre una rete di ripristino locale e si recupera dal telefono, senza essere mai bloccato.",
       "Il firmware è già operativo sui chip Beken BK7238, molto diffusi nei dispositivi Wi-Fi, e AKIOS è proposto ai produttori europei con un programma pilota: un dispositivo, un perimetro chiaro, prova su hardware reale. È pensato per chi deve garantire aggiornamenti sicuri per anni, come chiede il Cyber Resilience Act europeo.",
     ],
@@ -105,13 +105,13 @@ ABOUT = {
     projects_e="Projects", projects_h="What I have built.",
     projects=[
       ("Welora", "Multi-property management platform with a separate automation engine.", "https://welora.it/"),
-      ("JD Industry", "Custom custom production software connected to machines.", "en-machine-interconnection.html"),
+      ("JD Industry", "Production software connected to machines.", "en-machine-interconnection.html"),
       ("Vehylo", "Vehicle diagnostics over OBD-II and Bluetooth.", "https://jellero.github.io/vehylo-web/"),
       ("Lauco Experience", "Four-language tourism portal with back office.", "https://www.laucoexperience.it/"),
     ],
-    akios_e="Product", akios_h="AKIOS: IoT devices that update without breaking.",
+    akios_e="Development", akios_h="AKIOS: IoT devices that update without breaking.",
     akios_p=[
-      "AKIOS is my product for IoT device makers: a layer living inside the device that governs its whole lifecycle, from first setup to updates and recovery when something goes wrong.",
+      "AKIOS is the project I am developing for IoT device makers: a layer living inside the device that governs its whole lifecycle, from first setup to updates and recovery when something goes wrong.",
       "Every update is signed and verified, starts as a trial and is committed only if the device works; otherwise it rolls back by itself to the last good version. If no valid system is left, the device opens a local recovery network and is restored from a phone, never bricked.",
       "The firmware already runs on Beken BK7238 chips, widely used in Wi-Fi devices, and AKIOS is offered to European manufacturers through a pilot programme: one device, a clear scope, validation on real hardware. It is built for makers who must guarantee secure updates for years, as the EU Cyber Resilience Act requires.",
     ],

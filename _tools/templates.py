@@ -247,7 +247,7 @@ def header(current, lang="it", home=False, switch=None):
                   f'<a class="nav-group-label" href="{a["slug"]}">{a["nav"]} <span aria-hidden="true">▾</span></a>'
                   f'<div class="nav-sub">\n{sub}\n</div></div>\n')
     pp = PRODUCTS_PAGE[lang]
-    prods = PRODUCTS[lang]
+    prods = products(lang)
     active = current == pp["slug"] or any(x["slug"] == current for x in prods)
     psub = f'<a class="nav-sub-all" href="{pp["slug"]}"{cur(current == pp["slug"])}>{"Tutti i prodotti" if lang == "it" else "All products"} →</a>\n' + "\n".join(
         f'<a href="{x["slug"]}"{ext(x["slug"])}{cur(x["slug"] == current)}>{x["nav"]}{" ↗" if x.get("external") else ""}</a>' for x in prods)
@@ -384,12 +384,12 @@ INCENTIVES = {
            "Interveniamo da 500 € in su, fino a progetti che coinvolgono macchine, gestionale e impianti. Quando c'è un incentivo, lo pianifichiamo insieme all'investimento.",
            [("Iperammortamento 2026–2028", "Macchine nuove e software di produzione rientrano solo se interconnessi al sistema aziendale. Colleghiamo e documentiamo tutto per il perito.", "guida-interconnessione-iperammortamento.html", "Leggi la guida →"),
             ("Contributi FVG per hotel e alberghi diffusi", "La Regione sostiene l'ammodernamento e l'efficienza delle strutture ricettive: clima, accessi e domotica possono far parte del progetto.", "guida-contributi-fvg-hotel.html", "Leggi la guida →"),
-            ("Cambio di gestionale", "Gestionale di produzione su ERPNext e migrazione dei dati dal vecchio programma, con analisi iniziale gratuita.", "gestionale-produzione-erpnext.html", "Scopri il gestionale →")]),
+            ("JD Industry e cambio di gestionale", "Dalle macchine collegate all'ERP completo su ERPNext, con la migrazione dei dati dal vecchio programma e analisi iniziale gratuita.", "gestionale-produzione-erpnext.html", "Scopri JD Industry →")]),
     "en": ("Incentives and projects", "From a day's work to a complete project.",
            "We take on jobs from €500 up to projects covering machines, business software and installations. When an incentive applies, we plan it together with the investment.",
            [("Italian hyper-depreciation 2026–2028", "New machines and production software qualify only when interconnected with company systems. We connect and document everything for the appraiser.", "en-machine-interconnection.html", "Machine interconnection →"),
             ("Regional grants for hotels", "Friuli Venezia Giulia supports modernisation and efficiency of accommodation: climate, access and automation can be part of the project.", "en-hotel-bnb-automation.html", "Hotel automation →"),
-            ("Changing business software", "ERPNext-based production management and data migration from the old program, with a free initial analysis.", "en-erpnext-manufacturing.html", "Discover it →")]),
+            ("JD Industry and software change", "From connected machines to a full ERP on ERPNext, with data migration from the old program and a free initial analysis.", "en-erpnext-manufacturing.html", "Discover JD Industry →")]),
 }
 
 # fase documentazione, prima dell'assistenza, in tutti i servizi
@@ -407,9 +407,9 @@ def home(lang="it"):
                  lead="JDEVPRO nasce a Tolmezzo con Jacopo Ellero. Sviluppiamo gestionali su misura, colleghiamo macchine, sensori e dispositivi ai sistemi aziendali e seguiamo tutto in produzione, per aziende e strutture del Friuli Venezia Giulia e del Veneto.",
                  b1="Scegli la tua area", b2="Scrivici", ae="Da dove parti?", ah="Tre aree, un solo interlocutore.",
                  enter="Entra nell'area →",
-                 proof=[("JD Industry", "Gestionale su misura collegato a macchine SCM ed Essetre.", "industria.html"),
+                 proof=[("JD Industry", "Gestionale di produzione collegato a macchine SCM ed Essetre.", "gestionale-produzione-erpnext.html"),
                         ("E-commerce e marketplace", "Gestionale collegato a fornitore, marketplace e corriere.", "integrazione-software-api.html"),
-                        ("Prodotti", "Welora, il gestionale di produzione su ERPNext, AKIOS e ORYVAEL.", "prodotti.html")],
+                        ("Prodotti", "Welora per le strutture ricettive e JD Industry per la produzione.", "prodotti.html")],
                  who='<strong>JDEVPRO</strong> è l\'attività di Jacopo Ellero, sviluppatore e integratore di sistemi. <a href="chi-sono.html">Chi sono →</a> · <a href="dove-lavoriamo.html">Dove lavoriamo →</a>',
                  title="JDEVPRO · Gestionali, macchine 4.0 e IoT in Friuli",
                  desc="Gestionali su misura, macchine 4.0, integrazioni, IoT, automazione hotel e B&B, videosorveglianza e internet offgrid in Friuli Venezia Giulia.")
@@ -419,9 +419,9 @@ def home(lang="it"):
                  lead="JDEVPRO was founded in Tolmezzo, Friuli, by Jacopo Ellero. We build custom business software, connect machines, sensors and devices to company systems and look after everything in production, for companies and properties in north-east Italy and remotely.",
                  b1="Choose your area", b2="Write to us", ae="Where do you start?", ah="Three areas, one partner.",
                  enter="Enter the area →",
-                 proof=[("JD Industry", "Custom custom production software connected to SCM and Essetre machines.", "en-industry.html"),
+                 proof=[("JD Industry", "Production software connected to SCM and Essetre machines.", "en-erpnext-manufacturing.html"),
                         ("E-commerce and marketplaces", "Business software connected to supplier, marketplaces and courier.", "en-software-integration-api.html"),
-                        ("Products", "Welora, ERPNext-based production management, AKIOS and ORYVAEL.", "en-products.html")],
+                        ("Products", "Welora for hospitality and JD Industry for manufacturing.", "en-products.html")],
                  who='<strong>JDEVPRO</strong> is the business of Jacopo Ellero, software developer and systems integrator. <a href="en-about.html">About me →</a>',
                  title="JDEVPRO · Business software, machines 4.0 and IoT, Italy",
                  desc="Custom business software, machines 4.0, integrations, IoT, hotel automation, video surveillance and off-grid internet in north-east Italy.")
@@ -579,7 +579,7 @@ def products_index(lang):
     home_slug = "index.html" if lang == "it" else "en.html"
     other = PRODUCTS_PAGE["en" if lang == "it" else "it"]["slug"]
     rows = ""
-    for x in PRODUCTS[lang]:
+    for x in products(lang):
         pts = "".join(f"<li>{p}</li>" for p in pp["points"][x["key"]])
         label = x["slug"].split("//")[1].rstrip("/") + " ↗" if x.get("external") else u["more"]
         rows += f"""<article class="product-row product-card-{x['key']} reveal">
@@ -589,7 +589,7 @@ def products_index(lang):
 </article>
 """
     jsonld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": pp["nav"], "description": pp["desc"], "url": url_of(pp["slug"]),
-               "hasPart": [{"@type": "CreativeWork", "name": x["nav"], "url": x["slug"] if x.get("external") else BASE + x["slug"]} for x in PRODUCTS[lang]]},
+               "hasPart": [{"@type": "CreativeWork", "name": x["nav"], "url": x["slug"] if x.get("external") else BASE + x["slug"]} for x in products(lang)]},
               {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
                   {"@type": "ListItem", "position": 1, "name": u["home"], "item": url_of(home_slug)},
                   {"@type": "ListItem", "position": 2, "name": pp["nav"], "item": url_of(pp["slug"])}]}, ORG_REF]
@@ -1223,6 +1223,11 @@ def ext(href):
     return ' rel="noreferrer" target="_blank"' if href.startswith("http") else ""
 
 
+def products(lang):
+    """Solo i prodotti in vendita: AKIOS e ORYVAEL sono sviluppo."""
+    return [x for x in PRODUCTS[lang] if not x.get("dev")]
+
+
 def product_slug(lang, key):
     return next(x for x in PRODUCTS[lang] if x["key"] == key)["slug"]
 
@@ -1319,7 +1324,7 @@ def product_page(pr, lang):
     if has_prices:
         buttons += f'<a class="button ghost" href="#prezzi">{"Vedi i prezzi" if lang == "it" else "See prices"}</a>'
     others = "".join(f'<a href="{x["slug"]}"{ext(x["slug"])}><strong>{x["nav"]}</strong><span>{x["card"]}</span></a>'
-                     for x in PRODUCTS[lang] if x["key"] != pr["key"])
+                     for x in PRODUCTS[lang] if x["key"] != pr["key"] and bool(x.get("dev")) == bool(pr.get("dev")))
     if pr["key"] == "welora":
         main_ld = {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Welora", "description": pr["desc"], "url": url,
                    "applicationCategory": "BusinessApplication", "operatingSystem": "Web",
@@ -1341,7 +1346,8 @@ def product_page(pr, lang):
                   {"@type": "ListItem", "position": 1, "name": u["home"], "item": url_of(home_slug)},
                   {"@type": "ListItem", "position": 2, "name": pr["nav"], "item": url}]},
               ORG_REF]
-    other_label = "Altri prodotti" if lang == "it" else "Other products"
+    other_label = ("Altri progetti di sviluppo" if lang == "it" else "Other development projects") if pr.get("dev") else \
+        ("Altri prodotti" if lang == "it" else "Other products")
     body = f"""{header(pr['slug'], lang, switch=other)}<main id="main">
 <section class="hero page-hero product-hero product-{pr['key']}">
 <div aria-hidden="true" class="hero-grid"></div>

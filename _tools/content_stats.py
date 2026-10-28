@@ -16,9 +16,9 @@ STATS = {
   },
   "area:industria": {
     "it": [("10", "macchine collegate in produzione a Tolmezzo", "interconnessione-macchine-industria-4-0.html"),
-           ("JD Industry", "gestionale su misura collegato a macchine SCM ed Essetre", None)],
+           ("JD Industry", "gestionale di produzione collegato a macchine SCM ed Essetre", None)],
     "en": [("10", "machines connected in production in Tolmezzo", "en-machine-interconnection.html"),
-           ("JD Industry", "custom production software connected to SCM and Essetre machines", None)],
+           ("JD Industry", "production software connected to SCM and Essetre machines", None)],
   },
   "area:strutture": {
     "it": [("Camera per camera", "clima collegato alle prenotazioni in alberghi e affittacamere", "automazione-hotel-bnb.html"),
@@ -86,10 +86,10 @@ STATS = {
   },
   "gestionale-su-misura.html": {
     "it": [("Welora", "il nostro gestionale per strutture ricettive, con 25 moduli", "https://welora.it/"),
-           ("JD Industry", "gestionale su misura collegato alle macchine in officina", "interconnessione-macchine-industria-4-0.html"),
+           ("JD Industry", "gestionale di produzione collegato alle macchine in officina", "interconnessione-macchine-industria-4-0.html"),
            ("Marketplace", "gestionale collegato a fornitore, marketplace e corriere", "integrazione-software-api.html")],
     "en": [("Welora", "our own hospitality management software, with 25 modules", "https://welora.it/"),
-           ("JD Industry", "custom production software connected to workshop machines", "en-machine-interconnection.html"),
+           ("JD Industry", "production software connected to workshop machines", "en-machine-interconnection.html"),
            ("Marketplaces", "business software connected to supplier, marketplaces and courier", "en-software-integration-api.html")],
   },
   "integrazione-software-api.html": {

@@ -1,4 +1,4 @@
-"""Pagine dedicate ai prodotti: gestionale di produzione, AKIOS e ORYVAEL (italiano e inglese).
+"""Prodotti (Welora, JD Industry) e progetti di sviluppo (AKIOS, ORYVAEL, con dev=True), italiano e inglese.
 
 Blocchi: ("cards", eyebrow, h2, intro, [(titolo, testo)]), ("flow", eyebrow, h2, [(titolo, testo)]),
 ("split", eyebrow, h2, [paragrafi], [punti]), ("compare", eyebrow, h2, (titolo, [voci]), (titolo, [voci])),
@@ -49,15 +49,25 @@ PRODUCTS = {
       ],
     ),
     dict(
-      key="erp", slug="gestionale-produzione-erpnext.html", nav="Gestionale di produzione",
-      title="Software gestionale di produzione per officine, carpenterie e falegnamerie | JDEVPRO",
-      desc="Gestionale di produzione per officina meccanica, carpenteria metallica e falegnameria: distinta base, ordini di lavoro, magazzino, fattura elettronica. Basato su ERPNext, da 990 €.",
-      card="Distinte base, ordini di lavoro, magazzino e fattura elettronica per piccole aziende manifatturiere. Avvio da 990 €.",
-      eyebrow="Prodotto · Gestionale di produzione basato su ERPNext",
+      key="erp", slug="gestionale-produzione-erpnext.html", nav="JD Industry",
+      title="JD Industry: gestionale di produzione per officine, carpenterie e falegnamerie | JDEVPRO",
+      desc="JD Industry, il gestionale di produzione per officina meccanica, carpenteria metallica e falegnameria: macchine collegate, ERP completo su ERPNext o sistema su misura.",
+      card="L'ecosistema per la produzione: macchine collegate al gestionale, ERP completo su ERPNext o sistema su misura.",
+      eyebrow="Prodotto · Ecosistema per la produzione",
       h1="Sai a che punto è ogni ordine, <span>senza girare per il reparto.</span>",
-      lead="Distinte base, ordini di lavoro, magazzino, acquisti, vendite e fatture elettroniche in un solo gestionale, per officine meccaniche, carpenterie metalliche, falegnamerie e piccole aziende manifatturiere. Lo progettiamo sulla vostra produzione, lo installiamo dove preferite e ci portiamo dentro i vostri dati.",
+      lead="JD Industry è il nostro ecosistema per chi produce: si parte dalle macchine collegate a un gestionale semplice e si arriva, quando serve, all'ERP completo su ERPNext o a un sistema scritto su misura. Per officine meccaniche, carpenterie metalliche, falegnamerie e piccole aziende manifatturiere.",
       links=[],
       blocks=[
+        ("cards", "Tre livelli", "Si parte da dove serve, si cresce senza cambiare sistema.", "", [
+          ("Macchine collegate", "Gestionale semplice collegato alle macchine: stato e allarmi, commesse, produzione e costi reali per commessa, interconnessione documentata per il perito. Da 1.500 € a macchina."),
+          ("ERP completo su ERPNext", "Distinte base, ordini di lavoro, magazzino, acquisti, vendite, contabilità e fattura elettronica, collegati alle macchine. Avvio da 990 €."),
+          ("Su misura", "Per processi particolari: moduli o un gestionale scritti per voi, collegati alle macchine e all'ERP. Prima versione da 3.000 €."),
+        ]),
+        ("cards", "Già in produzione", "JD Industry lavora già in officina.", "", [
+          ("10 macchine collegate a Tolmezzo", "Falegnamerie e stamperie con macchine collegate al gestionale: stato, produzione, commesse e costi senza fogli Excel."),
+          ("Bordatrice SCM con Maestro Active", "Stato e allarmi in tempo reale, commesse aperte e chiuse dalla macchina, produzione importata in automatico e costo reale per commessa."),
+          ("CNC Essetre/Tecnoessetre", "Più macchine in un'unica schermata, eventi associati alla commessa, invio dei file di lavoro, magazzino e residui, report stampabili."),
+        ]),
         ("cards", "Vi riconoscete?", "Quando il gestionale non segue la produzione.", "", [
           ("Distinte base in Excel", "Ognuno ha la sua versione. Qui sono uniche, versionate e collegate a ordini di lavoro e costi."),
           ("Avanzamento al telefono", "Per sapere a che punto è un ordine si chiama il capo reparto. Qui l'operatore lo dichiara dal tablet."),
@@ -75,7 +85,7 @@ PRODUCTS = {
           ("Spedizione e fattura", "DDT di vendita con lotti e matricole, fattura elettronica inviata allo SdI."),
           ("Incasso e contabilità", "Scadenze, incassi e partita doppia senza doppie digitazioni."),
         ]),
-        ("cards", "Cosa comprende", "Tutta l'azienda sugli stessi dati.", "Si parte da quello che serve subito e si aggiunge il resto senza cambiare sistema.", [
+        ("cards", "Livello ERPNext", "Tutta l'azienda sugli stessi dati.", "Con l'ERP completo si parte da quello che serve subito e si aggiunge il resto senza cambiare sistema.", [
           ("Produzione", "Distinte base multilivello, cicli, centri di lavoro, ordini di lavoro, scarti e rilavorazioni."),
           ("Magazzino e tracciabilità", "Più magazzini e ubicazioni, lotti, matricole, inventari, scorte minime e riordino."),
           ("Acquisti e conto lavoro", "Richieste, confronto offerte, ordini fornitori, materiali ai terzisti e rientro dei lavorati."),
@@ -101,7 +111,7 @@ PRODUCTS = {
           "Ogni persona ha il proprio utente, con verifica in due passaggi per gli accessi da fuori. I ruoli separano i reparti: l'operatore vede le sue fasi, non prezzi o contabilità. Ogni modifica a un documento resta nello storico, con autore e data.",
           "Server e NAS non hanno porte aperte su Internet: l'accesso esterno passa da VPN oppure da Cloudflare Tunnel con login aziendale. I backup sono giornalieri, cifrati e conservati fuori sede, con prove di ripristino periodiche. Nel cloud i dati restano in Unione Europea, con nomina a responsabile del trattamento.",
         ], ["Utenti personali e verifica in due passaggi", "Permessi per reparto", "Storico delle modifiche", "VPN o Cloudflare Tunnel", "Backup cifrati fuori sede"]),
-        ("prices", "Avvio", "Prezzi pensati per le piccole aziende.", "Una volta sola: progettazione, installazione, configurazione e formazione. Dopo l'analisi ricevete un preventivo a prezzo chiuso.", [
+        ("prices", "Avvio ERPNext", "Prezzi pensati per le piccole aziende.", "Una volta sola: progettazione, installazione, configurazione e formazione. Il collegamento delle macchine si quota come interconnessione. Dopo l'analisi ricevete un preventivo a prezzo chiuso.", [
           ("Essenziale · fino a 5 utenti", "da 990 €", "Produzione semplice, magazzino, vendite, collegamento SdI, 1 giornata di formazione"),
           ("Produzione · fino a 15 utenti", "da 1.900 €", "In più qualità, conto lavoro, contabilità, 3 postazioni tablet, 2 giornate di formazione"),
           ("Su misura · oltre 15 utenti", "da 3.500 €", "Middleware per macchine, più aziende o sedi, integrazioni con altri sistemi"),
@@ -133,7 +143,7 @@ PRODUCTS = {
           ("Formazione e partenza", "Prove su ordini reali, partenza a inizio mese senza fermare la produzione. Da 1 a 3 settimane per Essenziale, da 3 a 6 per Produzione."),
           ("Documentazione", "Configurazioni, procedure e accessi consegnati a voi: il sistema resta comprensibile anche dopo."),
         ]),
-        ("split", "La piattaforma", "Basato su ERPNext, seguito da noi.", [
+        ("split", "La piattaforma", "Il livello completo si basa su ERPNext.", [
           "Il gestionale si basa su ERPNext, piattaforma ERP usata da migliaia di aziende nel mondo. Noi la progettiamo sulla vostra produzione, la colleghiamo a SdI, registratori telematici, macchine e tablet, e la seguiamo nel tempo.",
           "I dati sono vostri: il database si esporta in qualsiasi momento in formati standard e può essere consegnato a voi o a un altro fornitore. ERPNext è un marchio di Frappe Technologies; JDEVPRO non è affiliata a Frappe.",
           'Approfondisci: <a href="guida-erpnext-italia-odoo.html">ERPNext in Italia e confronto con Odoo</a> e <a href="guida-iperammortamento-software-erp-mes.html">iperammortamento per il software di produzione</a>.',
@@ -142,11 +152,11 @@ PRODUCTS = {
       ],
     ),
     dict(
-      key="akios", slug="https://akios.cloud/", external=True, nav="AKIOS",
+      key="akios", dev=True, slug="https://akios.cloud/", external=True, nav="AKIOS",
       title="AKIOS: aggiornamenti sicuri e ripristino per dispositivi IoT | JDEVPRO",
       desc="AKIOS governa il ciclo di vita dei dispositivi IoT: aggiornamenti firmati in prova, ritorno automatico e ripristino locale. Per produttori europei e CRA.",
       card="Aggiornamenti firmati, ritorno automatico e ripristino locale per i dispositivi IoT dei produttori europei.",
-      eyebrow="Prodotto · Firmware e ciclo di vita IoT",
+      eyebrow="Sviluppo · Firmware e ciclo di vita IoT",
       h1="AKIOS: dispositivi IoT che si aggiornano <span>senza rompersi.</span>",
       lead="AKIOS è uno strato che vive dentro il dispositivo e ne governa tutto il ciclo di vita: prima configurazione, aggiornamenti, ritorno all'ultima versione buona e ripristino. Per i produttori europei che devono garantire aggiornamenti sicuri per anni, senza cambiare cloud.",
       links=[("Sito AKIOS ↗", "https://akios.cloud/"), ("Programma pilota ↗", "https://akios-pilot.com/")],
@@ -189,7 +199,7 @@ PRODUCTS = {
       ],
     ),
     dict(
-      key="oryvael", slug="oryvael.html", nav="ORYVAEL",
+      key="oryvael", dev=True, slug="oryvael.html", nav="ORYVAEL",
       title="ORYVAEL: sistema operativo nativo per l'AI | JDEVPRO",
       desc="ORYVAEL è un sistema operativo in Rust dove l'AI progetta, scrive e mantiene software, ma l'autorità resta alle persone. Ricerca di Jacopo Ellero.",
       card="Un sistema operativo in Rust dove l'intelligenza artificiale lavora, ma l'autorità resta alle persone.",
@@ -274,15 +284,25 @@ PRODUCTS = {
       ],
     ),
     dict(
-      key="erp", slug="en-erpnext-manufacturing.html", nav="Production management",
-      title="Production management for small manufacturers, based on ERPNext | JDEVPRO",
-      desc="Bills of materials, work orders, stock and Italian e-invoicing for small manufacturers. Based on ERPNext, in the cloud, on a server or NAS. Setup from €990.",
-      card="Bills of materials, work orders, stock and e-invoicing for small manufacturers. Setup from €990.",
-      eyebrow="Product · Production management based on ERPNext",
+      key="erp", slug="en-erpnext-manufacturing.html", nav="JD Industry",
+      title="JD Industry: production management for machine shops and woodworking | JDEVPRO",
+      desc="JD Industry, production management for machine shops, metalwork and woodworking: connected machines, full ERP on ERPNext or custom software.",
+      card="The production ecosystem: machines connected to business software, full ERP on ERPNext or custom software.",
+      eyebrow="Product · Production ecosystem",
       h1="Know where every order stands, <span>without walking the shop floor.</span>",
-      lead="Bills of materials, work orders, stock, purchasing, sales and e-invoices in one system, for small manufacturers and workshops. We design it around your production, install it where you prefer and bring your data in.",
+      lead="JD Industry is our ecosystem for manufacturers: start with machines connected to simple business software and grow, when needed, into a full ERP on ERPNext or custom-built software. For machine shops, metalwork, woodworking and small manufacturers.",
       links=[],
       blocks=[
+        ("cards", "Three levels", "Start where you need, grow without changing system.", "", [
+          ("Connected machines", "Simple software connected to machines: status and alarms, jobs, production and real cost per job, interconnection documented for the appraiser. From €1,500 per machine."),
+          ("Full ERP on ERPNext", "Bills of materials, work orders, stock, purchasing, sales, accounting and e-invoicing, connected to the machines. Setup from €990."),
+          ("Custom", "For unusual processes: modules or software written for you, connected to machines and ERP. First version from €3,000."),
+        ]),
+        ("cards", "Already in production", "JD Industry already runs on the shop floor.", "", [
+          ("10 machines connected in Tolmezzo", "Woodworking and metal pressing companies with machines connected to business software: status, production, jobs and costs without spreadsheets."),
+          ("SCM edge bander with Maestro Active", "Real-time status and alarms, jobs opened and closed on the machine, automatic production import and real cost per job."),
+          ("Essetre/Tecnoessetre CNC", "Several machines on one screen, events linked to jobs, work file upload, stock and offcuts, printable reports."),
+        ]),
         ("cards", "Sound familiar?", "When the software doesn't follow production.", "", [
           ("Bills of materials in Excel", "Everyone has their own version. Here they are unique, versioned and linked to work orders and costs."),
           ("Progress by phone call", "To know where an order stands you call the supervisor. Here the operator reports it from a tablet."),
@@ -300,7 +320,7 @@ PRODUCTS = {
           ("Shipping and invoice", "Delivery notes with batches and serial numbers, e-invoice sent to the Italian exchange system (SdI)."),
           ("Payment and accounting", "Due dates, payments and double-entry bookkeeping with no retyping."),
         ]),
-        ("cards", "What's included", "The whole company on the same data.", "Start with what you need now and add the rest without changing system.", [
+        ("cards", "ERPNext level", "The whole company on the same data.", "With the full ERP you start with what you need now and add the rest without changing system.", [
           ("Production", "Multi-level bills of materials, routings, workstations, work orders, scrap and rework."),
           ("Stock and traceability", "Multiple warehouses and locations, batches, serial numbers, stocktakes, minimum stock and reordering."),
           ("Purchasing and subcontracting", "Requests, quote comparison, supplier orders, materials to subcontractors and returns."),
@@ -326,7 +346,7 @@ PRODUCTS = {
           "Every person has their own user, with two-step verification for remote access. Roles separate departments: operators see their operations, not prices or accounts. Every change to a document stays in its history, with author and date.",
           "Servers and NAS units expose no ports to the internet: remote access goes through a VPN or a Cloudflare Tunnel with company login. Backups are daily, encrypted and stored off-site, with periodic restore tests. In the cloud, data stays in the European Union under a data processing agreement.",
         ], ["Personal users and two-step verification", "Permissions by department", "Change history", "VPN or Cloudflare Tunnel", "Encrypted off-site backups"]),
-        ("prices", "Setup", "Prices designed for small companies.", "One-off: design, installation, configuration and training. After the analysis you get a fixed-price quote.", [
+        ("prices", "ERPNext setup", "Prices designed for small companies.", "One-off: design, installation, configuration and training. Connecting machines is priced as interconnection. After the analysis you get a fixed-price quote.", [
           ("Essential · up to 5 users", "from €990", "Simple production, stock, sales, SdI connection, 1 day of training"),
           ("Production · up to 15 users", "from €1,900", "Plus quality, subcontracting, accounting, 3 tablet stations, 2 days of training"),
           ("Custom · over 15 users", "from €3,500", "Machine middleware, several companies or sites, integrations with other systems"),
@@ -358,18 +378,18 @@ PRODUCTS = {
           ("Training and go-live", "Tests on real orders, go-live at the start of a month without stopping production. 1 to 3 weeks for Essential, 3 to 6 for Production."),
           ("Documentation", "Configurations, procedures and access handed over to you: the system stays understandable afterwards."),
         ]),
-        ("split", "The platform", "Based on ERPNext, looked after by us.", [
+        ("split", "The platform", "The full level is based on ERPNext.", [
           "The software is based on ERPNext, an ERP platform used by thousands of companies worldwide. We design it around your production, connect it to SdI, fiscal printers, machines and tablets, and look after it over time.",
           "Your data is yours: the database can be exported at any time in standard formats and handed to you or another supplier. ERPNext is a trademark of Frappe Technologies; JDEVPRO is not affiliated with Frappe.",
         ], ["No per-user licences", "Data always exportable", "Cloud, server or NAS"]),
       ],
     ),
     dict(
-      key="akios", slug="https://akios.cloud/", external=True, nav="AKIOS",
+      key="akios", dev=True, slug="https://akios.cloud/", external=True, nav="AKIOS",
       title="AKIOS: secure updates and recovery for IoT devices | JDEVPRO",
       desc="AKIOS governs the IoT device lifecycle: signed trial updates, automatic rollback and local recovery. For European manufacturers facing the CRA.",
       card="Signed updates, automatic rollback and local recovery for European manufacturers' IoT devices.",
-      eyebrow="Product · IoT firmware and lifecycle",
+      eyebrow="Development · IoT firmware and lifecycle",
       h1="AKIOS: IoT devices that update <span>without breaking.</span>",
       lead="AKIOS is a layer living inside the device that governs its whole lifecycle: first setup, updates, rollback to the last good version and recovery. For European manufacturers who must guarantee secure updates for years, without changing cloud.",
       links=[("AKIOS website ↗", "https://akios.cloud/"), ("Pilot programme ↗", "https://akios-pilot.com/")],
@@ -412,7 +432,7 @@ PRODUCTS = {
       ],
     ),
     dict(
-      key="oryvael", slug="en-oryvael.html", nav="ORYVAEL",
+      key="oryvael", dev=True, slug="en-oryvael.html", nav="ORYVAEL",
       title="ORYVAEL: an AI-native operating system | JDEVPRO",
       desc="ORYVAEL is a Rust operating system where AI designs, writes and maintains software while authority stays with people. Research by Jacopo Ellero.",
       card="A Rust operating system where AI does the work while authority stays with people.",

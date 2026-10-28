@@ -483,7 +483,7 @@ EN_PAGES = {
            ("Support plan", "Hosting, backups, fixes and small developments included.")],
     examples=[("Welora · software for hospitality", "Multi-property platform: planning, bookings, rates, housekeeping, guest portal, payments and compliance. 25 modules.", "https://welora.it/"),
               ("Marketplace sales management software", "Products, prices, customers, orders, supplier purchases and shipments in one system, connected to marketplaces and courier.", None),
-              ("JD Industry · custom production software", "Jobs, customers, rates and costing connected directly to the machines on the shop floor.", None)],
+              ("JD Industry · production software", "Jobs, customers, rates and costing connected directly to the machines on the shop floor.", None)],
     chips=["Web, on any device", "Cloud or on-site server", "Daily backups", "Excel and PDF exports"],
     faq=[("Custom software or ERPNext-based production management?", "If you work with bills of materials, work orders, stock and invoices like most manufacturers, start from ERPNext adapted to you: it costs less and is ready sooner. Custom software pays off when processes are unusual or the software must do things an ERP does not, such as driving specific machines. Often the two are combined: ERPNext plus custom modules."),
          ("Can I start from Excel?", "Yes. We import the data you already have, with preview and duplicate checks."),

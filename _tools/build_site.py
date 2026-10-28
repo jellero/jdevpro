@@ -113,7 +113,7 @@ PAGES = [
     examples=[
       ("Welora · gestionale per strutture ricettive", "Piattaforma per più strutture: planning, prenotazioni, tariffe, pulizie, portale ospiti, pagamenti e adempimenti. 25 moduli.", "https://welora.it/"),
       ("Gestionale per la vendita sui marketplace", "Prodotti, prezzi, clienti, ordini, acquisti dal fornitore e spedizioni in un unico gestionale, collegato a marketplace e corriere.", "integrazione-software-api.html"),
-      ("JD Industry · gestionale su misura per la produzione", "Commesse, clienti, tariffe e consuntivi collegati direttamente alle macchine in officina.", "interconnessione-macchine-industria-4-0.html"),
+      ("JD Industry · gestionale di produzione", "Commesse, clienti, tariffe e consuntivi collegati direttamente alle macchine in officina.", "interconnessione-macchine-industria-4-0.html"),
     ],
     chips=["Web, da qualsiasi dispositivo", "Cloud o server aziendale", "Backup giornalieri", "Esportazioni Excel e PDF"],
     faq=[
@@ -284,7 +284,7 @@ PAGES = [
       ("Sensori e gateway in ambito industriale", "Sensori su RS-485, gateway seriali e MQTT, invio dei dati al cloud, collaudo e messa in servizio.", None),
       ("Energia dimensionata sui consumi", "Sensori e apparati alimentati dal sole, con pannelli e batterie calcolati sui consumi reali e sui mesi con meno sole. Abbiamo realizzato impianti fotovoltaici on-grid e off-grid oltre i 6 kW: sappiamo dimensionare anche quelli piccoli; parte elettrica con installatori abilitati.", "guida-monitorare-fotovoltaico-consumi.html"),
       ("Clima camera per camera", "In alberghi e affittacamere: termostati collegati alle prenotazioni, con avvisi di comfort e comandi per singola camera.", "automazione-hotel-bnb.html"),
-      ("AKIOS · ciclo di vita sicuro dei dispositivi IoT", "Il nostro prodotto per i produttori di dispositivi: aggiornamenti firmati in prova, ritorno automatico all'ultima versione buona e ripristino locale dal telefono. Già operativo sui chip Beken BK7238.", "https://akios.cloud/"),
+      ("AKIOS · ciclo di vita sicuro dei dispositivi IoT", "Il progetto che sviluppiamo per i produttori di dispositivi: aggiornamenti firmati in prova, ritorno automatico all'ultima versione buona e ripristino locale dal telefono. Già operativo sui chip Beken BK7238.", "https://akios.cloud/"),
     ],
     chips=["Sensori e contatori", "Fotovoltaico e accumuli", "Domotica", "Allarmi sul telefono", "Funziona anche offline"],
     faq=[
