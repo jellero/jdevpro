@@ -51,6 +51,7 @@ def cur(flag):
     return ' aria-current="page"' if flag else ""
 PRICES, CITIES, GUIDES, TEST = EXTRA["PRICES"], EXTRA["CITIES"], EXTRA["GUIDES"], EXTRA["TEST"]
 PRICE_NOTES, CTAS = EXTRA["PRICE_NOTES"], EXTRA["CTAS"]
+GUIDE_UPDATED, GUIDE_MODIFIED = "ottobre 2026", "2026-10-28"
 GUIDES = GUIDES + runpy.run_path(str(pathlib.Path(__file__).with_name("content_guides_more.py")))["MORE_GUIDES"]
 EN_SLUG, EN_PAGES, EN_TIERS = EXTRA["EN_SLUG"], EXTRA["EN_PAGES"], EXTRA["EN_TIERS"]
 SENSOR_TIER = {"it": ("Sensori aggiunti", "Per macchine e impianti senza nessuna interfaccia, anche vecchi: sensori e contatori rilevano stato, cicli, tempi e consumi e li portano nei vostri sistemi."),
@@ -379,12 +380,12 @@ WHY = {
 
 # incentivi in home: (eyebrow, titolo, testo, [(titolo, testo, link, etichetta)])
 INCENTIVES = {
-    "it": ("Incentivi e dimensioni", "Dalla giornata di lavoro al progetto completo.",
+    "it": ("Incentivi e progetti", "Dalla giornata di lavoro al progetto completo.",
            "Interveniamo da 500 € in su, fino a progetti che coinvolgono macchine, gestionale e impianti. Quando c'è un incentivo, lo pianifichiamo insieme all'investimento.",
            [("Iperammortamento 2026–2028", "Macchine nuove e software di produzione rientrano solo se interconnessi al sistema aziendale. Colleghiamo e documentiamo tutto per il perito.", "guida-interconnessione-iperammortamento.html", "Leggi la guida →"),
             ("Contributi FVG per hotel e alberghi diffusi", "La Regione sostiene l'ammodernamento e l'efficienza delle strutture ricettive: clima, accessi e domotica possono far parte del progetto.", "guida-contributi-fvg-hotel.html", "Leggi la guida →"),
             ("Cambio di gestionale", "Gestionale di produzione su ERPNext e migrazione dei dati dal vecchio programma, con analisi iniziale gratuita.", "gestionale-produzione-erpnext.html", "Scopri il gestionale →")]),
-    "en": ("Incentives and size", "From a day's work to a complete project.",
+    "en": ("Incentives and projects", "From a day's work to a complete project.",
            "We take on jobs from €500 up to projects covering machines, business software and installations. When an incentive applies, we plan it together with the investment.",
            [("Italian hyper-depreciation 2026–2028", "New machines and production software qualify only when interconnected with company systems. We connect and document everything for the appraiser.", "en-machine-interconnection.html", "Machine interconnection →"),
             ("Regional grants for hotels", "Friuli Venezia Giulia supports modernisation and efficiency of accommodation: climate, access and automation can be part of the project.", "en-hotel-bnb-automation.html", "Hotel automation →"),
@@ -891,10 +892,13 @@ def render_block(b):
 def guide(g):
     url = url_of(g["slug"])
     sections = "\n".join(f'<h2>{h}</h2>\n' + "\n".join(render_block(b) for b in blocks) for h, blocks in g["sections"])
-    target = next(p for p in PAGES if p["slug"] == g["cta"])
+    # la guida può portare a un servizio o a un prodotto
+    target = next((dict(p, label=p["card_title"], key=p["slug"]) for p in PAGES if p["slug"] == g["cta"]), None) or \
+        next(dict(x, label=x["nav"]) for x in PRODUCTS["it"] if x["slug"] == g["cta"])
+    cta = g.get("contact") or CTAS.get(target["key"], {}).get("it")
     jsonld = [
       {"@context": "https://schema.org", "@type": "Article", "headline": g["short"], "description": g["desc"],
-       "url": url, "inLanguage": "it", "datePublished": "2026-10-27", "dateModified": "2026-10-27",
+       "url": url, "inLanguage": "it", "datePublished": "2026-10-27", "dateModified": GUIDE_MODIFIED,
        "author": {"@type": "Person", "name": "Jacopo Ellero", "url": BASE + "chi-sono.html"},
        "publisher": {"@id": ORG_ID}, "image": BASE + "assets/og-jdevpro.jpg"},
       {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
@@ -910,26 +914,32 @@ def guide(g):
 <p class="eyebrow">Guida JDEVPRO</p>
 <h1>{g['h1']}</h1>
 <p class="hero-lead">{g['intro']}</p>
+<p class="hero-proof">Aggiornata a {GUIDE_UPDATED}</p>
 </div>
 </section>
 <section class="section section-tight section-white">
 <div class="shell article">
 {sections}
 <div class="article-cta">
-<p><strong>Ti serve una mano?</strong> {target['card_title']}: metodo, esempi e prezzi indicativi.</p>
+<p><strong>Ti serve una mano?</strong> {target['label']}: metodo, esempi e prezzi indicativi.</p>
 <a class="button primary" href="{target['slug']}">Vai alla pagina →</a>
 </div>
 </div>
 </section>
-{contact()}</main>
+{contact("it", cta)}</main>
 """
     return head(g["title"], g["desc"], g["slug"], jsonld) + body + footer()
+
+
+def guide_areas(x):
+    """Aree in cui elencare una guida: indicate a mano o quella del servizio di destinazione."""
+    return x.get("areas") or [PRIMARY_AREA[x.get("cta", "interconnessione-macchine-industria-4-0.html")]]
 
 
 def guide_index():
     groups = ""
     for a in AREAS["it"]:
-        gs = [x for x in [TEST] + GUIDES if PRIMARY_AREA[x.get("cta", "interconnessione-macchine-industria-4-0.html")] == a["key"]]
+        gs = [x for x in [TEST] + GUIDES if a["key"] in guide_areas(x)]
         if gs:
             cards = "".join(f'<a href="{x["slug"]}"><strong>{x["short"]}</strong><span>{x["desc"]}</span></a>' for x in gs)
             groups += f'<p class="eyebrow local-eyebrow"><a class="guide-area" href="{a["slug"]}">{a["nav"]} →</a></p><div class="related-grid guides-grid">{cards}</div>\n'
@@ -950,8 +960,8 @@ def guide_index():
 </section>
 {contact()}</main>
 """
-    return head("Guide su macchine 4.0, integrazioni, sicurezza e IoT | JDEVPRO",
-                "Guide pratiche: interconnessione 4.0, Amazon ed eBay, sistemi senza API, videosorveglianza, internet nei siti remoti, VoIP, check-in e fotovoltaico.",
+    return head("Guide: incentivi 2026, macchine 4.0, gestionale e hotel | JDEVPRO",
+                "Guide pratiche: iperammortamento 2026, voucher e Nuova Sabatini, Conto Termico, Fondo turismo FVG, interconnessione 4.0, ERPNext, VoIP, videosorveglianza e siti remoti.",
                 "guide.html", jsonld) + body + footer()
 
 
@@ -1282,7 +1292,7 @@ def product_block(b, bg):
         items = "".join(f'<div class="price reveal"><span>{t}</span><strong>{p}</strong><small>{d}</small></div>' for t, p, d in rows)
         intro_html = f"<p>{intro}</p>" if intro else ""
         note_html = f'<p class="price-extra">{note}</p>' if note else ""
-        return f"""<section class="section section-tight {bg}">
+        return f"""<section class="section section-tight {bg}" data-prices>
 <div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">{eyebrow}</p><h2>{h2}</h2>{intro_html}</div>
 <div class="price-grid">{items}</div>
@@ -1300,9 +1310,14 @@ def product_page(pr, lang):
     other = product_counterpart(pr, lang)
     bgs = ["section-white", "section-paper"]
     blocks = "".join(product_block(b, bgs[i % 2]) for i, b in enumerate(pr["blocks"]))
+    # il primo blocco prezzi diventa l'ancora del pulsante "Vedi i prezzi"
+    has_prices = "data-prices" in blocks
+    blocks = blocks.replace(" data-prices", ' id="prezzi"', 1).replace(" data-prices", "")
     buttons = "".join(f'<a class="button {"primary" if i == 0 else "ghost"}" href="{l}" rel="noreferrer" target="_blank">{n}</a>'
                       for i, (n, l) in enumerate(pr["links"]))
     buttons += f'<a class="button {"ghost" if pr["links"] else "primary"}" href="#contatto">{u["talk"]}</a>'
+    if has_prices:
+        buttons += f'<a class="button ghost" href="#prezzi">{"Vedi i prezzi" if lang == "it" else "See prices"}</a>'
     others = "".join(f'<a href="{x["slug"]}"{ext(x["slug"])}><strong>{x["nav"]}</strong><span>{x["card"]}</span></a>'
                      for x in PRODUCTS[lang] if x["key"] != pr["key"])
     if pr["key"] == "welora":

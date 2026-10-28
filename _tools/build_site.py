@@ -117,6 +117,7 @@ PAGES = [
     ],
     chips=["Web, da qualsiasi dispositivo", "Cloud o server aziendale", "Backup giornalieri", "Esportazioni Excel e PDF"],
     faq=[
+      ("Meglio su misura o il gestionale di produzione su ERPNext?", "Se lavorate con distinte base, ordini di lavoro, magazzino e fatture come la maggior parte delle aziende manifatturiere, conviene partire da ERPNext adattato a voi: costa meno ed è pronto prima. Il su misura conviene quando i processi sono particolari o il software deve fare cose che un ERP non fa, per esempio comandare macchine specifiche. Spesso si combinano: ERPNext con moduli su misura."),
       ("Posso partire da Excel?", "Sì. Importiamo i dati che hai già, con anteprima e controllo dei doppioni, così non riparti da zero."),
       ("Sostituisce il programma di contabilità?", "No. La contabilità e la fatturazione elettronica restano nel tuo programma; il gestionale si affianca e ci passa i dati."),
       ("Quanto costa?", "Lavoriamo a fasi con prezzo fisso concordato prima di iniziare, più un canone mensile per hosting e assistenza."),

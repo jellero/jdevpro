@@ -21,12 +21,12 @@ STATS = {
            ("JD Industry", "custom production software connected to SCM and Essetre machines", None)],
   },
   "area:strutture": {
-    "it": [("Decine", "impianti Ubiquiti in aziende di ogni tipo", "videosorveglianza-citofonia-accessi.html"),
-           ("Off-grid", "energia solare dimensionata sui consumi reali, anche per siti piccoli", "internet-offgrid-siti-remoti.html"),
-           ("VoIP", "centralini installati in aziende, alberghi e ristoranti", "centralini-voip-telefonia.html")],
-    "en": [("Dozens", "Ubiquiti systems in all kinds of companies", "en-video-surveillance-intercom-access.html"),
-           ("Off-grid", "solar power sized on real consumption, small sites included", "en-offgrid-internet.html"),
-           ("VoIP", "phone systems installed in companies, hotels and restaurants", "en-voip-phone-systems.html")],
+    "it": [("Camera per camera", "clima collegato alle prenotazioni in alberghi e affittacamere", "automazione-hotel-bnb.html"),
+           ("VoIP", "centralini installati in alberghi e ristoranti", "centralini-voip-telefonia.html"),
+           ("Rifugi e baite", "internet ed energia solare dove non arriva la linea", "internet-offgrid-siti-remoti.html")],
+    "en": [("Room by room", "climate linked to bookings in hotels and guest houses", "en-hotel-bnb-automation.html"),
+           ("VoIP", "phone systems installed in hotels and restaurants", "en-voip-phone-systems.html"),
+           ("Mountain huts", "internet and solar power where lines do not reach", "en-offgrid-internet.html")],
   },
   "area:web": {
     "it": [("Marketplace", "gestionale collegato a fornitore, SellRapido, IBS, Temu e GLS", "integrazione-software-api.html"),

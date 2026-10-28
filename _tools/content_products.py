@@ -137,6 +137,7 @@ PRODUCTS = {
           "Il gestionale si basa su ERPNext, piattaforma ERP usata da migliaia di aziende nel mondo. Noi la progettiamo sulla vostra produzione, la colleghiamo a SdI, registratori telematici, macchine e tablet, e la seguiamo nel tempo.",
           "I dati sono vostri: il database si esporta in qualsiasi momento in formati standard e può essere consegnato a voi o a un altro fornitore. ERPNext è un marchio di Frappe Technologies; JDEVPRO non è affiliata a Frappe.",
           'Approfondisci: <a href="guida-erpnext-italia-odoo.html">ERPNext in Italia e confronto con Odoo</a> e <a href="guida-iperammortamento-software-erp-mes.html">iperammortamento per il software di produzione</a>.',
+          'Processi molto particolari o macchine da comandare? Valutiamo anche un <a href="gestionale-su-misura.html">gestionale su misura</a> o moduli su misura sopra ERPNext.',
         ], ["Nessuna licenza per utente", "Dati sempre esportabili", "Cloud, server o NAS"]),
       ],
     ),

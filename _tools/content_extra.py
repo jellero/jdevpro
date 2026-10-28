@@ -165,6 +165,7 @@ GUIDES = [
         'Approfondisci: <a href="guida-iperammortamento-software-erp-mes.html">iperammortamento e software ERP e MES</a> e <a href="gestionale-produzione-erpnext.html">gestionale di produzione</a>.']),
     ],
     cta="interconnessione-macchine-industria-4-0.html",
+    contact=("La tua macchina è interconnessa?", "Mandaci marca, modello e data di consegna: entro 24 ore ti diciamo cosa serve per l'interconnessione e cosa preparare per la perizia."),
   ),
   dict(
     slug="guida-contributi-fvg-hotel.html",
@@ -193,6 +194,7 @@ GUIDES = [
        ["Sopralluogo, progetto dell'impianto, preventivo dettagliato per la domanda di contributo, installazione con installatori abilitati per la parte elettrica e documentazione finale. Per la gestione della struttura c'è anche Welora, il nostro gestionale per strutture ricettive."]),
     ],
     cta="domotica-home-assistant.html",
+    contact=("Stai preparando una domanda di contributo?", "Raccontaci la struttura e i lavori previsti: prepariamo descrizione tecnica, schemi e preventivi per clima, accessi e domotica."),
   ),
   dict(
     slug="guida-iperammortamento-software-erp-mes.html",
@@ -223,7 +225,9 @@ GUIDES = [
          "documentazione tecnica dell'integrazione per il perito;",
          "migrazione dei dati dal gestionale precedente."]]),
     ],
-    cta="interconnessione-macchine-industria-4-0.html",
+    cta="gestionale-produzione-erpnext.html",
+    areas=["industria"],
+    contact=("Vuoi sapere se il tuo software rientra?", "Dicci quali macchine hai, che gestionale usi e cosa vuoi acquistare: ti diciamo come collegarlo e cosa documentare per il perito."),
   ),
   dict(
     slug="guida-voucher-bandi-digitalizzazione-2026.html",
@@ -238,7 +242,7 @@ GUIDES = [
         "Cosa possiamo fornire: interconnessione delle macchine acquistate, gestionale di produzione installato in sede, documentazione tecnica."]),
       ("Voucher doppia transizione: il bando PID delle Camere di commercio",
        ["Le Camere di commercio, attraverso i Punti Impresa Digitale, finanziano con voucher a fondo perduto progetti di digitalizzazione, transizione ecologica e intelligenza artificiale delle micro, piccole e medie imprese. Per il triennio 2026–2029 Unioncamere ha stanziato 150 milioni; importo del voucher, percentuale, spese ammesse e scadenze li decide ogni Camera nel proprio bando.",
-        'Per il Friuli il riferimento è la <a href="https://www.pnud.camcom.it/" rel="noreferrer" target="_blank">Camera di commercio di Pordenone-Udine ↗</a> o quella della Venezia Giulia.',
+        'Per il Friuli il riferimento è la <a href="https://www.pnud.camcom.it/" rel="noreferrer" target="_blank">Camera di commercio di Pordenone-Udine ↗</a> o quella della <a href="https://www.vg.camcom.gov.it/" rel="noreferrer" target="_blank">Venezia Giulia ↗</a>; per le altre province c\'è il portale nazionale <a href="https://puntoimpresadigitale.camcom.it/" rel="noreferrer" target="_blank">Punto Impresa Digitale ↗</a>.',
         "Cosa possiamo fornire: gestionali e integrazioni, collegamento di macchine e sensori, monitoraggio dei consumi, automazioni."]),
       ("Voucher cloud e cybersecurity",
        ["Misura del Ministero delle Imprese e del Made in Italy per PMI e professionisti, con domande a sportello: finanzia soluzioni cloud, applicazioni aziendali e servizi di cybersecurity. La videosorveglianza non risulta tra le spese ammesse.",
@@ -251,6 +255,8 @@ GUIDES = [
         "Prima di firmare un ordine controlla con il commercialista se l'incentivo richiede la domanda prima dell'acquisto: in molti bandi le spese già sostenute non sono ammesse."]),
     ],
     cta="gestionale-su-misura.html",
+    areas=["industria", "web"],
+    contact=("Quale incentivo fa per te?", "Raccontaci cosa vuoi fare e quando: ti diciamo quali voci possiamo realizzare e cosa preparare per la domanda."),
   ),
   dict(
     slug="guida-erpnext-italia-odoo.html",
@@ -281,7 +287,8 @@ GUIDES = [
          "aziende con distinte base, conto lavoro e lotti da tracciare;",
          "chi vuole uscire da Excel o da un gestionale vecchio senza perdere i dati."]]),
     ],
-    cta="gestionale-su-misura.html",
+    cta="gestionale-produzione-erpnext.html",
+    areas=["industria", "web"],
   ),
   dict(
     slug="guida-conto-termico-building-automation.html",
@@ -306,6 +313,7 @@ GUIDES = [
        ["Usiamo Home Assistant con controllo locale e protocolli aperti (KNX, Modbus, Zigbee, Matter), integrato con gli impianti esistenti. La classificazione secondo la norma e la pratica GSE si fanno con un tecnico abilitato: noi prepariamo progetto, schemi e documentazione dell'impianto di automazione."]),
     ],
     cta="domotica-home-assistant.html",
+    contact=("Il tuo edificio può arrivare in classe B?", "Mandaci tipo di struttura, impianti di riscaldamento e raffrescamento e numero di stanze: ti diciamo cosa serve e come progettarlo."),
   ),
   dict(
     slug="guida-integrare-amazon-ebay-gestionale.html",
@@ -477,7 +485,8 @@ EN_PAGES = {
               ("Marketplace sales management software", "Products, prices, customers, orders, supplier purchases and shipments in one system, connected to marketplaces and courier.", None),
               ("JD Industry · custom production software", "Jobs, customers, rates and costing connected directly to the machines on the shop floor.", None)],
     chips=["Web, on any device", "Cloud or on-site server", "Daily backups", "Excel and PDF exports"],
-    faq=[("Can I start from Excel?", "Yes. We import the data you already have, with preview and duplicate checks."),
+    faq=[("Custom software or ERPNext-based production management?", "If you work with bills of materials, work orders, stock and invoices like most manufacturers, start from ERPNext adapted to you: it costs less and is ready sooner. Custom software pays off when processes are unusual or the software must do things an ERP does not, such as driving specific machines. Often the two are combined: ERPNext plus custom modules."),
+         ("Can I start from Excel?", "Yes. We import the data you already have, with preview and duplicate checks."),
          ("Does it replace my accounting software?", "No. Accounting and e-invoicing stay in your program; the new software works alongside it and passes data to it."),
          ("How much does it cost?", "Phased work at a fixed price agreed before starting, plus a monthly plan for hosting and support."),
          ("Where does the software run?", "On a cloud server or on a server at your company, depending on where the data must stay."),

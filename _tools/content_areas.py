@@ -39,11 +39,9 @@ AREAS = {
          lead="Hotel, B&B, case vacanza, rifugi e ristoranti: colleghiamo prenotazioni, serrature, clima, luci, telecamere, telefoni e connessione, e li controlli dal telefono. Con installatori abilitati per la parte elettrica.",
          who=["Hotel e alberghi diffusi", "B&B e affittacamere", "Case vacanza", "Rifugi e baite", "Ristoranti"],
          products=["welora"],
-         proof=[("Welora", "Il nostro gestionale per strutture ricettive, tutto incluso a 29 € al mese: in arrivo il 15 febbraio 2027."),
-                ("Decine di impianti Ubiquiti", "In aziende di vario tipo: antenne, telecamere, citofoni e controllo accessi con riconoscimento facciale e targhe."),
-                ("Clima camera per camera", "In alberghi e affittacamere: termostati collegati alle prenotazioni, con avvisi di comfort."),
+         proof=[("Clima camera per camera", "In alberghi e affittacamere: termostati collegati alle prenotazioni, con avvisi di comfort."),
                 ("Centralini VoIP installati", "In aziende, alberghi e ristoranti, con Asterisk e 3CX e telefoni Grandstream e Yealink."),
-                ("Energia off-grid", "Impianti oltre i 6 kW già realizzati: anche quello piccolo per un sito isolato è dimensionato bene.")],
+                ("Energia off-grid per rifugi e baite", "Impianti oltre i 6 kW già realizzati: anche quello piccolo per un sito isolato è dimensionato bene.")],
          guides=["guida-contributi-fvg-hotel.html", "guida-conto-termico-building-automation.html", "guida-check-in-senza-chiavi.html", "guida-videosorveglianza-norme.html", "guida-passare-centralino-voip.html", "guida-internet-siti-remoti.html"]),
     dict(key="web", slug="software-web.html", nav="Software e web",
          title="Gestionali su misura, integrazioni e siti web | JDEVPRO",
@@ -81,11 +79,9 @@ AREAS = {
          lead="Hotels, B&Bs, holiday homes, mountain huts and restaurants: we connect bookings, locks, climate, lights, cameras, phones and connectivity, and you control them from your phone. With licensed electricians for the electrical work.",
          who=["Hotels and scattered hotels", "B&Bs and guest houses", "Holiday homes", "Mountain huts", "Restaurants"],
          products=["welora"],
-         proof=[("Welora", "Our hospitality management software, everything included for €29 a month: launching on 15 February 2027."),
-                ("Dozens of Ubiquiti systems", "In all kinds of companies: antennas, cameras, intercoms and access control with face and plate recognition."),
-                ("Room-by-room climate", "In hotels and guest houses: thermostats tied to bookings, with comfort alerts."),
+         proof=[("Room-by-room climate", "In hotels and guest houses: thermostats tied to bookings, with comfort alerts."),
                 ("VoIP phone systems installed", "In companies, hotels and restaurants, with Asterisk and 3CX and Grandstream and Yealink phones."),
-                ("Off-grid power", "Systems above 6 kW already built: even a small one for an isolated site is properly sized.")],
+                ("Off-grid power for mountain huts", "Systems above 6 kW already built: even a small one for an isolated site is properly sized.")],
          guides=[]),
     dict(key="web", slug="en-software-web.html", nav="Software and web",
          title="Custom business software, integrations and websites | JDEVPRO",
@@ -130,6 +126,10 @@ WHERE_PAGE = dict(slug="dove-lavoriamo.html", nav="Dove lavoriamo",
                   lead="Lavoriamo con aziende e strutture di tutta la regione e del Veneto. Veniamo sul posto per analisi, sopralluoghi e collaudi; sviluppo e assistenza li seguiamo anche da remoto.")
 
 CALLOUTS = {
+  "gestionale-su-misura.html": {
+    "it": ("Produzione con distinte base, magazzino e fattura elettronica? Prima di un gestionale su misura guarda il <strong>gestionale di produzione su ERPNext</strong>, da 990 €.", "Scopri il gestionale →", "gestionale-produzione-erpnext.html"),
+    "en": ("Production with bills of materials, stock and e-invoicing? Before custom software, look at our <strong>ERPNext-based production management</strong>, from €990.", "Discover it →", "en-erpnext-manufacturing.html"),
+  },
   "domotica-home-assistant.html": {
     "it": ("Questa pagina riguarda l'impianto: clima, luci, sensori ed energia. Per check-in online, codici di accesso e adempimenti legati alla prenotazione c'è <strong>Automazione per hotel e B&B</strong>.", "Vai alla pagina →", "automazione-hotel-bnb.html"),
     "en": ("This page is about the installation: climate, lights, sensors and energy. For online check-in, access codes and compliance tied to bookings see <strong>Hotel and B&B automation</strong>.", "Go to the page →", "en-hotel-bnb-automation.html"),
@@ -147,5 +147,29 @@ CARD_OVERRIDES = {
                card_points=["Gestionale, fornitori e corrieri", "Documenti e fatture elettroniche", "Anche senza API: web, seriale, Modbus"]),
     "en": dict(card_who="Companies that need business software, machines, suppliers and couriers to talk.",
                card_points=["Business software, suppliers and couriers", "Documents and e-invoices", "Even without APIs: web, serial, Modbus"]),
+  },
+  ("strutture", "videosorveglianza-citofonia-accessi.html"): {
+    "it": dict(card_who="Hotel, B&B, rifugi e ristoranti che vogliono controllare ingressi, parcheggi e aree comuni anche da remoto.",
+               card_points=["Telecamere su ingressi e parcheggi", "Videocitofono sul telefono della reception", "Cancelli e accessi da remoto"]),
+    "en": dict(card_who="Hotels, B&Bs, mountain huts and restaurants that want to watch entrances, car parks and common areas remotely.",
+               card_points=["Cameras on entrances and car parks", "Video intercom on the reception phone", "Gates and access, remotely"]),
+  },
+  ("strutture", "centralini-voip-telefonia.html"): {
+    "it": dict(card_who="Hotel e ristoranti che vogliono un centralino moderno, con la reception raggiungibile anche dal cellulare.",
+               card_points=["Interni per reception, camere e cucina", "Chiamate deviate sul cellulare", "Citofoni collegati al centralino"]),
+    "en": dict(card_who="Hotels and restaurants that want a modern phone system, with reception reachable on the mobile too.",
+               card_points=["Extensions for reception, rooms and kitchen", "Calls forwarded to the mobile", "Intercoms connected to the system"]),
+  },
+  ("strutture", "internet-offgrid-siti-remoti.html"): {
+    "it": dict(card_who="Rifugi, baite, agriturismi e strutture in quota senza linea fissa o senza rete elettrica.",
+               card_points=["Wi-Fi per gli ospiti anche in quota", "Internet via 4G/5G, ponte radio o satellite", "Energia solare con batterie"]),
+    "en": dict(card_who="Mountain huts, chalets, farm stays and high-altitude properties with no fixed line or no power grid.",
+               card_points=["Guest Wi-Fi even at altitude", "Internet via 4G/5G, radio link or satellite", "Solar power with batteries"]),
+  },
+  ("strutture", "monitoraggio-iot.html"): {
+    "it": dict(card_who="Hotel e ristoranti che vogliono tenere d'occhio consumi, celle frigo e impianti.",
+               card_points=["Consumi per camera o per struttura", "Temperature di celle e frigoriferi", "Avvisi su telefono per guasti e perdite"]),
+    "en": dict(card_who="Hotels and restaurants that want to keep an eye on consumption, cold rooms and installations.",
+               card_points=["Consumption per room or property", "Cold-room and fridge temperatures", "Phone alerts for faults and leaks"]),
   },
 }
