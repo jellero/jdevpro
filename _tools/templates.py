@@ -145,7 +145,7 @@ PRICE_EN = {"Collegamento di una macchina": "Connecting one machine", "Dati macc
             "anagrafiche, articoli, giacenze o saldi · da file o esportazione": "master data, items, stock or balances · from file or export",
             "Estrazione da database senza esportazione": "Extraction from a database with no export",
             "Access, SQL Server, DBF, Firebird e simili": "Access, SQL Server, DBF, Firebird and similar",
-            "Progetto e installazione Home Assistant": "Home Assistant design and installation",
+            "Progetto e installazione dell'impianto domotico": "Building automation design and installation",
             "hardware dedicato, rete separata, backup · dispositivi esclusi": "dedicated hardware, separate network, backups · devices excluded",
             "Camera o zona configurata": "Room or zone set up",
             "per camera o zona · dispositivi esclusi": "per room or zone · devices excluded"}
