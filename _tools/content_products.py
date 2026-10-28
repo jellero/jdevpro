@@ -50,12 +50,12 @@ PRODUCTS = {
     ),
     dict(
       key="erp", slug="gestionale-produzione-erpnext.html", nav="Gestionale di produzione",
-      title="Gestionale di produzione per piccole aziende, basato su ERPNext | JDEVPRO",
-      desc="Distinte base, ordini di lavoro, magazzino e fattura elettronica SdI per piccole aziende manifatturiere. Basato su ERPNext, in cloud, su server o NAS. Avvio da 990 €.",
+      title="Software gestionale di produzione per officine, carpenterie e falegnamerie | JDEVPRO",
+      desc="Gestionale di produzione per officina meccanica, carpenteria metallica e falegnameria: distinta base, ordini di lavoro, magazzino, fattura elettronica. Basato su ERPNext, da 990 €.",
       card="Distinte base, ordini di lavoro, magazzino e fattura elettronica per piccole aziende manifatturiere. Avvio da 990 €.",
       eyebrow="Prodotto · Gestionale di produzione basato su ERPNext",
       h1="Sai a che punto è ogni ordine, <span>senza girare per il reparto.</span>",
-      lead="Distinte base, ordini di lavoro, magazzino, acquisti, vendite e fatture elettroniche in un solo gestionale, per piccole aziende manifatturiere e artigiane. Lo progettiamo sulla vostra produzione, lo installiamo dove preferite e ci portiamo dentro i vostri dati.",
+      lead="Distinte base, ordini di lavoro, magazzino, acquisti, vendite e fatture elettroniche in un solo gestionale, per officine meccaniche, carpenterie metalliche, falegnamerie e piccole aziende manifatturiere. Lo progettiamo sulla vostra produzione, lo installiamo dove preferite e ci portiamo dentro i vostri dati.",
       links=[],
       blocks=[
         ("cards", "Vi riconoscete?", "Quando il gestionale non segue la produzione.", "", [
@@ -136,6 +136,7 @@ PRODUCTS = {
         ("split", "La piattaforma", "Basato su ERPNext, seguito da noi.", [
           "Il gestionale si basa su ERPNext, piattaforma ERP usata da migliaia di aziende nel mondo. Noi la progettiamo sulla vostra produzione, la colleghiamo a SdI, registratori telematici, macchine e tablet, e la seguiamo nel tempo.",
           "I dati sono vostri: il database si esporta in qualsiasi momento in formati standard e può essere consegnato a voi o a un altro fornitore. ERPNext è un marchio di Frappe Technologies; JDEVPRO non è affiliata a Frappe.",
+          'Approfondisci: <a href="guida-erpnext-italia-odoo.html">ERPNext in Italia e confronto con Odoo</a> e <a href="guida-iperammortamento-software-erp-mes.html">iperammortamento per il software di produzione</a>.',
         ], ["Nessuna licenza per utente", "Dati sempre esportabili", "Cloud, server o NAS"]),
       ],
     ),
