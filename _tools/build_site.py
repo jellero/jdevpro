@@ -77,6 +77,7 @@ PAGES = [
       ("Modificate il programma della macchina?", "No. Leggiamo e scriviamo solo attraverso le interfacce previste dal costruttore. Il programma della macchina resta di chi l'ha fatto."),
       ("Con quali macchine funziona?", "Con qualsiasi macchina, di qualsiasi marca: se ha un'interfaccia (OPC UA, MTConnect, PLC, Modbus, interfaccia web o porta seriale) la usiamo; se non ce l'ha aggiungiamo sensori e contatori. In produzione abbiamo già macchine SCM con Maestro Active ed Essetre/Tecnoessetre. Prima del preventivo verifichiamo cosa offre la tua."),
       ("E se la macchina è vecchia o non ha interfacce?", "Si collega lo stesso: con un programma ponte sulla porta seriale o Modbus, oppure con sensori e contatori che rilevano stato, cicli e consumi. Sulle macchine datate il collegamento serve per tempi, costi e produzione; per le agevolazioni valgono i requisiti del bene, da verificare con il perito."),
+      ("Lavorate anche fuori dal Friuli?", "Sì. Se la macchina è collegata alla rete aziendale, l'integrazione si fa da remoto con un accesso sicuro, ovunque si trovi. Dove serve veniamo in trasferta per sopralluogo, sensori e collaudo."),
       ("Fate anche i cablaggi?", INSTALLERS),
     ],
   ),

@@ -84,7 +84,7 @@ UI = {
              c_steps='<li><strong>Scrivici</strong> i sistemi presenti e l\'obiettivo, anche in poche righe.</li><li><strong>Ti rispondiamo entro 24 ore</strong> con domande mirate o una proposta di incontro.</li><li><strong>Definiamo</strong> insieme perimetro, tempi e modalità di lavoro.</li>',
              c_steps_label="Come funziona", c_mail="Scrivici una email", copy="Copia", copied="Copiato ✓",
              wa="Scrivici su WhatsApp ↗",
-             li="Oppure su LinkedIn ↗", where="Tolmezzo (UD) · Friuli Venezia Giulia · Veneto · anche da remoto",
+             li="Oppure su LinkedIn ↗", where="Tolmezzo (UD) · Friuli Venezia Giulia e Veneto · trasferte · da remoto ovunque",
              f_who="Jacopo Ellero · Tolmezzo (UD)", privacy="privacy.html", cookie="cookie-policy.html",
              mailto=MAILTO, wa_url=WA),
   "en": dict(lang="en", locale="en_GB", skip="Skip to content", menu="Open menu", navlabel="Main navigation",
@@ -105,7 +105,7 @@ UI = {
              c_steps="<li><strong>Write to us</strong> about your current systems and goal, even in a few lines.</li><li><strong>We reply within 24 hours</strong> with focused questions or a proposal for a meeting.</li><li><strong>We define</strong> scope, timeline and way of working together.</li>",
              c_steps_label="How it works", c_mail="Send us an email", copy="Copy", copied="Copied ✓",
              wa="Message us on WhatsApp ↗",
-             li="Or on LinkedIn ↗", where="Tolmezzo (Udine), Italy · north-east Italy · remote projects",
+             li="Or on LinkedIn ↗", where="Tolmezzo (Udine), Italy · north-east Italy · travel · remote work anywhere",
              f_who="Jacopo Ellero · Tolmezzo, Italy", privacy="privacy-en.html", cookie="cookie-policy-en.html",
              mailto=MAILTO_EN, wa_url=WA_EN),
 }
@@ -406,7 +406,7 @@ def home(lang="it"):
     if lang == "it":
         t = dict(eyebrow="Software su misura e integrazioni · Friuli Venezia Giulia",
                  h1="Colleghiamo macchine, gestionali e dispositivi. <span>E li teniamo funzionanti.</span>",
-                 lead="JDEVPRO nasce in Friuli con Jacopo Ellero. Sviluppiamo gestionali su misura, colleghiamo macchine, sensori e dispositivi ai sistemi aziendali e seguiamo tutto in produzione, per aziende e strutture del Friuli Venezia Giulia e del Veneto.",
+                 lead="JDEVPRO nasce in Friuli con Jacopo Ellero. Sviluppiamo gestionali su misura, colleghiamo macchine, sensori e dispositivi ai sistemi aziendali e seguiamo tutto in produzione, per aziende e strutture del Friuli Venezia Giulia e del Veneto, in trasferta dove serve e da remoto ovunque: se la macchina è collegata alla rete, la distanza non è un limite.",
                  b1="Scegli la tua area", b2="Scrivici", ae="Da dove parti?", ah="Tre aree, un solo interlocutore.",
                  enter="Entra nell'area →",
                  proof=[("JD Industry", "Gestionale di produzione collegato a macchine SCM ed Essetre.", "gestionale-produzione-erpnext.html"),
@@ -418,7 +418,7 @@ def home(lang="it"):
     else:
         t = dict(eyebrow="Custom software and integrations · North-east Italy",
                  h1="We connect machines, business software and devices. <span>And keep them running.</span>",
-                 lead="JDEVPRO was founded in Friuli by Jacopo Ellero. We build custom business software, connect machines, sensors and devices to company systems and look after everything in production, for companies and properties in north-east Italy and remotely.",
+                 lead="JDEVPRO was founded in Friuli by Jacopo Ellero. We build custom business software, connect machines, sensors and devices to company systems and look after everything in production, for companies and properties in north-east Italy, travelling where needed and working remotely anywhere: if the machine is on the network, distance is no limit.",
                  b1="Choose your area", b2="Write to us", ae="Where do you start?", ah="Three areas, one partner.",
                  enter="Enter the area →",
                  proof=[("JD Industry", "Production software connected to SCM and Essetre machines.", "en-erpnext-manufacturing.html"),

@@ -468,6 +468,7 @@ EN_PAGES = {
          ("Do you modify the machine program?", "No. We only read and write through the interfaces provided by the manufacturer."),
          ("Which machines does it work with?", "Any machine, of any brand: if it has an interface (OPC UA, MTConnect, PLC, Modbus, web interface or serial port) we use it; if not, we add sensors and meters. We already have SCM machines with Maestro Active and Essetre/Tecnoessetre in production. Before quoting we check what yours offers."),
          ("What if the machine is old or has no interface?", "It can still be connected: with a bridge program on the serial or Modbus port, or with sensors and meters detecting status, cycles and consumption. On older machines the connection serves times, costs and production; for incentives the asset requirements apply, to be checked with your appraiser."),
+         ("Do you work outside Friuli?", "Yes. If the machine is on the company network, integration is done remotely through secure access, wherever it is. Where needed we travel for the site survey, sensors and commissioning."),
          ("Do you do the wiring?", INSTALLERS_EN)],
   ),
   "gestionale-su-misura.html": dict(
