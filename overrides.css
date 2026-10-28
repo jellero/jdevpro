@@ -37,7 +37,7 @@
   padding: 30px;
   overflow: hidden;
   background:
-    radial-gradient(circle at 100% 0%, rgba(45,212,191,.12), transparent 34%),
+    radial-gradient(circle at 100% 0%, rgba(96,165,250,.12), transparent 34%),
     linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.025));
 }
 .system-flow-intro { max-width: 520px; }
@@ -101,7 +101,7 @@
 
 .contact-steps { list-style: none; counter-reset: step; margin: 28px 0 0; padding: 0; display: grid; gap: 12px; max-width: 650px; }
 .contact-steps li { counter-increment: step; position: relative; padding-left: 40px; color: #9bb0bf; font-size: .92rem; }
-.contact-steps li::before { content: counter(step); position: absolute; left: 0; top: -1px; width: 26px; height: 26px; display: grid; place-items: center; border-radius: 8px; background: rgba(45,212,191,.12); color: var(--teal); font: 800 .75rem/1 ui-monospace, monospace; }
+.contact-steps li::before { content: counter(step); position: absolute; left: 0; top: -1px; width: 26px; height: 26px; display: grid; place-items: center; border-radius: 8px; background: rgba(96,165,250,.12); color: var(--teal); font: 800 .75rem/1 ui-monospace, monospace; }
 .contact-steps strong { color: #fff; }
 .contact-copy { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 16px; border: 1px solid rgba(255,255,255,.18); border-radius: 11px; background: rgba(255,255,255,.04); color: #fff; font: inherit; font-size: .88rem; cursor: pointer; }
 .contact-actions .contact-copy span { color: #fff; font-size: .88rem; }
