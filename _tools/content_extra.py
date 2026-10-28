@@ -118,9 +118,9 @@ CITIES = [
 GUIDES = [
   dict(
     slug="guida-interconnessione-iperammortamento.html",
-    title="Interconnessione 4.0: requisiti, perizia e interconnessione tardiva | JDEVPRO",
+    title="Interconnessione 4.0: requisiti, perizia, tardiva | JDEVPRO",
     short="Interconnessione 4.0: requisiti, perizia e tempi",
-    desc="Interconnessione 4.0 per l'iperammortamento 2026: requisiti delle macchine, cosa verifica la perizia, interconnessione tardiva e per quanto tempo la macchina deve restare collegata.",
+    desc="Interconnessione 4.0 per l'iperammortamento 2026: requisiti, perizia, interconnessione tardiva e per quanto tempo restare collegati.",
     h1="Interconnessione 4.0: <span>requisiti, perizia e interconnessione tardiva.</span>",
     intro="L'iperammortamento 2026–2028 riconosce la maggiorazione solo ai beni interconnessi al sistema aziendale. Ecco cosa si intende, cosa si controlla in pratica e gli errori più comuni.",
     sections=[
@@ -169,9 +169,9 @@ GUIDES = [
   ),
   dict(
     slug="guida-contributi-fvg-hotel.html",
-    title="Fondo turismo 2026 FVG e contributi alberghi diffusi: cosa finanziare | JDEVPRO",
+    title="Fondo turismo 2026 FVG e contributi alberghi | JDEVPRO",
     short="Fondo turismo 2026 FVG e contributi alberghi",
-    desc="Fondo turismo 2026 FVG, contributi alberghi diffusi FVG e contributi per l'efficienza energetica degli alberghi: cosa si può finanziare tra clima, accessi e domotica.",
+    desc="Fondo turismo 2026 FVG e contributi per alberghi diffusi: cosa si può finanziare tra clima, accessi e domotica.",
     h1="Fondo turismo 2026 FVG e contributi alberghi: <span>cosa si può finanziare.</span>",
     intro="La Regione Friuli Venezia Giulia sostiene con più strumenti l'ammodernamento delle strutture ricettive. Clima per camera, accessi senza chiavi, domotica e monitoraggio dei consumi spesso possono far parte del progetto: conviene pensarli insieme ai lavori.",
     sections=[
@@ -198,9 +198,9 @@ GUIDES = [
   ),
   dict(
     slug="guida-iperammortamento-software-erp-mes.html",
-    title="Iperammortamento 2026 software: ERP, MES e gestionale, cosa rientra | JDEVPRO",
+    title="Iperammortamento 2026 software ERP e MES | JDEVPRO",
     short="Iperammortamento 2026: software ERP, MES e gestionale",
-    desc="Quali software rientrano nell'iperammortamento 2026: ERP e MES integrati con la produzione, gestionale di base escluso, il nodo cloud e SaaS e come documentare l'integrazione.",
+    desc="Quali software rientrano nell'iperammortamento 2026: ERP e MES integrati con la produzione, gestionale di base escluso, cloud e SaaS.",
     h1="Iperammortamento 2026 e software: <span>ERP, MES e gestionale, cosa rientra.</span>",
     intro="L'iperammortamento 2026–2028 non riguarda solo le macchine. Anche software, sistemi e piattaforme possono rientrare, a una condizione: devono servire davvero la produzione automatizzata. Ecco cosa dicono le prime interpretazioni e come prepararsi.",
     sections=[
@@ -231,9 +231,9 @@ GUIDES = [
   ),
   dict(
     slug="guida-voucher-bandi-digitalizzazione-2026.html",
-    title="Voucher digitalizzazione 2026, Nuova Sabatini e voucher cloud | JDEVPRO",
+    title="Voucher digitalizzazione 2026 e Nuova Sabatini | JDEVPRO",
     short="Voucher e bandi 2026 per digitalizzare l'azienda",
-    desc="Nuova Sabatini 2026, voucher doppia transizione delle Camere di commercio (bando PID), voucher cloud e cybersecurity MIMIT: come funzionano e cosa si può finanziare.",
+    desc="Nuova Sabatini 2026, voucher doppia transizione delle Camere di commercio e voucher cloud e cybersecurity: cosa finanziano.",
     h1="Voucher e bandi 2026: <span>come finanziare la digitalizzazione dell'azienda.</span>",
     intro="Oltre all'iperammortamento, nel 2026 ci sono altri strumenti per far costare meno software, integrazioni e macchine collegate. Ecco i principali, cosa coprono e cosa possiamo realizzare per ciascuno.",
     sections=[
@@ -260,7 +260,7 @@ GUIDES = [
   ),
   dict(
     slug="guida-erpnext-italia-odoo.html",
-    title="ERPNext in Italia: fattura elettronica, produzione e confronto con Odoo | JDEVPRO",
+    title="ERPNext in Italia e confronto con Odoo | JDEVPRO",
     short="ERPNext in Italia e confronto con Odoo",
     desc="ERPNext per le aziende italiane: produzione, fattura elettronica SdI, installazione in sede o in cloud, costi senza licenze per utente e differenze con Odoo.",
     h1="ERPNext in Italia: <span>cosa fa e come si confronta con Odoo.</span>",
@@ -292,9 +292,9 @@ GUIDES = [
   ),
   dict(
     slug="guida-conto-termico-building-automation.html",
-    title="Conto Termico 3.0 building automation: BACS classe B per hotel e aziende | JDEVPRO",
+    title="Conto Termico 3.0 e building automation (BACS) | JDEVPRO",
     short="Conto Termico 3.0 e building automation",
-    desc="Il Conto Termico 3.0 incentiva la building automation (BACS) negli edifici esistenti: classe B secondo UNI EN ISO 52120-1, cosa significa per hotel e aziende e come progettarla.",
+    desc="Conto Termico 3.0 e building automation: cosa vuol dire classe B (UNI EN ISO 52120-1) per hotel e aziende e come progettarla.",
     h1="Conto Termico 3.0 e building automation: <span>clima e impianti intelligenti, incentivati.</span>",
     intro="Con il Conto Termico 3.0 anche le imprese possono ottenere un incentivo per i sistemi di automazione e controllo degli edifici, i BACS. È un'occasione per hotel, uffici e capannoni che vogliono gestire clima e consumi in modo serio.",
     sections=[
@@ -540,7 +540,7 @@ EN_PAGES = {
     nav="Home Assistant", card_title="Professional automation with Home Assistant",
     card_who="Hotels, restaurants and properties that want reliable automation that still works in ten years.",
     card_points=["Designed to last, not just integrations", "Works without internet", "Climate, lights, cold rooms, energy and alarms"],
-    title="Professional Home Assistant automation for hotels and restaurants | JDEVPRO",
+    title="Home Assistant for hotels and restaurants | JDEVPRO",
     desc="We design Home Assistant systems for hotels and restaurants: local control, open standards, verified updates, backups and documentation. Built to last.",
     service_type="Professional automation with Home Assistant",
     eyebrow="Home Assistant · Hotels · Restaurants",
@@ -583,7 +583,7 @@ EN_PAGES = {
     card_who="Companies changing business software, retiring an old program or with data scattered across databases and Excel.",
     card_points=["From databases, business software and Excel", "Clean-up, duplicates and checks", "Final reconciliation report"],
     title="Data migration from legacy software and databases | JDEVPRO",
-    desc="We move master data, items, stock, documents and balances from legacy software, Access, SQL Server, DBF or Excel to your new system, with clean-up and a reconciliation report.",
+    desc="We move master data, items, stock and balances from legacy software, databases or Excel to your new system, with a reconciliation report.",
     service_type="Data migration between business software and databases",
     eyebrow="Data migration · Business software and databases",
     h1="Data migration: <span>change software, lose nothing.</span>",

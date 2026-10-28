@@ -50,12 +50,12 @@ PRODUCTS = {
     ),
     dict(
       key="erp", slug="gestionale-produzione-erpnext.html", nav="JD Industry",
-      title="JD Industry: gestionale di produzione per officine, carpenterie e falegnamerie | JDEVPRO",
-      desc="JD Industry, il gestionale di produzione per officina meccanica, carpenteria metallica e falegnameria: macchine collegate, ERP completo su ERPNext o sistema su misura.",
+      title="JD Industry: gestionale di produzione per officine | JDEVPRO",
+      desc="JD Industry, gestionale di produzione per officine meccaniche, carpenterie e falegnamerie: macchine collegate, ERP su ERPNext o su misura.",
       card="L'ecosistema per la produzione: macchine collegate al gestionale, ERP completo su ERPNext o sistema su misura.",
       eyebrow="Prodotto · Ecosistema per la produzione",
-      h1="Sai a che punto è ogni ordine, <span>senza girare per il reparto.</span>",
-      lead="JD Industry è il nostro ecosistema per chi produce: si parte dalle macchine collegate a un gestionale semplice e si arriva, quando serve, all'ERP completo su ERPNext o a un sistema scritto su misura. Per officine meccaniche, carpenterie metalliche, falegnamerie e piccole aziende manifatturiere.",
+      h1="JD Industry: il gestionale di produzione <span>che parte dalle macchine.</span>",
+      lead="Sai a che punto è ogni ordine, senza girare per il reparto. JD Industry è il nostro ecosistema per chi produce: si parte dalle macchine collegate a un gestionale semplice e si arriva, quando serve, all'ERP completo su ERPNext o a un sistema scritto su misura. Per officine meccaniche, carpenterie metalliche, falegnamerie e piccole aziende manifatturiere.",
       links=[],
       blocks=[
         ("cards", "Tre livelli", "Si parte da dove serve, si cresce senza cambiare sistema.", "", [
@@ -285,12 +285,12 @@ PRODUCTS = {
     ),
     dict(
       key="erp", slug="en-erpnext-manufacturing.html", nav="JD Industry",
-      title="JD Industry: production management for machine shops and woodworking | JDEVPRO",
+      title="JD Industry: production management software | JDEVPRO",
       desc="JD Industry, production management for machine shops, metalwork and woodworking: connected machines, full ERP on ERPNext or custom software.",
       card="The production ecosystem: machines connected to business software, full ERP on ERPNext or custom software.",
       eyebrow="Product · Production ecosystem",
-      h1="Know where every order stands, <span>without walking the shop floor.</span>",
-      lead="JD Industry is our ecosystem for manufacturers: start with machines connected to simple business software and grow, when needed, into a full ERP on ERPNext or custom-built software. For machine shops, metalwork, woodworking and small manufacturers.",
+      h1="JD Industry: production management <span>that starts from the machines.</span>",
+      lead="Know where every order stands without walking the shop floor. JD Industry is our ecosystem for manufacturers: start with machines connected to simple business software and grow, when needed, into a full ERP on ERPNext or custom-built software. For machine shops, metalwork, woodworking and small manufacturers.",
       links=[],
       blocks=[
         ("cards", "Three levels", "Start where you need, grow without changing system.", "", [

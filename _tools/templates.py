@@ -206,6 +206,7 @@ def head(title, desc, slug, jsonld, lang="it", alternates=None, robots="index,fo
 <html lang="{u['lang']}">
 <head>
 <meta charset="utf-8"/>
+<script>document.documentElement.classList.add("js")</script>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>{escape(title)}</title>
 <meta content="{escape(desc)}" name="description"/>
@@ -892,11 +893,15 @@ def render_block(b):
 
 def guide(g):
     url = url_of(g["slug"])
-    sections = "\n".join(f'<h2>{h}</h2>\n' + "\n".join(render_block(b) for b in blocks) for h, blocks in g["sections"])
+    parts = [f'<h2>{h}</h2>\n' + "\n".join(render_block(b) for b in blocks) for h, blocks in g["sections"]]
     # la guida può portare a un servizio o a un prodotto
     target = next((dict(p, label=p["card_title"], key=p["slug"]) for p in PAGES if p["slug"] == g["cta"]), None) or \
         next(dict(x, label=x["nav"]) for x in PRODUCTS["it"] if x["slug"] == g["cta"])
     cta = g.get("contact") or CTAS.get(target["key"], {}).get("it")
+    inline_h = cta[0] if cta else "Vuoi capire se fa per te?"
+    parts.insert(1, f'<div class="article-cta"><p><strong>{inline_h}</strong> Rispondiamo per iscritto entro 24 ore.</p>'
+                    f'<a class="button ghost" href="#contatto">Scrivici →</a></div>')
+    sections = "\n".join(parts)
     jsonld = [
       {"@context": "https://schema.org", "@type": "Article", "headline": g["short"], "description": g["desc"],
        "url": url, "inLanguage": "it", "datePublished": "2026-10-27", "dateModified": GUIDE_MODIFIED,
@@ -962,7 +967,7 @@ def guide_index():
 {contact()}</main>
 """
     return head("Guide: incentivi 2026, macchine 4.0, gestionale e hotel | JDEVPRO",
-                "Guide pratiche: iperammortamento 2026, voucher e Nuova Sabatini, Conto Termico, Fondo turismo FVG, interconnessione 4.0, ERPNext, VoIP, videosorveglianza e siti remoti.",
+                "Guide pratiche: iperammortamento 2026, voucher, Conto Termico, Fondo turismo FVG, interconnessione 4.0, ERPNext, VoIP e videosorveglianza.",
                 "guide.html", jsonld) + body + footer()
 
 
