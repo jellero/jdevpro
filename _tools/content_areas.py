@@ -44,7 +44,7 @@ AREAS = {
                 ("Clima camera per camera", "In alberghi e affittacamere: termostati collegati alle prenotazioni, con avvisi di comfort."),
                 ("Centralini VoIP installati", "In aziende, alberghi e ristoranti, con Asterisk e 3CX e telefoni Grandstream e Yealink."),
                 ("Energia off-grid", "Impianti oltre i 6 kW già realizzati: anche quello piccolo per un sito isolato è dimensionato bene.")],
-         guides=["guida-check-in-senza-chiavi.html", "guida-videosorveglianza-norme.html", "guida-passare-centralino-voip.html", "guida-internet-siti-remoti.html"]),
+         guides=["guida-contributi-fvg-hotel.html", "guida-check-in-senza-chiavi.html", "guida-videosorveglianza-norme.html", "guida-passare-centralino-voip.html", "guida-internet-siti-remoti.html"]),
     dict(key="web", slug="software-web.html", nav="Software e web",
          title="Gestionali su misura, integrazioni e siti web | JDEVPRO",
          desc="Gestionali su misura, integrazioni con Amazon, eBay, corrieri e fatturazione elettronica, siti e piattaforme web gestibili in autonomia. Friuli e remoto.",

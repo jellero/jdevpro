@@ -123,7 +123,7 @@ PRODUCTS = {
           ("Manutenzione server o NAS", "29 € al mese", "Aggiornamenti, backup verificati, monitoraggio remoto"),
           ("Assistenza Base", "79 € al mese", "2 ore al mese, risposta entro 1 giorno lavorativo"),
           ("Assistenza Plus", "169 € al mese", "5 ore al mese, risposta entro 4 ore lavorative, tablet e middleware"),
-          ("Assistenza a chiamata", "50 € l'ora", "Minimo 30 minuti; in sede più trasferta"),
+          ("Assistenza a chiamata", "50 € l'ora", "Da remoto minimo 30 minuti; in sede minimo mezza giornata, più trasferta"),
           ("Pacchetto 10 ore prepagate", "450 €", "Valido 12 mesi"),
         ], "Prezzi IVA esclusa. Non comprendono hardware (server, NAS, tablet, lettori barcode), registratore telematico e canale SdI, che dipende dal volume di fatture. Nessuna licenza per utente."),
         ("flow", "Come si parte", "Dalla prima telefonata al primo ordine di lavoro.", [
@@ -346,7 +346,7 @@ PRODUCTS = {
           ("Server or NAS maintenance", "€29 a month", "Updates, verified backups, remote monitoring"),
           ("Basic support", "€79 a month", "2 hours a month, reply within 1 working day"),
           ("Plus support", "€169 a month", "5 hours a month, reply within 4 working hours, tablets and middleware"),
-          ("On-call support", "€50 an hour", "Minimum 30 minutes; on-site plus travel"),
+          ("On-call support", "€50 an hour", "Remote minimum 30 minutes; on-site minimum half a day, plus travel"),
           ("10 prepaid hours", "€450", "Valid 12 months"),
         ], "Prices exclude VAT. Hardware (server, NAS, tablets, barcode readers), fiscal printer and SdI channel fees, which depend on invoice volume, are not included. No per-user licences."),
         ("flow", "Getting started", "From the first call to the first work order.", [

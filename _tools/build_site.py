@@ -11,7 +11,7 @@ EMAIL = "info@jdevpro.it"
 WA = "https://wa.me/393454656749?text=" + quote("Ciao, vi scrivo dal sito JDEVPRO per un progetto.")
 LI = "https://www.linkedin.com/in/jacopo-ellero-a006499a/"
 MAILTO = ("mailto:info@jdevpro.it?subject=" + quote("Richiesta progetto - JDEVPRO") + "&amp;body=" + quote(
-    "Buongiorno,\n\nSistemi già presenti:\n\nCosa vorrei ottenere:\n\nTempistiche indicative:\n\nAzienda / riferimento:\n"))
+    "Buongiorno,\n\nCosa c'è da fare:\n\nDove (comune):\n\nMacchine, camere o utenti coinvolti:\n\nSistemi già presenti:\n\nTempistiche indicative:\n\nIncentivi o contributi previsti (se ci sono):\n\nAzienda / riferimento:\n"))
 ORG_ID = BASE + "#jdevpro"
 
 TIERS = [

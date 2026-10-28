@@ -62,7 +62,7 @@ ASSET_V = {n: hashlib.sha1((REPO / n).read_bytes()).hexdigest()[:8] for n in ("s
 
 WA_EN = "https://wa.me/393454656749?text=" + quote("Hello, I'm writing from the JDEVPRO website about a project.")
 MAILTO_EN = ("mailto:info@jdevpro.it?subject=" + quote("Project enquiry - JDEVPRO") + "&amp;body=" + quote(
-    "Hello,\n\nExisting systems:\n\nWhat I want to achieve:\n\nRough timeline:\n\nCompany / contact:\n"))
+    "Hello,\n\nWhat needs doing:\n\nWhere (town):\n\nMachines, rooms or users involved:\n\nExisting systems:\n\nRough timeline:\n\nIncentives or grants expected (if any):\n\nCompany / contact:\n"))
 
 UI = {
   "it": dict(lang="it", locale="it_IT", skip="Vai al contenuto", menu="Apri menu", navlabel="Navigazione principale",
@@ -377,6 +377,20 @@ WHY = {
                partners="Partners: <strong>Efficasa</strong> for solar, <strong>Open Fiber</strong> for FTTH fibre, <strong>DWIN</strong> for HMI displays."),
 }
 
+# incentivi in home: (eyebrow, titolo, testo, [(titolo, testo, link, etichetta)])
+INCENTIVES = {
+    "it": ("Incentivi e dimensioni", "Dalla giornata di lavoro al progetto completo.",
+           "Interveniamo da 500 € in su, fino a progetti che coinvolgono macchine, gestionale e impianti. Quando c'è un incentivo, lo pianifichiamo insieme all'investimento.",
+           [("Iperammortamento 2026–2028", "Macchine nuove e software di produzione rientrano solo se interconnessi al sistema aziendale. Colleghiamo e documentiamo tutto per il perito.", "guida-interconnessione-iperammortamento.html", "Leggi la guida →"),
+            ("Contributi FVG per hotel e alberghi diffusi", "La Regione sostiene l'ammodernamento e l'efficienza delle strutture ricettive: clima, accessi e domotica possono far parte del progetto.", "guida-contributi-fvg-hotel.html", "Leggi la guida →"),
+            ("Cambio di gestionale", "Gestionale di produzione su ERPNext e migrazione dei dati dal vecchio programma, con analisi iniziale gratuita.", "gestionale-produzione-erpnext.html", "Scopri il gestionale →")]),
+    "en": ("Incentives and size", "From a day's work to a complete project.",
+           "We take on jobs from €500 up to projects covering machines, business software and installations. When an incentive applies, we plan it together with the investment.",
+           [("Italian hyper-depreciation 2026–2028", "New machines and production software qualify only when interconnected with company systems. We connect and document everything for the appraiser.", "en-machine-interconnection.html", "Machine interconnection →"),
+            ("Regional grants for hotels", "Friuli Venezia Giulia supports modernisation and efficiency of accommodation: climate, access and automation can be part of the project.", "en-hotel-bnb-automation.html", "Hotel automation →"),
+            ("Changing business software", "ERPNext-based production management and data migration from the old program, with a free initial analysis.", "en-erpnext-manufacturing.html", "Discover it →")]),
+}
+
 # fase documentazione, prima dell'assistenza, in tutti i servizi
 DOC_STEP = {"it": ("Documentazione", "Schemi, configurazioni, credenziali e procedure consegnati a te: il sistema resta comprensibile anche dopo la consegna."),
             "en": ("Documentation", "Diagrams, configurations, credentials and procedures handed over to you: the system stays understandable after delivery.")}
@@ -422,6 +436,8 @@ def home(lang="it"):
 </article>
 """
     proof = "".join(f'<a href="{h}"><strong>{x}</strong><span>{d}</span></a>' for x, d, h in t["proof"])
+    ie, ih, ip, items = INCENTIVES[lang]
+    incentives = "".join(f'<article class="outcome reveal"><h3>{a}</h3><p>{b}</p><a class="card-link" href="{h}">{lbl}</a></article>' for a, b, h, lbl in items)
     w = WHY[lang]
     body = f"""{header("index.html" if lang == "it" else "en.html", lang, home=True, switch="en.html" if lang == "it" else "index.html")}<main id="main">
 <section class="hero hero-min" id="top">
@@ -443,6 +459,12 @@ def home(lang="it"):
 <div class="section-heading reveal"><p class="eyebrow">{t['ae']}</p><h2>{t['ah']}</h2></div>
 <div class="area-grid">
 {cards}</div>
+</div>
+</section>
+<section class="section section-tight section-paper">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">{ie}</p><h2>{ih}</h2><p>{ip}</p></div>
+<div class="outcome-grid">{incentives}</div>
 </div>
 </section>
 <section class="section section-tight section-white why-band">
