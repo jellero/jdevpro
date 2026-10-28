@@ -114,9 +114,9 @@ PRODUCTS = {
         ("prices", "Avvio ERPNext", "Prezzi pensati per le piccole aziende.", "Una volta sola: progettazione, installazione, configurazione e formazione. Il collegamento delle macchine si quota come interconnessione. Dopo l'analisi ricevete un preventivo a prezzo chiuso.", [
           ("Essenziale · fino a 5 utenti", "da 990 €", "Produzione semplice, magazzino, vendite, collegamento SdI, 1 giornata di formazione"),
           ("Produzione · fino a 15 utenti", "da 1.900 €", "In più qualità, conto lavoro, contabilità, 3 postazioni tablet, 2 giornate di formazione"),
-          ("Su misura · oltre 15 utenti", "da 3.500 €", "Middleware per macchine, più aziende o sedi, integrazioni con altri sistemi"),
+          ("Avanzato · oltre 15 utenti", "da 3.500 €", "Più aziende o sedi, integrazioni con altri sistemi, progetto del middleware; collegamento delle macchine a parte"),
         ], ""),
-        ("prices", "Installazione e migrazione", "Dove lo installiamo e cosa ci portiamo dentro.", 'Per vecchi gestionali e database senza esportazione c\'è il servizio di <a href="migrazione-dati.html">migrazione dati</a>, con pulizia e report di quadratura.', [
+        ("prices", "Installazione e migrazione", "Dove lo installiamo e cosa ci portiamo dentro.", 'Prezzi validi dentro un progetto JD Industry. Per una migrazione a sé, da vecchi gestionali e database senza esportazione, c\'è il servizio di <a href="migrazione-dati.html">migrazione dati</a>, con pulizia e report di quadratura.', [
           ("Prima analisi in videochiamata", "gratuita", "Un'ora per capire se fa per voi"),
           ("Analisi in azienda", "150 €", "Mezza giornata, scalata dal progetto se procedete"),
           ("Installazione su server aziendale", "300 €", "Sistema, VPN o Cloudflare Tunnel, backup"),
@@ -349,9 +349,9 @@ PRODUCTS = {
         ("prices", "ERPNext setup", "Prices designed for small companies.", "One-off: design, installation, configuration and training. Connecting machines is priced as interconnection. After the analysis you get a fixed-price quote.", [
           ("Essential · up to 5 users", "from €990", "Simple production, stock, sales, SdI connection, 1 day of training"),
           ("Production · up to 15 users", "from €1,900", "Plus quality, subcontracting, accounting, 3 tablet stations, 2 days of training"),
-          ("Custom · over 15 users", "from €3,500", "Machine middleware, several companies or sites, integrations with other systems"),
+          ("Advanced · over 15 users", "from €3,500", "Several companies or sites, integrations with other systems, middleware design; machine connection extra"),
         ], ""),
-        ("prices", "Installation and migration", "Where we install it and what we bring in.", 'For legacy software and databases with no export there is our <a href="en-data-migration.html">data migration</a> service, with clean-up and a reconciliation report.', [
+        ("prices", "Installation and migration", "Where we install it and what we bring in.", 'Prices apply within a JD Industry project. For a stand-alone migration from legacy software and databases with no export there is our <a href="en-data-migration.html">data migration</a> service, with clean-up and a reconciliation report.', [
           ("First video call analysis", "free", "One hour to see whether it fits"),
           ("On-site analysis", "€150", "Half a day, deducted from the project if you go ahead"),
           ("Installation on a company server", "€300", "System, VPN or Cloudflare Tunnel, backups"),

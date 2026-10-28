@@ -1321,7 +1321,8 @@ def product_page(pr, lang):
     blocks = blocks.replace(" data-prices", ' id="prezzi"', 1).replace(" data-prices", "")
     buttons = "".join(f'<a class="button {"primary" if i == 0 else "ghost"}" href="{l}" rel="noreferrer" target="_blank">{n}</a>'
                       for i, (n, l) in enumerate(pr["links"]))
-    buttons += f'<a class="button {"ghost" if pr["links"] else "primary"}" href="#contatto">{u["talk"]}</a>'
+    if not pr.get("dev"):
+        buttons += f'<a class="button {"ghost" if pr["links"] else "primary"}" href="#contatto">{u["talk"]}</a>'
     if has_prices:
         buttons += f'<a class="button ghost" href="#prezzi">{"Vedi i prezzi" if lang == "it" else "See prices"}</a>'
     others = "".join(f'<a href="{x["slug"]}"{ext(x["slug"])}><strong>{x["nav"]}</strong><span>{x["card"]}</span></a>'

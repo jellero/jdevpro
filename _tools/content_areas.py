@@ -102,7 +102,7 @@ PRODUCTS_PAGE = {
   "it": dict(slug="prodotti.html", nav="Prodotti",
              title="Prodotti JDEVPRO: Welora e JD Industry | JDEVPRO",
              desc="I nostri prodotti: Welora, il gestionale per strutture ricettive, e JD Industry, l'ecosistema per la produzione dalle macchine collegate all'ERP su ERPNext.",
-             eyebrow="Prodotti e ricerca", h1="Non solo progetti per i clienti: <span>i nostri prodotti.</span>",
+             eyebrow="I nostri prodotti", h1="Non solo progetti per i clienti: <span>i nostri prodotti.</span>",
              lead="Oltre ai progetti su misura abbiamo due prodotti nostri: Welora per chi accoglie ospiti e JD Industry per chi produce.",
              points={"welora": ["PMS, booking engine e canali", "Check-in online e Alloggiati Web", "Pagamenti, fatture, pulizie e cassa", "In pre-lancio, arrivo previsto il 15 febbraio 2027"],
                      "erp": ["Macchine collegate, ERP su ERPNext o su misura", "Magazzino, lotti e conto lavoro", "Fattura elettronica SdI e tablet in reparto", "In cloud, su server o NAS, avvio da 990 €"],
@@ -111,7 +111,7 @@ PRODUCTS_PAGE = {
   "en": dict(slug="en-products.html", nav="Products",
              title="JDEVPRO products: Welora and JD Industry | JDEVPRO",
              desc="Our products: Welora, hospitality management software, and JD Industry, the production ecosystem from connected machines to ERP on ERPNext.",
-             eyebrow="Products and research", h1="Not only client projects: <span>our own products.</span>",
+             eyebrow="Our products", h1="Not only client projects: <span>our own products.</span>",
              lead="Besides custom projects we have two products of our own: Welora for hospitality and JD Industry for manufacturers.",
              points={"welora": ["PMS, booking engine and channels", "Online check-in and Italian guest reporting", "Payments, invoices, housekeeping and till", "Pre-launch, expected on 15 February 2027"],
                      "erp": ["Bills of materials and work orders", "Stock, batches and subcontracting", "Italian e-invoicing and shop-floor tablets", "Cloud, server or NAS, setup from €990"],
@@ -126,6 +126,10 @@ WHERE_PAGE = dict(slug="dove-lavoriamo.html", nav="Dove lavoriamo",
                   lead="Lavoriamo con aziende e strutture di tutta la regione e del Veneto. Veniamo sul posto per analisi, sopralluoghi e collaudi; sviluppo e assistenza li seguiamo anche da remoto.")
 
 CALLOUTS = {
+  "interconnessione-macchine-industria-4-0.html": {
+    "it": ("È il primo livello di <strong>JD Industry</strong>: si parte dalle macchine collegate e si aggiunge l'ERP su ERPNext quando serve.", "Scopri JD Industry →", "gestionale-produzione-erpnext.html"),
+    "en": ("This is the first level of <strong>JD Industry</strong>: start with connected machines and add the ERP on ERPNext when needed.", "Discover JD Industry →", "en-erpnext-manufacturing.html"),
+  },
   "gestionale-su-misura.html": {
     "it": ("Produzione con distinte base, magazzino e fattura elettronica? Prima di un gestionale su misura guarda <strong>JD Industry</strong>, il nostro gestionale di produzione, con ERP su ERPNext da 990 €.", "Scopri JD Industry →", "gestionale-produzione-erpnext.html"),
     "en": ("Production with bills of materials, stock and e-invoicing? Before custom software, look at <strong>JD Industry</strong>, our production management, with ERP on ERPNext from €990.", "Discover JD Industry →", "en-erpnext-manufacturing.html"),
