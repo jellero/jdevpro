@@ -387,12 +387,12 @@ WHY = {
 INCENTIVES = {
     "it": ("Incentivi e progetti", "Dalla giornata di lavoro al progetto completo.",
            "Interveniamo da 500 € in su, fino a progetti che coinvolgono macchine, gestionale e impianti. Quando c'è un incentivo, lo pianifichiamo insieme all'investimento.",
-           [("Iperammortamento 2026–2028", "Le macchine nuove rientrano solo se interconnesse al sistema aziendale. Colleghiamo e documentiamo tutto per il perito.", "guida-interconnessione-iperammortamento.html", "Leggi la guida →"),
+           [("Iperammortamento 2026–2028", "Le macchine nuove rientrano solo se interconnesse al sistema aziendale. Tutte quelle che abbiamo collegato sono certificate e asseverate da ingegneri e ammesse all'iperammortamento.", "guida-interconnessione-iperammortamento.html", "Leggi la guida →"),
             ("Contributi FVG per hotel e alberghi diffusi", "La Regione sostiene l'ammodernamento e l'efficienza delle strutture ricettive: clima, accessi e domotica possono far parte del progetto.", "guida-contributi-fvg-hotel.html", "Leggi la guida →"),
             ("JD Industry e cambio di gestionale", "Dalle macchine collegate all'ERP completo su ERPNext, con la migrazione dei dati dal vecchio programma e analisi iniziale gratuita.", "gestionale-produzione-erpnext.html", "Scopri JD Industry →")]),
     "en": ("Incentives and projects", "From a day's work to a complete project.",
            "We take on jobs from €500 up to projects covering machines, business software and installations. When an incentive applies, we plan it together with the investment.",
-           [("Italian hyper-depreciation 2026–2028", "New machines qualify only when interconnected with company systems. We connect and document everything for the appraiser.", "en-machine-interconnection.html", "Machine interconnection →"),
+           [("Italian hyper-depreciation 2026–2028", "New machines qualify only when interconnected with company systems. Every machine we have connected is certified and sworn by engineers and approved for hyper-depreciation.", "en-machine-interconnection.html", "Machine interconnection →"),
             ("Regional grants for hotels", "Friuli Venezia Giulia supports modernisation and efficiency of accommodation: climate, access and automation can be part of the project.", "en-hotel-bnb-automation.html", "Hotel automation →"),
             ("JD Industry and software change", "From connected machines to a full ERP on ERPNext, with data migration from the old program and a free initial analysis.", "en-erpnext-manufacturing.html", "Discover JD Industry →")]),
 }

@@ -5,11 +5,11 @@ Ogni voce: (valore in evidenza, descrizione, link o None).
 
 STATS = {
   "home": {
-    "it": [("Decine", "macchine collegate al gestionale, in produzione", "interconnessione-macchine-industria-4-0.html"),
+    "it": [("Decine", "macchine collegate, tutte asseverate da ingegneri e ammesse all'iperammortamento", "interconnessione-macchine-industria-4-0.html"),
            ("JD Industry", "il nostro gestionale di produzione collegato alle macchine", "gestionale-produzione-erpnext.html"),
            ("Welora", "il nostro gestionale per strutture ricettive", "https://welora.it/"),
            ("24 h", "al massimo per una risposta scritta", "#contatto")],
-    "en": [("Dozens", "machines connected to business software, in production", "en-machine-interconnection.html"),
+    "en": [("Dozens", "machines connected, all sworn by engineers and approved for hyper-depreciation", "en-machine-interconnection.html"),
            ("JD Industry", "our production software connected to machines", "en-erpnext-manufacturing.html"),
            ("Welora", "our hospitality management software", "https://welora.it/"),
            ("24 h", "at most for a written reply", "#contatto")],
