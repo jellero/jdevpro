@@ -377,10 +377,24 @@ def offers_ld(it_slug):
 WHY = {
     "it": dict(e="Perché JDEVPRO", h="Un elettricista installa. Un informatico programma. <span>Noi teniamo insieme il sistema.</span>",
                p="Quando macchine, impianti, rete e software devono funzionare insieme, serve qualcuno che governi l'insieme invece di tanti fornitori separati. Progettiamo, colleghiamo e documentiamo il sistema; cablaggi e quadri li realizzano installatori abilitati con cui collaboriamo.",
-               partners="Partner: <strong>Efficasa</strong> per il fotovoltaico, <strong>Open Fiber</strong> per la fibra FTTH, <strong>Aruba</strong> per connettività e cloud, <strong>Aruba Business</strong> per l'hosting, <strong>MikroTik</strong> per la connettività, <strong>Ubiquiti</strong> per reti e videosorveglianza, <strong>Siportal</strong> per il VoIP, <strong>WuBook</strong> per le OTA, <strong>DWIN</strong> per i display HMI."),
+               partners="Partner: <strong>Efficasa</strong> per il fotovoltaico, <strong>Open Fiber</strong> per la fibra FTTH, <strong>DWIN</strong> per i display HMI.<br>Tecnologie e servizi che usiamo nei progetti: <strong>Aruba</strong> per connettività, cloud e hosting (Aruba Business), <strong>MikroTik</strong> e <strong>Ubiquiti</strong> per reti, connettività e videosorveglianza, <strong>Siportal</strong> per il VoIP, <strong>WuBook</strong> per le OTA."),
     "en": dict(e="Why JDEVPRO", h="An electrician installs. A programmer codes. <span>We hold the whole system together.</span>",
                p="When machines, installations, network and software have to work together, someone has to govern the whole instead of many separate suppliers. We design, connect and document the system; wiring and panels are done by licensed installers we work with.",
-               partners="Partners: <strong>Efficasa</strong> for solar, <strong>Open Fiber</strong> for FTTH fibre, <strong>Aruba</strong> for connectivity and cloud, <strong>Aruba Business</strong> for hosting, <strong>MikroTik</strong> for connectivity, <strong>Ubiquiti</strong> for networks and video surveillance, <strong>Siportal</strong> for VoIP, <strong>WuBook</strong> for OTA channels, <strong>DWIN</strong> for HMI displays."),
+               partners="Partners: <strong>Efficasa</strong> for solar, <strong>Open Fiber</strong> for FTTH fibre, <strong>DWIN</strong> for HMI displays.<br>Technologies and services we use in projects: <strong>Aruba</strong> for connectivity, cloud and hosting (Aruba Business), <strong>MikroTik</strong> and <strong>Ubiquiti</strong> for networks, connectivity and video surveillance, <strong>Siportal</strong> for VoIP, <strong>WuBook</strong> for OTA channels."),
+}
+
+# specializzazione in home: (eyebrow, titolo, testo, [(titolo, testo, link, etichetta)])
+INDUSTRIAL = {
+    "it": ("Integrazione industriale", "Dalla macchina al gestionale, documentato per il perito.",
+           "È la nostra specializzazione: collegare al gestionale macchine di ogni tipo di produzione e tenerle sempre connesse.",
+           [("Interconnessione macchine 4.0", "Torni, centri di lavoro, laser, presse, macchine tessili e da stampa, riempitrici: qualsiasi macchina con PLC o CNC, nuova o datata.", "interconnessione-macchine-industria-4-0.html", "Vedi i tipi di macchine →"),
+            ("Asseverate e ammesse", "Le macchine che abbiamo collegato sono tutte certificate e asseverate da ingegneri, verificate per l'interconnessione e ammesse all'iperammortamento.", "guida-interconnessione-iperammortamento.html", "Requisiti e scadenze →"),
+            ("JD Industry", "Il nostro gestionale di produzione: dalle macchine collegate all'ERP su ERPNext, con la migrazione dei dati dal vecchio programma.", "gestionale-produzione-erpnext.html", "Scopri JD Industry →")]),
+    "en": ("Industrial integration", "From the machine to business software, documented for the appraiser.",
+           "It is our specialisation: connecting machines from any kind of production to business software and keeping them always connected.",
+           [("Industry 4.0 machine interconnection", "Lathes, machining centres, lasers, presses, textile and printing machines, fillers: any machine with a PLC or CNC, new or old.", "en-machine-interconnection.html", "See machine types →"),
+            ("Sworn and approved", "The machines we have connected are all certified and sworn by engineers, verified for interconnection and approved for the Italian hyper-depreciation.", "en-machine-interconnection.html", "Requirements →"),
+            ("JD Industry", "Our production software: from connected machines to a full ERP on ERPNext, with data migration from the old program.", "en-erpnext-manufacturing.html", "Discover JD Industry →")]),
 }
 
 # incentivi in home: (eyebrow, titolo, testo, [(titolo, testo, link, etichetta)])
@@ -447,6 +461,8 @@ def home(lang="it"):
 </article>
 """
     proof = "".join(f'<a href="{h}"><strong>{x}</strong><span>{d}</span></a>' for x, d, h in t["proof"])
+    ne, nh, np_, nitems = INDUSTRIAL[lang]
+    industrial = "".join(f'<article class="outcome reveal"><h3>{a}</h3><p>{b}</p><a class="card-link" href="{h}">{lbl}</a></article>' for a, b, h, lbl in nitems)
     ie, ih, ip, items = INCENTIVES[lang]
     incentives = "".join(f'<article class="outcome reveal"><h3>{a}</h3><p>{b}</p><a class="card-link" href="{h}">{lbl}</a></article>' for a, b, h, lbl in items)
     w = WHY[lang]
@@ -462,6 +478,12 @@ def home(lang="it"):
 <a class="button ghost" href="#contatto">{t['b2']}</a>
 </div>
 {stats_html("home", lang)}
+</div>
+</section>
+<section class="section section-tight section-white" id="integrazione-industriale">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">{ne}</p><h2>{nh}</h2><p>{np_}</p></div>
+<div class="outcome-grid">{industrial}</div>
 </div>
 </section>
 <section class="section" id="aree">

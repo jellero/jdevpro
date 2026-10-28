@@ -439,7 +439,7 @@ EN_PAGES = {
     service_type="Industry 4.0 machine interconnection",
     eyebrow="Machine interconnection · Industry 4.0",
     h1="Machine interconnection 4.0: <span>any machine, connected to your software.</span>",
-    lead="We connect machines of any brand and any kind of production, from lathes to lasers, from textile and printing machines to fillers, new or with years of work behind them, and bring the data where it is needed: status, jobs, production, alarms and real costs per job. Without touching the machine program.",
+    lead="We connect machines of any brand and any kind of production, from lathes to lasers, from textile and printing machines to fillers, new or with years of work behind them, and bring the data where it is needed: status, jobs, production, alarms and real costs per job. Without touching the machine program. A machine can always be connected; whether it qualifies for the hyper-depreciation depends on the asset requirements and the appraisal.",
     proof="In production: dozens of machines connected across woodworking shops and metal pressing companies.",
     problems=[("The machine is new but not connected.", "Without interconnection to company systems you risk losing Italian Industry 4.0 tax incentives."),
               ("Times and costs are estimated by hand.", "Machine hours, scrap and consumption end up in Excel, if at all."),
