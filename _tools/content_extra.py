@@ -154,7 +154,7 @@ GUIDES = [
      ('Come lo realizziamo',
       ['Con JD Industry colleghiamo la macchina al sistema aziendale tramite le interfacce del costruttore: invio di commesse e file di lavoro, ritorno automatico di stato, produzione e allarmi, storico '
        "consultabile e report. Per macchine senza API usiamo l'interfaccia web del supervisore o un programma ponte seriale o Modbus. Abbiamo già collegato decine di macchine tra falegnamerie e "
-       'stamperie, con interventi già sottoposti a perizie asseverate da ingegneri e partner specializzati in certificazione e validazione.',
+       'stamperie: tutte certificate e asseverate da ingegneri, verificate tecnicamente ai fini dell\'interconnessione e ammesse all\'iperammortamento, con partner specializzati in certificazione e validazione.',
        "Il diritto all'agevolazione sorge al momento dell'interconnessione: conviene pianificarla insieme all'acquisto della macchina."]),
      ("Quando deve avvenire l'interconnessione",
       ["Per l'iperammortamento 2026 l'interconnessione è la condizione per completare l'investimento: la data di interconnessione deve cadere tra il 1° gennaio 2026 e il 30 settembre 2028 e la "

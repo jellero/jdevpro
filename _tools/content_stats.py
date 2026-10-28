@@ -17,10 +17,10 @@ STATS = {
   "area:industria": {
     "it": [("Decine", "macchine collegate in produzione", "interconnessione-macchine-industria-4-0.html"),
            ("JD Industry", "gestionale di produzione collegato a macchine SCM ed Essetre", None),
-           ("Perizie asseverate", "interventi già sottoposti a perizie asseverate da ingegneri", "guida-interconnessione-iperammortamento.html")],
+           ("Ammesse all'iperammortamento", "tutte le macchine collegate, certificate e asseverate da ingegneri", "guida-interconnessione-iperammortamento.html")],
     "en": [("Dozens", "machines connected in production", "en-machine-interconnection.html"),
            ("JD Industry", "production software connected to SCM and Essetre machines", None),
-           ("Sworn appraisals", "work already reviewed in sworn technical appraisals by engineers", "en-machine-interconnection.html")],
+           ("Approved for hyper-depreciation", "every connected machine, certified and sworn by engineers", "en-machine-interconnection.html")],
   },
   "area:strutture": {
     "it": [("Camera per camera", "clima collegato alle prenotazioni in alberghi e affittacamere", "automazione-hotel-bnb.html"),
@@ -40,13 +40,13 @@ STATS = {
   },
   "interconnessione-macchine-industria-4-0.html": {
     "it": [("Decine", "macchine collegate in produzione", None),
-           ("Perizie asseverate", "interventi già sottoposti a perizie asseverate da ingegneri", None),
-           ("Certificazione", "partner specializzati in certificazione e validazione", None),
-           ("Competenze dirette", "nell'integrazione tra macchine, software e infrastrutture", None)],
+           ("Asseverate", "tutte certificate e asseverate da ingegneri", None),
+           ("Verificate", "tecnicamente ai fini dell'interconnessione", None),
+           ("Ammesse", "all'iperammortamento", None)],
     "en": [("Dozens", "machines connected in production", None),
-           ("Sworn appraisals", "work already reviewed in sworn technical appraisals by engineers", None),
-           ("Certification", "partners specialised in certification and validation", None),
-           ("Hands-on skills", "in integrating machines, software and infrastructure", None)],
+           ("Certified", "all certified and sworn by engineers", None),
+           ("Verified", "technically, for interconnection purposes", None),
+           ("Approved", "for the Italian hyper-depreciation", None)],
   },
   "monitoraggio-iot.html": {
     "it": [("Industria", "sensori e gateway in produzione", None),
