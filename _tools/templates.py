@@ -384,7 +384,7 @@ def home(lang="it"):
                  enter="Entra nell'area →",
                  proof=[("JD Industry", "Gestionale di produzione collegato a macchine SCM ed Essetre.", "industria.html"),
                         ("E-commerce e marketplace", "Gestionale collegato a fornitore, marketplace e corriere.", "integrazione-software-api.html"),
-                        ("Prodotti", "Welora, AKIOS e ORYVAEL: i nostri progetti.", "prodotti.html")],
+                        ("Prodotti", "Welora, il gestionale di produzione su ERPNext, AKIOS e ORYVAEL.", "prodotti.html")],
                  who='<strong>JDEVPRO</strong> è l\'attività di Jacopo Ellero, sviluppatore e integratore di sistemi. <a href="chi-sono.html">Chi sono →</a> · <a href="dove-lavoriamo.html">Dove lavoriamo →</a>',
                  title="JDEVPRO · Gestionali, macchine 4.0 e IoT in Friuli",
                  desc="Gestionali su misura, macchine 4.0, integrazioni, IoT, automazione hotel e B&B, videosorveglianza e internet offgrid in Friuli Venezia Giulia.")
@@ -396,7 +396,7 @@ def home(lang="it"):
                  enter="Enter the area →",
                  proof=[("JD Industry", "Production management connected to SCM and Essetre machines.", "en-industry.html"),
                         ("E-commerce and marketplaces", "Business software connected to supplier, marketplaces and courier.", "en-software-integration-api.html"),
-                        ("Products", "Welora, AKIOS and ORYVAEL: our own projects.", "en-products.html")],
+                        ("Products", "Welora, ERPNext-based production management, AKIOS and ORYVAEL.", "en-products.html")],
                  who='<strong>JDEVPRO</strong> is the business of Jacopo Ellero, software developer and systems integrator. <a href="en-about.html">About me →</a>',
                  title="JDEVPRO · Business software, machines 4.0 and IoT, Italy",
                  desc="Custom business software, machines 4.0, integrations, IoT, hotel automation, video surveillance and off-grid internet in north-east Italy.")
@@ -1231,6 +1231,19 @@ def product_block(b, bg):
 </div>
 </section>
 """
+    if kind == "prices":
+        _, eyebrow, h2, intro, rows, note = b
+        items = "".join(f'<div class="price reveal"><span>{t}</span><strong>{p}</strong><small>{d}</small></div>' for t, p, d in rows)
+        intro_html = f"<p>{intro}</p>" if intro else ""
+        note_html = f'<p class="price-extra">{note}</p>' if note else ""
+        return f"""<section class="section section-tight {bg}">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">{eyebrow}</p><h2>{h2}</h2>{intro_html}</div>
+<div class="price-grid">{items}</div>
+{note_html}
+</div>
+</section>
+"""
     raise ValueError(kind)
 
 
@@ -1243,7 +1256,7 @@ def product_page(pr, lang):
     blocks = "".join(product_block(b, bgs[i % 2]) for i, b in enumerate(pr["blocks"]))
     buttons = "".join(f'<a class="button {"primary" if i == 0 else "ghost"}" href="{l}" rel="noreferrer" target="_blank">{n}</a>'
                       for i, (n, l) in enumerate(pr["links"]))
-    buttons += f'<a class="button ghost" href="#contatto">{u["talk"]}</a>'
+    buttons += f'<a class="button {"ghost" if pr["links"] else "primary"}" href="#contatto">{u["talk"]}</a>'
     others = "".join(f'<a href="{x["slug"]}"{ext(x["slug"])}><strong>{x["nav"]}</strong><span>{x["card"]}</span></a>'
                      for x in PRODUCTS[lang] if x["key"] != pr["key"])
     if pr["key"] == "welora":
@@ -1251,6 +1264,11 @@ def product_page(pr, lang):
                    "applicationCategory": "BusinessApplication", "operatingSystem": "Web",
                    "offers": {"@type": "Offer", "price": "29", "priceCurrency": "EUR", "availability": "https://schema.org/PreOrder"},
                    "publisher": {"@id": ORG_ID}, "sameAs": ["https://welora.it/"]}
+    elif pr["key"] == "erp":
+        main_ld = {"@context": "https://schema.org", "@type": "Service", "name": pr["nav"], "description": pr["desc"], "url": url,
+                   "serviceType": "ERP", "provider": {"@id": ORG_ID}, "areaServed": "IT",
+                   "offers": {"@type": "Offer", "priceCurrency": "EUR",
+                              "priceSpecification": {"@type": "PriceSpecification", "minPrice": 990, "priceCurrency": "EUR"}}}
     elif pr["key"] == "akios":
         main_ld = {"@context": "https://schema.org", "@type": "Product", "name": "AKIOS", "description": pr["desc"], "url": url,
                    "brand": {"@type": "Brand", "name": "AKIOS"}, "manufacturer": {"@id": ORG_ID}, "sameAs": ["https://akios.cloud/", "https://akios-pilot.com/"]}
