@@ -102,7 +102,7 @@ PRODUCTS_PAGE = {
   "it": dict(slug="prodotti.html", nav="Prodotti",
              title="Prodotti JDEVPRO: Welora e JD Industry | JDEVPRO",
              desc="I nostri prodotti: Welora, il gestionale per strutture ricettive, e JD Industry, l'ecosistema per la produzione dalle macchine collegate all'ERP su ERPNext.",
-             eyebrow="I nostri prodotti", h1="Non solo progetti per i clienti: <span>i nostri prodotti.</span>",
+             eyebrow="I nostri prodotti", h1="Welora e JD Industry: <span>i nostri prodotti.</span>",
              lead="Oltre ai progetti su misura abbiamo due prodotti nostri: Welora per chi accoglie ospiti e JD Industry per chi produce.",
              points={"welora": ["PMS, booking engine e canali", "Check-in online e Alloggiati Web", "Pagamenti, fatture, pulizie e cassa", "In pre-lancio, arrivo previsto il 15 febbraio 2027"],
                      "erp": ["Macchine collegate, ERP su ERPNext o su misura", "Magazzino, lotti e conto lavoro", "Fattura elettronica SdI e tablet in reparto", "In cloud, su server o NAS, avvio da 990 €"],

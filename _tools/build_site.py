@@ -31,7 +31,7 @@ PAGES = [
     card_title="Interconnessione macchine 4.0",
     card_who="Aziende manifatturiere con CNC, presse, linee e impianti di qualsiasi marca, nuovi o con anni di lavoro alle spalle.",
     card_points=["Qualsiasi macchina, anche vecchia", "10 macchine già collegate a Tolmezzo", "Requisito di interconnessione per l'iperammortamento"],
-    title="Interconnessione macchine 4.0 e raccolta dati | JDEVPRO",
+    title="Interconnessione 4.0 per l'iperammortamento | JDEVPRO",
     desc="Colleghiamo al gestionale qualsiasi macchina, 4.0 o datata: OPC UA, MTConnect, PLC, Modbus, seriale o sensori. Commesse e costi reali. 10 già in produzione.",
     service_type="Interconnessione macchine Industria 4.0",
     eyebrow="Interconnessione macchine · Industria 4.0",
@@ -359,7 +359,7 @@ PAGES = [
     desc="Domotica per hotel e ristoranti con Home Assistant: termostati, serrature elettroniche, temperature HACCP e controllo locale.",
     service_type="Domotica professionale con Home Assistant",
     eyebrow="Home Assistant · Alberghi · Ristoranti",
-    h1="Domotica con Home Assistant: <span>progettata per durare.</span>",
+    h1="Domotica per hotel e ristoranti, <span>progettata per durare.</span>",
     lead="Home Assistant collega quasi tutto. Il difficile è farlo funzionare per anni, in una struttura dove lavorano persone diverse e gli ospiti non devono accorgersi di nulla. Progettiamo l'impianto, scegliamo dispositivi che non dipendono dal cloud di un produttore, lo installiamo e lo documentiamo.",
     problems=[
       ("Domotica fatta con app diverse.", "Ogni marca ha la sua app e il suo cloud: quando uno chiude o cambia, una parte dell'impianto smette di funzionare."),
