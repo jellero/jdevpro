@@ -41,7 +41,7 @@ ABOUT = {
     projects_e="Progetti", projects_h="Cosa ho costruito.",
     projects=[
       ("Welora", "Piattaforma gestionale multi-struttura con motore di automazione separato.", "https://welora.it/"),
-      ("JD Industry", "Gestionale di produzione collegato alle macchine.", "interconnessione-macchine-industria-4-0.html"),
+      ("JD Industry", "Gestionale su misura collegato alle macchine.", "interconnessione-macchine-industria-4-0.html"),
       ("Vehylo", "Diagnostica veicolo via OBD-II e Bluetooth.", "https://jellero.github.io/vehylo-web/"),
       ("Lauco Experience", "Portale turistico in quattro lingue con backoffice.", "https://www.laucoexperience.it/"),
     ],
@@ -105,7 +105,7 @@ ABOUT = {
     projects_e="Projects", projects_h="What I have built.",
     projects=[
       ("Welora", "Multi-property management platform with a separate automation engine.", "https://welora.it/"),
-      ("JD Industry", "Production management connected to machines.", "en-machine-interconnection.html"),
+      ("JD Industry", "Custom custom production software connected to machines.", "en-machine-interconnection.html"),
       ("Vehylo", "Vehicle diagnostics over OBD-II and Bluetooth.", "https://jellero.github.io/vehylo-web/"),
       ("Lauco Experience", "Four-language tourism portal with back office.", "https://www.laucoexperience.it/"),
     ],

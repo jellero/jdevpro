@@ -50,7 +50,7 @@ def area_services(lang, key):
 def cur(flag):
     return ' aria-current="page"' if flag else ""
 PRICES, CITIES, GUIDES, TEST = EXTRA["PRICES"], EXTRA["CITIES"], EXTRA["GUIDES"], EXTRA["TEST"]
-PRICE_NOTES = EXTRA["PRICE_NOTES"]
+PRICE_NOTES, CTAS = EXTRA["PRICE_NOTES"], EXTRA["CTAS"]
 GUIDES = GUIDES + runpy.run_path(str(pathlib.Path(__file__).with_name("content_guides_more.py")))["MORE_GUIDES"]
 EN_SLUG, EN_PAGES, EN_TIERS = EXTRA["EN_SLUG"], EXTRA["EN_PAGES"], EXTRA["EN_TIERS"]
 SENSOR_TIER = {"it": ("Sensori aggiunti", "Per macchine e impianti senza nessuna interfaccia, anche vecchi: sensori e contatori rilevano stato, cicli, tempi e consumi e li portano nei vostri sistemi."),
@@ -277,14 +277,16 @@ def header(current, lang="it", home=False, switch=None):
 """
 
 
-def contact(lang="it"):
+def contact(lang="it", cta=None):
+    """cta: (titolo, testo) specifici della pagina, altrimenti quelli generici."""
     u = UI[lang]
+    c_h, c_p = cta or (u['c_h'], u['c_p'])
     return f"""<section class="contact-section" id="contatto">
 <div class="shell contact-card reveal">
 <div>
 <p class="eyebrow">{u['c_eyebrow']}</p>
-<h2>{u['c_h']}</h2>
-<p>{u['c_p']}</p>
+<h2>{c_h}</h2>
+<p>{c_p}</p>
 <ol class="contact-steps" aria-label="{u['c_steps_label']}">{u['c_steps']}</ol>
 </div>
 <div class="contact-actions">
@@ -390,7 +392,7 @@ def home(lang="it"):
                  lead="JDEVPRO nasce a Tolmezzo con Jacopo Ellero. Sviluppiamo gestionali su misura, colleghiamo macchine, sensori e dispositivi ai sistemi aziendali e seguiamo tutto in produzione, per aziende e strutture del Friuli Venezia Giulia e del Veneto.",
                  b1="Scegli la tua area", b2="Scrivici", ae="Da dove parti?", ah="Tre aree, un solo interlocutore.",
                  enter="Entra nell'area →",
-                 proof=[("JD Industry", "Gestionale di produzione collegato a macchine SCM ed Essetre.", "industria.html"),
+                 proof=[("JD Industry", "Gestionale su misura collegato a macchine SCM ed Essetre.", "industria.html"),
                         ("E-commerce e marketplace", "Gestionale collegato a fornitore, marketplace e corriere.", "integrazione-software-api.html"),
                         ("Prodotti", "Welora, il gestionale di produzione su ERPNext, AKIOS e ORYVAEL.", "prodotti.html")],
                  who='<strong>JDEVPRO</strong> è l\'attività di Jacopo Ellero, sviluppatore e integratore di sistemi. <a href="chi-sono.html">Chi sono →</a> · <a href="dove-lavoriamo.html">Dove lavoriamo →</a>',
@@ -402,7 +404,7 @@ def home(lang="it"):
                  lead="JDEVPRO was founded in Tolmezzo, Friuli, by Jacopo Ellero. We build custom business software, connect machines, sensors and devices to company systems and look after everything in production, for companies and properties in north-east Italy and remotely.",
                  b1="Choose your area", b2="Write to us", ae="Where do you start?", ah="Three areas, one partner.",
                  enter="Enter the area →",
-                 proof=[("JD Industry", "Production management connected to SCM and Essetre machines.", "en-industry.html"),
+                 proof=[("JD Industry", "Custom custom production software connected to SCM and Essetre machines.", "en-industry.html"),
                         ("E-commerce and marketplaces", "Business software connected to supplier, marketplaces and courier.", "en-software-integration-api.html"),
                         ("Products", "Welora, ERPNext-based production management, AKIOS and ORYVAEL.", "en-products.html")],
                  who='<strong>JDEVPRO</strong> is the business of Jacopo Ellero, software developer and systems integrator. <a href="en-about.html">About me →</a>',
@@ -490,6 +492,20 @@ def area_page(a, lang):
     others = "".join(f'<a href="{o["slug"]}"><strong>{o["nav"]}</strong><span>{o["card"]}</span></a>' for o in AREAS[lang] if o["key"] != a["key"])
     labels = ("Per chi lavoriamo", "Competenze", "Cosa facciamo in quest'area.", "Esempi", "Già fatto.", "Altre aree") if lang == "it" else \
              ("Who we work with", "Services", "What we do in this area.", "Examples", "Already done.", "Other areas")
+    prods = [x for k in a.get("products", []) for x in PRODUCTS[lang] if x["key"] == k]
+    products = ""
+    if prods:
+        pe, ph = ("Prodotto", "Pronto da usare, adattato a voi.") if lang == "it" else ("Product", "Ready to use, adapted to you.")
+        pcards = "".join(f'<a class="product-card product-card-{x["key"]} reveal" href="{x["slug"]}"{ext(x["slug"])}><span class="eyebrow">{x["eyebrow"]}</span>'
+                         f'<strong>{x["nav"]}</strong><span class="product-card-text">{x["card"]}</span><span class="competence-more">{(x["slug"].split("//")[1].rstrip("/") + " ↗") if x.get("external") else u["more"]}</span></a>'
+                         for x in prods)
+        products = f"""<section class="section section-tight section-dark">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">{pe}</p><h2>{ph}</h2></div>
+<div class="product-grid">{pcards}</div>
+</div>
+</section>
+"""
     jsonld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": a["nav"], "description": a["desc"], "url": url,
                "hasPart": [{"@type": "Service", "name": s["card_title"], "url": BASE + s["href"]} for s in svcs], "publisher": {"@id": ORG_ID}},
               {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
@@ -516,7 +532,7 @@ def area_page(a, lang):
 </div>
 </div>
 </section>
-<section class="section section-tight proof-band">
+{products}<section class="section section-tight proof-band">
 <div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">{labels[3]}</p><h2>{labels[4]}</h2></div>
 <div class="proof-grid proof-three reveal">{proof}</div>
@@ -711,7 +727,7 @@ def service(p, lang="it"):
 <h1>{p['h1']}</h1>
 <p class="hero-lead">{p['lead']}</p>
 {stats_html(it_slug, lang) or (f'<p class="hero-proof">{p["proof"]}</p>' if p.get("proof") else '')}
-{(lambda c: f'<p class="hero-callout">{c[0]} <a href="{c[2]}" rel="noreferrer" target="_blank">{c[1]}</a></p>' if c else '')(CALLOUTS.get(it_slug, {}).get(lang))}
+{(lambda c: f'<p class="hero-callout">{c[0]} <a href="{c[2]}"{ext(c[2])}>{c[1]}</a></p>' if c else '')(CALLOUTS.get(it_slug, {}).get(lang))}
 <div class="hero-actions">
 <a class="button primary" href="#contatto">{u['talk']}</a>
 {f'<a class="button ghost" href="#esempi">{u["see_examples"]}</a>' if p["examples"] else ''}
@@ -759,7 +775,7 @@ def service(p, lang="it"):
 </div>
 </div>
 </section>
-{contact(lang)}<section class="section section-tight related">
+{contact(lang, CTAS.get(it_slug, {}).get(lang))}<section class="section section-tight related">
 <div class="shell">
 {guide_links}<p class="eyebrow">{("Nella stessa area: " if lang == "it" else "In the same area: ") + area["nav"]}</p>
 <div class="related-grid">{related}</div>
@@ -1300,7 +1316,7 @@ def product_page(pr, lang):
 <div class="hero-actions">{buttons}</div>
 </div>
 </section>
-{blocks}{contact(lang)}<section class="section section-tight related">
+{blocks}{contact(lang, CTAS.get(pr["key"], {}).get(lang))}<section class="section section-tight related">
 <div class="shell">
 <p class="eyebrow">{other_label}</p>
 <div class="related-grid">{others}</div>

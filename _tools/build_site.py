@@ -113,7 +113,7 @@ PAGES = [
     examples=[
       ("Welora · gestionale per strutture ricettive", "Piattaforma per più strutture: planning, prenotazioni, tariffe, pulizie, portale ospiti, pagamenti e adempimenti. 25 moduli.", "https://welora.it/"),
       ("Gestionale per la vendita sui marketplace", "Prodotti, prezzi, clienti, ordini, acquisti dal fornitore e spedizioni in un unico gestionale, collegato a marketplace e corriere.", "integrazione-software-api.html"),
-      ("JD Industry · gestionale di produzione", "Commesse, clienti, tariffe e consuntivi collegati direttamente alle macchine in officina.", "interconnessione-macchine-industria-4-0.html"),
+      ("JD Industry · gestionale su misura per la produzione", "Commesse, clienti, tariffe e consuntivi collegati direttamente alle macchine in officina.", "interconnessione-macchine-industria-4-0.html"),
     ],
     chips=["Web, da qualsiasi dispositivo", "Cloud o server aziendale", "Backup giornalieri", "Esportazioni Excel e PDF"],
     faq=[
@@ -344,6 +344,7 @@ PAGES = [
       ("Funziona con la struttura che ho già?", "Sì. Partiamo da serrature, termostati e programmi esistenti e aggiungiamo solo quello che manca."),
       ("Gli ospiti devono scaricare un'app?", "No. Codici e istruzioni arrivano via email o messaggio."),
       ("Cosa succede se manca Internet?", "Serrature e termostati scelti funzionano anche offline; i dati si allineano quando la connessione torna."),
+      ("Che differenza c'è con la domotica con Home Assistant?", "Qui colleghiamo il percorso dell'ospite: prenotazione, check-in online, codici di accesso e adempimenti. La domotica con Home Assistant riguarda l'impianto della struttura: clima, luci, sensori ed energia, progettati per durare. Spesso si fanno insieme."),
       ("Fate anche i cablaggi?", INSTALLERS),
     ],
   ),
@@ -377,6 +378,7 @@ PAGES = [
     ],
     catalog=[
       ("Protocolli", ["Zigbee", "Z-Wave", "Matter e Thread", "KNX", "Modbus", "MQTT", "ESPHome"]),
+      ("Hardware", ["Home Assistant Supervised", "Raspberry Pi", "Mini PC Intel NUC", "NAS Synology con Docker", "PLC"]),
       ("Clima ed energia", ["Termostati e valvole termostatiche", "Daikin, Mitsubishi, Panasonic", "Shelly e misuratori di energia", "Inverter e accumuli"]),
       ("Luci, accessi e sensori", ["Philips Hue e DALI tramite gateway", "Serrature e apricancello", "Sensori di finestra, presenza e perdite", "Sonde di temperatura per celle e frigoriferi"]),
       ("Collegamenti", ["Gestionale Welora", "Notifiche su telefono, Telegram e WhatsApp", "Tablet a parete", "Assistenti vocali"]),
@@ -388,6 +390,8 @@ PAGES = [
       ("Assistenza", "Aggiornamenti verificati e interventi da remoto, con piano mensile o a chiamata."),
     ],
     examples=[
+      ("Home Assistant collegato ai PLC", "Impianti in cui Home Assistant legge e comanda PLC, unendo automazione industriale e domotica in un'unica supervisione.", None),
+      ("Su Raspberry Pi, NUC e Synology", "Installazioni Home Assistant Supervised su Raspberry Pi, mini PC Intel NUC e NAS Synology con Docker, scelte in base all'impianto.", None),
       ("Clima camera per camera", "In alberghi e affittacamere: termostati collegati alle prenotazioni, avvisi di comfort e comandi per singola camera.", None),
     ],
     chips=["Home Assistant", "Controllo locale", "Zigbee", "Matter", "KNX", "Modbus", "HACCP", "Backup e aggiornamenti verificati"],

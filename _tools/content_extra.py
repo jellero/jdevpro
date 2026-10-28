@@ -326,7 +326,7 @@ EN_PAGES = {
            ("Support plan", "Hosting, backups, fixes and small developments included.")],
     examples=[("Welora · software for hospitality", "Multi-property platform: planning, bookings, rates, housekeeping, guest portal, payments and compliance. 25 modules.", "https://welora.it/"),
               ("Marketplace sales management software", "Products, prices, customers, orders, supplier purchases and shipments in one system, connected to marketplaces and courier.", None),
-              ("JD Industry · production management", "Jobs, customers, rates and costing connected directly to the machines on the shop floor.", None)],
+              ("JD Industry · custom production software", "Jobs, customers, rates and costing connected directly to the machines on the shop floor.", None)],
     chips=["Web, on any device", "Cloud or on-site server", "Daily backups", "Excel and PDF exports"],
     faq=[("Can I start from Excel?", "Yes. We import the data you already have, with preview and duplicate checks."),
          ("Does it replace my accounting software?", "No. Accounting and e-invoicing stay in your program; the new software works alongside it and passes data to it."),
@@ -401,6 +401,7 @@ EN_PAGES = {
               ("Verified updates", "Updates tested before installing, automatic backups and rollback to the previous version."),
               ("Network and security", "Devices on a separate network, remote access only via VPN or Cloudflare Tunnel, personal users.")],
     catalog=[("Protocols", ["Zigbee", "Z-Wave", "Matter and Thread", "KNX", "Modbus", "MQTT", "ESPHome"]),
+             ("Hardware", ["Home Assistant Supervised", "Raspberry Pi", "Intel NUC mini PC", "Synology NAS with Docker", "PLC"]),
              ("Climate and energy", ["Thermostats and radiator valves", "Daikin, Mitsubishi, Panasonic", "Shelly and energy meters", "Inverters and batteries"]),
              ("Lights, access and sensors", ["Philips Hue and DALI via gateway", "Locks and gate openers", "Window, presence and leak sensors", "Temperature probes for cold rooms and fridges"]),
              ("Connections", ["Welora management software", "Notifications on phone, Telegram and WhatsApp", "Wall tablets", "Voice assistants"])],
@@ -408,7 +409,9 @@ EN_PAGES = {
            ("Design", "Protocols, devices, automations and failure behaviour, approved before buying."),
            ("Installation and testing", "Dedicated hardware, separate network, devices set up and tested in real service."),
            ("Support", "Verified updates and remote help, with a monthly plan or on call.")],
-    examples=[("Room-by-room climate", "In hotels and guest houses: thermostats linked to bookings, comfort alerts and per-room controls.", None)],
+    examples=[("Home Assistant connected to PLCs", "Systems where Home Assistant reads and controls PLCs, bringing industrial automation and building automation under one supervision.", None),
+              ("On Raspberry Pi, NUC and Synology", "Home Assistant Supervised installations on Raspberry Pi, Intel NUC mini PCs and Synology NAS with Docker, chosen to fit the system.", None),
+              ("Room-by-room climate", "In hotels and guest houses: thermostats linked to bookings, comfort alerts and per-room controls.", None)],
     chips=["Home Assistant", "Local control", "Zigbee", "Matter", "KNX", "Modbus", "HACCP", "Backups and verified updates"],
     faq=[("Is Home Assistant suitable for professional use?", "Yes, if it is designed as a proper system: dedicated hardware, separate network, devices chosen to last, updates tested before installing, backups and documentation. That is what we do."),
          ("What if the internet goes down?", "Automations run on site and keep working. Remote access waits for the connection, but lights, climate and local alarms stay active."),
@@ -535,6 +538,7 @@ EN_PAGES = {
     faq=[("Does it work with my existing property?", "Yes. We start from existing locks, thermostats and programs and add only what is missing."),
          ("Do guests need to download an app?", "No. Codes and instructions arrive by email or message."),
          ("What if the Internet goes down?", "The locks and thermostats we choose also work offline; data syncs when the connection is back."),
+         ("How is this different from Home Assistant automation?", "Here we connect the guest journey: booking, online check-in, access codes and compliance. Home Assistant automation covers the property's installation: climate, lights, sensors and energy, designed to last. They are often done together."),
          ("Do you do the wiring?", INSTALLERS_EN)],
   ),
   "videosorveglianza-citofonia-accessi.html": dict(
@@ -683,6 +687,46 @@ EN_PAGES = {
          ("Do you manage hosting?", "Yes, with a monthly plan covering hosting, security, backups and updates."),
          ("Can the site connect to business software?", "Yes: bookings, customer areas and data can come directly from your software.")],
   ),
+}
+
+# chiusura della sezione contatto, per slug italiano del servizio o chiave del prodotto: (titolo, testo)
+CTAS = {
+  "interconnessione-macchine-industria-4-0.html": {
+    "it": ("Dicci marca e modello delle tue macchine.", "Ti diciamo per iscritto, entro 24 ore, se e come si collegano al gestionale e cosa serve per l'interconnessione."),
+    "en": ("Tell us the make and model of your machines.", "Within 24 hours we tell you in writing whether and how they connect to your software and what interconnection requires.")},
+  "gestionale-su-misura.html": {
+    "it": ("Mandaci il file Excel che usi oggi.", "Partiamo da lì: entro 24 ore ti diciamo come diventa un gestionale e quale parte conviene fare per prima."),
+    "en": ("Send us the spreadsheet you use today.", "We start from there: within 24 hours we tell you how it becomes business software and which part to build first.")},
+  "integrazione-software-api.html": {
+    "it": ("Quali programmi devono parlarsi?", "Elencaci sistemi e passaggi che oggi fate a mano: entro 24 ore ti diciamo come collegarli e con quali costi."),
+    "en": ("Which programs need to talk to each other?", "List the systems and the steps you do by hand today: within 24 hours we tell you how to connect them and at what cost.")},
+  "migrazione-dati.html": {
+    "it": ("Da quale programma partite?", "Dicci il nome del vecchio gestionale o database: la prima analisi in videochiamata è gratuita e ti diciamo subito cosa si può recuperare."),
+    "en": ("Which program are you moving from?", "Tell us the old software or database: the first video call analysis is free and we tell you straight away what can be recovered.")},
+  "monitoraggio-iot.html": {
+    "it": ("Cosa vuoi tenere sotto controllo?", "Consumi, temperature, impianti o siti remoti: dicci cosa e dove, ti proponiamo sensori e cruscotto entro 24 ore."),
+    "en": ("What do you want to keep an eye on?", "Consumption, temperatures, installations or remote sites: tell us what and where, and we propose sensors and a dashboard within 24 hours.")},
+  "automazione-hotel-bnb.html": {
+    "it": ("Quante camere e quali ingressi?", "Raccontaci com'è fatta la struttura e cosa usi oggi per prenotazioni e chiavi: ti proponiamo il percorso dell'ospite entro 24 ore."),
+    "en": ("How many rooms and which entrances?", "Tell us about the property and what you use today for bookings and keys: we propose the guest journey within 24 hours.")},
+  "domotica-home-assistant.html": {
+    "it": ("Raccontaci la struttura e gli impianti.", "Albergo o ristorante, camere, celle, impianti e dispositivi che hai già: ti diciamo come progettare un impianto che duri."),
+    "en": ("Tell us about the property and its installations.", "Hotel or restaurant, rooms, cold rooms, installations and devices you already have: we tell you how to design a system that lasts.")},
+  "videosorveglianza-citofonia-accessi.html": {
+    "it": ("Quali ingressi e aree vuoi controllare?", "Dicci accessi, aree e telecamere che hai già: ti proponiamo l'impianto e il preventivo entro 24 ore."),
+    "en": ("Which entrances and areas do you want to watch?", "Tell us the access points, areas and cameras you already have: we propose the system and a quote within 24 hours.")},
+  "centralini-voip-telefonia.html": {
+    "it": ("Quanti interni e quali linee avete?", "Dicci numeri, interni e operatore attuale: ti diciamo come passare al VoIP senza perdere chiamate."),
+    "en": ("How many extensions and lines do you have?", "Tell us your numbers, extensions and current carrier: we tell you how to switch to VoIP without missing calls.")},
+  "internet-offgrid-siti-remoti.html": {
+    "it": ("Dov'è il sito da collegare?", "Mandaci posizione e cosa deve funzionare lì: valutiamo segnale, satellite ed energia prima del sopralluogo."),
+    "en": ("Where is the site to connect?", "Send us the location and what needs to work there: we check signal, satellite and power before the site survey.")},
+  "siti-web-piattaforme.html": {
+    "it": ("Che sito ti serve?", "Raccontaci a chi si rivolge, cosa deve fare e chi lo aggiornerà: entro 24 ore ti proponiamo struttura e preventivo."),
+    "en": ("What website do you need?", "Tell us who it is for, what it must do and who will update it: within 24 hours we propose structure and quote.")},
+  "erp": {
+    "it": ("Prenota l'analisi gratuita.", "Un'ora in videochiamata: ci racconti come producete oggi e ti diciamo quale piano fa per voi, con un preventivo a prezzo chiuso."),
+    "en": ("Book the free analysis.", "A one-hour video call: you tell us how you produce today and we tell you which plan fits, with a fixed-price quote.")},
 }
 
 PRICE_NOTES = {
