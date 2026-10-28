@@ -374,10 +374,10 @@ def offers_ld(it_slug):
 WHY = {
     "it": dict(e="Perché JDEVPRO", h="Un elettricista installa. Un informatico programma. <span>Noi teniamo insieme il sistema.</span>",
                p="Quando macchine, impianti, rete e software devono funzionare insieme, serve qualcuno che governi l'insieme invece di tanti fornitori separati. Progettiamo, colleghiamo e documentiamo il sistema; cablaggi e quadri li realizzano installatori abilitati con cui collaboriamo.",
-               partners="Partner: <strong>Efficasa</strong> per il fotovoltaico, <strong>Open Fiber</strong> per la fibra FTTH, <strong>DWIN</strong> per i display HMI."),
+               partners="Partner: <strong>Efficasa</strong> per il fotovoltaico, <strong>Open Fiber</strong> per la fibra FTTH, <strong>Aruba</strong> per connettività e cloud, <strong>Aruba Business</strong> per l'hosting, <strong>MikroTik</strong> per la connettività, <strong>Ubiquiti</strong> per reti e videosorveglianza, <strong>Siportal</strong> per il VoIP, <strong>WuBook</strong> per le OTA, <strong>DWIN</strong> per i display HMI."),
     "en": dict(e="Why JDEVPRO", h="An electrician installs. A programmer codes. <span>We hold the whole system together.</span>",
                p="When machines, installations, network and software have to work together, someone has to govern the whole instead of many separate suppliers. We design, connect and document the system; wiring and panels are done by licensed installers we work with.",
-               partners="Partners: <strong>Efficasa</strong> for solar, <strong>Open Fiber</strong> for FTTH fibre, <strong>DWIN</strong> for HMI displays."),
+               partners="Partners: <strong>Efficasa</strong> for solar, <strong>Open Fiber</strong> for FTTH fibre, <strong>Aruba</strong> for connectivity and cloud, <strong>Aruba Business</strong> for hosting, <strong>MikroTik</strong> for connectivity, <strong>Ubiquiti</strong> for networks and video surveillance, <strong>Siportal</strong> for VoIP, <strong>WuBook</strong> for OTA channels, <strong>DWIN</strong> for HMI displays."),
 }
 
 # incentivi in home: (eyebrow, titolo, testo, [(titolo, testo, link, etichetta)])
