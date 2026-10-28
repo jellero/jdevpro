@@ -64,7 +64,7 @@ PRODUCTS = {
           ("Su misura", "Per processi particolari: moduli o un gestionale scritti per voi, collegati alle macchine e all'ERP. Prima versione da 3.000 €."),
         ]),
         ("cards", "Già in produzione", "JD Industry lavora già in officina.", "", [
-          ("10 macchine collegate a Tolmezzo", "Falegnamerie e stamperie con macchine collegate al gestionale: stato, produzione, commesse e costi senza fogli Excel."),
+          ("Decine di macchine collegate", "Falegnamerie e stamperie con macchine collegate al gestionale: stato, produzione, commesse e costi senza fogli Excel."),
           ("Bordatrice SCM con Maestro Active", "Stato e allarmi in tempo reale, commesse aperte e chiuse dalla macchina, produzione importata in automatico e costo reale per commessa."),
           ("CNC Essetre/Tecnoessetre", "Più macchine in un'unica schermata, eventi associati alla commessa, invio dei file di lavoro, magazzino e residui, report stampabili."),
         ]),
@@ -299,7 +299,7 @@ PRODUCTS = {
           ("Custom", "For unusual processes: modules or software written for you, connected to machines and ERP. First version from €3,000."),
         ]),
         ("cards", "Already in production", "JD Industry already runs on the shop floor.", "", [
-          ("10 machines connected in Tolmezzo", "Woodworking and metal pressing companies with machines connected to business software: status, production, jobs and costs without spreadsheets."),
+          ("Dozens of machines connected", "Woodworking and metal pressing companies with machines connected to business software: status, production, jobs and costs without spreadsheets."),
           ("SCM edge bander with Maestro Active", "Real-time status and alarms, jobs opened and closed on the machine, automatic production import and real cost per job."),
           ("Essetre/Tecnoessetre CNC", "Several machines on one screen, events linked to jobs, work file upload, stock and offcuts, printable reports."),
         ]),

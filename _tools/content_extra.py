@@ -58,7 +58,7 @@ CITIES = [
     desc="Gestionali su misura, interconnessione macchine 4.0, IoT e integrazioni per aziende della provincia di Udine e della Carnia. Base a Tolmezzo.",
     lead="Lavoriamo da Tolmezzo con aziende della provincia di Udine e della Carnia: gestionali su misura, macchine collegate al gestionale, sensori, integrazioni tra programmi, automazione per hotel e B&B. Veniamo in azienda per l'analisi e seguiamo il resto anche da remoto.",
     sectors=[
-      ("Meccanica, stamperie e metalmeccanica", "Macchine collegate al gestionale, commesse, tempi e costi reali, interconnessione per l'iperammortamento. A Tolmezzo abbiamo già collegato 10 macchine."),
+      ("Meccanica, stamperie e metalmeccanica", "Macchine collegate al gestionale, commesse, tempi e costi reali, interconnessione per l'iperammortamento. Abbiamo già collegato decine di macchine."),
       ("Distretto della sedia e legno-arredo", "Bordatrici, centri di lavoro e linee collegati; commesse, materiali e consuntivi per ordine."),
       ("Legno, segherie e Carnia", "Produzione, magazzino e lotti tracciati; monitoraggio di impianti e siti remoti anche senza rete fissa."),
       ("Agroalimentare", "Tracciabilità, magazzino, ordini e sensori di temperatura e umidità con allarmi."),
@@ -152,7 +152,7 @@ GUIDES = [
         'manca uno storico da mostrare al momento della perizia.']]),
      ('Come lo realizziamo',
       ['Con JD Industry colleghiamo la macchina al sistema aziendale tramite le interfacce del costruttore: invio di commesse e file di lavoro, ritorno automatico di stato, produzione e allarmi, storico '
-       "consultabile e report. Per macchine senza API usiamo l'interfaccia web del supervisore o un programma ponte seriale o Modbus. A Tolmezzo abbiamo già collegato 10 macchine tra falegnamerie e "
+       "consultabile e report. Per macchine senza API usiamo l'interfaccia web del supervisore o un programma ponte seriale o Modbus. Abbiamo già collegato decine di macchine tra falegnamerie e "
        'stamperie.',
        "Il diritto all'agevolazione sorge al momento dell'interconnessione: conviene pianificarla insieme all'acquisto della macchina."]),
      ("Quando deve avvenire l'interconnessione",
@@ -432,14 +432,14 @@ EN_PAGES = {
   "interconnessione-macchine-industria-4-0.html": dict(
     nav="Machines 4.0", card_title="Machine interconnection 4.0",
     card_who="Manufacturers with CNC machines, presses, lines and plants of any brand, new or with years of work behind them.",
-    card_points=["Any machine, old ones too", "10 machines already connected in Tolmezzo", "Interconnection required by Industry 4.0 incentives"],
+    card_points=["Any machine, old ones too", "Dozens of machines already connected", "Interconnection required by Industry 4.0 incentives"],
     title="Machine interconnection 4.0 and data collection | JDEVPRO",
     desc="We connect any machine to business software, Industry 4.0 or older: OPC UA, MTConnect, PLCs, Modbus, serial or sensors. Real job costs. 10 in production.",
     service_type="Industry 4.0 machine interconnection",
     eyebrow="Machine interconnection · Industry 4.0",
     h1="Machine interconnection 4.0: <span>any machine, connected to your software.</span>",
     lead="We connect machines of any brand, new or with years of work behind them, and bring the data where it is needed: status, jobs, production, alarms and real costs per job. Without touching the machine program.",
-    proof="In production in Tolmezzo: 10 machines connected across woodworking shops and metal pressing companies.",
+    proof="In production: dozens of machines connected across woodworking shops and metal pressing companies.",
     problems=[("The machine is new but not connected.", "Without interconnection to company systems you risk losing Italian Industry 4.0 tax incentives."),
               ("Times and costs are estimated by hand.", "Machine hours, scrap and consumption end up in Excel, if at all."),
               ("The supplier does not connect your software.", "The machine has interfaces, but nobody uses them to bring data to the office."),
@@ -454,7 +454,7 @@ EN_PAGES = {
            ("Installation", "Connection and setup on your network: a few days if the machine already has an interface, a little longer if sensors are needed."),
            ("Testing on real data", "We verify status, production and jobs with the machine at work."),
            ("Support when needed", "On-request help when the machine or the software changes.")],
-    examples=[("10 machines in production in Tolmezzo", "Woodworking and metal pressing companies with machines connected to their business software: status, production, jobs and costs without spreadsheets.", None),
+    examples=[("Dozens of machines in production", "Woodworking and metal pressing companies with machines connected to their business software: status, production, jobs and costs without spreadsheets.", None),
               ("JD Industry · SCM edge bander with Maestro Active", "Real-time status and alarms, jobs opened and closed on the machine, automatic production import and real cost per job.", None),
               ("JD Industry · Essetre/Tecnoessetre CNC", "Several machines on one screen, events linked to jobs, work file upload, stock and offcuts, printable cost reports.", None)],
     catalog=[("Machines and CNC controls", ["OPC UA and MTConnect", "Siemens, Fanuc and Heidenhain controls", "SCM Maestro Active, Essetre / Tecnoessetre", "Line supervisors with web interface or API"]),
