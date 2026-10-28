@@ -59,8 +59,8 @@ PRODUCTS = {
       links=[],
       blocks=[
         ("cards", "Tre livelli", "Si parte da dove serve, si cresce senza cambiare sistema.", "", [
-          ("Macchine collegate", "Gestionale semplice collegato alle macchine: stato e allarmi, commesse, produzione e costi reali per commessa, interconnessione documentata per il perito. Da 1.500 € a macchina."),
-          ("ERP completo su ERPNext", "Distinte base, ordini di lavoro, magazzino, acquisti, vendite, contabilità e fattura elettronica, collegati alle macchine. Avvio da 990 €."),
+          ("Macchine collegate", "Gestionale semplice collegato alle macchine: stato e allarmi, commesse, produzione e costi reali per commessa, interconnessione documentata per il perito. Da 1.500 € per tipo di macchina, sviluppo del collegamento via API compreso."),
+          ("ERP completo su ERPNext", "Distinte base, ordini di lavoro, magazzino, acquisti, vendite, contabilità e fattura elettronica, collegati alle macchine. Avvio del gestionale da 990 € fino a 5 utenti; il collegamento delle macchine si aggiunge come nel livello precedente."),
           ("Su misura", "Per processi particolari: moduli o un gestionale scritti per voi, collegati alle macchine e all'ERP. Prima versione da 3.000 €."),
         ]),
         ("cards", "Già in produzione", "JD Industry lavora già in officina.", "", [
@@ -294,8 +294,8 @@ PRODUCTS = {
       links=[],
       blocks=[
         ("cards", "Three levels", "Start where you need, grow without changing system.", "", [
-          ("Connected machines", "Simple software connected to machines: status and alarms, jobs, production and real cost per job, interconnection documented for the appraiser. From €1,500 per machine."),
-          ("Full ERP on ERPNext", "Bills of materials, work orders, stock, purchasing, sales, accounting and e-invoicing, connected to the machines. Setup from €990."),
+          ("Connected machines", "Simple software connected to machines: status and alarms, jobs, production and real cost per job, interconnection documented for the appraiser. From €1,500 per machine type, API connection development included."),
+          ("Full ERP on ERPNext", "Bills of materials, work orders, stock, purchasing, sales, accounting and e-invoicing, connected to the machines. Software setup from €990 for up to 5 users; connecting machines is added as in the previous level."),
           ("Custom", "For unusual processes: modules or software written for you, connected to machines and ERP. First version from €3,000."),
         ]),
         ("cards", "Already in production", "JD Industry already runs on the shop floor.", "", [
