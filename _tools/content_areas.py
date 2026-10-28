@@ -12,6 +12,9 @@ PRIMARY_AREA = {
   "centralini-voip-telefonia.html": "strutture", "internet-offgrid-siti-remoti.html": "strutture",
   "gestionale-su-misura.html": "web", "integrazione-software-api.html": "web", "migrazione-dati.html": "web", "siti-web-piattaforme.html": "web",
 }
+# servizi di supporto: nel sito e nei menu, ma in home in una riga "Anche:" per non sembrare tuttofare
+SUPPORT_SERVICES = {"videosorveglianza-citofonia-accessi.html", "centralini-voip-telefonia.html", "internet-offgrid-siti-remoti.html",
+                    "monitoraggio-iot.html", "siti-web-piattaforme.html"}
 # il blocco "API / interfacce web / seriale e Modbus" solo dove parla al pubblico giusto
 TECH_TIERS = {"interconnessione-macchine-industria-4-0.html", "integrazione-software-api.html", "monitoraggio-iot.html"}
 

@@ -59,7 +59,7 @@ PRODUCTS = {
       links=[],
       blocks=[
         ("cards", "Tre livelli", "Si parte da dove serve, si cresce senza cambiare sistema.", "", [
-          ("Macchine collegate", "Gestionale semplice collegato alle macchine: stato e allarmi, commesse, produzione e costi reali per commessa, interconnessione documentata per il perito. Da 1.500 € per tipo di macchina, sviluppo del collegamento via API compreso."),
+          ("Macchine collegate", "Gestionale semplice collegato alle macchine: stato e allarmi, commesse, produzione e costi reali per commessa, interconnessione documentata per il perito. Da 1.500 € per tipo di macchina, sviluppo del collegamento via API compreso; le macchine uguali successive da 400 €."),
           ("ERP completo su ERPNext", "Distinte base, ordini di lavoro, magazzino, acquisti, vendite, contabilità e fattura elettronica, collegati alle macchine. Avvio del gestionale da 990 € fino a 5 utenti; il collegamento delle macchine si aggiunge come nel livello precedente."),
           ("Su misura", "Per processi particolari: moduli o un gestionale scritti per voi, collegati alle macchine e all'ERP. Prima versione da 3.000 €."),
         ]),
@@ -131,8 +131,8 @@ PRODUCTS = {
           ("Cloud fino a 5 utenti", "39 € al mese", "Server dedicato, backup, aggiornamenti, monitoraggio"),
           ("Cloud fino a 15 utenti", "69 € al mese", "Più risorse e backup più frequenti"),
           ("Manutenzione server o NAS", "29 € al mese", "Aggiornamenti, backup verificati, monitoraggio remoto"),
-          ("Assistenza Base", "79 € al mese", "2 ore al mese, risposta entro 1 giorno lavorativo"),
-          ("Assistenza Plus", "169 € al mese", "5 ore al mese, risposta entro 4 ore lavorative, tablet e middleware"),
+          ("Assistenza Base", "99 € al mese", "2 ore al mese, risposta entro 1 giorno lavorativo"),
+          ("Assistenza Plus", "249 € al mese", "5 ore al mese, risposta entro 4 ore lavorative, tablet e middleware"),
           ("Assistenza a chiamata", "50 € l'ora", "Da remoto minimo 30 minuti; in sede minimo mezza giornata, più trasferta"),
           ("Pacchetto 10 ore prepagate", "450 €", "Valido 12 mesi"),
         ], "Prezzi IVA esclusa. Non comprendono hardware (server, NAS, tablet, lettori barcode), registratore telematico e canale SdI, che dipende dal volume di fatture. Nessuna licenza per utente."),
@@ -294,7 +294,7 @@ PRODUCTS = {
       links=[],
       blocks=[
         ("cards", "Three levels", "Start where you need, grow without changing system.", "", [
-          ("Connected machines", "Simple software connected to machines: status and alarms, jobs, production and real cost per job, interconnection documented for the appraiser. From €1,500 per machine type, API connection development included."),
+          ("Connected machines", "Simple software connected to machines: status and alarms, jobs, production and real cost per job, interconnection documented for the appraiser. From €1,500 per machine type, API connection development included; further identical machines from €400."),
           ("Full ERP on ERPNext", "Bills of materials, work orders, stock, purchasing, sales, accounting and e-invoicing, connected to the machines. Software setup from €990 for up to 5 users; connecting machines is added as in the previous level."),
           ("Custom", "For unusual processes: modules or software written for you, connected to machines and ERP. First version from €3,000."),
         ]),
@@ -366,8 +366,8 @@ PRODUCTS = {
           ("Cloud up to 5 users", "€39 a month", "Dedicated server, backups, updates, monitoring"),
           ("Cloud up to 15 users", "€69 a month", "More resources and more frequent backups"),
           ("Server or NAS maintenance", "€29 a month", "Updates, verified backups, remote monitoring"),
-          ("Basic support", "€79 a month", "2 hours a month, reply within 1 working day"),
-          ("Plus support", "€169 a month", "5 hours a month, reply within 4 working hours, tablets and middleware"),
+          ("Basic support", "€99 a month", "2 hours a month, reply within 1 working day"),
+          ("Plus support", "€249 a month", "5 hours a month, reply within 4 working hours, tablets and middleware"),
           ("On-call support", "€50 an hour", "Remote minimum 30 minutes; on-site minimum half a day, plus travel"),
           ("10 prepaid hours", "€450", "Valid 12 months"),
         ], "Prices exclude VAT. Hardware (server, NAS, tablets, barcode readers), fiscal printer and SdI channel fees, which depend on invoice volume, are not included. No per-user licences."),

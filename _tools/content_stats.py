@@ -6,12 +6,12 @@ Ogni voce: (valore in evidenza, descrizione, link o None).
 STATS = {
   "home": {
     "it": [("Decine", "macchine collegate al gestionale, in produzione", "interconnessione-macchine-industria-4-0.html"),
-           ("Decine", "impianti Ubiquiti: reti, ponti radio, telecamere e accessi", "videosorveglianza-citofonia-accessi.html"),
-           ("Decine", "centralini VoIP installati in aziende, alberghi e ristoranti", "centralini-voip-telefonia.html"),
+           ("JD Industry", "il nostro gestionale di produzione collegato alle macchine", "gestionale-produzione-erpnext.html"),
+           ("Welora", "il nostro gestionale per strutture ricettive", "https://welora.it/"),
            ("24 h", "al massimo per una risposta scritta", "#contatto")],
     "en": [("Dozens", "machines connected to business software, in production", "en-machine-interconnection.html"),
-           ("Dozens", "Ubiquiti systems: networks, radio links, cameras and access control", "en-video-surveillance-intercom-access.html"),
-           ("Dozens", "VoIP phone systems installed in companies, hotels and restaurants", "en-voip-phone-systems.html"),
+           ("JD Industry", "our production software connected to machines", "en-erpnext-manufacturing.html"),
+           ("Welora", "our hospitality management software", "https://welora.it/"),
            ("24 h", "at most for a written reply", "#contatto")],
   },
   "area:industria": {

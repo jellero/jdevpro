@@ -281,6 +281,9 @@
 .area-card ul { list-style: none; margin: 8px 0 0; padding: 0; border-top: 1px solid rgba(255,255,255,.1); }
 .area-card li a { display: block; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.08); color: #d8e3ea; text-decoration: none; font-size: .92rem; }
 .area-card li a:hover { color: var(--teal); }
+.area-card .area-also { margin: 12px 0 0; color: #b8c8d4; font-size: .85rem; line-height: 1.5; }
+.area-card .area-also a { color: #d8e3ea; }
+.area-card .area-also a:hover { color: var(--teal); }
 .area-card .competence-more { margin-top: auto; padding-top: 14px; color: var(--teal); text-decoration: none; }
 .area-strutture { background: radial-gradient(circle at 85% 10%, rgba(86,200,255,.14), transparent 40%), var(--navy); }
 .area-web { background: radial-gradient(circle at 85% 10%, rgba(250,204,21,.10), transparent 40%), var(--navy); }

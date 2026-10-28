@@ -29,6 +29,7 @@ def stats_html(key, lang):
 AREAS, AREA_SERVICES, PRIMARY_AREA = AREAS_DATA["AREAS"], AREAS_DATA["AREA_SERVICES"], AREAS_DATA["PRIMARY_AREA"]
 TECH_TIERS, PRODUCTS_PAGE, WHERE_PAGE, CALLOUTS = AREAS_DATA["TECH_TIERS"], AREAS_DATA["PRODUCTS_PAGE"], AREAS_DATA["WHERE_PAGE"], AREAS_DATA["CALLOUTS"]
 CARD_OVERRIDES = AREAS_DATA["CARD_OVERRIDES"]
+SUPPORT = AREAS_DATA["SUPPORT_SERVICES"]
 
 
 def area_of(lang, key):
@@ -142,6 +143,8 @@ PRICE_EN = {"Collegamento di una macchina": "Connecting one machine", "Dati macc
             "Server, monitoraggio e manutenzione": "Server, monitoring and maintenance", "se gira sul nostro server": "if it runs on our server",
             "Telecamera aggiuntiva configurata": "Additional camera set up", "per telecamera · cablaggio escluso": "per camera · cabling excluded",
             "Migrazione di un blocco di dati": "Migrating one data block",
+            "Macchina aggiuntiva dello stesso tipo": "Additional machine of the same type",
+            "stessa marca e modello · collegamento già sviluppato": "same make and model · connection already developed",
             "anagrafiche, articoli, giacenze o saldi · da file o esportazione": "master data, items, stock or balances · from file or export",
             "Estrazione da database senza esportazione": "Extraction from a database with no export",
             "Access, SQL Server, DBF, Firebird e simili": "Access, SQL Server, DBF, Firebird and similar",
@@ -156,7 +159,7 @@ ADDRESS = {"@type": "PostalAddress", "addressLocality": "Tolmezzo", "postalCode"
 ORG = {
   "@context": "https://schema.org", "@type": "ProfessionalService", "@id": ORG_ID, "name": "JDEVPRO",
   "url": BASE, "logo": BASE + "assets/icon-512.png", "image": BASE + "assets/og-jdevpro.jpg", "email": EMAIL,
-  "vatID": "IT02783420306",
+  "vatID": "IT02783420306", "priceRange": "€€",
   "founder": {"@type": "Person", "name": "Jacopo Ellero", "url": BASE + "chi-sono.html"},
   "address": ADDRESS,
   "geo": {"@type": "GeoCoordinates", "latitude": 46.4057, "longitude": 13.0154},
@@ -404,8 +407,8 @@ DOC_STEP = {"it": ("Documentazione", "Schemi, configurazioni, credenziali e proc
 def home(lang="it"):
     u = UI[lang]
     if lang == "it":
-        t = dict(eyebrow="Software su misura e integrazioni · Friuli Venezia Giulia",
-                 h1="Colleghiamo macchine, gestionali e dispositivi. <span>E li teniamo funzionanti.</span>",
+        t = dict(eyebrow="Integrazione macchine e gestionali · Friuli Venezia Giulia",
+                 h1="Colleghiamo le macchine al gestionale. <span>E teniamo tutto funzionante.</span>",
                  lead="JDEVPRO nasce in Friuli con Jacopo Ellero. Sviluppiamo gestionali su misura, colleghiamo macchine, sensori e dispositivi ai sistemi aziendali e seguiamo tutto in produzione, per aziende e strutture del Friuli Venezia Giulia e del Veneto, in trasferta dove serve e da remoto ovunque: se la macchina è collegata alla rete, la distanza non è un limite.",
                  b1="Scegli la tua area", b2="Scrivici", ae="Da dove parti?", ah="Tre aree, un solo interlocutore.",
                  enter="Entra nell'area →",
@@ -413,11 +416,11 @@ def home(lang="it"):
                         ("E-commerce e marketplace", "Gestionale collegato a fornitore, marketplace e corriere.", "integrazione-software-api.html"),
                         ("Prodotti", "Welora per le strutture ricettive e JD Industry per la produzione.", "prodotti.html")],
                  who='<strong>JDEVPRO</strong> è l\'attività di Jacopo Ellero, sviluppatore e integratore di sistemi. <a href="chi-sono.html">Chi sono →</a> · <a href="dove-lavoriamo.html">Dove lavoriamo →</a>',
-                 title="JDEVPRO · Gestionali, macchine 4.0 e IoT in Friuli",
-                 desc="Gestionali su misura, macchine 4.0, integrazioni, IoT, automazione hotel e B&B, videosorveglianza e internet offgrid in Friuli Venezia Giulia.")
+                 title="JDEVPRO · Interconnessione macchine e gestionali in Friuli",
+                 desc="Interconnessione macchine 4.0 per l'iperammortamento, gestionale di produzione JD Industry, migrazione dati e automazione per hotel in Friuli Venezia Giulia.")
     else:
-        t = dict(eyebrow="Custom software and integrations · North-east Italy",
-                 h1="We connect machines, business software and devices. <span>And keep them running.</span>",
+        t = dict(eyebrow="Machine and business software integration · North-east Italy",
+                 h1="We connect machines to business software. <span>And keep it all running.</span>",
                  lead="JDEVPRO was founded in Friuli by Jacopo Ellero. We build custom business software, connect machines, sensors and devices to company systems and look after everything in production, for companies and properties in north-east Italy, travelling where needed and working remotely anywhere: if the machine is on the network, distance is no limit.",
                  b1="Choose your area", b2="Write to us", ae="Where do you start?", ah="Three areas, one partner.",
                  enter="Enter the area →",
@@ -425,16 +428,21 @@ def home(lang="it"):
                         ("E-commerce and marketplaces", "Business software connected to supplier, marketplaces and courier.", "en-software-integration-api.html"),
                         ("Products", "Welora for hospitality and JD Industry for manufacturing.", "en-products.html")],
                  who='<strong>JDEVPRO</strong> is the business of Jacopo Ellero, software developer and systems integrator. <a href="en-about.html">About me →</a>',
-                 title="JDEVPRO · Business software, machines 4.0 and IoT, Italy",
-                 desc="Custom business software, machines 4.0, integrations, IoT, hotel automation, video surveillance and off-grid internet in north-east Italy.")
+                 title="JDEVPRO · Machine interconnection and business software, Italy",
+                 desc="Industry 4.0 machine interconnection, JD Industry production software, data migration and hotel automation in north-east Italy.")
     cards = ""
     for a in AREAS[lang]:
-        svc = "".join(f'<li><a href="{s["href"]}">{s["card_title"]}</a></li>' for s in area_services(lang, a["key"]))
+        svcs = area_services(lang, a["key"])
+        svc = "<ul>" + "".join(f'<li><a href="{s["href"]}">{s["card_title"]}</a></li>' for s in svcs if s.get("it_slug", s["href"]) not in SUPPORT) + "</ul>"
+        also = [s for s in svcs if s.get("it_slug", s["href"]) in SUPPORT]
+        if also:
+            svc += "<p class=\"area-also\">" + ("Anche: " if lang == "it" else "Also: ") + ", ".join(
+                f'<a href="{s["href"]}">{s["card_title"]}</a>' for s in also) + "</p>"
         cards += f"""<article class="area-card area-{a['key']} reveal">
 <p class="eyebrow">{a['eyebrow']}</p>
 <h3><a href="{a['slug']}">{a['nav']}</a></h3>
 <p>{a['card']}</p>
-<ul>{svc}</ul>
+{svc}
 <a class="competence-more" href="{a['slug']}">{t['enter']}</a>
 </article>
 """

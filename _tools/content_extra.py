@@ -7,6 +7,7 @@ INSTALLERS_EN = "Wiring, lines and electrical panels are installed by licensed e
 PRICES = {
   "interconnessione-macchine-industria-4-0.html": [
     ("Collegamento di una macchina", 1500, "una tantum", "per tipo di macchina · sviluppo del collegamento via API compreso · eventuali sensori esclusi"),
+    ("Macchina aggiuntiva dello stesso tipo", 400, "una tantum", "stessa marca e modello · collegamento già sviluppato"),
   ],
   "gestionale-su-misura.html": [
     ("Prima versione del gestionale", 3000, "una tantum", "a prezzo fisso, sulla parte più utile"),
