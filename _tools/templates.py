@@ -406,7 +406,7 @@ def home(lang="it"):
     if lang == "it":
         t = dict(eyebrow="Software su misura e integrazioni · Friuli Venezia Giulia",
                  h1="Colleghiamo macchine, gestionali e dispositivi. <span>E li teniamo funzionanti.</span>",
-                 lead="JDEVPRO nasce a Tolmezzo con Jacopo Ellero. Sviluppiamo gestionali su misura, colleghiamo macchine, sensori e dispositivi ai sistemi aziendali e seguiamo tutto in produzione, per aziende e strutture del Friuli Venezia Giulia e del Veneto.",
+                 lead="JDEVPRO nasce in Friuli con Jacopo Ellero. Sviluppiamo gestionali su misura, colleghiamo macchine, sensori e dispositivi ai sistemi aziendali e seguiamo tutto in produzione, per aziende e strutture del Friuli Venezia Giulia e del Veneto.",
                  b1="Scegli la tua area", b2="Scrivici", ae="Da dove parti?", ah="Tre aree, un solo interlocutore.",
                  enter="Entra nell'area →",
                  proof=[("JD Industry", "Gestionale di produzione collegato a macchine SCM ed Essetre.", "gestionale-produzione-erpnext.html"),
@@ -418,7 +418,7 @@ def home(lang="it"):
     else:
         t = dict(eyebrow="Custom software and integrations · North-east Italy",
                  h1="We connect machines, business software and devices. <span>And keep them running.</span>",
-                 lead="JDEVPRO was founded in Tolmezzo, Friuli, by Jacopo Ellero. We build custom business software, connect machines, sensors and devices to company systems and look after everything in production, for companies and properties in north-east Italy and remotely.",
+                 lead="JDEVPRO was founded in Friuli by Jacopo Ellero. We build custom business software, connect machines, sensors and devices to company systems and look after everything in production, for companies and properties in north-east Italy and remotely.",
                  b1="Choose your area", b2="Write to us", ae="Where do you start?", ah="Three areas, one partner.",
                  enter="Enter the area →",
                  proof=[("JD Industry", "Production software connected to SCM and Essetre machines.", "en-erpnext-manufacturing.html"),
