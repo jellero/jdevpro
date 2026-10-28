@@ -85,7 +85,7 @@ UI = {
              c_steps_label="Come funziona", c_mail="Scrivici una email", copy="Copia", copied="Copiato ✓",
              wa="Scrivici su WhatsApp ↗",
              li="Oppure su LinkedIn ↗", where="Tolmezzo (UD) · Friuli Venezia Giulia · Veneto · anche da remoto",
-             f_who="Jacopo Ellero · Tolmezzo (UD)", privacy="privacy.html", cookie="cookie-policy.html", cv="cv.html",
+             f_who="Jacopo Ellero · Tolmezzo (UD)", privacy="privacy.html", cookie="cookie-policy.html",
              mailto=MAILTO, wa_url=WA),
   "en": dict(lang="en", locale="en_GB", skip="Skip to content", menu="Open menu", navlabel="Main navigation",
              contact="Contact", guides="Guides", home="Home", crumbs="Breadcrumb", more="Learn more →",
@@ -106,7 +106,7 @@ UI = {
              c_steps_label="How it works", c_mail="Send us an email", copy="Copy", copied="Copied ✓",
              wa="Message us on WhatsApp ↗",
              li="Or on LinkedIn ↗", where="Tolmezzo (Udine), Italy · north-east Italy · remote projects",
-             f_who="Jacopo Ellero · Tolmezzo, Italy", privacy="privacy-en.html", cookie="cookie-policy-en.html", cv="cv-en.html",
+             f_who="Jacopo Ellero · Tolmezzo, Italy", privacy="privacy-en.html", cookie="cookie-policy-en.html",
              mailto=MAILTO_EN, wa_url=WA_EN),
 }
 
@@ -319,7 +319,7 @@ def footer(lang="it"):
 <div class="shell footer-grid footer-wide">
 <div><strong>JDEVPRO</strong><span>{u['f_who']}</span></div>
 <div class="footer-links">{links}</div>
-<div><span>P.IVA IT02783420306</span><a href="{u['privacy']}">Privacy</a><a href="{u['cookie']}">Cookie</a><a href="{u['cv']}">CV</a><a href="https://github.com/jellero" rel="noreferrer" target="_blank">GitHub</a><a href="{LI}" rel="noreferrer" target="_blank">LinkedIn</a></div>
+<div><span>P.IVA IT02783420306</span><a href="{u['privacy']}">Privacy</a><a href="{u['cookie']}">Cookie</a><a href="https://github.com/jellero" rel="noreferrer" target="_blank">GitHub</a><a href="{LI}" rel="noreferrer" target="_blank">LinkedIn</a></div>
 </div>
 <div class="shell"><div class="footer-local">{services}</div></div>
 </footer>
@@ -1062,7 +1062,7 @@ def not_found():
     html = head("Pagina non trovata | JDEVPRO", "La pagina cercata non esiste più.", "404.html", [], robots="noindex,follow") + body + footer()
     # percorsi assoluti: la 404 può essere servita da qualsiasi cartella
     for a in ('href="styles.css', 'href="overrides.css', 'href="pages.css', 'href="favicon.ico"', 'src="script.js',
-              'href="assets/', 'src="assets/', 'href="index.html', 'href="privacy.html"', 'href="cookie-policy.html"', 'href="cv.html"', 'href="guide.html"'):
+              'href="assets/', 'src="assets/', 'href="index.html', 'href="privacy.html"', 'href="cookie-policy.html"', 'href="guide.html"'):
         html = html.replace(a, a.replace('="', '="/', 1))
     for p in PAGES:
         html = html.replace(f'href="{p["slug"]}"', f'href="/{p["slug"]}"')
@@ -1436,7 +1436,7 @@ for old, target in OLD_URLS.items():
 
 urls = (["", "en.html"] + [p["slug"] for p in PAGES] + [EN_SLUG[p["slug"]] for p in PAGES]
         + [c["slug"] for c in CITIES] + ["guide.html", TEST["slug"]] + [g["slug"] for g in GUIDES]
-        + [x["slug"] for l in ("it", "en") for x in PRODUCTS[l] if not x.get("external")] + [a["slug"] for l in ("it", "en") for a in AREAS[l]] + [PRODUCTS_PAGE["it"]["slug"], PRODUCTS_PAGE["en"]["slug"], WHERE_PAGE["slug"]] + ["chi-sono.html", "en-about.html", "cv.html", "cv-en.html", "privacy.html", "privacy-en.html", "cookie-policy.html", "cookie-policy-en.html"])
+        + [x["slug"] for l in ("it", "en") for x in PRODUCTS[l] if not x.get("external")] + [a["slug"] for l in ("it", "en") for a in AREAS[l]] + [PRODUCTS_PAGE["it"]["slug"], PRODUCTS_PAGE["en"]["slug"], WHERE_PAGE["slug"]] + ["chi-sono.html", "en-about.html", "privacy.html", "privacy-en.html", "cookie-policy.html", "cookie-policy-en.html"])
 sitemap = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 sitemap += [f"  <url><loc>{BASE}{u}</loc><lastmod>{TODAY}</lastmod></url>" for u in urls]
 sitemap.append("</urlset>")

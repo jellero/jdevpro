@@ -32,7 +32,6 @@ ABOUT = {
     ],
     path_e="Percorso", path_h="Esperienza.",
     path=[
-      ("2024 – oggi", "Software Engineer · IT Operations & Integrations", "Gestionali e servizi per e-commerce B2B: cataloghi, ordini, acquisti, spedizioni, integrazioni con marketplace, fornitori e corrieri; sistemi Linux in produzione."),
       ("2022 – 2023", "Software Developer · Automazione industriale e IoT", "Sistemi di automazione con PLC, embedded C, sensori, RS-485, gateway seriali/MQTT, integrazione machine-to-cloud, collaudi e messa in servizio."),
       ("2021 – 2022", "Software Developer & IT Support", "API per applicazioni aziendali, portale di automazione, assistenza hardware e help desk."),
       ("2014 – 2020", "Full Stack Developer & IT Operations", "Siti web ed e-commerce, infrastruttura IT aziendale, assistenza tecnica."),
@@ -63,7 +62,7 @@ ABOUT = {
     edu_e="Formazione e lingue",
     edu=[("Perito industriale per l'informatica", "ITI Galileo Galilei, Gorizia"), ("Studi universitari in ambito ICT", "Percorso non concluso"),
          ("Italiano", "Madrelingua"), ("Inglese", "B1, intermedio")],
-    links=[("Curriculum completo", "cv.html"), ("GitHub", "https://github.com/jellero"), ("LinkedIn", "https://www.linkedin.com/in/jacopo-ellero-a006499a/")],
+    links=[("GitHub", "https://github.com/jellero"), ("LinkedIn", "https://www.linkedin.com/in/jacopo-ellero-a006499a/")],
   ),
   "en": dict(
     slug="en-about.html", nav="About",
@@ -96,7 +95,6 @@ ABOUT = {
     ],
     path_e="Career", path_h="Experience.",
     path=[
-      ("2024 – today", "Software Engineer · IT Operations & Integrations", "Business software and services for B2B e-commerce: catalogues, orders, purchasing, shipping, integrations with marketplaces, suppliers and couriers; Linux systems in production."),
       ("2022 – 2023", "Software Developer · Industrial automation and IoT", "Automation systems with PLCs, embedded C, sensors, RS-485, serial/MQTT gateways, machine-to-cloud integration, testing and commissioning."),
       ("2021 – 2022", "Software Developer & IT Support", "APIs for business applications, automation portal, hardware support and help desk."),
       ("2014 – 2020", "Full Stack Developer & IT Operations", "Websites and e-commerce, company IT infrastructure, technical support."),
@@ -127,6 +125,6 @@ ABOUT = {
     edu_e="Education and languages",
     edu=[("Industrial technical diploma in IT", "ITI Galileo Galilei, Gorizia"), ("University studies in ICT", "Not completed"),
          ("Italian", "Native"), ("English", "B1, intermediate")],
-    links=[("Full CV", "cv-en.html"), ("GitHub", "https://github.com/jellero"), ("LinkedIn", "https://www.linkedin.com/in/jacopo-ellero-a006499a/")],
+    links=[("GitHub", "https://github.com/jellero"), ("LinkedIn", "https://www.linkedin.com/in/jacopo-ellero-a006499a/")],
   ),
 }
