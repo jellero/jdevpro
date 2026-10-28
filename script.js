@@ -290,13 +290,23 @@
       localStorage.setItem(STORAGE_KEY, JSON.stringify({ choice, version: CONSENT_VERSION, updatedAt: new Date().toISOString() }));
     } catch (_) {}
     applyConsent(choice);
-    if (banner) banner.hidden = true;
-    if (preferencesTrigger) preferencesTrigger.hidden = false;
+    hideBanner();
   }
 
-  function showBanner() {
+  // banner non modale: non blocca la pagina; il focus si sposta solo quando lo apre l'utente
+  function hideBanner() {
+    const hadFocus = banner && banner.contains(document.activeElement);
+    if (banner) banner.hidden = true;
+    if (preferencesTrigger) {
+      preferencesTrigger.hidden = false;
+      if (hadFocus) preferencesTrigger.focus();
+    }
+  }
+
+  function showBanner(fromUser) {
     if (banner) banner.hidden = false;
     if (preferencesTrigger) preferencesTrigger.hidden = true;
+    if (fromUser === true && banner) banner.querySelector('[data-cookie-reject]').focus();
   }
 
   function buildUi() {
@@ -304,8 +314,7 @@
     banner = document.createElement('section');
     banner.className = 'cookie-consent';
     banner.id = 'cookie-consent';
-    banner.setAttribute('role', 'dialog');
-    banner.setAttribute('aria-modal', 'true');
+    banner.setAttribute('role', 'region');
     banner.setAttribute('aria-labelledby', 'cookie-consent-title');
     banner.hidden = true;
     banner.innerHTML = `
@@ -326,15 +335,19 @@
     preferencesTrigger.className = 'cookie-preferences-trigger';
     preferencesTrigger.textContent = text.settings;
     preferencesTrigger.hidden = true;
-    preferencesTrigger.addEventListener('click', showBanner);
+    preferencesTrigger.addEventListener('click', () => showBanner(true));
 
     document.body.appendChild(banner);
     document.body.appendChild(preferencesTrigger);
     banner.querySelector('[data-cookie-reject]').addEventListener('click', () => writeConsent('rejected'));
     banner.querySelector('[data-cookie-accept]').addEventListener('click', () => writeConsent('accepted'));
+    // Esc chiude il banner riaperto solo se una scelta esiste già
+    banner.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && readConsent()) hideBanner();
+    });
     document.querySelectorAll('[data-cookie-settings]').forEach((el) => el.addEventListener('click', (event) => {
       event.preventDefault();
-      showBanner();
+      showBanner(true);
     }));
   }
 
