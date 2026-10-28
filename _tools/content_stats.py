@@ -16,9 +16,11 @@ STATS = {
   },
   "area:industria": {
     "it": [("Decine", "macchine collegate in produzione", "interconnessione-macchine-industria-4-0.html"),
-           ("JD Industry", "gestionale di produzione collegato a macchine SCM ed Essetre", None)],
+           ("JD Industry", "gestionale di produzione collegato a macchine SCM ed Essetre", None),
+           ("Perizie asseverate", "interventi già sottoposti a perizie asseverate da ingegneri", "guida-interconnessione-iperammortamento.html")],
     "en": [("Dozens", "machines connected in production", "en-machine-interconnection.html"),
-           ("JD Industry", "production software connected to SCM and Essetre machines", None)],
+           ("JD Industry", "production software connected to SCM and Essetre machines", None),
+           ("Sworn appraisals", "work already reviewed in sworn technical appraisals by engineers", "en-machine-interconnection.html")],
   },
   "area:strutture": {
     "it": [("Camera per camera", "clima collegato alle prenotazioni in alberghi e affittacamere", "automazione-hotel-bnb.html"),
@@ -38,11 +40,13 @@ STATS = {
   },
   "interconnessione-macchine-industria-4-0.html": {
     "it": [("Decine", "macchine collegate in produzione", None),
-           ("Qualsiasi marca", "macchine 4.0 e anche datate, con o senza interfaccia", None),
-           ("SCM · Essetre", "macchine già collegate al gestionale JD Industry", None)],
+           ("Perizie asseverate", "interventi già sottoposti a perizie asseverate da ingegneri", None),
+           ("Certificazione", "partner specializzati in certificazione e validazione", None),
+           ("Competenze dirette", "nell'integrazione tra macchine, software e infrastrutture", None)],
     "en": [("Dozens", "machines connected in production", None),
-           ("Any brand", "Industry 4.0 and older machines, with or without an interface", None),
-           ("SCM · Essetre", "machines already connected to JD Industry", None)],
+           ("Sworn appraisals", "work already reviewed in sworn technical appraisals by engineers", None),
+           ("Certification", "partners specialised in certification and validation", None),
+           ("Hands-on skills", "in integrating machines, software and infrastructure", None)],
   },
   "monitoraggio-iot.html": {
     "it": [("Industria", "sensori e gateway in produzione", None),

@@ -67,6 +67,7 @@ PRODUCTS = {
           ("Decine di macchine collegate", "Falegnamerie e stamperie con macchine collegate al gestionale: stato, produzione, commesse e costi senza fogli Excel."),
           ("Bordatrice SCM con Maestro Active", "Stato e allarmi in tempo reale, commesse aperte e chiuse dalla macchina, produzione importata in automatico e costo reale per commessa."),
           ("CNC Essetre/Tecnoessetre", "Più macchine in un'unica schermata, eventi associati alla commessa, invio dei file di lavoro, magazzino e residui, report stampabili."),
+          ("Perizie asseverate da ingegneri", "Interventi già sottoposti a perizie asseverate, con partner specializzati in certificazione e validazione."),
         ]),
         ("cards", "Vi riconoscete?", "Quando il gestionale non segue la produzione.", "", [
           ("Distinte base in Excel", "Ognuno ha la sua versione. Qui sono uniche, versionate e collegate a ordini di lavoro e costi."),
@@ -302,6 +303,7 @@ PRODUCTS = {
           ("Dozens of machines connected", "Woodworking and metal pressing companies with machines connected to business software: status, production, jobs and costs without spreadsheets."),
           ("SCM edge bander with Maestro Active", "Real-time status and alarms, jobs opened and closed on the machine, automatic production import and real cost per job."),
           ("Essetre/Tecnoessetre CNC", "Several machines on one screen, events linked to jobs, work file upload, stock and offcuts, printable reports."),
+          ("Sworn appraisals by engineers", "Work already reviewed in sworn technical appraisals, with partners specialised in certification and validation."),
         ]),
         ("cards", "Sound familiar?", "When the software doesn't follow production.", "", [
           ("Bills of materials in Excel", "Everyone has their own version. Here they are unique, versioned and linked to work orders and costs."),
