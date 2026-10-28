@@ -408,7 +408,7 @@ def home(lang="it"):
     u = UI[lang]
     if lang == "it":
         t = dict(eyebrow="Integrazione macchine e gestionali · Friuli Venezia Giulia",
-                 h1="Colleghiamo le macchine al gestionale. <span>E teniamo tutto funzionante.</span>",
+                 h1="Integrazioni hardware e software, <span>sempre connesse.</span>",
                  lead="JDEVPRO nasce in Friuli con Jacopo Ellero. Sviluppiamo gestionali su misura, colleghiamo macchine, sensori e dispositivi ai sistemi aziendali e seguiamo tutto in produzione, per aziende e strutture del Friuli Venezia Giulia e del Veneto, in trasferta dove serve e da remoto ovunque: se la macchina è collegata alla rete, la distanza non è un limite.",
                  b1="Scegli la tua area", b2="Scrivici", ae="Da dove parti?", ah="Tre aree, un solo interlocutore.",
                  enter="Entra nell'area →",
@@ -420,7 +420,7 @@ def home(lang="it"):
                  desc="Interconnessione macchine 4.0 per l'iperammortamento, gestionale di produzione JD Industry, migrazione dati e automazione per hotel in Friuli Venezia Giulia.")
     else:
         t = dict(eyebrow="Machine and business software integration · North-east Italy",
-                 h1="We connect machines to business software. <span>And keep it all running.</span>",
+                 h1="Hardware and software integrations, <span>always connected.</span>",
                  lead="JDEVPRO was founded in Friuli by Jacopo Ellero. We build custom business software, connect machines, sensors and devices to company systems and look after everything in production, for companies and properties in north-east Italy, travelling where needed and working remotely anywhere: if the machine is on the network, distance is no limit.",
                  b1="Choose your area", b2="Write to us", ae="Where do you start?", ah="Three areas, one partner.",
                  enter="Enter the area →",
