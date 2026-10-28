@@ -142,7 +142,11 @@ PRICE_EN = {"Collegamento di una macchina": "Connecting one machine", "Dati macc
             "Migrazione di un blocco di dati": "Migrating one data block",
             "anagrafiche, articoli, giacenze o saldi · da file o esportazione": "master data, items, stock or balances · from file or export",
             "Estrazione da database senza esportazione": "Extraction from a database with no export",
-            "Access, SQL Server, DBF, Firebird e simili": "Access, SQL Server, DBF, Firebird and similar"}
+            "Access, SQL Server, DBF, Firebird e simili": "Access, SQL Server, DBF, Firebird and similar",
+            "Progetto e installazione Home Assistant": "Home Assistant design and installation",
+            "hardware dedicato, rete separata, backup · dispositivi esclusi": "dedicated hardware, separate network, backups · devices excluded",
+            "Camera o zona configurata": "Room or zone set up",
+            "per camera o zona · dispositivi esclusi": "per room or zone · devices excluded"}
 
 ADDRESS = {"@type": "PostalAddress", "addressLocality": "Tolmezzo", "postalCode": "33028", "addressRegion": "UD",
            "addressCountry": "IT"}
