@@ -110,11 +110,9 @@ STATS = {
   },
   "about": {
     "it": [("10", "macchine collegate in produzione", "interconnessione-macchine-industria-4-0.html"),
-           ("Oltre i 6 kW", "impianti fotovoltaici on-grid e off-grid realizzati", None),
            ("Decine", "impianti Ubiquiti installati", "videosorveglianza-citofonia-accessi.html"),
            ("Dal 2009", "tra informatica, software e impianti", None)],
     "en": [("10", "machines connected in production", "en-machine-interconnection.html"),
-           ("Above 6 kW", "on-grid and off-grid PV systems built", None),
            ("Dozens", "Ubiquiti systems installed", "en-video-surveillance-intercom-access.html"),
            ("Since 2009", "across IT, software and installations", None)],
   },

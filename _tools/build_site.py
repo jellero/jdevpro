@@ -282,7 +282,7 @@ PAGES = [
     ],
     examples=[
       ("Sensori e gateway in ambito industriale", "Sensori su RS-485, gateway seriali e MQTT, invio dei dati al cloud, collaudo e messa in servizio.", None),
-      ("Energia dimensionata sui consumi", "Sensori e apparati alimentati dal sole, con pannelli e batterie calcolati sui consumi reali e sui mesi con meno sole. Abbiamo realizzato impianti fotovoltaici on-grid e off-grid oltre i 6 kW: sappiamo dimensionare anche quelli piccoli; parte elettrica con installatori abilitati.", "guida-monitorare-fotovoltaico-consumi.html"),
+      ("Energia dimensionata sui consumi", "Sensori e apparati alimentati dal sole, con pannelli e batterie calcolati sui consumi reali e sui mesi con meno sole. La parte elettrica è affidata a installatori abilitati.", "guida-monitorare-fotovoltaico-consumi.html"),
       ("Clima camera per camera", "In alberghi e affittacamere: termostati collegati alle prenotazioni, con avvisi di comfort e comandi per singola camera.", "automazione-hotel-bnb.html"),
       ("AKIOS · ciclo di vita sicuro dei dispositivi IoT", "Il progetto che sviluppiamo per i produttori di dispositivi: aggiornamenti firmati in prova, ritorno automatico all'ultima versione buona e ripristino locale dal telefono. Già operativo sui chip Beken BK7238.", "https://akios.cloud/"),
     ],
@@ -291,7 +291,7 @@ PAGES = [
       ("Funziona anche senza Internet?", "Sì. I dati vengono salvati sul posto e inviati quando la connessione torna disponibile."),
       ("Posso usare i sensori che ho già?", "Spesso sì. Verifichiamo protocolli e interfacce prima di proporre dispositivi nuovi."),
       ("Quali marche si possono integrare?", "Tutte quelle con API pubbliche, come Tuya, Aqara, Honeywell, Shelly, Netatmo, Philips Hue, Fronius, SMA o SolarEdge. Se un dispositivo ha solo un'app o un pannello web, ne automatizziamo le chiamate; se ha solo una porta seriale o Modbus, usiamo un programma ponte."),
-      ("Sapete dimensionare l'alimentazione?", "Sì. Abbiamo realizzato impianti fotovoltaici on-grid e off-grid oltre i 6 kW, quindi calcoliamo pannelli e batterie sui consumi reali anche quando devono alimentare solo un sensore, un router o una telecamera. La parte elettrica è affidata a installatori abilitati."),
+      ("Sapete dimensionare l'alimentazione?", "Sì. Calcoliamo pannelli e batterie sui consumi reali anche quando devono alimentare solo un sensore, un router o una telecamera. La parte elettrica è affidata a installatori abilitati."),
       ("I dati sono al sicuro?", "Le comunicazioni sono cifrate e i dispositivi stanno su reti separate da quelle dell'ufficio."),
       ("Fate anche i cablaggi?", INSTALLERS),
     ],
