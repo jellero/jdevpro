@@ -106,7 +106,7 @@ PRODUCTS = {
           ("Produzione · fino a 15 utenti", "da 1.900 €", "In più qualità, conto lavoro, contabilità, 3 postazioni tablet, 2 giornate di formazione"),
           ("Su misura · oltre 15 utenti", "da 3.500 €", "Middleware per macchine, più aziende o sedi, integrazioni con altri sistemi"),
         ], ""),
-        ("prices", "Installazione e migrazione", "Dove lo installiamo e cosa ci portiamo dentro.", "", [
+        ("prices", "Installazione e migrazione", "Dove lo installiamo e cosa ci portiamo dentro.", 'Per vecchi gestionali e database senza esportazione c\'è il servizio di <a href="migrazione-dati.html">migrazione dati</a>, con pulizia e report di quadratura.', [
           ("Prima analisi in videochiamata", "gratuita", "Un'ora per capire se fa per voi"),
           ("Analisi in azienda", "150 €", "Mezza giornata, scalata dal progetto se procedete"),
           ("Installazione su server aziendale", "300 €", "Sistema, VPN o Cloudflare Tunnel, backup"),
@@ -329,7 +329,7 @@ PRODUCTS = {
           ("Production · up to 15 users", "from €1,900", "Plus quality, subcontracting, accounting, 3 tablet stations, 2 days of training"),
           ("Custom · over 15 users", "from €3,500", "Machine middleware, several companies or sites, integrations with other systems"),
         ], ""),
-        ("prices", "Installation and migration", "Where we install it and what we bring in.", "", [
+        ("prices", "Installation and migration", "Where we install it and what we bring in.", 'For legacy software and databases with no export there is our <a href="en-data-migration.html">data migration</a> service, with clean-up and a reconciliation report.', [
           ("First video call analysis", "free", "One hour to see whether it fits"),
           ("On-site analysis", "€150", "Half a day, deducted from the project if you go ahead"),
           ("Installation on a company server", "€300", "System, VPN or Cloudflare Tunnel, backups"),

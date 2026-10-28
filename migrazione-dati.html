@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Migrazione dati da vecchi gestionali e database | JDEVPRO</title>
+<meta content="Portiamo anagrafiche, articoli, giacenze, documenti e saldi da vecchi gestionali, Access, SQL Server, DBF o Excel al nuovo software, con pulizia e report di quadratura." name="description"/>
+<meta content="#07111f" name="theme-color"/>
+<meta content="index,follow" name="robots"/>
+<link href="https://www.jdevpro.it/migrazione-dati.html" rel="canonical"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="assets/icon-32.png" rel="icon" type="image/png" sizes="32x32"/>
+<link href="assets/icon-180.png" rel="apple-touch-icon"/>
+<link href="styles.css?v=8fa5eb32" rel="stylesheet"/>
+<link href="overrides.css?v=2353238d" rel="stylesheet"/>
+<link href="pages.css?v=358b52ac" rel="stylesheet"/>
+<meta property="og:title" content="Migrazione dati da vecchi gestionali e database | JDEVPRO"/>
+<meta property="og:description" content="Portiamo anagrafiche, articoli, giacenze, documenti e saldi da vecchi gestionali, Access, SQL Server, DBF o Excel al nuovo software, con pulizia e report di quadratura."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.jdevpro.it/migrazione-dati.html"/>
+<meta property="og:image" content="https://www.jdevpro.it/assets/og-jdevpro.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:locale" content="it_IT"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link href="https://www.jdevpro.it/migrazione-dati.html" hreflang="it" rel="alternate"/>
+<link href="https://www.jdevpro.it/en-data-migration.html" hreflang="en" rel="alternate"/>
+<link href="https://www.jdevpro.it/migrazione-dati.html" hreflang="x-default" rel="alternate"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Service",
+ "name": "Migrazione dati tra gestionali e database",
+ "serviceType": "Migrazione dati tra gestionali e database",
+ "description": "Portiamo anagrafiche, articoli, giacenze, documenti e saldi da vecchi gestionali, Access, SQL Server, DBF o Excel al nuovo software, con pulizia e report di quadratura.",
+ "url": "https://www.jdevpro.it/migrazione-dati.html",
+ "provider": {
+  "@id": "https://www.jdevpro.it/#jdevpro"
+ },
+ "areaServed": [
+  "Friuli Venezia Giulia",
+  "Veneto",
+  "Italia"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "name": "Migrazione di un blocco di dati",
+   "priceCurrency": "EUR",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "minPrice": 250,
+    "priceCurrency": "EUR"
+   }
+  },
+  {
+   "@type": "Offer",
+   "name": "Estrazione da database senza esportazione",
+   "priceCurrency": "EUR",
+   "priceSpecification": {
+    "@type": "PriceSpecification",
+    "minPrice": 400,
+    "priceCurrency": "EUR"
+   }
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Il vecchio gestionale non esporta i dati: si può fare lo stesso?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Quasi sempre sì. Se il programma salva i dati in un database o in file accessibili, li leggiamo direttamente, senza modificare il vecchio sistema. Prima del preventivo verifichiamo che cosa è leggibile."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Ci fermiamo durante il passaggio?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. Prove e verifiche si fanno in parallelo mentre lavorate con il vecchio programma; il passaggio definitivo richiede di solito mezza giornata, in un giorno concordato."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Come sappiamo che i dati sono tutti arrivati?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Con il report di quadratura: numero di anagrafiche, articoli e documenti, giacenze e saldi di partenza e di arrivo messi a confronto."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Migrate anche i documenti storici?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Sì, quando il nuovo programma li può accogliere. In alternativa li archiviamo in un formato consultabile, così lo storico resta disponibile."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "E la privacy?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Lavoriamo sui dati con nomina a responsabile del trattamento, su copie protette, e al termine cancelliamo le copie di lavoro."
+   }
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://www.jdevpro.it/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Software e web",
+   "item": "https://www.jdevpro.it/software-web.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Migrazione dati",
+   "item": "https://www.jdevpro.it/migrazione-dati.html"
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "ProfessionalService",
+ "@id": "https://www.jdevpro.it/#jdevpro",
+ "name": "JDEVPRO",
+ "url": "https://www.jdevpro.it/",
+ "address": {
+  "@type": "PostalAddress",
+  "addressLocality": "Tolmezzo",
+  "postalCode": "33028",
+  "addressRegion": "UD",
+  "addressCountry": "IT"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto</a>
+<header class="site-header" data-header="">
+<div class="shell nav-wrap">
+<a aria-label="JDEVPRO home" class="brand" href="index.html"><img class="brand-logo" src="assets/logo-jdevpro-header.png" alt="JDEVPRO" width="440" height="259"></a>
+<button aria-expanded="false" aria-label="Apri menu" class="menu-toggle" data-menu-toggle="" type="button"><span></span><span></span><span></span></button>
+<nav aria-label="Navigazione principale" class="nav" data-nav="">
+<div class="nav-group is-current"><a class="nav-group-label" href="industria.html">Industria <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<a class="nav-sub-all" href="industria.html">Tutta l'area →</a>
+<a href="interconnessione-macchine-industria-4-0.html">Interconnessione macchine 4.0</a>
+<a href="gestionale-su-misura.html">Gestionali su misura</a>
+<a href="integrazione-software-api.html">Integrazioni e automazioni</a>
+<a href="migrazione-dati.html" aria-current="page">Migrazione dati</a>
+<a href="monitoraggio-iot.html">Monitoraggio IoT ed energia</a>
+</div></div>
+<div class="nav-group"><a class="nav-group-label" href="strutture-edifici.html">Strutture ed edifici <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<a class="nav-sub-all" href="strutture-edifici.html">Tutta l'area →</a>
+<a href="automazione-hotel-bnb.html">Automazione per hotel e B&B</a>
+<a href="videosorveglianza-citofonia-accessi.html">Videosorveglianza, citofonia e accessi</a>
+<a href="centralini-voip-telefonia.html">Centralini VoIP e telefonia</a>
+<a href="internet-offgrid-siti-remoti.html">Internet offgrid e siti remoti</a>
+<a href="monitoraggio-iot.html">Monitoraggio IoT ed energia</a>
+</div></div>
+<div class="nav-group is-current"><a class="nav-group-label" href="software-web.html">Software e web <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<a class="nav-sub-all" href="software-web.html">Tutta l'area →</a>
+<a href="gestionale-su-misura.html">Gestionali su misura</a>
+<a href="integrazione-software-api.html">Integrazioni e automazioni</a>
+<a href="migrazione-dati.html" aria-current="page">Migrazione dati</a>
+<a href="siti-web-piattaforme.html">Siti e piattaforme web</a>
+</div></div>
+<div class="nav-group"><a class="nav-group-label" href="prodotti.html">Prodotti <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<a class="nav-sub-all" href="prodotti.html">Tutti i prodotti →</a>
+<a href="https://welora.it/" rel="noreferrer" target="_blank">Welora ↗</a>
+<a href="gestionale-produzione-erpnext.html">Gestionale di produzione</a>
+<a href="https://akios.cloud/" rel="noreferrer" target="_blank">AKIOS ↗</a>
+<a href="oryvael.html">ORYVAEL</a>
+</div></div>
+<a href="guide.html">Guide</a>
+<a href="chi-sono.html">Chi sono</a>
+<span aria-label="Lingua" class="language-switch"><strong aria-current="page">IT</strong><span>/</span><a href="en-data-migration.html" hreflang="en">EN</a></span>
+<a class="nav-cta" href="index.html#contatto">Contatto</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="hero page-hero">
+<div aria-hidden="true" class="hero-grid"></div>
+<div class="shell page-hero-copy reveal">
+<nav aria-label="Percorso" class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="software-web.html">Software e web</a><span>/</span><span aria-current="page">Migrazione dati</span></nav>
+<p class="eyebrow">Migrazione dati · Gestionali e database</p>
+<h1>Migrazione dati: <span>cambi programma, non perdi niente.</span></h1>
+<p class="hero-lead">Portiamo i vostri dati dal vecchio gestionale, da un database o da Excel al nuovo software: anagrafiche, articoli, distinte, giacenze, documenti e saldi. Prima li puliamo, poi li proviamo insieme a voi, infine vi consegniamo il confronto tra i totali di partenza e di arrivo.</p>
+
+
+<div class="hero-actions">
+<a class="button primary" href="#contatto">Parliamone</a>
+<a class="button ghost" href="#esempi">Vedi esempi reali</a>
+</div>
+</div>
+</section>
+<section class="section section-tight section-white">
+<div class="shell split">
+<div class="section-heading reveal"><p class="eyebrow">Il problema</p><h2>Ti riconosci?</h2></div>
+<ul class="problem-list reveal">
+<li><strong>Il gestionale nuovo c'è, i dati sono nel vecchio.</strong> E il vecchio fornitore non fornisce un'esportazione completa, o la fa pagare cara.</li>
+<li><strong>L'importazione standard lascia fuori metà dei dati.</strong> Quello che non entra nel CSV previsto si perde, oppure finisce nei campi sbagliati.</li>
+<li><strong>Dati sporchi da anni.</strong> Clienti doppi, codici fiscali sbagliati, telefoni nel campo del nome, articoli mai usati.</li>
+<li><strong>Nessuno sa se i conti tornano.</strong> Dopo il passaggio giacenze e saldi non coincidono, e ci si accorge mesi dopo.</li>
+</ul>
+</div>
+</section>
+<section class="section section-tight section-paper">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">Cosa ottieni</p><h2>Cosa facciamo, in concreto.</h2></div>
+<div class="outcome-grid">
+<article class="outcome reveal"><h3>Estrazione da qualsiasi fonte</h3><p>Dal database del vecchio gestionale, da Access, SQL Server, MySQL, Firebird o DBF, da esportazioni ed Excel.</p></article>
+<article class="outcome reveal"><h3>Pulizia e normalizzazione</h3><p>Doppioni uniti, codici fiscali e partite IVA verificati, indirizzi e telefoni nei campi giusti, codici uniformati.</p></article>
+<article class="outcome reveal"><h3>Mappatura sul nuovo programma</h3><p>Ogni campo di partenza ha la sua destinazione, documentata e approvata da voi.</p></article>
+<article class="outcome reveal"><h3>Migrazione di prova</h3><p>Una prima importazione in un ambiente di prova, da controllare con calma prima del passaggio vero.</p></article>
+<article class="outcome reveal"><h3>Report di quadratura</h3><p>Conteggi e totali di partenza e di arrivo a confronto: anagrafiche, giacenze, saldi, documenti.</p></article>
+<article class="outcome reveal"><h3>Originali al sicuro</h3><p>Il vecchio database resta intatto e ricevete una copia completa in formato aperto.</p></article>
+</div>
+</div>
+</section>
+<section class="section section-tight section-paper">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">Cosa possiamo integrare</p><h2>Marche e sistemi compatibili.</h2></div>
+<div class="system-groups catalog">
+<div class="system-group reveal"><h3>Database</h3><ul><li>Microsoft SQL Server</li><li>Microsoft Access</li><li>MySQL e MariaDB</li><li>PostgreSQL</li><li>Firebird</li><li>File DBF (dBase, FoxPro, Clipper)</li><li>SQLite</li></ul></div>
+<div class="system-group reveal"><h3>File ed esportazioni</h3><ul><li>Excel e CSV</li><li>XML e JSON</li><li>Fatture elettroniche FatturaPA</li><li>Esportazioni di gestionali e portali</li></ul></div>
+<div class="system-group reveal"><h3>Cosa si migra</h3><ul><li>Clienti, fornitori e contatti</li><li>Articoli, listini e distinte base</li><li>Giacenze, lotti e matricole</li><li>Documenti storici</li><li>Saldi e partite aperte</li></ul></div>
+<div class="system-group reveal"><h3>Verso</h3><ul><li>ERPNext</li><li>Welora</li><li>Gestionali su misura</li><li>Altri gestionali con importazione o API</li></ul></div>
+</div>
+<p class="catalog-note">Esempi di servizi e dispositivi integrabili. Nomi e marchi appartengono ai rispettivi proprietari; prima di ogni progetto verifichiamo accessi, limiti e condizioni d'uso.</p>
+</div>
+</section>
+<section class="section section-tight section-white">
+<div class="shell split">
+<div class="section-heading reveal"><p class="eyebrow">Metodo</p><h2>Come funziona.</h2></div>
+<ol class="method-steps reveal">
+<li><strong>Analisi dei dati</strong><span>Da dove partono, quanti sono, in che stato sono e cosa deve arrivare nel nuovo programma.</span></li>
+<li><strong>Pulizia e mappatura</strong><span>Correzione dei dati e corrispondenza campo per campo, approvata prima di procedere.</span></li>
+<li><strong>Prova e verifica</strong><span>Migrazione in ambiente di prova e controllo insieme a voi, con il report di quadratura.</span></li>
+<li><strong>Documentazione</strong><span>Schemi, configurazioni, credenziali e procedure consegnati a te: il sistema resta comprensibile anche dopo la consegna.</span></li>
+<li><strong>Passaggio definitivo</strong><span>Migrazione finale nel giorno concordato, di solito a fine mese, e verifica dei totali.</span></li>
+</ol>
+</div>
+</section>
+<section class="section section-tight section-white">
+<div class="shell split">
+<div class="section-heading reveal"><p class="eyebrow">Prezzi indicativi</p><h2>Da dove si parte.</h2></div>
+<div>
+<div class="price-grid"><div class="price reveal"><span>Migrazione di un blocco di dati</span><strong>da 250 €</strong><small>una tantum · anagrafiche, articoli, giacenze o saldi · da file o esportazione</small></div><div class="price reveal"><span>Estrazione da database senza esportazione</span><strong>da 400 €</strong><small>una tantum · Access, SQL Server, DBF, Firebird e simili</small></div></div>
+<p class="price-extra">La prima analisi in videochiamata è gratuita. Pulizia straordinaria, documenti storici e database molto grandi si quotano dopo l'analisi. Nessun canone.</p>
+<p class="catalog-note">Prezzi di partenza indicativi. Il preventivo è a prezzo fisso, dopo aver verificato cosa serve davvero.</p>
+</div>
+</div>
+</section>
+<section class="section section-tight section-dark" id="esempi">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">Esempi reali</p><h2>Dai nostri progetti.</h2></div>
+<div class="example-grid">
+<article class="example reveal"><h3>Welora · importazione guidata</h3><p>Contatti, prenotazioni, camere, tariffe e saldi importati da CSV o Excel, con anteprima correggibile riga per riga.</p><a class="card-link" href="https://welora.it/" rel="noreferrer" target="_blank">Visita ↗</a></article>
+<article class="example reveal"><h3>Gestionale di produzione su ERPNext</h3><p>Anagrafiche, articoli, distinte base, giacenze e saldi portati dal gestionale precedente al nuovo ERP.</p><a class="card-link" href="gestionale-produzione-erpnext.html">Approfondisci →</a></article>
+</div>
+<div class="chips reveal" aria-label="Tech"><span>Database e Excel</span><span>Pulizia e doppioni</span><span>Migrazione di prova</span><span>Report di quadratura</span><span>Originali intatti</span></div>
+</div>
+</section>
+<section class="section section-tight">
+<div class="shell split">
+<div class="section-heading reveal"><p class="eyebrow">Domande frequenti</p><h2>Le risposte prima della domanda.</h2></div>
+<div class="faq reveal">
+<details class="faq-item"><summary>Il vecchio gestionale non esporta i dati: si può fare lo stesso?</summary><p>Quasi sempre sì. Se il programma salva i dati in un database o in file accessibili, li leggiamo direttamente, senza modificare il vecchio sistema. Prima del preventivo verifichiamo che cosa è leggibile.</p></details>
+<details class="faq-item"><summary>Ci fermiamo durante il passaggio?</summary><p>No. Prove e verifiche si fanno in parallelo mentre lavorate con il vecchio programma; il passaggio definitivo richiede di solito mezza giornata, in un giorno concordato.</p></details>
+<details class="faq-item"><summary>Come sappiamo che i dati sono tutti arrivati?</summary><p>Con il report di quadratura: numero di anagrafiche, articoli e documenti, giacenze e saldi di partenza e di arrivo messi a confronto.</p></details>
+<details class="faq-item"><summary>Migrate anche i documenti storici?</summary><p>Sì, quando il nuovo programma li può accogliere. In alternativa li archiviamo in un formato consultabile, così lo storico resta disponibile.</p></details>
+<details class="faq-item"><summary>E la privacy?</summary><p>Lavoriamo sui dati con nomina a responsabile del trattamento, su copie protette, e al termine cancelliamo le copie di lavoro.</p></details>
+</div>
+</div>
+</section>
+<section class="contact-section" id="contatto">
+<div class="shell contact-card reveal">
+<div>
+<p class="eyebrow">Contatto</p>
+<h2>Raccontaci cosa devi collegare.</h2>
+<p>Descrivici i sistemi che hai, cosa vuoi ottenere e i tempi. Ti rispondiamo per iscritto entro 24 ore, con domande mirate o con una proposta.</p>
+<ol class="contact-steps" aria-label="Come funziona"><li><strong>Scrivici</strong> i sistemi presenti e l'obiettivo, anche in poche righe.</li><li><strong>Ti rispondiamo entro 24 ore</strong> con domande mirate o una proposta di incontro.</li><li><strong>Definiamo</strong> insieme perimetro, tempi e modalità di lavoro.</li></ol>
+</div>
+<div class="contact-actions">
+<a class="button light big" href="mailto:info@jdevpro.it?subject=Richiesta%20progetto%20-%20JDEVPRO&amp;body=Buongiorno%2C%0A%0ASistemi%20gi%C3%A0%20presenti%3A%0A%0ACosa%20vorrei%20ottenere%3A%0A%0ATempistiche%20indicative%3A%0A%0AAzienda%20/%20riferimento%3A%0A">Scrivici una email</a>
+<button class="contact-copy" type="button" data-copy-email="info@jdevpro.it" data-copied-label="Copiato ✓"><span>info@jdevpro.it</span><em>Copia</em></button>
+<a class="contact-whatsapp" href="https://wa.me/393454656749?text=Ciao%2C%20vi%20scrivo%20dal%20sito%20JDEVPRO%20per%20un%20progetto." rel="noreferrer" target="_blank">Scrivici su WhatsApp ↗</a>
+<a class="contact-alt" href="https://www.linkedin.com/in/jacopo-ellero-a006499a/" rel="noreferrer" target="_blank">Oppure su LinkedIn ↗</a>
+<span>Tolmezzo (UD) · Friuli Venezia Giulia · Veneto · anche da remoto</span>
+</div>
+</div>
+</section>
+<section class="section section-tight related">
+<div class="shell">
+<p class="eyebrow">Nella stessa area: Software e web</p>
+<div class="related-grid"><a href="gestionale-su-misura.html"><strong>Gestionali su misura</strong><span>Piccole e medie imprese che lavorano con Excel o con un gestionale che non si adatta.</span></a><a href="integrazione-software-api.html"><strong>Integrazioni e automazioni</strong><span>Aziende con gestionale, e-commerce, marketplace, corrieri e portali che devono scambiarsi dati.</span></a><a href="siti-web-piattaforme.html"><strong>Siti e piattaforme web</strong><span>Aziende ed enti che vogliono un sito da gestire in autonomia, collegato ai propri sistemi.</span></a></div>
+<p class="eyebrow local-eyebrow">Altre aree</p>
+<div class="related-grid"><a href="industria.html"><strong>Industria</strong><span>Macchine collegate al gestionale, commesse e costi reali, integrazioni e sensori per chi produce.</span></a><a href="strutture-edifici.html"><strong>Strutture ed edifici</strong><span>Hotel e B&B, videosorveglianza, citofonia e accessi, centralini VoIP, internet offgrid e domotica.</span></a></div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="shell footer-grid footer-wide">
+<div><strong>JDEVPRO</strong><span>Jacopo Ellero · Tolmezzo (UD)</span></div>
+<div class="footer-links"><a href="industria.html">Industria</a><a href="strutture-edifici.html">Strutture ed edifici</a><a href="software-web.html">Software e web</a><a href="prodotti.html">Prodotti</a><a href="guide.html">Guide</a><a href="dove-lavoriamo.html">Dove lavoriamo</a><a href="chi-sono.html">Chi sono</a></div>
+<div><span>P.IVA IT02783420306</span><a href="privacy.html">Privacy</a><a href="cookie-policy.html">Cookie</a><a href="cv.html">CV</a><a href="https://github.com/jellero" rel="noreferrer" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/jacopo-ellero-a006499a/" rel="noreferrer" target="_blank">LinkedIn</a></div>
+</div>
+<div class="shell"><div class="footer-local"><a href="interconnessione-macchine-industria-4-0.html">Interconnessione macchine 4.0</a><a href="gestionale-su-misura.html">Gestionali su misura</a><a href="integrazione-software-api.html">Integrazioni e automazioni</a><a href="migrazione-dati.html">Migrazione dati</a><a href="monitoraggio-iot.html">Monitoraggio IoT ed energia</a><a href="automazione-hotel-bnb.html">Automazione per hotel e B&B</a><a href="videosorveglianza-citofonia-accessi.html">Videosorveglianza, citofonia e accessi</a><a href="centralini-voip-telefonia.html">Centralini VoIP e telefonia</a><a href="internet-offgrid-siti-remoti.html">Internet offgrid e siti remoti</a><a href="siti-web-piattaforme.html">Siti e piattaforme web</a><a href="software-gestionali-integrazioni-udine.html">Udine</a><a href="software-gestionali-integrazioni-pordenone.html">Pordenone</a><a href="software-gestionali-integrazioni-trieste-gorizia.html">Trieste e Gorizia</a></div></div>
+</footer>
+<script src="script.js?v=f75662cd"></script>
+</body>
+</html>

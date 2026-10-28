@@ -138,7 +138,11 @@ PRICE_EN = {"Collegamento di una macchina": "Connecting one machine", "Dati macc
             "corrente di casa · cablaggi esclusi": "household power · cabling excluded",
             "Cruscotto e allarmi sul nostro server": "Dashboard and alarms on our server", "per impianto": "per system",
             "Server, monitoraggio e manutenzione": "Server, monitoring and maintenance", "se gira sul nostro server": "if it runs on our server",
-            "Telecamera aggiuntiva configurata": "Additional camera set up", "per telecamera · cablaggio escluso": "per camera · cabling excluded"}
+            "Telecamera aggiuntiva configurata": "Additional camera set up", "per telecamera · cablaggio escluso": "per camera · cabling excluded",
+            "Migrazione di un blocco di dati": "Migrating one data block",
+            "anagrafiche, articoli, giacenze o saldi · da file o esportazione": "master data, items, stock or balances · from file or export",
+            "Estrazione da database senza esportazione": "Extraction from a database with no export",
+            "Access, SQL Server, DBF, Firebird e simili": "Access, SQL Server, DBF, Firebird and similar"}
 
 ADDRESS = {"@type": "PostalAddress", "addressLocality": "Tolmezzo", "postalCode": "33028", "addressRegion": "UD",
            "addressCountry": "IT"}

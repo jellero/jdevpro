@@ -2,15 +2,15 @@
 
 # competenze per area (slug italiani); la prima area elencata per una competenza è quella del percorso
 AREA_SERVICES = {
-  "industria": ["interconnessione-macchine-industria-4-0.html", "gestionale-su-misura.html", "integrazione-software-api.html", "monitoraggio-iot.html"],
+  "industria": ["interconnessione-macchine-industria-4-0.html", "gestionale-su-misura.html", "integrazione-software-api.html", "migrazione-dati.html", "monitoraggio-iot.html"],
   "strutture": ["automazione-hotel-bnb.html", "videosorveglianza-citofonia-accessi.html", "centralini-voip-telefonia.html", "internet-offgrid-siti-remoti.html", "monitoraggio-iot.html"],
-  "web": ["gestionale-su-misura.html", "integrazione-software-api.html", "siti-web-piattaforme.html"],
+  "web": ["gestionale-su-misura.html", "integrazione-software-api.html", "migrazione-dati.html", "siti-web-piattaforme.html"],
 }
 PRIMARY_AREA = {
   "interconnessione-macchine-industria-4-0.html": "industria", "monitoraggio-iot.html": "industria",
   "automazione-hotel-bnb.html": "strutture", "videosorveglianza-citofonia-accessi.html": "strutture",
   "centralini-voip-telefonia.html": "strutture", "internet-offgrid-siti-remoti.html": "strutture",
-  "gestionale-su-misura.html": "web", "integrazione-software-api.html": "web", "siti-web-piattaforme.html": "web",
+  "gestionale-su-misura.html": "web", "integrazione-software-api.html": "web", "migrazione-dati.html": "web", "siti-web-piattaforme.html": "web",
 }
 # il blocco "API / interfacce web / seriale e Modbus" solo dove parla al pubblico giusto
 TECH_TIERS = {"interconnessione-macchine-industria-4-0.html", "integrazione-software-api.html", "monitoraggio-iot.html"}
