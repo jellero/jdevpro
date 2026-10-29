@@ -524,7 +524,7 @@ PAGES = [
     desc="Internet dove la linea non arriva: 4G/5G, Starlink, ponti radio ed energia solare dimensionata sui consumi reali per baite, rifugi, cantieri e impianti.",
     service_type="Connettività offgrid per siti remoti",
     eyebrow="Internet offgrid · Siti remoti",
-    proof="Impianti off-grid oltre i 6 kW, ponti radio Ubiquiti e MikroTik e connessioni Starlink già realizzati.",
+    proof="Impianti off-grid, ponti radio Ubiquiti e MikroTik e connessioni Starlink già realizzati.",
     h1="Internet offgrid: <span>connessi anche dove la linea non arriva.</span>",
     lead="Portiamo la connessione in baite, rifugi, cantieri, impianti e aziende agricole: 4G/5G, satellite o ponte radio, alimentati dal sole quando serve, e controllabili da remoto.",
     problems=[
@@ -553,13 +553,13 @@ PAGES = [
     ],
     examples=[
       ("Ponti radio Ubiquiti e MikroTik", "Collegamenti radio che portano Internet e telecamere tra edifici e siti distanti, con antenne Ubiquiti e MikroTik.", None),
-      ("Energia off-grid dimensionata", "Abbiamo realizzato impianti off-grid oltre i 6 kW: per questo anche il piccolo impianto che alimenta router, antenne o telecamere è calcolato sui consumi reali e sui mesi con meno sole; parte elettrica con installatori abilitati.", None),
+      ("Energia off-grid dimensionata", "Abbiamo già realizzato impianti off-grid: per questo anche il piccolo impianto che alimenta router, antenne o telecamere è calcolato sui consumi reali e sui mesi con meno sole; parte elettrica con installatori abilitati.", None),
       ("Starlink", "Connessione satellitare per baite, rifugi, cantieri e siti dove non arriva né la linea fissa né un buon segnale mobile.", None),
     ],
     chips=["4G / 5G", "Satellite", "Ponti radio", "Solare e batterie", "Riavvio da remoto"],
     faq=[
       ("Quanto costa la connessione?", "Dipende dal tipo: una SIM dati o un abbonamento satellitare. Ti aiutiamo a scegliere il piano adatto ai consumi reali."),
-      ("Avete già lavorato in siti isolati?", "Sì. Abbiamo realizzato impianti off-grid oltre i 6 kW, ponti radio Ubiquiti e MikroTik e connessioni Starlink: dimensioniamo energia e connessione sui consumi reali, anche per impianti piccoli."),
+      ("Avete già lavorato in siti isolati?", "Sì. Abbiamo realizzato impianti off-grid, ponti radio Ubiquiti e MikroTik e connessioni Starlink: dimensioniamo energia e connessione sui consumi reali, anche per impianti piccoli."),
       ("Funziona anche d'inverno?", "Dimensioniamo pannelli e batterie per i mesi con meno sole e prevediamo avvisi quando la batteria scende."),
       ("Fate anche gli impianti elettrici?", INSTALLERS),
     ],

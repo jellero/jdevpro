@@ -401,14 +401,14 @@ INDUSTRIAL = {
 INCENTIVES = {
     "it": ("Incentivi", "Agevolazioni in cui il nostro lavoro è un requisito.",
            "Senza macchine interconnesse non c'è iperammortamento. Noi curiamo la parte tecnica e la documentazione per il perito; la pratica resta al tuo consulente o commercialista.",
-           [("Iperammortamento 2026–2028", "Le macchine nuove rientrano solo se interconnesse al sistema aziendale. Tutte quelle che abbiamo collegato sono certificate e asseverate da ingegneri e ammesse all'iperammortamento.", "guida-interconnessione-iperammortamento.html", "Leggi la guida →"),
+           [("Iperammortamento 2026–2028", "Le macchine nuove rientrano solo se interconnesse al sistema aziendale e se un perito lo attesta. Requisiti, scadenze e procedura passo per passo.", "guida-interconnessione-iperammortamento.html", "Leggi la guida →"),
             ("Contributi FVG per hotel e alberghi diffusi", "La Regione sostiene l'ammodernamento e l'efficienza delle strutture ricettive: clima, accessi e domotica possono far parte del progetto.", "guida-contributi-fvg-hotel.html", "Leggi la guida →"),
-            ("JD Industry e cambio di gestionale", "Dalle macchine collegate all'ERP completo su ERPNext, con la migrazione dei dati dal vecchio programma e analisi iniziale gratuita.", "gestionale-produzione-erpnext.html", "Scopri JD Industry →")]),
+            ("Anche il software di produzione", "Gestionali di produzione, MES e piattaforme possono rientrare nell'iperammortamento se compresi nell'Allegato V e interconnessi.", "guida-iperammortamento-software-erp-mes.html", "Leggi la guida →")]),
     "en": ("Incentives", "Incentives where our work is a requirement.",
            "No interconnected machines, no hyper-depreciation. We handle the technical side and the documentation for the appraiser; the application stays with your advisor or accountant.",
-           [("Italian hyper-depreciation 2026–2028", "New machines qualify only when interconnected with company systems. Every machine we have connected is certified and sworn by engineers and approved for hyper-depreciation.", "en-machine-interconnection.html", "Machine interconnection →"),
+           [("Italian hyper-depreciation 2026–2028", "New machines qualify only when interconnected with company systems and certified by an appraiser.", "en-machine-interconnection.html", "Machine interconnection →"),
             ("Regional grants for hotels", "Friuli Venezia Giulia supports modernisation and efficiency of accommodation: climate, access and automation can be part of the project.", "en-hotel-bnb-automation.html", "Hotel automation →"),
-            ("JD Industry and software change", "From connected machines to a full ERP on ERPNext, with data migration from the old program and a free initial analysis.", "en-erpnext-manufacturing.html", "Discover JD Industry →")]),
+            ("Production software too", "Production management, MES and platforms can qualify for hyper-depreciation when listed in Annex V and interconnected.", "en-erpnext-manufacturing.html", "Discover JD Industry →")]),
 }
 
 # fase documentazione, prima dell'assistenza, in tutti i servizi

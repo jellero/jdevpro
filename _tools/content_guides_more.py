@@ -42,7 +42,7 @@ MORE_GUIDES = [
       ("Satellite: quando non c'è altro",
        ["Starlink funziona quasi ovunque abbia cielo libero, con velocità buone anche in montagna. Il terminale però consuma molto più di un router 4G: se il sito è alimentato dal sole va considerato nel dimensionamento di pannelli e batterie."]),
       ("L'energia: pannelli e batterie",
-       ["Senza rete elettrica servono pannelli e batterie dimensionati sui consumi reali degli apparati e sui mesi con meno sole. Il monitoraggio da remoto della carica e della produzione evita di scoprire il problema quando la batteria è già scarica. Avendo realizzato impianti off-grid oltre i 6 kW, sappiamo che il conto si fa sul mese peggiore, non sulla media dell'anno: vale anche per l'impianto piccolo che alimenta un router o una telecamera."]),
+       ["Senza rete elettrica servono pannelli e batterie dimensionati sui consumi reali degli apparati e sui mesi con meno sole. Il monitoraggio da remoto della carica e della produzione evita di scoprire il problema quando la batteria è già scarica. Chi realizza impianti off-grid sa che il conto si fa sul mese peggiore, non sulla media dell'anno: vale anche per l'impianto piccolo che alimenta un router o una telecamera."]),
       ("Controllo da remoto",
        [["stato della linea e della batteria visibile dal telefono;",
          "avvisi quando qualcosa si ferma o la batteria scende;",

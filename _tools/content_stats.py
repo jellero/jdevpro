@@ -5,17 +5,17 @@ Ogni voce: (valore in evidenza, descrizione, link o None).
 
 STATS = {
   "home": {
-    "it": [("Decine", "macchine collegate, tutte asseverate da ingegneri e ammesse all'iperammortamento", "interconnessione-macchine-industria-4-0.html"),
+    "it": [("Decine", "di macchine collegate, tutte asseverate da ingegneri e ammesse all'iperammortamento", "interconnessione-macchine-industria-4-0.html"),
            ("JD Industry", "il nostro gestionale di produzione collegato alle macchine", "gestionale-produzione-erpnext.html"),
-           ("Welora", "il nostro gestionale per strutture ricettive", "https://welora.it/"),
+           ("Qualsiasi marca", "macchine con PLC o CNC, anche datate: OPC UA, MTConnect, Modbus", "interconnessione-macchine-industria-4-0.html"),
            ("24 h", "al massimo per una risposta scritta", "#contatto")],
     "en": [("Dozens", "machines connected, all sworn by engineers and approved for hyper-depreciation", "en-machine-interconnection.html"),
            ("JD Industry", "our production software connected to machines", "en-erpnext-manufacturing.html"),
-           ("Welora", "our hospitality management software", "https://welora.it/"),
+           ("Any brand", "PLC or CNC machines, old ones too: OPC UA, MTConnect, Modbus", "en-machine-interconnection.html"),
            ("24 h", "at most for a written reply", "#contatto")],
   },
   "area:industria": {
-    "it": [("Decine", "macchine collegate in produzione", "interconnessione-macchine-industria-4-0.html"),
+    "it": [("Decine", "di macchine collegate in produzione", "interconnessione-macchine-industria-4-0.html"),
            ("JD Industry", "gestionale di produzione collegato a macchine SCM ed Essetre", None),
            ("Ammesse all'iperammortamento", "tutte le macchine collegate, certificate e asseverate da ingegneri", "guida-interconnessione-iperammortamento.html")],
     "en": [("Dozens", "machines connected in production", "en-machine-interconnection.html"),
@@ -24,7 +24,7 @@ STATS = {
   },
   "area:strutture": {
     "it": [("Camera per camera", "clima collegato alle prenotazioni in alberghi e affittacamere", "automazione-hotel-bnb.html"),
-           ("Decine", "centralini VoIP installati in alberghi e ristoranti", "centralini-voip-telefonia.html"),
+           ("Decine", "di centralini VoIP installati in alberghi e ristoranti", "centralini-voip-telefonia.html"),
            ("Rifugi e baite", "internet ed energia solare dove non arriva la linea", "internet-offgrid-siti-remoti.html")],
     "en": [("Room by room", "climate linked to bookings in hotels and guest houses", "en-hotel-bnb-automation.html"),
            ("Dozens", "VoIP phone systems installed in hotels and restaurants", "en-voip-phone-systems.html"),
@@ -32,14 +32,14 @@ STATS = {
   },
   "area:web": {
     "it": [("Marketplace", "gestionale collegato a fornitore, SellRapido, IBS, Temu e GLS", "integrazione-software-api.html"),
-           ("Welora", "il nostro gestionale per strutture ricettive", "https://welora.it/"),
+           ("Qualsiasi marca", "macchine con PLC o CNC, anche datate: OPC UA, MTConnect, Modbus", "interconnessione-macchine-industria-4-0.html"),
            ("4 lingue", "portale turistico Lauco Experience con backoffice", "https://www.laucoexperience.it/")],
     "en": [("Marketplaces", "business software connected to supplier, SellRapido, IBS, Temu and GLS", "en-software-integration-api.html"),
            ("Welora", "our own hospitality management software", "https://welora.it/"),
            ("4 languages", "Lauco Experience tourism portal with back office", "https://www.laucoexperience.it/")],
   },
   "interconnessione-macchine-industria-4-0.html": {
-    "it": [("Decine", "macchine collegate in produzione", None),
+    "it": [("Decine", "di macchine collegate in produzione", None),
            ("Asseverate", "tutte certificate e asseverate da ingegneri", None),
            ("Verificate", "tecnicamente ai fini dell'interconnessione", None),
            ("Ammesse", "all'iperammortamento", None)],
@@ -58,14 +58,14 @@ STATS = {
   },
   "automazione-hotel-bnb.html": {
     "it": [("Camera per camera", "clima già in funzione in alberghi e affittacamere", None),
-           ("Decine", "centralini VoIP installati negli alberghi", None),
-           ("Decine", "impianti Ubiquiti con telecamere, citofoni e accessi", "videosorveglianza-citofonia-accessi.html")],
+           ("Decine", "di centralini VoIP installati negli alberghi", None),
+           ("Decine", "di impianti Ubiquiti con telecamere, citofoni e accessi", "videosorveglianza-citofonia-accessi.html")],
     "en": [("Room by room", "climate control already running in hotels and guest houses", None),
            ("Dozens", "VoIP phone systems installed in hotels", None),
            ("Dozens", "Ubiquiti systems with cameras, intercoms and access control", "en-video-surveillance-intercom-access.html")],
   },
   "videosorveglianza-citofonia-accessi.html": {
-    "it": [("Decine", "impianti Ubiquiti installati in aziende di ogni tipo", None),
+    "it": [("Decine", "di impianti Ubiquiti installati in aziende di ogni tipo", None),
            ("Volti e targhe", "controllo accessi con riconoscimento già installato", None),
            ("Antenne · telecamere · citofoni", "una sola piattaforma, gestita da remoto", None)],
     "en": [("Dozens", "Ubiquiti systems installed in all kinds of companies", None),
@@ -73,7 +73,7 @@ STATS = {
            ("Antennas · cameras · intercoms", "one platform, managed remotely", None)],
   },
   "centralini-voip-telefonia.html": {
-    "it": [("Decine", "centralini VoIP installati in aziende, alberghi e ristoranti", None),
+    "it": [("Decine", "di centralini VoIP installati in aziende, alberghi e ristoranti", None),
            ("Asterisk · 3CX", "centralini in sede e in cloud", None),
            ("Grandstream · Yealink", "telefoni e citofoni configurati", None)],
     "en": [("Dozens", "VoIP systems installed in companies, hotels and restaurants", None),
@@ -81,10 +81,10 @@ STATS = {
            ("Grandstream · Yealink", "phones and intercoms configured", None)],
   },
   "internet-offgrid-siti-remoti.html": {
-    "it": [("Oltre i 6 kW", "impianti off-grid già realizzati: dimensioniamo bene anche quelli piccoli", None),
+    "it": [("Off-grid", "impianti a pannelli e batterie dimensionati sui consumi reali", None),
            ("Ubiquiti · MikroTik", "ponti radio già installati", None),
            ("Starlink", "connessioni satellitari installate", None)],
-    "en": [("Above 6 kW", "off-grid systems already built: we size small ones properly too", None),
+    "en": [("Off-grid", "solar and battery systems sized on real consumption", None),
            ("Ubiquiti · MikroTik", "radio links already installed", None),
            ("Starlink", "satellite connections installed", None)],
   },
@@ -113,8 +113,8 @@ STATS = {
            ("Welora", "bookings from the management software straight on the website", "https://welora.it/")],
   },
   "about": {
-    "it": [("Decine", "macchine collegate in produzione", "interconnessione-macchine-industria-4-0.html"),
-           ("Decine", "impianti Ubiquiti installati", "videosorveglianza-citofonia-accessi.html"),
+    "it": [("Decine", "di macchine collegate in produzione", "interconnessione-macchine-industria-4-0.html"),
+           ("Decine", "di impianti Ubiquiti installati", "videosorveglianza-citofonia-accessi.html"),
            ("Dal 2009", "tra informatica, software e impianti", None)],
     "en": [("Dozens", "machines connected in production", "en-machine-interconnection.html"),
            ("Dozens", "Ubiquiti systems installed", "en-video-surveillance-intercom-access.html"),
