@@ -24,10 +24,10 @@ STATS = {
   },
   "area:strutture": {
     "it": [("Camera per camera", "clima collegato alle prenotazioni in alberghi e affittacamere", "automazione-hotel-bnb.html"),
-           ("Decine", "di centralini VoIP installati in alberghi e ristoranti", "centralini-voip-telefonia.html"),
+           ("Asterisk · 3CX", "centralini VoIP installati in alberghi e ristoranti", "centralini-voip-telefonia.html"),
            ("Rifugi e baite", "internet ed energia solare dove non arriva la linea", "internet-offgrid-siti-remoti.html")],
     "en": [("Room by room", "climate linked to bookings in hotels and guest houses", "en-hotel-bnb-automation.html"),
-           ("Dozens", "VoIP phone systems installed in hotels and restaurants", "en-voip-phone-systems.html"),
+           ("Asterisk · 3CX", "VoIP phone systems installed in hotels and restaurants", "en-voip-phone-systems.html"),
            ("Mountain huts", "internet and solar power where lines do not reach", "en-offgrid-internet.html")],
   },
   "area:web": {
@@ -58,11 +58,11 @@ STATS = {
   },
   "automazione-hotel-bnb.html": {
     "it": [("Camera per camera", "clima già in funzione in alberghi e affittacamere", None),
-           ("Decine", "di centralini VoIP installati negli alberghi", None),
-           ("Decine", "di impianti Ubiquiti con telecamere, citofoni e accessi", "videosorveglianza-citofonia-accessi.html")],
+           ("Centralini VoIP", "già installati negli alberghi", None),
+           ("Ubiquiti", "telecamere, citofoni e accessi già installati", "videosorveglianza-citofonia-accessi.html")],
     "en": [("Room by room", "climate control already running in hotels and guest houses", None),
-           ("Dozens", "VoIP phone systems installed in hotels", None),
-           ("Dozens", "Ubiquiti systems with cameras, intercoms and access control", "en-video-surveillance-intercom-access.html")],
+           ("VoIP systems", "already installed in hotels", None),
+           ("Ubiquiti", "cameras, intercoms and access control already installed", "en-video-surveillance-intercom-access.html")],
   },
   "videosorveglianza-citofonia-accessi.html": {
     "it": [("Decine", "di impianti Ubiquiti installati in aziende di ogni tipo", None),
@@ -114,10 +114,10 @@ STATS = {
   },
   "about": {
     "it": [("Decine", "di macchine collegate in produzione", "interconnessione-macchine-industria-4-0.html"),
-           ("Decine", "di impianti Ubiquiti installati", "videosorveglianza-citofonia-accessi.html"),
+           ("Ubiquiti", "antenne, telecamere, citofoni e accessi installati", "videosorveglianza-citofonia-accessi.html"),
            ("Dal 2009", "tra informatica, software e impianti", None)],
     "en": [("Dozens", "machines connected in production", "en-machine-interconnection.html"),
-           ("Dozens", "Ubiquiti systems installed", "en-video-surveillance-intercom-access.html"),
+           ("Ubiquiti", "antennas, cameras, intercoms and access control installed", "en-video-surveillance-intercom-access.html"),
            ("Since 2009", "across IT, software and installations", None)],
   },
 }

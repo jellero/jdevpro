@@ -88,7 +88,7 @@ UI = {
              c_steps_label="Come funziona", c_mail="Scrivici una email", copy="Copia", copied="Copiato ✓",
              wa="Scrivici su WhatsApp ↗",
              li="Oppure su LinkedIn ↗", where="Tolmezzo (UD) · Friuli Venezia Giulia e Veneto · trasferte · da remoto ovunque",
-             f_who="Jacopo Ellero · Tolmezzo (UD)", privacy="privacy.html", cookie="cookie-policy.html",
+             f_who="Jacopo Ellero · Tolmezzo (UD)", f_legal="JDEVPRO di Jacopo Ellero · Sede: Via Capoluogo 25/A, 33029 Lauco (UD) · Operiamo da Tolmezzo · P.IVA IT02783420306", privacy="privacy.html", cookie="cookie-policy.html",
              mailto=MAILTO, wa_url=WA),
   "en": dict(lang="en", locale="en_GB", skip="Skip to content", menu="Open menu", navlabel="Main navigation",
              contact="Contact", guides="Guides", home="Home", crumbs="Breadcrumb", more="Learn more →",
@@ -109,7 +109,7 @@ UI = {
              c_steps_label="How it works", c_mail="Send us an email", copy="Copy", copied="Copied ✓",
              wa="Message us on WhatsApp ↗",
              li="Or on LinkedIn ↗", where="Tolmezzo (Udine), Italy · north-east Italy · travel · remote work anywhere",
-             f_who="Jacopo Ellero · Tolmezzo, Italy", privacy="privacy-en.html", cookie="cookie-policy-en.html",
+             f_who="Jacopo Ellero · Tolmezzo, Italy", f_legal="JDEVPRO by Jacopo Ellero · Registered office: Via Capoluogo 25/A, 33029 Lauco (UD), Italy · Based in Tolmezzo · VAT IT02783420306", privacy="privacy-en.html", cookie="cookie-policy-en.html",
              mailto=MAILTO_EN, wa_url=WA_EN),
 }
 
@@ -324,7 +324,7 @@ def footer(lang="it"):
 <div class="shell footer-grid footer-wide">
 <div><strong>JDEVPRO</strong><span>{u['f_who']}</span></div>
 <div class="footer-links">{links}</div>
-<div><span>JDEVPRO di Jacopo Ellero · Via Capoluogo 25/A, 33029 Lauco (UD) · P.IVA IT02783420306</span><a href="{u['privacy']}">Privacy</a><a href="{u['cookie']}">Cookie</a><a href="https://github.com/jellero" rel="noreferrer" target="_blank">GitHub</a><a href="{LI}" rel="noreferrer" target="_blank">LinkedIn</a></div>
+<div><span>{u['f_legal']}</span><a href="{u['privacy']}">Privacy</a><a href="{u['cookie']}">Cookie</a><a href="https://github.com/jellero" rel="noreferrer" target="_blank">GitHub</a><a href="{LI}" rel="noreferrer" target="_blank">LinkedIn</a></div>
 </div>
 <div class="shell"><div class="footer-local">{services}</div></div>
 </footer>
@@ -425,7 +425,7 @@ def home(lang="it"):
     if lang == "it":
         t = dict(eyebrow="Integrazione macchine e gestionali · Friuli Venezia Giulia",
                  h1="Macchine, impianti e software: <span>integrati e sempre connessi.</span>",
-                 lead="JDEVPRO nasce in Friuli con Jacopo Ellero. Colleghiamo al gestionale qualsiasi macchina con PLC o CNC per l'interconnessione 4.0 e l'iperammortamento: decine di macchine già collegate, tutte asseverate e ammesse. Sviluppiamo anche JD Industry, il gestionale di produzione, e seguiamo tutto nel tempo, in trasferta dove serve e da remoto ovunque.",
+                 lead="JDEVPRO nasce in Friuli con Jacopo Ellero. Colleghiamo al gestionale qualsiasi macchina con PLC o CNC per l'interconnessione 4.0 e l'iperammortamento: tutte le macchine collegate finora sono asseverate e ammesse. Sviluppiamo anche JD Industry, il gestionale di produzione, e seguiamo tutto nel tempo, in trasferta dove serve e da remoto ovunque.",
                  b1="Interconnessione macchine", b1h="interconnessione-macchine-industria-4-0.html", b2="Scrivici", ae="Anche", ah="Strutture ricettive e software su misura.",
                  enter="Entra nell'area →",
                  proof=[("JD Industry", "Gestionale di produzione collegato a macchine SCM ed Essetre.", "gestionale-produzione-erpnext.html"),
@@ -436,7 +436,7 @@ def home(lang="it"):
     else:
         t = dict(eyebrow="Machine and business software integration · North-east Italy",
                  h1="Machines, installations and software: <span>integrated and always connected.</span>",
-                 lead="JDEVPRO was founded in Friuli by Jacopo Ellero. We connect any PLC or CNC machine to business software for Industry 4.0 interconnection and the Italian tax incentive: dozens of machines already connected, all certified and approved. We also build JD Industry, our production software, and look after everything over time, on site where needed and remotely anywhere.",
+                 lead="JDEVPRO was founded in Friuli by Jacopo Ellero. We connect any PLC or CNC machine to business software for Industry 4.0 interconnection and the Italian tax incentive: every machine connected so far is certified and approved. We also build JD Industry, our production software, and look after everything over time, on site where needed and remotely anywhere.",
                  b1="Machine interconnection", b1h="en-machine-interconnection.html", b2="Write to us", ae="Also", ah="Hospitality and custom software.",
                  enter="Enter the area →",
                  proof=[("JD Industry", "Production software connected to SCM and Essetre machines.", "en-erpnext-manufacturing.html"),
@@ -1062,8 +1062,8 @@ def guide_index():
 </section>
 {contact()}</main>
 """
-    return head("Guide: incentivi 2026, macchine 4.0, gestionale e hotel | JDEVPRO",
-                "Guide pratiche: iperammortamento 2026, voucher, Conto Termico, Fondo turismo FVG, interconnessione 4.0, ERPNext, VoIP e videosorveglianza.",
+    return head("Guide: macchine 4.0, gestionali, rete, energia e hotel | JDEVPRO",
+                "Guide pratiche: interconnessione 4.0 e iperammortamento, ERP e MES, migrazione dati, rete e ponti radio, backup, fotovoltaico, pompe di calore e hotel.",
                 "guide.html", jsonld) + body + footer()
 
 

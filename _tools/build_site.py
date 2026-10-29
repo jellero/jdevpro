@@ -30,7 +30,7 @@ PAGES = [
     nav="Macchine 4.0",
     card_title="Interconnessione macchine 4.0",
     card_who="Aziende di qualsiasi produzione: torni, centri di lavoro, laser, presse, macchine tessili e da stampa, riempitrici, linee e impianti con PLC o CNC.",
-    card_points=["Qualsiasi macchina, anche vecchia, si collega", "Decine di macchine già collegate", "Requisito di interconnessione per l'iperammortamento"],
+    card_points=["Qualsiasi macchina, anche vecchia, si collega", "Tutte le macchine collegate sono asseverate", "Requisito di interconnessione per l'iperammortamento"],
     title="Interconnessione 4.0 per l'iperammortamento | JDEVPRO",
     desc="Colleghiamo al gestionale qualsiasi macchina, 4.0 o datata: OPC UA, MTConnect, PLC, Modbus, seriale o sensori. Commesse e costi reali. Decine già in produzione.",
     service_type="Interconnessione macchine Industria 4.0",
@@ -59,7 +59,7 @@ PAGES = [
       ("Assistenza quando serve", "Interventi su richiesta quando la macchina o il gestionale cambiano."),
     ],
     examples=[
-      ("Decine di macchine in produzione", "Falegnamerie e stamperie con macchine collegate al gestionale: stato, produzione, commesse e costi senza fogli Excel.", None),
+      ("Macchine in produzione", "Falegnamerie e stamperie con macchine collegate al gestionale: stato, produzione, commesse e costi senza fogli Excel.", None),
       ("JD Industry · bordatrice SCM con Maestro Active", "Stato e allarmi in tempo reale, commesse aperte e chiuse dalla macchina, produzione importata in automatico e costo reale per commessa su tempi effettivi e metri di bordo.", None),
       ("JD Industry · CNC Essetre/Tecnoessetre", "Più macchine in un'unica schermata, eventi associati alla commessa, invio dei file di lavoro, magazzino e residui, report economici stampabili.", None),
     ],
@@ -423,7 +423,7 @@ PAGES = [
     eyebrow="Videosorveglianza · Citofonia · Accessi",
     h1="Videosorveglianza, citofonia e accessi: <span>tutto sul telefono.</span>",
     lead="Telecamere che distinguono una persona da un gatto, videocitofoni che suonano sul cellulare, accessi con riconoscimento facciale e targhe, cancelli e porte comandati da remoto e collegati a prenotazioni, turni o fornitori.",
-    proof="Decine di impianti Ubiquiti installati in aziende di vario tipo: antenne, telecamere, citofoni e controllo accessi con riconoscimento facciale e targhe.",
+    proof="Impianti Ubiquiti installati in aziende di vario tipo: antenne, telecamere, citofoni e controllo accessi con riconoscimento facciale e targhe.",
     problems=[
       ("Troppi falsi allarmi.", "Foglie, ombre e animali fanno scattare notifiche che nessuno guarda più."),
       ("Registrazioni che nessuno consulta.", "Quando serve, cercare un evento in ore di video è impossibile."),
@@ -452,7 +452,7 @@ PAGES = [
       ("Assistenza", "Aggiornamenti e modifiche alle regole su richiesta, anche da remoto."),
     ],
     examples=[
-      ("Videosorveglianza UniFi Protect", "Decine di impianti Ubiquiti installati: telecamere con riconoscimento di persone, veicoli e targhe, avvisi sul telefono e registrazione in sede.", None),
+      ("Videosorveglianza UniFi Protect", "Telecamere con riconoscimento di persone, veicoli e targhe, avvisi sul telefono e registrazione in sede.", None),
       ("Citofonia e controllo accessi UniFi", "Videocitofoni e accessi UniFi con riconoscimento facciale, badge e aperture da telefono, con lo storico di ogni ingresso.", None),
       ("Antenne e ponti radio Ubiquiti", "Collegamenti radio per portare rete e telecamere tra edifici, cancelli e aree esterne.", None),
     ],
