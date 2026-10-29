@@ -75,6 +75,10 @@
 .footer-wide { grid-template-columns: auto 1fr auto; }
 .footer-wide > div { flex-wrap: wrap; }
 .footer-links { justify-content: center; }
+@media (max-width: 1180px) {
+  .footer-wide { grid-template-columns: 1fr; }
+  .footer-wide > div, .footer-links { justify-content: flex-start; }
+}
 
 @media (max-width: 980px) {
   .competence-grid, .outcome-grid { grid-template-columns: repeat(2, 1fr); }
