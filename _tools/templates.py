@@ -1341,6 +1341,15 @@ def product_block(b, bg):
 </div>
 </section>
 """
+    if kind == "figure":
+        _, eyebrow, h2, src, alt, caption, w, h = b
+        return f"""<section class="section section-tight {bg}">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">{eyebrow}</p><h2>{h2}</h2></div>
+<figure class="product-shot reveal"><img src="{src}" alt="{alt}" width="{w}" height="{h}" loading="lazy" decoding="async"><figcaption>{caption}</figcaption></figure>
+</div>
+</section>
+"""
     raise ValueError(kind)
 
 
