@@ -40,6 +40,7 @@ PAGES = [
     proof="In produzione: decine di macchine collegate tra falegnamerie e stamperie.",
     problems=[
       ("La macchina è nuova ma non è collegata.", "Senza interconnessione al sistema aziendale rischi di perdere l'iperammortamento."),
+      ("L'iperammortamento è garantito?", "Noi garantiamo l'interconnessione tecnica e la documentazione per il perito. L'ammissibilità all'iperammortamento la attestano il perito e il tuo consulente."),
       ("Tempi e costi li stimi a mano.", "Ore macchina, scarti e consumi finiscono in Excel, quando ci finiscono."),
       ("Il fornitore non collega il tuo gestionale.", "La macchina ha le interfacce, ma nessuno le usa per portare i dati in ufficio."),
       ("La macchina è vecchia e non ha interfacce.", "Si collega lo stesso, con sensori e contatori che rilevano stato, cicli, tempi e consumi."),
