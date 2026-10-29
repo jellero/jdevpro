@@ -54,6 +54,7 @@ PRICES, CITIES, GUIDES, TEST = EXTRA["PRICES"], EXTRA["CITIES"], EXTRA["GUIDES"]
 PRICE_NOTES, CTAS = EXTRA["PRICE_NOTES"], EXTRA["CTAS"]
 GUIDE_UPDATED, GUIDE_MODIFIED = "ottobre 2026", "2026-10-28"
 GUIDES = GUIDES + runpy.run_path(str(pathlib.Path(__file__).with_name("content_guides_more.py")))["MORE_GUIDES"]
+GUIDES = GUIDES + runpy.run_path(str(pathlib.Path(__file__).with_name("content_guides_choose.py")))["CHOOSE_GUIDES"]
 EN_SLUG, EN_PAGES, EN_TIERS = EXTRA["EN_SLUG"], EXTRA["EN_PAGES"], EXTRA["EN_TIERS"]
 SENSOR_TIER = {"it": ("Sensori aggiunti", "Per macchine e impianti senza nessuna interfaccia, anche vecchi: sensori e contatori rilevano stato, cicli, tempi e consumi e li portano nei vostri sistemi."),
                "en": ("Added sensors", "For machines and plants with no interface at all, old ones included: sensors and meters detect status, cycles, times and consumption and bring them into your systems.")}
