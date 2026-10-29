@@ -604,6 +604,10 @@ def area_page(a, lang):
     return head(a["title"], a["desc"], a["slug"], jsonld, lang, alternates=alternates) + body + footer(lang)
 
 
+PRODUCT_SHOTS = {"welora": ("assets/welora-app.webp", 756, 572, "Welora: cruscotto con arrivi, prenotazioni, check-in online e incassi"),
+                 "erp": ("assets/jd-industry-progetto.webp", 1600, 1000, "JD Industry: cruscotto con macchine, commesse e produzione (dati di esempio)")}
+
+
 def products_index(lang):
     u = UI[lang]
     pp = PRODUCTS_PAGE[lang]
@@ -616,7 +620,7 @@ def products_index(lang):
         rows += f"""<article class="product-row product-card-{x['key']} reveal">
 <div><p class="eyebrow">{x['eyebrow']}</p><h2>{x['nav']}</h2><p class="product-card-text">{x['card']}</p>
 <a class="button primary" href="{x['slug']}"{ext(x['slug'])}>{label}</a></div>
-<ul class="status-list">{pts}</ul>
+<div class="product-side">{(lambda s: f'<img class="product-thumb" src="{s[0]}" alt="{s[3]}" width="{s[1]}" height="{s[2]}" loading="lazy" decoding="async">' if s else '')(PRODUCT_SHOTS.get(x["key"]))}<ul class="status-list">{pts}</ul></div>
 </article>
 """
     jsonld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": pp["nav"], "description": pp["desc"], "url": url_of(pp["slug"]),
@@ -697,6 +701,12 @@ PHOTOS = {
         "en": ("In the field", "The machines we connect, seen from inside.", [
             ("assets/interconnessione-plc.webp", 1600, 828, "Electrical cabinet of a connected machine: networked PLC boards", "The cabinet of one of the machines we connected to business software: networked PLC boards."),
             ("assets/interconnessione-inverter.webp", 1600, 856, "Drives and terminal blocks in the same cabinet", "Drives and terminal blocks in the same cabinet.")]),
+    },
+    "automazione-hotel-bnb.html": {
+        "it": ("Il nostro gestionale", "Welora, per hotel, B&B e strutture ricettive.", [
+            ("assets/welora-app.webp", 756, 572, "Welora: cruscotto con arrivi, prenotazioni, servizi, flusso del check-in e incasso", "Welora: arrivi, prenotazioni, check-in online, pagamenti e automazioni in un'unica schermata. In arrivo il 15 febbraio 2027.")]),
+        "en": ("Our software", "Welora, for hotels, B&Bs and guesthouses.", [
+            ("assets/welora-app.webp", 756, 572, "Welora dashboard with arrivals, bookings, services, check-in flow and payment", "Welora: arrivals, bookings, online check-in, payments and automations on one screen. Expected on 15 February 2027.")]),
     },
     "siti-web-piattaforme.html": {
         "it": ("Un esempio reale", "Lauco Experience: la mappa dei sentieri.", [
