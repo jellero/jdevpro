@@ -34,8 +34,6 @@ ABOUT = {
     projects=[
       ("Welora", "Piattaforma gestionale multi-struttura con motore di automazione separato.", "https://welora.it/"),
       ("JD Industry", "Gestionale di produzione collegato alle macchine.", "interconnessione-macchine-industria-4-0.html"),
-      ("Vehylo", "Diagnostica veicolo via OBD-II e Bluetooth.", "https://jellero.github.io/vehylo-web/"),
-      ("Lauco Experience", "Portale turistico in quattro lingue con backoffice.", "https://www.laucoexperience.it/"),
     ],
     akios_e="Sviluppo", akios_h="AKIOS: dispositivi IoT che si aggiornano senza rompersi.",
     akios_p=[
@@ -89,8 +87,6 @@ ABOUT = {
     projects=[
       ("Welora", "Multi-property management platform with a separate automation engine.", "https://welora.it/"),
       ("JD Industry", "Production software connected to machines.", "en-machine-interconnection.html"),
-      ("Vehylo", "Vehicle diagnostics over OBD-II and Bluetooth.", "https://jellero.github.io/vehylo-web/"),
-      ("Lauco Experience", "Four-language tourism portal with back office.", "https://www.laucoexperience.it/"),
     ],
     akios_e="Development", akios_h="AKIOS: IoT devices that update without breaking.",
     akios_p=[
