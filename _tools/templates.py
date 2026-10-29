@@ -429,7 +429,6 @@ def home(lang="it"):
                  proof=[("JD Industry", "Gestionale di produzione collegato a macchine SCM ed Essetre.", "gestionale-produzione-erpnext.html"),
                         ("E-commerce e marketplace", "Gestionale collegato a fornitore, marketplace e corriere.", "integrazione-software-api.html"),
                         ("Prodotti", "Welora per le strutture ricettive e JD Industry per la produzione.", "prodotti.html")],
-                 who='<strong>JDEVPRO</strong> è l\'attività di Jacopo Ellero, sviluppatore e integratore di sistemi. <a href="chi-sono.html">Chi sono →</a> · <a href="dove-lavoriamo.html">Dove lavoriamo →</a>',
                  title="JDEVPRO · Interconnessione macchine e gestionali in Friuli",
                  desc="Interconnessione macchine 4.0 per l'iperammortamento: decine di macchine collegate al gestionale, tutte asseverate e ammesse. Friuli Venezia Giulia e Veneto.")
     else:
@@ -441,7 +440,6 @@ def home(lang="it"):
                  proof=[("JD Industry", "Production software connected to SCM and Essetre machines.", "en-erpnext-manufacturing.html"),
                         ("E-commerce and marketplaces", "Business software connected to supplier, marketplaces and courier.", "en-software-integration-api.html"),
                         ("Products", "Welora for hospitality and JD Industry for manufacturing.", "en-products.html")],
-                 who='<strong>JDEVPRO</strong> is the business of Jacopo Ellero, software developer and systems integrator. <a href="en-about.html">About me →</a>',
                  title="JDEVPRO · Machine interconnection and business software, Italy",
                  desc="Industry 4.0 machine interconnection: dozens of machines connected to business software, all certified and approved. North-east Italy.")
     cards = ""
@@ -511,7 +509,6 @@ def home(lang="it"):
 <section class="section section-tight proof-band">
 <div class="shell">
 <div class="proof-grid proof-links reveal">{proof}</div>
-<p class="proof-who reveal">{t['who']}</p>
 </div>
 </section>
 {contact(lang)}</main>
