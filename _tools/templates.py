@@ -1164,7 +1164,6 @@ def about(lang="it"):
         f'<ul>{"".join(f"<li>{x}</li>" for x in items)}</ul></article>'
         for i, (h, d, items) in enumerate(a["skills"], 1))
     certs = "".join(f'<article class="cert reveal"><strong>{h}</strong><span>{d}</span></article>' for h, d in a["certs"])
-    path = "".join(f'<li><span class="when">{w}</span><strong>{role}</strong><span>{d}</span></li>' for w, role, d in a["path"])
 
     def ext_attr(link):
         return ' rel="noreferrer" target="_blank"' if link.startswith("http") else ""
@@ -1217,12 +1216,6 @@ def about(lang="it"):
 <div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">{a['field_e']}</p><h2>{a['field_h']}</h2><p class="field-lead">{a['field_p']}</p></div>
 <div class="cert-grid">{certs}</div>
-</div>
-</section>
-<section class="section section-tight section-white">
-<div class="shell split">
-<div class="section-heading reveal"><p class="eyebrow">{a['path_e']}</p><h2>{a['path_h']}</h2></div>
-<ol class="timeline reveal">{path}</ol>
 </div>
 </section>
 <section class="section section-tight section-dark akios-section">
