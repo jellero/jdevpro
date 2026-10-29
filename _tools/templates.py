@@ -322,7 +322,7 @@ def footer(lang="it"):
 <div class="shell footer-grid footer-wide">
 <div><strong>JDEVPRO</strong><span>{u['f_who']}</span></div>
 <div class="footer-links">{links}</div>
-<div><span>P.IVA IT02783420306</span><a href="{u['privacy']}">Privacy</a><a href="{u['cookie']}">Cookie</a><a href="https://github.com/jellero" rel="noreferrer" target="_blank">GitHub</a><a href="{LI}" rel="noreferrer" target="_blank">LinkedIn</a></div>
+<div><span>JDEVPRO di Jacopo Ellero · Via Capoluogo 25/A, 33029 Lauco (UD) · P.IVA IT02783420306</span><a href="{u['privacy']}">Privacy</a><a href="{u['cookie']}">Cookie</a><a href="https://github.com/jellero" rel="noreferrer" target="_blank">GitHub</a><a href="{LI}" rel="noreferrer" target="_blank">LinkedIn</a></div>
 </div>
 <div class="shell"><div class="footer-local">{services}</div></div>
 </footer>
@@ -688,6 +688,42 @@ def where_page():
 
 # ---------------------------------------------------------------- pagine competenza
 
+# Foto e schermate reali nelle pagine dei servizi: (file, larghezza, altezza, testo alternativo, didascalia) per lingua
+PHOTOS = {
+    "interconnessione-macchine-industria-4-0.html": {
+        "it": ("Sul campo", "Le macchine che colleghiamo, viste da dentro.", [
+            ("assets/interconnessione-plc.webp", 1600, 828, "Quadro elettrico di una macchina collegata: schede PLC in rete con cavi Ethernet", "Il quadro di una delle macchine che abbiamo collegato al gestionale: schede PLC in rete."),
+            ("assets/interconnessione-inverter.webp", 1600, 856, "Inverter e morsettiere nel quadro della stessa macchina", "Inverter e morsettiere nello stesso quadro.")]),
+        "en": ("In the field", "The machines we connect, seen from inside.", [
+            ("assets/interconnessione-plc.webp", 1600, 828, "Electrical cabinet of a connected machine: networked PLC boards", "The cabinet of one of the machines we connected to business software: networked PLC boards."),
+            ("assets/interconnessione-inverter.webp", 1600, 856, "Drives and terminal blocks in the same cabinet", "Drives and terminal blocks in the same cabinet.")]),
+    },
+    "siti-web-piattaforme.html": {
+        "it": ("Un esempio reale", "Lauco Experience: la mappa dei sentieri.", [
+            ("assets/lauco-mappa-sentieri.webp", 1036, 940, "Mappa interattiva dei sentieri di Lauco Experience con tracciati GPX colorati e dati del percorso", "Mappa interattiva con i tracciati GPX, la posizione di chi la usa e il sentiero più vicino con lunghezza, dislivello e tempo. Tutto gestito dal pannello del sito.")]),
+        "en": ("A real example", "Lauco Experience: the trail map.", [
+            ("assets/lauco-mappa-sentieri.webp", 1036, 940, "Lauco Experience interactive trail map with coloured GPX tracks and route data", "Interactive map with GPX tracks, the visitor's position and the nearest trail with length, elevation gain and time, all managed from the site's panel.")]),
+    },
+}
+
+
+def photos_html(it_slug, lang):
+    d = PHOTOS.get(it_slug, {}).get(lang)
+    if not d:
+        return ""
+    eyebrow, h2, items = d
+    figs = "".join(f'<figure class="product-shot reveal"><img src="{src}" alt="{alt}" width="{w}" height="{h}" loading="lazy" decoding="async"><figcaption>{cap}</figcaption></figure>'
+                   for src, w, h, alt, cap in items)
+    cls = "photo-grid" if len(items) > 1 else "photo-grid photo-one"
+    return f"""<section class="section section-tight section-white">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">{eyebrow}</p><h2>{h2}</h2></div>
+<div class="{cls}">{figs}</div>
+</div>
+</section>
+"""
+
+
 def service(p, lang="it"):
     u = UI[lang]
     it_slug = p.get("it_slug", p["slug"])
@@ -804,7 +840,7 @@ def service(p, lang="it"):
 </div>
 </div>
 </section>
-{systems}{reach}<section class="section section-tight section-white">
+{photos_html(it_slug, lang)}{systems}{reach}<section class="section section-tight section-white">
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">{u['method']}</p><h2>{u['method_h']}</h2></div>
 <ol class="method-steps reveal">
