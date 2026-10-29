@@ -1407,8 +1407,14 @@ def product_page(pr, lang):
         buttons += f'<a class="button {"ghost" if pr["links"] else "primary"}" href="#contatto">{u["talk"]}</a>'
     if has_prices:
         buttons += f'<a class="button ghost" href="#prezzi">{"Vedi i prezzi" if lang == "it" else "See prices"}</a>'
-    others = "".join(f'<a href="{x["slug"]}"{ext(x["slug"])}><strong>{x["nav"]}</strong><span>{x["card"]}</span></a>'
-                     for x in PRODUCTS[lang] if x["key"] != pr["key"] and bool(x.get("dev")) == bool(pr.get("dev")))
+    def other_card(x):
+        shot = PRODUCT_SHOTS.get(x["key"])
+        img = f'<span class="other-shot"><img src="{shot[0]}" alt="{shot[3]}" width="{shot[1]}" height="{shot[2]}" loading="lazy" decoding="async"></span>' if shot else ''
+        cta = (x["slug"].split("//")[1].rstrip("/") + " ↗") if x.get("external") else u["more"]
+        return (f'<a class="other-product reveal{" has-shot" if shot else ""}" href="{x["slug"]}"{ext(x["slug"])}>{img}'
+                f'<span class="other-body"><span class="eyebrow">{x["eyebrow"]}</span><strong>{x["nav"]}</strong><span>{x["card"]}</span>'
+                f'<span class="other-cta">{cta}</span></span></a>')
+    others = "".join(other_card(x) for x in PRODUCTS[lang] if x["key"] != pr["key"] and bool(x.get("dev")) == bool(pr.get("dev")))
     if pr["key"] == "welora":
         main_ld = {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Welora", "description": pr["desc"], "url": url,
                    "applicationCategory": "BusinessApplication", "operatingSystem": "Web",
@@ -1446,7 +1452,7 @@ def product_page(pr, lang):
 {blocks}{contact(lang, CTAS.get(pr["key"], {}).get(lang))}<section class="section section-tight related">
 <div class="shell">
 <p class="eyebrow">{other_label}</p>
-<div class="related-grid">{others}</div>
+<div class="other-products">{others}</div>
 </div>
 </section>
 </main>
