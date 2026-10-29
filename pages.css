@@ -127,7 +127,8 @@
 .price span { color: var(--ink-soft); font-size: .88rem; }
 .price strong { font-size: 1.6rem; letter-spacing: -.02em; color: var(--ink); }
 .price small { color: var(--ink-soft); font-size: .78rem; }
-.local-eyebrow { margin-top: 36px; }
+.local-eyebrow, .related-grid + .eyebrow { margin-top: 36px; }
+.related-flex { grid-template-columns: repeat(var(--cols, 4), 1fr); }
 .related-five { grid-template-columns: repeat(5, 1fr); }
 .guides-grid, .cities-grid { grid-template-columns: repeat(3, 1fr); }
 .footer-local { display: flex; flex-wrap: wrap; gap: 14px; padding-top: 14px; margin-top: 14px; border-top: 1px solid rgba(255,255,255,.06); }
@@ -153,8 +154,8 @@
 .quiz-result.warn { border-color: #d97706; }
 .quiz-result.bad { border-color: #dc2626; }
 .quiz-result a { color: var(--accent); font-weight: 800; }
-@media (max-width: 980px) { .related-five { grid-template-columns: repeat(2, 1fr); } .guides-grid, .cities-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 760px) { .price-grid, .related-five, .guides-grid, .cities-grid { grid-template-columns: 1fr; } }
+@media (max-width: 980px) { .related-flex, .related-five { grid-template-columns: repeat(2, 1fr); } .guides-grid, .cities-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 760px) { .price-grid, .related-flex, .related-five, .guides-grid, .cities-grid { grid-template-columns: 1fr; } }
 
 /* Menu: selettore lingua e versione mobile */
 .language-switch { display: inline-flex; align-items: center; gap: 4px; color: #8da2b1; font-size: .82rem; font-weight: 700; }

@@ -817,7 +817,7 @@ def service(p, lang="it"):
         if it_slug == "interconnessione-macchine-industria-4-0.html":
             gl = [TEST] + gl
         if gl:
-            guide_links = '<p class="eyebrow local-eyebrow">Guide collegate</p><div class="related-grid">' + "".join(
+            guide_links = f'<p class="eyebrow local-eyebrow">Guide collegate</p><div class="related-grid related-flex" style="--cols:{grid_cols(len(gl))}">' + "".join(
                 f'<a href="{g["slug"]}"><strong>{g["short"]}</strong><span>{g["desc"]}</span></a>' for g in gl) + "</div>"
     switch = EN_SLUG[it_slug] if lang == "it" else it_slug
     body = f"""{header(p['slug'], lang, switch=switch)}<main id="main">
@@ -880,9 +880,9 @@ def service(p, lang="it"):
 {contact(lang, CTAS.get(it_slug, {}).get(lang))}<section class="section section-tight related">
 <div class="shell">
 {guide_links}<p class="eyebrow">{("Nella stessa area: " if lang == "it" else "In the same area: ") + area["nav"]}</p>
-<div class="related-grid">{related}</div>
+<div class="related-grid related-flex" style="--cols:{grid_cols(related.count('<a '))}">{related}</div>
 <p class="eyebrow local-eyebrow">{"Altre aree" if lang == "it" else "Other areas"}</p>
-<div class="related-grid">{other_areas}</div>
+<div class="related-grid related-flex" style="--cols:{grid_cols(other_areas.count('<a '))}">{other_areas}</div>
 </div>
 </section>
 </main>
@@ -1026,6 +1026,15 @@ COMMON_GUIDES = [
     ("incentivi", "Bandi e voucher",
      ["guida-voucher-bandi-digitalizzazione-2026.html"]),
 ]
+
+
+def grid_cols(n):
+    """Colonne per n schede senza lasciarne una sola sull'ultima riga: 1-2 strette, fino a 5 in riga, poi righe da 3 o 4."""
+    if n <= 3:
+        return 3
+    if n <= 5:
+        return n
+    return 3 if n % 3 == 0 or n % 4 == 1 else 4
 
 
 def guide_areas(x):
