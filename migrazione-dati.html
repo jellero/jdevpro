@@ -90,6 +90,14 @@
   },
   {
    "@type": "Question",
+   "name": "E se qualcosa va storto?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Si torna indietro. Prima del passaggio definitivo salviamo un punto di ripristino e il vecchio sistema resta intatto: si ripristina, si corregge la regola e si rifà la migrazione, che essendo deterministica dà sempre lo stesso risultato."
+   }
+  },
+  {
+   "@type": "Question",
    "name": "Come sappiamo che i dati sono tutti arrivati?",
    "acceptedAnswer": {
     "@type": "Answer",
@@ -235,9 +243,12 @@
 <article class="outcome reveal"><h3>Estrazione da qualsiasi fonte</h3><p>Dal database del vecchio gestionale, da Access, SQL Server, MySQL, Firebird o DBF, da esportazioni ed Excel.</p></article>
 <article class="outcome reveal"><h3>Pulizia e normalizzazione</h3><p>Doppioni uniti, codici fiscali e partite IVA verificati, indirizzi e telefoni nei campi giusti, codici uniformati.</p></article>
 <article class="outcome reveal"><h3>Mappatura sul nuovo programma</h3><p>Ogni campo di partenza ha la sua destinazione, documentata e approvata da voi.</p></article>
-<article class="outcome reveal"><h3>Migrazione di prova</h3><p>Una prima importazione in un ambiente di prova, da controllare con calma prima del passaggio vero.</p></article>
+<article class="outcome reveal"><h3>Deterministica e ripetibile</h3><p>Script versionati, nessuna modifica a mano: gli stessi dati di partenza danno sempre lo stesso risultato, e la prova e il passaggio definitivo sono la stessa procedura.</p></article>
+<article class="outcome reveal"><h3>Registro di ogni riga</h3><p>Audit log di ogni record: da dove viene, dove arriva, quale regola è stata applicata, e perché un dato è stato scartato.</p></article>
 <article class="outcome reveal"><h3>Report di quadratura</h3><p>Conteggi e totali di partenza e di arrivo a confronto: anagrafiche, giacenze, saldi, documenti.</p></article>
-<article class="outcome reveal"><h3>Originali al sicuro</h3><p>Il vecchio database resta intatto e ricevete una copia completa in formato aperto.</p></article>
+<article class="outcome reveal"><h3>Ripristino sempre possibile</h3><p>Prima del passaggio si salva un punto di ripristino: se qualcosa non torna si ripristina e si rifà la migrazione corretta, senza rattoppi.</p></article>
+<article class="outcome reveal"><h3>Originali al sicuro</h3><p>Il vecchio database resta intatto, letto in sola lettura, e ricevete una copia completa in formato aperto.</p></article>
+<article class="outcome reveal"><h3>Senza fermare il lavoro</h3><p>Le prove si fanno mentre usate il vecchio programma; il passaggio definitivo è la stessa procedura già provata, in un giorno concordato.</p></article>
 </div>
 </div>
 </section>
@@ -282,7 +293,7 @@
 <article class="example reveal"><h3>Welora · importazione guidata</h3><p>Contatti, prenotazioni, camere, tariffe e saldi importati da CSV o Excel, con anteprima correggibile riga per riga.</p><a class="card-link" href="https://welora.it/" rel="noreferrer" target="_blank">Visita ↗</a></article>
 <article class="example reveal"><h3>Gestionale di produzione su ERPNext</h3><p>Anagrafiche, articoli, distinte base, giacenze e saldi portati dal gestionale precedente al nuovo ERP.</p><a class="card-link" href="gestionale-produzione-erpnext.html">Approfondisci →</a></article>
 </div>
-<div class="chips reveal" aria-label="Tech"><span>Database e Excel</span><span>Pulizia e doppioni</span><span>Migrazione di prova</span><span>Report di quadratura</span><span>Originali intatti</span></div>
+<div class="chips reveal" aria-label="Tech"><span>Qualsiasi software</span><span>Deterministica</span><span>Audit log</span><span>Report di quadratura</span><span>Ripristino</span><span>Originali intatti</span></div>
 </div>
 </section>
 <section class="section section-tight">
@@ -291,6 +302,7 @@
 <div class="faq reveal">
 <details class="faq-item"><summary>Il vecchio gestionale non esporta i dati: si può fare lo stesso?</summary><p>Quasi sempre sì. Se il programma salva i dati in un database o in file accessibili, li leggiamo direttamente, senza modificare il vecchio sistema. Prima del preventivo verifichiamo che cosa è leggibile.</p></details>
 <details class="faq-item"><summary>Ci fermiamo durante il passaggio?</summary><p>No. Prove e verifiche si fanno in parallelo mentre lavorate con il vecchio programma; il passaggio definitivo richiede di solito mezza giornata, in un giorno concordato.</p></details>
+<details class="faq-item"><summary>E se qualcosa va storto?</summary><p>Si torna indietro. Prima del passaggio definitivo salviamo un punto di ripristino e il vecchio sistema resta intatto: si ripristina, si corregge la regola e si rifà la migrazione, che essendo deterministica dà sempre lo stesso risultato.</p></details>
 <details class="faq-item"><summary>Come sappiamo che i dati sono tutti arrivati?</summary><p>Con il report di quadratura: numero di anagrafiche, articoli e documenti, giacenze e saldi di partenza e di arrivo messi a confronto.</p></details>
 <details class="faq-item"><summary>Migrate anche i documenti storici?</summary><p>Sì, quando il nuovo programma li può accogliere. In alternativa li archiviamo in un formato consultabile, così lo storico resta disponibile.</p></details>
 <details class="faq-item"><summary>E la privacy?</summary><p>Lavoriamo sui dati con nomina a responsabile del trattamento, su copie protette, e al termine cancelliamo le copie di lavoro.</p></details>
@@ -316,7 +328,7 @@
 </section>
 <section class="section section-tight related">
 <div class="shell">
-<p class="eyebrow local-eyebrow">Guide collegate</p><div class="related-grid"><a href="guida-scegliere-backup.html"><strong>Come scegliere il backup</strong><span>Ripristinare un file corrotto o modificato per errore, un server intero, dati che il ransomware non può toccare, copie fuori sede senza dipendere dal cloud.</span></a></div><p class="eyebrow">Nella stessa area: Software e web</p>
+<p class="eyebrow local-eyebrow">Guide collegate</p><div class="related-grid"><a href="guida-migrare-software.html"><strong>Come migrare un software senza perdere niente</strong><span>Migrazione deterministica e controllata: estrazione da qualsiasi fonte, prove ripetibili, registro di ogni riga, quadratura dei totali e ripristino possibile.</span></a><a href="guida-scegliere-backup.html"><strong>Come scegliere il backup</strong><span>Ripristinare un file corrotto o modificato per errore, un server intero, dati che il ransomware non può toccare, copie fuori sede senza dipendere dal cloud.</span></a></div><p class="eyebrow">Nella stessa area: Software e web</p>
 <div class="related-grid"><a href="gestionale-su-misura.html"><strong>Gestionali su misura</strong><span>Piccole e medie imprese che lavorano con Excel o con un gestionale che non si adatta.</span></a><a href="integrazione-software-api.html"><strong>Integrazioni e automazioni</strong><span>Aziende con gestionale, e-commerce, marketplace, corrieri e portali che devono scambiarsi dati.</span></a><a href="siti-web-piattaforme.html"><strong>Siti e piattaforme web</strong><span>Aziende ed enti che vogliono un sito da gestire in autonomia, collegato ai propri sistemi.</span></a></div>
 <p class="eyebrow local-eyebrow">Altre aree</p>
 <div class="related-grid"><a href="industria.html"><strong>Industria</strong><span>Macchine collegate al gestionale, commesse e costi reali, integrazioni e sensori per chi produce.</span></a><a href="strutture-edifici.html"><strong>Hotel e B&B</strong><span>Check-in e accessi, domotica, videosorveglianza, centralini VoIP e internet per hotel, B&B e ristoranti.</span></a></div>
