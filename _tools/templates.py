@@ -1016,14 +1016,14 @@ def guide(g):
 
 # temi comuni a tutte le aree: queste guide stanno nel loro gruppo, non ripetute sotto ogni area
 COMMON_GUIDES = [
-    ("rete", "Per tutti: rete, connessione e sicurezza",
+    ("rete", "Rete, connessione e sicurezza",
      ["guida-rete-aziendale.html", "guida-ponti-radio-frequenze-normative.html", "guida-internet-siti-remoti.html",
       "guida-scegliere-backup.html", "guida-scegliere-hosting.html", "guida-passare-centralino-voip.html",
       "guida-videosorveglianza-norme.html"]),
-    ("energia", "Per tutti: energia e impianti",
+    ("energia", "Energia e impianti",
      ["guida-monitorare-fotovoltaico-consumi.html", "guida-autoconsumo-fotovoltaico-carichi.html",
       "guida-pompe-di-calore-rs485-modbus.html", "guida-conto-termico-building-automation.html"]),
-    ("incentivi", "Per tutti: bandi e voucher",
+    ("incentivi", "Bandi e voucher",
      ["guida-voucher-bandi-digitalizzazione-2026.html"]),
 ]
 
