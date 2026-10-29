@@ -424,7 +424,7 @@ def home(lang="it"):
         t = dict(eyebrow="Integrazione macchine e gestionali · Friuli Venezia Giulia",
                  h1="Macchine, impianti e software: <span>integrati e sempre connessi.</span>",
                  lead="JDEVPRO nasce in Friuli con Jacopo Ellero. Colleghiamo al gestionale qualsiasi macchina con PLC o CNC per l'interconnessione 4.0 e l'iperammortamento: decine di macchine già collegate, tutte asseverate e ammesse. Sviluppiamo anche JD Industry, il gestionale di produzione, e seguiamo tutto nel tempo, in trasferta dove serve e da remoto ovunque.",
-                 b1="Interconnessione macchine", b1h="interconnessione-macchine-industria-4-0.html", b2="Scrivici", ae="Altri servizi e prodotti", ah="Il centro è l'industria. Poi hotel e software su misura.",
+                 b1="Interconnessione macchine", b1h="interconnessione-macchine-industria-4-0.html", b2="Scrivici", ae="Anche", ah="Strutture ricettive e software su misura.",
                  enter="Entra nell'area →",
                  proof=[("JD Industry", "Gestionale di produzione collegato a macchine SCM ed Essetre.", "gestionale-produzione-erpnext.html"),
                         ("E-commerce e marketplace", "Gestionale collegato a fornitore, marketplace e corriere.", "integrazione-software-api.html"),
@@ -436,7 +436,7 @@ def home(lang="it"):
         t = dict(eyebrow="Machine and business software integration · North-east Italy",
                  h1="Machines, installations and software: <span>integrated and always connected.</span>",
                  lead="JDEVPRO was founded in Friuli by Jacopo Ellero. We connect any PLC or CNC machine to business software for Industry 4.0 interconnection and the Italian tax incentive: dozens of machines already connected, all certified and approved. We also build JD Industry, our production software, and look after everything over time, on site where needed and remotely anywhere.",
-                 b1="Machine interconnection", b1h="en-machine-interconnection.html", b2="Write to us", ae="Other services and products", ah="Industry comes first. Then hotels and custom software.",
+                 b1="Machine interconnection", b1h="en-machine-interconnection.html", b2="Write to us", ae="Also", ah="Hospitality and custom software.",
                  enter="Enter the area →",
                  proof=[("JD Industry", "Production software connected to SCM and Essetre machines.", "en-erpnext-manufacturing.html"),
                         ("E-commerce and marketplaces", "Business software connected to supplier, marketplaces and courier.", "en-software-integration-api.html"),
@@ -446,6 +446,8 @@ def home(lang="it"):
                  desc="Industry 4.0 machine interconnection: dozens of machines connected to business software, all certified and approved. North-east Italy.")
     cards = ""
     for a in AREAS[lang]:
+        if a["key"] == "industria":
+            continue  # l'industria ha già la sua sezione subito sotto l'apertura
         svcs = area_services(lang, a["key"])
         svc = "<ul>" + "".join(f'<li><a href="{s["href"]}">{s["card_title"]}</a></li>' for s in svcs if s.get("it_slug", s["href"]) not in SUPPORT) + "</ul>"
         also = [s for s in svcs if s.get("it_slug", s["href"]) in SUPPORT]
@@ -490,7 +492,7 @@ def home(lang="it"):
 <span id="competenze"></span>
 <div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">{t['ae']}</p><h2>{t['ah']}</h2></div>
-<div class="area-grid">
+<div class="area-grid area-grid-2">
 {cards}</div>
 </div>
 </section>
