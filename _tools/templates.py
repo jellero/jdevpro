@@ -1204,7 +1204,7 @@ def about(lang="it"):
     def ext_attr(link):
         return ' rel="noreferrer" target="_blank"' if link.startswith("http") else ""
 
-    shots = {"Welora": ("assets/welora-app.webp", 756, 572), "JD Industry": ("assets/jd-industry-progetto.webp", 1043, 652)}
+    shots = {"Welora": ("assets/welora-app.webp", 756, 572), "JD Industry": ("assets/jd-industry-progetto.webp", 1600, 1000)}
     projects = "".join(
         f'<a class="build-card reveal" href="{link}"{ext_attr(link)}>'
         + (f'<span class="build-shot"><img src="{shots[n][0]}" alt="{n}" width="{shots[n][1]}" height="{shots[n][2]}" loading="lazy" decoding="async"></span>' if n in shots else '')
