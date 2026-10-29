@@ -50,8 +50,6 @@ ABOUT = {
       "È scritto in Rust, con un kernel che gira direttamente sull'hardware, e prevede profili per desktop, mobile e dispositivi embedded e IoT. È lo stesso principio che applico ogni giorno ai sistemi dei clienti: automazione sì, ma con controllo, storico e possibilità di tornare indietro.",
     ],
     research_link=("Scopri ORYVAEL ↗", "https://jellero.github.io/ORYVAEL-web/"),
-    edu_e="Formazione",
-    edu=[("Perito industriale per l'informatica", "ITI Galileo Galilei, Gorizia")],
     links=[("Scrivici", "#contatto"), ("GitHub", "https://github.com/jellero"), ("LinkedIn", "https://www.linkedin.com/in/jacopo-ellero-a006499a/")],
   ),
   "en": dict(
@@ -103,8 +101,6 @@ ABOUT = {
       "It is written in Rust, with a kernel running directly on hardware, and plans profiles for desktop, mobile and embedded/IoT devices. It is the same principle I apply to clients' systems every day: automation yes, but with control, history and the ability to roll back.",
     ],
     research_link=("Discover ORYVAEL ↗", "https://jellero.github.io/ORYVAEL-web/"),
-    edu_e="Education",
-    edu=[("Industrial technical diploma in IT", "ITI Galileo Galilei, Gorizia")],
     links=[("Write to us", "#contatto"), ("GitHub", "https://github.com/jellero"), ("LinkedIn", "https://www.linkedin.com/in/jacopo-ellero-a006499a/")],
   ),
 }

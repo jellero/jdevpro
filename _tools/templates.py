@@ -1204,10 +1204,12 @@ def about(lang="it"):
     def ext_attr(link):
         return ' rel="noreferrer" target="_blank"' if link.startswith("http") else ""
 
+    shots = {"Welora": ("assets/welora-app.webp", 756, 572), "JD Industry": ("assets/jd-industry-progetto.webp", 1043, 652)}
     projects = "".join(
-        f'<a href="{link}"{ext_attr(link)}><strong>{n}{" ↗" if link.startswith("http") else ""}</strong><span>{d}</span></a>'
+        f'<a class="build-card reveal" href="{link}"{ext_attr(link)}>'
+        + (f'<span class="build-shot"><img src="{shots[n][0]}" alt="{n}" width="{shots[n][1]}" height="{shots[n][2]}" loading="lazy" decoding="async"></span>' if n in shots else '')
+        + f'<span class="build-body"><strong>{n}{" ↗" if link.startswith("http") else ""}</strong><span>{d}</span></span></a>'
         for n, d, link in a["projects"])
-    edu = "".join(f"<div><strong>{h}</strong><span>{d}</span></div>" for h, d in a["edu"])
     links = "".join(
         f'<a class="button {"primary" if i == 0 else "ghost dark"}" href="{l}"{ext_attr(l)}>{n}</a>'
         for i, (n, l) in enumerate(a["links"]))
@@ -1270,9 +1272,7 @@ def about(lang="it"):
 <section class="section section-tight section-paper">
 <div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">{a['projects_e']}</p><h2>{a['projects_h']}</h2></div>
-<div class="related-grid">{projects}</div>
-<p class="eyebrow local-eyebrow">{a['edu_e']}</p>
-<div class="edu-grid reveal">{edu}</div>
+<div class="build-grid">{projects}</div>
 </div>
 </section>
 {contact(lang)}</main>
