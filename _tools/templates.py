@@ -1014,9 +1014,24 @@ def guide(g):
     return head(g["title"], g["desc"], g["slug"], jsonld) + body + footer()
 
 
+# temi comuni a tutte le aree: queste guide stanno nel loro gruppo, non ripetute sotto ogni area
+COMMON_GUIDES = [
+    ("rete", "Per tutti: rete, connessione e sicurezza",
+     ["guida-rete-aziendale.html", "guida-ponti-radio-frequenze-normative.html", "guida-internet-siti-remoti.html",
+      "guida-scegliere-backup.html", "guida-scegliere-hosting.html", "guida-passare-centralino-voip.html",
+      "guida-videosorveglianza-norme.html"]),
+    ("energia", "Per tutti: energia e impianti",
+     ["guida-monitorare-fotovoltaico-consumi.html", "guida-autoconsumo-fotovoltaico-carichi.html",
+      "guida-pompe-di-calore-rs485-modbus.html", "guida-conto-termico-building-automation.html"]),
+    ("incentivi", "Per tutti: bandi e voucher",
+     ["guida-voucher-bandi-digitalizzazione-2026.html"]),
+]
+
+
 def guide_areas(x):
-    """Aree in cui elencare una guida: indicate a mano o quella del servizio di destinazione."""
-    return x.get("areas") or [PRIMARY_AREA[x.get("cta", "interconnessione-macchine-industria-4-0.html")]]
+    """Aree in cui elencare una guida: tema comune, indicate a mano o quella del servizio di destinazione."""
+    common = [k for k, _, slugs in COMMON_GUIDES if x["slug"] in slugs]
+    return common or x.get("areas") or [PRIMARY_AREA[x.get("cta", "interconnessione-macchine-industria-4-0.html")]]
 
 
 def guide_index():
@@ -1026,6 +1041,10 @@ def guide_index():
         if gs:
             cards = "".join(f'<a href="{x["slug"]}"><strong>{x["short"]}</strong><span>{x["desc"]}</span></a>' for x in gs)
             groups += f'<p class="eyebrow local-eyebrow"><a class="guide-area" href="{a["slug"]}">{a["nav"]} →</a></p><div class="related-grid guides-grid">{cards}</div>\n'
+    for key, label, slugs in COMMON_GUIDES:
+        gs = [next(x for x in GUIDES if x["slug"] == slug) for slug in slugs]
+        cards = "".join(f'<a href="{x["slug"]}"><strong>{x["short"]}</strong><span>{x["desc"]}</span></a>' for x in gs)
+        groups += f'<p class="eyebrow local-eyebrow">{label}</p><div class="related-grid guides-grid">{cards}</div>\n'
     jsonld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Guide JDEVPRO", "url": BASE + "guide.html",
                "hasPart": [{"@type": "Article", "headline": g["short"], "url": BASE + g["slug"]} for g in GUIDES]}, ORG_REF]
     body = f"""{header('guide.html')}<main id="main">
@@ -1034,7 +1053,7 @@ def guide_index():
 <div class="shell page-hero-copy reveal">
 <nav aria-label="Percorso" class="breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">Guide</span></nav>
 <p class="eyebrow">Guide e strumenti</p>
-<h1>Guide pratiche, <span>area per area.</span></h1>
+<h1>Guide pratiche, <span>per area e per tema.</span></h1>
 <p class="hero-lead">Spiegazioni concrete per capire cosa serve prima di chiedere un preventivo.</p>
 </div>
 </section>
