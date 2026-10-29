@@ -167,7 +167,7 @@ ORG = {
                  {"@type": "City", "name": "Udine"}, {"@type": "City", "name": "Pordenone"},
                  {"@type": "City", "name": "Trieste"}, {"@type": "City", "name": "Gorizia"},
                  {"@type": "AdministrativeArea", "name": "Veneto"}, {"@type": "Country", "name": "Italia"}],
-  "description": "Interconnessione macchine 4.0, gestionali su misura, integrazioni, IoT, automazione per hotel e B&B, videosorveglianza, internet offgrid e siti web per aziende del Friuli Venezia Giulia e del Veneto.",
+  "description": "Interconnessione macchine 4.0 per l'iperammortamento e gestionale di produzione JD Industry. Anche software su misura e automazione per hotel e B&B, in Friuli Venezia Giulia e Veneto.",
   "knowsLanguage": ["it", "en"],
   "sameAs": ["https://github.com/jellero", LI],
   "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Competenze JDEVPRO", "itemListElement": [
@@ -423,27 +423,27 @@ def home(lang="it"):
     if lang == "it":
         t = dict(eyebrow="Integrazione macchine e gestionali · Friuli Venezia Giulia",
                  h1="Macchine, impianti e software: <span>integrati e sempre connessi.</span>",
-                 lead="JDEVPRO nasce in Friuli con Jacopo Ellero. Sviluppiamo gestionali su misura, colleghiamo macchine, sensori e dispositivi ai sistemi aziendali e seguiamo tutto in produzione, per aziende e strutture del Friuli Venezia Giulia e del Veneto, in trasferta dove serve e da remoto ovunque: se la macchina è collegata alla rete, la distanza non è un limite.",
-                 b1="Scegli la tua area", b2="Scrivici", ae="Da dove parti?", ah="Tre aree, un solo interlocutore.",
+                 lead="JDEVPRO nasce in Friuli con Jacopo Ellero. Colleghiamo al gestionale qualsiasi macchina con PLC o CNC per l'interconnessione 4.0 e l'iperammortamento: decine di macchine già collegate, tutte asseverate e ammesse. Sviluppiamo anche JD Industry, il gestionale di produzione, e seguiamo tutto nel tempo, in trasferta dove serve e da remoto ovunque.",
+                 b1="Interconnessione macchine", b1h="interconnessione-macchine-industria-4-0.html", b2="Scrivici", ae="Altri servizi e prodotti", ah="Il centro è l'industria. Poi hotel e software su misura.",
                  enter="Entra nell'area →",
                  proof=[("JD Industry", "Gestionale di produzione collegato a macchine SCM ed Essetre.", "gestionale-produzione-erpnext.html"),
                         ("E-commerce e marketplace", "Gestionale collegato a fornitore, marketplace e corriere.", "integrazione-software-api.html"),
                         ("Prodotti", "Welora per le strutture ricettive e JD Industry per la produzione.", "prodotti.html")],
                  who='<strong>JDEVPRO</strong> è l\'attività di Jacopo Ellero, sviluppatore e integratore di sistemi. <a href="chi-sono.html">Chi sono →</a> · <a href="dove-lavoriamo.html">Dove lavoriamo →</a>',
                  title="JDEVPRO · Interconnessione macchine e gestionali in Friuli",
-                 desc="Interconnessione macchine 4.0 per l'iperammortamento, gestionale di produzione JD Industry, migrazione dati e automazione per hotel in Friuli Venezia Giulia.")
+                 desc="Interconnessione macchine 4.0 per l'iperammortamento: decine di macchine collegate al gestionale, tutte asseverate e ammesse. Friuli Venezia Giulia e Veneto.")
     else:
         t = dict(eyebrow="Machine and business software integration · North-east Italy",
                  h1="Machines, installations and software: <span>integrated and always connected.</span>",
-                 lead="JDEVPRO was founded in Friuli by Jacopo Ellero. We build custom business software, connect machines, sensors and devices to company systems and look after everything in production, for companies and properties in north-east Italy, travelling where needed and working remotely anywhere: if the machine is on the network, distance is no limit.",
-                 b1="Choose your area", b2="Write to us", ae="Where do you start?", ah="Three areas, one partner.",
+                 lead="JDEVPRO was founded in Friuli by Jacopo Ellero. We connect any PLC or CNC machine to business software for Industry 4.0 interconnection and the Italian tax incentive: dozens of machines already connected, all certified and approved. We also build JD Industry, our production software, and look after everything over time, on site where needed and remotely anywhere.",
+                 b1="Machine interconnection", b1h="en-machine-interconnection.html", b2="Write to us", ae="Other services and products", ah="Industry comes first. Then hotels and custom software.",
                  enter="Enter the area →",
                  proof=[("JD Industry", "Production software connected to SCM and Essetre machines.", "en-erpnext-manufacturing.html"),
                         ("E-commerce and marketplaces", "Business software connected to supplier, marketplaces and courier.", "en-software-integration-api.html"),
                         ("Products", "Welora for hospitality and JD Industry for manufacturing.", "en-products.html")],
                  who='<strong>JDEVPRO</strong> is the business of Jacopo Ellero, software developer and systems integrator. <a href="en-about.html">About me →</a>',
                  title="JDEVPRO · Machine interconnection and business software, Italy",
-                 desc="Industry 4.0 machine interconnection, JD Industry production software, data migration and hotel automation in north-east Italy.")
+                 desc="Industry 4.0 machine interconnection: dozens of machines connected to business software, all certified and approved. North-east Italy.")
     cards = ""
     for a in AREAS[lang]:
         svcs = area_services(lang, a["key"])
@@ -474,7 +474,7 @@ def home(lang="it"):
 <h1>{t['h1']}</h1>
 <p class="hero-lead">{t['lead']}</p>
 <div class="hero-actions">
-<a class="button primary" href="#aree">{t['b1']}</a>
+<a class="button primary" href="{t['b1h']}">{t['b1']}</a>
 <a class="button ghost" href="#contatto">{t['b2']}</a>
 </div>
 {stats_html("home", lang)}
@@ -515,7 +515,7 @@ def home(lang="it"):
 {contact(lang)}</main>
 """
     slug = "index.html" if lang == "it" else "en.html"
-    org = ORG if lang == "it" else dict(ORG, description="Industry 4.0 machine interconnection, custom business software, IoT, hotel automation, video surveillance and off-grid internet for companies in north-east Italy.")
+    org = ORG if lang == "it" else dict(ORG, description="Industry 4.0 machine interconnection and JD Industry production software. Also custom software and hotel automation, in north-east Italy.")
     return head(t["title"], t["desc"], slug, [org], lang, alternates=[("it", "index.html"), ("en", "en.html")]) + body + footer(lang)
 
 
