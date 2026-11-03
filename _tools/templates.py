@@ -251,6 +251,9 @@ def header(current, lang="it", home=False, switch=None):
         active = current == a["slug"] or any(s["href"] == current for s in svcs)
         sub = f'<a class="nav-sub-all" href="{a["slug"]}"{cur(current == a["slug"])}>{all_label} →</a>\n' + "\n".join(
             f'<a href="{s["href"]}"{cur(s["href"] == current)}>{s["card_title"]}</a>' for s in svcs)
+        if lang == "it" and a["key"] == "industria":
+            sub += f'\n<a href="{PARTNERS["slug"]}"{cur(current == PARTNERS["slug"])}>{PARTNERS["nav"]}</a>'
+            active = active or current == PARTNERS["slug"]
         links += (f'<div class="nav-group{" is-current" if active else ""}">'
                   f'<a class="nav-group-label" href="{a["slug"]}">{a["nav"]} <span aria-hidden="true">▾</span></a>'
                   f'<div class="nav-sub">\n{sub}\n</div></div>\n')
@@ -404,7 +407,7 @@ INDUSTRIAL = {
 # incentivi in home: (eyebrow, titolo, testo, [(titolo, testo, link, etichetta)])
 INCENTIVES = {
     "it": ("Incentivi", "Agevolazioni in cui il nostro lavoro è un requisito.",
-           "Senza macchine interconnesse non c'è iperammortamento. Noi curiamo la parte tecnica e la documentazione per il perito; la pratica resta al tuo consulente o commercialista.",
+           "Senza macchine interconnesse non c'è iperammortamento. Noi curiamo la parte tecnica e la documentazione per il perito; la pratica resta al tuo consulente o commercialista. <a href=\"periti-ingegneri-consulenti.html\">Sei un perito, un ingegnere o un consulente? Ecco come lavoriamo con voi →</a>",
            [("Iperammortamento 2026–2028", "Le macchine nuove rientrano solo se interconnesse al sistema aziendale e se un perito lo attesta. Requisiti, scadenze e procedura passo per passo.", "guida-interconnessione-iperammortamento.html", "Leggi la guida →"),
             ("Contributi FVG per hotel e alberghi diffusi", "La Regione sostiene l'ammodernamento e l'efficienza delle strutture ricettive: clima, accessi e domotica possono far parte del progetto.", "guida-contributi-fvg-hotel.html", "Leggi la guida →"),
             ("Anche il software di produzione", "Gestionali di produzione, MES e piattaforme possono rientrare nell'iperammortamento se compresi nell'Allegato V e interconnessi.", "guida-iperammortamento-software-erp-mes.html", "Leggi la guida →")]),
