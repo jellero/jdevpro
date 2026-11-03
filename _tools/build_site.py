@@ -74,6 +74,7 @@ PAGES = [
     chips=["Qualsiasi marca", "OPC UA", "MTConnect", "PLC", "Modbus", "MQTT", "RS-485", "Sensori su macchine vecchie", "Server o NAS in azienda"],
     faq=[
       ("L'interconnessione serve per l'iperammortamento?", "L'iperammortamento 2026–2028 richiede che il bene sia interconnesso al sistema informativo aziendale o alla rete di fornitura. Realizziamo il collegamento e lo documentiamo; la valutazione finale spetta al tuo perito o consulente."),
+      ("Sono un perito o un consulente: come lavoriamo insieme?", 'Ruoli, documentazione per la perizia e modi di collaborare sono nella pagina <a href="periti-ingegneri-consulenti.html">per periti, ingegneri e consulenti</a>.'),
       ("Devo cambiare gestionale?", "No. I dati della macchina arrivano in un'applicazione dedicata e, dove serve, vengono passati al gestionale che usi già."),
       ("Modificate il programma della macchina?", "No. Leggiamo e scriviamo solo attraverso le interfacce previste dal costruttore. Il programma della macchina resta di chi l'ha fatto."),
       ("Con quali macchine funziona?", "Con qualsiasi macchina, di qualsiasi marca: se ha un'interfaccia (OPC UA, MTConnect, PLC, Modbus, interfaccia web o porta seriale) la usiamo; se non ce l'ha aggiungiamo sensori e contatori. In produzione abbiamo già macchine SCM con Maestro Active ed Essetre/Tecnoessetre. Prima del preventivo verifichiamo cosa offre la tua."),

@@ -8,6 +8,7 @@ PRODUCTS = runpy.run_path(str(pathlib.Path(__file__).with_name("content_products
 AREAS_DATA = runpy.run_path(str(pathlib.Path(__file__).with_name("content_areas.py")))
 STATS = runpy.run_path(str(pathlib.Path(__file__).with_name("content_stats.py")))["STATS"]
 LEGAL_DATA = runpy.run_path(str(pathlib.Path(__file__).with_name("content_legal.py")))
+PARTNERS = runpy.run_path(str(pathlib.Path(__file__).with_name("content_partners.py")))["PARTNERS"]
 
 
 def stats_html(key, lang):
@@ -316,6 +317,7 @@ def footer(lang="it"):
     if lang == "it":
         links += '<a href="guide.html">Guide</a>'
         links += f'<a href="{WHERE_PAGE["slug"]}">{WHERE_PAGE["nav"]}</a>'
+        links += f'<a href="{PARTNERS["slug"]}">{PARTNERS["nav"]}</a>'
     links += f'<a href="{ABOUT[lang]["slug"]}">{ABOUT[lang]["nav"]}</a>'
     services = "".join(f'<a href="{p["href"]}">{p["card_title"]}</a>' for p in pages_for(lang))
     if lang == "it":
@@ -1190,6 +1192,73 @@ def redirect_stub(target):
 """
 
 
+# ---------------------------------------------------------------- periti, ingegneri e consulenti
+
+def partners_page():
+    d = PARTNERS
+    who = "".join(f"<li>{x}</li>" for x in d["who"])
+    roles = "".join(f'<div class="competence-card competence-plain reveal"><h3>{h}</h3><ul>{"".join(f"<li>{i}</li>" for i in items)}</ul></div>'
+                    for h, items in d["roles"])
+    dossier = "".join(f"<li><strong>{a}</strong><span>{b}</span></li>" for a, b in d["dossier"])
+    models = "".join(f'<article class="tier reveal"><span class="competence-num">0{i}</span><h3>{h}</h3><p class="tier-who">{w}</p><p>{t}</p></article>'
+                     for i, (h, w, t) in enumerate(d["models"], 1))
+    rules = "".join(f"<li><strong>{a}</strong><span>{b}</span></li>" for a, b in d["rules"])
+    faq = "\n".join(f'<details class="faq-item"><summary>{q}</summary><p>{a}</p></details>' for q, a in d["faq"])
+    url = url_of(d["slug"])
+    jsonld = [{"@context": "https://schema.org", "@type": "WebPage", "name": d["nav"], "description": d["desc"], "url": url, "about": {"@id": ORG_ID}},
+              {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+                  {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in d["faq"]]},
+              {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+                  {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE},
+                  {"@type": "ListItem", "position": 2, "name": d["nav"], "item": url}]}, ORG_REF]
+    body = f"""{header(d['slug'])}<main id="main">
+<section class="hero page-hero">
+<div aria-hidden="true" class="hero-grid"></div>
+<div class="shell page-hero-copy reveal">
+<nav aria-label="Percorso" class="breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">{d['nav']}</span></nav>
+<p class="eyebrow">{d['eyebrow']}</p>
+<h1>{d['h1']}</h1>
+<p class="hero-lead">{d['lead']}</p>
+<ul class="who-chips">{who}</ul>
+<div class="hero-actions"><a class="button primary" href="#modi">Come collaborare</a><a class="button ghost" href="#contatto">Scriveteci</a></div>
+</div>
+</section>
+<section class="section section-tight section-white">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">Ruoli</p><h2>Ognuno fa la sua parte.</h2></div>
+<div class="partner-roles">{roles}</div>
+<p class="catalog-note">{d['roles_note']}</p>
+</div>
+</section>
+<section class="section section-tight section-paper">
+<div class="shell split">
+<div class="section-heading reveal"><p class="eyebrow">Per la perizia</p><h2>Cosa ricevete da noi.</h2><p>Per ogni macchina collegata consegniamo un fascicolo tecnico, pensato per chi deve verificare e attestare l'interconnessione.</p></div>
+<ol class="method-steps reveal">{dossier}</ol>
+</div>
+</section>
+<section class="section section-tight section-white" id="modi">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">Modello di collaborazione</p><h2>Tre modi di lavorare insieme.</h2></div>
+<div class="tier-grid">{models}</div>
+</div>
+</section>
+<section class="section section-tight section-paper">
+<div class="shell split">
+<div class="section-heading reveal"><p class="eyebrow">Regole</p><h2>Chiare dall'inizio.</h2></div>
+<ul class="method-steps partner-rules reveal">{rules}</ul>
+</div>
+</section>
+<section class="section section-tight section-white">
+<div class="shell split">
+<div class="section-heading reveal"><p class="eyebrow">Domande frequenti</p><h2>Le risposte prima della domanda.</h2></div>
+<div class="faq reveal">{faq}</div>
+</div>
+</section>
+{contact("it", d["contact"])}</main>
+"""
+    return head(d["title"], d["desc"], d["slug"], jsonld) + body + footer()
+
+
 # ---------------------------------------------------------------- privacy e cookie
 
 def legal_page(kind, lang):
@@ -1535,6 +1604,7 @@ for _lang in ("it", "en"):
         write(_a["slug"], area_page(_a, _lang))
     write(PRODUCTS_PAGE[_lang]["slug"], products_index(_lang))
 write(WHERE_PAGE["slug"], where_page())
+write(PARTNERS["slug"], partners_page())
 for _lang in ("it", "en"):
     for _pr in PRODUCTS[_lang]:
         if not _pr.get("external"):
@@ -1549,7 +1619,7 @@ for old, target in OLD_URLS.items():
 
 urls = (["", "en.html"] + [p["slug"] for p in PAGES] + [EN_SLUG[p["slug"]] for p in PAGES]
         + [c["slug"] for c in CITIES] + ["guide.html", TEST["slug"]] + [g["slug"] for g in GUIDES]
-        + [x["slug"] for l in ("it", "en") for x in PRODUCTS[l] if not x.get("external")] + [a["slug"] for l in ("it", "en") for a in AREAS[l]] + [PRODUCTS_PAGE["it"]["slug"], PRODUCTS_PAGE["en"]["slug"], WHERE_PAGE["slug"]] + ["chi-sono.html", "en-about.html", "privacy.html", "privacy-en.html", "cookie-policy.html", "cookie-policy-en.html"])
+        + [x["slug"] for l in ("it", "en") for x in PRODUCTS[l] if not x.get("external")] + [a["slug"] for l in ("it", "en") for a in AREAS[l]] + [PRODUCTS_PAGE["it"]["slug"], PRODUCTS_PAGE["en"]["slug"], WHERE_PAGE["slug"], PARTNERS["slug"]] + ["chi-sono.html", "en-about.html", "privacy.html", "privacy-en.html", "cookie-policy.html", "cookie-policy-en.html"])
 sitemap = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 sitemap += [f"  <url><loc>{BASE}{u}</loc><lastmod>{TODAY}</lastmod></url>" for u in urls]
 sitemap.append("</urlset>")

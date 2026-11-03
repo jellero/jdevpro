@@ -383,3 +383,9 @@
 .why-band h2 span { color: var(--accent); }
 .why-copy { margin: 0; color: var(--ink-soft); font-size: 1.05rem; line-height: 1.65; }
 .why-partners { margin: 16px 0 0; padding-top: 14px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: .95rem; }
+/* Pagina per periti e consulenti */
+.partner-roles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.partner-roles ul { margin: 10px 0 0; padding-left: 18px; display: grid; gap: 8px; color: var(--ink-soft); }
+.tier-who { margin: 0 0 6px; color: var(--accent); font-size: .85rem; font-weight: 700; }
+.partner-rules li::before { content: "✓"; }
+@media (max-width: 760px) { .partner-roles { grid-template-columns: 1fr; } }

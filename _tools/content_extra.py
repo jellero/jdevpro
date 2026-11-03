@@ -161,7 +161,8 @@ GUIDES = [
        "comunicazione di completamento va inviata al GSE dopo l'interconnessione, entro il 15 novembre 2028. Caratteristiche e interconnessione sono attestate da una perizia tecnica asseverata.",
        "Una macchina consegnata ma non ancora collegata non permette di chiudere la pratica: il momento giusto per progettare l'interconnessione è prima della consegna."]),
      ('Storico e monitoraggio',
-      ['Teniamo uno storico degli scambi di dati e un monitoraggio che avvisa se una macchina smette di comunicare: servono al perito e servono a te per accorgerti subito di un problema.']),
+      ['Teniamo uno storico degli scambi di dati e un monitoraggio che avvisa se una macchina smette di comunicare: servono al perito e servono a te per accorgerti subito di un problema.',
+       'Sei un perito, un ingegnere o un consulente? <a href="periti-ingegneri-consulenti.html">Ecco come lavoriamo con voi</a>.']),
      ('E il software?',
       ["L'Allegato V della Legge di Bilancio 2026 elenca i beni immateriali agevolabili: software, sistemi e piattaforme, tra cui MES, SCADA, Industrial IoT, cybersecurity, cloud, digital twin, analisi "
        "dei dati, intelligenza artificiale e integrazione IT/OT. Anche per questi il decreto attuativo lega il completamento dell'investimento all'interconnessione.",

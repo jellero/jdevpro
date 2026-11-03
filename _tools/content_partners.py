@@ -1,0 +1,60 @@
+"""Pagina per periti, ingegneri, consulenti e installatori: ruoli, documentazione e modello di collaborazione."""
+
+PARTNERS = dict(
+  slug="periti-ingegneri-consulenti.html",
+  nav="Per periti e consulenti",
+  title="Per periti, ingegneri e consulenti 4.0 | JDEVPRO",
+  desc="Interconnessione macchine per l'iperammortamento: ruoli chiari, documentazione per la perizia e tre modi di collaborare con periti, ingegneri e consulenti.",
+  eyebrow="Per periti, ingegneri e consulenti",
+  h1="Voi attestate e consigliate. <span>Noi colleghiamo e documentiamo.</span>",
+  lead="Per l'iperammortamento 2026–2028 la macchina deve essere interconnessa e la perizia deve poterlo dimostrare. Ci occupiamo della parte tecnica e vi consegniamo la documentazione che serve; valutazione, firma e pratica restano vostre.",
+  who=["Periti industriali e ingegneri", "Commercialisti e consulenti fiscali", "Consulenti di finanza agevolata e 4.0", "Installatori elettrici", "Rivenditori e costruttori di macchine"],
+  roles=[
+    ("Cosa facciamo noi", [
+      "verifica della macchina e delle sue interfacce, prima del preventivo;",
+      "collegamento al sistema aziendale: commesse e file verso la macchina, stato, produzione e allarmi verso il gestionale;",
+      "collaudo con la macchina al lavoro, sui dati reali;",
+      "documentazione tecnica dell'interconnessione;",
+      "storico degli scambi e avviso se la macchina smette di comunicare.",
+    ]),
+    ("Cosa resta a voi", [
+      "<strong>perito o ingegnere</strong>: verifica dei requisiti e firma della perizia tecnica asseverata;",
+      "<strong>consulente o commercialista</strong>: ammissibilità, comunicazioni al GSE e pratica;",
+      "<strong>installatore abilitato</strong>: cablaggi e quadri secondo il DM 37/08;",
+      "<strong>rivenditore o costruttore</strong>: scelta, fornitura e messa in servizio della macchina.",
+    ]),
+  ],
+  roles_note="Non firmiamo perizie e non valutiamo l'ammissibilità all'agevolazione: così ognuno resta indipendente nel proprio ruolo.",
+  dossier=[
+    ("Macchina e interfacce", "Marca, modello, controllo e interfaccia usata: protocollo, versione e parametri di collegamento."),
+    ("Schema del collegamento", "Come la macchina è collegata alla rete e al sistema aziendale, con gli apparati coinvolti."),
+    ("Dati scambiati", "Cosa riceve la macchina, come commesse e file di lavoro, e cosa restituisce: stato, produzione, allarmi."),
+    ("Evidenze dello scambio", "Estratti dello storico con data e ora e schermate del gestionale con i dati arrivati dalla macchina."),
+    ("Date", "Data di completamento dell'interconnessione e del collaudo."),
+    ("Riferimento tecnico", "Chi ha eseguito il lavoro, disponibile per domande tecniche durante il sopralluogo."),
+  ],
+  models=[
+    ("Segnalazione", "Per periti, ingegneri e consulenti.",
+     "Ci indicate un'azienda con macchine da collegare, con il suo consenso. Rispondiamo entro 24 ore, verifichiamo la macchina e facciamo il preventivo direttamente al cliente. Voi restate il suo riferimento per perizia e pratica."),
+    ("Progetto congiunto", "Per chi segue lo stesso cliente.",
+     "Ognuno lavora per la propria parte e con il proprio incarico: voi la perizia, la consulenza o l'impianto, noi l'interconnessione. Sopralluogo insieme quando serve e un unico calendario."),
+    ("Subfornitura tecnica", "Per installatori, system integrator e rivenditori.",
+     "Eseguiamo il collegamento come vostri fornitori, con fattura a voi. Il cliente resta vostro e noi restiamo dietro le quinte."),
+  ],
+  rules=[
+    ("Nessuna provvigione a periti, ingegneri e consulenti", "Chi attesta l'interconnessione deve restare indipendente da chi la realizza."),
+    ("Non ci sostituiamo a voi", "Niente perizie, pratiche o impianti elettrici: ci occupiamo solo della parte tecnica."),
+    ("Tempi chiari", "Risposta entro 24 ore, verifica della macchina prima del preventivo, collegamento in pochi giorni se la macchina ha già un'interfaccia."),
+    ("Prezzi pubblicati", "Il cliente sa in anticipo quanto costa la parte tecnica: i prezzi di partenza sono sul sito."),
+    ("Riservatezza", "I dati del cliente servono solo al progetto; se serve firmiamo un accordo di riservatezza."),
+    ("Dove", "Sul posto in Friuli Venezia Giulia e Veneto, con trasferte dove serve; documentazione e assistenza anche da remoto."),
+  ],
+  faq=[
+    ("Firmate anche la perizia?", "No. La perizia tecnica asseverata la firma un ingegnere o un perito industriale iscritto all'albo, oppure un ente di certificazione accreditato. Noi realizziamo l'interconnessione e prepariamo la documentazione tecnica."),
+    ("Pagate una provvigione per le segnalazioni?", "Ai periti, agli ingegneri e ai consulenti no: chi attesta l'interconnessione deve restare indipendente da chi la realizza."),
+    ("Con quali macchine lavorate?", "Con macchine di qualsiasi marca, nuove o datate, con PLC o CNC: torni, centri di lavoro, laser, presse, macchine tessili e da stampa, riempitrici. Prima del preventivo verifichiamo le interfacce disponibili."),
+    ("La macchina non è ancora stata consegnata: conviene sentirci prima?", "Sì. Leggiamo l'offerta della macchina prima dell'ordine e diciamo cosa serve per il collegamento: è il modo più semplice per non arrivare alla perizia con una macchina che non comunica."),
+    ("Cosa succede se dopo la perizia la macchina smette di comunicare?", "Lo storico e il monitoraggio segnalano il problema; interveniamo su richiesta per ripristinare il collegamento."),
+  ],
+  contact=("Lavoriamo insieme?", "Scriveteci chi siete e che clienti seguite: entro 24 ore vi rispondiamo con come possiamo collaborare e cosa vi serve dalla nostra parte."),
+)
