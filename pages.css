@@ -47,6 +47,9 @@
 .problem-list strong { display: block; color: var(--ink); margin-bottom: 4px; }
 
 .outcome-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.outcome-grid.outcome-grid-4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 1180px) { .outcome-grid.outcome-grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .outcome-grid.outcome-grid-4 { grid-template-columns: 1fr; } }
 .outcome { padding: 24px; border-radius: 18px; background: #fff; border: 1px solid var(--line); }
 .outcome h3 { margin: 0 0 8px; font-size: 1.05rem; }
 .outcome p { margin: 0; color: var(--ink-soft); font-size: .9rem; }

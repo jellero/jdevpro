@@ -1422,7 +1422,7 @@ def product_block(b, bg):
         return f"""<section class="section section-tight {bg}">
 <div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">{eyebrow}</p><h2>{h2}</h2>{intro_html}</div>
-<div class="outcome-grid">{cards}</div>
+<div class="outcome-grid{' outcome-grid-4' if len(items) == 4 else ''}">{cards}</div>
 </div>
 </section>
 """
