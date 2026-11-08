@@ -10,11 +10,11 @@ PRODUCTS = {
     dict(
       key="smartagent", slug="smartagent.html", nav="SmartAgent",
       title="SmartAgent: il gestionale per chi lavora con i clienti, da 29,90 € al mese | JDEVPRO",
-      desc="SmartAgent riunisce clienti, mail e PEC, agenda con giro visite e traffico, pratiche, preventivi, fatture, documenti e note spese. Per agenti, periti, studi tecnici, manutentori e avvocati. Da 29,90 € al mese.",
-      card="Disponibile ora: clienti, mail, agenda con giro visite, pratiche, preventivi, fatture e documenti in un'unica app che si aggiorna da sola. Per agenti, periti, studi tecnici e manutentori, da 29,90 € al mese.",
+      desc="SmartAgent riunisce clienti, mail e PEC, agenda con giro visite e traffico, pratiche, preventivi, fatture, documenti, note spese e, a breve, archivio e backup dei file del PC con SmartAgent Drive. Per agenti, periti, studi tecnici, manutentori e avvocati. Da 29,90 € al mese.",
+      card="Disponibile ora: clienti, mail, agenda con giro visite, pratiche, preventivi, fatture e documenti in un'unica app che si aggiorna da sola. A breve Drive, archivio e backup dei file del PC. Da 29,90 € al mese.",
       eyebrow="Prodotto · Gestionale per professionisti e agenti",
       h1="SmartAgent: meno tempo in ufficio, <span>più tempo dai clienti.</span>",
-      lead="SmartAgent riunisce clienti, mail, appuntamenti, giro visite, pratiche, preventivi, fatture, documenti e spese in un'unica app che si aggiorna da sola. Colleghi posta, calendario e rubrica che usi già: le mail vanno nella scheda giusta, la giornata si organizza sulla mappa e il lavoro fatto diventa preventivo, fattura e rimborso senza ricopiare niente.",
+      lead="SmartAgent riunisce clienti, mail, appuntamenti, giro visite, pratiche, preventivi, fatture, documenti e spese in un'unica app che si aggiorna da sola. Colleghi posta, calendario e rubrica che usi già: le mail vanno nella scheda giusta, la giornata si organizza sulla mappa e il lavoro fatto diventa preventivo, fattura e rimborso senza ricopiare niente. A breve SmartAgent Drive: archivio e backup dei file del PC, già divisi per cliente.",
       links=[("Scopri SmartAgent ↗", "https://smartagent.jdevpro.it/index.php?r=landing"), ("Prova gratis 30 giorni ↗", "https://smartagent.jdevpro.it/index.php?r=register")],
       blocks=[
         ("cards", "Il problema", "Il lavoro è dai clienti, ma il tempo se ne va a organizzarlo.", "", [
@@ -45,6 +45,19 @@ PRODUCTS = {
           ("Consulenti sicurezza", "Ispezioni, non conformità e corsi di formazione con attestati in scadenza."),
           ("Avvocati", "Fascicoli, udienze, aiuto al calcolo dei termini e fascicoli riservati."),
         ]),
+        ("flow", "SmartAgent Drive · a breve", "Archivio e backup dei file del tuo PC, già divisi per cliente.", [
+          ("Crei il cliente", "Sul PC o sul Mac compare la sua cartella, nel Finder e in Esplora file, con una cartella per ogni pratica."),
+          ("Salvi un file", "Va subito sul server ed è nella scheda del cliente, per te e per i colleghi che lo seguono."),
+          ("Arriva una mail", "L'allegato del cliente finisce da solo nella sua cartella, direttamente sul computer."),
+          ("Carichi dal telefono", "Il documento caricato nella scheda lo ritrovi nella cartella sul computer, senza scaricare niente."),
+          ("Lavori come sempre", "Apri i file con AutoCAD, Word o Excel: salvi e la nuova versione arriva nella pratica."),
+        ]),
+        ("cards", "Backup e sicurezza", "I tuoi file al sicuro, anche a PC spento.", "Drive è insieme archivio e backup: ogni file è sul server e nel gestionale, raggiungibile da telefono e da un altro computer anche quando il tuo è spento.", [
+          ("Backup continuo", "Ogni file salvato nelle cartelle è copiato sul server mentre lavori. Niente chiavette o dischi esterni da ricordare."),
+          ("Storico e recupero", "Ogni salvataggio è una versione: torni a quella di ieri o di un mese fa quando vuoi."),
+          ("Virus e ransomware", "Se il PC viene colpito, le versioni precedenti restano sul server e il computer non le può cancellare."),
+          ("PC rotto, perso o rubato", "Lo scolleghi dal profilo e sul computer nuovo ritrovi tutto. Intanto i file sono nel gestionale, anche dal telefono."),
+        ]),
         ("figure", "La giornata", "Clienti di oggi in ordine sulla mappa, con l'ora per partire.",
          "assets/smartagent-giornata.webp",
          "La giornata in SmartAgent con il percorso tra i clienti sulla mappa e la prossima tappa",
@@ -66,9 +79,15 @@ PRODUCTS = {
           ("Studio · fino a 3 utenti", "49,90 € al mese", "Tutte le funzioni, per lavorare in squadra"),
           ("Studio Plus · fino a 6 utenti", "79,90 € al mese", "Tutte le funzioni, per studi più grandi"),
         ], "Prezzi IVA esclusa."),
+        ("prices", "Spazio SmartAgent Drive", "Scegli lo spazio che ti serve.", "Si aggiunge a qualunque piano SmartAgent. Disponibile a breve.", [
+          ("100 GB · per iniziare", "2,90 € al mese", "Documenti e foto di un professionista"),
+          ("500 GB · per il professionista", "5,90 € al mese", "Archivio completo di anni di lavoro"),
+          ("1 TB · per progetti CAD", "9,90 € al mese", "Tavole, modelli e rilievi"),
+          ("2 TB · per studi con molti file", "17,90 € al mese", "Studi con più persone e molti progetti"),
+        ], "Prezzi IVA esclusa."),
         ("status", "Stato e prossime novità", "Disponibile ora, con nuove funzioni in arrivo.", [
           "Disponibile ora, con 30 giorni di prova gratuita senza carta di credito",
-          "A breve SmartAgent Drive: archivio e backup dei file del PC, con le cartelle dei clienti nel Finder e in Esplora file (spazio da 2,90 € al mese)",
+          "A breve SmartAgent Drive: archivio e backup dei file del PC, divisi per cliente",
           "A breve la firma digitale: firmi con la tua firma remota e i clienti firmano dal telefono",
           "Database separato per ogni attività, verifica in due passaggi e dati sempre esportabili",
         ], "Le funzioni «a breve» non sono ancora disponibili."),
@@ -317,11 +336,11 @@ PRODUCTS = {
     dict(
       key="smartagent", slug="en-smartagent.html", nav="SmartAgent",
       title="SmartAgent: CRM for professionals who work with clients, from €29.90/month | JDEVPRO",
-      desc="SmartAgent brings clients, email and certified email, calendar with route planning and traffic, cases, quotes, invoices, documents and expenses together. For sales agents, surveyors, engineering firms and maintenance companies. From €29.90/month.",
-      card="Available now: clients, email, calendar with route planning, cases, quotes, invoices and documents in one app that keeps itself up to date. For sales agents, surveyors, technical firms and maintenance companies, from €29.90 a month.",
+      desc="SmartAgent brings clients, email and certified email, calendar with route planning and traffic, cases, quotes, invoices, documents, expenses and, coming soon, PC file storage and backup with SmartAgent Drive together. For sales agents, surveyors, engineering firms and maintenance companies. From €29.90/month.",
+      card="Available now: clients, email, calendar with route planning, cases, quotes, invoices and documents in one app that keeps itself up to date. Coming soon: Drive, storage and backup for your PC files. From €29.90 a month.",
       eyebrow="Product · Management software for professionals and agents",
       h1="SmartAgent: less time in the office, <span>more time with clients.</span>",
-      lead="SmartAgent brings clients, email, appointments, route planning, cases, quotes, invoices, documents and expenses into one app that keeps itself up to date. Connect the email, calendar and contacts you already use: emails land in the right client record, your day is planned on a map, and finished work becomes a quote, an invoice and a mileage claim without retyping. The app is in Italian.",
+      lead="SmartAgent brings clients, email, appointments, route planning, cases, quotes, invoices, documents and expenses into one app that keeps itself up to date. Connect the email, calendar and contacts you already use: emails land in the right client record, your day is planned on a map, and finished work becomes a quote, an invoice and a mileage claim without retyping. Coming soon, SmartAgent Drive: storage and backup for your PC files, already sorted by client. The app is in Italian.",
       links=[("Discover SmartAgent ↗", "https://smartagent.jdevpro.it/index.php?r=landing"), ("30-day free trial ↗", "https://smartagent.jdevpro.it/index.php?r=register")],
       blocks=[
         ("cards", "The problem", "Your work is with clients, but organising it eats your time.", "", [
@@ -352,6 +371,19 @@ PRODUCTS = {
           ("Safety consultants", "Inspections, non-conformities and training courses with expiring certificates."),
           ("Lawyers", "Files, hearings, help with deadline calculation and private files."),
         ]),
+        ("flow", "SmartAgent Drive · coming soon", "Storage and backup for your PC files, already sorted by client.", [
+          ("Create the client", "Their folder appears on your PC or Mac, in Finder and File Explorer, with a folder for each case."),
+          ("Save a file", "It goes straight to the server and into the client record, for you and the colleagues who follow them."),
+          ("An email arrives", "The client's attachment lands in their folder by itself, right on your computer."),
+          ("Upload from your phone", "A document uploaded to the record shows up in the folder on your computer, with nothing to download."),
+          ("Work as usual", "Open files with AutoCAD, Word or Excel: save, and the new version goes into the case."),
+        ]),
+        ("cards", "Backup and security", "Your files safe, even with the PC switched off.", "Drive is storage and backup in one: every file is on the server and in the app, reachable from your phone or another computer even when yours is off.", [
+          ("Continuous backup", "Every file saved in the folders is copied to the server while you work. No USB sticks or external drives to remember."),
+          ("History and recovery", "Every save is a version: go back to yesterday's or last month's whenever you want."),
+          ("Viruses and ransomware", "If the PC is hit, previous versions stay on the server and the computer cannot delete them."),
+          ("Broken, lost or stolen PC", "Disconnect it from your profile and find everything on the new computer. Meanwhile your files are in the app, on your phone too."),
+        ]),
         ("figure", "The day", "Today's clients in order on the map, with the time to leave.",
          "assets/smartagent-giornata.webp",
          "The day in SmartAgent with the route between clients on the map and the next stop",
@@ -373,9 +405,15 @@ PRODUCTS = {
           ("Studio · up to 3 users", "€49.90 a month", "All features, for working as a team"),
           ("Studio Plus · up to 6 users", "€79.90 a month", "All features, for larger firms"),
         ], "Prices exclude VAT."),
+        ("prices", "SmartAgent Drive storage", "Choose the space you need.", "Added to any SmartAgent plan. Coming soon.", [
+          ("100 GB · to get started", "€2.90 a month", "A professional's documents and photos"),
+          ("500 GB · for professionals", "€5.90 a month", "A complete archive of years of work"),
+          ("1 TB · for CAD projects", "€9.90 a month", "Drawings, models and surveys"),
+          ("2 TB · for firms with many files", "€17.90 a month", "Firms with several people and many projects"),
+        ], "Prices exclude VAT."),
         ("status", "Status and what's next", "Available now, with new features on the way.", [
           "Available now, with a 30-day free trial and no credit card",
-          "Coming soon SmartAgent Drive: file storage and backup for your PC, with client folders in Finder and File Explorer (storage from €2.90 a month)",
+          "Coming soon SmartAgent Drive: storage and backup for your PC files, sorted by client",
           "Coming soon digital signatures: sign with your remote digital signature, clients sign from their phone",
           "Separate database for each business, two-step verification and data always exportable",
         ], "\"Coming soon\" features are not available yet."),
