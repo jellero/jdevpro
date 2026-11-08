@@ -1566,9 +1566,9 @@ def product_page(pr, lang):
 
 def products_home(lang):
     if lang == "it":
-        e, h, p = "Prodotti e ricerca", "Non solo progetti per i clienti.", "Tre progetti nostri."
+        e, h, p = "Prodotti e ricerca", "Non solo progetti per i clienti.", "Prodotti nostri, in uso e in sviluppo."
     else:
-        e, h, p = "Products and research", "Not only client projects.", "Three projects of our own."
+        e, h, p = "Products and research", "Not only client projects.", "Our own products, in use and in development."
     cards = "".join(f'<a class="product-card product-card-{x["key"]} reveal" href="{x["slug"]}"{ext(x["slug"])}><span class="eyebrow">{x["eyebrow"]}</span>'
                     f'<strong>{x["nav"]}</strong><span class="product-card-text">{x["card"]}</span><span class="competence-more">{(x["slug"].split("//")[1].rstrip("/") + " ↗") if x.get("external") else UI[lang]["more"]}</span></a>'
                     for x in PRODUCTS[lang])
