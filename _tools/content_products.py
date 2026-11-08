@@ -8,14 +8,14 @@ Blocchi: ("cards", eyebrow, h2, intro, [(titolo, testo)]), ("flow", eyebrow, h2,
 PRODUCTS = {
   "it": [
     dict(
-      key="smartagent", slug="smartagent.html", nav="SmartAgent",
+      key="smartagent", slug="smartagent.html", site="https://smartagent.jdevpro.it/", nav="SmartAgent",
       title="SmartAgent: il gestionale per chi lavora con i clienti, da 29,90 € al mese | JDEVPRO",
       desc="SmartAgent riunisce clienti, mail e PEC, agenda con giro visite e traffico, pratiche, preventivi, fatture, documenti, note spese e, a breve, archivio e backup dei file del PC con SmartAgent Drive. Per agenti, periti, studi tecnici, manutentori e avvocati. Da 29,90 € al mese.",
       card="Disponibile ora: clienti, mail, agenda con giro visite, pratiche, preventivi, fatture e documenti in un'unica app che si aggiorna da sola. A breve Drive, archivio e backup dei file del PC. Da 29,90 € al mese.",
       eyebrow="Prodotto · Gestionale per professionisti e agenti",
       h1="SmartAgent: meno tempo in ufficio, <span>più tempo dai clienti.</span>",
       lead="SmartAgent riunisce clienti, mail, appuntamenti, giro visite, pratiche, preventivi, fatture, documenti e spese in un'unica app che si aggiorna da sola. Colleghi posta, calendario e rubrica che usi già: le mail vanno nella scheda giusta, la giornata si organizza sulla mappa e il lavoro fatto diventa preventivo, fattura e rimborso senza ricopiare niente. A breve SmartAgent Drive: archivio e backup dei file del PC, già divisi per cliente.",
-      links=[("Scopri SmartAgent ↗", "https://smartagent.jdevpro.it/index.php?r=landing"), ("Prova gratis 30 giorni ↗", "https://smartagent.jdevpro.it/index.php?r=register")],
+      links=[("Vai su smartagent.jdevpro.it ↗", "https://smartagent.jdevpro.it/"), ("Prova gratis 30 giorni ↗", "https://smartagent.jdevpro.it/index.php?r=register")],
       blocks=[
         ("cards", "Il problema", "Il lavoro è dai clienti, ma il tempo se ne va a organizzarlo.", "", [
           ("Informazioni sparse", "Mail, agenda, rubrica del telefono, Excel e foglietti: per sapere a che punto sei con un cliente devi cercare in cinque posti."),
@@ -85,6 +85,10 @@ PRODUCTS = {
           ("1 TB · per progetti CAD", "9,90 € al mese", "Tavole, modelli e rilievi"),
           ("2 TB · per studi con molti file", "17,90 € al mese", "Studi con più persone e molti progetti"),
         ], "Prezzi IVA esclusa."),
+        ("split", "Il sito di SmartAgent", "Tutto il resto è su smartagent.jdevpro.it.", [
+          "Su <a href='https://smartagent.jdevpro.it/' target='_blank' rel='noreferrer'>smartagent.jdevpro.it</a> trovi la presentazione completa con le schermate, i mestieri, SmartAgent Drive, la firma digitale e i prezzi.",
+          "Da lì attivi la prova gratuita di 30 giorni in due minuti: niente carta di credito, niente da installare.",
+        ], ["Presentazione completa", "Prova gratuita 30 giorni", "Accesso per chi è già cliente"]),
         ("status", "Stato e prossime novità", "Disponibile ora, con nuove funzioni in arrivo.", [
           "Disponibile ora, con 30 giorni di prova gratuita senza carta di credito",
           "A breve SmartAgent Drive: archivio e backup dei file del PC, divisi per cliente",
@@ -334,14 +338,14 @@ PRODUCTS = {
   ],
   "en": [
     dict(
-      key="smartagent", slug="en-smartagent.html", nav="SmartAgent",
+      key="smartagent", slug="en-smartagent.html", site="https://smartagent.jdevpro.it/", nav="SmartAgent",
       title="SmartAgent: CRM for professionals who work with clients, from €29.90/month | JDEVPRO",
       desc="SmartAgent brings clients, email and certified email, calendar with route planning and traffic, cases, quotes, invoices, documents, expenses and, coming soon, PC file storage and backup with SmartAgent Drive together. For sales agents, surveyors, engineering firms and maintenance companies. From €29.90/month.",
       card="Available now: clients, email, calendar with route planning, cases, quotes, invoices and documents in one app that keeps itself up to date. Coming soon: Drive, storage and backup for your PC files. From €29.90 a month.",
       eyebrow="Product · Management software for professionals and agents",
       h1="SmartAgent: less time in the office, <span>more time with clients.</span>",
       lead="SmartAgent brings clients, email, appointments, route planning, cases, quotes, invoices, documents and expenses into one app that keeps itself up to date. Connect the email, calendar and contacts you already use: emails land in the right client record, your day is planned on a map, and finished work becomes a quote, an invoice and a mileage claim without retyping. Coming soon, SmartAgent Drive: storage and backup for your PC files, already sorted by client. The app is in Italian.",
-      links=[("Discover SmartAgent ↗", "https://smartagent.jdevpro.it/index.php?r=landing"), ("30-day free trial ↗", "https://smartagent.jdevpro.it/index.php?r=register")],
+      links=[("Go to smartagent.jdevpro.it ↗", "https://smartagent.jdevpro.it/"), ("30-day free trial ↗", "https://smartagent.jdevpro.it/index.php?r=register")],
       blocks=[
         ("cards", "The problem", "Your work is with clients, but organising it eats your time.", "", [
           ("Scattered information", "Email, calendar, phone contacts, spreadsheets and notes: to know where you stand with a client you search five places."),
@@ -411,6 +415,10 @@ PRODUCTS = {
           ("1 TB · for CAD projects", "€9.90 a month", "Drawings, models and surveys"),
           ("2 TB · for firms with many files", "€17.90 a month", "Firms with several people and many projects"),
         ], "Prices exclude VAT."),
+        ("split", "The SmartAgent website", "Everything else is on smartagent.jdevpro.it.", [
+          "On <a href='https://smartagent.jdevpro.it/' target='_blank' rel='noreferrer'>smartagent.jdevpro.it</a> you find the full presentation (in Italian) with screenshots, trades, SmartAgent Drive, digital signatures and pricing.",
+          "From there you start the 30-day free trial in two minutes: no credit card, nothing to install.",
+        ], ["Full presentation", "30-day free trial", "Sign-in for existing customers"]),
         ("status", "Status and what's next", "Available now, with new features on the way.", [
           "Available now, with a 30-day free trial and no credit card",
           "Coming soon SmartAgent Drive: storage and backup for your PC files, sorted by client",

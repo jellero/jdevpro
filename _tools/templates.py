@@ -626,7 +626,7 @@ def products_index(lang):
         label = x["slug"].split("//")[1].rstrip("/") + " ↗" if x.get("external") else u["more"]
         rows += f"""<article class="product-row product-card-{x['key']} reveal">
 <div><p class="eyebrow">{x['eyebrow']}</p><h2>{x['nav']}</h2><p class="product-card-text">{x['card']}</p>
-<a class="button primary" href="{x['slug']}"{ext(x['slug'])}>{label}</a></div>
+<a class="button primary" href="{x['slug']}"{ext(x['slug'])}>{label}</a>{(' <a class="button ghost" href="' + x['site'] + '" target="_blank" rel="noreferrer">' + x['site'].split('//')[1].rstrip('/') + ' ↗</a>') if x.get('site') else ''}</div>
 <div class="product-side">{(lambda s: f'<img class="product-thumb" src="{s[0]}" alt="{s[3]}" width="{s[1]}" height="{s[2]}" loading="lazy" decoding="async">' if s else '')(PRODUCT_SHOTS.get(x["key"]))}<ul class="status-list">{pts}</ul></div>
 </article>
 """
