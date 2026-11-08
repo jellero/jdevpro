@@ -128,8 +128,8 @@ PRODUCTS_PAGE = {
 
 WHERE_PAGE = dict(slug="dove-lavoriamo.html", nav="Dove lavoriamo",
                   title="Dove lavoriamo: Friuli Venezia Giulia e Veneto | JDEVPRO",
-                  desc="JDEVPRO lavora da Tolmezzo con aziende e strutture della provincia di Udine e della Carnia, di Pordenone, Trieste e Gorizia, del Veneto e da remoto.",
-                  eyebrow="Dove lavoriamo", h1="Da Tolmezzo, <span>in tutto il Friuli Venezia Giulia.</span>",
+                  desc="JDEVPRO lavora in Friuli Venezia Giulia con aziende e strutture della provincia di Udine e della Carnia, di Pordenone, Trieste e Gorizia, del Veneto e da remoto.",
+                  eyebrow="Dove lavoriamo", h1="In tutto il Friuli Venezia Giulia, <span>e da remoto ovunque.</span>",
                   lead="Lavoriamo con aziende e strutture di tutta la regione e del Veneto. Veniamo sul posto per analisi, sopralluoghi e collaudi; sviluppo e assistenza li seguiamo anche da remoto.")
 
 CALLOUTS = {

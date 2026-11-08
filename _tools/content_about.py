@@ -4,8 +4,8 @@ ABOUT = {
   "it": dict(
     slug="chi-sono.html", nav="Chi sono",
     title="Chi sono: Jacopo Ellero, sviluppatore e integratore | JDEVPRO",
-    desc="Jacopo Ellero, Tolmezzo (UD): sviluppatore e integratore. Collego macchine e impianti ai gestionali per l'interconnessione 4.0 e l'iperammortamento.",
-    eyebrow="Chi sono · Tolmezzo (UD)",
+    desc="Jacopo Ellero, Friuli Venezia Giulia: sviluppatore e integratore. Collego macchine e impianti ai gestionali per l'interconnessione 4.0 e l'iperammortamento.",
+    eyebrow="Chi sono · Friuli Venezia Giulia",
     h1="Jacopo Ellero. <span>Dal codice al campo.</span>",
     lead="Sono uno sviluppatore e integratore di sistemi. Lavoro tra software, dati, macchine e infrastruttura: progetto API e gestionali, collego dispositivi e impianti, seguo i sistemi in produzione. E quando serve vado sul campo, in officina e negli impianti, con la formazione per farlo in sicurezza.",
     profile=[
@@ -55,8 +55,8 @@ ABOUT = {
   "en": dict(
     slug="en-about.html", nav="About",
     title="About: Jacopo Ellero, developer and integrator | JDEVPRO",
-    desc="Jacopo Ellero, Tolmezzo, Italy: developer and systems integrator. I connect machines and plants to business software for Industry 4.0 interconnection.",
-    eyebrow="About · Tolmezzo, Italy",
+    desc="Jacopo Ellero, Friuli Venezia Giulia, Italy: developer and systems integrator. I connect machines and plants to business software for Industry 4.0 interconnection.",
+    eyebrow="About · Friuli Venezia Giulia, Italy",
     h1="Jacopo Ellero. <span>From code to the field.</span>",
     lead="I'm a software developer and systems integrator. I work across software, data, machines and infrastructure: I design APIs and business software, connect devices and installations, and look after systems in production. When needed I go on site, to workshops and installations, trained to do it safely.",
     profile=[

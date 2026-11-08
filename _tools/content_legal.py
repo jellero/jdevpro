@@ -14,7 +14,7 @@ LEGAL = {
       lead="Il sito non ha moduli, account o profilazione. Trattiamo i dati che ci invii quando ci contatti e, solo con il tuo consenso, statistiche anonime di visita.",
       sections=[
         ("Titolare del trattamento",
-         [f"Jacopo Ellero, titolare dell'attività JDEVPRO, Tolmezzo (UD), P.IVA IT02783420306. Per qualsiasi richiesta sui dati personali: {MAIL}."]),
+         [f"Jacopo Ellero, titolare dell'attività JDEVPRO, sede in Via Capoluogo 18/A, 33029 Lauco (UD), P.IVA IT02783420306. Per qualsiasi richiesta sui dati personali: {MAIL}."]),
         ("Quali dati trattiamo",
          [["<strong>Dati che ci invii</strong>: nome, contatti e contenuto del messaggio quando ci scrivi via email, WhatsApp o LinkedIn;",
            "<strong>Dati tecnici di navigazione</strong>: il server che ospita il sito registra in automatico indirizzo IP, data e ora, pagina richiesta e browser, per farlo funzionare e proteggerlo;",
@@ -52,7 +52,7 @@ LEGAL = {
       lead="The site has no forms, accounts or profiling. We process the data you send when you contact us and, only with your consent, anonymous visit statistics.",
       sections=[
         ("Data controller",
-         [f"Jacopo Ellero, owner of the JDEVPRO business, Tolmezzo (UD), Italy, VAT IT02783420306. For any request about personal data: {MAIL}."]),
+         [f"Jacopo Ellero, owner of the JDEVPRO business, registered office Via Capoluogo 18/A, 33029 Lauco (UD), Italy, VAT IT02783420306. For any request about personal data: {MAIL}."]),
         ("What data we process",
          [["<strong>Data you send us</strong>: name, contact details and message content when you write by email, WhatsApp or LinkedIn;",
            "<strong>Technical browsing data</strong>: the server hosting the site automatically logs IP address, date and time, requested page and browser, to run and protect it;",

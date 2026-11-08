@@ -56,8 +56,8 @@ CITIES = [
     slug="software-gestionali-integrazioni-udine.html",
     name="Udine", area="provincia di Udine e Carnia", area_title="Provincia di Udine e Carnia",
     title="Software, gestionali e integrazioni a Udine | JDEVPRO",
-    desc="Gestionali su misura, interconnessione macchine 4.0, IoT e integrazioni per aziende della provincia di Udine e della Carnia. Base a Tolmezzo.",
-    lead="Lavoriamo da Tolmezzo con aziende della provincia di Udine e della Carnia: gestionali su misura, macchine collegate al gestionale, sensori, integrazioni tra programmi, automazione per hotel e B&B. Veniamo in azienda per l'analisi e seguiamo il resto anche da remoto.",
+    desc="Gestionali su misura, interconnessione macchine 4.0, IoT e integrazioni per aziende della provincia di Udine e della Carnia.",
+    lead="Lavoriamo con aziende della provincia di Udine e della Carnia: gestionali su misura, macchine collegate al gestionale, sensori, integrazioni tra programmi, automazione per hotel e B&B. Veniamo in azienda per l'analisi e seguiamo il resto anche da remoto.",
     sectors=[
       ("Meccanica, stamperie e metalmeccanica", "Macchine collegate al gestionale, commesse, tempi e costi reali, interconnessione per l'iperammortamento. Abbiamo già collegato decine di macchine."),
       ("Distretto della sedia e legno-arredo", "Bordatrici, centri di lavoro e linee collegati; commesse, materiali e consuntivi per ordine."),
@@ -67,7 +67,7 @@ CITIES = [
       ("Baite, rifugi e siti isolati", "Internet via 4G/5G o satellite, energia solare, telecamere e sensori controllabili da remoto."),
     ],
     faq=[
-      ("Venite in azienda?", "Sì. Abbiamo base a Tolmezzo e in provincia di Udine facciamo analisi e collaudi in azienda; sviluppo e assistenza li seguiamo anche da remoto."),
+      ("Venite in azienda?", "Sì. In provincia di Udine facciamo analisi e collaudi in azienda; sviluppo e assistenza li seguiamo anche da remoto."),
       ("Lavorate anche con aziende piccole?", "Sì. Lavoriamo soprattutto con piccole e medie imprese, a fasi e a prezzo fisso."),
       ("Quanto tempo serve per partire?", "Dopo la prima analisi la parte più utile è pronta in poche settimane; il collegamento di una macchina con interfacce documentate richiede pochi giorni."),
     ],

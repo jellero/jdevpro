@@ -88,8 +88,8 @@ UI = {
              c_steps='<li><strong>Scrivici</strong> i sistemi presenti e l\'obiettivo, anche in poche righe.</li><li><strong>Ti rispondiamo entro 24 ore</strong> con domande mirate o una proposta di incontro.</li><li><strong>Definiamo</strong> insieme perimetro, tempi e modalità di lavoro.</li>',
              c_steps_label="Come funziona", c_mail="Scrivici una email", copy="Copia", copied="Copiato ✓",
              wa="Scrivici su WhatsApp ↗",
-             li="Oppure su LinkedIn ↗", where="Tolmezzo (UD) · Friuli Venezia Giulia e Veneto · trasferte · da remoto ovunque",
-             f_who="Jacopo Ellero · Tolmezzo (UD)", f_legal="JDEVPRO di Jacopo Ellero · Sede: Via Capoluogo 25/A, 33029 Lauco (UD) · Operiamo da Tolmezzo · P.IVA IT02783420306", privacy="privacy.html", cookie="cookie-policy.html",
+             li="Oppure su LinkedIn ↗", where="Friuli Venezia Giulia e Veneto · trasferte · da remoto ovunque",
+             f_who="Jacopo Ellero · Friuli Venezia Giulia", f_legal="JDEVPRO di Jacopo Ellero · Friuli Venezia Giulia · P.IVA IT02783420306", privacy="privacy.html", cookie="cookie-policy.html",
              mailto=MAILTO, wa_url=WA),
   "en": dict(lang="en", locale="en_GB", skip="Skip to content", menu="Open menu", navlabel="Main navigation",
              contact="Contact", guides="Guides", home="Home", crumbs="Breadcrumb", more="Learn more →",
@@ -109,8 +109,8 @@ UI = {
              c_steps="<li><strong>Write to us</strong> about your current systems and goal, even in a few lines.</li><li><strong>We reply within 24 hours</strong> with focused questions or a proposal for a meeting.</li><li><strong>We define</strong> scope, timeline and way of working together.</li>",
              c_steps_label="How it works", c_mail="Send us an email", copy="Copy", copied="Copied ✓",
              wa="Message us on WhatsApp ↗",
-             li="Or on LinkedIn ↗", where="Tolmezzo (Udine), Italy · north-east Italy · travel · remote work anywhere",
-             f_who="Jacopo Ellero · Tolmezzo, Italy", f_legal="JDEVPRO by Jacopo Ellero · Registered office: Via Capoluogo 25/A, 33029 Lauco (UD), Italy · Based in Tolmezzo · VAT IT02783420306", privacy="privacy-en.html", cookie="cookie-policy-en.html",
+             li="Or on LinkedIn ↗", where="Friuli Venezia Giulia, Italy · north-east Italy · travel · remote work anywhere",
+             f_who="Jacopo Ellero · Friuli Venezia Giulia, Italy", f_legal="JDEVPRO by Jacopo Ellero · Friuli Venezia Giulia, Italy · VAT IT02783420306", privacy="privacy-en.html", cookie="cookie-policy-en.html",
              mailto=MAILTO_EN, wa_url=WA_EN),
 }
 
@@ -156,8 +156,7 @@ PRICE_EN = {"Collegamento di una macchina": "Connecting one machine", "Dati macc
             "Camera o zona configurata": "Room or zone set up",
             "per camera o zona · dispositivi esclusi": "per room or zone · devices excluded"}
 
-ADDRESS = {"@type": "PostalAddress", "addressLocality": "Tolmezzo", "postalCode": "33028", "addressRegion": "UD",
-           "addressCountry": "IT"}
+ADDRESS = {"@type": "PostalAddress", "addressRegion": "Friuli Venezia Giulia", "addressCountry": "IT"}
 
 ORG = {
   "@context": "https://schema.org", "@type": "ProfessionalService", "@id": ORG_ID, "name": "JDEVPRO",
