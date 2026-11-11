@@ -33,7 +33,6 @@ CONTENT = {
         "nano_warning": "NanoDrive mantiene i dati in locale: l'accesso da remoto non equivale a una seconda copia di backup. Per protezione contro guasti e furto serve anche una copia separata.",
         "nano_price": "50 €", "nano_price_label": "Hardware + primi 12 mesi di servizio", "nano_renewal": "Poi 2 €/mese · prezzo di lancio previsto",
         "nano_hw_title": "NanoDrive — specifiche tecniche",
-        "nano_hw_note": "Configurazione e compatibilità definitive da verificare sul prototipo. Le versioni 1 e 2 GB sono alternative; il modulo eMMC è opzionale.",
         "nano_specs": ["Rockchip RK3528A quad-core", "RAM LPDDR4X da 1 o 2 GB", "Porta Gigabit Ethernet", "USB 3.0 e USB-C", "Supporto modulo eMMC opzionale", "Collegamento previsto a NAS, dischi e chiavette USB"],
         "nano_figure": "",
         "nano_scan": "Inquadra il QR per NanoDrive",
@@ -75,7 +74,6 @@ CONTENT = {
         "nano_warning": "Keeping files locally does not create an off-site backup. A separate copy is necessary to protect against hardware failure, theft or site incidents.",
         "nano_price": "€50", "nano_price_label": "Hardware + first 12 months of service", "nano_renewal": "Then €2/month · planned launch offer",
         "nano_hw_title": "NanoDrive — technical specifications",
-        "nano_hw_note": "Final configuration and compatibility must be validated on the prototype. 1 GB and 2 GB are alternatives; eMMC is optional.",
         "nano_specs": ["Quad-core Rockchip RK3528A", "1 GB or 2 GB LPDDR4X RAM", "Gigabit Ethernet", "USB 3.0 and USB-C", "Optional eMMC module support", "Planned connection to NAS devices, HDDs and USB drives"],
         "nano_figure": "",
         "nano_scan": "Scan the QR code for NanoDrive",
@@ -113,20 +111,8 @@ def build_page(lang, head, header, footer, contact, base, org_ref, org_id):
     )
     mobile_points = "".join(f"<li>{item}</li>" for item in p["mobile_points"])
     nano_specs_html = "".join(f"<li>{spec}</li>" for spec in p["nano_specs"])
-    nano_media = f"""<figure class="nanodrive-product-visual">
-<div class="nanodrive-product-pictures">
-<div class="nanodrive-photo nanodrive-front">
-<img src="assets/nanodrive-front.webp" alt="NanoDrive: vista frontale del dispositivo, con branding SmartDrive JDEVPRO e QR sul coperchio" loading="lazy" width="496" height="362">
-<span class="nanodrive-device-brand">NanoDrive<small>SmartDrive · JDEVPRO</small></span>
-<a class="nanodrive-device-qr" href="https://www.jdevpro.it/" aria-label="QR NanoDrive, apre il sito JDEVPRO"><img src="assets/nanodrive-qr.svg" width="72" height="72" alt="QR del sito JDEVPRO"></a>
-</div>
-<div class="nanodrive-photo nanodrive-rear">
-<img src="assets/nanodrive-back.webp" alt="NanoDrive: porte USB-C, USB 3.0 ed Ethernet, marchio e QR sul coperchio" loading="lazy" width="526" height="401">
-<span class="nanodrive-device-brand">NanoDrive<small>SmartDrive · JDEVPRO</small></span>
-<a class="nanodrive-device-qr" href="https://www.jdevpro.it/" aria-label="QR NanoDrive, apre il sito JDEVPRO"><img src="assets/nanodrive-qr.svg" width="72" height="72" alt="QR del sito JDEVPRO"></a>
-</div>
-</div>
-
+    nano_media = """<figure class="nanodrive-product-visual reveal">
+<img class="nanodrive-product-shot" src="assets/nanodrive-device.png" alt="NanoDrive SmartDrive JDEVPRO, dispositivo con QR sul coperchio" loading="lazy" width="1000" height="750">
 </figure>"""
     price_rows = "".join(
         f'<tr><th scope="row">{size}</th><td>{standalone}</td><td>{integrated}</td></tr>'
@@ -188,7 +174,7 @@ def build_page(lang, head, header, footer, contact, base, org_ref, org_id):
 {nano_media}
 <div class="nanodrive-hardware-details">
 <h3>{p['nano_hw_title']}</h3><ul class="nanodrive-specs">{nano_specs_html}</ul>
-<p class="status-note">{p['nano_hw_note']}</p>
+
 
 </div>
 </div>
