@@ -5,6 +5,7 @@ import runpy
 EXTRA = runpy.run_path(str(pathlib.Path(__file__).with_name("content_extra.py")))
 ABOUT = runpy.run_path(str(pathlib.Path(__file__).with_name("content_about.py")))["ABOUT"]
 PRODUCTS = runpy.run_path(str(pathlib.Path(__file__).with_name("content_products.py")))["PRODUCTS"]
+SMARTDRIVE = runpy.run_path(str(pathlib.Path(__file__).with_name("content_smartdrive.py")))
 AREAS_DATA = runpy.run_path(str(pathlib.Path(__file__).with_name("content_areas.py")))
 STATS = runpy.run_path(str(pathlib.Path(__file__).with_name("content_stats.py")))["STATS"]
 LEGAL_DATA = runpy.run_path(str(pathlib.Path(__file__).with_name("content_legal.py")))
@@ -258,9 +259,11 @@ def header(current, lang="it", home=False, switch=None):
                   f'<div class="nav-sub">\n{sub}\n</div></div>\n')
     pp = PRODUCTS_PAGE[lang]
     prods = products(lang)
-    active = current == pp["slug"] or any(x["slug"] == current for x in prods)
+    drive_slug = "smartdrive.html" if lang == "it" else "en-smartdrive.html"
+    active = current in (pp["slug"], drive_slug) or any(x["slug"] == current for x in prods)
     psub = f'<a class="nav-sub-all" href="{pp["slug"]}"{cur(current == pp["slug"])}>{"Tutti i prodotti" if lang == "it" else "All products"} →</a>\n' + "\n".join(
         f'<a href="{x["slug"]}"{ext(x["slug"])}{cur(x["slug"] == current)}>{x["nav"]}{" ↗" if x.get("external") else ""}</a>' for x in prods)
+    psub += f'\n<a href="{drive_slug}"{cur(current == drive_slug)}>SmartDrive · {"presto disponibile" if lang == "it" else "coming soon"}</a>'
     links += (f'<div class="nav-group{" is-current" if active else ""}">'
               f'<a class="nav-group-label" href="{pp["slug"]}">{pp["nav"]} <span aria-hidden="true">▾</span></a>'
               f'<div class="nav-sub">\n{psub}\n</div></div>\n')
@@ -316,6 +319,8 @@ def footer(lang="it"):
     u = UI[lang]
     links = "".join(f'<a href="{a["slug"]}">{a["nav"]}</a>' for a in AREAS[lang])
     links += f'<a href="{PRODUCTS_PAGE[lang]["slug"]}">{PRODUCTS_PAGE[lang]["nav"]}</a>'
+    drive_slug = "smartdrive.html" if lang == "it" else "en-smartdrive.html"
+    links += f'<a href="{drive_slug}">SmartDrive</a>'
     if lang == "it":
         links += '<a href="guide.html">Guide</a>'
         links += f'<a href="{WHERE_PAGE["slug"]}">{WHERE_PAGE["nav"]}</a>'
@@ -472,6 +477,20 @@ def home(lang="it"):
     ie, ih, ip, items = INCENTIVES[lang]
     incentives = "".join(f'<article class="outcome reveal"><h3>{a}</h3><p>{b}</p><a class="card-link" href="{h}">{lbl}</a></article>' for a, b, h, lbl in items)
     w = WHY[lang]
+    if lang == "it":
+        sd = {"tag": "Nuovo prodotto · presto disponibile",
+              "title": "SmartDrive: sicurezza operativa, non solo spazio cloud.",
+              "desc": "Backup incrementale dei documenti, versionamento, recupero e gestione semplice di più terminali. Prodotto autonomo, integrabile in SmartAgent, con Windows, Mac, Android e iPhone al lancio.",
+              "cta": "Scopri SmartDrive", "price": "Da 4,90 €/mese · 100 GB · IVA esclusa",
+              "nano": "Preferisci conservare i dati in locale? NanoDrive collega NAS, dischi e chiavette: accesso remoto protetto previsto a 2 €/mese.", "nano_cta": "Scopri NanoDrive"}
+        sd_link = "smartdrive.html"
+    else:
+        sd = {"tag": "New product · coming soon",
+              "title": "SmartDrive: business continuity beyond cloud storage.",
+              "desc": "Incremental business backups, version history, recovery and easy multi-device management. Standalone or integrated with SmartAgent, including Windows, Mac, Android and iPhone at launch.",
+              "cta": "Explore SmartDrive", "price": "From €4.90/month · 100 GB · excl. VAT",
+              "nano": "Prefer local storage? NanoDrive connects NAS devices, hard drives and USB storage, with secure remote access planned at €2/month.", "nano_cta": "Explore NanoDrive"}
+        sd_link = "en-smartdrive.html"
     body = f"""{header("index.html" if lang == "it" else "en.html", lang, home=True, switch="en.html" if lang == "it" else "index.html")}<main id="main">
 <section class="hero hero-min" id="top">
 <div aria-hidden="true" class="hero-grid"></div>
@@ -490,6 +509,22 @@ def home(lang="it"):
 <div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">{ne}</p><h2>{nh}</h2><p>{np_}</p></div>
 <div class="outcome-grid">{industrial}</div>
+</div>
+</section>
+<section class="section section-tight section-paper smartdrive-home" id="smartdrive">
+<div class="shell smartdrive-feature reveal">
+<div>
+<p class="eyebrow">{sd['tag']}</p>
+<h2>{sd['title']}</h2>
+<p>{sd['desc']}</p>
+<p class="smartdrive-nano-teaser">{sd['nano']}</p>
+<div class="hero-actions"><a class="button primary" href="{sd_link}">{sd['cta']}</a><a class="button ghost" href="{sd_link}#nanodrive">{sd['nano_cta']}</a></div>
+</div>
+<div class="smartdrive-feature-aside">
+<strong>SmartDrive</strong>
+<span>Windows · Mac · Android · iPhone</span>
+<small>{sd['price']}</small>
+</div>
 </div>
 </section>
 <section class="section" id="aree">
@@ -629,8 +664,26 @@ def products_index(lang):
 <div class="product-side">{(lambda s: f'<img class="product-thumb" src="{s[0]}" alt="{s[3]}" width="{s[1]}" height="{s[2]}" loading="lazy" decoding="async">' if s else '')(PRODUCT_SHOTS.get(x["key"]))}<ul class="status-list">{pts}</ul></div>
 </article>
 """
+    drive_target = "smartdrive.html" if lang == "it" else "en-smartdrive.html"
+    if lang == "it":
+        drive_label, drive_title = "Pacchetto indipendente · in arrivo", "SmartDrive"
+        drive_desc = "Backup incrementale, versioni e recupero dei documenti aziendali. SmartDrive è autonomo o integrabile in SmartAgent, con più terminali gestiti facilmente."
+        drive_more = "Scopri SmartDrive →"
+        drive_points = ["Windows, Mac, Android e iPhone previsti al lancio", "Backup foto, video, cartelle e dati selezionati", "Autonomo o integrato in SmartAgent", "Presto disponibile"]
+    else:
+        drive_label, drive_title = "Standalone package · coming soon", "SmartDrive"
+        drive_desc = "Incremental backup, file versions and recovery for businesses. SmartDrive is standalone or optionally integrated with SmartAgent, with simple multi-device management."
+        drive_more = "Explore SmartDrive →"
+        drive_points = ["Windows, Mac, Android and iPhone at planned launch", "Photo, video, folder and selected data backup", "Standalone or with SmartAgent", "Coming soon"]
+    rows += f"""<article class="product-row product-card-smartdrive reveal">
+<div><p class="eyebrow">{drive_label}</p><h2>{drive_title}</h2><p class="product-card-text">{drive_desc}</p>
+<a class="button primary" href="{drive_target}">{drive_more}</a></div>
+<div class="product-side"><ul class="status-list">{''.join(f'<li>{p}</li>' for p in drive_points)}</ul></div>
+</article>
+"""
     jsonld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": pp["nav"], "description": pp["desc"], "url": url_of(pp["slug"]),
-               "hasPart": [{"@type": "CreativeWork", "name": x["nav"], "url": x["slug"] if x.get("external") else BASE + x["slug"]} for x in products(lang)]},
+               "hasPart": [{"@type": "CreativeWork", "name": x["nav"], "url": x["slug"] if x.get("external") else BASE + x["slug"]} for x in products(lang)]
+               + [{"@type": "SoftwareApplication", "name": "SmartDrive", "url": BASE + drive_target}]},
               {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
                   {"@type": "ListItem", "position": 1, "name": u["home"], "item": url_of(home_slug)},
                   {"@type": "ListItem", "position": 2, "name": pp["nav"], "item": url_of(pp["slug"])}]}, ORG_REF]
@@ -1428,7 +1481,8 @@ def product_block(b, bg):
     if kind == "flow":
         _, eyebrow, h2, steps = b
         li = "".join(f"<li><strong>{t}</strong><span>{d}</span></li>" for t, d in steps)
-        return f"""<section class="section section-tight {bg}">
+        anchor = ' id="smartdrive"' if eyebrow.startswith("SmartDrive") else ""
+        return f"""<section{anchor} class="section section-tight {bg}">
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">{eyebrow}</p><h2>{h2}</h2></div>
 <ol class="method-steps reveal">{li}</ol>
@@ -1521,6 +1575,11 @@ def product_page(pr, lang):
                    "applicationCategory": "BusinessApplication", "operatingSystem": "Web",
                    "offers": {"@type": "Offer", "price": "29", "priceCurrency": "EUR", "availability": "https://schema.org/PreOrder"},
                    "publisher": {"@id": ORG_ID}, "sameAs": ["https://welora.it/"]}
+    elif pr["key"] == "smartagent":
+        main_ld = {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "SmartAgent",
+                   "description": pr["desc"], "url": url, "applicationCategory": "BusinessApplication",
+                   "operatingSystem": "Web", "publisher": {"@id": ORG_ID}, "sameAs": ["https://smartagent.jdevpro.it/"],
+                   "offers": {"@type": "Offer", "price": "29.90", "priceCurrency": "EUR"}}
     elif pr["key"] == "erp":
         main_ld = {"@context": "https://schema.org", "@type": "Service", "name": pr["nav"], "description": pr["desc"], "url": url,
                    "serviceType": "ERP", "provider": {"@id": ORG_ID}, "areaServed": "IT",
@@ -1611,6 +1670,8 @@ for _lang in ("it", "en"):
     for _pr in PRODUCTS[_lang]:
         if not _pr.get("external"):
             write(_pr["slug"], product_page(_pr, _lang))
+write("smartdrive.html", SMARTDRIVE["build_page"]("it", head, header, footer, contact, BASE, ORG_REF, ORG_ID))
+write("en-smartdrive.html", SMARTDRIVE["build_page"]("en", head, header, footer, contact, BASE, ORG_REF, ORG_ID))
 write("en-about.html", about("en"))
 write("404.html", not_found())
 for _kind in ("privacy", "cookie"):
@@ -1621,7 +1682,7 @@ for old, target in OLD_URLS.items():
 
 urls = (["", "en.html"] + [p["slug"] for p in PAGES] + [EN_SLUG[p["slug"]] for p in PAGES]
         + [c["slug"] for c in CITIES] + ["guide.html", TEST["slug"]] + [g["slug"] for g in GUIDES]
-        + [x["slug"] for l in ("it", "en") for x in PRODUCTS[l] if not x.get("external")] + [a["slug"] for l in ("it", "en") for a in AREAS[l]] + [PRODUCTS_PAGE["it"]["slug"], PRODUCTS_PAGE["en"]["slug"], WHERE_PAGE["slug"], PARTNERS["slug"]] + ["chi-sono.html", "en-about.html", "privacy.html", "privacy-en.html", "cookie-policy.html", "cookie-policy-en.html"])
+        + [x["slug"] for l in ("it", "en") for x in PRODUCTS[l] if not x.get("external")] + ["smartdrive.html", "en-smartdrive.html"] + [a["slug"] for l in ("it", "en") for a in AREAS[l]] + [PRODUCTS_PAGE["it"]["slug"], PRODUCTS_PAGE["en"]["slug"], WHERE_PAGE["slug"], PARTNERS["slug"]] + ["chi-sono.html", "en-about.html", "privacy.html", "privacy-en.html", "cookie-policy.html", "cookie-policy-en.html"])
 sitemap = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 sitemap += [f"  <url><loc>{BASE}{u}</loc><lastmod>{TODAY}</lastmod></url>" for u in urls]
 sitemap.append("</urlset>")

@@ -9,12 +9,12 @@ PRODUCTS = {
   "it": [
     dict(
       key="smartagent", slug="smartagent.html", site="https://smartagent.jdevpro.it/", nav="SmartAgent",
-      title="SmartAgent: il gestionale per chi lavora con i clienti, da 29,90 € al mese | JDEVPRO",
-      desc="SmartAgent riunisce clienti, mail e PEC, agenda con giro visite e traffico, pratiche, preventivi, fatture, documenti, note spese e, a breve, archivio e backup dei file del PC con SmartAgent Drive. Per agenti, periti, studi tecnici, manutentori e avvocati. Da 29,90 € al mese.",
-      card="Disponibile ora: clienti, mail, agenda con giro visite, pratiche, preventivi, fatture e documenti in un'unica app che si aggiorna da sola. A breve Drive, archivio e backup dei file del PC. Da 29,90 € al mese.",
+      title="SmartAgent: gestionale per professionisti e agenti | JDEVPRO",
+      desc="SmartAgent unisce clienti, email e PEC, agenda e giro visite, preventivi, fatture e spese. Gestionale per professionisti e agenti, da 29,90 € al mese.",
+      card="Disponibile ora: clienti, mail, agenda con giro visite, pratiche, preventivi, fatture e documenti in un'unica app che si aggiorna da sola. SmartDrive è un pacchetto separato, utilizzabile anche senza SmartAgent (in arrivo). SmartAgent da 29,90 € al mese.",
       eyebrow="Prodotto · Gestionale per professionisti e agenti",
       h1="SmartAgent: meno tempo in ufficio, <span>più tempo dai clienti.</span>",
-      lead="SmartAgent riunisce clienti, mail, appuntamenti, giro visite, pratiche, preventivi, fatture, documenti e spese in un'unica app che si aggiorna da sola. Colleghi posta, calendario e rubrica che usi già: le mail vanno nella scheda giusta, la giornata si organizza sulla mappa e il lavoro fatto diventa preventivo, fattura e rimborso senza ricopiare niente. A breve SmartAgent Drive: archivio e backup dei file del PC, già divisi per cliente.",
+      lead="SmartAgent riunisce clienti, mail, appuntamenti, giro visite, pratiche, preventivi, fatture, documenti e spese in un'unica app che si aggiorna da sola. Colleghi posta, calendario e rubrica che usi già: le mail vanno nella scheda giusta, la giornata si organizza sulla mappa e il lavoro fatto diventa preventivo, fattura e rimborso senza ricopiare niente. SmartDrive è un pacchetto autonomo, utilizzabile da solo o integrato in SmartAgent per organizzare i file di clienti e pratiche. In arrivo.",
       links=[("Vai su smartagent.jdevpro.it ↗", "https://smartagent.jdevpro.it/"), ("Prova gratis 30 giorni ↗", "https://smartagent.jdevpro.it/index.php?r=register")],
       blocks=[
         ("cards", "Il problema", "Il lavoro è dai clienti, ma il tempo se ne va a organizzarlo.", "", [
@@ -45,18 +45,18 @@ PRODUCTS = {
           ("Consulenti sicurezza", "Ispezioni, non conformità e corsi di formazione con attestati in scadenza."),
           ("Avvocati", "Fascicoli, udienze, aiuto al calcolo dei termini e fascicoli riservati."),
         ]),
-        ("flow", "SmartAgent Drive · a breve", "Archivio e backup dei file del tuo PC, già divisi per cliente.", [
-          ("Crei il cliente", "Sul PC o sul Mac compare la sua cartella, nel Finder e in Esplora file, con una cartella per ogni pratica."),
-          ("Salvi un file", "Va subito sul server ed è nella scheda del cliente, per te e per i colleghi che lo seguono."),
-          ("Arriva una mail", "L'allegato del cliente finisce da solo nella sua cartella, direttamente sul computer."),
-          ("Carichi dal telefono", "Il documento caricato nella scheda lo ritrovi nella cartella sul computer, senza scaricare niente."),
-          ("Lavori come sempre", "Apri i file con AutoCAD, Word o Excel: salvi e la nuova versione arriva nella pratica."),
+        ("flow", "SmartDrive · pacchetto autonomo · a breve", "Archivio e backup indipendenti, con integrazione opzionale in SmartAgent.", [
+          ("Usi SmartDrive da solo", "Archivi e sincronizzi i file del computer senza dover attivare SmartAgent."),
+          ("Lo integri in SmartAgent", "Se usi SmartAgent, i file di SmartDrive possono essere associati alle schede di clienti e pratiche."),
+          ("Arriva un allegato", "Con SmartAgent integrato, gli allegati dei clienti possono essere organizzati nelle rispettive cartelle."),
+          ("Accedi dai dispositivi", "I documenti si ritrovano sul computer o su altri dispositivi, anche senza usare SmartAgent."),
+          ("Lavori come sempre", "Apri i file con AutoCAD, Word o Excel: la nuova versione viene sincronizzata in SmartDrive e, con SmartAgent, collegata alla pratica."),
         ]),
-        ("cards", "Backup e sicurezza", "I tuoi file al sicuro, anche a PC spento.", "Drive è insieme archivio e backup: ogni file è sul server e nel gestionale, raggiungibile da telefono e da un altro computer anche quando il tuo è spento.", [
+        ("cards", "Backup e sicurezza", "I tuoi file al sicuro, anche a PC spento.", "SmartDrive è archivio e backup in un pacchetto separato. Si usa anche senza SmartAgent; con la sua integrazione, i file possono comparire nelle schede di clienti e pratiche.", [
           ("Backup continuo", "Ogni file salvato nelle cartelle è copiato sul server mentre lavori. Niente chiavette o dischi esterni da ricordare."),
           ("Storico e recupero", "Ogni salvataggio è una versione: torni a quella di ieri o di un mese fa quando vuoi."),
           ("Virus e ransomware", "Se il PC viene colpito, le versioni precedenti restano sul server e il computer non le può cancellare."),
-          ("PC rotto, perso o rubato", "Lo scolleghi dal profilo e sul computer nuovo ritrovi tutto. Intanto i file sono nel gestionale, anche dal telefono."),
+          ("PC rotto, perso o rubato", "Scolleghi il dispositivo dal profilo e ritrovi i file nel tuo spazio SmartDrive, anche senza SmartAgent."),
         ]),
         ("figure", "La giornata", "Clienti di oggi in ordine sulla mappa, con l'ora per partire.",
          "assets/smartagent-giornata.webp",
@@ -74,24 +74,24 @@ PRODUCTS = {
           "SmartAgent si collega a Gmail, Microsoft 365, Aruba, PEC e qualunque casella IMAP; a Google, Microsoft e iCloud per il calendario; alla rubrica di iPhone e Android. Le mail restano anche nella tua casella e gli appuntamenti si aggiornano nei due sensi.",
           "Funziona dal browser su computer, tablet e telefono, senza installare niente. Con le API e i webhook si collega al tuo gestionale o al tuo sito.",
         ], ["Posta e PEC", "Calendario nei due sensi", "Rubrica del telefono", "API e webhook"]),
-        ("prices", "Prezzi", "Un prezzo chiaro, tutte le funzioni in ogni piano.", "Cambia solo quante persone lavorano con te. 30 giorni di prova gratuita, senza carta di credito.", [
+        ("prices", "Prezzi", "Un prezzo chiaro per SmartAgent: SmartDrive è separato.", "Cambia solo quante persone lavorano con te. 30 giorni di prova gratuita, senza carta di credito.", [
           ("Professionista · 1 utente", "29,90 € al mese", "Tutte le funzioni"),
           ("Studio · fino a 3 utenti", "49,90 € al mese", "Tutte le funzioni, per lavorare in squadra"),
           ("Studio Plus · fino a 6 utenti", "79,90 € al mese", "Tutte le funzioni, per studi più grandi"),
         ], "Prezzi IVA esclusa."),
-        ("prices", "Spazio SmartAgent Drive", "Scegli lo spazio che ti serve.", "Si aggiunge a qualunque piano SmartAgent. Disponibile a breve.", [
+        ("prices", "Spazio SmartDrive", "Scegli lo spazio che ti serve.", "Pacchetto indipendente: puoi usarlo da solo o collegarlo a SmartAgent. Disponibile a breve.", [
           ("100 GB · per iniziare", "2,90 € al mese", "Documenti e foto di un professionista"),
           ("500 GB · per il professionista", "5,90 € al mese", "Archivio completo di anni di lavoro"),
           ("1 TB · per progetti CAD", "9,90 € al mese", "Tavole, modelli e rilievi"),
           ("2 TB · per studi con molti file", "17,90 € al mese", "Studi con più persone e molti progetti"),
         ], "Prezzi IVA esclusa."),
         ("split", "Il sito di SmartAgent", "Tutto il resto è su smartagent.jdevpro.it.", [
-          "Su <a href='https://smartagent.jdevpro.it/' target='_blank' rel='noreferrer'>smartagent.jdevpro.it</a> trovi la presentazione completa con le schermate, i mestieri, SmartAgent Drive, la firma digitale e i prezzi.",
+          "Su <a href='https://smartagent.jdevpro.it/' target='_blank' rel='noreferrer'>smartagent.jdevpro.it</a> trovi la presentazione completa con le schermate, i mestieri, SmartDrive, la firma digitale e i prezzi.",
           "Da lì attivi la prova gratuita di 30 giorni in due minuti: niente carta di credito, niente da installare.",
         ], ["Presentazione completa", "Prova gratuita 30 giorni", "Accesso per chi è già cliente"]),
         ("status", "Stato e prossime novità", "Disponibile ora, con nuove funzioni in arrivo.", [
           "Disponibile ora, con 30 giorni di prova gratuita senza carta di credito",
-          "A breve SmartAgent Drive: archivio e backup dei file del PC, divisi per cliente",
+          "SmartDrive in arrivo: archivio e backup autonomi, utilizzabili anche senza SmartAgent",
           "A breve la firma digitale: firmi con la tua firma remota e i clienti firmano dal telefono",
           "Database separato per ogni attività, verifica in due passaggi e dati sempre esportabili",
         ], "Le funzioni «a breve» non sono ancora disponibili."),
@@ -339,12 +339,12 @@ PRODUCTS = {
   "en": [
     dict(
       key="smartagent", slug="en-smartagent.html", site="https://smartagent.jdevpro.it/", nav="SmartAgent",
-      title="SmartAgent: CRM for professionals who work with clients, from €29.90/month | JDEVPRO",
-      desc="SmartAgent brings clients, email and certified email, calendar with route planning and traffic, cases, quotes, invoices, documents, expenses and, coming soon, PC file storage and backup with SmartAgent Drive together. For sales agents, surveyors, engineering firms and maintenance companies. From €29.90/month.",
-      card="Available now: clients, email, calendar with route planning, cases, quotes, invoices and documents in one app that keeps itself up to date. Coming soon: Drive, storage and backup for your PC files. From €29.90 a month.",
+      title="SmartAgent: CRM for professionals and agents | JDEVPRO",
+      desc="SmartAgent brings clients, email, appointments, routes, quotes and invoices into one app for professionals and sales agents. In Italian, from €29.90/month.",
+      card="Available now: clients, email, calendar with route planning, cases, quotes, invoices and documents in one app that keeps itself up to date. SmartDrive is a separate package you can use without SmartAgent (coming soon). SmartAgent from €29.90/month.",
       eyebrow="Product · Management software for professionals and agents",
       h1="SmartAgent: less time in the office, <span>more time with clients.</span>",
-      lead="SmartAgent brings clients, email, appointments, route planning, cases, quotes, invoices, documents and expenses into one app that keeps itself up to date. Connect the email, calendar and contacts you already use: emails land in the right client record, your day is planned on a map, and finished work becomes a quote, an invoice and a mileage claim without retyping. Coming soon, SmartAgent Drive: storage and backup for your PC files, already sorted by client. The app is in Italian.",
+      lead="SmartAgent brings clients, email, appointments, route planning, cases, quotes, invoices, documents and expenses into one app that keeps itself up to date. Connect the email, calendar and contacts you already use: emails land in the right client record, your day is planned on a map, and finished work becomes a quote, an invoice and a mileage claim without retyping. SmartDrive is a standalone package for storage and backup, with optional SmartAgent integration for client and case files. Coming soon. The SmartAgent app is in Italian.",
       links=[("Go to smartagent.jdevpro.it ↗", "https://smartagent.jdevpro.it/"), ("30-day free trial ↗", "https://smartagent.jdevpro.it/index.php?r=register")],
       blocks=[
         ("cards", "The problem", "Your work is with clients, but organising it eats your time.", "", [
@@ -375,18 +375,18 @@ PRODUCTS = {
           ("Safety consultants", "Inspections, non-conformities and training courses with expiring certificates."),
           ("Lawyers", "Files, hearings, help with deadline calculation and private files."),
         ]),
-        ("flow", "SmartAgent Drive · coming soon", "Storage and backup for your PC files, already sorted by client.", [
-          ("Create the client", "Their folder appears on your PC or Mac, in Finder and File Explorer, with a folder for each case."),
-          ("Save a file", "It goes straight to the server and into the client record, for you and the colleagues who follow them."),
-          ("An email arrives", "The client's attachment lands in their folder by itself, right on your computer."),
-          ("Upload from your phone", "A document uploaded to the record shows up in the folder on your computer, with nothing to download."),
-          ("Work as usual", "Open files with AutoCAD, Word or Excel: save, and the new version goes into the case."),
+        ("flow", "SmartDrive · standalone package · coming soon", "Independent file storage and backup, optionally integrated with SmartAgent.", [
+          ("Use SmartDrive on its own", "Store and sync computer files without subscribing to SmartAgent."),
+          ("Connect it to SmartAgent", "With SmartAgent, SmartDrive files can be associated with client and case records."),
+          ("An attachment arrives", "With SmartAgent integration, client attachments can be filed in the corresponding folders."),
+          ("Access across devices", "Find stored documents on your computer or other devices, without needing SmartAgent."),
+          ("Work as usual", "Open files in AutoCAD, Word or Excel: changes sync to SmartDrive and, if connected, into the SmartAgent case."),
         ]),
-        ("cards", "Backup and security", "Your files safe, even with the PC switched off.", "Drive is storage and backup in one: every file is on the server and in the app, reachable from your phone or another computer even when yours is off.", [
+        ("cards", "Backup and security", "Your files safe, even with the PC switched off.", "SmartDrive is a separate storage and backup package. It works without SmartAgent; when integrated, files can also appear in client and case records.", [
           ("Continuous backup", "Every file saved in the folders is copied to the server while you work. No USB sticks or external drives to remember."),
           ("History and recovery", "Every save is a version: go back to yesterday's or last month's whenever you want."),
           ("Viruses and ransomware", "If the PC is hit, previous versions stay on the server and the computer cannot delete them."),
-          ("Broken, lost or stolen PC", "Disconnect it from your profile and find everything on the new computer. Meanwhile your files are in the app, on your phone too."),
+          ("Broken, lost or stolen PC", "Disconnect the device from your profile and retrieve files in SmartDrive, even without SmartAgent."),
         ]),
         ("figure", "The day", "Today's clients in order on the map, with the time to leave.",
          "assets/smartagent-giornata.webp",
@@ -404,24 +404,24 @@ PRODUCTS = {
           "SmartAgent connects to Gmail, Microsoft 365, Aruba, certified email and any IMAP mailbox; to Google, Microsoft and iCloud calendars; to iPhone and Android contacts. Emails stay in your mailbox and appointments sync both ways.",
           "It runs in the browser on computer, tablet and phone, with nothing to install. APIs and webhooks connect it to your own software or website.",
         ], ["Email and certified email", "Two-way calendar", "Phone contacts", "APIs and webhooks"]),
-        ("prices", "Pricing", "Clear pricing, every feature in every plan.", "Only the number of people changes. 30-day free trial, no credit card.", [
+        ("prices", "Pricing", "Clear SmartAgent pricing: SmartDrive is separate.", "Only the number of people changes. 30-day free trial, no credit card.", [
           ("Professional · 1 user", "€29.90 a month", "All features"),
           ("Studio · up to 3 users", "€49.90 a month", "All features, for working as a team"),
           ("Studio Plus · up to 6 users", "€79.90 a month", "All features, for larger firms"),
         ], "Prices exclude VAT."),
-        ("prices", "SmartAgent Drive storage", "Choose the space you need.", "Added to any SmartAgent plan. Coming soon.", [
+        ("prices", "SmartDrive storage", "Choose the space you need.", "A standalone package: use SmartDrive on its own or with SmartAgent. Coming soon.", [
           ("100 GB · to get started", "€2.90 a month", "A professional's documents and photos"),
           ("500 GB · for professionals", "€5.90 a month", "A complete archive of years of work"),
           ("1 TB · for CAD projects", "€9.90 a month", "Drawings, models and surveys"),
           ("2 TB · for firms with many files", "€17.90 a month", "Firms with several people and many projects"),
         ], "Prices exclude VAT."),
         ("split", "The SmartAgent website", "Everything else is on smartagent.jdevpro.it.", [
-          "On <a href='https://smartagent.jdevpro.it/' target='_blank' rel='noreferrer'>smartagent.jdevpro.it</a> you find the full presentation (in Italian) with screenshots, trades, SmartAgent Drive, digital signatures and pricing.",
+          "On <a href='https://smartagent.jdevpro.it/' target='_blank' rel='noreferrer'>smartagent.jdevpro.it</a> you find the full presentation (in Italian) with screenshots, trades, SmartDrive, digital signatures and pricing.",
           "From there you start the 30-day free trial in two minutes: no credit card, nothing to install.",
         ], ["Full presentation", "30-day free trial", "Sign-in for existing customers"]),
         ("status", "Status and what's next", "Available now, with new features on the way.", [
           "Available now, with a 30-day free trial and no credit card",
-          "Coming soon SmartAgent Drive: storage and backup for your PC files, sorted by client",
+          "SmartDrive coming soon: standalone storage and backup, also usable without SmartAgent",
           "Coming soon digital signatures: sign with your remote digital signature, clients sign from their phone",
           "Separate database for each business, two-step verification and data always exportable",
         ], "\"Coming soon\" features are not available yet."),
