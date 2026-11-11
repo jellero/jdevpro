@@ -115,8 +115,7 @@ def build_page(lang, head, header, footer, contact, base, org_ref, org_id):
     nano_specs_html = "".join(f"<li>{spec}</li>" for spec in p["nano_specs"])
     nano_media = f"""<figure class="nanodrive-product-visual">
 <div class="nanodrive-product-pictures">
-<img src="assets/nanodrive-front.webp" alt="NanoPi NEO3 Plus, vista anteriore, hardware base del prototipo NanoDrive" loading="lazy" width="340" height="248">
-<img src="assets/nanodrive-back.webp" alt="NanoPi NEO3 Plus, vista con porte USB e Ethernet" loading="lazy" width="340" height="259">
+<img src="assets/nanodrive-product.svg" alt="Rendering NanoDrive marchiato SmartDrive JDEVPRO: mini hardware con slot microSD, porta USB-C, USB 3.0 ed Ethernet" loading="lazy" width="980" height="620">
 </div>
 <figcaption>{p['nano_figure']}</figcaption>
 </figure>"""
