@@ -396,13 +396,13 @@ WHY = {
 
 # specializzazione in home: (eyebrow, titolo, testo, [(titolo, testo, link, etichetta)])
 INDUSTRIAL = {
-    "it": ("Integrazione industriale", "Dalla macchina al gestionale, documentato per il perito.",
-           "È la nostra specializzazione: collegare al gestionale macchine di ogni tipo di produzione e tenerle sempre connesse.",
+    "it": ("Integrazione industriale", "Dalla macchina al gestionale: sviluppo e documentazione per le pratiche.",
+           "Sviluppiamo l'integrazione tra macchine e sistemi aziendali, gestiamo lo scambio dei dati e documentiamo collegamenti e collaudi per le pratiche tecniche.",
            [("Interconnessione macchine 4.0", "Torni, centri di lavoro, laser, presse, macchine tessili e da stampa, riempitrici: qualsiasi macchina con PLC o CNC, nuova o datata.", "interconnessione-macchine-industria-4-0.html", "Vedi i tipi di macchine →"),
             ("Asseverate e ammesse", "Le macchine che abbiamo collegato sono tutte certificate e asseverate da ingegneri, verificate per l'interconnessione e ammesse all'iperammortamento.", "guida-interconnessione-iperammortamento.html", "Requisiti e scadenze →"),
             ("JD Industry", "Il nostro gestionale di produzione: dalle macchine collegate all'ERP su ERPNext, con la migrazione dei dati dal vecchio programma.", "gestionale-produzione-erpnext.html", "Scopri JD Industry →")]),
-    "en": ("Industrial integration", "From the machine to business software, documented for the appraiser.",
-           "It is our specialisation: connecting machines from any kind of production to business software and keeping them always connected.",
+    "en": ("Industrial integration", "From machines to business software: integration development and technical documentation.",
+           "We develop integration between machines and business systems, manage data exchange and document connections and testing for technical procedures.",
            [("Industry 4.0 machine interconnection", "Lathes, machining centres, lasers, presses, textile and printing machines, fillers: any machine with a PLC or CNC, new or old.", "en-machine-interconnection.html", "See machine types →"),
             ("Sworn and approved", "The machines we have connected are all certified and sworn by engineers, verified for interconnection and approved for the Italian hyper-depreciation.", "en-machine-interconnection.html", "Requirements →"),
             ("JD Industry", "Our production software: from connected machines to a full ERP on ERPNext, with data migration from the old program.", "en-erpnext-manufacturing.html", "Discover JD Industry →")]),
@@ -433,9 +433,9 @@ def home(lang="it"):
     u = UI[lang]
     if lang == "it":
         t = dict(eyebrow="Integrazione macchine e gestionali · Friuli Venezia Giulia",
-                 h1="Macchine, impianti e software: <span>integrati e sempre connessi.</span>",
-                 lead="JDEVPRO nasce in Friuli con Jacopo Ellero. Colleghiamo al gestionale qualsiasi macchina con PLC o CNC per l'interconnessione 4.0 e l'iperammortamento: tutte le macchine collegate finora sono asseverate e ammesse. Sviluppiamo anche JD Industry, il gestionale di produzione, e seguiamo tutto nel tempo, in trasferta dove serve e da remoto ovunque.",
-                 b1="Interconnessione macchine", b1h="interconnessione-macchine-industria-4-0.html", b2="Scrivici", ae="Anche", ah="Strutture ricettive e software su misura.",
+                 h1="Interconnessione macchine 4.0: <span>colleghiamo PLC e CNC al tuo gestionale.</span>",
+                 lead="Colleghiamo macchine industriali ai gestionali aziendali, sviluppiamo lo scambio dei dati ed eseguiamo i collaudi. Prepariamo inoltre la documentazione tecnica utile alle pratiche di interconnessione. Lavoriamo in Friuli Venezia Giulia, Veneto e in trasferta dove serve.",
+                 b1="Richiedi una verifica tecnica", b1h="mailto:info@jdevpro.it?subject=Richiesta%20interconnessione%20macchina%20-%20JDEVPRO&amp;body=Buongiorno%2C%0A%0AAzienda%3A%0AMarca%20e%20modello%20macchina%3A%0ACNC%20o%20PLC%20(se%20noto)%3A%0AGestionale%20utilizzato%3A%0ADati%20da%20scambiare%3A%0AComune%3A%0ARecapito%3A%0A", b2="Scopri come lavoriamo", b2h="interconnessione-macchine-industria-4-0.html",
                  enter="Entra nell'area →",
                  proof=[("JD Industry", "Gestionale di produzione collegato a macchine SCM ed Essetre.", "gestionale-produzione-erpnext.html"),
                         ("E-commerce e marketplace", "Gestionale collegato a fornitore, marketplace e corriere.", "integrazione-software-api.html"),
@@ -444,33 +444,20 @@ def home(lang="it"):
                  desc="Interconnessione macchine 4.0 per l'iperammortamento: decine di macchine collegate al gestionale, tutte asseverate e ammesse. Friuli Venezia Giulia e Veneto.")
     else:
         t = dict(eyebrow="Machine and business software integration · North-east Italy",
-                 h1="Machines, installations and software: <span>integrated and always connected.</span>",
-                 lead="JDEVPRO was founded in Friuli by Jacopo Ellero. We connect any PLC or CNC machine to business software for Industry 4.0 interconnection and the Italian tax incentive: every machine connected so far is certified and approved. We also build JD Industry, our production software, and look after everything over time, on site where needed and remotely anywhere.",
-                 b1="Machine interconnection", b1h="en-machine-interconnection.html", b2="Write to us", ae="Also", ah="Hospitality and custom software.",
+                 h1="Industry 4.0 machine interconnection: <span>we connect PLC and CNC machines to business software.</span>",
+                 lead="We connect industrial machines to business software, develop data exchange and test the integration. We also prepare technical evidence for interconnection documentation and related procedures. We work in north-east Italy and on site where needed.",
+                 b1="Request a technical review", b1h="mailto:info@jdevpro.it?subject=Machine%20interconnection%20enquiry%20-%20JDEVPRO&amp;body=Hello%2C%0A%0ACompany%3A%0AMachine%20make%20and%20model%3A%0ACNC%20or%20PLC%20(if%20known)%3A%0ABusiness%20software%3A%0AData%20to%20exchange%3A%0ALocation%3A%0AContact%3A%0A", b2="How we work", b2h="en-machine-interconnection.html",
                  enter="Enter the area →",
                  proof=[("JD Industry", "Production software connected to SCM and Essetre machines.", "en-erpnext-manufacturing.html"),
                         ("E-commerce and marketplaces", "Business software connected to supplier, marketplaces and courier.", "en-software-integration-api.html"),
                         ("Machine interconnection", "Machine-to-business-system integration, testing and documented evidence.", "en-machine-interconnection.html")],
                  title="JDEVPRO · Machine interconnection and business software, Italy",
                  desc="Industry 4.0 machine interconnection: dozens of machines connected to business software, all certified and approved. North-east Italy.")
-    cards = ""
-    for a in AREAS[lang]:
-        if a["key"] == "industria":
-            continue  # l'industria ha già la sua sezione subito sotto l'apertura
-        svcs = area_services(lang, a["key"])
-        svc = "<ul>" + "".join(f'<li><a href="{s["href"]}">{s["card_title"]}</a></li>' for s in svcs if s.get("it_slug", s["href"]) not in SUPPORT) + "</ul>"
-        also = [s for s in svcs if s.get("it_slug", s["href"]) in SUPPORT]
-        if also:
-            svc += "<p class=\"area-also\">" + ("Anche: " if lang == "it" else "Also: ") + ", ".join(
-                f'<a href="{s["href"]}">{s["card_title"]}</a>' for s in also) + "</p>"
-        cards += f"""<article class="area-card area-{a['key']} reveal">
-<p class="eyebrow">{a['eyebrow']}</p>
-<h3><a href="{a['slug']}">{a['nav']}</a></h3>
-<p>{a['card']}</p>
-{svc}
-<a class="competence-more" href="{a['slug']}">{t['enter']}</a>
-</article>
-"""
+    prod_eyebrow, prod_title, prod_desc, prod_link, prod_cta = (
+        ("Prodotti", "I prodotti JDEVPRO.", "Nel catalogo trovi JD Industry, SmartAgent e SmartDrive, con caratteristiche e informazioni sulla disponibilità.", "prodotti.html", "Scopri i prodotti")
+        if lang == "it" else
+        ("Products", "JDEVPRO products.", "Explore JD Industry, SmartAgent and SmartDrive in our product catalog, with features and availability information.", "en-products.html", "Explore products")
+    )
     proof = "".join(f'<a href="{h}"><strong>{x}</strong><span>{d}</span></a>' for x, d, h in t["proof"])
     ne, nh, np_, nitems = INDUSTRIAL[lang]
     industrial = "".join(f'<article class="outcome reveal"><h3>{a}</h3><p>{b}</p><a class="card-link" href="{h}">{lbl}</a></article>' for a, b, h, lbl in nitems)
@@ -501,7 +488,7 @@ def home(lang="it"):
 <p class="hero-lead">{t['lead']}</p>
 <div class="hero-actions">
 <a class="button primary" href="{t['b1h']}">{t['b1']}</a>
-<a class="button ghost" href="#contatto">{t['b2']}</a>
+<a class="button ghost" href="{t['b2h']}">{t['b2']}</a>
 </div>
 {stats_html("home", lang)}
 </div>
@@ -513,12 +500,11 @@ def home(lang="it"):
 </div>
 </section>
 {industry_cta}
-<section class="section" id="aree">
+<section class="section section-tight section-white" id="aree">
 <span id="competenze"></span>
-<div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">{t['ae']}</p><h2>{t['ah']}</h2></div>
-<div class="area-grid area-grid-2">
-{cards}</div>
+<div class="shell split">
+<div class="section-heading reveal"><p class="eyebrow">{prod_eyebrow}</p><h2>{prod_title}</h2></div>
+<div class="reveal"><p>{prod_desc}</p><a class="button primary" href="{prod_link}">{prod_cta}</a></div>
 </div>
 </section>
 <section class="section section-tight section-paper">
