@@ -1,106 +1,176 @@
-"""Contenuti della pagina Chi sono (italiano e inglese)."""
+"""Testi della pagina Come lavoriamo / How we work (IT/EN). URL storici conservati per i collegamenti esistenti."""
 
 ABOUT = {
-  "it": dict(
-    slug="chi-sono.html", nav="Chi sono",
-    title="Chi sono: Jacopo Ellero, sviluppatore e integratore | JDEVPRO",
-    desc="Jacopo Ellero, Friuli Venezia Giulia: sviluppatore e integratore. Collego macchine e impianti ai gestionali per l'interconnessione 4.0 e l'iperammortamento.",
-    eyebrow="Chi sono · Friuli Venezia Giulia",
-    h1="Jacopo Ellero. <span>Dal codice al campo.</span>",
-    lead="Sono uno sviluppatore e integratore di sistemi. Lavoro tra software, dati, macchine e infrastruttura: progetto API e gestionali, collego dispositivi e impianti, seguo i sistemi in produzione. E quando serve vado sul campo, in officina e negli impianti, con la formazione per farlo in sicurezza.",
-    profile=[
-      "Lavoro tra codice, infrastruttura e processi aziendali: progetto servizi e API, integro piattaforme esterne, mantengo sistemi critici e seguo i problemi fino alla causa reale.",
-      "Quando un progetto coinvolge macchine, PLC, gateway, sensori, rete o energia, seguo il flusso tecnico da un capo all'altro, per tenere coerenti software, dati e impianti.",
-      "Parlo direttamente con titolari, clienti, fornitori e sviluppatori esterni, e traduco i problemi operativi in soluzioni tecniche verificabili.",
+  "it": {
+    "slug": "chi-sono.html",
+    "nav": "Come lavoriamo",
+    "title": "Come lavoriamo | Interconnessione macchine e integrazioni | JDEVPRO",
+    "desc": "JDEVPRO collega PLC, CNC e macchine ai gestionali: analisi, sviluppo dell'integrazione, collaudo e documentazione tecnica. Friuli Venezia Giulia e Veneto.",
+    "eyebrow": "JDEVPRO · Integrazione industriale",
+    "h1": "Come lavoriamo: <span>dalla macchina al gestionale, con un metodo chiaro.</span>",
+    "lead": "Realizziamo integrazioni tra macchine industriali, PLC, CNC e gestionali aziendali. Analizziamo le interfacce, sviluppiamo lo scambio dei dati, collaudiamo i collegamenti e prepariamo la documentazione tecnica utile alle pratiche. Le attività e le responsabilità vengono definite prima di intervenire.",
+    "stats": [
+      [
+        "Decine",
+        "di macchine collegate in produzione",
+        "interconnessione-macchine-industria-4-0.html"
+      ],
+      [
+        "Dal 2009",
+        "esperienza tra software e impianti",
+        "chi-sono.html"
+      ],
+      [
+        "PLC e CNC",
+        "collegamenti a ERP e gestionali",
+        "interconnessione-macchine-industria-4-0.html"
+      ]
     ],
-    skills_e="Competenze", skills_h="Backend, macchine e infrastruttura in un unico sistema.",
-    skills=[
-      ("Backend e integrazione di sistemi", "Servizi, API e flussi dati tra sistemi aziendali, provider esterni, piattaforme e dispositivi.",
-       ["PHP · Python · Go · JavaScript/TypeScript · C/C++ · Kotlin", "REST API · webhook · integrazioni B2B/B2C", "PostgreSQL · MySQL/MariaDB · MSSQL · Redis", "RabbitMQ · code · eventi · retry · idempotenza", "Autenticazione · gestione dei segreti"]),
-      ("Software industriale e IoT", "Software che legge, comanda e coordina macchine e dispositivi senza perdere il contesto produttivo.",
-       ["Integrazione PLC e runtime CODESYS · embedded C", "RS-485 / RS-232 · Modbus · MQTT · gateway seriali", "Stati macchina · produzione · allarmi · sensori", "Machine-to-cloud · Wi-Fi · Bluetooth/BLE · LTE", "Commesse · costi · cruscotti"]),
-      ("Produzione e infrastruttura", "Ambienti, strumenti e procedure per tenere affidabili i sistemi in esercizio.",
-       ["Linux · Nginx · PHP-FPM · Docker/Compose", "CI/CD · Git · deploy · rollback", "Analisi log · monitoraggio · troubleshooting", "Hardening · backup · recovery", "Reti · VPN · VLAN · connettività remota"]),
+    "action": "Richiedi una verifica tecnica",
+    "actionHref": "mailto:info@jdevpro.it?subject=Richiesta%20interconnessione%20macchina%20-%20JDEVPRO&amp;body=Buongiorno%2C%0A%0AAzienda%3A%0AMarca%20e%20modello%20macchina%3A%0ACNC%20o%20PLC%20(se%20noto)%3A%0AGestionale%20utilizzato%3A%0ADati%20da%20scambiare%3A%0AComune%3A%0ARecapito%3A%0A",
+    "more": "Vedi le interconnessioni",
+    "moreHref": "interconnessione-macchine-industria-4-0.html",
+    "methodEyebrow": "Il metodo",
+    "methodTitle": "Dall'analisi alla documentazione, senza passaggi lasciati al caso.",
+    "methodLead": "Ogni progetto parte dalle macchine e dai sistemi già presenti. L'obiettivo è ottenere uno scambio di dati verificabile, non soltanto un collegamento di rete.",
+    "steps": [
+      [
+        "Analisi delle interfacce",
+        "Raccogliamo marca, modello, PLC o CNC, protocolli disponibili, rete aziendale e gestionale. Definiamo dati da scambiare e perimetro dell'intervento."
+      ],
+      [
+        "Sviluppo dell'integrazione",
+        "Realizziamo software, gateway e collegamenti fra macchina e sistema aziendale usando le interfacce disponibili, nel rispetto delle condizioni operative dell'impianto."
+      ],
+      [
+        "Collaudo in produzione",
+        "Verifichiamo con dati reali lo scambio di commesse, stati macchina, avanzamento e allarmi, secondo le funzioni supportate dal controllo."
+      ],
+      [
+        "Documentazione tecnica",
+        "Documentiamo configurazioni, collegamenti, scambi ed evidenze del collaudo. Perizie e valutazioni dei requisiti restano ai professionisti incaricati."
+      ]
     ],
-    field_e="Sul campo", field_h="Formazione per lavorare in sicurezza negli impianti.",
-    field_p="Collegare macchine, sensori e dispositivi spesso significa lavorare in officina, vicino a quadri e impianti, non solo davanti a un computer. Cablaggi, linee e quadri restano agli installatori abilitati secondo il DM 37/08: io curo dispositivi, configurazione, software e dati.",
-    certs=[
-      ("PES / PAV", "Qualifica per lavori elettrici secondo la norma CEI 11-27: persona esperta e persona avvertita."),
-      ("Bassa tensione", "Formazione per operare in sicurezza in presenza di impianti monofase e trifase in bassa tensione: fino a 1000 V in alternata e 1500 V in continua."),
-      ("Lavori in quota", "Lavoro in quota con dispositivi di protezione anticaduta."),
-      ("PLE", "Conduzione di piattaforme di lavoro mobili elevabili."),
+    "servicesEyebrow": "Competenze",
+    "servicesTitle": "Le attività con cui supportiamo le aziende.",
+    "services": [
+      [
+        "Interconnessione macchine 4.0",
+        "Dalla lettura dei dati di produzione allo scambio di commesse con il gestionale, anche su macchine già in esercizio.",
+        "interconnessione-macchine-industria-4-0.html",
+        "Interconnessione macchine"
+      ],
+      [
+        "Integrazione software e dati",
+        "API, OPC UA, MTConnect, Modbus e gateway, in base ai sistemi disponibili e alle necessità del processo aziendale.",
+        "integrazione-software-api.html",
+        "Integrazioni e automazioni"
+      ],
+      [
+        "JD Industry e produzione",
+        "Collegamento tra macchina, commessa, avanzamento e consuntivi nel gestionale di produzione, quando il progetto lo richiede.",
+        "gestionale-produzione-erpnext.html",
+        "JD Industry"
+      ]
     ],
-    projects_e="Progetti", projects_h="Cosa ho costruito.",
-    projects=[
-      ("Welora", "Piattaforma gestionale multi-struttura con motore di automazione separato.", "https://welora.it/"),
-      ("JD Industry", "Gestionale di produzione collegato alle macchine.", "interconnessione-macchine-industria-4-0.html"),
+    "proofEyebrow": "Esperienza sul campo",
+    "proofTitle": "L'integrazione si vede nei dati di produzione.",
+    "proofText": "Dalle bordatrici SCM ai sistemi CNC Essetre/Tecnoessetre: nei progetti documentati da JDEVPRO i dati arrivano al gestionale e possono essere associati alle commesse. Le esperienze e le modalità di interconnessione sono descritte nelle pagine tecniche.",
+    "proofLink": "Vedi esempi di interconnessione",
+    "proofHref": "interconnessione-macchine-industria-4-0.html",
+    "identityEyebrow": "Responsabilità",
+    "identityTitle": "Un referente tecnico, competenze e ruoli chiari.",
+    "identity": [
+      "JDEVPRO è l'attività professionale di Jacopo Ellero, che segue la parte software e l'integrazione tecnica fra macchine, infrastrutture e gestionali. Il cliente sa a chi rivolgersi per l'analisi e per le questioni tecniche.",
+      "Quando sono necessari cablaggi o quadri elettrici, queste attività spettano agli installatori abilitati. Perizie e valutazioni ai fini delle agevolazioni spettano ai professionisti incaricati: lo sviluppo dell'interconnessione e la sua attestazione restano compiti distinti."
     ],
-    akios_e="Sviluppo", akios_h="AKIOS: dispositivi IoT che si aggiornano senza rompersi.",
-    akios_p=[
-      "AKIOS è il progetto che sviluppo per i produttori di dispositivi IoT: uno strato che vive dentro il dispositivo e ne governa tutto il ciclo di vita, dalla prima configurazione agli aggiornamenti, fino al ripristino quando qualcosa va storto.",
-      "Ogni aggiornamento è firmato e verificato, parte in prova e viene confermato solo se il dispositivo funziona; altrimenti torna da solo all'ultima versione buona. Se non c'è più un sistema valido, il dispositivo apre una rete di ripristino locale e si recupera dal telefono, senza essere mai bloccato.",
-      "Il firmware è già operativo sui chip Beken BK7238, molto diffusi nei dispositivi Wi-Fi, e AKIOS è proposto ai produttori europei con un programma pilota: un dispositivo, un perimetro chiaro, prova su hardware reale. È pensato per chi deve garantire aggiornamenti sicuri per anni, come chiede il Cyber Resilience Act europeo.",
+    "identityLink": "Collaborazione con periti e consulenti",
+    "identityHref": "periti-ingegneri-consulenti.html"
+  },
+  "en": {
+    "slug": "en-about.html",
+    "nav": "How we work",
+    "title": "How we work | Industrial machine interconnection | JDEVPRO",
+    "desc": "JDEVPRO connects PLC and CNC machines to business software: interface assessment, integration development, testing and technical documentation in north-east Italy.",
+    "eyebrow": "JDEVPRO · Industrial integration",
+    "h1": "How we work: <span>from machines to business software, with a clear process.</span>",
+    "lead": "We develop integrations between industrial machines, PLCs, CNCs and business software. We assess interfaces, build data exchange, test the connections and prepare technical documentation for the relevant procedures. Scope and responsibilities are agreed before work begins.",
+    "stats": [
+      [
+        "Dozens",
+        "of machines connected in production",
+        "en-machine-interconnection.html"
+      ],
+      [
+        "Since 2009",
+        "experience across software and installations",
+        "en-about.html"
+      ],
+      [
+        "PLC and CNC",
+        "connections to ERP and business software",
+        "en-machine-interconnection.html"
+      ]
     ],
-    akios_points=["Aggiornamenti firmati e verificati", "Prova, conferma o ritorno automatico", "Ripristino locale dal telefono", "Nessun cambio di cloud obbligato"],
-    akios_links=[("Scopri AKIOS ↗", "https://akios.cloud/"), ("Programma pilota ↗", "https://akios-pilot.com/")],
-    research_e="Ricerca", research_h="ORYVAEL: un sistema operativo dove l'intelligenza artificiale lavora, ma non comanda.",
-    research_p=[
-      "ORYVAEL è il progetto di ricerca più ambizioso che porto avanti: un sistema operativo pensato per l'intelligenza artificiale, in cui l'AI può progettare, scrivere, provare e mantenere software, mentre l'autorità resta sempre nelle mani delle persone.",
-      "L'idea centrale è separare l'intelligenza dall'autorità: l'AI è potente ma non fidata. Ogni sua azione è limitata, osservabile, attribuibile, riproducibile e reversibile. Non può darsi permessi da sola, disattivare i controlli o firmare rilasci.",
-      "È scritto in Rust, con un kernel che gira direttamente sull'hardware, e prevede profili per desktop, mobile e dispositivi embedded e IoT. È lo stesso principio che applico ogni giorno ai sistemi dei clienti: automazione sì, ma con controllo, storico e possibilità di tornare indietro.",
+    "action": "Request a technical review",
+    "actionHref": "mailto:info@jdevpro.it?subject=Machine%20interconnection%20enquiry%20-%20JDEVPRO&amp;body=Hello%2C%0A%0ACompany%3A%0AMachine%20make%20and%20model%3A%0ACNC%20or%20PLC%20(if%20known)%3A%0ABusiness%20software%3A%0AData%20to%20exchange%3A%0ALocation%3A%0AContact%3A%0A",
+    "more": "Explore machine interconnection",
+    "moreHref": "en-machine-interconnection.html",
+    "methodEyebrow": "Our process",
+    "methodTitle": "From assessment to documentation, with clearly defined steps.",
+    "methodLead": "Each project starts with the machinery and systems already in place. The goal is verifiable data exchange, not just a network connection.",
+    "steps": [
+      [
+        "Assess the interfaces",
+        "Identify the machine make and model, PLC or CNC, available protocols, company network and business software. Define data exchange and project scope."
+      ],
+      [
+        "Develop the integration",
+        "Build the software, gateways and machine-to-business-system connections using the available interfaces and respecting plant operating conditions."
+      ],
+      [
+        "Test with real production data",
+        "Verify the exchange of jobs, machine states, progress and alarms according to the functions supported by the controller."
+      ],
+      [
+        "Document the result",
+        "Document configurations, connections, exchanged data and test evidence. Independent assessors remain responsible for certification and eligibility decisions."
+      ]
     ],
-    research_link=("Scopri ORYVAEL ↗", "https://jellero.github.io/ORYVAEL-web/"),
-    links=[("Scrivici", "#contatto"), ("GitHub", "https://github.com/jellero"), ("LinkedIn", "https://www.linkedin.com/in/jacopo-ellero-a006499a/")],
-  ),
-  "en": dict(
-    slug="en-about.html", nav="About",
-    title="About: Jacopo Ellero, developer and integrator | JDEVPRO",
-    desc="Jacopo Ellero, Friuli Venezia Giulia, Italy: developer and systems integrator. I connect machines and plants to business software for Industry 4.0 interconnection.",
-    eyebrow="About · Friuli Venezia Giulia, Italy",
-    h1="Jacopo Ellero. <span>From code to the field.</span>",
-    lead="I'm a software developer and systems integrator. I work across software, data, machines and infrastructure: I design APIs and business software, connect devices and installations, and look after systems in production. When needed I go on site, to workshops and installations, trained to do it safely.",
-    profile=[
-      "I work between code, infrastructure and business processes: I design services and APIs, integrate external platforms, maintain critical systems and follow problems to their real cause.",
-      "When a project involves machines, PLCs, gateways, sensors, networks or energy, I follow the technical flow end to end, keeping software, data and installations consistent.",
-      "I talk directly with owners, customers, suppliers and external developers, turning operational problems into verifiable technical solutions.",
+    "servicesEyebrow": "What we do",
+    "servicesTitle": "Technical services for manufacturers.",
+    "services": [
+      [
+        "Industry 4.0 machine interconnection",
+        "From production data collection to job exchange with business software, including machines already in service.",
+        "en-machine-interconnection.html",
+        "Machine interconnection"
+      ],
+      [
+        "Software and data integration",
+        "APIs, OPC UA, MTConnect, Modbus and gateways depending on existing systems and operating requirements.",
+        "en-software-integration-api.html",
+        "Integrations and automation"
+      ],
+      [
+        "JD Industry and manufacturing",
+        "Connecting machines, work orders, progress and actual costs with production software when the project calls for it.",
+        "en-erpnext-manufacturing.html",
+        "JD Industry"
+      ]
     ],
-    skills_e="Skills", skills_h="Backend, machines and infrastructure in one system.",
-    skills=[
-      ("Backend and systems integration", "Services, APIs and data flows between business systems, external providers, platforms and devices.",
-       ["PHP · Python · Go · JavaScript/TypeScript · C/C++ · Kotlin", "REST APIs · webhooks · B2B/B2C integrations", "PostgreSQL · MySQL/MariaDB · MSSQL · Redis", "RabbitMQ · queues · events · retries · idempotency", "Authentication · secrets management"]),
-      ("Industrial software and IoT", "Software that reads, controls and coordinates machines and devices within the production context.",
-       ["PLC and CODESYS runtime integration · embedded C", "RS-485 / RS-232 · Modbus · MQTT · serial gateways", "Machine states · production · alarms · sensors", "Machine-to-cloud · Wi-Fi · Bluetooth/BLE · LTE", "Jobs · costs · dashboards"]),
-      ("Production and infrastructure", "Environments, tools and procedures to keep systems reliable in operation.",
-       ["Linux · Nginx · PHP-FPM · Docker/Compose", "CI/CD · Git · deploy · rollback", "Log analysis · monitoring · troubleshooting", "Hardening · backups · recovery", "Networking · VPN · VLAN · remote connectivity"]),
+    "proofEyebrow": "Practical experience",
+    "proofTitle": "Integration is visible in production data.",
+    "proofText": "From SCM edgebanders to Essetre/Tecnoessetre CNC systems: in the JDEVPRO projects described on this site, production data reaches business software and can be associated with work orders. Technical examples and interconnection methods are documented on the service pages.",
+    "proofLink": "See interconnection examples",
+    "proofHref": "en-machine-interconnection.html",
+    "identityEyebrow": "Accountability",
+    "identityTitle": "A named technical contact and clear professional responsibilities.",
+    "identity": [
+      "JDEVPRO is the professional business of Jacopo Ellero, who handles software development and technical integration between machines, infrastructure and business systems. Customers have an identifiable technical point of contact.",
+      "Where electrical wiring or panels are required, those activities are performed by licensed installers. Independent assessors remain responsible for tax-incentive evaluations and certification: developing the interconnection and assessing it are separate responsibilities."
     ],
-    field_e="On site", field_h="Trained to work safely inside installations.",
-    field_p="Connecting machines, sensors and devices often means working in workshops, near panels and installations, not just at a computer. Wiring, lines and panels remain with electricians licensed under Italian law (DM 37/08): I take care of devices, configuration, software and data.",
-    certs=[
-      ("PES / PAV", "Qualification for electrical work under Italian standard CEI 11-27: skilled and instructed person."),
-      ("Low voltage", "Training to work safely around single- and three-phase low-voltage installations: up to 1000 V AC and 1500 V DC."),
-      ("Work at height", "Work at height with fall-protection equipment."),
-      ("MEWP (PLE)", "Operation of mobile elevating work platforms."),
-    ],
-    projects_e="Projects", projects_h="What I have built.",
-    projects=[
-      ("Welora", "Multi-property management platform with a separate automation engine.", "https://welora.it/"),
-      ("JD Industry", "Production software connected to machines.", "en-machine-interconnection.html"),
-    ],
-    akios_e="Development", akios_h="AKIOS: IoT devices that update without breaking.",
-    akios_p=[
-      "AKIOS is the project I am developing for IoT device makers: a layer living inside the device that governs its whole lifecycle, from first setup to updates and recovery when something goes wrong.",
-      "Every update is signed and verified, starts as a trial and is committed only if the device works; otherwise it rolls back by itself to the last good version. If no valid system is left, the device opens a local recovery network and is restored from a phone, never bricked.",
-      "The firmware already runs on Beken BK7238 chips, widely used in Wi-Fi devices, and AKIOS is offered to European manufacturers through a pilot programme: one device, a clear scope, validation on real hardware. It is built for makers who must guarantee secure updates for years, as the EU Cyber Resilience Act requires.",
-    ],
-    akios_points=["Signed and verified updates", "Trial, commit or automatic rollback", "Local recovery from a phone", "No forced cloud migration"],
-    akios_links=[("Discover AKIOS ↗", "https://akios.cloud/"), ("Pilot programme ↗", "https://akios-pilot.com/")],
-    research_e="Research", research_h="ORYVAEL: an operating system where AI does the work, but does not rule.",
-    research_p=[
-      "ORYVAEL is my most ambitious research project: an AI-native operating system where artificial intelligence can design, write, test and maintain software, while authority always stays with people.",
-      "The core idea is to separate intelligence from authority: AI is powerful but untrusted. Every action is scoped, observable, attributable, reproducible and reversible. It cannot grant itself permissions, disable controls or sign releases.",
-      "It is written in Rust, with a kernel running directly on hardware, and plans profiles for desktop, mobile and embedded/IoT devices. It is the same principle I apply to clients' systems every day: automation yes, but with control, history and the ability to roll back.",
-    ],
-    research_link=("Discover ORYVAEL ↗", "https://jellero.github.io/ORYVAEL-web/"),
-    links=[("Write to us", "#contatto"), ("GitHub", "https://github.com/jellero"), ("LinkedIn", "https://www.linkedin.com/in/jacopo-ellero-a006499a/")],
-  ),
+    "identityLink": "Explore our industrial services",
+    "identityHref": "en-machine-interconnection.html"
+  }
 }
