@@ -115,12 +115,16 @@ def build_page(lang, head, header, footer, contact, base, org_ref, org_id):
     nano_specs_html = "".join(f"<li>{spec}</li>" for spec in p["nano_specs"])
     nano_media = f"""<figure class="nanodrive-product-visual">
 <div class="nanodrive-product-pictures">
-<a class="nanodrive-photo" href="assets/nanodrive-front.webp" target="_blank" rel="noopener" aria-label="Apri la foto originale NanoPi NEO3 Plus, vista frontale">
-<img src="assets/nanodrive-front.webp" alt="Foto reale del NanoPi NEO3 Plus, vista frontale con slot scheda e LED" loading="lazy" width="496" height="362">
-</a>
-<a class="nanodrive-photo" href="assets/nanodrive-back.webp" target="_blank" rel="noopener" aria-label="Apri la foto originale NanoPi NEO3 Plus, lato porte">
-<img src="assets/nanodrive-back.webp" alt="Foto reale del NanoPi NEO3 Plus: porte USB-C, USB 3.0 ed Ethernet Gigabit" loading="lazy" width="526" height="401">
-</a>
+<div class="nanodrive-photo nanodrive-front">
+<img src="assets/nanodrive-front.webp" alt="NanoDrive: vista frontale del dispositivo, con branding SmartDrive JDEVPRO e QR sul coperchio" loading="lazy" width="496" height="362">
+<span class="nanodrive-device-brand">NanoDrive<small>SmartDrive · JDEVPRO</small></span>
+<a class="nanodrive-device-qr" href="https://www.jdevpro.it/" aria-label="QR NanoDrive, apre il sito JDEVPRO"><img src="assets/nanodrive-qr.svg" width="72" height="72" alt="QR del sito JDEVPRO"></a>
+</div>
+<div class="nanodrive-photo nanodrive-rear">
+<img src="assets/nanodrive-back.webp" alt="NanoDrive: porte USB-C, USB 3.0 ed Ethernet, marchio e QR sul coperchio" loading="lazy" width="526" height="401">
+<span class="nanodrive-device-brand">NanoDrive<small>SmartDrive · JDEVPRO</small></span>
+<a class="nanodrive-device-qr" href="https://www.jdevpro.it/" aria-label="QR NanoDrive, apre il sito JDEVPRO"><img src="assets/nanodrive-qr.svg" width="72" height="72" alt="QR del sito JDEVPRO"></a>
+</div>
 </div>
 <figcaption>{p['nano_figure']}</figcaption>
 </figure>"""
@@ -161,13 +165,18 @@ def build_page(lang, head, header, footer, contact, base, org_ref, org_id):
 <section class="section section-tight section-paper">
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">Windows · Mac</p><h2>{p['desktop']}</h2><p>{p['desktop_text']}</p></div>
-<div class="reveal"><h3>{p['security']}</h3><p>{p['security_text']}</p></div>
+<div class="reveal smartdrive-visual-panel">
+<img src="assets/smartdrive-desktop-visual.svg" alt="SmartDrive su Windows e Mac: backup incrementale, cartelle e versioni dei documenti" width="840" height="520" loading="lazy">
+<div class="smartdrive-visual-caption"><h3>{p['security']}</h3><p>{p['security_text']}</p></div>
+</div>
 </div>
 </section>
 <section class="section section-tight section-white smartdrive-mobile">
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">Android · iPhone · {p['status']}</p><h2>{p['mobile']}</h2><p>{p['mobile_text']}</p></div>
-<div class="reveal"><ul class="product-points">{mobile_points}</ul></div>
+<div class="reveal smartdrive-visual-panel">
+<img src="assets/smartdrive-mobile-visual.svg" alt="SmartDrive su Android e iPhone: foto, video e dati con backup protetto" width="840" height="520" loading="lazy">
+<ul class="product-points">{mobile_points}</ul></div>
 </div>
 </section>
 <section class="section section-tight section-paper smartdrive-nano" id="nanodrive">
@@ -180,10 +189,7 @@ def build_page(lang, head, header, footer, contact, base, org_ref, org_id):
 <div class="nanodrive-hardware-details">
 <h3>{p['nano_hw_title']}</h3><ul class="nanodrive-specs">{nano_specs_html}</ul>
 <p class="status-note">{p['nano_hw_note']}</p>
-<a class="nanodrive-qr-card" href="https://www.jdevpro.it/smartdrive.html#nanodrive" aria-label="{p['nano_scan']}">
-<img src="assets/nanodrive-qr.svg" width="100" height="100" alt="QR code per la pagina NanoDrive" loading="lazy">
-<span><strong>{p['nano_scan']}</strong><small>www.jdevpro.it/smartdrive.html#nanodrive</small></span>
-</a>
+
 </div>
 </div>
 </section>
