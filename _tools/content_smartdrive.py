@@ -8,20 +8,20 @@ CONTENT = {
     "it": {
         "slug": "smartdrive.html",
         "title": "SmartDrive: backup e sincronizzazione per PC e smartphone | JDEVPRO",
-        "description": "SmartDrive, archivio e backup indipendenti da SmartAgent. In arrivo per Windows, Android e iPhone, con backup foto e file. Piani da 4,90 €/mese.",
+        "description": "SmartDrive, archivio e backup indipendenti da SmartAgent. In arrivo per Windows, Mac, Android e iPhone, con backup foto e file. Piani da 4,90 €/mese.",
         "eyebrow": "Nuovo prodotto JDEVPRO · presto disponibile",
         "h1": "SmartDrive: <span>i tuoi file al sicuro, ovunque.</span>",
-        "lead": "SmartDrive non è semplice storage cloud: è una soluzione di sicurezza operativa per aziende e professionisti. Backup incrementali, cronologia dei documenti, recupero e gestione semplice di più terminali, con Windows, Android e iPhone previsti nel prodotto completo al lancio.",
+        "lead": "SmartDrive non è semplice storage cloud: è una soluzione di sicurezza operativa per aziende e professionisti. Backup incrementali, cronologia dei documenti, recupero e gestione semplice di più terminali, con Windows, Mac, Android e iPhone previsti nel prodotto completo al lancio.",
         "cta": "Scopri i prezzi previsti", "secondary": "Chiedi informazioni",
         "intro_title": "I tuoi documenti, recuperabili quando servono.",
         "intro": "SmartDrive è un pacchetto autonomo pensato per proteggere il lavoro aziendale: backup incrementali, versionamento e ripristino. Puoi gestire più dispositivi e, se utilizzi SmartAgent, collegare i file a clienti e pratiche.",
         "benefits": [
             ("Solo SmartDrive", "Backup incrementale di cartelle e file, cronologia delle versioni e recupero dei documenti. Nessun piano SmartAgent richiesto."),
             ("Con SmartAgent", "Integrazione facoltativa: documenti collegabili a clienti e pratiche, senza perdere l'archivio autonomo."),
-            ("Più dispositivi", "Un solo archivio per Windows, Android e iPhone: tutte le applicazioni fanno parte del prodotto previsto al lancio."),
+            ("Più dispositivi", "Un solo archivio per Windows, Mac, Android e iPhone: tutte le applicazioni fanno parte del prodotto previsto al lancio."),
         ],
-        "desktop": "Backup incrementali per i documenti di lavoro",
-        "desktop_text": "Il prodotto previsto al lancio comprende collegamenti multipli per Documenti, Desktop e altre cartelle, controllo dello stato dei file in Esplora file, versioni e ripristino. Distribuzione Windows prevista tramite Microsoft Store; SmartDrive non è ancora pubblicato.",
+        "desktop": "Backup incrementali per i documenti di lavoro su Windows e Mac",
+        "desktop_text": "Il prodotto previsto al lancio comprende collegamenti multipli per Documenti, Desktop e altre cartelle, controllo dello stato dei file in Esplora file, versioni e ripristino. La versione Windows è prevista nel Microsoft Store; anche la versione Mac fa parte del rilascio completo. SmartDrive non è ancora pubblicato.",
         "security": "Collegamento protetto, senza configurazioni complicate",
         "security_text": "Il flusso progettato usa un codice monouso valido 2 minuti con conto alla rovescia. Ogni computer riceve una propria credenziale revocabile, non mostrata all'utente. Il dispositivo si collega senza dover inserire indirizzo del server o password nell'app desktop.",
         "mobile": "Backup di foto e dati su Android e iPhone",
@@ -32,28 +32,28 @@ CONTENT = {
         "standalone": "SmartDrive da solo", "integrated": "Con piano SmartAgent",
         "plan": "Spazio", "trial": "Prevista una prova di 30 giorni con 5 GB e senza carta di credito al lancio.",
         "status": "Presto disponibile",
-        "status_text": "Il prodotto è in sviluppo e sarà rilasciato come soluzione completa con Windows, Android e iPhone, backup foto e dati, archivio e sincronizzazione. Nessuna di queste applicazioni è ancora disponibile e questa pagina non accetta acquisti.",
+        "status_text": "Il prodotto è in sviluppo e sarà rilasciato come soluzione completa con Windows, Mac, Android e iPhone, backup foto e dati, archivio e sincronizzazione. Nessuna di queste applicazioni è ancora disponibile e questa pagina non accetta acquisti.",
         "related": "Usi già SmartAgent?", "related_text": "SmartDrive è un pacchetto indipendente, ma può integrare il gestionale con archivio e backup collegati a clienti e pratiche.",
         "related_cta": "Scopri SmartAgent", "home": "Home", "products": "Prodotti",
-        "platforms": "Windows · Android · iPhone",
+        "platforms": "Windows · Mac · Android · iPhone",
     },
     "en": {
         "slug": "en-smartdrive.html",
         "title": "SmartDrive: PC and mobile file backup and sync | JDEVPRO",
-        "description": "SmartDrive is standalone storage and backup, optionally integrated with SmartAgent. Coming to Windows, Android and iPhone with photo backup. From €4.90/month.",
+        "description": "SmartDrive is standalone storage and backup, optionally integrated with SmartAgent. Coming to Windows, Mac, Android and iPhone with photo backup. From €4.90/month.",
         "eyebrow": "New JDEVPRO product · coming soon",
         "h1": "SmartDrive: <span>your files, protected and within reach.</span>",
-        "lead": "SmartDrive goes beyond cloud storage: it is planned as operational data protection for businesses and professionals. Incremental backups, file history, recovery and easy multi-device management, with Windows, Android and iPhone in the launch product.",
+        "lead": "SmartDrive goes beyond cloud storage: it is planned as operational data protection for businesses and professionals. Incremental backups, file history, recovery and easy multi-device management, with Windows, Mac, Android and iPhone in the launch product.",
         "cta": "View planned pricing", "secondary": "Ask for details",
         "intro_title": "Recover the documents your business depends on.",
         "intro": "SmartDrive is a standalone package designed for business data protection: incremental backups, version history, recovery and multiple managed devices. SmartAgent integration is optional.",
         "benefits": [
             ("SmartDrive on its own", "Incremental folder backup, file history and recovery, without a SmartAgent subscription."),
             ("With SmartAgent", "Optional integration: link documents to clients and cases while retaining your independent file space."),
-            ("Across devices", "One file space for Windows, Android and iPhone: all three apps are included in the planned launch product."),
+            ("Across devices", "One file space for Windows, Mac, Android and iPhone: all four apps are included in the planned launch product."),
         ],
-        "desktop": "Incremental backup for business documents",
-        "desktop_text": "SmartDrive will include incremental backups of work folders, recoverable versions and simple device management. The Windows app is planned for Microsoft Store. Recovery workflows must be tested before release.",
+        "desktop": "Incremental backup for business documents on Windows and Mac",
+        "desktop_text": "SmartDrive will include incremental backups of work folders, recoverable versions and simple device management. The Windows app is planned for Microsoft Store; the Mac app is part of the same complete release. Recovery workflows must be tested before release.",
         "security": "Secure pairing without complicated setup",
         "security_text": "The planned flow uses a single-use pairing code that lasts 2 minutes, with a countdown. Each computer gets its own revocable credential that is never shown to the user. No server address or password must be typed into the desktop app.",
         "mobile": "Photo and data backup for Android and iPhone",
@@ -64,10 +64,10 @@ CONTENT = {
         "standalone": "SmartDrive only", "integrated": "With SmartAgent plan",
         "plan": "Storage", "trial": "A 30-day trial with 5 GB and no card is planned for launch.",
         "status": "Coming soon",
-        "status_text": "SmartDrive is under development as a complete Windows, Android and iPhone solution, including photo and data backup, storage and syncing. None of these apps has been released yet and this page does not accept purchases.",
+        "status_text": "SmartDrive is under development as a complete Windows, Mac, Android and iPhone solution, including photo and data backup, storage and syncing. None of these apps has been released yet and this page does not accept purchases.",
         "related": "Already using SmartAgent?", "related_text": "SmartDrive is a separate product but can integrate with the CRM to associate stored documents with clients and cases.",
         "related_cta": "Explore SmartAgent", "home": "Home", "products": "Products",
-        "platforms": "Windows · Android · iPhone",
+        "platforms": "Windows · Mac · Android · iPhone",
     },
 }
 
@@ -128,7 +128,7 @@ def build_page(lang, head, header, footer, contact, base, org_ref, org_id):
 </section>
 <section class="section section-tight section-paper">
 <div class="shell split">
-<div class="section-heading reveal"><p class="eyebrow">Windows</p><h2>{p['desktop']}</h2><p>{p['desktop_text']}</p></div>
+<div class="section-heading reveal"><p class="eyebrow">Windows · Mac</p><h2>{p['desktop']}</h2><p>{p['desktop_text']}</p></div>
 <div class="reveal"><h3>{p['security']}</h3><p>{p['security_text']}</p></div>
 </div>
 </section>
