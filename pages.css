@@ -463,3 +463,18 @@
   .smartdrive-desktop .section-heading h2, .smartdrive-mobile .section-heading h2 { max-width: 24ch; }
 }
 
+
+/* JDEVPRO industrial service qualification: high-contrast, responsive. */
+.industrial-request { background: #eaf2fb; }
+.industrial-request-grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(24px, 4vw, 58px); align-items: center; }
+.industrial-request .section-heading h2 { max-width: 18ch; color: #0b203a; font-size: clamp(2rem, 3vw, 3.25rem); line-height: 1.12; }
+.industrial-request .section-heading p:not(.eyebrow) { color: #304c67; line-height: 1.7; max-width: 62ch; }
+.industrial-request .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+.industrial-request-details { padding: clamp(24px, 3vw, 36px); background: #fff; border: 1px solid #c7daee; border-radius: 18px; box-shadow: 0 14px 30px rgba(17, 48, 83, .07); color: #19324a; }
+.industrial-request-details h3 { margin: 0 0 18px; color: #09253f; font-size: clamp(1.2rem, 2vw, 1.65rem); }
+.industrial-request-details ul { padding: 0; margin: 0 0 20px; list-style: none; display: grid; gap: 13px; }
+.industrial-request-details li { position: relative; padding-left: 26px; line-height: 1.5; }
+.industrial-request-details li::before { content: "✓"; position: absolute; left: 0; color: #0867c9; font-weight: 800; }
+.industrial-request-details p { margin: 0; line-height: 1.65; color: #38536d; }
+.industrial-request-details a { color: #095aaf; text-underline-offset: 3px; }
+@media (max-width: 860px) { .industrial-request-grid { grid-template-columns: 1fr; } }
