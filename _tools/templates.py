@@ -479,14 +479,14 @@ def home(lang="it"):
     w = WHY[lang]
     if lang == "it":
         sd = {"tag": "Nuovo prodotto · presto disponibile",
-              "title": "SmartDrive: backup e sincronizzazione, anche senza SmartAgent.",
-              "desc": "Il prodotto in arrivo include Windows, Android e iPhone: backup di cartelle, foto, video e dati selezionati. Archivio autonomo oppure integrato in SmartAgent.",
+              "title": "SmartDrive: sicurezza operativa, non solo spazio cloud.",
+              "desc": "Backup incrementale dei documenti, versionamento, recupero e gestione semplice di più terminali. Prodotto autonomo, integrabile in SmartAgent, con Windows, Android e iPhone al lancio.",
               "cta": "Scopri SmartDrive", "price": "Da 4,90 €/mese · 100 GB · IVA esclusa"}
         sd_link = "smartdrive.html"
     else:
         sd = {"tag": "New product · coming soon",
-              "title": "SmartDrive: independent backup and sync, with optional SmartAgent integration.",
-              "desc": "The planned product includes Windows, Android and iPhone apps for backing up folders, photos, videos and selected data. One standalone file space.",
+              "title": "SmartDrive: business continuity beyond cloud storage.",
+              "desc": "Incremental business backups, version history, recovery and easy multi-device management. Standalone or integrated with SmartAgent, including Windows, Android and iPhone at launch.",
               "cta": "Explore SmartDrive", "price": "From €4.90/month · 100 GB · excl. VAT"}
         sd_link = "en-smartdrive.html"
     body = f"""{header("index.html" if lang == "it" else "en.html", lang, home=True, switch="en.html" if lang == "it" else "index.html")}<main id="main">
@@ -664,12 +664,12 @@ def products_index(lang):
     drive_target = "smartdrive.html" if lang == "it" else "en-smartdrive.html"
     if lang == "it":
         drive_label, drive_title = "Pacchetto indipendente · in arrivo", "SmartDrive"
-        drive_desc = "Archivio, sincronizzazione e backup dei file. SmartDrive è un pacchetto separato: lo usi senza SmartAgent oppure lo integri con il gestionale."
+        drive_desc = "Backup incrementale, versioni e recupero dei documenti aziendali. SmartDrive è autonomo o integrabile in SmartAgent, con più terminali gestiti facilmente."
         drive_more = "Scopri SmartDrive →"
         drive_points = ["Windows, Android e iPhone previsti al lancio", "Backup foto, video, cartelle e dati selezionati", "Autonomo o integrato in SmartAgent", "Presto disponibile"]
     else:
         drive_label, drive_title = "Standalone package · coming soon", "SmartDrive"
-        drive_desc = "File storage, sync and backup as a separate package. Use SmartDrive independently, or connect it to SmartAgent for client and case documents."
+        drive_desc = "Incremental backup, file versions and recovery for businesses. SmartDrive is standalone or optionally integrated with SmartAgent, with simple multi-device management."
         drive_more = "Explore SmartDrive →"
         drive_points = ["Windows, Android and iPhone at planned launch", "Photo, video, folder and selected data backup", "Standalone or with SmartAgent", "Coming soon"]
     rows += f"""<article class="product-row product-card-smartdrive reveal">
