@@ -1346,37 +1346,23 @@ def about(lang="it"):
     other = ABOUT["en" if lang == "it" else "it"]["slug"]
     home_slug = "index.html" if lang == "it" else "en.html"
     url = url_of(a["slug"])
-    profile = "".join(f"<p>{x}</p>" for x in a["profile"])
-    skills = "\n".join(
-        f'<article class="pillar reveal"><span class="competence-num">0{i}</span><h3>{h}</h3><p>{d}</p>'
-        f'<ul>{"".join(f"<li>{x}</li>" for x in items)}</ul></article>'
-        for i, (h, d, items) in enumerate(a["skills"], 1))
-    certs = "".join(f'<article class="cert reveal"><strong>{h}</strong><span>{d}</span></article>' for h, d in a["certs"])
-
-    def ext_attr(link):
-        return ' rel="noreferrer" target="_blank"' if link.startswith("http") else ""
-
-    shots = {"Welora": ("assets/welora-app.webp", 756, 572), "JD Industry": ("assets/jd-industry-progetto.webp", 1600, 1000)}
-    projects = "".join(
-        f'<a class="build-card reveal" href="{link}"{ext_attr(link)}>'
-        + (f'<span class="build-shot"><img src="{shots[n][0]}" alt="{n}" width="{shots[n][1]}" height="{shots[n][2]}" loading="lazy" decoding="async"></span>' if n in shots else '')
-        + f'<span class="build-body"><strong>{n}{" ↗" if link.startswith("http") else ""}</strong><span>{d}</span></span></a>'
-        for n, d, link in a["projects"])
-    links = "".join(
-        f'<a class="button {"primary" if i == 0 else "ghost dark"}" href="{l}"{ext_attr(l)}>{n}</a>'
-        for i, (n, l) in enumerate(a["links"]))
-    person = {"@context": "https://schema.org", "@type": "Person", "name": "Jacopo Ellero", "url": url,
-              "jobTitle": "Sviluppatore e integratore di sistemi" if lang == "it" else "Software developer and systems integrator",
-              "worksFor": {"@id": ORG_ID}, "address": ADDRESS,
-              "knowsAbout": [s[0] for s in a["skills"]],
-              "hasCredential": [{"@type": "EducationalOccupationalCredential", "name": c[0], "description": c[1]} for c in a["certs"]],
-              "sameAs": ["https://github.com/jellero", LI]}
-    jsonld = [{"@context": "https://schema.org", "@type": "ProfilePage", "url": url, "mainEntity": person},
-              {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-                  {"@type": "ListItem", "position": 1, "name": UI[lang]["home"], "item": url_of(home_slug)},
-                  {"@type": "ListItem", "position": 2, "name": a["nav"], "item": url}]},
-              ORG_REF]
-    profile_e, profile_h = ("Profilo", "Come lavoro.") if lang == "it" else ("Profile", "How I work.")
+    def stats():
+        return '<ul class="hero-stats">' + "".join(
+            f'<li><a class="stat" href="{href}"><strong>{name}</strong><span>{detail}</span></a></li>'
+            for name, detail, href in a["stats"]) + '</ul>'
+    steps = "".join(f'<li><strong>{name}</strong><span>{detail}</span></li>' for name, detail in a["steps"])
+    services = "".join(
+        f'<article class="outcome reveal"><h3>{name}</h3><p>{detail}</p>'
+        f'<a class="card-link" href="{href}">{label} →</a></article>'
+        for name, detail, href, label in a["services"])
+    identity = "".join(f'<p>{p}</p>' for p in a["identity"])
+    jsonld = [
+      {"@context": "https://schema.org", "@type": "AboutPage", "url": url,
+       "name": a["title"], "about": {"@id": ORG_ID}},
+      {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": UI[lang]["home"], "item": url_of(home_slug)},
+          {"@type": "ListItem", "position": 2, "name": a["nav"], "item": url}]},
+      ORG_REF]
     body = f"""{header(a['slug'], lang, switch=other)}<main id="main">
 <section class="hero page-hero">
 <div aria-hidden="true" class="hero-grid"></div>
@@ -1385,55 +1371,34 @@ def about(lang="it"):
 <p class="eyebrow">{a['eyebrow']}</p>
 <h1>{a['h1']}</h1>
 <p class="hero-lead">{a['lead']}</p>
-{stats_html("about", lang)}
-</div>
-</section>
+<div class="hero-actions"><a class="button primary" href="{a['actionHref']}">{a['action']}</a><a class="button ghost" href="{a['moreHref']}">{a['more']}</a></div>
+{stats()}
+</div></section>
+<section class="section section-tight section-white" id="metodo">
+<div class="shell split">
+<div class="section-heading reveal"><p class="eyebrow">{a['methodEyebrow']}</p><h2>{a['methodTitle']}</h2><p>{a['methodLead']}</p></div>
+<ol class="method-steps reveal">{steps}</ol>
+</div></section>
+<section class="section section-tight section-paper">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">{a['servicesEyebrow']}</p><h2>{a['servicesTitle']}</h2></div>
+<div class="outcome-grid">{services}</div>
+</div></section>
 <section class="section section-tight section-white">
 <div class="shell split">
-<div class="section-heading reveal"><p class="eyebrow">{profile_e}</p><h2>{profile_h}</h2></div>
-<div class="profile-copy reveal">{profile}<div class="hero-actions">{links}</div></div>
-</div>
-</section>
+<div class="section-heading reveal"><p class="eyebrow">{a['proofEyebrow']}</p><h2>{a['proofTitle']}</h2><p>{a['proofText']}</p><a class="card-link" href="{a['proofHref']}">{a['proofLink']} →</a></div>
+<figure class="product-shot reveal"><img src="assets/jd-industry-progetto.webp" alt="JD Industry — gestionale di produzione e interconnessione macchine" width="1600" height="1000" loading="lazy" decoding="async"></figure>
+</div></section>
 <section class="section section-tight section-paper">
-<div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">{a['skills_e']}</p><h2>{a['skills_h']}</h2></div>
-<div class="pillar-grid">
-{skills}
-</div>
-</div>
-</section>
-<section class="section section-tight section-dark">
-<div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">{a['field_e']}</p><h2>{a['field_h']}</h2><p class="field-lead">{a['field_p']}</p></div>
-<div class="cert-grid">{certs}</div>
-</div>
-</section>
-<section class="section section-tight section-dark akios-section">
 <div class="shell split">
-<div class="section-heading reveal"><p class="eyebrow">{a['akios_e']}</p><h2>{a['akios_h']}</h2>
-<ul class="akios-points">{"".join(f"<li>{x}</li>" for x in a["akios_points"])}</ul></div>
-<div class="research-copy reveal">{"".join(f"<p>{x}</p>" for x in a["akios_p"])}<div class="hero-actions">{"".join(f'<a class="button {"primary" if i == 0 else "ghost"}" href="{l}" rel="noreferrer" target="_blank">{n}</a>' for i, (n, l) in enumerate(a["akios_links"]))}</div></div>
-</div>
-</section>
-<section class="section section-tight section-dark">
-<div class="shell split">
-<div class="section-heading reveal"><p class="eyebrow">{a['research_e']}</p><h2>{a['research_h']}</h2></div>
-<div class="research-copy reveal">{"".join(f"<p>{x}</p>" for x in a["research_p"])}<div class="hero-actions"><a class="button primary" href="{product_slug(lang, 'oryvael')}">{UI[lang]['more'].replace(' →', '')}</a><a class="button ghost" href="{a['research_link'][1]}" rel="noreferrer" target="_blank">{a['research_link'][0]}</a></div></div>
-</div>
-</section>
-<section class="section section-tight section-paper">
-<div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">{a['projects_e']}</p><h2>{a['projects_h']}</h2></div>
-<div class="build-grid">{projects}</div>
-</div>
-</section>
-{contact(lang)}</main>
-"""
+<div class="section-heading reveal"><p class="eyebrow">{a['identityEyebrow']}</p><h2>{a['identityTitle']}</h2></div>
+<div class="profile-copy reveal">{identity}<a class="card-link" href="{a['identityHref']}">{a['identityLink']} →</a></div>
+</div></section>
+{contact(lang)}</main>"""
     return head(a["title"], a["desc"], a["slug"], jsonld, lang,
                 alternates=[("it", ABOUT["it"]["slug"]), ("en", ABOUT["en"]["slug"])]) + body + footer(lang)
 
 
-# ---------------------------------------------------------------- prodotti (AKIOS, ORYVAEL)
 
 def ext(href):
     return ' rel="noreferrer" target="_blank"' if href.startswith("http") else ""
