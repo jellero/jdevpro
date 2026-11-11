@@ -9,8 +9,8 @@ PRODUCTS = {
   "it": [
     dict(
       key="smartagent", slug="smartagent.html", site="https://smartagent.jdevpro.it/", nav="SmartAgent",
-      title="SmartAgent: il gestionale per chi lavora con i clienti, da 29,90 € al mese | JDEVPRO",
-      desc="SmartAgent riunisce clienti, mail e PEC, agenda con giro visite e traffico, pratiche, preventivi, fatture, documenti, note spese e, a breve, archivio e backup dei file del PC con SmartAgent Drive. Per agenti, periti, studi tecnici, manutentori e avvocati. Da 29,90 € al mese.",
+      title="SmartAgent: gestionale per professionisti e agenti | JDEVPRO",
+      desc="SmartAgent unisce clienti, email e PEC, agenda e giro visite, preventivi, fatture e spese. Gestionale per professionisti e agenti, da 29,90 € al mese.",
       card="Disponibile ora: clienti, mail, agenda con giro visite, pratiche, preventivi, fatture e documenti in un'unica app che si aggiorna da sola. A breve Drive, archivio e backup dei file del PC. Da 29,90 € al mese.",
       eyebrow="Prodotto · Gestionale per professionisti e agenti",
       h1="SmartAgent: meno tempo in ufficio, <span>più tempo dai clienti.</span>",
@@ -339,8 +339,8 @@ PRODUCTS = {
   "en": [
     dict(
       key="smartagent", slug="en-smartagent.html", site="https://smartagent.jdevpro.it/", nav="SmartAgent",
-      title="SmartAgent: CRM for professionals who work with clients, from €29.90/month | JDEVPRO",
-      desc="SmartAgent brings clients, email and certified email, calendar with route planning and traffic, cases, quotes, invoices, documents, expenses and, coming soon, PC file storage and backup with SmartAgent Drive together. For sales agents, surveyors, engineering firms and maintenance companies. From €29.90/month.",
+      title="SmartAgent: CRM for professionals and agents | JDEVPRO",
+      desc="SmartAgent brings clients, email, appointments, routes, quotes and invoices into one app for professionals and sales agents. In Italian, from €29.90/month.",
       card="Available now: clients, email, calendar with route planning, cases, quotes, invoices and documents in one app that keeps itself up to date. Coming soon: Drive, storage and backup for your PC files. From €29.90 a month.",
       eyebrow="Product · Management software for professionals and agents",
       h1="SmartAgent: less time in the office, <span>more time with clients.</span>",
