@@ -629,8 +629,26 @@ def products_index(lang):
 <div class="product-side">{(lambda s: f'<img class="product-thumb" src="{s[0]}" alt="{s[3]}" width="{s[1]}" height="{s[2]}" loading="lazy" decoding="async">' if s else '')(PRODUCT_SHOTS.get(x["key"]))}<ul class="status-list">{pts}</ul></div>
 </article>
 """
+    drive_target = ("smartagent.html" if lang == "it" else "en-smartagent.html") + "#smartdrive"
+    if lang == "it":
+        drive_label, drive_title = "Pacchetto indipendente · in arrivo", "SmartDrive"
+        drive_desc = "Archivio, sincronizzazione e backup dei file. SmartDrive è un pacchetto separato: lo usi senza SmartAgent oppure lo integri con il gestionale."
+        drive_more = "Scopri SmartDrive →"
+        drive_points = ["Usabile anche senza SmartAgent", "Integrazione facoltativa con clienti e pratiche", "Archivio, versioni e recupero file", "Disponibile a breve"]
+    else:
+        drive_label, drive_title = "Standalone package · coming soon", "SmartDrive"
+        drive_desc = "File storage, sync and backup as a separate package. Use SmartDrive independently, or connect it to SmartAgent for client and case documents."
+        drive_more = "Explore SmartDrive →"
+        drive_points = ["Works without SmartAgent", "Optional integration with clients and cases", "Storage, version history and recovery", "Coming soon"]
+    rows += f"""<article class="product-row product-card-smartdrive reveal">
+<div><p class="eyebrow">{drive_label}</p><h2>{drive_title}</h2><p class="product-card-text">{drive_desc}</p>
+<a class="button primary" href="{drive_target}">{drive_more}</a></div>
+<div class="product-side"><ul class="status-list">{''.join(f'<li>{p}</li>' for p in drive_points)}</ul></div>
+</article>
+"""
     jsonld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": pp["nav"], "description": pp["desc"], "url": url_of(pp["slug"]),
-               "hasPart": [{"@type": "CreativeWork", "name": x["nav"], "url": x["slug"] if x.get("external") else BASE + x["slug"]} for x in products(lang)]},
+               "hasPart": [{"@type": "CreativeWork", "name": x["nav"], "url": x["slug"] if x.get("external") else BASE + x["slug"]} for x in products(lang)]
+               + [{"@type": "SoftwareApplication", "name": "SmartDrive", "url": BASE + drive_target}]},
               {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
                   {"@type": "ListItem", "position": 1, "name": u["home"], "item": url_of(home_slug)},
                   {"@type": "ListItem", "position": 2, "name": pp["nav"], "item": url_of(pp["slug"])}]}, ORG_REF]
@@ -1428,7 +1446,8 @@ def product_block(b, bg):
     if kind == "flow":
         _, eyebrow, h2, steps = b
         li = "".join(f"<li><strong>{t}</strong><span>{d}</span></li>" for t, d in steps)
-        return f"""<section class="section section-tight {bg}">
+        anchor = ' id="smartdrive"' if eyebrow.startswith("SmartDrive") else ""
+        return f"""<section{anchor} class="section section-tight {bg}">
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">{eyebrow}</p><h2>{h2}</h2></div>
 <ol class="method-steps reveal">{li}</ol>
@@ -1521,6 +1540,11 @@ def product_page(pr, lang):
                    "applicationCategory": "BusinessApplication", "operatingSystem": "Web",
                    "offers": {"@type": "Offer", "price": "29", "priceCurrency": "EUR", "availability": "https://schema.org/PreOrder"},
                    "publisher": {"@id": ORG_ID}, "sameAs": ["https://welora.it/"]}
+    elif pr["key"] == "smartagent":
+        main_ld = {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "SmartAgent",
+                   "description": pr["desc"], "url": url, "applicationCategory": "BusinessApplication",
+                   "operatingSystem": "Web", "publisher": {"@id": ORG_ID}, "sameAs": ["https://smartagent.jdevpro.it/"],
+                   "offers": {"@type": "Offer", "price": "29.90", "priceCurrency": "EUR"}}
     elif pr["key"] == "erp":
         main_ld = {"@context": "https://schema.org", "@type": "Service", "name": pr["nav"], "description": pr["desc"], "url": url,
                    "serviceType": "ERP", "provider": {"@id": ORG_ID}, "areaServed": "IT",
