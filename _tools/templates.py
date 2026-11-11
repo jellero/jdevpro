@@ -482,14 +482,14 @@ def home(lang="it"):
               "title": "SmartDrive: sicurezza operativa, non solo spazio cloud.",
               "desc": "Backup incrementale dei documenti, versionamento, recupero e gestione semplice di più terminali. Prodotto autonomo, integrabile in SmartAgent, con Windows, Mac, Android e iPhone al lancio.",
               "cta": "Scopri SmartDrive", "price": "Da 4,90 €/mese · 100 GB · IVA esclusa",
-              "nano": "Preferisci conservare i dati in locale? NanoDrive collega NAS, dischi e chiavette: accesso remoto protetto previsto a 2 €/mese.", "nano_cta": "Scopri NanoDrive"}
+              "nano": "Preferisci conservare i dati in locale? NanoDrive collega NAS, dischi e USB. Offerta di lancio prevista: 50 € con 12 mesi di servizio inclusi; poi 2 €/mese.", "nano_cta": "Scopri NanoDrive"}
         sd_link = "smartdrive.html"
     else:
         sd = {"tag": "New product · coming soon",
               "title": "SmartDrive: business continuity beyond cloud storage.",
               "desc": "Incremental business backups, version history, recovery and easy multi-device management. Standalone or integrated with SmartAgent, including Windows, Mac, Android and iPhone at launch.",
               "cta": "Explore SmartDrive", "price": "From €4.90/month · 100 GB · excl. VAT",
-              "nano": "Prefer local storage? NanoDrive connects NAS devices, hard drives and USB storage, with secure remote access planned at €2/month.", "nano_cta": "Explore NanoDrive"}
+              "nano": "Prefer local storage? NanoDrive connects NAS devices, hard drives and USB storage. Planned launch: €50 with 12 months of service; then €2/month.", "nano_cta": "Explore NanoDrive"}
         sd_link = "en-smartdrive.html"
     body = f"""{header("index.html" if lang == "it" else "en.html", lang, home=True, switch="en.html" if lang == "it" else "index.html")}<main id="main">
 <section class="hero hero-min" id="top">
