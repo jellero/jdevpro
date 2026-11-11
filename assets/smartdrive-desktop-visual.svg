@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 520" role="img" aria-labelledby="t d">
+<title id="t">SmartDrive per Windows e Mac</title><desc id="d">Laptop e monitor sincronizzati, cronologia delle versioni e backup incrementale dei documenti.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#edf5ff"/><stop offset="1" stop-color="#dcecff"/></linearGradient><linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101d37"/><stop offset="1" stop-color="#193e72"/></linearGradient><filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#224064" flood-opacity=".15"/></filter></defs>
+<rect width="840" height="520" rx="34" fill="url(#bg)"/>
+<circle cx="689" cy="93" r="116" fill="#c4e0ff" opacity=".55"/>
+<path d="M63 425Q182 382 301 430T553 429T802 437" fill="none" stroke="#b0d0ee" stroke-width="3" stroke-linecap="round"/>
+<g filter="url(#shadow)"><rect x="73" y="123" width="485" height="300" rx="18" fill="#182e4a"/><rect x="86" y="136" width="459" height="266" rx="10" fill="url(#screen)"/><path d="M52 424h529l-36 22H87z" fill="#788ba7"/><path d="M202 427h231l-17 8H220z" fill="#a9bdd3"/></g>
+<g font-family="Arial,Helvetica,sans-serif"><text x="111" y="174" font-size="19" fill="#b8e5ff" font-weight="700">SmartDrive</text><circle cx="514" cy="164" r="7" fill="#4edba9"/>
+<rect x="108" y="197" width="174" height="169" rx="13" fill="#f6faff"/><rect x="131" y="218" width="130" height="24" rx="6" fill="#e0edfa"/><path d="M136 220h23l8 8h87v18H136z" fill="#2e8cff"/><text x="132" y="277" font-size="14" font-weight="700" fill="#173a61">Documenti</text><path d="M134 293h118M134 317h99M134 340h118" stroke="#b3cadc" stroke-width="11" stroke-linecap="round"/>
+<rect x="300" y="197" width="222" height="169" rx="13" fill="#203e65" stroke="#40658d"/><text x="319" y="226" font-size="15" fill="#e3f2ff" font-weight="700">Versioni protette</text>
+<path d="M335 258v70M377 276v52M419 243v85M461 266v62" stroke="#398ff9" stroke-width="22" stroke-linecap="round"/><path d="M335 299v29M377 309v19M419 294v34M461 305v23" stroke="#79dfc5" stroke-width="22" stroke-linecap="round"/>
+</g>
+<g filter="url(#shadow)"><rect x="583" y="217" width="184" height="212" rx="18" fill="#fff" stroke="#bfd7ed" stroke-width="2"/>
+<circle cx="675" cy="267" r="30" fill="#dff6ee"/><path d="M660 267l11 11 22-24" fill="none" stroke="#1b9d71" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+<text x="674" y="328" text-anchor="middle" font-family="Arial" font-size="15" font-weight="700" fill="#173a61">Backup</text><text x="674" y="350" text-anchor="middle" font-family="Arial" font-size="15" fill="#377092">incrementale</text>
+<rect x="617" y="379" width="114" height="16" rx="8" fill="#dbebf8"/><rect x="617" y="379" width="93" height="16" rx="8" fill="#2e8cff"/>
+</g>
+<g><circle cx="598" cy="117" r="46" fill="#fff" stroke="#c6def2" stroke-width="2"/><path d="M576 117l17 17 29-34" stroke="#2e8cff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+</svg>
