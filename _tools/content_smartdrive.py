@@ -35,7 +35,7 @@ CONTENT = {
         "nano_hw_title": "Hardware NanoDrive · base NanoPi NEO3 Plus",
         "nano_hw_note": "Configurazione e compatibilità definitive da verificare sul prototipo. Le versioni 1 e 2 GB sono alternative; il modulo eMMC è opzionale.",
         "nano_specs": ["Rockchip RK3528A quad-core", "RAM LPDDR4X da 1 o 2 GB", "Porta Gigabit Ethernet", "USB 3.0 e USB-C", "Supporto modulo eMMC opzionale", "Collegamento previsto a NAS, dischi e chiavette USB"],
-        "nano_figure": "Immagini del dispositivo base selezionato per il prototipo NanoDrive",
+        "nano_figure": "Foto reali del NanoPi NEO3 Plus, hardware di riferimento del prototipo NanoDrive. La personalizzazione SmartDrive/JDEVPRO è prevista per la versione finale.",
         "nano_scan": "Inquadra il QR per NanoDrive",
         "pricing": "Un piano SmartDrive a sé, oppure aggiunto a SmartAgent",
         "pricing_text": "Listino confermato per il lancio, importi mensili IVA esclusa. La vendita e le applicazioni non sono ancora attive.",
@@ -77,7 +77,7 @@ CONTENT = {
         "nano_hw_title": "NanoDrive hardware · NanoPi NEO3 Plus board",
         "nano_hw_note": "Final configuration and compatibility must be validated on the prototype. 1 GB and 2 GB are alternatives; eMMC is optional.",
         "nano_specs": ["Quad-core Rockchip RK3528A", "1 GB or 2 GB LPDDR4X RAM", "Gigabit Ethernet", "USB 3.0 and USB-C", "Optional eMMC module support", "Planned connection to NAS devices, HDDs and USB drives"],
-        "nano_figure": "Images of the base hardware selected for NanoDrive prototyping",
+        "nano_figure": "Actual NanoPi NEO3 Plus hardware photos. SmartDrive/JDEVPRO branding is planned for the final product.",
         "nano_scan": "Scan the QR code for NanoDrive",
         "pricing": "Standalone SmartDrive, or add it to SmartAgent",
         "pricing_text": "Pricing confirmed for launch, monthly fees excluding VAT. Subscriptions and applications are not yet available.",
@@ -115,7 +115,12 @@ def build_page(lang, head, header, footer, contact, base, org_ref, org_id):
     nano_specs_html = "".join(f"<li>{spec}</li>" for spec in p["nano_specs"])
     nano_media = f"""<figure class="nanodrive-product-visual">
 <div class="nanodrive-product-pictures">
-<img src="assets/nanodrive-product.svg" alt="Rendering NanoDrive marchiato SmartDrive JDEVPRO: mini hardware con slot microSD, porta USB-C, USB 3.0 ed Ethernet" loading="lazy" width="980" height="620">
+<a class="nanodrive-photo" href="assets/nanodrive-front.webp" target="_blank" rel="noopener" aria-label="Apri la foto originale NanoPi NEO3 Plus, vista frontale">
+<img src="assets/nanodrive-front.webp" alt="Foto reale del NanoPi NEO3 Plus, vista frontale con slot scheda e LED" loading="lazy" width="496" height="362">
+</a>
+<a class="nanodrive-photo" href="assets/nanodrive-back.webp" target="_blank" rel="noopener" aria-label="Apri la foto originale NanoPi NEO3 Plus, lato porte">
+<img src="assets/nanodrive-back.webp" alt="Foto reale del NanoPi NEO3 Plus: porte USB-C, USB 3.0 ed Ethernet Gigabit" loading="lazy" width="526" height="401">
+</a>
 </div>
 <figcaption>{p['nano_figure']}</figcaption>
 </figure>"""
