@@ -105,8 +105,8 @@ AREAS = {
 
 PRODUCTS_PAGE = {
   "it": dict(slug="prodotti.html", nav="Prodotti",
-             title="Prodotti JDEVPRO: SmartAgent, Welora e JD Industry | JDEVPRO",
-             desc="I nostri prodotti: SmartAgent, il gestionale per chi lavora con i clienti, Welora, il gestionale per strutture ricettive, e JD Industry, l'ecosistema per la produzione dalle macchine collegate all'ERP su ERPNext.",
+             title="Software JDEVPRO: SmartAgent, Welora e JD Industry",
+             desc="Scopri i software JDEVPRO: SmartAgent per professionisti, Welora per hotel e B&B e JD Industry per gestire la produzione e collegare le macchine.",
              eyebrow="I nostri prodotti", h1="SmartAgent, Welora e JD Industry: <span>i nostri prodotti.</span>",
              lead="Oltre ai progetti su misura abbiamo tre prodotti nostri: SmartAgent per chi lavora con i clienti, Welora per chi accoglie ospiti e JD Industry per chi produce.",
              points={"smartagent": ["Clienti, mail e PEC nella scheda giusta", "Agenda con giro visite e traffico", "Preventivi online, fatture e documenti", "A breve Drive: archivio e backup dei file del PC", "Disponibile ora, da 29,90 € al mese"],
@@ -115,8 +115,8 @@ PRODUCTS_PAGE = {
                      "akios": ["Aggiornamenti firmati e verificati", "Prova, conferma o ritorno automatico", "Ripristino locale dal telefono", "Firmware operativo su Beken BK7238"],
                      "oryvael": ["L'AI lavora, le persone approvano", "Kernel in Rust che parte su hardware reale", "Profili desktop, mobile ed embedded", "Ricerca documentata e verificabile"]}),
   "en": dict(slug="en-products.html", nav="Products",
-             title="JDEVPRO products: SmartAgent, Welora and JD Industry | JDEVPRO",
-             desc="Our products: SmartAgent, management software for professionals who work with clients, Welora, hospitality management software, and JD Industry, the production ecosystem from connected machines to ERP on ERPNext.",
+             title="JDEVPRO software: SmartAgent, Welora and JD Industry",
+             desc="Explore JDEVPRO software: SmartAgent for professionals, Welora for hospitality and JD Industry for production management and connected machines.",
              eyebrow="Our products", h1="Not only client projects: <span>our own products.</span>",
              lead="Besides custom projects we have three products of our own: SmartAgent for professionals who work with clients, Welora for hospitality and JD Industry for manufacturers.",
              points={"smartagent": ["Clients, email and certified email in the right record", "Calendar with route planning and traffic", "Online quotes, invoices and documents", "Coming soon Drive: PC file storage and backup", "Available now, from €29.90 a month"],
