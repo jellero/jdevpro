@@ -162,7 +162,7 @@ def build_page(lang, head, header, footer, contact, base, org_ref, org_id):
 <div class="outcome-grid">{benefits}</div>
 </div>
 </section>
-<section class="section section-tight section-paper">
+<section class="section section-tight section-paper smartdrive-desktop">
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">Windows · Mac</p><h2>{p['desktop']}</h2><p>{p['desktop_text']}</p></div>
 <div class="reveal smartdrive-visual-panel">
