@@ -11,11 +11,11 @@ PRODUCTS = {
       key="smartagent", slug="smartagent.html", site="https://smartagent.jdevpro.it/", nav="SmartAgent",
       title="SmartAgent: gestionale per professionisti e agenti | JDEVPRO",
       desc="SmartAgent unisce clienti, email e PEC, agenda e giro visite, preventivi, fatture e spese. Gestionale per professionisti e agenti, da 29,90 € al mese.",
-      card="Disponibile ora: clienti, mail, agenda con giro visite, pratiche, preventivi, fatture e documenti in un'unica app che si aggiorna da sola. SmartDrive è un pacchetto separato, utilizzabile anche senza SmartAgent (in arrivo). SmartAgent da 29,90 € al mese.",
+      card="SmartAgent è in preparazione: il gestionale riunirà clienti, mail, agenda con giro visite, pratiche, preventivi, fatture e documenti. SmartDrive è un pacchetto separato, utilizzabile anche senza SmartAgent (in arrivo). SmartAgent da 29,90 € al mese.",
       eyebrow="Prodotto · Gestionale per professionisti e agenti",
       h1="SmartAgent: meno tempo in ufficio, <span>più tempo dai clienti.</span>",
       lead="SmartAgent riunisce clienti, mail, appuntamenti, giro visite, pratiche, preventivi, fatture, documenti e spese in un'unica app che si aggiorna da sola. Colleghi posta, calendario e rubrica che usi già: le mail vanno nella scheda giusta, la giornata si organizza sulla mappa e il lavoro fatto diventa preventivo, fattura e rimborso senza ricopiare niente. SmartDrive è un pacchetto autonomo, utilizzabile da solo o integrato in SmartAgent per organizzare i file di clienti e pratiche. In arrivo.",
-      links=[("Vai su smartagent.jdevpro.it ↗", "https://smartagent.jdevpro.it/"), ("Prova gratis 30 giorni ↗", "https://smartagent.jdevpro.it/index.php?r=register")],
+      links=[("Scopri SmartAgent ↗", "https://smartagent.jdevpro.it/")],
       blocks=[
         ("cards", "Il problema", "Il lavoro è dai clienti, ma il tempo se ne va a organizzarlo.", "", [
           ("Informazioni sparse", "Mail, agenda, rubrica del telefono, Excel e foglietti: per sapere a che punto sei con un cliente devi cercare in cinque posti."),
@@ -74,7 +74,7 @@ PRODUCTS = {
           "SmartAgent si collega a Gmail, Microsoft 365, Aruba, PEC e qualunque casella IMAP; a Google, Microsoft e iCloud per il calendario; alla rubrica di iPhone e Android. Le mail restano anche nella tua casella e gli appuntamenti si aggiornano nei due sensi.",
           "Funziona dal browser su computer, tablet e telefono, senza installare niente. Con le API e i webhook si collega al tuo gestionale o al tuo sito.",
         ], ["Posta e PEC", "Calendario nei due sensi", "Rubrica del telefono", "API e webhook"]),
-        ("prices", "Prezzi", "Un prezzo chiaro per SmartAgent: SmartDrive è separato.", "Cambia solo quante persone lavorano con te. Prova di 30 giorni: per le nuove attivazioni è prevista la verifica della carta, senza addebiti durante il periodo gratuito.", [
+        ("prices", "Prezzi", "Un prezzo chiaro per SmartAgent: SmartDrive è separato.", "Piani previsti per il lancio. Prova di 30 giorni prevista, con carta di pagamento verificata e senza addebiti durante la prova.", [
           ("Professionista · 1 utente", "29,90 € al mese", "Tutte le funzioni"),
           ("Studio · fino a 3 utenti", "49,90 € al mese", "Tutte le funzioni, per lavorare in squadra"),
           ("Studio Plus · fino a 6 utenti", "79,90 € al mese", "Tutte le funzioni, per studi più grandi"),
@@ -87,10 +87,10 @@ PRODUCTS = {
         ], "Prezzi IVA esclusa."),
         ("split", "Il sito di SmartAgent", "Tutto il resto è su smartagent.jdevpro.it.", [
           "Su <a href='https://smartagent.jdevpro.it/' target='_blank' rel='noreferrer'>smartagent.jdevpro.it</a> trovi la presentazione completa con le schermate, i mestieri, SmartDrive, la firma digitale e i prezzi.",
-          "Da lì trovi la prova gratuita di 30 giorni, senza installazioni. Per le nuove attivazioni è prevista la carta di pagamento, senza addebiti durante la prova.",
-        ], ["Presentazione completa", "Prova gratuita 30 giorni", "Accesso per chi è già cliente"]),
-        ("status", "Stato e prossime novità", "Disponibile ora, con nuove funzioni in arrivo.", [
-          "Disponibile ora; per le nuove prove di 30 giorni è prevista la carta di pagamento verificata, senza addebiti durante il periodo gratuito",
+          "Il lancio e l'attivazione della prova saranno comunicati sul sito SmartAgent. La prova prevista sarà di 30 giorni, con carta di pagamento verificata e senza addebiti durante il periodo gratuito.",
+        ], ["Presentazione del prodotto", "Prova prevista al lancio", "Informazioni sullo sviluppo"]),
+        ("status", "Stato e prossime novità", "SmartAgent è in preparazione al lancio.", [
+          "Lancio ancora da completare; prova di 30 giorni prevista con carta di pagamento verificata e senza addebiti durante la prova",
           "SmartDrive in arrivo: archivio e backup autonomi, utilizzabili anche senza SmartAgent",
           "A breve la firma digitale: firmi con la tua firma remota e i clienti firmano dal telefono",
           "Database separato per ogni attività, verifica in due passaggi e dati sempre esportabili",
@@ -341,11 +341,11 @@ PRODUCTS = {
       key="smartagent", slug="en-smartagent.html", site="https://smartagent.jdevpro.it/", nav="SmartAgent",
       title="SmartAgent: CRM for professionals and agents | JDEVPRO",
       desc="SmartAgent brings clients, email, appointments, routes, quotes and invoices into one app for professionals and sales agents. In Italian, from €29.90/month.",
-      card="Available now: clients, email, calendar with route planning, cases, quotes, invoices and documents in one app that keeps itself up to date. SmartDrive is a separate package you can use without SmartAgent (coming soon). SmartAgent from €29.90/month.",
+      card="SmartAgent is being prepared: the management app will bring together clients, email, route planning, cases, quotes, invoices and documents. SmartDrive is a separate package you can use without SmartAgent (coming soon). SmartAgent from €29.90/month.",
       eyebrow="Product · Management software for professionals and agents",
       h1="SmartAgent: less time in the office, <span>more time with clients.</span>",
       lead="SmartAgent brings clients, email, appointments, route planning, cases, quotes, invoices, documents and expenses into one app that keeps itself up to date. Connect the email, calendar and contacts you already use: emails land in the right client record, your day is planned on a map, and finished work becomes a quote, an invoice and a mileage claim without retyping. SmartDrive is a standalone package for storage and backup, with optional SmartAgent integration for client and case files. Coming soon. The SmartAgent app is in Italian.",
-      links=[("Go to smartagent.jdevpro.it ↗", "https://smartagent.jdevpro.it/"), ("30-day free trial ↗", "https://smartagent.jdevpro.it/index.php?r=register")],
+      links=[("Explore SmartAgent ↗", "https://smartagent.jdevpro.it/")],
       blocks=[
         ("cards", "The problem", "Your work is with clients, but organising it eats your time.", "", [
           ("Scattered information", "Email, calendar, phone contacts, spreadsheets and notes: to know where you stand with a client you search five places."),
@@ -404,7 +404,7 @@ PRODUCTS = {
           "SmartAgent connects to Gmail, Microsoft 365, Aruba, certified email and any IMAP mailbox; to Google, Microsoft and iCloud calendars; to iPhone and Android contacts. Emails stay in your mailbox and appointments sync both ways.",
           "It runs in the browser on computer, tablet and phone, with nothing to install. APIs and webhooks connect it to your own software or website.",
         ], ["Email and certified email", "Two-way calendar", "Phone contacts", "APIs and webhooks"]),
-        ("prices", "Pricing", "Clear SmartAgent pricing: SmartDrive is separate.", "Only the number of people changes. For new 30-day trials, payment-card verification is planned, with no charges during the free period.", [
+        ("prices", "Pricing", "Clear SmartAgent pricing: SmartDrive is separate.", "Plans for the future launch. A 30-day trial is planned with a verified payment card and no charge during the trial.", [
           ("Professional · 1 user", "€29.90 a month", "All features"),
           ("Studio · up to 3 users", "€49.90 a month", "All features, for working as a team"),
           ("Studio Plus · up to 6 users", "€79.90 a month", "All features, for larger firms"),
@@ -417,10 +417,10 @@ PRODUCTS = {
         ], "Prices exclude VAT."),
         ("split", "The SmartAgent website", "Everything else is on smartagent.jdevpro.it.", [
           "On <a href='https://smartagent.jdevpro.it/' target='_blank' rel='noreferrer'>smartagent.jdevpro.it</a> you find the full presentation (in Italian) with screenshots, trades, SmartDrive, digital signatures and pricing.",
-          "There you can find the 30-day trial, with no installation needed. New trial activations will require a verified payment card, with no charge during the free period.",
-        ], ["Full presentation", "30-day free trial", "Sign-in for existing customers"]),
-        ("status", "Status and what's next", "Available now, with new features on the way.", [
-          "Available now; a verified payment card is planned for new 30-day trial activations, with no charge during the free period",
+          "Launch and trial activation details will be published on the SmartAgent website. A 30-day trial is planned with payment-card verification and no charge during the trial period.",
+        ], ["Product overview", "Trial planned for launch", "Development information"]),
+        ("status", "Status and what's next", "SmartAgent is being prepared for launch.", [
+          "Launch is still in preparation; a 30-day trial with verified payment card and no charge during the trial is planned",
           "SmartDrive coming soon: standalone storage and backup, also usable without SmartAgent",
           "Coming soon digital signatures: sign with your remote digital signature, clients sign from their phone",
           "Separate database for each business, two-step verification and data always exportable",
