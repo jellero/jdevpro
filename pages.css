@@ -426,3 +426,28 @@
 .smartdrive-nano-detail { padding: 22px 24px; border-radius: 18px; background: #fff; border: 1px solid var(--line); }
 .smartdrive-nano-price { font-size: clamp(1.8rem, 4vw, 2.7rem); font-weight: 800; color: var(--ink); margin: 0 0 12px; }
 .smartdrive-nano-detail .status-note { font-size: .86rem; color: var(--ink-soft); }
+
+/* NanoDrive: hardware rendering, specifications and scannable QR. */
+.smartdrive-nano { overflow: hidden; }
+.smartdrive-nano .smartdrive-nano-detail { box-shadow: 0 12px 30px rgba(10, 30, 57, .06); }
+.nanodrive-bundle { display: block; font-size: 1.12rem; color: #0b2036; line-height: 1.4; }
+.nanodrive-renewal { display: inline-block; border-radius: 10px; padding: 8px 12px; margin-top: 10px; background: #e4f0ff; color: #103c79; font-weight: 750; }
+.nanodrive-hardware-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: center; gap: clamp(22px, 4vw, 52px); margin-top: 36px; }
+.nanodrive-product-visual { min-width: 0; margin: 0; }
+.nanodrive-product-pictures { overflow: hidden; border: 1px solid #d4e1ef; border-radius: 22px; background: #edf4ff; box-shadow: 0 18px 42px rgba(7, 27, 55, .11); }
+.nanodrive-product-pictures img { width: 100%; height: auto; display: block; }
+.nanodrive-product-visual figcaption { margin-top: 10px; color: #536579; font-size: .83rem; line-height: 1.5; }
+.nanodrive-hardware-details { min-width: 0; }
+.nanodrive-hardware-details h3 { margin: 0 0 18px; font-size: clamp(1.35rem, 2vw, 1.85rem); color: #101c2c; line-height: 1.25; }
+.nanodrive-specs { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 11px; }
+.nanodrive-specs li { padding: 0 0 0 26px; position: relative; font-size: .97rem; line-height: 1.5; color: #223950; }
+.nanodrive-specs li::before { content: "✓"; position: absolute; top: 1px; left: 0; color: #086be2; font-weight: 850; }
+.nanodrive-hardware-details .status-note { color: #536579; font-size: .86rem; line-height: 1.6; }
+.nanodrive-qr-card { display: flex; align-items: center; gap: 16px; margin-top: 22px; padding: 14px; color: #0e2947; border: 1px solid #bfd5f0; border-radius: 16px; background: #fff; text-decoration: none; box-shadow: 0 7px 22px rgba(0,43,98,.06); }
+.nanodrive-qr-card:hover { border-color: #086be2; background: #f5faff; }
+.nanodrive-qr-card img { flex: 0 0 auto; width: 100px; height: 100px; image-rendering: pixelated; }
+.nanodrive-qr-card span { display: grid; gap: 5px; min-width: 0; }
+.nanodrive-qr-card strong { font-size: 1.02rem; line-height: 1.4; color: #0c2744; }
+.nanodrive-qr-card small { font-size: .78rem; color: #426283; overflow-wrap: anywhere; }
+@media (max-width: 860px) { .nanodrive-hardware-grid { grid-template-columns: 1fr; } }
+@media (max-width: 420px) { .nanodrive-qr-card { gap: 10px; padding: 10px; } .nanodrive-qr-card img { width: 82px; height: 82px; } .nanodrive-qr-card small { font-size: .7rem; } }
