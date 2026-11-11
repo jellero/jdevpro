@@ -2,7 +2,7 @@
 
 **Data:** 11 novembre 2026  
 **Tipo:** analisi strategica, non piano economico validato  
-**Stato:** proposta di lavoro; da verificare con dati commerciali e finanziari  
+**Stato:** proposta di lavoro; SmartAgent e Welora non ancora pubblicati/lanciati, da verificare con dati commerciali e finanziari  
 **Ambito:** JDEVPRO e possibili collaborazioni remunerate. Non modifica i testi pubblici o il sito.
 
 ## 1. Sintesi strategica
@@ -10,17 +10,17 @@
 La distinzione proposta è sensata come struttura di allocazione del capitale e del tempo:
 
 1. **Industria 4.0 — monetizzazione a breve.** Vendere interventi di interconnessione, integrazione macchina-gestionale e supporto alla documentazione tecnica. Il servizio è già rappresentato sul sito da casi e competenze dichiarate. Obiettivo: generare margine di commessa e contatti industriali qualificati.
-2. **SmartAgent — prodotto ricorrente, crescita graduale.** Acquisire utenti in una o poche nicchie, ridurre costi di attivazione e abbandono. Obiettivo: aumentare ricavi ricorrenti e capacità di vendere il prodotto senza dipendere in ogni caso da lavoro personalizzato.
-3. **Welora — asset di lungo periodo.** Investire in un verticale gestionale per l'ospitalità, testandone proposta di valore, affidabilità e distribuzione con clienti reali. Obiettivo: sviluppare un prodotto che possa diventare il core business, senza trattarlo come fonte già consolidata di cassa.
+2. **SmartAgent — preparazione al lancio, crescita progressiva solo dopo la pubblicazione.** Identificare una nicchia, completare le funzioni indispensabili, testare registrazione e pagamento, predisporre assistenza e onboarding. Ricavi ricorrenti e retention saranno obiettivi successivi, **non dati esistenti**.
+3. **Welora — prodotto non pubblicato, investimento di lungo periodo.** Completare e collaudare un gestionale per l'ospitalità, verificandone i flussi critici prima del lancio. Eventuali piloti e futuri ricavi ricorrenti saranno da costruire e misurare, **non già conseguiti**.
 
-**Conclusione:** non tre priorità identiche, ma **un motore di cassa, una linea ricorrente in crescita e un investimento di prodotto**. Questo non significa che l'Industria 4.0 garantirà automaticamente lavori «a nastro»: il numero di opportunità, la conversione e il margine vanno misurati.
+**Conclusione:** non tre priorità identiche, ma **un servizio che può generare cassa nel breve e due prodotti software ancora da lanciare, con orizzonti diversi**. Questo non significa che l'Industria 4.0 garantirà automaticamente lavori «a nastro»: il numero di opportunità, la conversione e il margine vanno misurati.
 
 ## 2. Cosa risulta verificabile dal sito su main
 
 - La homepage è già centrata sull'interconnessione macchine e sul collegamento ai sistemi gestionali; rimanda alla landing tecnica, ai casi d'uso, alla documentazione per il perito e a JD Industry.
 - La pagina interconnessione espone protocolli e famiglie di macchine, processo e casi, non soltanto un claim generico.
-- SmartAgent ha pagina prodotto con funzioni, screenshot e un percorso verso un'applicazione separata.
-- Welora è descritta nel catalogo come prodotto in pre-lancio, con una data e un prezzo dichiarati. Una dichiarazione sul sito non prova né domanda effettiva né fatturato.
+- SmartAgent ha una pagina pubblicitaria con funzioni, screenshot e collegamenti verso un'applicazione separata, ma **secondo lo stato comunicato dal titolare il prodotto non è ancora stato pubblicato/lanciato**. La presenza di un link o la scritta «Disponibile ora» sul sito non ne dimostra la disponibilità effettiva: il testo commerciale va riallineato quando si deciderà di intervenire sul sito.
+- Welora **non è ancora stato pubblicato/lanciato**. Il catalogo mostra data e prezzo previsti, che non vanno scambiati per disponibilità, domanda effettiva o fatturato.
 - JD Industry è un potenziale sviluppo commerciale collegato alle commesse industriali; SmartDrive può essere un prodotto complementare. **Non aggiungere automaticamente due ulteriori priorità d'investimento senza misurarne il costo-opportunità**.
 
 Questa è una verifica di posizionamento e contenuto, **non** una verifica di incassi, conversioni, dimensione del mercato o capacità operativa.
@@ -33,7 +33,7 @@ Questa è una verifica di posizionamento e contenuto, **non** una verifica di in
 | Ricavo principale | Commessa e possibili servizi successivi | Ricavi ricorrenti per account/utente | Ricavi ricorrenti per struttura |
 | Ciclo di vendita | Valutazione tecnica, sopralluogo, preventivo | Demo, prova, attivazione, onboarding | Demo, migrazione e verifica della copertura operativa |
 | Principale costo nascosto | Ore tecniche non previste, trasferte, integrazioni su macchine datate | Supporto, acquisizione cliente, bug e onboarding | Integrazione con operatività alberghiera, assistenza e requisiti normativi |
-| Evidenza da raccogliere | Preventivi inviati, lavori chiusi, ore e margine | Attivazioni, utenti realmente attivi, rinnovi, assistenza | Strutture pilota, risultati operativi, rinnovi, ticket |
+| Evidenza da raccogliere | Preventivi inviati, lavori chiusi, ore e margine | Prima del lancio: test funzionali, flusso di registrazione, affidabilità, nicchia da servire; **dopo il lancio**: attivazioni e rinnovi | Prima del lancio: copertura dei flussi alberghieri e collaudi; **dopo il lancio**: strutture attive, assistenza e rinnovi |
 | Strategia | Vendere problemi risolti oggi | Scegliere nicchia e standardizzare | Validare il prodotto e poi scalare il canale |
 
 ### Industria 4.0: un servizio da industrializzare commercialmente, non da banalizzare tecnicamente
@@ -49,23 +49,23 @@ Le commesse possono essere diverse tra loro. Per aumentare la capacità di acqui
 
 **Rischio da governare:** il lavoro su misura può generare fatturato ma consumare proprio le ore che servono a costruire SmartAgent e Welora. Il fatturato non coincide con il margine libero per investire.
 
-### SmartAgent: crescita ripetibile prima di espandere le funzioni
+### SmartAgent: terminare, verificare e pubblicare prima di parlare di crescita
 
-- Individuare una categoria professionale iniziale in cui l'uso quotidiano sia evidente; evitare campagne troppo generiche.
-- Misurare separatamente chi si registra, chi completa la configurazione, chi usa davvero le funzioni centrali e chi rinnova.
-- Ridurre le attività di onboarding che richiedono lavoro manuale del fondatore.
-- Evitare di giudicare il successo in base al solo numero di prove gratuite.
-- Integrare SmartDrive quando utile, mantenendo trasparente il suo listino separato; verificare quota, ripristino e disponibilità effettiva prima della vendita.
+- Individuare il pubblico professionale iniziale e i requisiti indispensabili per il lancio; evitare acquisizione commerciale prima che la registrazione e l'utilizzo siano verificati.
+- **Prima della pubblicazione:** verificare le funzioni fondamentali, i permessi, la registrazione, i pagamenti e la gestione dei dati; definire il criterio di prodotto pronto per essere venduto. **Solo dopo il lancio:** misurare registrazioni, uso, conversione e rinnovi.
+- Preparare una procedura di onboarding ripetibile e verificare con test che non dipenda interamente dal fondatore.
+- Non usare «numero di prove gratuite», MRR, churn o retention come risultati attuali: sono metriche future, da iniziare a rilevare quando il prodotto sarà effettivamente disponibile.
+- Trattare SmartDrive come sviluppo separato: verificarne quota, ripristino e disponibilità effettiva prima di includerlo in offerte e flussi di vendita.
 - La nuova policy sulla carta obbligatoria in prova è una **specifica da implementare e testare**, non una misura antiabuso già operativa.
 
-### Welora: investire per tappe verificabili
+### Welora: arrivare a un lancio tecnicamente sostenibile per tappe
 
 Welora può diventare la linea più rilevante in prospettiva, ma è la più esposta al rischio di anticipare costi di sviluppo e marketing prima di dimostrare uso pagante. Una sequenza prudente:
 
-1. Identificare strutture pilota che corrispondano al segmento scelto.
-2. Convalidare le funzioni indispensabili nel lavoro reale, non soltanto in demo.
-3. Misurare onboarding, assistenza, affidabilità, tempo risparmiato e disponibilità al pagamento.
-4. Stabilizzare il prodotto e documentare casi verificabili prima di investire in acquisizione su larga scala.
+1. Preparare i casi di prova e definire i requisiti minimi per una struttura tipo; identificare potenziali strutture pilota, senza presumere di averne già.
+2. Collaudare i flussi indispensabili prima della pubblicazione, verificandoli con operatori del settore quando disponibili.
+3. Prima del lancio misurare difetti, completezza, affidabilità e tempi di configurazione. Onboarding di clienti paganti, supporto e disponibilità al pagamento saranno verificabili solo quando ci saranno utilizzatori reali.
+4. Stabilizzare il prodotto, completare privacy/sicurezza e procedure di assistenza; solo dopo il lancio raccogliere casi verificabili prima di investire in acquisizione su larga scala.
 5. Confrontare il costo reale per struttura con il canone effettivamente incassato e il tempo di supporto.
 
 **Non considerare la data pubblicata di disponibilità come prova di readiness tecnica o commerciale**. La decisione di lancio richiede verifiche di sicurezza, funzionalità e supporto.
@@ -100,8 +100,8 @@ Una persona può scegliere compenso per le commesse industriali **e**, separatam
 La struttura pubblica **non deve rappresentare tre business come equivalenti**:
 
 - **JDEVPRO / Industria 4.0:** ingresso principale per chi ha una macchina da connettere e un problema operativo immediato.
-- **SmartAgent:** pagina/prodotto verticale dedicato, con flusso di demo e prova concreto.
-- **Welora:** brand di prodotto autonomo, presentato come progetto specifico per l'ospitalità, senza appropriarsi dell'attenzione dell'acquirente industriale.
+- **SmartAgent:** comunicazione di pre-lancio coerente con lo stato reale, senza promesse di prova utilizzabile o disponibilità se non implementata.
+- **Welora:** brand autonomo per l'ospitalità, presentato come progetto non ancora lanciato, senza appropriarsi dell'attenzione dell'acquirente industriale.
 
 Elementi coerenti con questa gerarchia:
 - homepage con messaggio industriale e richiesta di analisi tecnica come CTA principale;
@@ -118,23 +118,23 @@ Elementi coerenti con questa gerarchia:
 - Ricostruire ultimi preventivi e commesse industriali con valore, costi, ore e margine.
 - Definire una procedura breve di qualificazione per contatti Industria 4.0.
 - Classificare fonti dei lead: passaparola, periti, consulenti, ricerca organica, partnership.
-- Selezionare un unico segmento primario per SmartAgent.
-- Definire i criteri di accettazione per i primi clienti pilota Welora.
-- Raccogliere i costi effettivi di infrastruttura, supporto e sviluppo dei due prodotti.
+- Definire il segmento iniziale di SmartAgent e una checklist di pubblicazione (funzioni, sicurezza, registrazione, pagamenti, assistenza).
+- Definire i criteri di accettazione e i test dei flussi critici Welora prima di invitare strutture pilota.
+- Stimare i costi già sostenuti e quelli necessari a completare e mantenere i due prodotti, senza inventare ricavi.
 
 ### Giorni 31–60: esecuzione controllata
 
 - Attivare il canale di collaborazione industriale con regole di compenso documentate.
 - Rilevare tempi di risposta, opportunità qualificate, preventivi, commesse e margini.
-- Testare onboarding e attivazione SmartAgent nella nicchia scelta.
-- Avviare test operativi di Welora con le strutture pilota, registrando problemi e benefici misurati.
-- Evitare di ampliare funzionalità che non sbloccano conversioni, affidabilità o retention.
+- Collaudare registrazione, accesso, permessi, onboarding e percorso di pagamento SmartAgent in ambiente controllato, prima di promettere una prova pubblica.
+- Preparare e svolgere test controllati dei flussi Welora; eventuali strutture pilota sono un passaggio da organizzare, non un fatto già acquisito.
+- Evitare di aggiungere funzioni che non siano necessarie a completezza, affidabilità, sicurezza o rilascio dei due prodotti.
 
 ### Giorni 61–90: decisioni in base ai dati
 
 - Se le commesse industriali generano margine e sono gestibili, aumentare il volume di acquisizione mantenendo capacità produttiva.
-- Se SmartAgent converte ma richiede troppo supporto, intervenire prima sull'onboarding.
-- Se Welora è efficace sul campo ma non ancora economicamente sostenibile, proseguire validazione mirata anziché marketing esteso.
+- Pubblicare SmartAgent solo al superamento dei test concordati; valutare conversioni e costi di supporto esclusivamente dopo il rilascio.
+- Per Welora, usare i risultati dei collaudi per decidere quando iniziare i piloti e quando pubblicare; rinviare le metriche economiche dei clienti a dopo il lancio.
 - Se una linea assorbe risorse senza risultati misurabili, rivedere il budget e i tempi anziché difendere la priorità per principio.
 
 ## 7. Cruscotto minimo per decisioni serie
@@ -145,15 +145,15 @@ Elementi coerenti con questa gerarchia:
 - Giorni dal primo contatto al contratto; lavori successivi generati per cliente.
 
 **SmartAgent**
-- Nuove prove; account attivati; uso effettivo; conversione a pagamento; rinnovi e disdette.
-- Ricavo mensile ricorrente, costi di infrastruttura, onboarding e supporto per cliente.
+- **Pre-lancio:** test funzionali superati, problemi bloccanti, completamento registrazione e pagamento in ambiente di test, disponibilità di assistenza e documentazione. **Dopo il lancio:** prove, conversioni, rinnovi e disdette.
+- **Pre-lancio:** costo di sviluppo e costo stimato di esercizio. **Dopo il lancio:** MRR, costi reali di onboarding, assistenza e infrastruttura per cliente.
 
 **Welora**
-- Strutture in prova; strutture operative; problemi bloccanti; completamento dei flussi principali.
-- Tempo di migrazione/onboarding; costo di supporto; strutture paganti e retention.
+- **Pre-lancio:** percentuale dei flussi principali collaudati, anomalie bloccanti, integrazioni pronte e procedure di recupero. **Dopo il lancio:** strutture in prova, operative e paganti.
+- **Pre-lancio:** tempo di configurazione simulato e risultati dei test. **Dopo il lancio:** migrazione reale, supporto, strutture paganti e retention.
 
 **A livello di impresa**
-- Disponibilità di cassa; margine delle commesse; ore di lavoro del fondatore; ore destinate ai prodotti; costi fissi.
+- Disponibilità di cassa; margine delle commesse industriali; ore di lavoro del fondatore; ore per completare i prodotti; costi fissi e investimento residuo prima del rilascio.
 - Nessun modello di investimenti quantitativo attendibile senza questi dati.
 
 ## 8. Decisioni aperte da chiudere prima di offrire una collaborazione
@@ -167,10 +167,10 @@ Elementi coerenti con questa gerarchia:
 
 ## 9. Posizionamento sintetico per parlarne con un collaboratore
 
-> JDEVPRO opera su tre orizzonti. Nell'industria possiamo lavorare subito su interconnessioni di macchine e sistemi gestionali: sono progetti concreti, con un cliente e un budget da qualificare, che possono generare ricavi a breve. SmartAgent è un prodotto già sul mercato che va fatto crescere con continuità, senza aspettarsi risultati immediati. Welora è la scommessa di lungo periodo, su cui costruire un'attività software ricorrente. La collaborazione può quindi nascere da commesse remunerate, da un investimento operativo nei prodotti oppure da una combinazione delle due cose. I contributi e i ritorni, però, devono essere distinti e messi per iscritto.
+> JDEVPRO opera su tre orizzonti. Nell'industria possiamo lavorare subito su interconnessioni di macchine e sistemi gestionali: sono progetti concreti, con un cliente e un budget da qualificare, che possono generare ricavi a breve. SmartAgent non è ancora pubblicato: richiede completamento, test e poi una crescita commerciale graduale. Welora non è ancora pubblicato ed è l'investimento di lungo periodo, con l'obiettivo futuro di costruire un'attività software ricorrente. La collaborazione può quindi nascere da commesse remunerate, da un investimento operativo nei prodotti oppure da una combinazione delle due cose. I contributi e i ritorni, però, devono essere distinti e messi per iscritto.
 
 ## 10. Valutazione conclusiva
 
 La struttura a tre orizzonti è coerente con il posizionamento che emerge dal repository e riduce il rischio di disperdere risorse su iniziative con maturazione diversa. La priorità commerciale più concreta da verificare è l'Industria 4.0; **la solidità di questa scelta dipende dal margine reale delle commesse, non dalla sola domanda potenziale**. SmartAgent e Welora vanno sviluppati con obiettivi e budget separati. Un accordo di collaborazione credibile deve distinguere remunerazione per il lavoro e partecipazione al rischio di prodotto.
 
-**Limiti dell'analisi:** non sono disponibili qui contabilità industriale, CRM, dati di conversione, margini, MRR, CAC, churn o risultati dei piloti. Nessuna previsione di fatturato o rendimento è considerata dimostrata.
+**Limiti dell'analisi:** SmartAgent e Welora non sono ancora pubblicati, come indicato dal titolare. Non è corretto richiedere statistiche di utilizzo commerciale, conversione, MRR, churn, rinnovi o clienti paganti già esistenti. Mancano anche dati di contabilità industriale e CRM per valutare i margini delle commesse. Nessuna previsione di fatturato o rendimento è dimostrata.
