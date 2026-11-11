@@ -518,7 +518,7 @@ def home(lang="it"):
 <h2>{sd['title']}</h2>
 <p>{sd['desc']}</p>
 <p class="smartdrive-nano-teaser">{sd['nano']}</p>
-<div class="hero-actions"><a class="button primary" href="{sd_link}">{sd['cta']}</a><a class="button ghost" href="{sd_link}#nanodrive">{sd['nano_cta']}</a></div>
+<div class="hero-actions"><a class="button primary" href="{sd_link}">{sd['cta']}</a><a class="button ghost dark" href="{sd_link}#nanodrive">{sd['nano_cta']}</a></div>
 </div>
 <div class="smartdrive-feature-aside">
 <strong>SmartDrive</strong>
