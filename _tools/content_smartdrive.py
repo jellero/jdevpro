@@ -27,6 +27,10 @@ CONTENT = {
         "mobile": "Backup di foto e dati su Android e iPhone",
         "mobile_text": "Il prodotto SmartDrive previsto al lancio comprende le app Android e iPhone: backup di foto, video, file e dati accessibili autorizzati dall'utente, con consultazione e recupero. I permessi e i limiti di Android e iOS saranno rispettati: non si tratta di una copia integrale del sistema del telefono.",
         "mobile_points": ["Foto e video del telefono", "File e dati selezionati", "Consultazione e recupero da altri dispositivi"],
+        "nano_title": "NanoDrive: i tuoi dati rimangono da te.",
+        "nano_lead": "Vuoi conservare documenti, foto e archivi sui tuoi dispositivi, ma consultarli fuori ufficio in modo sicuro? NanoDrive è il nostro hardware progettato per collegare NAS, hard disk e chiavette USB e rendere accessibili i file anche da remoto, senza imporre lo storage cloud.",
+        "nano_service": "Servizio NanoDrive previsto a 2 €/mese. Il prezzo dell'hardware è ancora da definire. È prevista un'infrastruttura di accesso remoto su server italiano; ubicazione e architettura saranno confermate prima del rilascio.",
+        "nano_warning": "NanoDrive mantiene i dati in locale: l'accesso da remoto non equivale a una seconda copia di backup. Per protezione contro guasti e furto serve anche una copia separata.",
         "pricing": "Un piano SmartDrive a sé, oppure aggiunto a SmartAgent",
         "pricing_text": "Listino confermato per il lancio, importi mensili IVA esclusa. La vendita e le applicazioni non sono ancora attive.",
         "standalone": "SmartDrive da solo", "integrated": "Con piano SmartAgent",
@@ -59,6 +63,10 @@ CONTENT = {
         "mobile": "Photo and data backup for Android and iPhone",
         "mobile_text": "SmartDrive's planned launch includes Android and iPhone apps for backing up photos, videos, files and user-authorised accessible data, with file access and recovery. Permissions and Android/iOS restrictions apply: this is not a full system image backup.",
         "mobile_points": ["Phone photos and videos", "Selected files and data", "Access and recovery on other devices"],
+        "nano_title": "NanoDrive: keep your data on your own hardware.",
+        "nano_lead": "Keep documents, photos and files on your own devices while accessing them securely from outside the office. NanoDrive is our planned hardware for connecting NAS units, external hard drives and USB flash drives for remote file access, without requiring cloud storage.",
+        "nano_service": "Planned NanoDrive service: €2/month. Hardware price to be defined. Remote access through an Italy-based server is planned; hosting location and technical implementation must be verified before release.",
+        "nano_warning": "Keeping files locally does not create an off-site backup. A separate copy is necessary to protect against hardware failure, theft or site incidents.",
         "pricing": "Standalone SmartDrive, or add it to SmartAgent",
         "pricing_text": "Pricing confirmed for launch, monthly fees excluding VAT. Subscriptions and applications are not yet available.",
         "standalone": "SmartDrive only", "integrated": "With SmartAgent plan",
@@ -136,6 +144,12 @@ def build_page(lang, head, header, footer, contact, base, org_ref, org_id):
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">Android · iPhone · {p['status']}</p><h2>{p['mobile']}</h2><p>{p['mobile_text']}</p></div>
 <div class="reveal"><ul class="product-points">{mobile_points}</ul></div>
+</div>
+</section>
+<section class="section section-tight section-paper smartdrive-nano" id="nanodrive">
+<div class="shell split">
+<div class="section-heading reveal"><p class="eyebrow">NanoDrive · {p['status']}</p><h2>{p['nano_title']}</h2><p>{p['nano_lead']}</p></div>
+<div class="reveal smartdrive-nano-detail"><p class="smartdrive-nano-price">2 € / {'mese' if it else 'month'}</p><p>{p['nano_service']}</p><p class="status-note">{p['nano_warning']}</p></div>
 </div>
 </section>
 <section class="section section-tight section-dark smartdrive-pricing" id="prezzi">
