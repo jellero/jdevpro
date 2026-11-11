@@ -481,13 +481,15 @@ def home(lang="it"):
         sd = {"tag": "Nuovo prodotto · presto disponibile",
               "title": "SmartDrive: sicurezza operativa, non solo spazio cloud.",
               "desc": "Backup incrementale dei documenti, versionamento, recupero e gestione semplice di più terminali. Prodotto autonomo, integrabile in SmartAgent, con Windows, Mac, Android e iPhone al lancio.",
-              "cta": "Scopri SmartDrive", "price": "Da 4,90 €/mese · 100 GB · IVA esclusa"}
+              "cta": "Scopri SmartDrive", "price": "Da 4,90 €/mese · 100 GB · IVA esclusa",
+              "nano": "Preferisci conservare i dati in locale? NanoDrive collega NAS, dischi e chiavette: accesso remoto protetto previsto a 2 €/mese.", "nano_cta": "Scopri NanoDrive"}
         sd_link = "smartdrive.html"
     else:
         sd = {"tag": "New product · coming soon",
               "title": "SmartDrive: business continuity beyond cloud storage.",
               "desc": "Incremental business backups, version history, recovery and easy multi-device management. Standalone or integrated with SmartAgent, including Windows, Mac, Android and iPhone at launch.",
-              "cta": "Explore SmartDrive", "price": "From €4.90/month · 100 GB · excl. VAT"}
+              "cta": "Explore SmartDrive", "price": "From €4.90/month · 100 GB · excl. VAT",
+              "nano": "Prefer local storage? NanoDrive connects NAS devices, hard drives and USB storage, with secure remote access planned at €2/month.", "nano_cta": "Explore NanoDrive"}
         sd_link = "en-smartdrive.html"
     body = f"""{header("index.html" if lang == "it" else "en.html", lang, home=True, switch="en.html" if lang == "it" else "index.html")}<main id="main">
 <section class="hero hero-min" id="top">
@@ -515,7 +517,8 @@ def home(lang="it"):
 <p class="eyebrow">{sd['tag']}</p>
 <h2>{sd['title']}</h2>
 <p>{sd['desc']}</p>
-<div class="hero-actions"><a class="button primary" href="{sd_link}">{sd['cta']}</a></div>
+<p class="smartdrive-nano-teaser">{sd['nano']}</p>
+<div class="hero-actions"><a class="button primary" href="{sd_link}">{sd['cta']}</a><a class="button ghost" href="{sd_link}#nanodrive">{sd['nano_cta']}</a></div>
 </div>
 <div class="smartdrive-feature-aside">
 <strong>SmartDrive</strong>
