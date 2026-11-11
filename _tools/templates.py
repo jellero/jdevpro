@@ -439,7 +439,7 @@ def home(lang="it"):
                  enter="Entra nell'area →",
                  proof=[("JD Industry", "Gestionale di produzione collegato a macchine SCM ed Essetre.", "gestionale-produzione-erpnext.html"),
                         ("E-commerce e marketplace", "Gestionale collegato a fornitore, marketplace e corriere.", "integrazione-software-api.html"),
-                        ("Prodotti", "Welora per le strutture ricettive e JD Industry per la produzione.", "prodotti.html")],
+                        ("Periti e consulenti", "Interconnessione, collaudo e documentazione tecnica per la perizia.", "periti-ingegneri-consulenti.html")],
                  title="JDEVPRO · Interconnessione macchine e gestionali in Friuli",
                  desc="Interconnessione macchine 4.0 per l'iperammortamento: decine di macchine collegate al gestionale, tutte asseverate e ammesse. Friuli Venezia Giulia e Veneto.")
     else:
@@ -450,7 +450,7 @@ def home(lang="it"):
                  enter="Enter the area →",
                  proof=[("JD Industry", "Production software connected to SCM and Essetre machines.", "en-erpnext-manufacturing.html"),
                         ("E-commerce and marketplaces", "Business software connected to supplier, marketplaces and courier.", "en-software-integration-api.html"),
-                        ("Products", "Welora for hospitality and JD Industry for manufacturing.", "en-products.html")],
+                        ("Machine interconnection", "Machine-to-business-system integration, testing and documented evidence.", "en-machine-interconnection.html")],
                  title="JDEVPRO · Machine interconnection and business software, Italy",
                  desc="Industry 4.0 machine interconnection: dozens of machines connected to business software, all certified and approved. North-east Italy.")
     cards = ""
@@ -491,6 +491,7 @@ def home(lang="it"):
               "cta": "Explore SmartDrive", "price": "From €4.90/month · 100 GB · excl. VAT",
               "nano": "Prefer local storage? NanoDrive connects NAS devices, hard drives and USB storage. Planned launch: €50 with 12 months of service; then €2/month.", "nano_cta": "Explore NanoDrive"}
         sd_link = "en-smartdrive.html"
+    industry_cta = "<section class=\"section section-tight industrial-request\" id=\"verifica-macchine\">\n<div class=\"shell split industrial-request-grid\">\n<div class=\"section-heading reveal\"><p class=\"eyebrow\">Per aziende manifatturiere</p><h2>Hai una macchina da collegare al gestionale?</h2>\n<p>Per valutare l'interconnessione servono pochi dati: marca e modello della macchina, tipo di controllo e gestionale utilizzato. Se non conosci il protocollo, lo verifichiamo durante l'analisi tecnica.</p>\n<div class=\"hero-actions\"><a class=\"button primary\" href=\"mailto:info@jdevpro.it?subject=Richiesta%20interconnessione%20macchina%20-%20JDEVPRO&amp;body=Buongiorno%2C%0A%0AAzienda%3A%0AMarca%20e%20modello%20macchina%3A%0ACNC%20o%20PLC%20(se%20noto)%3A%0AGestionale%20utilizzato%3A%0ADati%20da%20scambiare%3A%0AComune%3A%0ARecapito%3A%0A\">Richiedi una verifica tecnica</a><a class=\"button ghost dark\" href=\"test-interconnessione-4-0.html\">Test interconnessione 4.0</a></div></div>\n<div class=\"industrial-request-details reveal\"><h3>Da dove partiamo</h3>\n<ul><li>Identificazione delle interfacce disponibili</li><li>Verifica dei dati da scambiare con ERP o gestionale</li><li>Definizione del collegamento e del collaudo</li><li>Documentazione tecnica per chi dovrà valutare i requisiti</li></ul>\n<p>Se sei un perito, un ingegnere o un consulente, consulta <a href=\"periti-ingegneri-consulenti.html\">come collaboriamo sul lato tecnico</a>.</p></div>\n</div></section>" if lang == "it" else "<section class=\"section section-tight industrial-request\" id=\"machine-review\">\n<div class=\"shell split industrial-request-grid\">\n<div class=\"section-heading reveal\"><p class=\"eyebrow\">For manufacturers</p><h2>Need to connect a machine to business software?</h2>\n<p>To review an interconnection, send the machine make and model, controller type and current ERP or business software. If you do not know the protocol, it can be checked during the technical review.</p>\n<div class=\"hero-actions\"><a class=\"button primary\" href=\"mailto:info@jdevpro.it?subject=Machine%20interconnection%20enquiry%20-%20JDEVPRO&amp;body=Hello%2C%0A%0ACompany%3A%0AMachine%20make%20and%20model%3A%0ACNC%20or%20PLC%20(if%20known)%3A%0ABusiness%20software%3A%0AData%20to%20exchange%3A%0ALocation%3A%0AContact%3A%0A\">Request a technical review</a><a class=\"button ghost dark\" href=\"en-machine-interconnection.html\">Machine interconnection</a></div></div>\n<div class=\"industrial-request-details reveal\"><h3>What we review</h3>\n<ul><li>Available machine interfaces</li><li>Data exchange with ERP or business software</li><li>Connection approach and testing</li><li>Technical documentation for an independent assessor</li></ul>\n<p>Tax incentive eligibility remains the responsibility of the appointed professionals.</p></div>\n</div></section>"
     body = f"""{header("index.html" if lang == "it" else "en.html", lang, home=True, switch="en.html" if lang == "it" else "index.html")}<main id="main">
 <section class="hero hero-min" id="top">
 <div aria-hidden="true" class="hero-grid"></div>
@@ -511,22 +512,7 @@ def home(lang="it"):
 <div class="outcome-grid">{industrial}</div>
 </div>
 </section>
-<section class="section section-tight section-paper smartdrive-home" id="smartdrive">
-<div class="shell smartdrive-feature reveal">
-<div>
-<p class="eyebrow">{sd['tag']}</p>
-<h2>{sd['title']}</h2>
-<p>{sd['desc']}</p>
-<p class="smartdrive-nano-teaser">{sd['nano']}</p>
-<div class="hero-actions"><a class="button primary" href="{sd_link}">{sd['cta']}</a><a class="button ghost dark" href="{sd_link}#nanodrive">{sd['nano_cta']}</a></div>
-</div>
-<div class="smartdrive-feature-aside">
-<strong>SmartDrive</strong>
-<span>Windows · Mac · Android · iPhone</span>
-<small>{sd['price']}</small>
-</div>
-</div>
-</section>
+{industry_cta}
 <section class="section" id="aree">
 <span id="competenze"></span>
 <div class="shell">
@@ -550,6 +536,22 @@ def home(lang="it"):
 <section class="section section-tight proof-band">
 <div class="shell">
 <div class="proof-grid proof-links reveal">{proof}</div>
+</div>
+</section>
+<section class="section section-tight section-paper smartdrive-home" id="smartdrive">
+<div class="shell smartdrive-feature reveal">
+<div>
+<p class="eyebrow">{sd['tag']}</p>
+<h2>{sd['title']}</h2>
+<p>{sd['desc']}</p>
+<p class="smartdrive-nano-teaser">{sd['nano']}</p>
+<div class="hero-actions"><a class="button primary" href="{sd_link}">{sd['cta']}</a><a class="button ghost dark" href="{sd_link}#nanodrive">{sd['nano_cta']}</a></div>
+</div>
+<div class="smartdrive-feature-aside">
+<strong>SmartDrive</strong>
+<span>Windows · Mac · Android · iPhone</span>
+<small>{sd['price']}</small>
+</div>
 </div>
 </section>
 {contact(lang)}</main>
