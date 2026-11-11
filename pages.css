@@ -434,8 +434,10 @@
 .nanodrive-renewal { display: inline-block; border-radius: 10px; padding: 8px 12px; margin-top: 10px; background: #e4f0ff; color: #103c79; font-weight: 750; }
 .nanodrive-hardware-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: center; gap: clamp(22px, 4vw, 52px); margin-top: 36px; }
 .nanodrive-product-visual { min-width: 0; margin: 0; }
-.nanodrive-product-pictures { overflow: hidden; border: 1px solid #d4e1ef; border-radius: 22px; background: #edf4ff; box-shadow: 0 18px 42px rgba(7, 27, 55, .11); }
-.nanodrive-product-pictures img { width: 100%; height: auto; display: block; }
+.nanodrive-product-pictures { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); align-items: stretch; gap: 14px; }
+.nanodrive-photo { display: grid; place-items: center; min-width: 0; overflow: hidden; background: #fff; border: 1px solid #d4e1ef; border-radius: 18px; box-shadow: 0 12px 28px rgba(7,27,55,.09); }
+.nanodrive-photo:hover, .nanodrive-photo:focus-visible { border-color: #2b79ee; box-shadow: 0 12px 28px rgba(10,86,186,.15); }
+.nanodrive-photo img { display: block; width: 100%; height: auto; object-fit: contain; }
 .nanodrive-product-visual figcaption { margin-top: 10px; color: #536579; font-size: .83rem; line-height: 1.5; }
 .nanodrive-hardware-details { min-width: 0; }
 .nanodrive-hardware-details h3 { margin: 0 0 18px; font-size: clamp(1.35rem, 2vw, 1.85rem); color: #101c2c; line-height: 1.25; }
@@ -451,3 +453,5 @@
 .nanodrive-qr-card small { font-size: .78rem; color: #426283; overflow-wrap: anywhere; }
 @media (max-width: 860px) { .nanodrive-hardware-grid { grid-template-columns: 1fr; } }
 @media (max-width: 420px) { .nanodrive-qr-card { gap: 10px; padding: 10px; } .nanodrive-qr-card img { width: 82px; height: 82px; } .nanodrive-qr-card small { font-size: .7rem; } }
+
+@media(max-width:540px){ .nanodrive-product-pictures { grid-template-columns: 1fr; gap: 12px; } }
