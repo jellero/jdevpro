@@ -74,7 +74,7 @@ PRODUCTS = {
           "SmartAgent si collega a Gmail, Microsoft 365, Aruba, PEC e qualunque casella IMAP; a Google, Microsoft e iCloud per il calendario; alla rubrica di iPhone e Android. Le mail restano anche nella tua casella e gli appuntamenti si aggiornano nei due sensi.",
           "Funziona dal browser su computer, tablet e telefono, senza installare niente. Con le API e i webhook si collega al tuo gestionale o al tuo sito.",
         ], ["Posta e PEC", "Calendario nei due sensi", "Rubrica del telefono", "API e webhook"]),
-        ("prices", "Prezzi", "Un prezzo chiaro per SmartAgent: SmartDrive è separato.", "Cambia solo quante persone lavorano con te. 30 giorni di prova gratuita, senza carta di credito.", [
+        ("prices", "Prezzi", "Un prezzo chiaro per SmartAgent: SmartDrive è separato.", "Cambia solo quante persone lavorano con te. Prova di 30 giorni: per le nuove attivazioni è prevista la verifica della carta, senza addebiti durante il periodo gratuito.", [
           ("Professionista · 1 utente", "29,90 € al mese", "Tutte le funzioni"),
           ("Studio · fino a 3 utenti", "49,90 € al mese", "Tutte le funzioni, per lavorare in squadra"),
           ("Studio Plus · fino a 6 utenti", "79,90 € al mese", "Tutte le funzioni, per studi più grandi"),
@@ -87,10 +87,10 @@ PRODUCTS = {
         ], "Prezzi IVA esclusa."),
         ("split", "Il sito di SmartAgent", "Tutto il resto è su smartagent.jdevpro.it.", [
           "Su <a href='https://smartagent.jdevpro.it/' target='_blank' rel='noreferrer'>smartagent.jdevpro.it</a> trovi la presentazione completa con le schermate, i mestieri, SmartDrive, la firma digitale e i prezzi.",
-          "Da lì attivi la prova gratuita di 30 giorni in due minuti: niente carta di credito, niente da installare.",
+          "Da lì trovi la prova gratuita di 30 giorni, senza installazioni. Per le nuove attivazioni è prevista la carta di pagamento, senza addebiti durante la prova.",
         ], ["Presentazione completa", "Prova gratuita 30 giorni", "Accesso per chi è già cliente"]),
         ("status", "Stato e prossime novità", "Disponibile ora, con nuove funzioni in arrivo.", [
-          "Disponibile ora, con 30 giorni di prova gratuita senza carta di credito",
+          "Disponibile ora; per le nuove prove di 30 giorni è prevista la carta di pagamento verificata, senza addebiti durante il periodo gratuito",
           "SmartDrive in arrivo: archivio e backup autonomi, utilizzabili anche senza SmartAgent",
           "A breve la firma digitale: firmi con la tua firma remota e i clienti firmano dal telefono",
           "Database separato per ogni attività, verifica in due passaggi e dati sempre esportabili",
@@ -404,7 +404,7 @@ PRODUCTS = {
           "SmartAgent connects to Gmail, Microsoft 365, Aruba, certified email and any IMAP mailbox; to Google, Microsoft and iCloud calendars; to iPhone and Android contacts. Emails stay in your mailbox and appointments sync both ways.",
           "It runs in the browser on computer, tablet and phone, with nothing to install. APIs and webhooks connect it to your own software or website.",
         ], ["Email and certified email", "Two-way calendar", "Phone contacts", "APIs and webhooks"]),
-        ("prices", "Pricing", "Clear SmartAgent pricing: SmartDrive is separate.", "Only the number of people changes. 30-day free trial, no credit card.", [
+        ("prices", "Pricing", "Clear SmartAgent pricing: SmartDrive is separate.", "Only the number of people changes. For new 30-day trials, payment-card verification is planned, with no charges during the free period.", [
           ("Professional · 1 user", "€29.90 a month", "All features"),
           ("Studio · up to 3 users", "€49.90 a month", "All features, for working as a team"),
           ("Studio Plus · up to 6 users", "€79.90 a month", "All features, for larger firms"),
@@ -417,10 +417,10 @@ PRODUCTS = {
         ], "Prices exclude VAT."),
         ("split", "The SmartAgent website", "Everything else is on smartagent.jdevpro.it.", [
           "On <a href='https://smartagent.jdevpro.it/' target='_blank' rel='noreferrer'>smartagent.jdevpro.it</a> you find the full presentation (in Italian) with screenshots, trades, SmartDrive, digital signatures and pricing.",
-          "From there you start the 30-day free trial in two minutes: no credit card, nothing to install.",
+          "There you can find the 30-day trial, with no installation needed. New trial activations will require a verified payment card, with no charge during the free period.",
         ], ["Full presentation", "30-day free trial", "Sign-in for existing customers"]),
         ("status", "Status and what's next", "Available now, with new features on the way.", [
-          "Available now, with a 30-day free trial and no credit card",
+          "Available now; a verified payment card is planned for new 30-day trial activations, with no charge during the free period",
           "SmartDrive coming soon: standalone storage and backup, also usable without SmartAgent",
           "Coming soon digital signatures: sign with your remote digital signature, clients sign from their phone",
           "Separate database for each business, two-step verification and data always exportable",
