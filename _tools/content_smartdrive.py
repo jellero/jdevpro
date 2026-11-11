@@ -32,10 +32,10 @@ CONTENT = {
         "nano_service": "Offerta di lancio prevista: NanoDrive a 50 € con i primi 12 mesi di servizio remoto inclusi. Dal 13° mese rinnovo previsto a 2 €/mese. IVA e spedizione da definire. È prevista un'infrastruttura di accesso remoto su server italiano, da verificare prima del rilascio.",
         "nano_warning": "NanoDrive mantiene i dati in locale: l'accesso da remoto non equivale a una seconda copia di backup. Per protezione contro guasti e furto serve anche una copia separata.",
         "nano_price": "50 €", "nano_price_label": "Hardware + primi 12 mesi di servizio", "nano_renewal": "Poi 2 €/mese · prezzo di lancio previsto",
-        "nano_hw_title": "Hardware NanoDrive · base NanoPi NEO3 Plus",
+        "nano_hw_title": "NanoDrive — specifiche tecniche",
         "nano_hw_note": "Configurazione e compatibilità definitive da verificare sul prototipo. Le versioni 1 e 2 GB sono alternative; il modulo eMMC è opzionale.",
         "nano_specs": ["Rockchip RK3528A quad-core", "RAM LPDDR4X da 1 o 2 GB", "Porta Gigabit Ethernet", "USB 3.0 e USB-C", "Supporto modulo eMMC opzionale", "Collegamento previsto a NAS, dischi e chiavette USB"],
-        "nano_figure": "Anteprima del marchio NanoDrive e del QR applicati alle foto reali del NanoPi NEO3 Plus. Personalizzazione grafica del prototipo, non fotografia di un dispositivo già marchiato.",
+        "nano_figure": "",
         "nano_scan": "Inquadra il QR per NanoDrive",
         "pricing": "Un piano SmartDrive a sé, oppure aggiunto a SmartAgent",
         "pricing_text": "Listino confermato per il lancio, importi mensili IVA esclusa. La vendita e le applicazioni non sono ancora attive.",
@@ -74,10 +74,10 @@ CONTENT = {
         "nano_service": "Planned launch offer: NanoDrive hardware for €50 with the first 12 months of remote-access service included. Planned renewal from month 13: €2/month. VAT and shipping terms to be confirmed. Italy-based access infrastructure is planned but not yet verified.",
         "nano_warning": "Keeping files locally does not create an off-site backup. A separate copy is necessary to protect against hardware failure, theft or site incidents.",
         "nano_price": "€50", "nano_price_label": "Hardware + first 12 months of service", "nano_renewal": "Then €2/month · planned launch offer",
-        "nano_hw_title": "NanoDrive hardware · NanoPi NEO3 Plus board",
+        "nano_hw_title": "NanoDrive — technical specifications",
         "nano_hw_note": "Final configuration and compatibility must be validated on the prototype. 1 GB and 2 GB are alternatives; eMMC is optional.",
         "nano_specs": ["Quad-core Rockchip RK3528A", "1 GB or 2 GB LPDDR4X RAM", "Gigabit Ethernet", "USB 3.0 and USB-C", "Optional eMMC module support", "Planned connection to NAS devices, HDDs and USB drives"],
-        "nano_figure": "NanoDrive branding and QR placement preview on real NanoPi NEO3 Plus hardware photos. This is a graphic mockup, not a photo of already branded hardware.",
+        "nano_figure": "",
         "nano_scan": "Scan the QR code for NanoDrive",
         "pricing": "Standalone SmartDrive, or add it to SmartAgent",
         "pricing_text": "Pricing confirmed for launch, monthly fees excluding VAT. Subscriptions and applications are not yet available.",
@@ -126,7 +126,7 @@ def build_page(lang, head, header, footer, contact, base, org_ref, org_id):
 <a class="nanodrive-device-qr" href="https://www.jdevpro.it/" aria-label="QR NanoDrive, apre il sito JDEVPRO"><img src="assets/nanodrive-qr.svg" width="72" height="72" alt="QR del sito JDEVPRO"></a>
 </div>
 </div>
-<figcaption>{p['nano_figure']}</figcaption>
+
 </figure>"""
     price_rows = "".join(
         f'<tr><th scope="row">{size}</th><td>{standalone}</td><td>{integrated}</td></tr>'
