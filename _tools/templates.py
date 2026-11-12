@@ -481,7 +481,7 @@ HOME_BODY = {
 <h1>JDEVPRO: software e integrazione per le imprese. <span>Interconnessione macchine 4.0, dal PLC al gestionale.</span></h1>
 <p class="hero-lead">Progettiamo software, integrazioni e sistemi connessi per le imprese. Nell’industria colleghiamo le macchine ai gestionali già in uso, sviluppando integrazioni e adattamenti dove tecnicamente possibile, senza imporre un nuovo ERP. Se manca un gestionale utilizzabile, possiamo fornire un applicativo essenziale dedicato. Seguiamo analisi, sviluppo, collaudo e documentazione tecnica in Friuli Venezia Giulia, Veneto e in trasferta.</p>
 <div class="hero-actions">
-<a class="button primary" href="mailto:info@jdevpro.it?subject=Richiesta%20interconnessione%20macchina%20-%20JDEVPRO&amp;body=Buongiorno%2C%0A%0AAzienda%3A%0AMarca%20e%20modello%20macchina%3A%0ACNC%20o%20PLC%20(se%20noto)%3A%0AGestionale%20utilizzato%3A%0ADati%20da%20scambiare%3A%0AComune%3A%0ARecapito%3A%0A">Richiedi una verifica tecnica</a>
+<a class="button primary" href="#contatto">Richiedi una verifica tecnica</a>
 <a class="button ghost" href="interconnessione-macchine-industria-4-0.html">Scopri come lavoriamo</a>
 </div>
 <ul class="hero-stats"><li><a class="stat" href="interconnessione-macchine-industria-4-0.html"><strong>Decine</strong><span>di macchine collegate a sistemi aziendali in produzione</span></a></li><li><a class="stat" href="gestionale-produzione-erpnext.html"><strong>JD Industry</strong><span>il nostro gestionale di produzione collegato alle macchine</span></a></li><li><a class="stat" href="interconnessione-macchine-industria-4-0.html"><strong class="stat-long">PLC e CNC</strong><span>verifichiamo interfacce e compatibilità, anche su macchine datate</span></a></li><li><a class="stat" href="come-lavoriamo.html"><strong>Metodo</strong><span>analisi, sviluppo, collaudo e documentazione</span></a></li></ul>
@@ -519,7 +519,7 @@ HOME_BODY = {
 <div class="shell split industrial-request-grid">
 <div class="section-heading reveal"><p class="eyebrow">Per aziende manifatturiere</p><h2>Hai una macchina da collegare al gestionale?</h2>
 <p>Per valutare l'interconnessione servono pochi dati: marca e modello della macchina, tipo di controllo e gestionale in uso, se presente. Verifichiamo il collegamento al software esistente oppure proponiamo un gestionale essenziale dedicato, solo quando necessario.</p>
-<div class="hero-actions"><a class="button primary" href="mailto:info@jdevpro.it?subject=Richiesta%20interconnessione%20macchina%20-%20JDEVPRO&amp;body=Buongiorno%2C%0A%0AAzienda%3A%0AMarca%20e%20modello%20macchina%3A%0ACNC%20o%20PLC%20(se%20noto)%3A%0AGestionale%20utilizzato%3A%0ADati%20da%20scambiare%3A%0AComune%3A%0ARecapito%3A%0A">Richiedi una verifica tecnica</a><a class="button ghost dark" href="test-interconnessione-4-0.html">Test interconnessione 4.0</a></div></div>
+<div class="hero-actions"><a class="button primary" href="#contatto">Richiedi una verifica tecnica</a><a class="button ghost dark" href="test-interconnessione-4-0.html">Test interconnessione 4.0</a></div></div>
 <div class="industrial-request-details reveal"><h3>Da dove partiamo</h3>
 <ul><li>Identificazione delle interfacce disponibili</li><li>Verifica dei dati da scambiare con ERP o gestionale</li><li>Definizione del collegamento e del collaudo</li><li>Documentazione tecnica per chi dovrà valutare i requisiti</li></ul>
 <p>Se sei un perito, un ingegnere o un consulente, consulta <a href="periti-ingegneri-consulenti.html">come collaboriamo sul lato tecnico</a>.</p></div>
@@ -587,7 +587,7 @@ HOME_BODY = {
 <h1>JDEVPRO: software and integration for businesses. <span>Industry 4.0 connections, from PLCs to business software.</span></h1>
 <p class="hero-lead">We design software, integrations and connected systems for businesses. In manufacturing, we connect machines to the management software already in use, building integrations and adaptations where technically feasible rather than requiring a new ERP. Where no suitable application is available, we can provide a simple dedicated management tool. We manage review, development, testing and documentation in north-east Italy and on site where needed.</p>
 <div class="hero-actions">
-<a class="button primary" href="mailto:info@jdevpro.it?subject=Machine%20interconnection%20enquiry%20-%20JDEVPRO&amp;body=Hello%2C%0A%0ACompany%3A%0AMachine%20make%20and%20model%3A%0ACNC%20or%20PLC%20(if%20known)%3A%0ABusiness%20software%3A%0AData%20to%20exchange%3A%0ALocation%3A%0AContact%3A%0A">Request a technical review</a>
+<a class="button primary" href="#contatto">Request a technical review</a>
 <a class="button ghost" href="en-machine-interconnection.html">How we work</a>
 </div>
 <ul class="hero-stats"><li><a class="stat" href="en-machine-interconnection.html"><strong>Dozens</strong><span>machines connected to business systems in production</span></a></li><li><a class="stat" href="en-erpnext-manufacturing.html"><strong>JD Industry</strong><span>our production software connected to machines</span></a></li><li><a class="stat" href="en-machine-interconnection.html"><strong>PLC and CNC</strong><span>interfaces and compatibility assessed, including older machines</span></a></li><li><a class="stat" href="en-how-we-work.html"><strong>Method</strong><span>analysis, implementation, testing and documentation</span></a></li></ul>
@@ -623,7 +623,7 @@ HOME_BODY = {
 <div class="shell split industrial-request-grid">
 <div class="section-heading reveal"><p class="eyebrow">For manufacturers</p><h2>Need to connect a machine to business software?</h2>
 <p>To review an interconnection, send the machine make and model, controller type and existing business software, if any. We first assess integration with the software you already use, and offer a simple dedicated application only when necessary.</p>
-<div class="hero-actions"><a class="button primary" href="mailto:info@jdevpro.it?subject=Machine%20interconnection%20enquiry%20-%20JDEVPRO&amp;body=Hello%2C%0A%0ACompany%3A%0AMachine%20make%20and%20model%3A%0ACNC%20or%20PLC%20(if%20known)%3A%0ABusiness%20software%3A%0AData%20to%20exchange%3A%0ALocation%3A%0AContact%3A%0A">Request a technical review</a><a class="button ghost dark" href="en-machine-interconnection.html">Machine interconnection</a></div></div>
+<div class="hero-actions"><a class="button primary" href="#contatto">Request a technical review</a><a class="button ghost dark" href="en-machine-interconnection.html">Machine interconnection</a></div></div>
 <div class="industrial-request-details reveal"><h3>What we review</h3>
 <ul><li>Available machine interfaces</li><li>Data exchange with ERP or business software</li><li>Connection approach and testing</li><li>Technical documentation for an independent assessor</li></ul>
 <p>Tax incentive eligibility remains the responsibility of the appointed professionals.</p></div>
