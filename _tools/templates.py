@@ -59,6 +59,7 @@ GUIDE_UPDATED, GUIDE_MODIFIED = "ottobre 2026", "2026-10-28"
 GUIDES = GUIDES + runpy.run_path(str(pathlib.Path(__file__).with_name("content_guides_more.py")))["MORE_GUIDES"]
 GUIDES = GUIDES + runpy.run_path(str(pathlib.Path(__file__).with_name("content_guides_choose.py")))["CHOOSE_GUIDES"]
 GUIDES = GUIDES + runpy.run_path(str(pathlib.Path(__file__).with_name("content_guides_tech.py")))["TECH_GUIDES"]
+GUIDES = GUIDES + runpy.run_path(str(pathlib.Path(__file__).with_name("content_guides_apps.py")))["APP_PUBLISHING_GUIDES"]
 EN_SLUG, EN_PAGES, EN_TIERS = EXTRA["EN_SLUG"], EXTRA["EN_PAGES"], EXTRA["EN_TIERS"]
 SENSOR_TIER = {"it": ("Sensori aggiunti", "Per macchine e impianti senza nessuna interfaccia, anche vecchi: sensori e contatori rilevano stato, cicli, tempi e consumi e li portano nei vostri sistemi."),
                "en": ("Added sensors", "For machines and plants with no interface at all, old ones included: sensors and meters detect status, cycles, times and consumption and bring them into your systems.")}
@@ -1028,7 +1029,7 @@ def guide(g):
     sections = "\n".join(parts)
     jsonld = [
       {"@context": "https://schema.org", "@type": "Article", "headline": g["short"], "description": g["desc"],
-       "url": url, "inLanguage": "it", "datePublished": "2026-10-27", "dateModified": GUIDE_MODIFIED,
+       "url": url, "inLanguage": "it", "datePublished": g.get("published", "2026-10-27"), "dateModified": g.get("modified", GUIDE_MODIFIED),
        "author": {"@type": "Person", "name": "Jacopo Ellero", "url": BASE + "chi-sono.html"},
        "publisher": {"@id": ORG_ID}, "image": BASE + "assets/og-jdevpro.jpg"},
       {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
@@ -1044,7 +1045,7 @@ def guide(g):
 <p class="eyebrow">Guida JDEVPRO</p>
 <h1>{g['h1']}</h1>
 <p class="hero-lead">{g['intro']}</p>
-<p class="hero-proof">Aggiornata a {GUIDE_UPDATED}</p>
+<p class="hero-proof">Aggiornata a {g.get("updated", GUIDE_UPDATED)}</p>
 </div>
 </section>
 <section class="section section-tight section-white">
@@ -1063,6 +1064,11 @@ def guide(g):
 
 # temi comuni a tutte le aree: queste guide stanno nel loro gruppo, non ripetute sotto ogni area
 COMMON_GUIDES = [
+    ("pubblicazione-app", "Pubblicare un'app: store, costi e privacy",
+     ["guida-pubblicare-app-microsoft-store.html", "guida-pubblicare-app-macos.html",
+      "guida-pubblicare-app-android.html", "guida-pubblicare-app-ios.html",
+      "guida-pubblicare-app-gdpr-privacy.html"]),
+
     ("rete", "Rete, connessione e sicurezza",
      ["guida-rete-aziendale.html", "guida-ponti-radio-frequenze-normative.html", "guida-internet-siti-remoti.html",
       "guida-scegliere-backup.html", "guida-scegliere-hosting.html", "guida-passare-centralino-voip.html",
@@ -1118,8 +1124,8 @@ def guide_index():
 </section>
 {contact()}</main>
 """
-    return head("Guide: macchine 4.0, gestionali, rete, energia e hotel | JDEVPRO",
-                "Guide pratiche: interconnessione 4.0 e iperammortamento, ERP e MES, migrazione dati, rete e ponti radio, backup, fotovoltaico, pompe di calore e hotel.",
+    return head("Guide JDEVPRO: software, app store, GDPR, industria e tecnologia",
+                "Guide pratiche di pubblicazione app su Microsoft Store, macOS, Google Play e iOS con costi, test, GDPR e dati; anche software, industria, reti ed energia.",
                 "guide.html", jsonld) + body + footer()
 
 
