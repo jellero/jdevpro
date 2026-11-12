@@ -1483,14 +1483,14 @@ def work_method(lang="it"):
 <section class="section section-tight section-white">
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">{a['proofEyebrow']}</p><h2>{a['proofTitle']}</h2><p>{a['proofText']}</p><a class="card-link" href="{a['proofHref']}">{a['proofLink']} →</a></div>
-<div class="profile-copy reveal"><p><strong>Architettura.</strong> Componenti e flussi definiti con chiarezza.</p><p><strong>Controllo.</strong> Permessi, log e test anche in caso di errore.</p><p><strong>Continuità.</strong> Manutenzione e procedure di ripristino previste.</p></div>
+<div class="profile-copy reveal"><p><strong>{("Architettura." if lang == "it" else "Architecture.")}</strong> {("Componenti e flussi definiti con chiarezza." if lang == "it" else "Clearly defined components and data flows.")}</p><p><strong>{("Controllo." if lang == "it" else "Control.")}</strong> {("Permessi, log e test anche in caso di errore." if lang == "it" else "Permissions, logs and failure testing.")}</p><p><strong>{("Continuità." if lang == "it" else "Continuity.")}</strong> {("Manutenzione e procedure di ripristino previste." if lang == "it" else "Maintenance and recovery procedures planned.")}</p></div>
 </div></section>
 <section class="section section-tight section-paper">
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">{a['identityEyebrow']}</p><h2>{a['identityTitle']}</h2></div>
 <div class="profile-copy reveal">{identity}<a class="card-link" href="{a['identityHref']}">{a['identityLink']} →</a></div>
 </div></section>
-{contact(lang)}</main>"""
+{contact(lang, ("Raccontaci il progetto.", "Descrivici cosa vuoi realizzare, i sistemi presenti e gli obiettivi.") if lang == "it" else ("Tell us about your project.", "Describe what you want to build, your existing systems and your goals."))}</main>"""
     return head(a["title"], a["desc"], a["slug"], jsonld, lang,
                 alternates=[("it", METHOD["it"]["slug"]), ("en", METHOD["en"]["slug"])]) + body + footer(lang)
 
