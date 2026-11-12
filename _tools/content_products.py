@@ -141,7 +141,7 @@ PRODUCTS = {
     dict(
       key="erp", slug="gestionale-produzione-erpnext.html", nav="JD Industry",
       title="JD Industry: gestionale di produzione per officine | JDEVPRO",
-      desc="JD Industry, gestionale di produzione per officine meccaniche, carpenterie e falegnamerie: macchine collegate, ERP su ERPNext o su misura.",
+      desc="JD Industry: integrazione delle macchine con gestionali esistenti o applicativi dedicati, ERP di produzione su ERPNext e soluzioni su misura. JDEVPRO.",
       card="L'ecosistema per la produzione: macchine collegate al gestionale, ERP completo su ERPNext o sistema su misura.",
       eyebrow="Prodotto · Ecosistema per la produzione",
       h1="JD Industry: il gestionale di produzione <span>che parte dalle macchine.</span>",
@@ -471,7 +471,7 @@ PRODUCTS = {
     dict(
       key="erp", slug="en-erpnext-manufacturing.html", nav="JD Industry",
       title="JD Industry: production management software | JDEVPRO",
-      desc="JD Industry, production management for machine shops, metalwork and woodworking: connected machines, full ERP on ERPNext or custom software.",
+      desc="JD Industry connects industrial machines to existing business software or dedicated applications, with ERPNext production management and tailored systems by JDEVPRO.",
       card="The production ecosystem: machines connected to business software, full ERP on ERPNext or custom software.",
       eyebrow="Product · Production ecosystem",
       h1="JD Industry: production management <span>that starts from the machines.</span>",
