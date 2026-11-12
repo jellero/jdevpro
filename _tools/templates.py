@@ -456,8 +456,8 @@ HOME_BODY = {
 <div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">Realizzazioni concrete</p><h2>Macchine e software che lavorano già insieme.</h2><p>Esempi documentati di collegamenti e integrazioni realizzati. Ogni macchina viene valutata in base alle interfacce disponibili e ai dati necessari.</p></div>
 <div class="proof-grid proof-links reveal">
-<a href="interconnessione-macchine-industria-4-0.html#esempi"><strong>Bordatrice SCM · Maestro Active</strong><span>Stato e allarmi in tempo reale, commesse gestite dalla macchina, produzione acquisita e costi per commessa.</span></a>
-<a href="gestionale-produzione-erpnext.html"><strong>CNC Essetre / Tecnoessetre</strong><span>Più macchine in un'unica schermata, file di lavoro, eventi di commessa, magazzino e report.</span></a>
+<a href="casi-studio-industriali.html#scm-maestro-active"><strong>Bordatrice SCM · Maestro Active</strong><span>Stato e allarmi in tempo reale, commesse gestite dalla macchina, produzione acquisita e costi per commessa.</span></a>
+<a href="casi-studio-industriali.html#cnc-essetre"><strong>CNC Essetre / Tecnoessetre</strong><span>Più macchine in un'unica schermata, file di lavoro, eventi di commessa, magazzino e report.</span></a>
 <a href="integrazione-software-api.html"><strong>Gestionale e marketplace</strong><span>Flussi di dati tra gestionale, fornitore, marketplace e corriere, senza reinserimenti manuali.</span></a>
 </div>
 </div>
@@ -546,8 +546,8 @@ HOME_BODY = {
 <div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">Real projects</p><h2>Machines and software already working together.</h2><p>Documented examples of completed connections and integrations. We review interfaces and data requirements before proposing each connection.</p></div>
 <div class="proof-grid proof-links reveal">
-<a href="en-machine-interconnection.html"><strong>SCM edgebander · Maestro Active</strong><span>Live status and alarms, work orders managed by the machine, automatic production data and job costing.</span></a>
-<a href="en-erpnext-manufacturing.html"><strong>Essetre / Tecnoessetre CNC</strong><span>Multiple machines in one view, job events, work files, inventory and reports.</span></a>
+<a href="en-industrial-case-studies.html#scm-maestro-active"><strong>SCM edgebander · Maestro Active</strong><span>Live status and alarms, work orders managed by the machine, automatic production data and job costing.</span></a>
+<a href="en-industrial-case-studies.html#cnc-essetre"><strong>Essetre / Tecnoessetre CNC</strong><span>Multiple machines in one view, job events, work files, inventory and reports.</span></a>
 <a href="en-software-integration-api.html"><strong>ERP and marketplaces</strong><span>Data flowing between business software, suppliers, marketplaces and shipping services.</span></a>
 </div></div></section>
 <section class="section section-tight section-white" id="project-delivery">
