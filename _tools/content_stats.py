@@ -5,14 +5,14 @@ Ogni voce: (valore in evidenza, descrizione, link o None).
 
 STATS = {
   "home": {
-    "it": [("Decine", "di macchine collegate, tutte asseverate da ingegneri e ammesse all'iperammortamento", "interconnessione-macchine-industria-4-0.html"),
+    "it": [("Decine", "di macchine collegate a sistemi aziendali in produzione", "interconnessione-macchine-industria-4-0.html"),
            ("JD Industry", "il nostro gestionale di produzione collegato alle macchine", "gestionale-produzione-erpnext.html"),
-           ("Qualsiasi marca", "macchine con PLC o CNC, anche datate: OPC UA, MTConnect, Modbus", "interconnessione-macchine-industria-4-0.html"),
-           ("24 h", "al massimo per una risposta scritta", "#contatto")],
-    "en": [("Dozens", "machines connected, all sworn by engineers and approved for hyper-depreciation", "en-machine-interconnection.html"),
+           ("PLC e CNC", "verifichiamo interfacce e compatibilità, anche su macchine datate", "interconnessione-macchine-industria-4-0.html"),
+           ("Metodo", "analisi, sviluppo, collaudo e documentazione", "come-lavoriamo.html")],
+    "en": [("Dozens", "machines connected to business systems in production", "en-machine-interconnection.html"),
            ("JD Industry", "our production software connected to machines", "en-erpnext-manufacturing.html"),
-           ("Any brand", "PLC or CNC machines, old ones too: OPC UA, MTConnect, Modbus", "en-machine-interconnection.html"),
-           ("24 h", "at most for a written reply", "#contatto")],
+           ("PLC and CNC", "interfaces and compatibility assessed, including older machines", "en-machine-interconnection.html"),
+           ("Method", "analysis, implementation, testing and documentation", "en-how-we-work.html")],
   },
   "area:industria": {
     "it": [("Decine", "di macchine collegate in produzione", "interconnessione-macchine-industria-4-0.html"),
@@ -32,7 +32,7 @@ STATS = {
   },
   "area:web": {
     "it": [("Marketplace", "gestionale collegato a fornitore, SellRapido, IBS, Temu e GLS", "integrazione-software-api.html"),
-           ("Qualsiasi marca", "macchine con PLC o CNC, anche datate: OPC UA, MTConnect, Modbus", "interconnessione-macchine-industria-4-0.html"),
+           ("PLC e CNC", "verifichiamo interfacce e compatibilità, anche su macchine datate", "interconnessione-macchine-industria-4-0.html"),
            ("4 lingue", "portale turistico Lauco Experience con backoffice", "https://www.laucoexperience.it/")],
     "en": [("Marketplaces", "business software connected to supplier, SellRapido, IBS, Temu and GLS", "en-software-integration-api.html"),
            ("Welora", "our own hospitality management software", "https://welora.it/"),
@@ -40,13 +40,13 @@ STATS = {
   },
   "interconnessione-macchine-industria-4-0.html": {
     "it": [("Decine", "di macchine collegate in produzione", None),
-           ("Asseverate", "tutte certificate e asseverate da ingegneri", None),
-           ("Verificate", "tecnicamente ai fini dell'interconnessione", None),
-           ("Ammesse", "all'iperammortamento", None)],
+           ("Analisi", "interfacce, rete e compatibilità", None),
+           ("Collaudo", "verifiche sui dati di produzione", None),
+           ("Documentazione", "evidenze tecniche per i professionisti incaricati", None)],
     "en": [("Dozens", "machines connected in production", None),
-           ("Certified", "all certified and sworn by engineers", None),
-           ("Verified", "technically, for interconnection purposes", None),
-           ("Approved", "for the Italian hyper-depreciation", None)],
+           ("Analysis", "interfaces, networks and compatibility", None),
+           ("Testing", "checks against real production data", None),
+           ("Documentation", "technical records for appointed assessors", None)],
   },
   "monitoraggio-iot.html": {
     "it": [("Industria", "sensori e gateway in produzione", None),
