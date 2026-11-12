@@ -497,7 +497,7 @@ HOME_BODY = {
 </section>
 <section class="section section-tight section-white" id="aree">
 <div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">Aree operative</p><h2>Competenze tecnologiche coordinate, non un solo servizio.</h2><p>Interconnessione industriale, sviluppo software, automazione e infrastrutture fanno parte della stessa capacità di integrazione. Il 4.0 è il servizio oggi in primo piano, non l’intera attività di JDEVPRO.</p></div>
+<div class="section-heading reveal"><p class="eyebrow">Aree operative</p><h2>Competenze integrate per progetti tecnologici completi.</h2><p>Sviluppiamo applicazioni, integriamo macchine e piattaforme aziendali e realizziamo sistemi di automazione e infrastruttura. Ogni intervento parte dai processi esistenti e viene seguito fino alla messa in esercizio.</p></div>
 <div class="outcome-grid">
 <article class="outcome reveal"><h3>Hotel e B&amp;B</h3><p>Check-in e accessi, domotica, videosorveglianza, telefonia VoIP e connettività per strutture ricettive.</p><a class="card-link" href="strutture-edifici.html">Scopri le soluzioni →</a></article>
 <article class="outcome reveal"><h3>Software su misura</h3><p>Gestionali e applicazioni costruiti intorno ai processi reali, con migrazioni dai sistemi esistenti.</p><a class="card-link" href="software-web.html">Esplora software e web →</a></article>
@@ -584,7 +584,7 @@ HOME_BODY = {
 </div>
 </section>
 <section class="section section-tight section-white" id="aree"><div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">What we do</p><h2>Coordinated technical expertise, not just one service.</h2><p>Industrial integration, custom software, automation and infrastructure are part of the same systems approach. Industry 4.0 is our current lead service, not the full scope of JDEVPRO.</p></div>
+<div class="section-heading reveal"><p class="eyebrow">What we do</p><h2>Integrated capabilities for complete technology projects.</h2><p>We develop applications, integrate industrial equipment and business platforms, and deliver automation and infrastructure systems. Every project starts with existing processes and is followed through to commissioning.</p></div>
 <div class="outcome-grid">
 <article class="outcome reveal"><h3>Hotels and B&amp;Bs</h3><p>Check-in and access control, building automation, video surveillance, VoIP and connectivity for accommodation.</p><a class="card-link" href="en-properties-buildings.html">Explore hospitality solutions →</a></article>
 <article class="outcome reveal"><h3>Custom software</h3><p>Business applications built around actual processes, including migrations from existing systems.</p><a class="card-link" href="en-software-web.html">Explore software services →</a></article>
