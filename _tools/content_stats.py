@@ -17,10 +17,10 @@ STATS = {
   "area:industria": {
     "it": [("Decine", "di macchine collegate in produzione", "interconnessione-macchine-industria-4-0.html"),
            ("JD Industry", "gestionale di produzione collegato a macchine SCM ed Essetre", None),
-           ("Ammesse all'iperammortamento", "tutte le macchine collegate, certificate e asseverate da ingegneri", "guida-interconnessione-iperammortamento.html")],
+           ("Verifiche tecniche", "collegamenti e collaudi documentati; agevolazioni valutate dal perito", "guida-interconnessione-iperammortamento.html")],
     "en": [("Dozens", "machines connected in production", "en-machine-interconnection.html"),
            ("JD Industry", "production software connected to SCM and Essetre machines", None),
-           ("Approved for hyper-depreciation", "every connected machine, certified and sworn by engineers", "en-machine-interconnection.html")],
+           ("Technical evidence", "connections and tests documented; tax eligibility assessed independently", "en-machine-interconnection.html")],
   },
   "area:strutture": {
     "it": [("Camera per camera", "clima collegato alle prenotazioni in alberghi e affittacamere", "automazione-hotel-bnb.html"),
