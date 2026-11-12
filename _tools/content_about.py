@@ -2,7 +2,7 @@
 
 ABOUT = {
   "it": {
-    "slug": "chi-sono.html",
+    "slug": "chi-siamo.html",
     "nav": "Chi siamo",
     "title": "Chi siamo | Competenze, tecnologia e progetti | JDEVPRO",
     "desc": "JDEVPRO integra sviluppo software, piattaforme, dati, automazione, IoT e infrastrutture con un metodo di lavoro strutturato.",
