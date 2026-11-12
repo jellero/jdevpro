@@ -1108,7 +1108,7 @@ def service(p, lang="it"):
 </div>
 </div>
 </section>
-{contact(lang, CTAS.get(it_slug, {}).get(lang))}<section class="section section-tight related">
+{contact(lang, CTAS.get(it_slug, {}).get(lang), show_form=(it_slug == "interconnessione-macchine-industria-4-0.html"))}<section class="section section-tight related">
 <div class="shell">
 {guide_links}<p class="eyebrow">{("Nella stessa area: " if lang == "it" else "In the same area: ") + area["nav"]}</p>
 <div class="related-grid related-flex" style="--cols:{grid_cols(related.count('<a '))}">{related}</div>
