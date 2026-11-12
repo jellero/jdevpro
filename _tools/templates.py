@@ -114,13 +114,13 @@ UI = {
              mailto=MAILTO_EN),
 }
 
-PRICE_EN = {"Collegamento di una macchina": "Connecting one machine", "Dati macchina e assistenza": "Machine data and support",
+PRICE_EN = {"Collegamento di una macchina": "Connecting one machine", "Gestionale essenziale per interconnessione (solo se necessario)": "Basic management application for interconnection (only if needed)", "Dati macchina e assistenza": "Machine data and support",
             "Prima versione del gestionale": "First version of the software", "Hosting, backup e assistenza": "Hosting, backups and support",
             "Progetto e configurazione": "Design and configuration", "Dati, allarmi e manutenzione": "Data, alarms and maintenance",
             "Integrazione tra due sistemi": "Integration between two systems", "Monitoraggio e manutenzione": "Monitoring and maintenance",
             "Sito con pannello di gestione": "Website with management panel", "Hosting e manutenzione": "Hosting and maintenance",
             "per tipo di macchina · eventuali sensori esclusi": "per machine type · any sensors excluded",
-            "per tipo di macchina · sviluppo del collegamento via API compreso · eventuali sensori esclusi": "per machine type · API connection development included · any sensors excluded", "per macchina": "per machine",
+            "per tipo di macchina · integrazione con software esistente, se tecnicamente possibile · eventuali sensori esclusi": "per machine type · integration with existing software where technically feasible · any sensors excluded", "opzionale · quando manca un gestionale utilizzabile o il collegamento non è possibile": "optional · when suitable existing software is unavailable or cannot be integrated", "per macchina": "per machine",
             "a prezzo fisso, sulla parte più utile": "fixed price, on the most useful part", "dispositivi esclusi": "devices excluded",
             "per dispositivo": "per device", "con API pubbliche": "with public APIs", "": "",
             "Assistenza e controllo da remoto": "Support and remote monitoring", "Configurazione dell'impianto": "System configuration",
