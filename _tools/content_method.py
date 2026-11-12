@@ -13,7 +13,7 @@ METHOD = {
       [
         "Dal 2009",
         "tra informatica, software e impianti",
-        "chi-sono.html"
+        "chi-siamo.html"
       ],
       [
         "Progetti su misura",
@@ -29,7 +29,7 @@ METHOD = {
     "action": "Parlaci del progetto",
     "actionHref": "mailto:info@jdevpro.it?subject=Richiesta%20progetto%20JDEVPRO",
     "more": "Chi sono",
-    "moreHref": "chi-sono.html",
+    "moreHref": "chi-siamo.html",
     "methodEyebrow": "Il metodo",
     "methodTitle": "Dal problema iniziale alla soluzione in esercizio.",
     "methodLead": "Perimetro, responsabilità, scelte tecniche e criteri di verifica sono espliciti. Le tecnologie vengono selezionate in funzione del risultato.",
@@ -77,7 +77,7 @@ METHOD = {
     "proofTitle": "Tecnologia avanzata, complessità sotto controllo.",
     "proofText": "Dalle API alla gestione degli eventi, dai controlli di accesso al monitoraggio: ogni scelta deve servire un obiettivo preciso. L'architettura deve restare comprensibile, verificabile e manutenibile anche dopo la consegna.",
     "proofLink": "Competenze e progetti",
-    "proofHref": "chi-sono.html",
+    "proofHref": "chi-siamo.html",
     "identityEyebrow": "Responsabilità",
     "identityTitle": "Un referente tecnico, scelte motivate, ruoli chiari.",
     "identity": [
@@ -85,7 +85,7 @@ METHOD = {
       "Quando occorrono competenze o abilitazioni specialistiche, collaboriamo con professionisti e fornitori qualificati. Responsabilità e limiti delle attività sono definiti prima di iniziare."
     ],
     "identityLink": "Chi siamo",
-    "identityHref": "chi-sono.html"
+    "identityHref": "chi-siamo.html"
   },
   "en": {
     "slug": "en-how-we-work.html",
