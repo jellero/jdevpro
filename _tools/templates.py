@@ -483,16 +483,6 @@ HOME_BODY = {
 <ul><li>Identificazione delle interfacce disponibili</li><li>Verifica dei dati da scambiare con ERP o gestionale</li><li>Definizione del collegamento e del collaudo</li><li>Documentazione tecnica per chi dovrà valutare i requisiti</li></ul>
 <p>Se sei un perito, un ingegnere o un consulente, consulta <a href="periti-ingegneri-consulenti.html">come collaboriamo sul lato tecnico</a>.</p></div>
 </div></section>
-<section class="section section-tight section-white" id="aree">
-<div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">Aree operative</p><h2>Competenze tecnologiche coordinate, non un solo servizio.</h2><p>Interconnessione industriale, sviluppo software, automazione e infrastrutture fanno parte della stessa capacità di integrazione. Il 4.0 è il servizio oggi in primo piano, non l’intera attività di JDEVPRO.</p></div>
-<div class="outcome-grid">
-<article class="outcome reveal"><h3>Hotel e B&amp;B</h3><p>Check-in e accessi, domotica, videosorveglianza, telefonia VoIP e connettività per strutture ricettive.</p><a class="card-link" href="strutture-edifici.html">Scopri le soluzioni →</a></article>
-<article class="outcome reveal"><h3>Software su misura</h3><p>Gestionali e applicazioni costruiti intorno ai processi reali, con migrazioni dai sistemi esistenti.</p><a class="card-link" href="software-web.html">Esplora software e web →</a></article>
-<article class="outcome reveal"><h3>Integrazioni e automazioni</h3><p>API e flussi dati tra gestionali, e-commerce, marketplace, corrieri e piattaforme esterne.</p><a class="card-link" href="integrazione-software-api.html">Vedi le integrazioni →</a></article>
-</div>
-</div>
-</section>
 <section class="section section-tight section-paper">
 <div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">Interconnessione e requisiti</p><h2>Parte tecnica documentata, valutazioni fiscali separate.</h2><p>Per i beni agevolabili, l’interconnessione ai sistemi aziendali è un requisito da verificare. JDEVPRO realizza e documenta l’integrazione tecnica; l’ammissibilità fiscale resta da valutare con il perito e il consulente incaricati. <a href="periti-ingegneri-consulenti.html">Collaborazioni con periti e consulenti →</a></p></div>
@@ -503,6 +493,16 @@ HOME_BODY = {
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">Perché JDEVPRO</p><h2>Un progetto completo richiede <span>competenze coordinate e responsabilità chiare.</span></h2></div>
 <div class="reveal"><p class="why-copy">JDEVPRO affronta i progetti come sistemi completi: analisi, architettura software, collegamenti tra dispositivi e applicazioni, collaudo e documentazione. Coordiniamo gli aspetti tecnici e collaboriamo con installatori abilitati per cablaggi e quadri elettrici. Il cliente ha un percorso di lavoro chiaro, dall’obiettivo iniziale alla messa in esercizio.</p><p><a class="card-link" href="chi-siamo.html">Chi siamo →</a> · <a class="card-link" href="come-lavoriamo.html">Come lavoriamo →</a></p><p class="why-partners">Partner: <strong>Efficasa</strong> per il fotovoltaico, <strong>DWIN</strong> per i display HMI, <strong>Aruba Business</strong> per l'hosting, <strong>Siportal</strong> per il VoIP.<br>Tecnologie e servizi che usiamo nei progetti: <strong>Open Fiber</strong> per la fibra FTTH, <strong>Aruba</strong> per connettività e cloud, <strong>MikroTik</strong> e <strong>Ubiquiti</strong> per reti, connettività e videosorveglianza, <strong>WuBook</strong> per le OTA.</p></div>
+</div>
+</section>
+<section class="section section-tight section-white" id="aree">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">Aree operative</p><h2>Competenze tecnologiche coordinate, non un solo servizio.</h2><p>Interconnessione industriale, sviluppo software, automazione e infrastrutture fanno parte della stessa capacità di integrazione. Il 4.0 è il servizio oggi in primo piano, non l’intera attività di JDEVPRO.</p></div>
+<div class="outcome-grid">
+<article class="outcome reveal"><h3>Hotel e B&amp;B</h3><p>Check-in e accessi, domotica, videosorveglianza, telefonia VoIP e connettività per strutture ricettive.</p><a class="card-link" href="strutture-edifici.html">Scopri le soluzioni →</a></article>
+<article class="outcome reveal"><h3>Software su misura</h3><p>Gestionali e applicazioni costruiti intorno ai processi reali, con migrazioni dai sistemi esistenti.</p><a class="card-link" href="software-web.html">Esplora software e web →</a></article>
+<article class="outcome reveal"><h3>Integrazioni e automazioni</h3><p>API e flussi dati tra gestionali, e-commerce, marketplace, corrieri e piattaforme esterne.</p><a class="card-link" href="integrazione-software-api.html">Vedi le integrazioni →</a></article>
+</div>
 </div>
 </section>
 <section class="contact-section" id="contatto">
@@ -571,13 +571,6 @@ HOME_BODY = {
 <ul><li>Available machine interfaces</li><li>Data exchange with ERP or business software</li><li>Connection approach and testing</li><li>Technical documentation for an independent assessor</li></ul>
 <p>Tax incentive eligibility remains the responsibility of the appointed professionals.</p></div>
 </div></section>
-<section class="section section-tight section-white" id="aree"><div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">What we do</p><h2>Coordinated technical expertise, not just one service.</h2><p>Industrial integration, custom software, automation and infrastructure are part of the same systems approach. Industry 4.0 is our current lead service, not the full scope of JDEVPRO.</p></div>
-<div class="outcome-grid">
-<article class="outcome reveal"><h3>Hotels and B&amp;Bs</h3><p>Check-in and access control, building automation, video surveillance, VoIP and connectivity for accommodation.</p><a class="card-link" href="en-properties-buildings.html">Explore hospitality solutions →</a></article>
-<article class="outcome reveal"><h3>Custom software</h3><p>Business applications built around actual processes, including migrations from existing systems.</p><a class="card-link" href="en-software-web.html">Explore software services →</a></article>
-<article class="outcome reveal"><h3>Integrations and automation</h3><p>APIs and data flows for ERP, e-commerce, marketplaces, couriers and other platforms.</p><a class="card-link" href="en-software-integration-api.html">See integration services →</a></article>
-</div></div></section>
 <section class="section section-tight section-paper">
 <div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">Interconnection and requirements</p><h2>Documented technical work, independent tax assessment.</h2><p>Interconnection is one of the requirements to assess for eligible investments. JDEVPRO delivers and documents the technical integration; tax eligibility must be evaluated by the appointed specialists.</p></div>
@@ -590,6 +583,13 @@ HOME_BODY = {
 <div class="reveal"><p class="why-copy">JDEVPRO approaches projects as integrated systems: assessment, software architecture, connections between devices and applications, testing and documentation. We coordinate the technical work and collaborate with licensed installers for wiring and electrical panels. Clients get a clear delivery process from initial requirements through commissioning.</p><p><a class="card-link" href="en-about.html">About us →</a> · <a class="card-link" href="en-how-we-work.html">How we work →</a></p><p class="why-partners">Partners: <strong>Efficasa</strong> for solar, <strong>DWIN</strong> for HMI displays, <strong>Aruba Business</strong> for hosting, <strong>Siportal</strong> for VoIP.<br>Technologies and services we use in projects: <strong>Open Fiber</strong> for FTTH fibre, <strong>Aruba</strong> for connectivity and cloud, <strong>MikroTik</strong> and <strong>Ubiquiti</strong> for networks, connectivity and video surveillance, <strong>WuBook</strong> for OTA channels.</p></div>
 </div>
 </section>
+<section class="section section-tight section-white" id="aree"><div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">What we do</p><h2>Coordinated technical expertise, not just one service.</h2><p>Industrial integration, custom software, automation and infrastructure are part of the same systems approach. Industry 4.0 is our current lead service, not the full scope of JDEVPRO.</p></div>
+<div class="outcome-grid">
+<article class="outcome reveal"><h3>Hotels and B&amp;Bs</h3><p>Check-in and access control, building automation, video surveillance, VoIP and connectivity for accommodation.</p><a class="card-link" href="en-properties-buildings.html">Explore hospitality solutions →</a></article>
+<article class="outcome reveal"><h3>Custom software</h3><p>Business applications built around actual processes, including migrations from existing systems.</p><a class="card-link" href="en-software-web.html">Explore software services →</a></article>
+<article class="outcome reveal"><h3>Integrations and automation</h3><p>APIs and data flows for ERP, e-commerce, marketplaces, couriers and other platforms.</p><a class="card-link" href="en-software-integration-api.html">See integration services →</a></article>
+</div></div></section>
 <section class="contact-section" id="contatto">
 <div class="shell contact-card reveal">
 <div>
