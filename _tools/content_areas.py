@@ -134,8 +134,8 @@ WHERE_PAGE = dict(slug="dove-lavoriamo.html", nav="Dove lavoriamo",
 
 CALLOUTS = {
   "interconnessione-macchine-industria-4-0.html": {
-    "it": ("È il primo livello di <strong>JD Industry</strong>: si parte dalle macchine collegate e si aggiunge l'ERP su ERPNext quando serve.", "Scopri JD Industry →", "gestionale-produzione-erpnext.html"),
-    "en": ("This is the first level of <strong>JD Industry</strong>: start with connected machines and add the ERP on ERPNext when needed.", "Discover JD Industry →", "en-erpnext-manufacturing.html"),
+    "it": ("Lavoriamo <strong>anche sui gestionali già presenti in azienda</strong>. Se non è disponibile un software utilizzabile per lo scambio dei dati, possiamo fornire un gestionale essenziale dedicato. L'ERP completo JD Industry è una possibilità distinta.", "Scopri JD Industry →", "gestionale-produzione-erpnext.html"),
+    "en": ("We <strong>also integrate machines with existing business software</strong>. Where no suitable application is available for data exchange, we can provide a simple dedicated management application. A full JD Industry ERP is a separate option.", "Discover JD Industry →", "en-erpnext-manufacturing.html"),
   },
   "gestionale-su-misura.html": {
     "it": ("Produzione con distinte base, magazzino e fattura elettronica? Prima di un gestionale su misura guarda <strong>JD Industry</strong>, il nostro gestionale di produzione, con ERP su ERPNext da 990 €.", "Scopri JD Industry →", "gestionale-produzione-erpnext.html"),
