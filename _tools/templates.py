@@ -616,7 +616,7 @@ HOME_META = {
 def home(lang="it"):
     slug = "index.html" if lang == "it" else "en.html"
     metadata = HOME_META[lang]
-    org = ORG if lang == "it" else dict(ORG, description="Software, industrial integration and Industry 4.0 machine connections. Also business software, automation and hospitality projects.")
+    org = ORG if lang == "it" else dict(ORG, description="JDEVPRO develops software, industrial integrations and connected systems for businesses, including Industry 4.0, production management, automation and infrastructure in north-east Italy.")
     return (head(metadata["title"], metadata["desc"], slug, [org], lang,
                  alternates=[("it", "index.html"), ("en", "en.html")])
             + header(slug, lang, home=True, switch="en.html" if lang == "it" else "index.html")
