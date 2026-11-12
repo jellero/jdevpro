@@ -351,6 +351,18 @@
     }));
   }
 
+  // Contact intent is not a submitted lead. Record only with analytics consent.
+  document.addEventListener('click', (event) => {
+    if (!analyticsLoaded || !(event.target instanceof Element)) return;
+    const mail = event.target.closest('a[href^="mailto:"]');
+    if (mail) window.gtag('event', 'contact_intent', {channel:'email_link', page_path:location.pathname});
+  });
+  document.addEventListener('submit', (event) => {
+    if (!analyticsLoaded || !(event.target instanceof Element)) return;
+    if (event.target.matches('[data-interconnection-form]'))
+      window.gtag('event', 'contact_intent', {channel:'email_draft', page_path:location.pathname});
+  });
+
   ready(() => {
     buildUi();
     const saved = readConsent();
