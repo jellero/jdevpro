@@ -379,3 +379,45 @@
     });
   });
 })();
+
+
+/* Interconnection enquiry: compose/copy locally; no backend transmission. */
+(() => {
+  const init = () => {
+    const en = (document.documentElement.lang || 'it').startsWith('en');
+    for (const form of document.querySelectorAll('[data-interconnection-form]')) {
+      const status = form.querySelector('[data-form-status]');
+      const detail = () => {
+        const d = new FormData(form);
+        const value = key => String(d.get(key) || '').trim();
+        const labels = en
+          ? [['company','Company'],['email','Contact email'],['machine','Machine make and model'],['machines','Number of machines'],['erp','Current business software'],['location','Location'],['notes','Details']]
+          : [['company','Azienda'],['email','Email di contatto'],['machine','Marca e modello macchina'],['machines','Numero macchine'],['erp','Gestionale attuale'],['location','Località'],['notes','Dati da collegare / note']];
+        const subject = (en ? 'Machine interconnection review - ' : 'Verifica interconnessione macchine - ') + value('company') + ' - JDEVPRO';
+        const body = (en ? 'Hello JDEVPRO, I would like a technical review.\n\n' : 'Buongiorno JDEVPRO, richiedo una verifica tecnica.\n\n')
+          + labels.map(([key,label]) => label + ': ' + (value(key) || '—')).join('\n') + '\n';
+        return { subject, body };
+      };
+      form.addEventListener('submit', event => {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+        const {subject,body} = detail();
+        status.textContent = en ? 'Your email application should open. Please confirm sending there.' : 'Si apre il programma di posta: conferma lì l’invio del messaggio.';
+        window.location.href = 'mailto:info@jdevpro.it?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      });
+      const copy = form.querySelector('[data-lead-copy]');
+      if (copy) copy.addEventListener('click', async () => {
+        if (!form.reportValidity()) return;
+        const {subject,body} = detail();
+        try {
+          await navigator.clipboard.writeText(subject + '\n\n' + body);
+          status.textContent = en ? 'Request copied. Paste it into an email to info@jdevpro.it.' : 'Richiesta copiata. Incollala in un’email a info@jdevpro.it.';
+        } catch (_) {
+          status.textContent = en ? 'Copying is unavailable. Use Prepare email instead.' : 'Impossibile copiare. Usa il pulsante Prepara l’email.';
+        }
+      });
+    }
+  };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, {once:true});
+  else init();
+})();
