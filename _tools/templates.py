@@ -1493,16 +1493,16 @@ def about(lang="it"):
     about_proof = ('''<section class="section section-tight section-paper" id="esperienza-operativa"><div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">Esperienza operativa</p><h2>Progetti realizzati, sistemi già in funzione.</h2><p>Le competenze di JDEVPRO si misurano nelle integrazioni effettivamente realizzate: macchinari industriali, software di produzione e scambio dati fra piattaforme.</p></div>
 <div class="outcome-grid">
-<article class="outcome reveal"><h3>Bordatrice SCM · Maestro Active</h3><p>Stato e allarmi della macchina, commesse, produzione acquisita e costi collegati alle lavorazioni.</p><a class="card-link" href="interconnessione-macchine-industria-4-0.html#esempi">Vedi il progetto →</a></article>
-<article class="outcome reveal"><h3>CNC Essetre / Tecnoessetre</h3><p>Macchine collegate alla gestione di commesse, file di lavoro, dati di produzione e report.</p><a class="card-link" href="gestionale-produzione-erpnext.html">Vedi JD Industry →</a></article>
+<article class="outcome reveal"><h3>Bordatrice SCM · Maestro Active</h3><p>Stato e allarmi della macchina, commesse, produzione acquisita e costi collegati alle lavorazioni.</p><a class="card-link" href="casi-studio-industriali.html#scm-maestro-active">Leggi il caso studio →</a></article>
+<article class="outcome reveal"><h3>CNC Essetre / Tecnoessetre</h3><p>Macchine collegate alla gestione di commesse, file di lavoro, dati di produzione e report.</p><a class="card-link" href="casi-studio-industriali.html#cnc-essetre">Leggi il caso studio →</a></article>
 <article class="outcome reveal"><h3>Gestionale e servizi esterni</h3><p>Integrazioni fra sistemi aziendali, fornitori, marketplace e corrieri per ridurre i passaggi manuali.</p><a class="card-link" href="integrazione-software-api.html">Vedi le integrazioni →</a></article>
 </div>
 <p class="reveal"><a class="card-link" href="come-lavoriamo.html">Come gestiamo i progetti →</a></p>
 </div></section>''' if lang == "it" else '''<section class="section section-tight section-paper" id="delivered-projects"><div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">Delivered projects</p><h2>Real integrations, systems already in operation.</h2><p>JDEVPRO's capabilities are reflected in delivered integrations: industrial machines, production software and data exchange between business platforms.</p></div>
 <div class="outcome-grid">
-<article class="outcome reveal"><h3>SCM edge bander · Maestro Active</h3><p>Machine status and alarms, production jobs, production data and job costing.</p><a class="card-link" href="en-machine-interconnection.html#esempi">See the project →</a></article>
-<article class="outcome reveal"><h3>Essetre / Tecnoessetre CNC</h3><p>Machines connected to job management, work files, production data and reporting.</p><a class="card-link" href="en-erpnext-manufacturing.html">Explore JD Industry →</a></article>
+<article class="outcome reveal"><h3>SCM edge bander · Maestro Active</h3><p>Machine status and alarms, production jobs, production data and job costing.</p><a class="card-link" href="en-industrial-case-studies.html#scm-maestro-active">Read the case study →</a></article>
+<article class="outcome reveal"><h3>Essetre / Tecnoessetre CNC</h3><p>Machines connected to job management, work files, production data and reporting.</p><a class="card-link" href="en-industrial-case-studies.html#cnc-essetre">Read the case study →</a></article>
 <article class="outcome reveal"><h3>Business software and external services</h3><p>Integrations between company systems, suppliers, marketplaces and couriers to reduce manual work.</p><a class="card-link" href="en-software-integration-api.html">See integrations →</a></article>
 </div>
 <p class="reveal"><a class="card-link" href="en-how-we-work.html">How we manage projects →</a></p>
