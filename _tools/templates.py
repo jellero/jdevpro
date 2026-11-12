@@ -428,123 +428,199 @@ DOC_STEP = {"it": ("Documentazione", "Schemi, configurazioni, credenziali e proc
 
 # ---------------------------------------------------------------- home
 
-def home(lang="it"):
-    u = UI[lang]
-    if lang == "it":
-        t = dict(eyebrow="Integrazione macchine e gestionali · Friuli Venezia Giulia",
-                 h1="Interconnessione macchine 4.0: <span>colleghiamo PLC e CNC al tuo gestionale.</span>",
-                 lead="Colleghiamo macchine industriali ai gestionali aziendali, sviluppiamo lo scambio dei dati ed eseguiamo i collaudi. Prepariamo inoltre la documentazione tecnica utile alle pratiche di interconnessione. Lavoriamo in Friuli Venezia Giulia, Veneto e in trasferta dove serve.",
-                 b1="Richiedi una verifica tecnica", b1h="mailto:info@jdevpro.it?subject=Richiesta%20interconnessione%20macchina%20-%20JDEVPRO&amp;body=Buongiorno%2C%0A%0AAzienda%3A%0AMarca%20e%20modello%20macchina%3A%0ACNC%20o%20PLC%20(se%20noto)%3A%0AGestionale%20utilizzato%3A%0ADati%20da%20scambiare%3A%0AComune%3A%0ARecapito%3A%0A", b2="Scopri come lavoriamo", b2h="interconnessione-macchine-industria-4-0.html",
-                 enter="Entra nell'area →",
-                 proof=[("JD Industry", "Gestionale di produzione collegato a macchine SCM ed Essetre.", "gestionale-produzione-erpnext.html"),
-                        ("E-commerce e marketplace", "Gestionale collegato a fornitore, marketplace e corriere.", "integrazione-software-api.html"),
-                        ("Periti e consulenti", "Interconnessione, collaudo e documentazione tecnica per la perizia.", "periti-ingegneri-consulenti.html")],
-                 title="JDEVPRO · Interconnessione macchine e gestionali in Friuli",
-                 desc="Interconnessione macchine 4.0 per l'iperammortamento: decine di macchine collegate al gestionale, tutte asseverate e ammesse. Friuli Venezia Giulia e Veneto.")
-    else:
-        t = dict(eyebrow="Machine and business software integration · North-east Italy",
-                 h1="Industry 4.0 machine interconnection: <span>we connect PLC and CNC machines to business software.</span>",
-                 lead="We connect industrial machines to business software, develop data exchange and test the integration. We also prepare technical evidence for interconnection documentation and related procedures. We work in north-east Italy and on site where needed.",
-                 b1="Request a technical review", b1h="mailto:info@jdevpro.it?subject=Machine%20interconnection%20enquiry%20-%20JDEVPRO&amp;body=Hello%2C%0A%0ACompany%3A%0AMachine%20make%20and%20model%3A%0ACNC%20or%20PLC%20(if%20known)%3A%0ABusiness%20software%3A%0AData%20to%20exchange%3A%0ALocation%3A%0AContact%3A%0A", b2="How we work", b2h="en-machine-interconnection.html",
-                 enter="Enter the area →",
-                 proof=[("JD Industry", "Production software connected to SCM and Essetre machines.", "en-erpnext-manufacturing.html"),
-                        ("E-commerce and marketplaces", "Business software connected to supplier, marketplaces and courier.", "en-software-integration-api.html"),
-                        ("Machine interconnection", "Machine-to-business-system integration, testing and documented evidence.", "en-machine-interconnection.html")],
-                 title="JDEVPRO · Machine interconnection and business software, Italy",
-                 desc="Industry 4.0 machine interconnection: dozens of machines connected to business software, all certified and approved. North-east Italy.")
-    prod_eyebrow, prod_title, prod_desc, prod_link, prod_cta = (
-        ("Prodotti", "I prodotti JDEVPRO.", "Nel catalogo trovi JD Industry, SmartAgent e SmartDrive, con caratteristiche e informazioni sulla disponibilità.", "prodotti.html", "Scopri i prodotti")
-        if lang == "it" else
-        ("Products", "JDEVPRO products.", "Explore JD Industry, SmartAgent and SmartDrive in our product catalog, with features and availability information.", "en-products.html", "Explore products")
-    )
-    proof = "".join(f'<a href="{h}"><strong>{x}</strong><span>{d}</span></a>' for x, d, h in t["proof"])
-    ne, nh, np_, nitems = INDUSTRIAL[lang]
-    industrial = "".join(f'<article class="outcome reveal"><h3>{a}</h3><p>{b}</p><a class="card-link" href="{h}">{lbl}</a></article>' for a, b, h, lbl in nitems)
-    ie, ih, ip, items = INCENTIVES[lang]
-    incentives = "".join(f'<article class="outcome reveal"><h3>{a}</h3><p>{b}</p><a class="card-link" href="{h}">{lbl}</a></article>' for a, b, h, lbl in items)
-    w = WHY[lang]
-    if lang == "it":
-        sd = {"tag": "Nuovo prodotto · presto disponibile",
-              "title": "SmartDrive: sicurezza operativa, non solo spazio cloud.",
-              "desc": "Backup incrementale dei documenti, versionamento, recupero e gestione semplice di più terminali. Prodotto autonomo, integrabile in SmartAgent, con Windows, Mac, Android e iPhone al lancio.",
-              "cta": "Scopri SmartDrive", "price": "Da 4,90 €/mese · 100 GB · IVA esclusa",
-              "nano": "Preferisci conservare i dati in locale? NanoDrive collega NAS, dischi e USB. Offerta di lancio prevista: 50 € con 12 mesi di servizio inclusi; poi 2 €/mese.", "nano_cta": "Scopri NanoDrive"}
-        sd_link = "smartdrive.html"
-    else:
-        sd = {"tag": "New product · coming soon",
-              "title": "SmartDrive: business continuity beyond cloud storage.",
-              "desc": "Incremental business backups, version history, recovery and easy multi-device management. Standalone or integrated with SmartAgent, including Windows, Mac, Android and iPhone at launch.",
-              "cta": "Explore SmartDrive", "price": "From €4.90/month · 100 GB · excl. VAT",
-              "nano": "Prefer local storage? NanoDrive connects NAS devices, hard drives and USB storage. Planned launch: €50 with 12 months of service; then €2/month.", "nano_cta": "Explore NanoDrive"}
-        sd_link = "en-smartdrive.html"
-    industry_cta = "<section class=\"section section-tight industrial-request\" id=\"verifica-macchine\">\n<div class=\"shell split industrial-request-grid\">\n<div class=\"section-heading reveal\"><p class=\"eyebrow\">Per aziende manifatturiere</p><h2>Hai una macchina da collegare al gestionale?</h2>\n<p>Per valutare l'interconnessione servono pochi dati: marca e modello della macchina, tipo di controllo e gestionale utilizzato. Se non conosci il protocollo, lo verifichiamo durante l'analisi tecnica.</p>\n<div class=\"hero-actions\"><a class=\"button primary\" href=\"mailto:info@jdevpro.it?subject=Richiesta%20interconnessione%20macchina%20-%20JDEVPRO&amp;body=Buongiorno%2C%0A%0AAzienda%3A%0AMarca%20e%20modello%20macchina%3A%0ACNC%20o%20PLC%20(se%20noto)%3A%0AGestionale%20utilizzato%3A%0ADati%20da%20scambiare%3A%0AComune%3A%0ARecapito%3A%0A\">Richiedi una verifica tecnica</a><a class=\"button ghost dark\" href=\"test-interconnessione-4-0.html\">Test interconnessione 4.0</a></div></div>\n<div class=\"industrial-request-details reveal\"><h3>Da dove partiamo</h3>\n<ul><li>Identificazione delle interfacce disponibili</li><li>Verifica dei dati da scambiare con ERP o gestionale</li><li>Definizione del collegamento e del collaudo</li><li>Documentazione tecnica per chi dovrà valutare i requisiti</li></ul>\n<p>Se sei un perito, un ingegnere o un consulente, consulta <a href=\"periti-ingegneri-consulenti.html\">come collaboriamo sul lato tecnico</a>.</p></div>\n</div></section>" if lang == "it" else "<section class=\"section section-tight industrial-request\" id=\"machine-review\">\n<div class=\"shell split industrial-request-grid\">\n<div class=\"section-heading reveal\"><p class=\"eyebrow\">For manufacturers</p><h2>Need to connect a machine to business software?</h2>\n<p>To review an interconnection, send the machine make and model, controller type and current ERP or business software. If you do not know the protocol, it can be checked during the technical review.</p>\n<div class=\"hero-actions\"><a class=\"button primary\" href=\"mailto:info@jdevpro.it?subject=Machine%20interconnection%20enquiry%20-%20JDEVPRO&amp;body=Hello%2C%0A%0ACompany%3A%0AMachine%20make%20and%20model%3A%0ACNC%20or%20PLC%20(if%20known)%3A%0ABusiness%20software%3A%0AData%20to%20exchange%3A%0ALocation%3A%0AContact%3A%0A\">Request a technical review</a><a class=\"button ghost dark\" href=\"en-machine-interconnection.html\">Machine interconnection</a></div></div>\n<div class=\"industrial-request-details reveal\"><h3>What we review</h3>\n<ul><li>Available machine interfaces</li><li>Data exchange with ERP or business software</li><li>Connection approach and testing</li><li>Technical documentation for an independent assessor</li></ul>\n<p>Tax incentive eligibility remains the responsibility of the appointed professionals.</p></div>\n</div></section>"
-    body = f"""{header("index.html" if lang == "it" else "en.html", lang, home=True, switch="en.html" if lang == "it" else "index.html")}<main id="main">
+# Homepage commerciale: il contenuto HTML principale e' mantenuto qui per non
+# reintrodurre, durante le rigenerazioni, vecchie sezioni o promozioni di prodotto.
+# Le altre pagine continuano a usare i componenti dinamici del generatore.
+HOME_BODY = {
+    "it": r'''<main id="main">
 <section class="hero hero-min" id="top">
 <div aria-hidden="true" class="hero-grid"></div>
 <div class="shell hero-min-copy reveal">
-<p class="eyebrow">{t['eyebrow']}</p>
-<h1>{t['h1']}</h1>
-<p class="hero-lead">{t['lead']}</p>
+<p class="eyebrow">JDEVPRO · Software e integrazione per le imprese</p>
+<h1>JDEVPRO: software e integrazione per le imprese. <span>Interconnessione macchine 4.0, dal PLC al gestionale.</span></h1>
+<p class="hero-lead">Progettiamo software, integrazioni e sistemi connessi per le imprese. Nell’industria seguiamo l’interconnessione delle macchine al gestionale: analisi delle interfacce, sviluppo, collaudo e documentazione tecnica. Operiamo in Friuli Venezia Giulia e Veneto, anche in trasferta dove serve.</p>
 <div class="hero-actions">
-<a class="button primary" href="{t['b1h']}">{t['b1']}</a>
-<a class="button ghost" href="{t['b2h']}">{t['b2']}</a>
+<a class="button primary" href="mailto:info@jdevpro.it?subject=Richiesta%20interconnessione%20macchina%20-%20JDEVPRO&amp;body=Buongiorno%2C%0A%0AAzienda%3A%0AMarca%20e%20modello%20macchina%3A%0ACNC%20o%20PLC%20(se%20noto)%3A%0AGestionale%20utilizzato%3A%0ADati%20da%20scambiare%3A%0AComune%3A%0ARecapito%3A%0A">Richiedi una verifica tecnica</a>
+<a class="button ghost" href="interconnessione-macchine-industria-4-0.html">Scopri come lavoriamo</a>
 </div>
-{stats_html("home", lang)}
+<ul class="hero-stats"><li><a class="stat" href="interconnessione-macchine-industria-4-0.html"><strong>Decine</strong><span>di macchine collegate a sistemi aziendali in produzione</span></a></li><li><a class="stat" href="gestionale-produzione-erpnext.html"><strong>JD Industry</strong><span>il nostro gestionale di produzione collegato alle macchine</span></a></li><li><a class="stat" href="interconnessione-macchine-industria-4-0.html"><strong class="stat-long">PLC e CNC</strong><span>verifichiamo interfacce e compatibilità, anche su macchine datate</span></a></li><li><a class="stat" href="come-lavoriamo.html"><strong>Metodo</strong><span>analisi, sviluppo, collaudo e documentazione</span></a></li></ul>
 </div>
 </section>
 <section class="section section-tight section-white" id="integrazione-industriale">
 <div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">{ne}</p><h2>{nh}</h2><p>{np_}</p></div>
-<div class="outcome-grid">{industrial}</div>
+<div class="section-heading reveal"><p class="eyebrow">Integrazione industriale</p><h2>Dalla macchina al gestionale: sviluppo e documentazione per le pratiche.</h2><p>Sviluppiamo l'integrazione tra macchine e sistemi aziendali, gestiamo lo scambio dei dati e documentiamo collegamenti e collaudi per le pratiche tecniche.</p></div>
+<div class="outcome-grid"><article class="outcome reveal"><h3>Interconnessione macchine 4.0</h3><p>Torni, centri di lavoro, laser, presse, macchine tessili e da stampa, riempitrici: valutiamo il collegamento di macchine nuove e datate in base alle interfacce disponibili.</p><a class="card-link" href="interconnessione-macchine-industria-4-0.html">Vedi i tipi di macchine →</a></article><article class="outcome reveal"><h3>Documentazione per le verifiche 4.0</h3><p>Prepariamo le evidenze tecniche dei collegamenti e dei collaudi. I requisiti fiscali e le attestazioni restano in capo ai professionisti incaricati.</p><a class="card-link" href="periti-ingegneri-consulenti.html">Come collaboriamo con i periti →</a></article><article class="outcome reveal"><h3>JD Industry</h3><p>Il nostro gestionale di produzione: dalle macchine collegate all'ERP su ERPNext, con la migrazione dei dati dal vecchio programma.</p><a class="card-link" href="gestionale-produzione-erpnext.html">Scopri JD Industry →</a></article></div>
 </div>
 </section>
-{industry_cta}
+<section class="section section-tight proof-band" id="progetti-reali">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">Realizzazioni concrete</p><h2>Macchine e software che lavorano già insieme.</h2><p>Esempi documentati di collegamenti e integrazioni realizzati. Ogni macchina viene valutata in base alle interfacce disponibili e ai dati necessari.</p></div>
+<div class="proof-grid proof-links reveal">
+<a href="interconnessione-macchine-industria-4-0.html#esempi"><strong>Bordatrice SCM · Maestro Active</strong><span>Stato e allarmi in tempo reale, commesse gestite dalla macchina, produzione acquisita e costi per commessa.</span></a>
+<a href="gestionale-produzione-erpnext.html"><strong>CNC Essetre / Tecnoessetre</strong><span>Più macchine in un'unica schermata, file di lavoro, eventi di commessa, magazzino e report.</span></a>
+<a href="integrazione-software-api.html"><strong>Gestionale e marketplace</strong><span>Flussi di dati tra gestionale, fornitore, marketplace e corriere, senza reinserimenti manuali.</span></a>
+</div>
+</div>
+</section>
+<section class="section section-tight section-white" id="metodo-operativo">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">Gestione della commessa</p><h2>Dall'analisi alla consegna: <span>un percorso di lavoro definito.</span></h2><p>Per ogni progetto definiamo obiettivi, verifiche e responsabilità. La soluzione viene sviluppata e collaudata sui sistemi reali, con documentazione utile alla gestione successiva.</p></div>
+<div class="cert-grid">
+<article class="cert reveal"><strong>01 · Analisi tecnica</strong><span>Raccogliamo dati su macchine, software, rete e obiettivi del progetto.</span></article>
+<article class="cert reveal"><strong>02 · Proposta e perimetro</strong><span>Definiamo cosa collegare, quali dati scambiare e le attività da preventivare.</span></article>
+<article class="cert reveal"><strong>03 · Sviluppo e collaudo</strong><span>Realizziamo l'integrazione e verifichiamo il funzionamento con dati e processi reali.</span></article>
+<article class="cert reveal"><strong>04 · Consegna e continuità</strong><span>Documentiamo il lavoro eseguito e concordiamo modalità di assistenza ed evoluzione.</span></article>
+</div>
+<p class="reveal"><a class="card-link" href="come-lavoriamo.html">Il nostro metodo di lavoro →</a> · <a class="card-link" href="chi-siamo.html">Conosci JDEVPRO →</a></p>
+</div>
+</section>
+<section class="section section-tight industrial-request" id="verifica-macchine">
+<div class="shell split industrial-request-grid">
+<div class="section-heading reveal"><p class="eyebrow">Per aziende manifatturiere</p><h2>Hai una macchina da collegare al gestionale?</h2>
+<p>Per valutare l'interconnessione servono pochi dati: marca e modello della macchina, tipo di controllo e gestionale utilizzato. Se non conosci il protocollo, lo verifichiamo durante l'analisi tecnica.</p>
+<div class="hero-actions"><a class="button primary" href="mailto:info@jdevpro.it?subject=Richiesta%20interconnessione%20macchina%20-%20JDEVPRO&amp;body=Buongiorno%2C%0A%0AAzienda%3A%0AMarca%20e%20modello%20macchina%3A%0ACNC%20o%20PLC%20(se%20noto)%3A%0AGestionale%20utilizzato%3A%0ADati%20da%20scambiare%3A%0AComune%3A%0ARecapito%3A%0A">Richiedi una verifica tecnica</a><a class="button ghost dark" href="test-interconnessione-4-0.html">Test interconnessione 4.0</a></div></div>
+<div class="industrial-request-details reveal"><h3>Da dove partiamo</h3>
+<ul><li>Identificazione delle interfacce disponibili</li><li>Verifica dei dati da scambiare con ERP o gestionale</li><li>Definizione del collegamento e del collaudo</li><li>Documentazione tecnica per chi dovrà valutare i requisiti</li></ul>
+<p>Se sei un perito, un ingegnere o un consulente, consulta <a href="periti-ingegneri-consulenti.html">come collaboriamo sul lato tecnico</a>.</p></div>
+</div></section>
 <section class="section section-tight section-white" id="aree">
-<span id="competenze"></span>
-<div class="shell split">
-<div class="section-heading reveal"><p class="eyebrow">{prod_eyebrow}</p><h2>{prod_title}</h2></div>
-<div class="reveal"><p>{prod_desc}</p><a class="button primary" href="{prod_link}">{prod_cta}</a></div>
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">Aree operative</p><h2>Competenze tecnologiche coordinate, non un solo servizio.</h2><p>Interconnessione industriale, sviluppo software, automazione e infrastrutture fanno parte della stessa capacità di integrazione. Il 4.0 è il servizio oggi in primo piano, non l’intera attività di JDEVPRO.</p></div>
+<div class="outcome-grid">
+<article class="outcome reveal"><h3>Hotel e B&amp;B</h3><p>Check-in e accessi, domotica, videosorveglianza, telefonia VoIP e connettività per strutture ricettive.</p><a class="card-link" href="strutture-edifici.html">Scopri le soluzioni →</a></article>
+<article class="outcome reveal"><h3>Software su misura</h3><p>Gestionali e applicazioni costruiti intorno ai processi reali, con migrazioni dai sistemi esistenti.</p><a class="card-link" href="software-web.html">Esplora software e web →</a></article>
+<article class="outcome reveal"><h3>Integrazioni e automazioni</h3><p>API e flussi dati tra gestionali, e-commerce, marketplace, corrieri e piattaforme esterne.</p><a class="card-link" href="integrazione-software-api.html">Vedi le integrazioni →</a></article>
+</div>
 </div>
 </section>
 <section class="section section-tight section-paper">
 <div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">{ie}</p><h2>{ih}</h2><p>{ip}</p></div>
-<div class="outcome-grid">{incentives}</div>
+<div class="section-heading reveal"><p class="eyebrow">Interconnessione e requisiti</p><h2>Parte tecnica documentata, valutazioni fiscali separate.</h2><p>Per i beni agevolabili, l’interconnessione ai sistemi aziendali è un requisito da verificare. JDEVPRO realizza e documenta l’integrazione tecnica; l’ammissibilità fiscale resta da valutare con il perito e il consulente incaricati. <a href="periti-ingegneri-consulenti.html">Collaborazioni con periti e consulenti →</a></p></div>
+<div class="outcome-grid"><article class="outcome reveal"><h3>Iperammortamento 2026–2028</h3><p>Le macchine nuove rientrano solo se interconnesse al sistema aziendale e se un perito lo attesta. Requisiti, scadenze e procedura passo per passo.</p><a class="card-link" href="guida-interconnessione-iperammortamento.html">Leggi la guida →</a></article><article class="outcome reveal"><h3>Contributi FVG per hotel e alberghi diffusi</h3><p>La Regione sostiene l'ammodernamento e l'efficienza delle strutture ricettive: clima, accessi e domotica possono far parte del progetto.</p><a class="card-link" href="guida-contributi-fvg-hotel.html">Leggi la guida →</a></article><article class="outcome reveal"><h3>Anche il software di produzione</h3><p>Gestionali di produzione, MES e piattaforme possono rientrare nell'iperammortamento se compresi nell'Allegato V e interconnessi.</p><a class="card-link" href="guida-iperammortamento-software-erp-mes.html">Leggi la guida →</a></article></div>
 </div>
 </section>
 <section class="section section-tight section-white why-band">
 <div class="shell split">
-<div class="section-heading reveal"><p class="eyebrow">{w['e']}</p><h2>{w['h']}</h2></div>
-<div class="reveal"><p class="why-copy">{w['p']}</p><p class="why-partners">{w['partners']}</p></div>
+<div class="section-heading reveal"><p class="eyebrow">Perché JDEVPRO</p><h2>Un progetto completo richiede <span>competenze coordinate e responsabilità chiare.</span></h2></div>
+<div class="reveal"><p class="why-copy">JDEVPRO affronta i progetti come sistemi completi: analisi, architettura software, collegamenti tra dispositivi e applicazioni, collaudo e documentazione. Coordiniamo gli aspetti tecnici e collaboriamo con installatori abilitati per cablaggi e quadri elettrici. Il cliente ha un percorso di lavoro chiaro, dall’obiettivo iniziale alla messa in esercizio.</p><p><a class="card-link" href="chi-siamo.html">Chi siamo →</a> · <a class="card-link" href="come-lavoriamo.html">Come lavoriamo →</a></p><p class="why-partners">Partner: <strong>Efficasa</strong> per il fotovoltaico, <strong>DWIN</strong> per i display HMI, <strong>Aruba Business</strong> per l'hosting, <strong>Siportal</strong> per il VoIP.<br>Tecnologie e servizi che usiamo nei progetti: <strong>Open Fiber</strong> per la fibra FTTH, <strong>Aruba</strong> per connettività e cloud, <strong>MikroTik</strong> e <strong>Ubiquiti</strong> per reti, connettività e videosorveglianza, <strong>WuBook</strong> per le OTA.</p></div>
 </div>
 </section>
-<section class="section section-tight proof-band">
-<div class="shell">
-<div class="proof-grid proof-links reveal">{proof}</div>
-</div>
-</section>
-<section class="section section-tight section-paper smartdrive-home" id="smartdrive">
-<div class="shell smartdrive-feature reveal">
+<section class="contact-section" id="contatto">
+<div class="shell contact-card reveal">
 <div>
-<p class="eyebrow">{sd['tag']}</p>
-<h2>{sd['title']}</h2>
-<p>{sd['desc']}</p>
-<p class="smartdrive-nano-teaser">{sd['nano']}</p>
-<div class="hero-actions"><a class="button primary" href="{sd_link}">{sd['cta']}</a><a class="button ghost dark" href="{sd_link}#nanodrive">{sd['nano_cta']}</a></div>
+<p class="eyebrow">Contatto</p>
+<h2>Raccontaci cosa devi collegare.</h2>
+<p>Descrivici i sistemi che hai, cosa vuoi ottenere e i tempi. Ti rispondiamo per iscritto entro 24 ore, con domande mirate o con una proposta.</p>
+<ol class="contact-steps" aria-label="Come funziona"><li><strong>Scrivici</strong> i sistemi presenti e l'obiettivo, anche in poche righe.</li><li><strong>Ti rispondiamo entro 24 ore</strong> con domande mirate o una proposta di incontro.</li><li><strong>Definiamo</strong> insieme perimetro, tempi e modalità di lavoro.</li></ol>
 </div>
-<div class="smartdrive-feature-aside">
-<strong>SmartDrive</strong>
-<span>Windows · Mac · Android · iPhone</span>
-<small>{sd['price']}</small>
+<div class="contact-actions">
+<a class="button light big" href="mailto:info@jdevpro.it?subject=Richiesta%20progetto%20-%20JDEVPRO&amp;body=Buongiorno%2C%0A%0ACosa%20c%27%C3%A8%20da%20fare%3A%0A%0ADove%20%28comune%29%3A%0A%0AMacchine%2C%20camere%20o%20utenti%20coinvolti%3A%0A%0ASistemi%20gi%C3%A0%20presenti%3A%0A%0ATempistiche%20indicative%3A%0A%0AIncentivi%20o%20contributi%20previsti%20%28se%20ci%20sono%29%3A%0A%0AAzienda%20/%20riferimento%3A%0A">Scrivici una email</a>
+<button class="contact-copy" type="button" data-copy-email="info@jdevpro.it" data-copied-label="Copiato ✓"><span>info@jdevpro.it</span><em>Copia</em></button>
+<a class="contact-alt" href="https://www.linkedin.com/in/jacopo-ellero-a006499a/" rel="noreferrer" target="_blank">Oppure su LinkedIn ↗</a>
+<span>Friuli Venezia Giulia e Veneto · trasferte · da remoto ovunque</span>
 </div>
 </div>
 </section>
-{contact(lang)}</main>
-"""
-    slug = "index.html" if lang == "it" else "en.html"
-    org = ORG if lang == "it" else dict(ORG, description="Industry 4.0 machine interconnection and JD Industry production software. Also custom software and hotel automation, in north-east Italy.")
-    return head(t["title"], t["desc"], slug, [org], lang, alternates=[("it", "index.html"), ("en", "en.html")]) + body + footer(lang)
+</main>''',
+    "en": r'''<main id="main">
+<section class="hero hero-min" id="top">
+<div aria-hidden="true" class="hero-grid"></div>
+<div class="shell hero-min-copy reveal">
+<p class="eyebrow">JDEVPRO · Software and systems integration for businesses</p>
+<h1>JDEVPRO: software and integration for businesses. <span>Industry 4.0 connections, from PLCs to business software.</span></h1>
+<p class="hero-lead">We design software, integrations and connected systems for businesses. In manufacturing, we manage machine-to-business-software interconnection: interface review, development, testing and technical documentation. Based in north-east Italy, with on-site work where needed.</p>
+<div class="hero-actions">
+<a class="button primary" href="mailto:info@jdevpro.it?subject=Machine%20interconnection%20enquiry%20-%20JDEVPRO&amp;body=Hello%2C%0A%0ACompany%3A%0AMachine%20make%20and%20model%3A%0ACNC%20or%20PLC%20(if%20known)%3A%0ABusiness%20software%3A%0AData%20to%20exchange%3A%0ALocation%3A%0AContact%3A%0A">Request a technical review</a>
+<a class="button ghost" href="en-machine-interconnection.html">How we work</a>
+</div>
+<ul class="hero-stats"><li><a class="stat" href="en-machine-interconnection.html"><strong>Dozens</strong><span>machines connected to business systems in production</span></a></li><li><a class="stat" href="en-erpnext-manufacturing.html"><strong>JD Industry</strong><span>our production software connected to machines</span></a></li><li><a class="stat" href="en-machine-interconnection.html"><strong>PLC and CNC</strong><span>interfaces and compatibility assessed, including older machines</span></a></li><li><a class="stat" href="en-how-we-work.html"><strong>Method</strong><span>analysis, implementation, testing and documentation</span></a></li></ul>
+</div>
+</section>
+<section class="section section-tight section-white" id="integrazione-industriale">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">Industrial integration</p><h2>From machines to business software: integration development and technical documentation.</h2><p>We develop integration between machines and business systems, manage data exchange and document connections and testing for technical procedures.</p></div>
+<div class="outcome-grid"><article class="outcome reveal"><h3>Industry 4.0 machine interconnection</h3><p>Lathes, machining centres, lasers, presses, textile and printing machines, fillers: we assess new and older machines against the interfaces available.</p><a class="card-link" href="en-machine-interconnection.html">See machine types →</a></article><article class="outcome reveal"><h3>Evidence for technical assessments</h3><p>We prepare technical records of connections and tests. Tax eligibility and formal certification remain with the appointed independent professionals.</p><a class="card-link" href="en-machine-interconnection.html">Review interconnection requirements →</a></article><article class="outcome reveal"><h3>JD Industry</h3><p>Our production software: from connected machines to a full ERP on ERPNext, with data migration from the old program.</p><a class="card-link" href="en-erpnext-manufacturing.html">Discover JD Industry →</a></article></div>
+</div>
+</section>
+<section class="section section-tight proof-band" id="real-projects">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">Real projects</p><h2>Machines and software already working together.</h2><p>Documented examples of completed connections and integrations. We review interfaces and data requirements before proposing each connection.</p></div>
+<div class="proof-grid proof-links reveal">
+<a href="en-machine-interconnection.html"><strong>SCM edgebander · Maestro Active</strong><span>Live status and alarms, work orders managed by the machine, automatic production data and job costing.</span></a>
+<a href="en-erpnext-manufacturing.html"><strong>Essetre / Tecnoessetre CNC</strong><span>Multiple machines in one view, job events, work files, inventory and reports.</span></a>
+<a href="en-software-integration-api.html"><strong>ERP and marketplaces</strong><span>Data flowing between business software, suppliers, marketplaces and shipping services.</span></a>
+</div></div></section>
+<section class="section section-tight section-white" id="project-delivery">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">Project delivery</p><h2>From analysis to handover: <span>a defined way of working.</span></h2><p>For each project, we define goals, checks and responsibilities. Integrations are developed and tested against real systems, with documentation to support ongoing operations.</p></div>
+<div class="cert-grid">
+<article class="cert reveal"><strong>01 · Technical review</strong><span>Understand machines, software, networking and business requirements.</span></article>
+<article class="cert reveal"><strong>02 · Scope and proposal</strong><span>Agree what to connect, which data to exchange and what work to quote.</span></article>
+<article class="cert reveal"><strong>03 · Development and testing</strong><span>Implement the integration and verify it against real operations and data.</span></article>
+<article class="cert reveal"><strong>04 · Handover and continuity</strong><span>Document the delivered work and agree support and further improvements.</span></article>
+</div>
+<p class="reveal"><a class="card-link" href="en-how-we-work.html">How we work →</a> · <a class="card-link" href="en-about.html">About JDEVPRO →</a></p>
+</div>
+</section>
+<section class="section section-tight industrial-request" id="machine-review">
+<div class="shell split industrial-request-grid">
+<div class="section-heading reveal"><p class="eyebrow">For manufacturers</p><h2>Need to connect a machine to business software?</h2>
+<p>To review an interconnection, send the machine make and model, controller type and current ERP or business software. If you do not know the protocol, it can be checked during the technical review.</p>
+<div class="hero-actions"><a class="button primary" href="mailto:info@jdevpro.it?subject=Machine%20interconnection%20enquiry%20-%20JDEVPRO&amp;body=Hello%2C%0A%0ACompany%3A%0AMachine%20make%20and%20model%3A%0ACNC%20or%20PLC%20(if%20known)%3A%0ABusiness%20software%3A%0AData%20to%20exchange%3A%0ALocation%3A%0AContact%3A%0A">Request a technical review</a><a class="button ghost dark" href="en-machine-interconnection.html">Machine interconnection</a></div></div>
+<div class="industrial-request-details reveal"><h3>What we review</h3>
+<ul><li>Available machine interfaces</li><li>Data exchange with ERP or business software</li><li>Connection approach and testing</li><li>Technical documentation for an independent assessor</li></ul>
+<p>Tax incentive eligibility remains the responsibility of the appointed professionals.</p></div>
+</div></section>
+<section class="section section-tight section-white" id="aree"><div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">What we do</p><h2>Coordinated technical expertise, not just one service.</h2><p>Industrial integration, custom software, automation and infrastructure are part of the same systems approach. Industry 4.0 is our current lead service, not the full scope of JDEVPRO.</p></div>
+<div class="outcome-grid">
+<article class="outcome reveal"><h3>Hotels and B&amp;Bs</h3><p>Check-in and access control, building automation, video surveillance, VoIP and connectivity for accommodation.</p><a class="card-link" href="en-properties-buildings.html">Explore hospitality solutions →</a></article>
+<article class="outcome reveal"><h3>Custom software</h3><p>Business applications built around actual processes, including migrations from existing systems.</p><a class="card-link" href="en-software-web.html">Explore software services →</a></article>
+<article class="outcome reveal"><h3>Integrations and automation</h3><p>APIs and data flows for ERP, e-commerce, marketplaces, couriers and other platforms.</p><a class="card-link" href="en-software-integration-api.html">See integration services →</a></article>
+</div></div></section>
+<section class="section section-tight section-paper">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">Interconnection and requirements</p><h2>Documented technical work, independent tax assessment.</h2><p>Interconnection is one of the requirements to assess for eligible investments. JDEVPRO delivers and documents the technical integration; tax eligibility must be evaluated by the appointed specialists.</p></div>
+<div class="outcome-grid"><article class="outcome reveal"><h3>Italian hyper-depreciation 2026–2028</h3><p>New machines qualify only when interconnected with company systems and certified by an appraiser.</p><a class="card-link" href="en-machine-interconnection.html">Machine interconnection →</a></article><article class="outcome reveal"><h3>Regional grants for hotels</h3><p>Friuli Venezia Giulia supports modernisation and efficiency of accommodation: climate, access and automation can be part of the project.</p><a class="card-link" href="en-hotel-bnb-automation.html">Hotel automation →</a></article><article class="outcome reveal"><h3>Production software too</h3><p>Production management, MES and platforms can qualify for hyper-depreciation when listed in Annex V and interconnected.</p><a class="card-link" href="en-erpnext-manufacturing.html">Discover JD Industry →</a></article></div>
+</div>
+</section>
+<section class="section section-tight section-white why-band">
+<div class="shell split">
+<div class="section-heading reveal"><p class="eyebrow">Why JDEVPRO</p><h2>Complete projects need <span>coordinated expertise and clear responsibilities.</span></h2></div>
+<div class="reveal"><p class="why-copy">JDEVPRO approaches projects as integrated systems: assessment, software architecture, connections between devices and applications, testing and documentation. We coordinate the technical work and collaborate with licensed installers for wiring and electrical panels. Clients get a clear delivery process from initial requirements through commissioning.</p><p><a class="card-link" href="en-about.html">About us →</a> · <a class="card-link" href="en-how-we-work.html">How we work →</a></p><p class="why-partners">Partners: <strong>Efficasa</strong> for solar, <strong>DWIN</strong> for HMI displays, <strong>Aruba Business</strong> for hosting, <strong>Siportal</strong> for VoIP.<br>Technologies and services we use in projects: <strong>Open Fiber</strong> for FTTH fibre, <strong>Aruba</strong> for connectivity and cloud, <strong>MikroTik</strong> and <strong>Ubiquiti</strong> for networks, connectivity and video surveillance, <strong>WuBook</strong> for OTA channels.</p></div>
+</div>
+</section>
+<section class="contact-section" id="contatto">
+<div class="shell contact-card reveal">
+<div>
+<p class="eyebrow">Contact</p>
+<h2>Tell us what you need to connect.</h2>
+<p>Describe your systems, what you want to achieve and your timeline. We reply in writing within 24 hours, with focused questions or a proposal.</p>
+<ol class="contact-steps" aria-label="How it works"><li><strong>Write to us</strong> about your current systems and goal, even in a few lines.</li><li><strong>We reply within 24 hours</strong> with focused questions or a proposal for a meeting.</li><li><strong>We define</strong> scope, timeline and way of working together.</li></ol>
+</div>
+<div class="contact-actions">
+<a class="button light big" href="mailto:info@jdevpro.it?subject=Project%20enquiry%20-%20JDEVPRO&amp;body=Hello%2C%0A%0AWhat%20needs%20doing%3A%0A%0AWhere%20%28town%29%3A%0A%0AMachines%2C%20rooms%20or%20users%20involved%3A%0A%0AExisting%20systems%3A%0A%0ARough%20timeline%3A%0A%0AIncentives%20or%20grants%20expected%20%28if%20any%29%3A%0A%0ACompany%20/%20contact%3A%0A">Send us an email</a>
+<button class="contact-copy" type="button" data-copy-email="info@jdevpro.it" data-copied-label="Copied ✓"><span>info@jdevpro.it</span><em>Copy</em></button>
+<a class="contact-alt" href="https://www.linkedin.com/in/jacopo-ellero-a006499a/" rel="noreferrer" target="_blank">Or on LinkedIn ↗</a>
+<span>Friuli Venezia Giulia, Italy · north-east Italy · travel · remote work anywhere</span>
+</div>
+</div>
+</section>
+</main>''',
+}
+HOME_META = {
+    "it": {"title": "JDEVPRO | Software, integrazione industriale e interconnessione 4.0", "desc": "JDEVPRO progetta software e integrazioni per le imprese: interconnessione macchine 4.0, PLC, CNC, gestionali, automazione e collaudi. Friuli Venezia Giulia e Veneto."},
+    "en": {"title": "JDEVPRO | Software, industrial integration and Industry 4.0", "desc": "JDEVPRO develops software and industrial integrations for businesses: Industry 4.0 machine connections, PLCs, CNCs, production software, automation and testing in north-east Italy."},
+}
 
+def home(lang="it"):
+    slug = "index.html" if lang == "it" else "en.html"
+    metadata = HOME_META[lang]
+    org = ORG if lang == "it" else dict(ORG, description="Software, industrial integration and Industry 4.0 machine connections. Also business software, automation and hospitality projects.")
+    return (head(metadata["title"], metadata["desc"], slug, [org], lang,
+                 alternates=[("it", "index.html"), ("en", "en.html")])
+            + header(slug, lang, home=True, switch="en.html" if lang == "it" else "index.html")
+            + HOME_BODY[lang] + footer(lang))
 
 def area_page(a, lang):
     u = UI[lang]
