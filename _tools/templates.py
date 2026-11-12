@@ -1740,6 +1740,8 @@ def product_page(pr, lang):
         buttons += f'<a class="button {"ghost" if pr["links"] else "primary"}" href="#contatto">{u["talk"]}</a>'
     if has_prices:
         buttons += f'<a class="button ghost" href="#prezzi">{"Vedi i prezzi" if lang == "it" else "See prices"}</a>'
+    if pr["key"] == "erp":
+        buttons += f'<a class="button ghost" href="{"casi-studio-industriali.html" if lang == "it" else "en-industrial-case-studies.html"}">{"Casi studio industriali" if lang == "it" else "Industrial case studies"}</a>'
     def other_card(x):
         shot = PRODUCT_SHOTS.get(x["key"])
         img = f'<span class="other-shot"><img src="{shot[0]}" alt="{shot[3]}" width="{shot[1]}" height="{shot[2]}" loading="lazy" decoding="async"></span>' if shot else ''
