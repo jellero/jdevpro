@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script>document.documentElement.classList.add("js")</script>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Pubblicare un&#x27;app su macOS: Mac App Store, firma e costi | JDEVPRO</title>
+<meta content="Mac App Store o download diretto: Apple Developer, sandbox, Developer ID, notarizzazione, DMG/PKG, pagamenti e GDPR." name="description"/>
+<meta content="#07111f" name="theme-color"/>
+<meta content="index,follow" name="robots"/>
+<link href="https://www.jdevpro.it/guida-pubblicare-app-macos.html" rel="canonical"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="assets/icon-32.png" rel="icon" type="image/png" sizes="32x32"/>
+<link href="assets/icon-180.png" rel="apple-touch-icon"/>
+<link href="styles.css?v=b0a782db" rel="stylesheet"/>
+<link href="overrides.css?v=ff6f85fc" rel="stylesheet"/>
+<link href="pages.css?v=8fdbb595" rel="stylesheet"/>
+<meta property="og:title" content="Pubblicare un&#x27;app su macOS: Mac App Store, firma e costi | JDEVPRO"/>
+<meta property="og:description" content="Mac App Store o download diretto: Apple Developer, sandbox, Developer ID, notarizzazione, DMG/PKG, pagamenti e GDPR."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.jdevpro.it/guida-pubblicare-app-macos.html"/>
+<meta property="og:image" content="https://www.jdevpro.it/assets/og-jdevpro.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:locale" content="it_IT"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Pubblicare un'app su macOS",
+  "description": "Mac App Store o download diretto: Apple Developer, sandbox, Developer ID, notarizzazione, DMG/PKG, pagamenti e GDPR.",
+  "url": "https://www.jdevpro.it/guida-pubblicare-app-macos.html",
+  "inLanguage": "it",
+  "datePublished": "2026-11-12",
+  "dateModified": "2026-11-12",
+  "author": {
+    "@type": "Person",
+    "name": "Jacopo Ellero",
+    "url": "https://www.jdevpro.it/chi-sono.html"
+  },
+  "publisher": {
+    "@id": "https://www.jdevpro.it/#jdevpro"
+  },
+  "image": "https://www.jdevpro.it/assets/og-jdevpro.jpg"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.jdevpro.it/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guide",
+      "item": "https://www.jdevpro.it/guide.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Pubblicare un'app su macOS",
+      "item": "https://www.jdevpro.it/guida-pubblicare-app-macos.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://www.jdevpro.it/#jdevpro",
+  "name": "JDEVPRO",
+  "url": "https://www.jdevpro.it/",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Friuli Venezia Giulia",
+    "addressCountry": "IT"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto</a>
+<header class="site-header" data-header="">
+<div class="shell nav-wrap">
+<a aria-label="JDEVPRO home" class="brand" href="index.html"><img class="brand-logo" src="assets/logo-jdevpro-header.png" alt="JDEVPRO" width="440" height="259"></a>
+<button aria-expanded="false" aria-label="Apri menu" class="menu-toggle" data-menu-toggle="" type="button"><span></span><span></span><span></span></button>
+<nav aria-label="Navigazione principale" class="nav" data-nav="">
+<div class="nav-group"><a class="nav-group-label" href="industria.html">Industria <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<a class="nav-sub-all" href="industria.html">Tutta l'area →</a>
+<a href="interconnessione-macchine-industria-4-0.html">Interconnessione macchine 4.0</a>
+<a href="gestionale-su-misura.html">Gestionali su misura</a>
+<a href="integrazione-software-api.html">Integrazioni e automazioni</a>
+<a href="migrazione-dati.html">Migrazione dati</a>
+<a href="monitoraggio-iot.html">Monitoraggio IoT ed energia</a>
+<a href="periti-ingegneri-consulenti.html">Per periti e consulenti</a>
+</div></div>
+<div class="nav-group"><a class="nav-group-label" href="strutture-edifici.html">Hotel e B&B <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<a class="nav-sub-all" href="strutture-edifici.html">Tutta l'area →</a>
+<a href="automazione-hotel-bnb.html">Automazione per hotel e B&B</a>
+<a href="domotica-home-assistant.html">Domotica professionale</a>
+<a href="videosorveglianza-citofonia-accessi.html">Videosorveglianza, citofonia e accessi</a>
+<a href="centralini-voip-telefonia.html">Centralini VoIP e telefonia</a>
+<a href="internet-offgrid-siti-remoti.html">Internet offgrid e siti remoti</a>
+<a href="monitoraggio-iot.html">Monitoraggio IoT ed energia</a>
+</div></div>
+<div class="nav-group"><a class="nav-group-label" href="software-web.html">Software e web <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<a class="nav-sub-all" href="software-web.html">Tutta l'area →</a>
+<a href="gestionale-su-misura.html">Gestionali su misura</a>
+<a href="integrazione-software-api.html">Integrazioni e automazioni</a>
+<a href="migrazione-dati.html">Migrazione dati</a>
+<a href="siti-web-piattaforme.html">Siti e piattaforme web</a>
+</div></div>
+<div class="nav-group"><a class="nav-group-label" href="prodotti.html">Prodotti <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<a class="nav-sub-all" href="prodotti.html">Tutti i prodotti →</a>
+<a href="smartagent.html">SmartAgent</a>
+<a href="https://welora.it/" rel="noreferrer" target="_blank">Welora ↗</a>
+<a href="gestionale-produzione-erpnext.html">JD Industry</a>
+</div></div>
+<a href="guide.html">Guide</a>
+<a href="chi-sono.html">Chi sono</a>
+<a class="nav-cta" href="index.html#contatto">Contatto</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="hero page-hero">
+<div aria-hidden="true" class="hero-grid"></div>
+<div class="shell page-hero-copy reveal">
+<nav aria-label="Percorso" class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="guide.html">Guide</a><span>/</span><span aria-current="page">Pubblicare un&#x27;app su macOS</span></nav>
+<p class="eyebrow">Guida JDEVPRO</p>
+<h1>Pubblicare su macOS: <span>Mac App Store oppure distribuzione diretta.</span></h1>
+<p class="hero-lead">Su macOS ci sono due canali distinti: il Mac App Store, con revisione e distribuzione Apple, oppure il download da un sito, con Developer ID, firma e notarizzazione. La scelta va fatta prima di progettare installer, sandbox, aggiornamenti e pagamenti.</p>
+<p class="hero-proof">Aggiornata a novembre 2026</p>
+</div></section>
+<section class="section section-tight section-white">
+<div class="shell article">
+<h2>1. Scegli il canale di distribuzione</h2>
+<ul><li>Mac App Store: visibilità nello Store, gestione delle installazioni e degli aggiornamenti, App Review e App Sandbox obbligatoria.</li><li>Distribuzione diretta: maggiore controllo su installer, vendita e updater; il produttore gestisce hosting, supporto e aggiornamenti. Per il normale flusso di app firmate con Developer ID serve notarizzazione.</li><li>Verifica sin dall'inizio entitlement, accesso a file, processi ausiliari, driver, helper e tecnologie non compatibili con la sandbox.</li></ul>
+<p>Fonte: <a href="https://developer.apple.com/macos/distribution" rel="noreferrer" target="_blank">Apple: Mac App Store e distribuzione esterna</a>.</p>
+<div class="article-cta"><p><strong>Devi pubblicare un&#x27;app per Mac?</strong> Rispondiamo per iscritto entro 24 ore.</p><a class="button ghost" href="#contatto">Scrivici →</a></div>
+<h2>2. Account e costo annuale</h2>
+<p>Per pubblicare sul Mac App Store, firmare con Developer ID e usare i servizi di distribuzione, iscriviti all'<strong>Apple Developer Program</strong>. La quota di riferimento è <strong>99 USD/anno</strong>, con importo locale mostrato all'iscrizione; lo stesso programma può coprire anche le app iOS.</p>
+<p>Scegli individuo o organizzazione secondo la realtà che pubblica; le aziende devono superare le verifiche richieste. Fonte: <a href="https://developer.apple.com/help/account/membership/program-enrollment" rel="noreferrer" target="_blank">Apple Developer: iscrizione e costi</a>.</p>
+<h2>3. Preparazione tecnica del progetto</h2>
+<ul><li>Assegna un Bundle ID stabile, definisci version e build number, imposta icona, metadati, entitlements e minimum macOS.</li><li>Controlla permessi per file, cartelle, microfono, fotocamera, contatti e accessibilità. Chiedi soltanto quelli indispensabili e spiega il motivo nell'interfaccia.</li><li>Verifica Apple Silicon e architetture supportate, firme delle librerie e degli helper, aggiornamenti e recupero da errori.</li></ul>
+<h2>4. Procedura Mac App Store</h2>
+<ul><li>Abilita App Sandbox e firma per la distribuzione App Store; crea l'archivio in Xcode e prepara un record in App Store Connect.</li><li>Imposta prezzi e mercati, categoria ed età, screenshot e descrizioni, privacy policy, dati raccolti, note di revisione ed eventuale account dimostrativo.</li><li>Invia la build a App Review; dopo l'approvazione decidi la pubblicazione e monitora crash e recensioni.</li></ul>
+<p>Fonti: <a href="https://developer.apple.com/documentation/xcode/preparing-your-app-for-distribution" rel="noreferrer" target="_blank">preparazione app</a> e <a href="https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/overview-of-publishing-your-app-on-the-app-store" rel="noreferrer" target="_blank">App Store Connect</a>.</p>
+<h2>5. Procedura fuori dal Mac App Store</h2>
+<ul><li>Firma l'app e i relativi eseguibili con certificato Developer ID appropriato, abilita Hardened Runtime e usa un timestamp valido.</li><li>Invia il software alla notarizzazione con Xcode oppure notarytool; dopo l'esito positivo applica il ticket quando previsto e controlla l'apertura su un Mac pulito con Gatekeeper.</li><li>Distribuisci un archivio o un installer idoneo (.dmg/.pkg, se compatibile) via HTTPS. Gestisci aggiornamenti firmati, rollback, revoca, licenze, pagamenti e assistenza.</li></ul>
+<p>La notarizzazione non è App Review: <a href="https://developer.apple.com/documentation/security/notarizing-macos-software-before-distribution" rel="noreferrer" target="_blank">Apple: notarizzazione</a>.</p>
+<h2>6. Vendite, commissioni e costi accessori</h2>
+<ul><li>Mac App Store: oltre ai 99 USD/anno, sulle vendite di app e acquisti digitali possono applicarsi commissioni secondo il programma e gli accordi scelti. Il Small Business Program prevede il 15% per gli sviluppatori idonei; non è una commissione universale.</li><li>Distribuzione esterna: Apple non gestisce i tuoi incassi; valuta commissioni del provider, imposte, rimborsi, protezione licenze e costi di hosting e aggiornamento.</li><li>Per vendere sullo Store, completa i contratti Paid Apps, dati fiscali e bancari in App Store Connect.</li></ul>
+<p>Fonti: <a href="https://developer.apple.com/app-store/small-business-program/" rel="noreferrer" target="_blank">Small Business Program</a> e <a href="https://developer.apple.com/help/app-store-connect/get-started/app-store-connect-workflow" rel="noreferrer" target="_blank">accordi fiscali e bancari</a>.</p>
+<h2>7. Privacy, GDPR e conformità</h2>
+<p>Per app distribuite nel Mac App Store fornisci URL della privacy policy e risposte corrette nella sezione App Privacy, includendo SDK esterni; verifica inoltre requisiti su firma e privacy manifest degli SDK che li richiedono. Per i dati personali europei serve una base giuridica, una finalità, misure di sicurezza e una procedura di gestione dei diritti.</p>
+<p>Se vendi nell'UE, verifica lo status di operatore economico e gli obblighi DSA applicabili. Consulta la <a href="guida-pubblicare-app-gdpr-privacy.html">checklist GDPR e adempimenti per le app</a> e <a href="https://developer.apple.com/help/app-store-connect/manage-app-information/manage-app-privacy/" rel="noreferrer" target="_blank">App Privacy di Apple</a>.</p>
+<h2>8. Problemi comuni al rilascio</h2>
+<ul><li>App respinta per sandbox, entitlement non giustificati, funzioni incomplete, metadati errati o login non accessibile ai revisori.</li><li>App esterna bloccata da Gatekeeper per firma, hardened runtime o notarizzazione non validi.</li><li>Aggiornamenti che perdono dati utente o cambiano Bundle ID; updater non firmato o incompatibilità tra versioni macOS.</li></ul>
+<h2>9. Guide correlate</h2>
+<p>Per iPhone e iPad segui <a href="guida-pubblicare-app-ios.html">la guida iOS</a>; per Windows segui <a href="guida-pubblicare-app-microsoft-store.html">Microsoft Store</a>. Per pubblicazione commerciale, informative e trattamento dati: <a href="guida-pubblicare-app-gdpr-privacy.html">checklist GDPR e adempimenti per le app</a>.</p>
+<div class="article-cta"><p><strong>Ti serve una mano?</strong> Software e applicazioni web: metodo, esempi e prezzi indicativi.</p><a class="button primary" href="software-web.html">Vai alla pagina →</a></div>
+</div></section>
+<section class="contact-section" id="contatto">
+<div class="shell contact-card reveal">
+<div>
+<p class="eyebrow">Contatto</p>
+<h2>Devi pubblicare un&#x27;app per Mac?</h2>
+<p>Indicaci linguaggio, framework, formato attuale, canale di vendita e permessi richiesti: definiamo firma, distribuzione e aggiornamenti.</p>
+<ol class="contact-steps" aria-label="Come funziona"><li><strong>Scrivici</strong> i sistemi presenti e l'obiettivo, anche in poche righe.</li><li><strong>Ti rispondiamo entro 24 ore</strong> con domande mirate o una proposta di incontro.</li><li><strong>Definiamo</strong> insieme perimetro, tempi e modalità di lavoro.</li></ol>
+</div>
+<div class="contact-actions">
+<a class="button light big" href="mailto:info@jdevpro.it?subject=Richiesta%20progetto%20-%20JDEVPRO&amp;body=Buongiorno%2C%0A%0ACosa%20c%27%C3%A8%20da%20fare%3A%0A%0ADove%20%28comune%29%3A%0A%0AMacchine%2C%20camere%20o%20utenti%20coinvolti%3A%0A%0ASistemi%20gi%C3%A0%20presenti%3A%0A%0ATempistiche%20indicative%3A%0A%0AIncentivi%20o%20contributi%20previsti%20%28se%20ci%20sono%29%3A%0A%0AAzienda%20/%20riferimento%3A%0A">Scrivici una email</a>
+<button class="contact-copy" type="button" data-copy-email="info@jdevpro.it" data-copied-label="Copiato ✓"><span>info@jdevpro.it</span><em>Copia</em></button>
+<a class="contact-whatsapp" href="https://wa.me/393454656749?text=Ciao%2C%20vi%20scrivo%20dal%20sito%20JDEVPRO%20per%20un%20progetto." rel="noreferrer" target="_blank">Scrivici su WhatsApp ↗</a>
+<a class="contact-alt" href="https://www.linkedin.com/in/jacopo-ellero-a006499a/" rel="noreferrer" target="_blank">Oppure su LinkedIn ↗</a>
+<span>Friuli Venezia Giulia e Veneto · trasferte · da remoto ovunque</span>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="shell footer-grid footer-wide">
+<div><strong>JDEVPRO</strong><span>Jacopo Ellero · Friuli Venezia Giulia</span></div>
+<div class="footer-links"><a href="industria.html">Industria</a><a href="strutture-edifici.html">Hotel e B&B</a><a href="software-web.html">Software e web</a><a href="prodotti.html">Prodotti</a><a href="guide.html">Guide</a><a href="dove-lavoriamo.html">Dove lavoriamo</a><a href="periti-ingegneri-consulenti.html">Per periti e consulenti</a><a href="chi-sono.html">Chi sono</a><a href="come-lavoriamo.html">Come lavoriamo</a></div>
+<div><span>JDEVPRO di Jacopo Ellero · Friuli Venezia Giulia · P.IVA IT02783420306</span><a href="privacy.html">Privacy</a><a href="cookie-policy.html">Cookie</a><a href="https://github.com/jellero" rel="noreferrer" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/jacopo-ellero-a006499a/" rel="noreferrer" target="_blank">LinkedIn</a></div>
+</div>
+<div class="shell"><div class="footer-local"><a href="interconnessione-macchine-industria-4-0.html">Interconnessione macchine 4.0</a><a href="gestionale-su-misura.html">Gestionali su misura</a><a href="integrazione-software-api.html">Integrazioni e automazioni</a><a href="migrazione-dati.html">Migrazione dati</a><a href="monitoraggio-iot.html">Monitoraggio IoT ed energia</a><a href="automazione-hotel-bnb.html">Automazione per hotel e B&B</a><a href="domotica-home-assistant.html">Domotica professionale</a><a href="videosorveglianza-citofonia-accessi.html">Videosorveglianza, citofonia e accessi</a><a href="centralini-voip-telefonia.html">Centralini VoIP e telefonia</a><a href="internet-offgrid-siti-remoti.html">Internet offgrid e siti remoti</a><a href="siti-web-piattaforme.html">Siti e piattaforme web</a><a href="software-gestionali-integrazioni-udine.html">Udine</a><a href="software-gestionali-integrazioni-pordenone.html">Pordenone</a><a href="software-gestionali-integrazioni-trieste-gorizia.html">Trieste e Gorizia</a></div></div>
+</footer>
+<script src="script.js?v=ce9b326a"></script>
+</body>
+</html>

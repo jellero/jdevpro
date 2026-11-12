@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<script>document.documentElement.classList.add("js")</script>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Pubblicare un&#x27;app iOS su App Store: costi e GDPR | JDEVPRO</title>
+<meta content="Apple Developer Program, Xcode, TestFlight, App Store Connect, App Privacy, ATT, DSA, pagamenti e GDPR per distribuire iPhone e iPad." name="description"/>
+<meta content="#07111f" name="theme-color"/>
+<meta content="index,follow" name="robots"/>
+<link href="https://www.jdevpro.it/guida-pubblicare-app-ios.html" rel="canonical"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="assets/icon-32.png" rel="icon" type="image/png" sizes="32x32"/>
+<link href="assets/icon-180.png" rel="apple-touch-icon"/>
+<link href="styles.css?v=b0a782db" rel="stylesheet"/>
+<link href="overrides.css?v=ff6f85fc" rel="stylesheet"/>
+<link href="pages.css?v=8fdbb595" rel="stylesheet"/>
+<meta property="og:title" content="Pubblicare un&#x27;app iOS su App Store: costi e GDPR | JDEVPRO"/>
+<meta property="og:description" content="Apple Developer Program, Xcode, TestFlight, App Store Connect, App Privacy, ATT, DSA, pagamenti e GDPR per distribuire iPhone e iPad."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.jdevpro.it/guida-pubblicare-app-ios.html"/>
+<meta property="og:image" content="https://www.jdevpro.it/assets/og-jdevpro.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:locale" content="it_IT"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Pubblicare un'app iOS su App Store",
+  "description": "Apple Developer Program, Xcode, TestFlight, App Store Connect, App Privacy, ATT, DSA, pagamenti e GDPR per distribuire iPhone e iPad.",
+  "url": "https://www.jdevpro.it/guida-pubblicare-app-ios.html",
+  "inLanguage": "it",
+  "datePublished": "2026-11-12",
+  "dateModified": "2026-11-12",
+  "author": {
+    "@type": "Person",
+    "name": "Jacopo Ellero",
+    "url": "https://www.jdevpro.it/chi-sono.html"
+  },
+  "publisher": {
+    "@id": "https://www.jdevpro.it/#jdevpro"
+  },
+  "image": "https://www.jdevpro.it/assets/og-jdevpro.jpg"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.jdevpro.it/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guide",
+      "item": "https://www.jdevpro.it/guide.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Pubblicare un'app iOS su App Store",
+      "item": "https://www.jdevpro.it/guida-pubblicare-app-ios.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://www.jdevpro.it/#jdevpro",
+  "name": "JDEVPRO",
+  "url": "https://www.jdevpro.it/",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Friuli Venezia Giulia",
+    "addressCountry": "IT"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto</a>
+<header class="site-header" data-header="">
+<div class="shell nav-wrap">
+<a aria-label="JDEVPRO home" class="brand" href="index.html"><img class="brand-logo" src="assets/logo-jdevpro-header.png" alt="JDEVPRO" width="440" height="259"></a>
+<button aria-expanded="false" aria-label="Apri menu" class="menu-toggle" data-menu-toggle="" type="button"><span></span><span></span><span></span></button>
+<nav aria-label="Navigazione principale" class="nav" data-nav="">
+<div class="nav-group"><a class="nav-group-label" href="industria.html">Industria <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<a class="nav-sub-all" href="industria.html">Tutta l'area →</a>
+<a href="interconnessione-macchine-industria-4-0.html">Interconnessione macchine 4.0</a>
+<a href="gestionale-su-misura.html">Gestionali su misura</a>
+<a href="integrazione-software-api.html">Integrazioni e automazioni</a>
+<a href="migrazione-dati.html">Migrazione dati</a>
+<a href="monitoraggio-iot.html">Monitoraggio IoT ed energia</a>
+<a href="periti-ingegneri-consulenti.html">Per periti e consulenti</a>
+</div></div>
+<div class="nav-group"><a class="nav-group-label" href="strutture-edifici.html">Hotel e B&B <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<a class="nav-sub-all" href="strutture-edifici.html">Tutta l'area →</a>
+<a href="automazione-hotel-bnb.html">Automazione per hotel e B&B</a>
+<a href="domotica-home-assistant.html">Domotica professionale</a>
+<a href="videosorveglianza-citofonia-accessi.html">Videosorveglianza, citofonia e accessi</a>
+<a href="centralini-voip-telefonia.html">Centralini VoIP e telefonia</a>
+<a href="internet-offgrid-siti-remoti.html">Internet offgrid e siti remoti</a>
+<a href="monitoraggio-iot.html">Monitoraggio IoT ed energia</a>
+</div></div>
+<div class="nav-group"><a class="nav-group-label" href="software-web.html">Software e web <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<a class="nav-sub-all" href="software-web.html">Tutta l'area →</a>
+<a href="gestionale-su-misura.html">Gestionali su misura</a>
+<a href="integrazione-software-api.html">Integrazioni e automazioni</a>
+<a href="migrazione-dati.html">Migrazione dati</a>
+<a href="siti-web-piattaforme.html">Siti e piattaforme web</a>
+</div></div>
+<div class="nav-group"><a class="nav-group-label" href="prodotti.html">Prodotti <span aria-hidden="true">▾</span></a><div class="nav-sub">
+<a class="nav-sub-all" href="prodotti.html">Tutti i prodotti →</a>
+<a href="smartagent.html">SmartAgent</a>
+<a href="https://welora.it/" rel="noreferrer" target="_blank">Welora ↗</a>
+<a href="gestionale-produzione-erpnext.html">JD Industry</a>
+</div></div>
+<a href="guide.html">Guide</a>
+<a href="chi-sono.html">Chi sono</a>
+<a class="nav-cta" href="index.html#contatto">Contatto</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="hero page-hero">
+<div aria-hidden="true" class="hero-grid"></div>
+<div class="shell page-hero-copy reveal">
+<nav aria-label="Percorso" class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="guide.html">Guide</a><span>/</span><span aria-current="page">Pubblicare un&#x27;app iOS su App Store</span></nav>
+<p class="eyebrow">Guida JDEVPRO</p>
+<h1>App Store iOS: <span>dall'account Apple alla pubblicazione.</span></h1>
+<p class="hero-lead">Per distribuire su iPhone e iPad bisogna preparare il progetto e la firma, gestire App Store Connect, effettuare i test, documentare privacy e dati raccolti, definire il modello commerciale e superare App Review.</p>
+<p class="hero-proof">Aggiornata a novembre 2026</p>
+</div></section>
+<section class="section section-tight section-white">
+<div class="shell article">
+<h2>1. Apri l&#x27;account Apple Developer</h2>
+<p>L'<strong>Apple Developer Program costa 99 USD all'anno</strong> (o importo in valuta locale visualizzato all'iscrizione). Consente la distribuzione tramite App Store e l'accesso a TestFlight e alle risorse necessarie. Un singolo abbonamento copre anche lo sviluppo/distribuzione macOS.</p>
+<p>Individui e organizzazioni hanno verifiche differenti e denominazioni pubbliche diverse. Fonte: <a href="https://developer.apple.com/help/account/membership/program-enrollment" rel="noreferrer" target="_blank">Apple Developer: iscrizione e costi</a>.</p>
+<div class="article-cta"><p><strong>Vuoi portare la tua applicazione su iOS?</strong> Rispondiamo per iscritto entro 24 ore.</p><a class="button ghost" href="#contatto">Scrivici →</a></div>
+<h2>2. Identifica e firma l&#x27;app</h2>
+<ul><li>Definisci Bundle ID definitivo, versione, build number, team, provisioning e certificati di firma gestiti da Xcode.</li><li>Configura capability effettivamente necessarie: notifiche push, Keychain, Sign in with Apple quando applicabile, fotocamera, posizione, Bluetooth e servizi esterni.</li><li>Prepara l'archivio release con una versione di Xcode/SDK ammessa al momento dell'invio, testa su dispositivi reali e carica la build su App Store Connect.</li></ul>
+<h2>3. TestFlight e prerequisiti per la revisione</h2>
+<p>Usa TestFlight per beta interne o esterne, raccogli feedback e correggi blocchi. Prepara credenziali demo funzionanti se l'app richiede login, istruzioni per il revisore e accesso ai servizi esterni indispensabili.</p>
+<p>Fonte: <a href="https://developer.apple.com/help/app-review/before-submitting-for-review/complete-review" rel="noreferrer" target="_blank">informazioni richieste per App Review</a>.</p>
+<h2>4. Crea la scheda App Store Connect</h2>
+<ul><li>Inserisci nome, sottotitolo, categoria, parole chiave, descrizione, screenshot reali, support URL, privacy policy URL e classificazione per età.</li><li>Completa informazioni sul copyright, disponibilità geografica, prezzo, eventuali acquisti in-app e dichiarazioni richieste per la crittografia.</li><li>Seleziona la build, rispondi alle domande della revisione, invia e programma la pubblicazione automatica, manuale o graduale.</li></ul>
+<p>Fonte: <a href="https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/overview-of-publishing-your-app-on-the-app-store" rel="noreferrer" target="_blank">Apple: pubblicazione</a>.</p>
+<h2>5. App Privacy, SDK e tracking</h2>
+<p>La privacy policy deve essere accessibile nello Store e nell'app. Nella sezione <strong>App Privacy</strong> dichiara i dati raccolti da te e dagli SDK integrati, la finalità d'uso e l'eventuale collegamento all'identità dell'utente. Alcuni SDK richiedono un privacy manifest e firma.</p>
+<p>Se effettui tracciamento tra app/siti di altre aziende, valuta l'obbligo di richiesta tramite <strong>App Tracking Transparency</strong>, oltre agli obblighi di protezione dati applicabili. Fonti: <a href="https://developer.apple.com/help/app-store-connect/manage-app-information/manage-app-privacy/" rel="noreferrer" target="_blank">App Privacy</a>, <a href="https://developer.apple.com/support/third-party-SDK-requirements/" rel="noreferrer" target="_blank">SDK di terzi</a> e <a href="https://developer.apple.com/documentation/apptrackingtransparency" rel="noreferrer" target="_blank">ATT</a>.</p>
+<h2>6. Accessi, account e cancellazione</h2>
+<ul><li>Se offri creazione account, esamina i requisiti Apple sulla cancellazione dall'app e realizza la procedura in modo funzionante.</li><li>Progetta password e token sicuri, sessioni, account demo per review, autorizzazioni, backup e cancellazione dei dati compatibile con obblighi di conservazione.</li><li>Per utenti UE, predisponi canali per l'esercizio dei diritti GDPR, tempi di conservazione e identificazione del titolare del trattamento.</li></ul>
+<p>Approfondisci nella <a href="guida-pubblicare-app-gdpr-privacy.html">checklist GDPR e adempimenti per le app</a>.</p>
+<h2>7. Pagamenti, abbonamenti e costi</h2>
+<p>Per vendere app o contenuti digitali tramite i canali Apple, controlla le regole su In-App Purchase, abbonamenti, link esterni e modalità alternative applicabili alla regione. Per i prodotti a pagamento servono Paid Apps Agreement e informazioni fiscali/bancarie.</p>
+<p>Il <strong>Small Business Program</strong> prevede una commissione ridotta del 15% per gli sviluppatori idonei; non assumere che valga in ogni situazione né che sia l'unico costo. Fonti: <a href="https://developer.apple.com/app-store/small-business-program/" rel="noreferrer" target="_blank">programma piccole imprese</a> e <a href="https://developer.apple.com/help/app-store-connect/get-started/app-store-connect-workflow" rel="noreferrer" target="_blank">accordi commerciali</a>.</p>
+<h2>8. DSA, UE e distribuzione alternativa</h2>
+<p>Se distribuisci nell'UE, App Store Connect richiede la dichiarazione dello status di <strong>trader</strong> secondo il Digital Services Act; per operatori economici Apple verifica e pubblica i contatti previsti.</p>
+<p>Nell'UE esistono anche canali alternativi (marketplace e, a determinate condizioni, distribuzione web), soggetti a requisiti e condizioni commerciali specifici. Non equivalgono a caricare liberamente un file IPA sul proprio sito.</p>
+<p>Fonti: <a href="https://developer.apple.com/help/app-store-connect/manage-compliance-information/manage-european-union-digital-services-act-trader-requirements" rel="noreferrer" target="_blank">DSA Apple</a> e <a href="https://developer.apple.com/documentation/marketplacekit/participating-in-alternative-distribution-for-specific-regions" rel="noreferrer" target="_blank">distribuzione alternativa UE</a>.</p>
+<h2>9. Esportazione della crittografia e altre dichiarazioni</h2>
+<p>App Store Connect richiede di determinare la conformità all'esportazione per l'uso della crittografia, anche quando si utilizzano funzionalità standard del sistema. Rispondi al questionario ufficiale e fornisci la documentazione quando dovuta.</p>
+<p>Fonte: <a href="https://developer.apple.com/help/app-store-connect/manage-app-information/overview-of-export-compliance/" rel="noreferrer" target="_blank">Apple: export compliance</a>.</p>
+<h2>10. Collaudi e manutenzione dopo il rilascio</h2>
+<ul><li>Prova aggiornamenti, modalità offline, errori server, accessi negati, pagamenti, rinnovi, ripristino, migrazioni e compatibilità tra versioni iOS.</li><li>Monitora crash, recensioni e segnalazioni App Review, mantieni SDK e dipendenze aggiornati e rivedi le dichiarazioni privacy a ogni nuova funzionalità.</li><li>Organizza supporto e risposta agli incidenti, archivia le build e definisci chi gestisce i certificati e il rinnovo annuale dell'account.</li></ul>
+<h2>11. Guide correlate</h2>
+<p>Per desktop Apple segui <a href="guida-pubblicare-app-macos.html">macOS</a>; per Android <a href="guida-pubblicare-app-android.html">Google Play</a>. Per GDPR, dati e obblighi commerciali, leggi la <a href="guida-pubblicare-app-gdpr-privacy.html">checklist GDPR e adempimenti per le app</a>.</p>
+<div class="article-cta"><p><strong>Ti serve una mano?</strong> Software e applicazioni web: metodo, esempi e prezzi indicativi.</p><a class="button primary" href="software-web.html">Vai alla pagina →</a></div>
+</div></section>
+<section class="contact-section" id="contatto">
+<div class="shell contact-card reveal">
+<div>
+<p class="eyebrow">Contatto</p>
+<h2>Vuoi portare la tua applicazione su iOS?</h2>
+<p>Indica tecnologia, funzionalità, accesso utenti, pagamenti e dati raccolti: pianifichiamo la pubblicazione e le verifiche.</p>
+<ol class="contact-steps" aria-label="Come funziona"><li><strong>Scrivici</strong> i sistemi presenti e l'obiettivo, anche in poche righe.</li><li><strong>Ti rispondiamo entro 24 ore</strong> con domande mirate o una proposta di incontro.</li><li><strong>Definiamo</strong> insieme perimetro, tempi e modalità di lavoro.</li></ol>
+</div>
+<div class="contact-actions">
+<a class="button light big" href="mailto:info@jdevpro.it?subject=Richiesta%20progetto%20-%20JDEVPRO&amp;body=Buongiorno%2C%0A%0ACosa%20c%27%C3%A8%20da%20fare%3A%0A%0ADove%20%28comune%29%3A%0A%0AMacchine%2C%20camere%20o%20utenti%20coinvolti%3A%0A%0ASistemi%20gi%C3%A0%20presenti%3A%0A%0ATempistiche%20indicative%3A%0A%0AIncentivi%20o%20contributi%20previsti%20%28se%20ci%20sono%29%3A%0A%0AAzienda%20/%20riferimento%3A%0A">Scrivici una email</a>
+<button class="contact-copy" type="button" data-copy-email="info@jdevpro.it" data-copied-label="Copiato ✓"><span>info@jdevpro.it</span><em>Copia</em></button>
+<a class="contact-whatsapp" href="https://wa.me/393454656749?text=Ciao%2C%20vi%20scrivo%20dal%20sito%20JDEVPRO%20per%20un%20progetto." rel="noreferrer" target="_blank">Scrivici su WhatsApp ↗</a>
+<a class="contact-alt" href="https://www.linkedin.com/in/jacopo-ellero-a006499a/" rel="noreferrer" target="_blank">Oppure su LinkedIn ↗</a>
+<span>Friuli Venezia Giulia e Veneto · trasferte · da remoto ovunque</span>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="shell footer-grid footer-wide">
+<div><strong>JDEVPRO</strong><span>Jacopo Ellero · Friuli Venezia Giulia</span></div>
+<div class="footer-links"><a href="industria.html">Industria</a><a href="strutture-edifici.html">Hotel e B&B</a><a href="software-web.html">Software e web</a><a href="prodotti.html">Prodotti</a><a href="guide.html">Guide</a><a href="dove-lavoriamo.html">Dove lavoriamo</a><a href="periti-ingegneri-consulenti.html">Per periti e consulenti</a><a href="chi-sono.html">Chi sono</a><a href="come-lavoriamo.html">Come lavoriamo</a></div>
+<div><span>JDEVPRO di Jacopo Ellero · Friuli Venezia Giulia · P.IVA IT02783420306</span><a href="privacy.html">Privacy</a><a href="cookie-policy.html">Cookie</a><a href="https://github.com/jellero" rel="noreferrer" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/jacopo-ellero-a006499a/" rel="noreferrer" target="_blank">LinkedIn</a></div>
+</div>
+<div class="shell"><div class="footer-local"><a href="interconnessione-macchine-industria-4-0.html">Interconnessione macchine 4.0</a><a href="gestionale-su-misura.html">Gestionali su misura</a><a href="integrazione-software-api.html">Integrazioni e automazioni</a><a href="migrazione-dati.html">Migrazione dati</a><a href="monitoraggio-iot.html">Monitoraggio IoT ed energia</a><a href="automazione-hotel-bnb.html">Automazione per hotel e B&B</a><a href="domotica-home-assistant.html">Domotica professionale</a><a href="videosorveglianza-citofonia-accessi.html">Videosorveglianza, citofonia e accessi</a><a href="centralini-voip-telefonia.html">Centralini VoIP e telefonia</a><a href="internet-offgrid-siti-remoti.html">Internet offgrid e siti remoti</a><a href="siti-web-piattaforme.html">Siti e piattaforme web</a><a href="software-gestionali-integrazioni-udine.html">Udine</a><a href="software-gestionali-integrazioni-pordenone.html">Pordenone</a><a href="software-gestionali-integrazioni-trieste-gorizia.html">Trieste e Gorizia</a></div></div>
+</footer>
+<script src="script.js?v=ce9b326a"></script>
+</body>
+</html>

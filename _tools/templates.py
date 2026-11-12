@@ -1029,7 +1029,7 @@ def guide(g):
     sections = "\n".join(parts)
     jsonld = [
       {"@context": "https://schema.org", "@type": "Article", "headline": g["short"], "description": g["desc"],
-       "url": url, "inLanguage": "it", "datePublished": g.get("published", "2026-10-27"), "dateModified": g.get("modified", GUIDE_MODIFIED),
+       "url": url, "inLanguage": "it", "datePublished": g.get("published", "2026-10-27"), "dateModified": g.get("modified", g.get("published", GUIDE_MODIFIED)),
        "author": {"@type": "Person", "name": "Jacopo Ellero", "url": BASE + "chi-sono.html"},
        "publisher": {"@id": ORG_ID}, "image": BASE + "assets/og-jdevpro.jpg"},
       {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
