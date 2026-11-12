@@ -290,7 +290,47 @@ def header(current, lang="it", home=False, switch=None):
 """
 
 
-def contact(lang="it", cta=None):
+# Modulo statico: i dati sono inviati soltanto tramite il programma di posta del visitatore.
+INQUIRY_FORM = {
+    "it": """<form class="interconnection-form" data-interconnection-form action="mailto:info@jdevpro.it" method="post" enctype="text/plain">
+<h3>Richiedi una verifica di interconnessione</h3>
+<p>Inserisci i dati essenziali: prepariamo la richiesta per il nostro indirizzo email.</p>
+<div class="interconnection-fields">
+<label>Azienda <input name="company" autocomplete="organization" maxlength="120" required placeholder="Ragione sociale"></label>
+<label>Email di contatto <input name="email" type="email" autocomplete="email" maxlength="160" required placeholder="nome@azienda.it"></label>
+<label>Marca e modello macchina <input name="machine" maxlength="160" required placeholder="Es. SCM, modello e controllo"></label>
+<label>Numero di macchine <input name="machines" type="number" min="1" max="999" value="1" required></label>
+<label>Gestionale in uso (se presente) <input name="erp" maxlength="160" placeholder="Nome del programma o nessuno"></label>
+<label>Provincia / località <input name="location" maxlength="100" placeholder="Dove si trovano le macchine"></label>
+<label class="field-wide">Dati da collegare o altre informazioni <textarea name="notes" rows="3" maxlength="1200" placeholder="Commesse, tempi, allarmi, produzione..."></textarea></label>
+</div>
+<div class="interconnection-form-actions"><button type="submit" class="button primary">Prepara l'email</button><button type="button" class="button ghost dark" data-lead-copy>Copia la richiesta</button></div>
+<p class="interconnection-disclaimer">Questo modulo non invia dati a un server: apre il tuo programma di posta con la richiesta compilata. L'invio avviene solo dopo la tua conferma. <a href="privacy.html">Privacy</a>.</p>
+<p class="interconnection-form-status" aria-live="polite" data-form-status></p>
+</form>""",
+    "en": """<form class="interconnection-form" data-interconnection-form action="mailto:info@jdevpro.it" method="post" enctype="text/plain">
+<h3>Request an interconnection review</h3>
+<p>Add the essential details and prepare an email to our technical team.</p>
+<div class="interconnection-fields">
+<label>Company <input name="company" autocomplete="organization" maxlength="120" required placeholder="Company name"></label>
+<label>Contact email <input name="email" type="email" autocomplete="email" maxlength="160" required placeholder="name@company.com"></label>
+<label>Machine make and model <input name="machine" maxlength="160" required placeholder="Make, model and controller"></label>
+<label>Number of machines <input name="machines" type="number" min="1" max="999" value="1" required></label>
+<label>Current business software (if any) <input name="erp" maxlength="160" placeholder="Software name or none"></label>
+<label>Location <input name="location" maxlength="100" placeholder="Machine location"></label>
+<label class="field-wide">Data to exchange or other details <textarea name="notes" rows="3" maxlength="1200" placeholder="Jobs, time, alarms, production..."></textarea></label>
+</div>
+<div class="interconnection-form-actions"><button type="submit" class="button primary">Prepare email</button><button type="button" class="button ghost dark" data-lead-copy>Copy request</button></div>
+<p class="interconnection-disclaimer">This form does not send data to a server. It opens your email application with the request filled in; you confirm sending there. <a href="privacy-en.html">Privacy</a>.</p>
+<p class="interconnection-form-status" aria-live="polite" data-form-status></p>
+</form>""",
+}
+
+def inquiry_form(lang):
+    return INQUIRY_FORM[lang]
+
+
+def contact(lang="it", cta=None, show_form=False):
     """cta: (titolo, testo) specifici della pagina, altrimenti quelli generici."""
     u = UI[lang]
     c_h, c_p = cta or (u['c_h'], u['c_p'])
@@ -301,6 +341,7 @@ def contact(lang="it", cta=None):
 <h2>{c_h}</h2>
 <p>{c_p}</p>
 <ol class="contact-steps" aria-label="{u['c_steps_label']}">{u['c_steps']}</ol>
+{inquiry_form(lang) if show_form else ''}
 </div>
 <div class="contact-actions">
 <a class="button light big" href="{u['mailto']}">{u['c_mail']}</a>
@@ -512,6 +553,22 @@ HOME_BODY = {
 <h2>Raccontaci cosa devi collegare.</h2>
 <p>Descrivici i sistemi che hai, cosa vuoi ottenere e i tempi. Ti rispondiamo per iscritto entro 24 ore, con domande mirate o con una proposta.</p>
 <ol class="contact-steps" aria-label="Come funziona"><li><strong>Scrivici</strong> i sistemi presenti e l'obiettivo, anche in poche righe.</li><li><strong>Ti rispondiamo entro 24 ore</strong> con domande mirate o una proposta di incontro.</li><li><strong>Definiamo</strong> insieme perimetro, tempi e modalità di lavoro.</li></ol>
+<form class="interconnection-form" data-interconnection-form action="mailto:info@jdevpro.it" method="post" enctype="text/plain">
+<h3>Richiedi una verifica di interconnessione</h3>
+<p>Inserisci i dati essenziali: prepariamo la richiesta per il nostro indirizzo email.</p>
+<div class="interconnection-fields">
+<label>Azienda <input name="company" autocomplete="organization" maxlength="120" required placeholder="Ragione sociale"></label>
+<label>Email di contatto <input name="email" type="email" autocomplete="email" maxlength="160" required placeholder="nome@azienda.it"></label>
+<label>Marca e modello macchina <input name="machine" maxlength="160" required placeholder="Es. SCM, modello e controllo"></label>
+<label>Numero di macchine <input name="machines" type="number" min="1" max="999" value="1" required></label>
+<label>Gestionale in uso (se presente) <input name="erp" maxlength="160" placeholder="Nome del programma o nessuno"></label>
+<label>Provincia / località <input name="location" maxlength="100" placeholder="Dove si trovano le macchine"></label>
+<label class="field-wide">Dati da collegare o altre informazioni <textarea name="notes" rows="3" maxlength="1200" placeholder="Commesse, tempi, allarmi, produzione..."></textarea></label>
+</div>
+<div class="interconnection-form-actions"><button type="submit" class="button primary">Prepara l'email</button><button type="button" class="button ghost dark" data-lead-copy>Copia la richiesta</button></div>
+<p class="interconnection-disclaimer">Questo modulo non invia dati a un server: apre il tuo programma di posta con la richiesta compilata. L'invio avviene solo dopo la tua conferma. <a href="privacy.html">Privacy</a>.</p>
+<p class="interconnection-form-status" aria-live="polite" data-form-status></p>
+</form>
 </div>
 <div class="contact-actions">
 <a class="button light big" href="mailto:info@jdevpro.it?subject=Richiesta%20progetto%20-%20JDEVPRO&amp;body=Buongiorno%2C%0A%0ACosa%20c%27%C3%A8%20da%20fare%3A%0A%0ADove%20%28comune%29%3A%0A%0AMacchine%2C%20camere%20o%20utenti%20coinvolti%3A%0A%0ASistemi%20gi%C3%A0%20presenti%3A%0A%0ATempistiche%20indicative%3A%0A%0AIncentivi%20o%20contributi%20previsti%20%28se%20ci%20sono%29%3A%0A%0AAzienda%20/%20riferimento%3A%0A">Scrivici una email</a>
@@ -597,6 +654,22 @@ HOME_BODY = {
 <h2>Tell us what you need to connect.</h2>
 <p>Describe your systems, what you want to achieve and your timeline. We reply in writing within 24 hours, with focused questions or a proposal.</p>
 <ol class="contact-steps" aria-label="How it works"><li><strong>Write to us</strong> about your current systems and goal, even in a few lines.</li><li><strong>We reply within 24 hours</strong> with focused questions or a proposal for a meeting.</li><li><strong>We define</strong> scope, timeline and way of working together.</li></ol>
+<form class="interconnection-form" data-interconnection-form action="mailto:info@jdevpro.it" method="post" enctype="text/plain">
+<h3>Request an interconnection review</h3>
+<p>Add the essential details and prepare an email to our technical team.</p>
+<div class="interconnection-fields">
+<label>Company <input name="company" autocomplete="organization" maxlength="120" required placeholder="Company name"></label>
+<label>Contact email <input name="email" type="email" autocomplete="email" maxlength="160" required placeholder="name@company.com"></label>
+<label>Machine make and model <input name="machine" maxlength="160" required placeholder="Make, model and controller"></label>
+<label>Number of machines <input name="machines" type="number" min="1" max="999" value="1" required></label>
+<label>Current business software (if any) <input name="erp" maxlength="160" placeholder="Software name or none"></label>
+<label>Location <input name="location" maxlength="100" placeholder="Machine location"></label>
+<label class="field-wide">Data to exchange or other details <textarea name="notes" rows="3" maxlength="1200" placeholder="Jobs, time, alarms, production..."></textarea></label>
+</div>
+<div class="interconnection-form-actions"><button type="submit" class="button primary">Prepare email</button><button type="button" class="button ghost dark" data-lead-copy>Copy request</button></div>
+<p class="interconnection-disclaimer">This form does not send data to a server. It opens your email application with the request filled in; you confirm sending there. <a href="privacy-en.html">Privacy</a>.</p>
+<p class="interconnection-form-status" aria-live="polite" data-form-status></p>
+</form>
 </div>
 <div class="contact-actions">
 <a class="button light big" href="mailto:info@jdevpro.it?subject=Project%20enquiry%20-%20JDEVPRO&amp;body=Hello%2C%0A%0AWhat%20needs%20doing%3A%0A%0AWhere%20%28town%29%3A%0A%0AMachines%2C%20rooms%20or%20users%20involved%3A%0A%0AExisting%20systems%3A%0A%0ARough%20timeline%3A%0A%0AIncentives%20or%20grants%20expected%20%28if%20any%29%3A%0A%0ACompany%20/%20contact%3A%0A">Send us an email</a>
