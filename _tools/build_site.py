@@ -35,7 +35,7 @@ PAGES = [
     service_type="Interconnessione macchine Industria 4.0",
     eyebrow="Interconnessione macchine · Industria 4.0",
     h1="Interconnessione macchine 4.0: <span>dalla verifica tecnica al collaudo.</span>",
-    lead="JDEVPRO realizza l’integrazione tra macchine industriali e sistemi aziendali: verifichiamo interfacce e compatibilità, sviluppiamo lo scambio dei dati, collaudiamo il collegamento e prepariamo la documentazione tecnica. Valutiamo anche macchine datate per monitoraggio e produzione. L’eventuale ammissibilità agli incentivi dipende dai requisiti del bene e dalle verifiche dei professionisti incaricati.",
+    lead="JDEVPRO integra macchine industriali con i gestionali che le aziende già utilizzano: valutiamo il software esistente, sviluppiamo dove possibile il collegamento, collaudiamo lo scambio dati e prepariamo la documentazione tecnica. Se manca un gestionale utilizzabile, possiamo fornire un applicativo essenziale dedicato, senza imporre la sostituzione dei sistemi aziendali. L’ammissibilità agli incentivi resta soggetta ai requisiti del bene e alla valutazione dei professionisti incaricati.",
     proof="In produzione: decine di macchine collegate tra falegnamerie e stamperie.",
     problems=[
       ("La macchina è nuova ma non è collegata.", "Senza interconnessione al sistema aziendale rischi di perdere l'iperammortamento."),
@@ -74,7 +74,7 @@ PAGES = [
     faq=[
       ("L'interconnessione serve per l'iperammortamento?", "L'iperammortamento 2026–2028 richiede che il bene sia interconnesso al sistema informativo aziendale o alla rete di fornitura. Realizziamo il collegamento e lo documentiamo; la valutazione finale spetta al tuo perito o consulente."),
       ("Sono un perito o un consulente: come lavoriamo insieme?", 'Ruoli, documentazione per la perizia e modi di collaborare sono nella pagina <a href="periti-ingegneri-consulenti.html">per periti, ingegneri e consulenti</a>.'),
-      ("Devo cambiare gestionale?", "No. I dati della macchina arrivano in un'applicazione dedicata e, dove serve, vengono passati al gestionale che usi già."),
+      ("Devo cambiare gestionale?", "No. Verifichiamo prima il gestionale esistente e, quando tecnicamente possibile, lo colleghiamo direttamente alla macchina o realizziamo l’integrazione necessaria. Solo se non hai un gestionale utilizzabile o non è possibile ottenere lo scambio dati richiesto proponiamo un applicativo gestionale essenziale dedicato, da 500 € aggiuntivi. Non è necessario sostituire l’ERP aziendale."),
       ("Modificate il programma della macchina?", "No. Leggiamo e scriviamo solo attraverso le interfacce previste dal costruttore. Il programma della macchina resta di chi l'ha fatto."),
       ("Con quali macchine funziona?", "Valutiamo marca, modello, interfacce e dati disponibili. Quando la macchina espone OPC UA, MTConnect, PLC, Modbus, interfaccia web o seriale, studiamo il collegamento; dove non ci sono interfacce, possiamo valutare sensori e contatori. Abbiamo già integrato macchine SCM con Maestro Active ed Essetre/Tecnoessetre."),
       ("E se la macchina è vecchia o non ha interfacce?", "Possiamo valutare un programma ponte su seriale o Modbus, oppure sensori e contatori per rilevare stato, cicli e consumi. Per le macchine datate l’obiettivo può essere il monitoraggio produttivo; l’eventuale agevolabilità va verificata separatamente con il perito."),
