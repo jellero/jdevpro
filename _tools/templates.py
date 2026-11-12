@@ -162,7 +162,7 @@ ORG = {
   "@context": "https://schema.org", "@type": "ProfessionalService", "@id": ORG_ID, "name": "JDEVPRO",
   "url": BASE, "logo": BASE + "assets/icon-512.png", "image": BASE + "assets/og-jdevpro.jpg", "email": EMAIL,
   "vatID": "IT02783420306", "priceRange": "€€",
-  "founder": {"@type": "Person", "name": "Jacopo Ellero", "url": BASE + "chi-sono.html"},
+  "founder": {"@type": "Person", "name": "Jacopo Ellero", "url": BASE + "chi-siamo.html"},
   "address": ADDRESS,
   "geo": {"@type": "GeoCoordinates", "latitude": 46.4057, "longitude": 13.0154},
   "areaServed": [{"@type": "AdministrativeArea", "name": "Friuli Venezia Giulia"},
@@ -1026,7 +1026,7 @@ def guide(g):
     jsonld = [
       {"@context": "https://schema.org", "@type": "Article", "headline": g["short"], "description": g["desc"],
        "url": url, "inLanguage": "it", "datePublished": g.get("published", "2026-10-27"), "dateModified": g.get("modified", g.get("published", GUIDE_MODIFIED)),
-       "author": {"@type": "Person", "name": "Jacopo Ellero", "url": BASE + "chi-sono.html"},
+       "author": {"@type": "Person", "name": "Jacopo Ellero", "url": BASE + "chi-siamo.html"},
        "publisher": {"@id": ORG_ID}, "image": BASE + "assets/og-jdevpro.jpg"},
       {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE},
@@ -1705,7 +1705,7 @@ for g in GUIDES:
     write(g["slug"], guide(g))
 write("guide.html", guide_index())
 write(TEST["slug"], test_page())
-write("chi-sono.html", about("it"))
+write("chi-siamo.html", about("it"))
 write("come-lavoriamo.html", work_method("it"))
 for _lang in ("it", "en"):
     for _a in AREAS[_lang]:
@@ -1730,7 +1730,7 @@ for old, target in OLD_URLS.items():
 
 urls = (["", "en.html"] + [p["slug"] for p in PAGES] + [EN_SLUG[p["slug"]] for p in PAGES]
         + [c["slug"] for c in CITIES] + ["guide.html", TEST["slug"]] + [g["slug"] for g in GUIDES]
-        + [x["slug"] for l in ("it", "en") for x in PRODUCTS[l] if not x.get("external")] + ["smartdrive.html", "en-smartdrive.html"] + [a["slug"] for l in ("it", "en") for a in AREAS[l]] + [PRODUCTS_PAGE["it"]["slug"], PRODUCTS_PAGE["en"]["slug"], WHERE_PAGE["slug"], PARTNERS["slug"]] + ["chi-sono.html", "en-about.html", "come-lavoriamo.html", "en-how-we-work.html", "privacy.html", "privacy-en.html", "cookie-policy.html", "cookie-policy-en.html"])
+        + [x["slug"] for l in ("it", "en") for x in PRODUCTS[l] if not x.get("external")] + ["smartdrive.html", "en-smartdrive.html"] + [a["slug"] for l in ("it", "en") for a in AREAS[l]] + [PRODUCTS_PAGE["it"]["slug"], PRODUCTS_PAGE["en"]["slug"], WHERE_PAGE["slug"], PARTNERS["slug"]] + ["chi-siamo.html", "en-about.html", "come-lavoriamo.html", "en-how-we-work.html", "privacy.html", "privacy-en.html", "cookie-policy.html", "cookie-policy-en.html"])
 sitemap = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 sitemap += [f"  <url><loc>{BASE}{u}</loc><lastmod>{TODAY}</lastmod></url>" for u in urls]
 sitemap.append("</urlset>")
