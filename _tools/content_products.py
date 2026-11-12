@@ -145,11 +145,11 @@ PRODUCTS = {
       card="L'ecosistema per la produzione: macchine collegate al gestionale, ERP completo su ERPNext o sistema su misura.",
       eyebrow="Prodotto · Ecosistema per la produzione",
       h1="JD Industry: il gestionale di produzione <span>che parte dalle macchine.</span>",
-      lead="Sai a che punto è ogni ordine, senza girare per il reparto. JD Industry è il nostro ecosistema per chi produce: si parte dalle macchine collegate a un gestionale semplice e si arriva, quando serve, all'ERP completo su ERPNext o a un sistema scritto su misura. Per officine meccaniche, carpenterie metalliche, falegnamerie e piccole aziende manifatturiere.",
+      lead="JD Industry è l'ecosistema JDEVPRO per le aziende manifatturiere: integriamo le macchine con il gestionale già presente, quando tecnicamente possibile. Se manca un software utilizzabile, proponiamo un applicativo essenziale dedicato; per esigenze più estese offriamo ERPNext o soluzioni su misura. Seguiamo analisi, sviluppo, collaudo e messa in esercizio.",
       links=[],
       blocks=[
         ("cards", "Tre livelli", "Si parte da dove serve, si cresce senza cambiare sistema.", "", [
-          ("Macchine collegate", "Gestionale semplice collegato alle macchine: stato e allarmi, commesse, produzione e costi reali per commessa, interconnessione documentata per il perito. Da 1.500 € per tipo di macchina, sviluppo del collegamento via API compreso; le macchine uguali successive da 400 €."),
+          ("Macchine collegate", "Interconnessione con il gestionale aziendale esistente, quando compatibile: da 1.500 € per la prima macchina. Se manca un software utilizzabile, applicativo essenziale opzionale da 500 € aggiuntivi (soluzione indicativa da 2.000 €). Macchine successive dello stesso tipo da 400 €, previa verifica tecnica. Il collegamento è documentato per le verifiche professionali."),
           ("ERP completo su ERPNext", "Distinte base, ordini di lavoro, magazzino, acquisti, vendite, contabilità e fattura elettronica, collegati alle macchine. Avvio del gestionale da 990 € fino a 5 utenti; il collegamento delle macchine si aggiunge come nel livello precedente."),
           ("Su misura", "Per processi particolari: moduli o un gestionale scritti per voi, collegati alle macchine e all'ERP. Prima versione da 3.000 €."),
         ]),
@@ -161,7 +161,7 @@ PRODUCTS = {
           ("Decine di macchine collegate", "Falegnamerie e stamperie con macchine collegate al gestionale: stato, produzione, commesse e costi senza fogli Excel."),
           ("Bordatrice SCM con Maestro Active", "Stato e allarmi in tempo reale, commesse aperte e chiuse dalla macchina, produzione importata in automatico e costo reale per commessa."),
           ("CNC Essetre/Tecnoessetre", "Più macchine in un'unica schermata, eventi associati alla commessa, invio dei file di lavoro, magazzino e residui, report stampabili."),
-          ("Tutte certificate e ammesse", "Le macchine collegate sono certificate e asseverate da ingegneri, verificate tecnicamente ai fini dell'interconnessione e ammesse all'iperammortamento. Lavoriamo con partner specializzati in certificazione e validazione."),
+          ("Verifiche e documentazione", "Documentiamo lo scambio dati e i collaudi tecnici. L'eventuale asseverazione e l'ammissibilità alle agevolazioni richiedono una valutazione autonoma dei professionisti incaricati."),
         ]),
         ("cards", "Vi riconoscete?", "Quando il gestionale non segue la produzione.", "", [
           ("Distinte base in Excel", "Ognuno ha la sua versione. Qui sono uniche, versionate e collegate a ordini di lavoro e costi."),
@@ -475,11 +475,11 @@ PRODUCTS = {
       card="The production ecosystem: machines connected to business software, full ERP on ERPNext or custom software.",
       eyebrow="Product · Production ecosystem",
       h1="JD Industry: production management <span>that starts from the machines.</span>",
-      lead="Know where every order stands without walking the shop floor. JD Industry is our ecosystem for manufacturers: start with machines connected to simple business software and grow, when needed, into a full ERP on ERPNext or custom-built software. For machine shops, metalwork, woodworking and small manufacturers.",
+      lead="JD Industry is JDEVPRO's production ecosystem. We integrate machines with existing business software where technically feasible. If no suitable system is available, we can provide a basic dedicated application; for broader requirements, we offer ERPNext or custom software. Assessment, implementation, testing and commissioning are all included in the delivery process.",
       links=[],
       blocks=[
         ("cards", "Three levels", "Start where you need, grow without changing system.", "", [
-          ("Connected machines", "Simple software connected to machines: status and alarms, jobs, production and real cost per job, interconnection documented for the appraiser. From €1,500 per machine type, API connection development included; further identical machines from €400."),
+          ("Connected machines", "Connection to existing business software where compatible: from €1,500 for the first machine. A basic management application, only if needed, is available from an additional €500 (indicative complete solution from €2,000). Further identical machines from €400, subject to assessment. Technical records are prepared for independent review."),
           ("Full ERP on ERPNext", "Bills of materials, work orders, stock, purchasing, sales, accounting and e-invoicing, connected to the machines. Software setup from €990 for up to 5 users; connecting machines is added as in the previous level."),
           ("Custom", "For unusual processes: modules or software written for you, connected to machines and ERP. First version from €3,000."),
         ]),
@@ -491,7 +491,7 @@ PRODUCTS = {
           ("Dozens of machines connected", "Woodworking and metal pressing companies with machines connected to business software: status, production, jobs and costs without spreadsheets."),
           ("SCM edge bander with Maestro Active", "Real-time status and alarms, jobs opened and closed on the machine, automatic production import and real cost per job."),
           ("Essetre/Tecnoessetre CNC", "Several machines on one screen, events linked to jobs, work file upload, stock and offcuts, printable reports."),
-          ("All certified and approved", "The connected machines are certified and sworn by engineers, technically verified for interconnection and approved for the Italian hyper-depreciation. We work with partners specialised in certification and validation."),
+          ("Technical checks and records", "We document data exchange and technical testing. Any formal certification and tax-incentive eligibility require a separate assessment by the appointed independent professionals."),
         ]),
         ("cards", "Sound familiar?", "When the software doesn't follow production.", "", [
           ("Bills of materials in Excel", "Everyone has their own version. Here they are unique, versioned and linked to work orders and costs."),
