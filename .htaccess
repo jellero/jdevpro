@@ -1,6 +1,7 @@
 # Usato solo se il server passa le richieste ad Apache (Plesk nginx + Apache).
 <IfModule mod_rewrite.c>
 RewriteEngine On
+RewriteRule ^chi-sono\.html$ /chi-siamo.html [R=301,L]
 
 # Un solo indirizzo: https://www.jdevpro.it
 RewriteCond %{HTTP_HOST} ^jdevpro\.it$ [NC]
