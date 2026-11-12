@@ -940,6 +940,25 @@ def service(p, lang="it"):
             guide_links = f'<p class="eyebrow local-eyebrow">Guide collegate</p><div class="related-grid related-flex" style="--cols:{grid_cols(len(gl))}">' + "".join(
                 f'<a href="{g["slug"]}"><strong>{g["short"]}</strong><span>{g["desc"]}</span></a>' for g in gl) + "</div>"
     switch = EN_SLUG[it_slug] if lang == "it" else it_slug
+    integration_guide = (('''<section class="section section-tight section-paper" id="tipi-di-intervento">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">Due esigenze, un metodo di lavoro</p><h2>Interconnessione 4.0 e monitoraggio produttivo: <span>obiettivi distinti.</span></h2><p>La possibilità tecnica di acquisire dati non determina automaticamente l’accesso alle agevolazioni. La verifica parte sempre da macchina, interfacce e obiettivi aziendali.</p></div>
+<div class="outcome-grid">
+<article class="outcome reveal"><h3>Macchine e requisiti 4.0</h3><p>Sviluppiamo il collegamento ai sistemi aziendali, ne collaudiamo lo scambio dati e prepariamo le evidenze tecniche. La valutazione fiscale compete ai professionisti incaricati.</p></article>
+<article class="outcome reveal"><h3>Macchine già in produzione</h3><p>Valutiamo integrazioni e sensori per monitorare stato, cicli, tempi e consumi, anche quando non è previsto un incentivo.</p></article>
+</div>
+</div>
+</section>''' if lang == "it" else '''<section class="section section-tight section-paper" id="types-of-interconnection">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">Two needs, one delivery process</p><h2>Industry 4.0 interconnection and production monitoring: <span>different objectives.</span></h2><p>Being able to collect data from a machine does not automatically make it eligible for tax incentives. Every assessment starts with the machine, its interfaces and your business requirements.</p></div>
+<div class="outcome-grid">
+<article class="outcome reveal"><h3>Machines subject to Industry 4.0 requirements</h3><p>We build and test the integration with business systems, preparing technical evidence. Tax eligibility is assessed separately by the appointed specialists.</p></article>
+<article class="outcome reveal"><h3>Existing production equipment</h3><p>We assess integrations and sensors to monitor status, cycles, time and consumption even where no tax incentive is involved.</p></article>
+</div>
+</div>
+</section>''') if it_slug == "interconnessione-macchine-industria-4-0.html" else "")
+    method_e = (("Gestione tecnica della commessa" if lang == "it" else "Technical project delivery") if integration_guide else u["method"])
+    method_h = (("Un percorso definito, dalla compatibilità al collaudo." if lang == "it" else "A defined process, from compatibility review to commissioning.") if integration_guide else u["method_h"])
     body = f"""{header(p['slug'], lang, switch=switch)}<main id="main">
 <section class="hero page-hero">
 <div aria-hidden="true" class="hero-grid"></div>
@@ -956,6 +975,7 @@ def service(p, lang="it"):
 </div>
 </div>
 </section>
+{integration_guide}
 <section class="section section-tight section-white">
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">{u['problem']}</p><h2>{u['recognise']}</h2></div>
@@ -974,7 +994,7 @@ def service(p, lang="it"):
 </section>
 {photos_html(it_slug, lang)}{systems}{reach}<section class="section section-tight section-white">
 <div class="shell split">
-<div class="section-heading reveal"><p class="eyebrow">{u['method']}</p><h2>{u['method_h']}</h2></div>
+<div class="section-heading reveal"><p class="eyebrow">{method_e}</p><h2>{method_h}</h2></div>
 <ol class="method-steps reveal">
 {steps}
 </ol>
