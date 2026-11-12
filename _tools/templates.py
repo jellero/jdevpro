@@ -169,7 +169,7 @@ ORG = {
                  {"@type": "City", "name": "Udine"}, {"@type": "City", "name": "Pordenone"},
                  {"@type": "City", "name": "Trieste"}, {"@type": "City", "name": "Gorizia"},
                  {"@type": "AdministrativeArea", "name": "Veneto"}, {"@type": "Country", "name": "Italia"}],
-  "description": "Interconnessione macchine 4.0 per l'iperammortamento e gestionale di produzione JD Industry. Anche software su misura e automazione per hotel e B&B, in Friuli Venezia Giulia e Veneto.",
+  "description": "JDEVPRO sviluppa software, integrazioni industriali e sistemi connessi per imprese: interconnessione macchine 4.0, gestionali, automazione e infrastrutture, in Friuli Venezia Giulia e Veneto.",
   "knowsLanguage": ["it", "en"],
   "sameAs": ["https://github.com/jellero", LI],
   "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Competenze JDEVPRO", "itemListElement": [
