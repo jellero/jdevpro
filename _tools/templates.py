@@ -438,7 +438,7 @@ HOME_BODY = {
 <div class="shell hero-min-copy reveal">
 <p class="eyebrow">JDEVPRO · Software e integrazione per le imprese</p>
 <h1>JDEVPRO: software e integrazione per le imprese. <span>Interconnessione macchine 4.0, dal PLC al gestionale.</span></h1>
-<p class="hero-lead">Progettiamo software, integrazioni e sistemi connessi per le imprese. Nell’industria seguiamo l’interconnessione delle macchine al gestionale: analisi delle interfacce, sviluppo, collaudo e documentazione tecnica. Operiamo in Friuli Venezia Giulia e Veneto, anche in trasferta dove serve.</p>
+<p class="hero-lead">Progettiamo software, integrazioni e sistemi connessi per le imprese. Nell’industria colleghiamo le macchine ai gestionali già in uso, sviluppando integrazioni e adattamenti dove tecnicamente possibile, senza imporre un nuovo ERP. Se manca un gestionale utilizzabile, possiamo fornire un applicativo essenziale dedicato. Seguiamo analisi, sviluppo, collaudo e documentazione tecnica in Friuli Venezia Giulia, Veneto e in trasferta.</p>
 <div class="hero-actions">
 <a class="button primary" href="mailto:info@jdevpro.it?subject=Richiesta%20interconnessione%20macchina%20-%20JDEVPRO&amp;body=Buongiorno%2C%0A%0AAzienda%3A%0AMarca%20e%20modello%20macchina%3A%0ACNC%20o%20PLC%20(se%20noto)%3A%0AGestionale%20utilizzato%3A%0ADati%20da%20scambiare%3A%0AComune%3A%0ARecapito%3A%0A">Richiedi una verifica tecnica</a>
 <a class="button ghost" href="interconnessione-macchine-industria-4-0.html">Scopri come lavoriamo</a>
@@ -477,7 +477,7 @@ HOME_BODY = {
 <section class="section section-tight industrial-request" id="verifica-macchine">
 <div class="shell split industrial-request-grid">
 <div class="section-heading reveal"><p class="eyebrow">Per aziende manifatturiere</p><h2>Hai una macchina da collegare al gestionale?</h2>
-<p>Per valutare l'interconnessione servono pochi dati: marca e modello della macchina, tipo di controllo e gestionale utilizzato. Se non conosci il protocollo, lo verifichiamo durante l'analisi tecnica.</p>
+<p>Per valutare l'interconnessione servono pochi dati: marca e modello della macchina, tipo di controllo e gestionale in uso, se presente. Verifichiamo il collegamento al software esistente oppure proponiamo un gestionale essenziale dedicato, solo quando necessario.</p>
 <div class="hero-actions"><a class="button primary" href="mailto:info@jdevpro.it?subject=Richiesta%20interconnessione%20macchina%20-%20JDEVPRO&amp;body=Buongiorno%2C%0A%0AAzienda%3A%0AMarca%20e%20modello%20macchina%3A%0ACNC%20o%20PLC%20(se%20noto)%3A%0AGestionale%20utilizzato%3A%0ADati%20da%20scambiare%3A%0AComune%3A%0ARecapito%3A%0A">Richiedi una verifica tecnica</a><a class="button ghost dark" href="test-interconnessione-4-0.html">Test interconnessione 4.0</a></div></div>
 <div class="industrial-request-details reveal"><h3>Da dove partiamo</h3>
 <ul><li>Identificazione delle interfacce disponibili</li><li>Verifica dei dati da scambiare con ERP o gestionale</li><li>Definizione del collegamento e del collaudo</li><li>Documentazione tecnica per chi dovrà valutare i requisiti</li></ul>
@@ -528,7 +528,7 @@ HOME_BODY = {
 <div class="shell hero-min-copy reveal">
 <p class="eyebrow">JDEVPRO · Software and systems integration for businesses</p>
 <h1>JDEVPRO: software and integration for businesses. <span>Industry 4.0 connections, from PLCs to business software.</span></h1>
-<p class="hero-lead">We design software, integrations and connected systems for businesses. In manufacturing, we manage machine-to-business-software interconnection: interface review, development, testing and technical documentation. Based in north-east Italy, with on-site work where needed.</p>
+<p class="hero-lead">We design software, integrations and connected systems for businesses. In manufacturing, we connect machines to the management software already in use, building integrations and adaptations where technically feasible rather than requiring a new ERP. Where no suitable application is available, we can provide a simple dedicated management tool. We manage review, development, testing and documentation in north-east Italy and on site where needed.</p>
 <div class="hero-actions">
 <a class="button primary" href="mailto:info@jdevpro.it?subject=Machine%20interconnection%20enquiry%20-%20JDEVPRO&amp;body=Hello%2C%0A%0ACompany%3A%0AMachine%20make%20and%20model%3A%0ACNC%20or%20PLC%20(if%20known)%3A%0ABusiness%20software%3A%0AData%20to%20exchange%3A%0ALocation%3A%0AContact%3A%0A">Request a technical review</a>
 <a class="button ghost" href="en-machine-interconnection.html">How we work</a>
@@ -565,7 +565,7 @@ HOME_BODY = {
 <section class="section section-tight industrial-request" id="machine-review">
 <div class="shell split industrial-request-grid">
 <div class="section-heading reveal"><p class="eyebrow">For manufacturers</p><h2>Need to connect a machine to business software?</h2>
-<p>To review an interconnection, send the machine make and model, controller type and current ERP or business software. If you do not know the protocol, it can be checked during the technical review.</p>
+<p>To review an interconnection, send the machine make and model, controller type and existing business software, if any. We first assess integration with the software you already use, and offer a simple dedicated application only when necessary.</p>
 <div class="hero-actions"><a class="button primary" href="mailto:info@jdevpro.it?subject=Machine%20interconnection%20enquiry%20-%20JDEVPRO&amp;body=Hello%2C%0A%0ACompany%3A%0AMachine%20make%20and%20model%3A%0ACNC%20or%20PLC%20(if%20known)%3A%0ABusiness%20software%3A%0AData%20to%20exchange%3A%0ALocation%3A%0AContact%3A%0A">Request a technical review</a><a class="button ghost dark" href="en-machine-interconnection.html">Machine interconnection</a></div></div>
 <div class="industrial-request-details reveal"><h3>What we review</h3>
 <ul><li>Available machine interfaces</li><li>Data exchange with ERP or business software</li><li>Connection approach and testing</li><li>Technical documentation for an independent assessor</li></ul>
@@ -940,7 +940,16 @@ def service(p, lang="it"):
             guide_links = f'<p class="eyebrow local-eyebrow">Guide collegate</p><div class="related-grid related-flex" style="--cols:{grid_cols(len(gl))}">' + "".join(
                 f'<a href="{g["slug"]}"><strong>{g["short"]}</strong><span>{g["desc"]}</span></a>' for g in gl) + "</div>"
     switch = EN_SLUG[it_slug] if lang == "it" else it_slug
-    integration_guide = (('''<section class="section section-tight section-paper" id="tipi-di-intervento">
+    integration_guide = (('''<section class="section section-tight section-white" id="gestionale-esistente">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">Integrazione con i software aziendali</p><h2>Il gestionale che utilizzi <span>può restare al suo posto.</span></h2><p>Non chiediamo alle aziende di cambiare ERP per interconnettere una macchina. Analizziamo le interfacce del software già in uso e sviluppiamo, quando possibile, il collegamento necessario. Se il gestionale non c'è oppure non consente lo scambio richiesto, proponiamo un applicativo essenziale dedicato.</p></div>
+<div class="outcome-grid">
+<article class="outcome reveal"><h3>Hai già un gestionale?</h3><p>Verifichiamo come integrare macchine, flussi e dati con il software esistente. L’interconnessione parte da 1.500 €, senza acquistare un nuovo gestionale se non serve.</p></article>
+<article class="outcome reveal"><h3>Manca un software utilizzabile?</h3><p>Possiamo aggiungere un gestionale essenziale per l’interconnessione da 500 €: una soluzione completa per una prima macchina parte quindi da 2.000 €, secondo le esigenze tecniche.</p></article>
+</div>
+</div>
+</section>
+<section class="section section-tight section-paper" id="tipi-di-intervento">
 <div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">Due esigenze, un metodo di lavoro</p><h2>Interconnessione 4.0 e monitoraggio produttivo: <span>obiettivi distinti.</span></h2><p>La possibilità tecnica di acquisire dati non determina automaticamente l’accesso alle agevolazioni. La verifica parte sempre da macchina, interfacce e obiettivi aziendali.</p></div>
 <div class="outcome-grid">
@@ -948,7 +957,16 @@ def service(p, lang="it"):
 <article class="outcome reveal"><h3>Macchine già in produzione</h3><p>Valutiamo integrazioni e sensori per monitorare stato, cicli, tempi e consumi, anche quando non è previsto un incentivo.</p></article>
 </div>
 </div>
-</section>''' if lang == "it" else '''<section class="section section-tight section-paper" id="types-of-interconnection">
+</section>''' if lang == "it" else '''<section class="section section-tight section-white" id="existing-business-software">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">Integration with your business software</p><h2>Keep your existing system <span>wherever technically possible.</span></h2><p>We do not require companies to replace their ERP to interconnect a machine. We review the interfaces and extend or integrate existing software where feasible. If there is no usable management system, or it cannot exchange the required data, we offer a simple dedicated application.</p></div>
+<div class="outcome-grid">
+<article class="outcome reveal"><h3>Already using business software?</h3><p>We assess how to connect machines, data and workflows with the existing system. Interconnection starts at €1,500, with no additional management software required when your current system can be used.</p></article>
+<article class="outcome reveal"><h3>No suitable software available?</h3><p>A basic dedicated management application can be added from €500. An example complete solution for the first machine therefore starts at €2,000, subject to technical requirements.</p></article>
+</div>
+</div>
+</section>
+<section class="section section-tight section-paper" id="types-of-interconnection">
 <div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">Two needs, one delivery process</p><h2>Industry 4.0 interconnection and production monitoring: <span>different objectives.</span></h2><p>Being able to collect data from a machine does not automatically make it eligible for tax incentives. Every assessment starts with the machine, its interfaces and your business requirements.</p></div>
 <div class="outcome-grid">
