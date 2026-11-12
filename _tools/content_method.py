@@ -84,7 +84,7 @@ METHOD = {
       "In JDEVPRO impostiamo i progetti con responsabilità tecniche definite e comunicazioni dirette. Analisi, architettura, sviluppo e verifiche rimangono coordinati rispetto agli obiettivi e ai risultati operativi.",
       "Quando occorrono competenze o abilitazioni specialistiche, collaboriamo con professionisti e fornitori qualificati. Responsabilità e limiti delle attività sono definiti prima di iniziare."
     ],
-    "identityLink": "Conosci Jacopo Ellero",
+    "identityLink": "Chi siamo",
     "identityHref": "chi-sono.html"
   },
   "en": {
@@ -170,7 +170,7 @@ METHOD = {
       "At JDEVPRO, projects follow defined technical responsibilities and direct communication. Discovery, architecture, development and validation stay aligned with goals and operational outcomes.",
       "When specialist skills or qualifications are required, we collaborate with qualified professionals and suppliers. Scope and responsibilities are agreed before work begins."
     ],
-    "identityLink": "Meet Jacopo Ellero",
+    "identityLink": "About JDEVPRO",
     "identityHref": "en-about.html"
   }
 }
