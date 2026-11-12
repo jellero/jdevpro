@@ -881,7 +881,7 @@ def service(p, lang="it"):
 
     def ex(t, d, link):
         more = ""
-        if link and (lang == "it" or link.startswith("http")):
+        if link:
             ext = link.startswith("http")
             more = f'<a class="card-link" href="{link}"{" rel=\"noreferrer\" target=\"_blank\"" if ext else ""}>{u["visit"] if ext else u["more"]}</a>'
         return f'<article class="example reveal"><h3>{t}</h3><p>{d}</p>{more}</article>'
