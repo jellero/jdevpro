@@ -4,6 +4,7 @@ import runpy
 
 EXTRA = runpy.run_path(str(pathlib.Path(__file__).with_name("content_extra.py")))
 ABOUT = runpy.run_path(str(pathlib.Path(__file__).with_name("content_about.py")))["ABOUT"]
+METHOD = runpy.run_path(str(pathlib.Path(__file__).with_name("content_method.py")))["METHOD"]
 PRODUCTS = runpy.run_path(str(pathlib.Path(__file__).with_name("content_products.py")))["PRODUCTS"]
 SMARTDRIVE = runpy.run_path(str(pathlib.Path(__file__).with_name("content_smartdrive.py")))
 AREAS_DATA = runpy.run_path(str(pathlib.Path(__file__).with_name("content_areas.py")))
@@ -326,6 +327,7 @@ def footer(lang="it"):
         links += f'<a href="{WHERE_PAGE["slug"]}">{WHERE_PAGE["nav"]}</a>'
         links += f'<a href="{PARTNERS["slug"]}">{PARTNERS["nav"]}</a>'
     links += f'<a href="{ABOUT[lang]["slug"]}">{ABOUT[lang]["nav"]}</a>'
+    links += f'<a href="{METHOD[lang]["slug"]}">{METHOD[lang]["nav"]}</a>'
     services = "".join(f'<a href="{p["href"]}">{p["card_title"]}</a>' for p in pages_for(lang))
     if lang == "it":
         services += "".join(f'<a href="{c["slug"]}">{c["name"]}</a>' for c in CITIES)
@@ -1346,6 +1348,100 @@ def about(lang="it"):
     other = ABOUT["en" if lang == "it" else "it"]["slug"]
     home_slug = "index.html" if lang == "it" else "en.html"
     url = url_of(a["slug"])
+    profile = "".join(f"<p>{x}</p>" for x in a["profile"])
+    skills = "\n".join(
+        f'<article class="pillar reveal"><span class="competence-num">0{i}</span><h3>{h}</h3><p>{d}</p>'
+        f'<ul>{"".join(f"<li>{x}</li>" for x in items)}</ul></article>'
+        for i, (h, d, items) in enumerate(a["skills"], 1))
+    certs = "".join(f'<article class="cert reveal"><strong>{h}</strong><span>{d}</span></article>' for h, d in a["certs"])
+
+    def ext_attr(link):
+        return ' rel="noreferrer" target="_blank"' if link.startswith("http") else ""
+
+    shots = {"Welora": ("assets/welora-app.webp", 756, 572), "JD Industry": ("assets/jd-industry-progetto.webp", 1600, 1000)}
+    projects = "".join(
+        f'<a class="build-card reveal" href="{link}"{ext_attr(link)}>'
+        + (f'<span class="build-shot"><img src="{shots[n][0]}" alt="{n}" width="{shots[n][1]}" height="{shots[n][2]}" loading="lazy" decoding="async"></span>' if n in shots else '')
+        + f'<span class="build-body"><strong>{n}{" ↗" if link.startswith("http") else ""}</strong><span>{d}</span></span></a>'
+        for n, d, link in a["projects"])
+    links = "".join(
+        f'<a class="button {"primary" if i == 0 else "ghost dark"}" href="{l}"{ext_attr(l)}>{n}</a>'
+        for i, (n, l) in enumerate(a["links"]))
+    person = {"@context": "https://schema.org", "@type": "Person", "name": "Jacopo Ellero", "url": url,
+              "jobTitle": "Sviluppatore e integratore di sistemi" if lang == "it" else "Software developer and systems integrator",
+              "worksFor": {"@id": ORG_ID}, "address": ADDRESS,
+              "knowsAbout": [s[0] for s in a["skills"]],
+              "hasCredential": [{"@type": "EducationalOccupationalCredential", "name": c[0], "description": c[1]} for c in a["certs"]],
+              "sameAs": ["https://github.com/jellero", LI]}
+    jsonld = [{"@context": "https://schema.org", "@type": "ProfilePage", "url": url, "mainEntity": person},
+              {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+                  {"@type": "ListItem", "position": 1, "name": UI[lang]["home"], "item": url_of(home_slug)},
+                  {"@type": "ListItem", "position": 2, "name": a["nav"], "item": url}]},
+              ORG_REF]
+    profile_e, profile_h = ("Profilo", "Come lavoro.") if lang == "it" else ("Profile", "How I work.")
+    body = f"""{header(a['slug'], lang, switch=other)}<main id="main">
+<section class="hero page-hero">
+<div aria-hidden="true" class="hero-grid"></div>
+<div class="shell page-hero-copy reveal">
+<nav aria-label="{UI[lang]['crumbs']}" class="breadcrumb"><a href="{home_slug}">{UI[lang]['home']}</a><span>/</span><span aria-current="page">{a['nav']}</span></nav>
+<p class="eyebrow">{a['eyebrow']}</p>
+<h1>{a['h1']}</h1>
+<p class="hero-lead">{a['lead']}</p>
+{stats_html("about", lang)}
+</div>
+</section>
+<section class="section section-tight section-white">
+<div class="shell split">
+<div class="section-heading reveal"><p class="eyebrow">{profile_e}</p><h2>{profile_h}</h2></div>
+<div class="profile-copy reveal">{profile}<div class="hero-actions">{links}</div></div>
+</div>
+</section>
+<section class="section section-tight section-paper">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">{a['skills_e']}</p><h2>{a['skills_h']}</h2></div>
+<div class="pillar-grid">
+{skills}
+</div>
+</div>
+</section>
+<section class="section section-tight section-dark">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">{a['field_e']}</p><h2>{a['field_h']}</h2><p class="field-lead">{a['field_p']}</p></div>
+<div class="cert-grid">{certs}</div>
+</div>
+</section>
+<section class="section section-tight section-dark akios-section">
+<div class="shell split">
+<div class="section-heading reveal"><p class="eyebrow">{a['akios_e']}</p><h2>{a['akios_h']}</h2>
+<ul class="akios-points">{"".join(f"<li>{x}</li>" for x in a["akios_points"])}</ul></div>
+<div class="research-copy reveal">{"".join(f"<p>{x}</p>" for x in a["akios_p"])}<div class="hero-actions">{"".join(f'<a class="button {"primary" if i == 0 else "ghost"}" href="{l}" rel="noreferrer" target="_blank">{n}</a>' for i, (n, l) in enumerate(a["akios_links"]))}</div></div>
+</div>
+</section>
+<section class="section section-tight section-dark">
+<div class="shell split">
+<div class="section-heading reveal"><p class="eyebrow">{a['research_e']}</p><h2>{a['research_h']}</h2></div>
+<div class="research-copy reveal">{"".join(f"<p>{x}</p>" for x in a["research_p"])}<div class="hero-actions"><a class="button primary" href="{product_slug(lang, 'oryvael')}">{UI[lang]['more'].replace(' →', '')}</a><a class="button ghost" href="{a['research_link'][1]}" rel="noreferrer" target="_blank">{a['research_link'][0]}</a></div></div>
+</div>
+</section>
+<section class="section section-tight section-paper">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">{a['projects_e']}</p><h2>{a['projects_h']}</h2></div>
+<div class="build-grid">{projects}</div>
+</div>
+</section>
+{contact(lang)}</main>
+"""
+    return head(a["title"], a["desc"], a["slug"], jsonld, lang,
+                alternates=[("it", ABOUT["it"]["slug"]), ("en", ABOUT["en"]["slug"])]) + body + footer(lang)
+
+
+# ---------------------------------------------------------------- come lavoriamo
+
+def work_method(lang="it"):
+    a = METHOD[lang]
+    other = METHOD["en" if lang == "it" else "it"]["slug"]
+    home_slug = "index.html" if lang == "it" else "en.html"
+    url = url_of(a["slug"])
     def stats():
         return '<ul class="hero-stats">' + "".join(
             f'<li><a class="stat" href="{href}"><strong>{name}</strong><span>{detail}</span></a></li>'
@@ -1357,7 +1453,7 @@ def about(lang="it"):
         for name, detail, href, label in a["services"])
     identity = "".join(f'<p>{p}</p>' for p in a["identity"])
     jsonld = [
-      {"@context": "https://schema.org", "@type": "AboutPage", "url": url,
+      {"@context": "https://schema.org", "@type": "WebPage", "url": url,
        "name": a["title"], "about": {"@id": ORG_ID}},
       {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
           {"@type": "ListItem", "position": 1, "name": UI[lang]["home"], "item": url_of(home_slug)},
@@ -1387,7 +1483,7 @@ def about(lang="it"):
 <section class="section section-tight section-white">
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">{a['proofEyebrow']}</p><h2>{a['proofTitle']}</h2><p>{a['proofText']}</p><a class="card-link" href="{a['proofHref']}">{a['proofLink']} →</a></div>
-<figure class="product-shot reveal"><img src="assets/jd-industry-progetto.webp" alt="JD Industry — gestionale di produzione e interconnessione macchine" width="1600" height="1000" loading="lazy" decoding="async"></figure>
+<div class="profile-copy reveal"><p><strong>Architettura.</strong> Componenti e flussi definiti con chiarezza.</p><p><strong>Controllo.</strong> Permessi, log e test anche in caso di errore.</p><p><strong>Continuità.</strong> Manutenzione e procedure di ripristino previste.</p></div>
 </div></section>
 <section class="section section-tight section-paper">
 <div class="shell split">
@@ -1396,7 +1492,7 @@ def about(lang="it"):
 </div></section>
 {contact(lang)}</main>"""
     return head(a["title"], a["desc"], a["slug"], jsonld, lang,
-                alternates=[("it", ABOUT["it"]["slug"]), ("en", ABOUT["en"]["slug"])]) + body + footer(lang)
+                alternates=[("it", METHOD["it"]["slug"]), ("en", METHOD["en"]["slug"])]) + body + footer(lang)
 
 
 
@@ -1613,6 +1709,7 @@ for g in GUIDES:
 write("guide.html", guide_index())
 write(TEST["slug"], test_page())
 write("chi-sono.html", about("it"))
+write("come-lavoriamo.html", work_method("it"))
 for _lang in ("it", "en"):
     for _a in AREAS[_lang]:
         write(_a["slug"], area_page(_a, _lang))
@@ -1626,6 +1723,7 @@ for _lang in ("it", "en"):
 write("smartdrive.html", SMARTDRIVE["build_page"]("it", head, header, footer, contact, BASE, ORG_REF, ORG_ID))
 write("en-smartdrive.html", SMARTDRIVE["build_page"]("en", head, header, footer, contact, BASE, ORG_REF, ORG_ID))
 write("en-about.html", about("en"))
+write("en-how-we-work.html", work_method("en"))
 write("404.html", not_found())
 for _kind in ("privacy", "cookie"):
     for _lang in ("it", "en"):
@@ -1635,7 +1733,7 @@ for old, target in OLD_URLS.items():
 
 urls = (["", "en.html"] + [p["slug"] for p in PAGES] + [EN_SLUG[p["slug"]] for p in PAGES]
         + [c["slug"] for c in CITIES] + ["guide.html", TEST["slug"]] + [g["slug"] for g in GUIDES]
-        + [x["slug"] for l in ("it", "en") for x in PRODUCTS[l] if not x.get("external")] + ["smartdrive.html", "en-smartdrive.html"] + [a["slug"] for l in ("it", "en") for a in AREAS[l]] + [PRODUCTS_PAGE["it"]["slug"], PRODUCTS_PAGE["en"]["slug"], WHERE_PAGE["slug"], PARTNERS["slug"]] + ["chi-sono.html", "en-about.html", "privacy.html", "privacy-en.html", "cookie-policy.html", "cookie-policy-en.html"])
+        + [x["slug"] for l in ("it", "en") for x in PRODUCTS[l] if not x.get("external")] + ["smartdrive.html", "en-smartdrive.html"] + [a["slug"] for l in ("it", "en") for a in AREAS[l]] + [PRODUCTS_PAGE["it"]["slug"], PRODUCTS_PAGE["en"]["slug"], WHERE_PAGE["slug"], PARTNERS["slug"]] + ["chi-sono.html", "en-about.html", "come-lavoriamo.html", "en-how-we-work.html", "privacy.html", "privacy-en.html", "cookie-policy.html", "cookie-policy-en.html"])
 sitemap = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 sitemap += [f"  <url><loc>{BASE}{u}</loc><lastmod>{TODAY}</lastmod></url>" for u in urls]
 sitemap.append("</urlset>")
