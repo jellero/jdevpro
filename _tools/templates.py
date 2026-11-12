@@ -1430,7 +1430,7 @@ def about(lang="it"):
 <div class="build-grid">{projects}</div>
 </div>
 </section>
-{contact(lang)}</main>
+{contact(lang, ("Parliamo del tuo progetto.", "Raccontaci cosa vuoi realizzare, quali sistemi utilizzi e quali risultati vuoi ottenere.") if lang == "it" else ("Tell us about your project.", "Describe what you want to build, which systems you use and the results you want to achieve."))}</main>
 """
     return head(a["title"], a["desc"], a["slug"], jsonld, lang,
                 alternates=[("it", ABOUT["it"]["slug"]), ("en", ABOUT["en"]["slug"])]) + body + footer(lang)
