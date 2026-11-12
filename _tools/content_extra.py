@@ -6,7 +6,8 @@ INSTALLERS_EN = "Wiring, lines and electrical panels are installed by licensed e
 
 PRICES = {
   "interconnessione-macchine-industria-4-0.html": [
-    ("Collegamento di una macchina", 1500, "una tantum", "per tipo di macchina · sviluppo del collegamento via API compreso · eventuali sensori esclusi"),
+    ("Collegamento di una macchina", 1500, "una tantum", "per tipo di macchina · integrazione con software esistente, se tecnicamente possibile · eventuali sensori esclusi"),
+    ("Gestionale essenziale per interconnessione (solo se necessario)", 500, "una tantum", "opzionale · quando manca un gestionale utilizzabile o il collegamento non è possibile"),
     ("Macchina aggiuntiva dello stesso tipo", 400, "una tantum", "stessa marca e modello · collegamento già sviluppato"),
   ],
   "gestionale-su-misura.html": [
@@ -440,7 +441,7 @@ EN_PAGES = {
     service_type="Industry 4.0 machine interconnection",
     eyebrow="Machine interconnection · Industry 4.0",
     h1="Industry 4.0 machine interconnection: <span>from technical review to commissioning.</span>",
-    lead="JDEVPRO integrates industrial machines with business systems. We assess interfaces and compatibility, develop data exchange, test the connection and prepare technical documentation. We also evaluate older machines for production monitoring. Tax incentive eligibility depends on the asset requirements and assessment by the appointed professionals.",
+    lead="JDEVPRO integrates industrial machines with the business software companies already use. We assess existing systems, develop the required connection where technically feasible, test data exchange and prepare technical documentation. If no suitable system is available, we can provide a simple dedicated management application without requiring a full ERP replacement. Incentive eligibility depends on asset requirements and an independent assessment.",
     proof="In production: dozens of machines connected across woodworking shops and metal pressing companies.",
     problems=[("The machine is new but not connected.", "Without interconnection to company systems you risk losing Italian Industry 4.0 tax incentives."),
               ("Times and costs are estimated by hand.", "Machine hours, scrap and consumption end up in Excel, if at all."),
@@ -466,7 +467,7 @@ EN_PAGES = {
              ("Machines without interfaces", ["Cycle and status sensors", "Stack light reading", "Energy meters and power analysers", "Temperature, pressure and humidity sensors"])],
     chips=["Compatibility assessment", "OPC UA", "MTConnect", "PLCs", "Modbus", "MQTT", "RS-485", "Sensors on old machines", "On-site server or NAS"],
     faq=[("Is interconnection needed for Italian Industry 4.0 incentives?", "The 2026–2028 super-depreciation requires the asset to be interconnected with the company information system or supply network. We build the connection and document it; the final assessment is up to your appraiser."),
-         ("Do I need to change my business software?", "No. Machine data goes into a dedicated application and, where needed, is passed to the software you already use."),
+         ("Do I need to change my business software?", "No. We assess the existing system first and integrate it with the machine wherever technically feasible. Only if no suitable software is available or the required connection cannot be made do we offer a simple dedicated management application, from an additional €500. There is no requirement to replace your company ERP."),
          ("Do you modify the machine program?", "No. We only read and write through the interfaces provided by the manufacturer."),
          ("Which machines does it work with?", "We review the make, model, available interfaces and data requirements. Where the machine exposes OPC UA, MTConnect, a PLC, Modbus, web or serial interfaces, we assess how to integrate it; otherwise, sensors and meters may be an option. We have integrated SCM Maestro Active and Essetre/Tecnoessetre machines."),
          ("What if the machine is old or has no interface?", "We can assess serial or Modbus bridge software, or sensors and meters for status, cycles and consumption. The goal for older machines may be production monitoring; eligibility for incentives needs a separate appraisal."),
@@ -904,8 +905,8 @@ CTAS = {
 
 PRICE_NOTES = {
   "interconnessione-macchine-industria-4-0.html": {
-    "it": "Nessun canone: gli interventi successivi si concordano quando servono. Esclusa la perizia tecnica asseverata per l'iperammortamento, firmata da un ingegnere o perito iscritto all'albo.",
-    "en": "No monthly fee: later work is agreed when needed. The sworn technical appraisal required for the Italian hyper-depreciation, signed by a registered engineer or technical expert, is excluded."},
+    "it": "Se il gestionale esistente è utilizzabile, non serve acquistarne un altro: interconnessione da 1.500 €. Se serve un gestionale essenziale dedicato, si aggiungono 500 €: esempio di soluzione completa da 2.000 €. Per più macchine, il preventivo dipende dalle integrazioni necessarie. Nessun canone obbligatorio; la perizia tecnica asseverata per l’iperammortamento è esclusa.",
+    "en": "If existing business software can be connected, no replacement is needed: interconnection from €1,500. Where a simple dedicated management application is needed, add €500: an example complete solution starts at €2,000. Multi-machine projects are quoted according to the required integrations. No mandatory monthly fee; the independent technical appraisal is excluded."},
   "automazione-hotel-bnb.html": {
     "it": "Nessun canone sull'impianto: paghi l'installazione e gli interventi quando servono.",
     "en": "No monthly fee on the system: you pay for the installation and for help when needed."},
