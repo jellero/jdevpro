@@ -90,7 +90,7 @@ UI = {
              c_steps='<li><strong>Scrivici</strong> i sistemi presenti e l\'obiettivo, anche in poche righe.</li><li><strong>Ti rispondiamo entro 24 ore</strong> con domande mirate o una proposta di incontro.</li><li><strong>Definiamo</strong> insieme perimetro, tempi e modalità di lavoro.</li>',
              c_steps_label="Come funziona", c_mail="Scrivici una email", copy="Copia", copied="Copiato ✓",
              li="Oppure su LinkedIn ↗", where="Friuli Venezia Giulia e Veneto · trasferte · da remoto ovunque",
-             f_who="Jacopo Ellero · Friuli Venezia Giulia", f_legal="JDEVPRO di Jacopo Ellero · Friuli Venezia Giulia · P.IVA IT02783420306", privacy="privacy.html", cookie="cookie-policy.html",
+             f_who="Software e sistemi integrati · Friuli Venezia Giulia", f_legal="JDEVPRO di Jacopo Ellero · Friuli Venezia Giulia · P.IVA IT02783420306", privacy="privacy.html", cookie="cookie-policy.html",
              mailto=MAILTO),
   "en": dict(lang="en", locale="en_GB", skip="Skip to content", menu="Open menu", navlabel="Main navigation",
              contact="Contact", guides="Guides", home="Home", crumbs="Breadcrumb", more="Learn more →",
@@ -110,7 +110,7 @@ UI = {
              c_steps="<li><strong>Write to us</strong> about your current systems and goal, even in a few lines.</li><li><strong>We reply within 24 hours</strong> with focused questions or a proposal for a meeting.</li><li><strong>We define</strong> scope, timeline and way of working together.</li>",
              c_steps_label="How it works", c_mail="Send us an email", copy="Copy", copied="Copied ✓",
              li="Or on LinkedIn ↗", where="Friuli Venezia Giulia, Italy · north-east Italy · travel · remote work anywhere",
-             f_who="Jacopo Ellero · Friuli Venezia Giulia, Italy", f_legal="JDEVPRO by Jacopo Ellero · Friuli Venezia Giulia, Italy · VAT IT02783420306", privacy="privacy-en.html", cookie="cookie-policy-en.html",
+             f_who="Business software and systems integration · North-east Italy", f_legal="JDEVPRO by Jacopo Ellero · Friuli Venezia Giulia, Italy · VAT IT02783420306", privacy="privacy-en.html", cookie="cookie-policy-en.html",
              mailto=MAILTO_EN),
 }
 
