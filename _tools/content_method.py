@@ -81,7 +81,7 @@ METHOD = {
     "identityEyebrow": "Responsabilità",
     "identityTitle": "Un referente tecnico, scelte motivate, ruoli chiari.",
     "identity": [
-      "JDEVPRO è l'attività professionale di Jacopo Ellero. Il dialogo diretto con chi progetta e sviluppa tiene insieme obiettivi, scelte architetturali e risultati operativi.",
+      "In JDEVPRO impostiamo i progetti con responsabilità tecniche definite e comunicazioni dirette. Analisi, architettura, sviluppo e verifiche rimangono coordinati rispetto agli obiettivi e ai risultati operativi.",
       "Quando occorrono competenze o abilitazioni specialistiche, collaboriamo con professionisti e fornitori qualificati. Responsabilità e limiti delle attività sono definiti prima di iniziare."
     ],
     "identityLink": "Conosci Jacopo Ellero",
@@ -167,7 +167,7 @@ METHOD = {
     "identityEyebrow": "Accountability",
     "identityTitle": "A direct technical contact, reasoned choices and clear roles.",
     "identity": [
-      "JDEVPRO is Jacopo Ellero's professional practice. Direct dialogue with the engineer designing and building the solution aligns goals, architecture and operational outcomes.",
+      "At JDEVPRO, projects follow defined technical responsibilities and direct communication. Discovery, architecture, development and validation stay aligned with goals and operational outcomes.",
       "When specialist skills or qualifications are required, we collaborate with qualified professionals and suppliers. Scope and responsibilities are agreed before work begins."
     ],
     "identityLink": "Meet Jacopo Ellero",

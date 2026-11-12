@@ -113,11 +113,11 @@ STATS = {
            ("Welora", "bookings from the management software straight on the website", "https://welora.it/")],
   },
   "about": {
-    "it": [("Decine", "di macchine collegate in produzione", "interconnessione-macchine-industria-4-0.html"),
-           ("Ubiquiti", "antenne, telecamere, citofoni e accessi installati", "videosorveglianza-citofonia-accessi.html"),
-           ("Dal 2009", "tra informatica, software e impianti", None)],
-    "en": [("Dozens", "machines connected in production", "en-machine-interconnection.html"),
-           ("Ubiquiti", "antennas, cameras, intercoms and access control installed", "en-video-surveillance-intercom-access.html"),
-           ("Since 2009", "across IT, software and installations", None)],
+    "it": [("Dal 2009", "esperienza tecnica tra software e sistemi", "come-lavoriamo.html"),
+           ("Software e dati", "applicazioni, gestionali e integrazioni", "software-web.html"),
+           ("Sistemi connessi", "IoT, automazione e infrastrutture", "monitoraggio-iot.html")],
+    "en": [("Since 2009", "technical experience across software and systems", "en-how-we-work.html"),
+           ("Software and data", "applications, business systems and integration", "en-custom-business-software.html"),
+           ("Connected systems", "IoT, automation and infrastructure", "en-iot-monitoring.html")],
   },
 }

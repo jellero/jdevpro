@@ -1,106 +1,276 @@
-"""Contenuti della pagina Chi sono (italiano e inglese)."""
+"""Profilo aziendale Chi siamo / About us."""
 
 ABOUT = {
-  "it": dict(
-    slug="chi-sono.html", nav="Chi sono",
-    title="Chi sono: Jacopo Ellero, sviluppatore e integratore | JDEVPRO",
-    desc="Jacopo Ellero, sviluppatore e integratore di sistemi. Backend, API, IoT, software e infrastrutture.",
-    eyebrow="Chi sono · Friuli Venezia Giulia",
-    h1="Jacopo Ellero. <span>Dal codice al campo.</span>",
-    lead="Sono uno sviluppatore e integratore di sistemi. Lavoro tra software, dati, macchine e infrastruttura: progetto API e gestionali, collego dispositivi e impianti, seguo i sistemi in produzione. E quando serve vado sul campo, in officina e negli impianti, con la formazione per farlo in sicurezza.",
-    profile=[
-      "Lavoro tra codice, infrastruttura e processi aziendali: progetto servizi e API, integro piattaforme esterne, mantengo sistemi critici e seguo i problemi fino alla causa reale.",
-      "Quando un progetto coinvolge macchine, PLC, gateway, sensori, rete o energia, seguo il flusso tecnico da un capo all'altro, per tenere coerenti software, dati e impianti.",
-      "Parlo direttamente con titolari, clienti, fornitori e sviluppatori esterni, e traduco i problemi operativi in soluzioni tecniche verificabili.",
+  "it": {
+    "slug": "chi-sono.html",
+    "nav": "Chi siamo",
+    "title": "Chi siamo | Competenze, tecnologia e progetti | JDEVPRO",
+    "desc": "JDEVPRO integra sviluppo software, piattaforme, dati, automazione, IoT e infrastrutture con un metodo di lavoro strutturato.",
+    "eyebrow": "Chi siamo · JDEVPRO",
+    "h1": "JDEVPRO. <span>Competenze integrate, soluzioni concrete.</span>",
+    "lead": "Progettiamo software e sistemi tecnologici per imprese e organizzazioni. Uniamo sviluppo applicativo, integrazione dei dati, automazione e infrastrutture in soluzioni coerenti con i processi di chi le utilizza. Dall'analisi alla messa in esercizio, lavoriamo con metodo, responsabilità chiare e attenzione alla continuità.",
+    "profile_e": "La nostra identità",
+    "profile_h": "Una visione d'insieme, non interventi isolati.",
+    "profile": [
+      "JDEVPRO unisce competenze software e sistemistiche per affrontare esigenze che attraversano applicazioni, dati, reti, dispositivi e processi. Ogni componente deve funzionare nel proprio contesto e dialogare con ciò che esiste già.",
+      "Organizziamo il lavoro intorno a competenze complementari: architettura e sviluppo, integrazione e automazione, infrastrutture e operatività. Progettiamo pensando a sicurezza, manutenzione e possibilità di evolvere nel tempo.",
+      "Il rapporto con il cliente si fonda su obiettivi espliciti, responsabilità definite, verifiche tecniche e documentazione. Dove servono qualifiche o interventi specialistici, coinvolgiamo i professionisti appropriati."
     ],
-    skills_e="Competenze", skills_h="Backend, macchine e infrastruttura in un unico sistema.",
-    skills=[
-      ("Backend e integrazione di sistemi", "Servizi, API e flussi dati tra sistemi aziendali, provider esterni, piattaforme e dispositivi.",
-       ["PHP · Python · Go · JavaScript/TypeScript · C/C++ · Kotlin", "REST API · webhook · integrazioni B2B/B2C", "PostgreSQL · MySQL/MariaDB · MSSQL · Redis", "RabbitMQ · code · eventi · retry · idempotenza", "Autenticazione · gestione dei segreti"]),
-      ("Software industriale e IoT", "Software che legge, comanda e coordina macchine e dispositivi senza perdere il contesto produttivo.",
-       ["Integrazione PLC e runtime CODESYS · embedded C", "RS-485 / RS-232 · Modbus · MQTT · gateway seriali", "Stati macchina · produzione · allarmi · sensori", "Machine-to-cloud · Wi-Fi · Bluetooth/BLE · LTE", "Commesse · costi · cruscotti"]),
-      ("Produzione e infrastruttura", "Ambienti, strumenti e procedure per tenere affidabili i sistemi in esercizio.",
-       ["Linux · Nginx · PHP-FPM · Docker/Compose", "CI/CD · Git · deploy · rollback", "Analisi log · monitoraggio · troubleshooting", "Hardening · backup · recovery", "Reti · VPN · VLAN · connettività remota"]),
+    "skills_e": "Competenze",
+    "skills_h": "Software, integrazioni e infrastrutture in un unico approccio.",
+    "skills": [
+      [
+        "Software e piattaforme",
+        "Gestionali, applicazioni, servizi backend e piattaforme web costruiti intorno ai processi aziendali.",
+        [
+          "PHP · Python · Go · JavaScript/TypeScript",
+          "REST API · servizi backend · applicazioni web",
+          "PostgreSQL · MySQL/MariaDB · MSSQL · Redis",
+          "Autenticazione · ruoli · gestione accessi",
+          "Architetture modulari · integrazioni B2B/B2C"
+        ]
+      ],
+      [
+        "Integrazione e automazione",
+        "Colleghiamo sistemi esistenti, piattaforme esterne, dispositivi e processi con flussi di dati affidabili.",
+        [
+          "API · webhook · code · eventi · idempotenza",
+          "Sincronizzazione tra gestionali e servizi esterni",
+          "PLC · IoT · Modbus · MQTT · gateway",
+          "Monitoraggio · dati operativi · notifiche",
+          "Marketplace, sistemi aziendali e dispositivi"
+        ]
+      ],
+      [
+        "Infrastruttura, sicurezza e continuità",
+        "Ambienti e procedure per sistemi affidabili, osservabili e manutenibili.",
+        [
+          "Linux · Docker · Nginx · CI/CD",
+          "Versionamento · deploy · rollback",
+          "Logging · monitoraggio · diagnosi",
+          "Hardening · backup · recovery",
+          "Reti · VPN · connettività remota"
+        ]
+      ]
     ],
-    field_e="Sul campo", field_h="Formazione per lavorare in sicurezza negli impianti.",
-    field_p="Collegare macchine, sensori e dispositivi spesso significa lavorare in officina, vicino a quadri e impianti, non solo davanti a un computer. Cablaggi, linee e quadri restano agli installatori abilitati secondo il DM 37/08: io curo dispositivi, configurazione, software e dati.",
-    certs=[
-      ("PES / PAV", "Qualifica per lavori elettrici secondo la norma CEI 11-27: persona esperta e persona avvertita."),
-      ("Bassa tensione", "Formazione per operare in sicurezza in presenza di impianti monofase e trifase in bassa tensione: fino a 1000 V in alternata e 1500 V in continua."),
-      ("Lavori in quota", "Lavoro in quota con dispositivi di protezione anticaduta."),
-      ("PLE", "Conduzione di piattaforme di lavoro mobili elevabili."),
+    "field_e": "Qualità e organizzazione",
+    "field_h": "Un metodo che accompagna il progetto anche dopo il rilascio.",
+    "field_p": "La qualità non si esaurisce nello sviluppo. Definiamo perimetri e obiettivi, controlliamo il comportamento dei sistemi e pianifichiamo manutenzione e continuità. Gli interventi impiantistici soggetti ad abilitazione restano affidati ai professionisti qualificati.",
+    "certs": [
+      [
+        "Analisi e architettura",
+        "Requisiti, vincoli e integrazioni sono definiti prima di scegliere gli strumenti."
+      ],
+      [
+        "Sviluppo controllato",
+        "Codice versionato, ambienti separati, test e rilasci ripetibili."
+      ],
+      [
+        "Sicurezza e dati",
+        "Permessi, protezione delle informazioni, tracciabilità e gestione degli errori."
+      ],
+      [
+        "Continuità operativa",
+        "Documentazione, monitoraggio, backup, aggiornamenti e recupero."
+      ]
     ],
-    projects_e="Progetti", projects_h="Cosa ho costruito.",
-    projects=[
-      ("Welora", "Piattaforma gestionale multi-struttura con motore di automazione separato.", "https://welora.it/"),
-      ("JD Industry", "Gestionale di produzione collegato alle macchine.", "interconnessione-macchine-industria-4-0.html"),
+    "projects_e": "Soluzioni e progetti",
+    "projects_h": "Applicazioni concrete delle nostre competenze.",
+    "projects": [
+      [
+        "Welora",
+        "Piattaforma gestionale multi-struttura per l'ospitalità, con automazione integrata. In sviluppo.",
+        "https://welora.it/"
+      ],
+      [
+        "JD Industry",
+        "Soluzioni software per collegare produzione, macchine, dati e processi aziendali.",
+        "gestionale-produzione-erpnext.html"
+      ]
     ],
-    akios_e="Sviluppo", akios_h="AKIOS: dispositivi IoT che si aggiornano senza rompersi.",
-    akios_p=[
-      "AKIOS è il progetto che sviluppo per i produttori di dispositivi IoT: uno strato che vive dentro il dispositivo e ne governa tutto il ciclo di vita, dalla prima configurazione agli aggiornamenti, fino al ripristino quando qualcosa va storto.",
-      "Ogni aggiornamento è firmato e verificato, parte in prova e viene confermato solo se il dispositivo funziona; altrimenti torna da solo all'ultima versione buona. Se non c'è più un sistema valido, il dispositivo apre una rete di ripristino locale e si recupera dal telefono, senza essere mai bloccato.",
-      "Il firmware è già operativo sui chip Beken BK7238, molto diffusi nei dispositivi Wi-Fi, e AKIOS è proposto ai produttori europei con un programma pilota: un dispositivo, un perimetro chiaro, prova su hardware reale. È pensato per chi deve garantire aggiornamenti sicuri per anni, come chiede il Cyber Resilience Act europeo.",
+    "akios_e": "Sviluppo e innovazione",
+    "akios_h": "AKIOS: aggiornamenti affidabili per dispositivi IoT.",
+    "akios_p": [
+      "AKIOS è un progetto tecnologico dedicato al ciclo di vita dei dispositivi connessi: configurazione, aggiornamenti firmware e recupero quando qualcosa va storto.",
+      "L'architettura comprende aggiornamenti firmati e verificati, avvio di prova, rollback automatico e recupero locale. L'obiettivo è ridurre il rischio di blocco dei dispositivi dopo un aggiornamento.",
+      "Lo sviluppo comprende firmware per dispositivi basati su Beken BK7238 e un percorso pilota rivolto ai produttori: validazione su hardware reale e perimetro tecnico definito."
     ],
-    akios_points=["Aggiornamenti firmati e verificati", "Prova, conferma o ritorno automatico", "Ripristino locale dal telefono", "Nessun cambio di cloud obbligato"],
-    akios_links=[("Scopri AKIOS ↗", "https://akios.cloud/"), ("Programma pilota ↗", "https://akios-pilot.com/")],
-    research_e="Ricerca", research_h="ORYVAEL: un sistema operativo dove l'intelligenza artificiale lavora, ma non comanda.",
-    research_p=[
-      "ORYVAEL è il progetto di ricerca più ambizioso che porto avanti: un sistema operativo pensato per l'intelligenza artificiale, in cui l'AI può progettare, scrivere, provare e mantenere software, mentre l'autorità resta sempre nelle mani delle persone.",
-      "L'idea centrale è separare l'intelligenza dall'autorità: l'AI è potente ma non fidata. Ogni sua azione è limitata, osservabile, attribuibile, riproducibile e reversibile. Non può darsi permessi da sola, disattivare i controlli o firmare rilasci.",
-      "È scritto in Rust, con un kernel che gira direttamente sull'hardware, e prevede profili per desktop, mobile e dispositivi embedded e IoT. È lo stesso principio che applico ogni giorno ai sistemi dei clienti: automazione sì, ma con controllo, storico e possibilità di tornare indietro.",
+    "akios_points": [
+      "Aggiornamenti firmati e verificati",
+      "Rollback automatico",
+      "Recupero locale",
+      "Nessun cloud obbligatorio"
     ],
-    research_link=("Scopri ORYVAEL ↗", "https://jellero.github.io/ORYVAEL-web/"),
-    links=[("Scrivici", "#contatto"), ("Come lavoriamo", "come-lavoriamo.html"), ("GitHub", "https://github.com/jellero"), ("LinkedIn", "https://www.linkedin.com/in/jacopo-ellero-a006499a/")],
-  ),
-  "en": dict(
-    slug="en-about.html", nav="About",
-    title="About: Jacopo Ellero, developer and integrator | JDEVPRO",
-    desc="Jacopo Ellero, software developer and systems integrator. Backend, APIs, IoT, software and infrastructure.",
-    eyebrow="About · Friuli Venezia Giulia, Italy",
-    h1="Jacopo Ellero. <span>From code to the field.</span>",
-    lead="I'm a software developer and systems integrator. I work across software, data, machines and infrastructure: I design APIs and business software, connect devices and installations, and look after systems in production. When needed I go on site, to workshops and installations, trained to do it safely.",
-    profile=[
-      "I work between code, infrastructure and business processes: I design services and APIs, integrate external platforms, maintain critical systems and follow problems to their real cause.",
-      "When a project involves machines, PLCs, gateways, sensors, networks or energy, I follow the technical flow end to end, keeping software, data and installations consistent.",
-      "I talk directly with owners, customers, suppliers and external developers, turning operational problems into verifiable technical solutions.",
+    "akios_links": [
+      [
+        "Scopri AKIOS ↗",
+        "https://akios.cloud/"
+      ],
+      [
+        "Programma pilota ↗",
+        "https://akios-pilot.com/"
+      ]
     ],
-    skills_e="Skills", skills_h="Backend, machines and infrastructure in one system.",
-    skills=[
-      ("Backend and systems integration", "Services, APIs and data flows between business systems, external providers, platforms and devices.",
-       ["PHP · Python · Go · JavaScript/TypeScript · C/C++ · Kotlin", "REST APIs · webhooks · B2B/B2C integrations", "PostgreSQL · MySQL/MariaDB · MSSQL · Redis", "RabbitMQ · queues · events · retries · idempotency", "Authentication · secrets management"]),
-      ("Industrial software and IoT", "Software that reads, controls and coordinates machines and devices within the production context.",
-       ["PLC and CODESYS runtime integration · embedded C", "RS-485 / RS-232 · Modbus · MQTT · serial gateways", "Machine states · production · alarms · sensors", "Machine-to-cloud · Wi-Fi · Bluetooth/BLE · LTE", "Jobs · costs · dashboards"]),
-      ("Production and infrastructure", "Environments, tools and procedures to keep systems reliable in operation.",
-       ["Linux · Nginx · PHP-FPM · Docker/Compose", "CI/CD · Git · deploy · rollback", "Log analysis · monitoring · troubleshooting", "Hardening · backups · recovery", "Networking · VPN · VLAN · remote connectivity"]),
+    "research_e": "Ricerca e sviluppo",
+    "research_h": "ORYVAEL: AI avanzata con controllo umano verificabile.",
+    "research_p": [
+      "ORYVAEL è un progetto di ricerca su un sistema operativo concepito per integrare intelligenza artificiale mantenendo distinti capacità operative e autorità.",
+      "Le azioni sono pensate per essere limitate, osservabili, attribuibili e reversibili. L'AI non deve poter assegnarsi permessi, disattivare i controlli o autorizzare autonomamente rilasci.",
+      "La ricerca esplora un kernel in Rust e scenari desktop, mobile ed embedded: automazione potente, ma sempre governabile e verificabile."
     ],
-    field_e="On site", field_h="Trained to work safely inside installations.",
-    field_p="Connecting machines, sensors and devices often means working in workshops, near panels and installations, not just at a computer. Wiring, lines and panels remain with electricians licensed under Italian law (DM 37/08): I take care of devices, configuration, software and data.",
-    certs=[
-      ("PES / PAV", "Qualification for electrical work under Italian standard CEI 11-27: skilled and instructed person."),
-      ("Low voltage", "Training to work safely around single- and three-phase low-voltage installations: up to 1000 V AC and 1500 V DC."),
-      ("Work at height", "Work at height with fall-protection equipment."),
-      ("MEWP (PLE)", "Operation of mobile elevating work platforms."),
+    "research_link": [
+      "Scopri ORYVAEL ↗",
+      "https://jellero.github.io/ORYVAEL-web/"
     ],
-    projects_e="Projects", projects_h="What I have built.",
-    projects=[
-      ("Welora", "Multi-property management platform with a separate automation engine.", "https://welora.it/"),
-      ("JD Industry", "Production software connected to machines.", "en-machine-interconnection.html"),
+    "links": [
+      [
+        "Contattaci",
+        "#contatto"
+      ],
+      [
+        "Come lavoriamo",
+        "come-lavoriamo.html"
+      ],
+      [
+        "Soluzioni",
+        "prodotti.html"
+      ]
+    ]
+  },
+  "en": {
+    "slug": "en-about.html",
+    "nav": "About us",
+    "title": "About us | Engineering, integration and innovation | JDEVPRO",
+    "desc": "JDEVPRO delivers custom software, systems integration, automation, IoT and infrastructure with a structured engineering approach.",
+    "eyebrow": "About us · JDEVPRO",
+    "h1": "JDEVPRO. <span>Integrated expertise, practical solutions.</span>",
+    "lead": "We design software and technology systems for businesses and organisations. Our approach combines applications, data integration, automation and infrastructure in solutions aligned with real operations. From discovery to deployment, we work with technical discipline, clear responsibilities and continuity in mind.",
+    "profile_e": "Our identity",
+    "profile_h": "A complete view, not isolated interventions.",
+    "profile": [
+      "JDEVPRO combines software and systems expertise to address requirements spanning applications, data, networks, devices and processes. Each component must work in context and integrate with existing technology.",
+      "We organise work around complementary disciplines: architecture and development, integration and automation, infrastructure and operations. Security, maintainability and future evolution guide engineering decisions.",
+      "Customer relationships rely on explicit objectives, defined responsibilities, technical validation and documentation. Qualified specialists are involved whenever a project requires regulated or specialist work."
     ],
-    akios_e="Development", akios_h="AKIOS: IoT devices that update without breaking.",
-    akios_p=[
-      "AKIOS is the project I am developing for IoT device makers: a layer living inside the device that governs its whole lifecycle, from first setup to updates and recovery when something goes wrong.",
-      "Every update is signed and verified, starts as a trial and is committed only if the device works; otherwise it rolls back by itself to the last good version. If no valid system is left, the device opens a local recovery network and is restored from a phone, never bricked.",
-      "The firmware already runs on Beken BK7238 chips, widely used in Wi-Fi devices, and AKIOS is offered to European manufacturers through a pilot programme: one device, a clear scope, validation on real hardware. It is built for makers who must guarantee secure updates for years, as the EU Cyber Resilience Act requires.",
+    "skills_e": "Expertise",
+    "skills_h": "Software, integration and infrastructure under one approach.",
+    "skills": [
+      [
+        "Software and platforms",
+        "Business systems, applications, backend services and web platforms designed around operational workflows.",
+        [
+          "PHP · Python · Go · JavaScript/TypeScript",
+          "REST APIs · backend services · web apps",
+          "PostgreSQL · MySQL/MariaDB · MSSQL · Redis",
+          "Authentication · roles · access control",
+          "Modular architectures · B2B/B2C integration"
+        ]
+      ],
+      [
+        "Integration and automation",
+        "Connecting existing systems, third-party services, devices and workflows through reliable data flows.",
+        [
+          "APIs · webhooks · queues · events · idempotency",
+          "Business system and external service sync",
+          "PLCs · IoT · Modbus · MQTT · gateways",
+          "Monitoring · operational data · alerts",
+          "Marketplaces, business systems and devices"
+        ]
+      ],
+      [
+        "Infrastructure, security and continuity",
+        "Environments and procedures for reliable, observable and maintainable services.",
+        [
+          "Linux · Docker · Nginx · CI/CD",
+          "Version control · deployments · rollbacks",
+          "Logging · monitoring · diagnostics",
+          "Hardening · backups · recovery",
+          "Networking · VPNs · remote connectivity"
+        ]
+      ]
     ],
-    akios_points=["Signed and verified updates", "Trial, commit or automatic rollback", "Local recovery from a phone", "No forced cloud migration"],
-    akios_links=[("Discover AKIOS ↗", "https://akios.cloud/"), ("Pilot programme ↗", "https://akios-pilot.com/")],
-    research_e="Research", research_h="ORYVAEL: an operating system where AI does the work, but does not rule.",
-    research_p=[
-      "ORYVAEL is my most ambitious research project: an AI-native operating system where artificial intelligence can design, write, test and maintain software, while authority always stays with people.",
-      "The core idea is to separate intelligence from authority: AI is powerful but untrusted. Every action is scoped, observable, attributable, reproducible and reversible. It cannot grant itself permissions, disable controls or sign releases.",
-      "It is written in Rust, with a kernel running directly on hardware, and plans profiles for desktop, mobile and embedded/IoT devices. It is the same principle I apply to clients' systems every day: automation yes, but with control, history and the ability to roll back.",
+    "field_e": "Quality and organisation",
+    "field_h": "A method that extends beyond delivery.",
+    "field_p": "Quality does not end at software delivery. We agree on scope and objectives, verify system behaviour and plan maintenance and continuity. Regulated installation work is performed by appropriately qualified professionals.",
+    "certs": [
+      [
+        "Discovery and architecture",
+        "Requirements, constraints and integrations are defined before choosing tools."
+      ],
+      [
+        "Controlled development",
+        "Versioned code, separated environments, tests and repeatable releases."
+      ],
+      [
+        "Security and data",
+        "Permissions, data protection, auditability and error handling."
+      ],
+      [
+        "Operational continuity",
+        "Documentation, monitoring, backups, updates and recovery."
+      ]
     ],
-    research_link=("Discover ORYVAEL ↗", "https://jellero.github.io/ORYVAEL-web/"),
-    links=[("Write to us", "#contatto"), ("How we work", "en-how-we-work.html"), ("GitHub", "https://github.com/jellero"), ("LinkedIn", "https://www.linkedin.com/in/jacopo-ellero-a006499a/")],
-  ),
+    "projects_e": "Solutions and projects",
+    "projects_h": "Our expertise in practice.",
+    "projects": [
+      [
+        "Welora",
+        "Multi-property hospitality management platform with integrated automation. In development.",
+        "https://welora.it/"
+      ],
+      [
+        "JD Industry",
+        "Software solutions connecting production, machines, data and business workflows.",
+        "en-erpnext-manufacturing.html"
+      ]
+    ],
+    "akios_e": "Engineering and innovation",
+    "akios_h": "AKIOS: reliable updates for IoT devices.",
+    "akios_p": [
+      "AKIOS is a technology project focused on connected-device lifecycle management: setup, firmware updates and recovery when something goes wrong.",
+      "The architecture includes signed and verified updates, trial boot, automatic rollback and local recovery. The aim is to reduce the risk of devices failing after an update.",
+      "Development includes firmware for Beken BK7238-based devices and a pilot programme for manufacturers, with validation on real hardware and a defined technical scope."
+    ],
+    "akios_points": [
+      "Signed and verified updates",
+      "Automatic rollback",
+      "Local recovery",
+      "No mandatory cloud"
+    ],
+    "akios_links": [
+      [
+        "Explore AKIOS ↗",
+        "https://akios.cloud/"
+      ],
+      [
+        "Pilot programme ↗",
+        "https://akios-pilot.com/"
+      ]
+    ],
+    "research_e": "Research and development",
+    "research_h": "ORYVAEL: advanced AI under verifiable human control.",
+    "research_p": [
+      "ORYVAEL is a research project exploring an operating system that integrates AI while separating operational capability from authority.",
+      "Actions are designed to remain scoped, observable, attributable and reversible. AI must not be able to grant its own permissions, disable controls or approve software releases.",
+      "The research explores a Rust kernel and desktop, mobile and embedded scenarios: powerful automation that remains controllable and verifiable."
+    ],
+    "research_link": [
+      "Explore ORYVAEL ↗",
+      "https://jellero.github.io/ORYVAEL-web/"
+    ],
+    "links": [
+      [
+        "Contact us",
+        "#contatto"
+      ],
+      [
+        "How we work",
+        "en-how-we-work.html"
+      ],
+      [
+        "Solutions",
+        "en-products.html"
+      ]
+    ]
+  }
 }

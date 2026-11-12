@@ -1373,18 +1373,13 @@ def about(lang="it"):
     links = "".join(
         f'<a class="button {"primary" if i == 0 else "ghost dark"}" href="{l}"{ext_attr(l)}>{n}</a>'
         for i, (n, l) in enumerate(a["links"]))
-    person = {"@context": "https://schema.org", "@type": "Person", "name": "Jacopo Ellero", "url": url,
-              "jobTitle": "Sviluppatore e integratore di sistemi" if lang == "it" else "Software developer and systems integrator",
-              "worksFor": {"@id": ORG_ID}, "address": ADDRESS,
-              "knowsAbout": [s[0] for s in a["skills"]],
-              "hasCredential": [{"@type": "EducationalOccupationalCredential", "name": c[0], "description": c[1]} for c in a["certs"]],
-              "sameAs": ["https://github.com/jellero", LI]}
-    jsonld = [{"@context": "https://schema.org", "@type": "ProfilePage", "url": url, "mainEntity": person},
+    jsonld = [{"@context": "https://schema.org", "@type": "AboutPage",
+               "url": url, "name": a["title"], "about": {"@id": ORG_ID}},
               {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
                   {"@type": "ListItem", "position": 1, "name": UI[lang]["home"], "item": url_of(home_slug)},
                   {"@type": "ListItem", "position": 2, "name": a["nav"], "item": url}]},
               ORG_REF]
-    profile_e, profile_h = ("Profilo", "Come lavoro.") if lang == "it" else ("Profile", "How I work.")
+    profile_e, profile_h = a["profile_e"], a["profile_h"]
     body = f"""{header(a['slug'], lang, switch=other)}<main id="main">
 <section class="hero page-hero">
 <div aria-hidden="true" class="hero-grid"></div>
