@@ -8,7 +8,6 @@ from urllib.parse import quote
 REPO = pathlib.Path(sys.argv[1])
 BASE = "https://www.jdevpro.it/"
 EMAIL = "info@jdevpro.it"
-WA = "https://wa.me/393454656749?text=" + quote("Ciao, vi scrivo dal sito JDEVPRO per un progetto.")
 LI = "https://www.linkedin.com/in/jacopo-ellero-a006499a/"
 MAILTO = ("mailto:info@jdevpro.it?subject=" + quote("Richiesta progetto - JDEVPRO") + "&amp;body=" + quote(
     "Buongiorno,\n\nCosa c'è da fare:\n\nDove (comune):\n\nMacchine, camere o utenti coinvolti:\n\nSistemi già presenti:\n\nTempistiche indicative:\n\nIncentivi o contributi previsti (se ci sono):\n\nAzienda / riferimento:\n"))
@@ -158,7 +157,7 @@ PAGES = [
       ("E-commerce e marketplace", ["SellRapido", "IBS", "Temu", "Booking.com", "Channel manager WuBook"]),
       ("Fornitori e logistica", ["Cataloghi dei fornitori", "Corriere GLS", "Banche dati prodotto (Discogs, MusicBrainz)"]),
       ("Pagamenti e adempimenti", ["Stripe", "Fatturazione elettronica FatturaPA / SdI", "Alloggiati Web", "ISTAT / WebTur"]),
-      ("Comunicazioni", ["WhatsApp Business", "Email", "Notifiche sul telefono", "Telegram"]),
+      ("Comunicazioni", ["Email", "Notifiche sul telefono", "Telegram"]),
     ],
     catalog=[
       ("Marketplace ed e-commerce", ["Amazon", "eBay", "Shopify", "WooCommerce", "PrestaShop", "Magento / Adobe Commerce", "Etsy", "ManoMano", "Zalando", "Temu", "IBS", "SellRapido"]),
@@ -166,7 +165,7 @@ PAGES = [
       ("Pagamenti", ["Stripe", "PayPal", "Satispay", "Nexi", "SumUp"]),
       ("Fatturazione e contabilità", ["FatturaPA / SdI", "Fatture in Cloud", "Aruba Fatturazione Elettronica", "Gestionali contabili via API, file o database"]),
       ("Prenotazioni e turismo", ["Booking.com", "Channel manager", "Alloggiati Web", "ISTAT / WebTur"]),
-      ("Comunicazioni e ufficio", ["WhatsApp Business", "Email", "Telegram", "Google Workspace", "Microsoft 365"]),
+      ("Comunicazioni e ufficio", ["Email", "Telegram", "Google Workspace", "Microsoft 365"]),
     ],
     steps=[
       ("Mappa dei sistemi", "Quali programmi ci sono, quali dati devono passare e quando."),
@@ -177,7 +176,7 @@ PAGES = [
     examples=[
       ("Gestionale collegato a fornitore, marketplace e corriere", "Per un'azienda che compra da un fornitore e rivende online: catalogo del fornitore, SellRapido, IBS, Temu e corriere GLS collegati. Offerte, ordini, acquisti e spedizioni senza passaggi manuali.", None),
       ("Welora · prenotazioni e portali", "Importazione delle prenotazioni da Booking.com e aggiornamento delle disponibilità, senza perdere dati se un servizio è fermo.", "https://welora.it/"),
-      ("Welora · pagamenti, fatture e adempimenti", "Incassi e rimborsi con Stripe, verifica dei documenti degli ospiti, fattura elettronica, Alloggiati Web, ISTAT e WhatsApp Business.", "https://welora.it/"),
+      ("Welora · pagamenti, fatture e adempimenti", "Incassi e rimborsi con Stripe, verifica dei documenti degli ospiti, fattura elettronica, Alloggiati Web, ISTAT.", "https://welora.it/"),
     ],
     chips=["API e webhook", "Interfacce web", "File, database e cartelle", "Seriale e Modbus", "Storico e avvisi"],
     faq=[
@@ -390,7 +389,7 @@ PAGES = [
       ("Hardware", ["Home Assistant Supervised", "Raspberry Pi", "Mini PC Intel NUC", "NAS Synology con Docker", "PLC"]),
       ("Clima ed energia", ["Termostati e valvole termostatiche", "Daikin, Mitsubishi, Panasonic", "Shelly e misuratori di energia", "Inverter e accumuli"]),
       ("Luci, accessi e sensori", ["Philips Hue e DALI tramite gateway", "Serrature e apricancello", "Sensori di finestra, presenza e perdite", "Sonde di temperatura per celle e frigoriferi"]),
-      ("Collegamenti", ["Gestionale Welora", "Notifiche su telefono, Telegram e WhatsApp", "Tablet a parete", "Assistenti vocali"]),
+      ("Collegamenti", ["Gestionale Welora", "Notifiche su telefono e Telegram", "Tablet a parete", "Assistenti vocali"]),
     ],
     steps=[
       ("Sopralluogo", "Impianti esistenti, rete, quadri e cosa deve fare la domotica per chi lavora in struttura."),
@@ -445,7 +444,7 @@ PAGES = [
       ("Analisi video", ["Frigate", "Riconoscimento di persone e veicoli", "Riconoscimento facciale", "Lettura targhe", "Zone e linee virtuali"]),
       ("Cancelli e automazioni", ["Nice", "CAME", "BFT", "FAAC", "Shelly", "Apricancello GSM"]),
       ("Videocitofoni", ["2N", "Comelit", "BTicino", "Akuvox", "Hikvision", "Dahua", "Citofoni SIP"]),
-      ("Avvisi e collegamenti", ["Notifiche sul telefono", "Telegram", "WhatsApp", "Home Assistant"]),
+      ("Avvisi e collegamenti", ["Notifiche sul telefono", "Telegram", "Home Assistant"]),
     ],
     steps=[
       ("Sopralluogo", "Aree da controllare, accessi, rete e alimentazione."),
@@ -496,7 +495,7 @@ PAGES = [
       ("Centralini", ["3CX", "FreePBX / Asterisk", "Yeastar", "Grandstream UCM"]),
       ("Telefoni e app", ["Yealink", "Grandstream", "Fanvil", "App per smartphone e PC"]),
       ("Citofoni SIP", ["2N", "Comelit", "BTicino", "Akuvox", "Hikvision"]),
-      ("Collegamenti", ["Gestionali e CRM", "Microsoft Teams", "WhatsApp Business", "Operatori VoIP"]),
+      ("Collegamenti", ["Gestionali e CRM", "Microsoft Teams", "Operatori VoIP"]),
     ],
     steps=[
       ("Analisi", "Numeri, interni, sedi, orari e come arrivano le chiamate oggi."),

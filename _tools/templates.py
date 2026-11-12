@@ -68,7 +68,6 @@ TODAY = datetime.date.today().isoformat()
 import hashlib
 ASSET_V = {n: hashlib.sha1((REPO / n).read_bytes()).hexdigest()[:8] for n in ("styles.css", "overrides.css", "pages.css", "script.js")}
 
-WA_EN = "https://wa.me/393454656749?text=" + quote("Hello, I'm writing from the JDEVPRO website about a project.")
 MAILTO_EN = ("mailto:info@jdevpro.it?subject=" + quote("Project enquiry - JDEVPRO") + "&amp;body=" + quote(
     "Hello,\n\nWhat needs doing:\n\nWhere (town):\n\nMachines, rooms or users involved:\n\nExisting systems:\n\nRough timeline:\n\nIncentives or grants expected (if any):\n\nCompany / contact:\n"))
 
@@ -90,10 +89,9 @@ UI = {
              c_p="Descrivici i sistemi che hai, cosa vuoi ottenere e i tempi. Ti rispondiamo per iscritto entro 24 ore, con domande mirate o con una proposta.",
              c_steps='<li><strong>Scrivici</strong> i sistemi presenti e l\'obiettivo, anche in poche righe.</li><li><strong>Ti rispondiamo entro 24 ore</strong> con domande mirate o una proposta di incontro.</li><li><strong>Definiamo</strong> insieme perimetro, tempi e modalità di lavoro.</li>',
              c_steps_label="Come funziona", c_mail="Scrivici una email", copy="Copia", copied="Copiato ✓",
-             wa="Scrivici su WhatsApp ↗",
              li="Oppure su LinkedIn ↗", where="Friuli Venezia Giulia e Veneto · trasferte · da remoto ovunque",
              f_who="Jacopo Ellero · Friuli Venezia Giulia", f_legal="JDEVPRO di Jacopo Ellero · Friuli Venezia Giulia · P.IVA IT02783420306", privacy="privacy.html", cookie="cookie-policy.html",
-             mailto=MAILTO, wa_url=WA),
+             mailto=MAILTO),
   "en": dict(lang="en", locale="en_GB", skip="Skip to content", menu="Open menu", navlabel="Main navigation",
              contact="Contact", guides="Guides", home="Home", crumbs="Breadcrumb", more="Learn more →",
              services="Services", all_services="All services",
@@ -111,10 +109,9 @@ UI = {
              c_p="Describe your systems, what you want to achieve and your timeline. We reply in writing within 24 hours, with focused questions or a proposal.",
              c_steps="<li><strong>Write to us</strong> about your current systems and goal, even in a few lines.</li><li><strong>We reply within 24 hours</strong> with focused questions or a proposal for a meeting.</li><li><strong>We define</strong> scope, timeline and way of working together.</li>",
              c_steps_label="How it works", c_mail="Send us an email", copy="Copy", copied="Copied ✓",
-             wa="Message us on WhatsApp ↗",
              li="Or on LinkedIn ↗", where="Friuli Venezia Giulia, Italy · north-east Italy · travel · remote work anywhere",
              f_who="Jacopo Ellero · Friuli Venezia Giulia, Italy", f_legal="JDEVPRO by Jacopo Ellero · Friuli Venezia Giulia, Italy · VAT IT02783420306", privacy="privacy-en.html", cookie="cookie-policy-en.html",
-             mailto=MAILTO_EN, wa_url=WA_EN),
+             mailto=MAILTO_EN),
 }
 
 PRICE_EN = {"Collegamento di una macchina": "Connecting one machine", "Dati macchina e assistenza": "Machine data and support",
@@ -308,7 +305,6 @@ def contact(lang="it", cta=None):
 <div class="contact-actions">
 <a class="button light big" href="{u['mailto']}">{u['c_mail']}</a>
 <button class="contact-copy" type="button" data-copy-email="{EMAIL}" data-copied-label="{u['copied']}"><span>{EMAIL}</span><em>{u['copy']}</em></button>
-<a class="contact-whatsapp" href="{u['wa_url']}" rel="noreferrer" target="_blank">{u['wa']}</a>
 <a class="contact-alt" href="{LI}" rel="noreferrer" target="_blank">{u['li']}</a>
 <span>{u['where']}</span>
 </div>

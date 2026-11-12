@@ -133,7 +133,7 @@ PRODUCTS = {
         ("status", "Stato", "In pre-lancio, arrivo previsto il 15 febbraio 2027.", [
           "Piattaforma con 25 moduli, dalle prenotazioni alla cassa",
           "Motore di automazione separato, che non perde dati se un servizio è fermo",
-          "Collegamenti con Booking.com, Stripe, Alloggiati Web, ISTAT, fatturazione elettronica, WhatsApp e termostati",
+          "Collegamenti con Booking.com, Stripe, Alloggiati Web, ISTAT, fatturazione elettronica, termostati",
           "Primo pilota con strutture ricettive del Friuli Venezia Giulia",
         ], "Alcune funzioni dipendono da provider esterni e dalla modalità scelta dalla struttura."),
       ],
@@ -463,7 +463,7 @@ PRODUCTS = {
         ("status", "Status", "Pre-launch, expected on 15 February 2027.", [
           "Platform with 25 modules, from bookings to the till",
           "Separate automation engine that loses no data when a service is down",
-          "Connections with Booking.com, Stripe, Italian police and statistics portals, e-invoicing, WhatsApp and thermostats",
+          "Connections with Booking.com, Stripe, Italian police and statistics portals, e-invoicing, thermostats",
           "First pilot with properties in Friuli Venezia Giulia",
         ], "Some features depend on external providers and on the mode chosen by the property."),
       ],
