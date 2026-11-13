@@ -363,6 +363,10 @@
       window.gtag('event', 'contact_intent', {channel:'website_form', page_path:location.pathname});
   });
 
+  document.addEventListener('jdevpro:lead-success', () => {
+    if (analyticsLoaded && typeof window.gtag === 'function') window.gtag('event', 'generate_lead', {channel:'website_form', page_path:location.pathname});
+  });
+
   ready(() => {
     buildUi();
     const saved = readConsent();
