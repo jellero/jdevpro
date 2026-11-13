@@ -18,17 +18,33 @@
     window.addEventListener('scroll', syncHeader, { passive: true });
 
     if (menuToggle && nav) {
+      if (!nav.id) nav.id = 'site-navigation';
+      menuToggle.setAttribute('aria-controls', nav.id);
+
+      const closeMenu = (restoreFocus = false) => {
+        if (!nav.classList.contains('open')) return;
+        nav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        if (restoreFocus) menuToggle.focus();
+      };
+
       menuToggle.addEventListener('click', () => {
         const open = nav.classList.toggle('open');
         menuToggle.setAttribute('aria-expanded', String(open));
       });
 
       nav.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => {
-          nav.classList.remove('open');
-          menuToggle.setAttribute('aria-expanded', 'false');
-        });
+        link.addEventListener('click', () => closeMenu());
       });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeMenu(true);
+      });
+      document.addEventListener('pointerdown', (event) => {
+        if (!header?.contains(event.target)) closeMenu();
+      });
+      window.addEventListener('resize', () => {
+        if (window.matchMedia('(min-width: 761px)').matches) closeMenu();
+      }, { passive: true });
     }
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
