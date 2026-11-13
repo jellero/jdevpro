@@ -64,7 +64,13 @@ PAGES = [
       ("JD Industry · CNC Essetre/Tecnoessetre", "Più macchine in un'unica schermata, eventi associati alla commessa, invio dei file di lavoro, magazzino e residui, report economici stampabili.", "casi-studio-industriali.html#cnc-essetre"),
     ],
     catalog=[
-      ("Tipi di macchine", ['Torni CNC e torni automatici', 'Centri di lavoro e fresatrici', 'Rettificatrici', 'Taglio laser, plasma e waterjet', 'Marcatura e incisione laser', 'Presse piegatrici e punzonatrici', 'Presse meccaniche e idrauliche', 'Linee di stampaggio e tranciatura', 'Saldatrici e robot di saldatura', 'Robot industriali e isole robotizzate', 'Presse a iniezione per plastica', 'Estrusori e soffiatrici', 'Bordatrici, sezionatrici e CNC per il legno', 'Foratrici e centri di foratura', 'Telai e macchine per maglieria', 'Ricamatrici e macchine da cucire industriali', 'Macchine per tintoria e finissaggio', 'Macchine da stampa offset, flessografiche e digitali', 'Serigrafia e stampa tampografica', 'Riempitrici, infustatrici e imbottigliatrici', 'Tappatrici ed etichettatrici', 'Confezionatrici, incartonatrici e avvolgitori', 'Pallettizzatori e fine linea', 'Macchine alimentari: impastatrici, forni, pastorizzatori', 'Impianti di verniciatura e forni di essiccazione', 'Forni e impianti di trattamento termico', 'Macchine per marmo e pietra', 'Compressori, impianti ausiliari e centrali termiche', 'Linee di assemblaggio e collaudo', 'Magazzini automatici e trasportatori', 'Qualsiasi macchina o impianto con PLC o CNC']),
+      ("Esempi di macchine e categorie", [
+        "Bordatrici per il legno — esempio realizzato: SCM Maestro Active",
+        "Centri di lavoro CNC per il legno — esempio realizzato: Essetre / Tecnoessetre",
+        "Altre macchine con PLC o CNC — compatibilità da verificare",
+        "Macchine datate senza interfaccia — sensori o collegamenti seriali da valutare",
+        "Qualsiasi macchina o impianto con PLC o CNC, dopo verifica delle interfacce",
+      ]),
       ("Macchine e controlli CNC", ["OPC UA e MTConnect", "Controlli Siemens, Fanuc, Heidenhain", "SCM Maestro Active, Essetre / Tecnoessetre", "Supervisori di linea con interfaccia web o API"]),
       ("PLC e protocolli industriali", ["PLC Siemens S7, Beckhoff, Omron, Schneider", "Runtime CODESYS", "Display HMI DWIN", "Modbus TCP e Modbus RTU su RS-485", "MQTT"]),
       ("Collegamenti seriali", ["RS-485 / RS-232", "Convertitori seriale-rete", "Programma ponte su PC o NAS"]),
