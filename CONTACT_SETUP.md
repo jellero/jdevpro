@@ -4,7 +4,7 @@
 La modifica non è attiva fino al deploy dell'endpoint su un hosting PHP e alla configurazione SMTP/Turnstile. Non pubblicare il frontend nuovo prima che il backend sia stato installato e verificato.
 
 ## Architettura
-- index.html ed en.html inviano via fetch a https://www.jdevpro.it/api/contact.php.
+- index.html, en.html, interconnessione-macchine-industria-4-0.html ed en-machine-interconnection.html inviano via fetch a https://www.jdevpro.it/api/contact.php.
 - api/contact.php convalida i campi, honeypot, Siteverify Turnstile, Origin CORS e rate limiting (5 invii/IP in 15 minuti), poi manda una email a info@jdevpro.it.
 - Il mittente è info@jdevpro.it, il Reply-To è l'indirizzo inserito dal visitatore. Nessuna conferma automatica viene spedita al visitatore.
 - Resta il pulsante per copiare la richiesta in caso di indisponibilità.
@@ -27,7 +27,7 @@ Non inserire mai password o secret in HTML, JS o repository pubblico. SMTP Aruba
 ## Turnstile invisibile
 1. Nel dashboard Cloudflare Turnstile creare un widget in modalità Invisible.
 2. Autorizzare gli hostname www.jdevpro.it, jdevpro.it e jellero.github.io.
-3. Sostituire INSERISCI_SITEKEY_TURNSTILE in index.html ed en.html con la sitekey PUBBLICA.
+3. Sostituire INSERISCI_SITEKEY_TURNSTILE nelle quattro pagine che contengono il modulo con la sitekey PUBBLICA.
 4. Impostare la secret key nell'ambiente PHP come JDEVPRO_TURNSTILE_SECRET.
 5. Il server valida success, hostname e action=contact con Siteverify. Non rimuovere questo controllo.
 6. Per altri host di staging aggiornare widget Cloudflare, whitelist Origin e hostname lato PHP.
@@ -39,7 +39,7 @@ Le informative privacy e cookie contengono il link alla Turnstile Privacy Addend
 2. Configurare variabili private e sitekey pubblica.
 3. Verificare che un GET a https://www.jdevpro.it/api/contact.php risponda HTTP 405 con JSON: non deve mostrare codice PHP.
 4. Provare un invio con Turnstile reale: verificare email ricevuta su info@jdevpro.it e intestazione Reply-To.
-5. Solo dopo pubblicare index.html, en.html e script.js aggiornati.
+5. Solo dopo pubblicare le quattro pagine di contatto e script.js aggiornati.
 
 ## Test
 - Controlli di sintassi: php -l api/contact.php e node --check script.js.
