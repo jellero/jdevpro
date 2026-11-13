@@ -778,7 +778,7 @@ def products_index(lang):
     rows = ""
     for idx, x in enumerate(products(lang)):
         if idx == 1:
-            rows += '<div class="section-heading reveal"><h2>{"Altri prodotti" if lang == "it" else "Other products"}</h2></div>\n'
+            rows += f'<div class="section-heading reveal"><h2>{"Altri prodotti" if lang == "it" else "Other products"}</h2></div>\n'
         pts = "".join(f"<li>{p}</li>" for p in pp["points"][x["key"]])
         label = x["slug"].split("//")[1].rstrip("/") + " ↗" if x.get("external") else u["more"]
         rows += f"""<article class="product-row product-card-{x['key']} reveal">
