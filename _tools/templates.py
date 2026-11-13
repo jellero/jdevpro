@@ -171,7 +171,7 @@ ORG = {
                  {"@type": "AdministrativeArea", "name": "Veneto"}, {"@type": "Country", "name": "Italia"}],
   "description": "JDEVPRO sviluppa software, integrazioni industriali e sistemi connessi per imprese: interconnessione macchine 4.0, gestionali, automazione e infrastrutture, in Friuli Venezia Giulia e Veneto.",
   "knowsLanguage": ["it", "en"],
-  "sameAs": ["https://github.com/jellero"],
+  "sameAs": ["https://github.com/jellero", LI],
   "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Competenze JDEVPRO", "itemListElement": [
     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": p["service_type"], "url": BASE + p["slug"]}} for p in PAGES]},
 }
@@ -346,7 +346,7 @@ def contact(lang="it", cta=None, show_form=False):
 <div class="contact-actions">
 <a class="button light big" href="{u['mailto']}">{u['c_mail']}</a>
 <button class="contact-copy" type="button" data-copy-email="{EMAIL}" data-copied-label="{u['copied']}"><span>{EMAIL}</span><em>{u['copy']}</em></button>
-<a class="contact-alt" href="{'assistenza.html' if lang == 'it' else 'en-support.html'}">{'Assistenza tecnica →' if lang == 'it' else 'Technical support →'}</a>
+<a class="contact-alt" href="{'assistenza.html' if lang == 'it' else 'en-support.html'}">{'Assistenza tecnica →' if lang == 'it' else 'Technical support →'}</a><a class="contact-alt" href="{LI}" rel="noreferrer" target="_blank">LinkedIn JDEVPRO ↗</a>
 <span>{u['where']}</span>
 </div>
 </div>
@@ -374,7 +374,7 @@ def footer(lang="it"):
 <div class="shell footer-grid footer-wide">
 <div><strong>JDEVPRO</strong><span>{u['f_who']}</span></div>
 <div class="footer-links">{links}</div>
-<div><span>{u['f_legal']}</span><a href="{u['privacy']}">Privacy</a><a href="{u['cookie']}">Cookie</a><a href="https://github.com/jellero" rel="noreferrer" target="_blank">GitHub</a></div>
+<div><span>{u['f_legal']}</span><a href="{u['privacy']}">Privacy</a><a href="{u['cookie']}">Cookie</a><a href="https://github.com/jellero" rel="noreferrer" target="_blank">GitHub</a><a href="{LI}" rel="noreferrer" target="_blank">LinkedIn JDEVPRO</a></div>
 </div>
 <div class="shell"><div class="footer-local">{services}</div></div>
 </footer>
