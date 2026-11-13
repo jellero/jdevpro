@@ -821,27 +821,40 @@ def products_index(lang):
 """
     receptionist_slug = "digital-receptionist.html" if lang == "it" else "en-digital-receptionist.html"
     if lang == "it":
-        receptionist_label = "Progetto in sviluppo"
+        receptionist_label = "Progetto in sviluppo · AI e telefonia"
         receptionist_desc = ("Digital Receptionist è l'assistente AI per le telefonate che stiamo sviluppando. "
-                             "Il motore conversazionale testuale funziona già; voce, VoIP e integrazioni gestionali "
-                             "non sono ancora disponibili.")
-        receptionist_cta = "Scopri lo stato del progetto →"
+                             "Il motore conversazionale testuale e le API funzionano già; l'adattatore vocale "
+                             "è in sviluppo, mentre VoIP e connettori gestionali sono pianificati.")
+        receptionist_cta = "Scopri Digital Receptionist →"
+        receptionist_points = [
+            "Motore conversazionale testuale e API già implementati",
+            "Riconoscimento e sintesi vocale in sviluppo",
+            "Centralini VoIP e connettori gestionali pianificati",
+            "Non ancora disponibile per gestire telefonate reali",
+        ]
     else:
-        receptionist_label = "Project in development"
-        receptionist_desc = ("Digital Receptionist is an AI telephone assistant under development. "
-                             "The text-based engine is already implemented; voice, VoIP and business software "
-                             "integrations are not yet available.")
-        receptionist_cta = "View development status →"
-    dev_teaser = f"""<section class="section section-tight section-white" id="progetti-in-sviluppo">
-<div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">{receptionist_label}</p>
-<h2>Digital Receptionist</h2><p>{receptionist_desc}</p>
-<a class="card-link" href="{receptionist_slug}">{receptionist_cta}</a></div>
-</div></section>
+        receptionist_label = "Project in development · AI and telephony"
+        receptionist_desc = ("Digital Receptionist is an AI phone assistant under development. "
+                             "The text-based conversation engine and API are implemented; speech is in development, "
+                             "while VoIP and business software connectors are planned.")
+        receptionist_cta = "Explore Digital Receptionist →"
+        receptionist_points = [
+            "Text conversation engine and API implemented",
+            "Speech recognition and synthesis in development",
+            "VoIP and business software connectors planned",
+            "Not yet available for live phone calls",
+        ]
+    rows += f"""<article class="product-row product-card-receptionist reveal">
+<div><p class="eyebrow">{receptionist_label}</p><h2>Digital Receptionist</h2>
+<p class="product-card-text">{receptionist_desc}</p>
+<a class="button primary" href="{receptionist_slug}">{receptionist_cta}</a></div>
+<div class="product-side"><ul class="status-list">{''.join(f'<li>{p}</li>' for p in receptionist_points)}</ul></div>
+</article>
 """
     jsonld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": pp["nav"], "description": pp["desc"], "url": url_of(pp["slug"]),
                "hasPart": [{"@type": "CreativeWork", "name": x["nav"], "url": x["slug"] if x.get("external") else BASE + x["slug"]} for x in products(lang)]
-               + [{"@type": "SoftwareApplication", "name": "SmartDrive", "url": BASE + drive_target}]},
+               + [{"@type": "SoftwareApplication", "name": "SmartDrive", "url": BASE + drive_target},
+                  {"@type": "SoftwareApplication", "name": "Digital Receptionist", "url": BASE + receptionist_slug}]},
               {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
                   {"@type": "ListItem", "position": 1, "name": u["home"], "item": url_of(home_slug)},
                   {"@type": "ListItem", "position": 2, "name": pp["nav"], "item": url_of(pp["slug"])}]}, ORG_REF]
@@ -859,7 +872,7 @@ def products_index(lang):
 <div class="shell product-rows">
 {rows}</div>
 </section>
-{dev_teaser}{contact(lang)}</main>
+{contact(lang)}</main>
 """
     return head(pp["title"], pp["desc"], pp["slug"], jsonld, lang,
                 alternates=[("it", PRODUCTS_PAGE["it"]["slug"]), ("en", PRODUCTS_PAGE["en"]["slug"])]) + body + footer(lang)
