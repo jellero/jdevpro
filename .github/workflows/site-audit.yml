@@ -1,0 +1,23 @@
+name: Verifica qualità sito
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  site-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verifica SEO, sitemap, link e asset
+        run: python3 tools/check_site.py
+      - name: Verifica sintassi JavaScript
+        run: node --check script.js
