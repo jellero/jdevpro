@@ -23,3 +23,9 @@ ErrorDocument 404 /404.html
 <IfModule mod_rewrite.c>
 RewriteRule ^_tools/ - [F,L]
 </IfModule>
+
+# Blocca richieste HTTP a dipendenze e metadati di deploy (Apache/Plesk).
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^(vendor/|\.env(?:\..*)?$|composer\.(json|lock)$|CONTACT_SETUP\.md$) - [F,L,NC]
+</IfModule>

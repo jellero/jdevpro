@@ -1,0 +1,35 @@
+name: Verifica modulo contatti PHP
+
+on:
+  pull_request:
+    paths:
+      - 'api/contact.php'
+      - 'script.js'
+      - 'index.html'
+      - 'en.html'
+      - 'interconnessione-macchine-industria-4-0.html'
+      - 'en-machine-interconnection.html'
+      - 'sitemap.xml'
+      - 'composer.json'
+      - '.github/workflows/contact-form-checks.yml'
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+      - name: PHP syntax
+        run: php -l api/contact.php
+      - name: JavaScript syntax
+        run: node --check script.js
+      - name: Required fields and destination
+        run: |
+          grep -q 'api/contact.php' index.html
+          grep -q 'api/contact.php' en.html
+          grep -q 'api/contact.php' interconnessione-macchine-industria-4-0.html
+          grep -q 'api/contact.php' en-machine-interconnection.html
+          grep -q 'out.postassl.it' api/contact.php
+          grep -q 'siteverify' api/contact.php
