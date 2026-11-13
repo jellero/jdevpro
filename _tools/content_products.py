@@ -415,7 +415,7 @@ PRODUCTS = {
           ("Safety consultants", "Inspections, non-conformities and training courses with expiring certificates."),
           ("Lawyers", "Files, hearings, help with deadline calculation and private files."),
         ]),
-        ("flow", "SmartDrive · standalone package · coming soon", "Independent file storage and backup, optionally integrated with SmartAgent.", [
+        ("flow", "SmartDrive · standalone package", "Independent file storage and backup, optionally integrated with SmartAgent.", [
           ("Use SmartDrive on its own", "Store and sync computer files without subscribing to SmartAgent."),
           ("Connect it to SmartAgent", "With SmartAgent, SmartDrive files can be associated with client and case records."),
           ("An attachment arrives", "With SmartAgent integration, client attachments can be filed in the corresponding folders."),
@@ -449,7 +449,7 @@ PRODUCTS = {
           ("Studio · up to 3 users", "€49.90 a month", "All features, for working as a team"),
           ("Studio Plus · up to 6 users", "€79.90 a month", "All features, for larger firms"),
         ], "Prices exclude VAT."),
-        ("prices", "SmartDrive storage", "Choose the space you need.", "A standalone package: use SmartDrive on its own or with SmartAgent. Coming soon.", [
+        ("prices", "SmartDrive storage", "Choose the space you need.", "A standalone package: use SmartDrive on its own or with SmartAgent.", [
           ("100 GB · to get started", "€2.90 a month", "A professional's documents and photos"),
           ("500 GB · for professionals", "€5.90 a month", "A complete archive of years of work"),
           ("1 TB · for CAD projects", "€9.90 a month", "Drawings, models and surveys"),
@@ -464,7 +464,7 @@ PRODUCTS = {
           "SmartDrive: standalone storage and backup, also without SmartAgent",
           "Digital signatures and document workflows",
           "Separate database for each business, two-step verification and data always exportable",
-        ], "\"Coming soon\" features are not available yet."),
+        ], "The available options depend on the chosen business configuration."),
       ],
     ),
     dict(
@@ -617,9 +617,9 @@ PRODUCTS = {
     dict(
       key="receptionist", slug="en-digital-receptionist.html", nav="Digital Receptionist",
       title="Digital Receptionist: AI phone receptionist for business | JDEVPRO",
-      desc="JDEVPRO Digital Receptionist answers calls, routes requests, handles appointments and connects with VoIP, CRM and business software. Product developed, coming soon.",
+      desc="JDEVPRO Digital Receptionist answers calls, routes requests, handles appointments and connects with VoIP, CRM and business software. AI phone receptionist for business use.",
       card="Digital Receptionist answers in natural Italian, screens and routes calls, handles appointments and requests, and connects with VoIP and business software.",
-      eyebrow="Product · AI receptionist · Coming soon",
+      eyebrow="Product · AI receptionist",
       h1="Digital Receptionist: <span>the AI receptionist that answers and works with your systems.</span>",
       lead="Digital Receptionist is JDEVPRO's AI receptionist for businesses, professionals and hospitality. It answers calls in natural Italian, identifies itself as a virtual assistant and understands each caller's request. It can answer directly, screen and route calls, or cover busy lines and out-of-hours calls. It integrates with VoIP phone systems, business software, CRMs and calendars to collect details, handle appointments and cancellations, add notes and send alerts.",
       links=[],
