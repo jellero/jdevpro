@@ -496,3 +496,13 @@
 .interconnection-disclaimer a{color:#1d4ed8}
 .interconnection-form-status{margin:8px 0 0;min-height:1em;color:#214c78}
 @media(max-width:760px){.interconnection-form{padding:18px;margin-top:20px}.interconnection-fields{grid-template-columns:1fr}.interconnection-form-actions .button{width:100%;justify-content:center}}
+
+/* Catalogo prodotti: JD Industry in primo piano, altri prodotti sintetici. */
+.product-row-secondary { padding: 24px; gap: 22px; }
+.product-row-secondary h2 { font-size: clamp(1.5rem, 2.7vw, 2.1rem); }
+.product-row-secondary .product-thumb { max-height: 220px; object-fit: contain; }
+.product-group-heading { margin: 18px 0 2px; }
+.product-group-heading h2 { color: #fff; font-size: clamp(1.4rem, 2.4vw, 1.8rem); }
+@media (max-width: 760px) {
+  .product-row-secondary { padding: 20px; }
+}
