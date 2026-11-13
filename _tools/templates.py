@@ -262,7 +262,7 @@ def header(current, lang="it", home=False, switch=None):
     active = current in (pp["slug"], drive_slug, "digital-receptionist.html", "en-digital-receptionist.html") or any(x["slug"] == current for x in prods)
     psub = f'<a class="nav-sub-all" href="{pp["slug"]}"{cur(current == pp["slug"])}>{"Tutti i prodotti" if lang == "it" else "All products"} →</a>\n' + "\n".join(
         f'<a href="{x["slug"]}"{ext(x["slug"])}{cur(x["slug"] == current)}>{x["nav"]}{" ↗" if x.get("external") else ""}</a>' for x in prods)
-    psub += f'\n<a href="{drive_slug}"{cur(current == drive_slug)}>SmartDrive · {"presto disponibile" if lang == "it" else "coming soon"}</a>'
+    psub += f'\n<a href="{drive_slug}"{cur(current == drive_slug)}>SmartDrive</a>'
     links += (f'<div class="nav-group{" is-current" if active else ""}">'
               f'<a class="nav-group-label" href="{pp["slug"]}">{pp["nav"]} <span aria-hidden="true">▾</span></a>'
               f'<div class="nav-sub">\n{psub}\n</div></div>\n')
@@ -776,7 +776,9 @@ def products_index(lang):
     home_slug = "index.html" if lang == "it" else "en.html"
     other = PRODUCTS_PAGE["en" if lang == "it" else "it"]["slug"]
     rows = ""
-    for x in products(lang):
+    for idx, x in enumerate(products(lang)):
+        if idx == 1:
+            rows += '<div class="section-heading reveal"><h2>{"Altri prodotti" if lang == "it" else "Other products"}</h2></div>\n'
         pts = "".join(f"<li>{p}</li>" for p in pp["points"][x["key"]])
         label = x["slug"].split("//")[1].rstrip("/") + " ↗" if x.get("external") else u["more"]
         rows += f"""<article class="product-row product-card-{x['key']} reveal">
@@ -787,15 +789,15 @@ def products_index(lang):
 """
     drive_target = "smartdrive.html" if lang == "it" else "en-smartdrive.html"
     if lang == "it":
-        drive_label, drive_title = "Pacchetto indipendente · in arrivo", "SmartDrive"
+        drive_label, drive_title = "Prodotto · Archivio e backup", "SmartDrive"
         drive_desc = "Backup incrementale, versioni e recupero dei documenti aziendali. SmartDrive è autonomo o integrabile in SmartAgent, con più terminali gestiti facilmente."
         drive_more = "Scopri SmartDrive →"
-        drive_points = ["Windows, Mac, Android e iPhone previsti al lancio", "Backup foto, video, cartelle e dati selezionati", "Autonomo o integrato in SmartAgent", "Presto disponibile"]
+        drive_points = ["Windows, Mac, Android e iPhone", "Backup foto, video, cartelle e dati selezionati", "Autonomo o integrato in SmartAgent", "Versionamento e ripristino dei documenti"]
     else:
-        drive_label, drive_title = "Standalone package · coming soon", "SmartDrive"
+        drive_label, drive_title = "Product · Storage and backup", "SmartDrive"
         drive_desc = "Incremental backup, file versions and recovery for businesses. SmartDrive is standalone or optionally integrated with SmartAgent, with simple multi-device management."
         drive_more = "Explore SmartDrive →"
-        drive_points = ["Windows, Mac, Android and iPhone at planned launch", "Photo, video, folder and selected data backup", "Standalone or with SmartAgent", "Coming soon"]
+        drive_points = ["Windows, Mac, Android and iPhone", "Photo, video, folder and selected data backup", "Standalone or with SmartAgent", "File versioning and recovery"]
     rows += f"""<article class="product-row product-card-smartdrive reveal">
 <div><p class="eyebrow">{drive_label}</p><h2>{drive_title}</h2><p class="product-card-text">{drive_desc}</p>
 <a class="button primary" href="{drive_target}">{drive_more}</a></div>
@@ -1694,7 +1696,8 @@ def ext(href):
 
 def products(lang):
     """Solo i prodotti in vendita: AKIOS e ORYVAEL sono sviluppo."""
-    return [x for x in PRODUCTS[lang] if not x.get("dev")]
+    order = {"erp": 0, "smartagent": 1, "receptionist": 2, "welora": 3}
+    return sorted((x for x in PRODUCTS[lang] if not x.get("dev")), key=lambda x: order.get(x["key"], 99))
 
 
 def product_slug(lang, key):
