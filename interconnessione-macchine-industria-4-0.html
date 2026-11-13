@@ -374,9 +374,9 @@
 <h2>Dicci marca e modello delle tue macchine.</h2>
 <p>Ti diciamo per iscritto, entro 24 ore, se e come si collegano al gestionale e cosa serve per l'interconnessione.</p>
 <ol class="contact-steps" aria-label="Come funziona"><li><strong>Scrivici</strong> i sistemi presenti e l'obiettivo, anche in poche righe.</li><li><strong>Ti rispondiamo entro 24 ore</strong> con domande mirate o una proposta di incontro.</li><li><strong>Definiamo</strong> insieme perimetro, tempi e modalità di lavoro.</li></ol>
-<form class="interconnection-form" data-interconnection-form action="mailto:info@jdevpro.it" method="post" enctype="text/plain">
+<form class="interconnection-form" data-interconnection-form action="https://www.jdevpro.it/api/contact.php" method="post" data-turnstile-sitekey="INSERISCI_SITEKEY_TURNSTILE">
 <h3>Richiedi una verifica di interconnessione</h3>
-<p>Inserisci i dati essenziali: prepariamo la richiesta per il nostro indirizzo email.</p>
+<p>Inserisci i dati essenziali: invieremo la richiesta direttamente al nostro indirizzo email.</p>
 <div class="interconnection-fields">
 <label>Azienda <input name="company" autocomplete="organization" maxlength="120" required placeholder="Ragione sociale"></label>
 <label>Email di contatto <input name="email" type="email" autocomplete="email" maxlength="160" required placeholder="nome@azienda.it"></label>
@@ -386,8 +386,10 @@
 <label>Provincia / località <input name="location" maxlength="100" placeholder="Dove si trovano le macchine"></label>
 <label class="field-wide">Dati da collegare o altre informazioni <textarea name="notes" rows="3" maxlength="1200" placeholder="Commesse, tempi, allarmi, produzione..."></textarea></label>
 </div>
-<div class="interconnection-form-actions"><button type="submit" class="button primary">Prepara l'email</button><button type="button" class="button ghost dark" data-lead-copy>Copia la richiesta</button></div>
-<p class="interconnection-disclaimer">Questo modulo non invia dati a un server: apre il tuo programma di posta con la richiesta compilata. L'invio avviene solo dopo la tua conferma. <a href="privacy.html">Privacy</a>.</p>
+<label aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden">Leave this field blank <input name="website" autocomplete="off" tabindex="-1"></label>
+<div data-turnstile-container></div>
+<div class="interconnection-form-actions"><button type="submit" class="button primary">Invia richiesta</button><button type="button" class="button ghost dark" data-lead-copy>Copia la richiesta</button></div>
+<p class="interconnection-disclaimer">I dati saranno inviati a JDEVPRO tramite connessione HTTPS, con protezione antispam Cloudflare Turnstile. <a href="privacy.html">Privacy</a>.</p>
 <p class="interconnection-form-status" aria-live="polite" data-form-status></p>
 </form>
 </div>
@@ -416,6 +418,6 @@
 </div>
 <div class="shell"><div class="footer-local"><a href="interconnessione-macchine-industria-4-0.html">Interconnessione macchine 4.0</a><a href="gestionale-su-misura.html">Gestionali su misura</a><a href="integrazione-software-api.html">Integrazioni e automazioni</a><a href="migrazione-dati.html">Migrazione dati</a><a href="monitoraggio-iot.html">Monitoraggio IoT ed energia</a><a href="automazione-hotel-bnb.html">Automazione per hotel e B&B</a><a href="domotica-home-assistant.html">Domotica professionale</a><a href="videosorveglianza-citofonia-accessi.html">Videosorveglianza, citofonia e accessi</a><a href="centralini-voip-telefonia.html">Centralini VoIP e telefonia</a><a href="internet-offgrid-siti-remoti.html">Internet offgrid e siti remoti</a><a href="siti-web-piattaforme.html">Siti e piattaforme web</a><a href="software-gestionali-integrazioni-udine.html">Udine</a><a href="software-gestionali-integrazioni-pordenone.html">Pordenone</a><a href="software-gestionali-integrazioni-trieste-gorizia.html">Trieste e Gorizia</a></div></div>
 </footer>
-<script src="script.js?v=20261112lead"></script>
+<script src="script.js?v=20261113smtp"></script>
 </body>
 </html>
