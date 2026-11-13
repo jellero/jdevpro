@@ -780,7 +780,7 @@ def products_index(lang):
     rows = ""
     for idx, x in enumerate(products(lang)):
         if idx == 1:
-            rows += f'<div class="section-heading reveal product-group-heading"><h2>{"Altri prodotti" if lang == "it" else "Other products"}</h2></div>\n'
+            rows += f'<div class="section-heading reveal product-group-heading"><h2>{"Altri prodotti" if lang == "it" else "Other products"}</h2><p>{"Disponibilità e modalità di attivazione da verificare: richiedi informazioni per ciascun prodotto." if lang == "it" else "Availability and activation details are confirmed on request for each product."}</p></div>\n'
         pts = "".join(f"<li>{p}</li>" for p in pp["points"][x["key"]])
         label = x["slug"].split("//")[1].rstrip("/") + " ↗" if x.get("external") else u["more"]
         rows += f"""<article class="product-row product-card-{x['key']}{" product-row-secondary" if idx else ""} reveal">
@@ -791,12 +791,12 @@ def products_index(lang):
 """
     drive_target = "smartdrive.html" if lang == "it" else "en-smartdrive.html"
     if lang == "it":
-        drive_label, drive_title = "Prodotto · Archivio e backup", "SmartDrive"
+        drive_label, drive_title = "Prodotto · Archivio e backup · Informazioni su richiesta", "SmartDrive"
         drive_desc = "Backup incrementale, versioni e recupero dei documenti aziendali. SmartDrive è autonomo o integrabile in SmartAgent, con più terminali gestiti facilmente."
         drive_more = "Scopri SmartDrive →"
         drive_points = ["Windows, Mac, Android e iPhone", "Backup foto, video, cartelle e dati selezionati", "Autonomo o integrato in SmartAgent", "Versionamento e ripristino dei documenti"]
     else:
-        drive_label, drive_title = "Product · Storage and backup", "SmartDrive"
+        drive_label, drive_title = "Product · Storage and backup · Details on request", "SmartDrive"
         drive_desc = "Incremental backup, file versions and recovery for businesses. SmartDrive is standalone or optionally integrated with SmartAgent, with simple multi-device management."
         drive_more = "Explore SmartDrive →"
         drive_points = ["Windows, Mac, Android and iPhone", "Photo, video, folder and selected data backup", "Standalone or with SmartAgent", "File versioning and recovery"]
