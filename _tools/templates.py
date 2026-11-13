@@ -499,7 +499,7 @@ HOME_BODY = {
 <div class="proof-grid proof-links reveal">
 <a href="casi-studio-industriali.html#scm-maestro-active"><strong>Bordatrice SCM · Maestro Active</strong><span>Stato e allarmi in tempo reale, commesse gestite dalla macchina, produzione acquisita e costi per commessa.</span></a>
 <a href="casi-studio-industriali.html#cnc-essetre"><strong>CNC Essetre / Tecnoessetre</strong><span>Più macchine in un'unica schermata, file di lavoro, eventi di commessa, magazzino e report.</span></a>
-<a href="integrazione-software-api.html"><strong>Gestionale e marketplace</strong><span>Flussi di dati tra gestionale, fornitore, marketplace e corriere, senza reinserimenti manuali.</span></a>
+<a href="gestionale-produzione-erpnext.html"><strong>Gestionale e MES</strong><span>Macchine, commesse e avanzamento della produzione collegati al gestionale: dati raccolti da PLC e CNC, senza reinserimenti manuali.</span></a>
 </div>
 </div>
 </section>
@@ -596,7 +596,7 @@ HOME_BODY = {
 <div class="proof-grid proof-links reveal">
 <a href="en-industrial-case-studies.html#scm-maestro-active"><strong>SCM edgebander · Maestro Active</strong><span>Live status and alarms, work orders managed by the machine, automatic production data and job costing.</span></a>
 <a href="en-industrial-case-studies.html#cnc-essetre"><strong>Essetre / Tecnoessetre CNC</strong><span>Multiple machines in one view, job events, work files, inventory and reports.</span></a>
-<a href="en-software-integration-api.html"><strong>ERP and marketplaces</strong><span>Data flowing between business software, suppliers, marketplaces and shipping services.</span></a>
+<a href="en-erpnext-manufacturing.html"><strong>ERP and MES</strong><span>Machines, production orders and shop-floor progress linked to business software, with data collected from PLCs and CNCs.</span></a>
 </div></div></section>
 <section class="section section-tight section-white" id="project-delivery">
 <div class="shell">
@@ -1560,7 +1560,7 @@ def about(lang="it"):
 <div class="outcome-grid">
 <article class="outcome reveal"><h3>Bordatrice SCM · Maestro Active</h3><p>Stato e allarmi della macchina, commesse, produzione acquisita e costi collegati alle lavorazioni.</p><a class="card-link" href="casi-studio-industriali.html#scm-maestro-active">Leggi il caso studio →</a></article>
 <article class="outcome reveal"><h3>CNC Essetre / Tecnoessetre</h3><p>Macchine collegate alla gestione di commesse, file di lavoro, dati di produzione e report.</p><a class="card-link" href="casi-studio-industriali.html#cnc-essetre">Leggi il caso studio →</a></article>
-<article class="outcome reveal"><h3>Gestionale e servizi esterni</h3><p>Integrazioni fra sistemi aziendali, fornitori, marketplace e corrieri per ridurre i passaggi manuali.</p><a class="card-link" href="integrazione-software-api.html">Vedi le integrazioni →</a></article>
+<article class="outcome reveal"><h3>Gestionale e MES</h3><p>Macchine e commesse collegate ai sistemi di produzione: stati, lavorazioni e dati disponibili nel gestionale.</p><a class="card-link" href="gestionale-produzione-erpnext.html">Scopri JD Industry →</a></article>
 </div>
 <p class="reveal"><a class="card-link" href="come-lavoriamo.html">Come gestiamo i progetti →</a></p>
 </div></section>''' if lang == "it" else '''<section class="section section-tight section-paper" id="delivered-projects"><div class="shell">
@@ -1568,7 +1568,7 @@ def about(lang="it"):
 <div class="outcome-grid">
 <article class="outcome reveal"><h3>SCM edge bander · Maestro Active</h3><p>Machine status and alarms, production jobs, production data and job costing.</p><a class="card-link" href="en-industrial-case-studies.html#scm-maestro-active">Read the case study →</a></article>
 <article class="outcome reveal"><h3>Essetre / Tecnoessetre CNC</h3><p>Machines connected to job management, work files, production data and reporting.</p><a class="card-link" href="en-industrial-case-studies.html#cnc-essetre">Read the case study →</a></article>
-<article class="outcome reveal"><h3>Business software and external services</h3><p>Integrations between company systems, suppliers, marketplaces and couriers to reduce manual work.</p><a class="card-link" href="en-software-integration-api.html">See integrations →</a></article>
+<article class="outcome reveal"><h3>ERP and MES</h3><p>Machines and production orders linked to manufacturing systems: status, operations and shop-floor data available in business software.</p><a class="card-link" href="en-erpnext-manufacturing.html">Explore JD Industry →</a></article>
 </div>
 <p class="reveal"><a class="card-link" href="en-how-we-work.html">How we manage projects →</a></p>
 </div></section>''')
