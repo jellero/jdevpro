@@ -360,7 +360,7 @@
   document.addEventListener('submit', (event) => {
     if (!analyticsLoaded || !(event.target instanceof Element)) return;
     if (event.target.matches('[data-interconnection-form]'))
-      window.gtag('event', 'contact_intent', {channel:'email_draft', page_path:location.pathname});
+      window.gtag('event', 'contact_intent', {channel:'website_form', page_path:location.pathname});
   });
 
   ready(() => {
@@ -393,29 +393,102 @@
 })();
 
 
-/* Interconnection enquiry: compose/copy locally; no backend transmission. */
+/* Invio richieste tramite backend PHP; Turnstile invisibile e fallback copia. */
 (() => {
+  let turnstilePromise;
+  const loadTurnstile = () => {
+    if (window.turnstile) return Promise.resolve(window.turnstile);
+    if (!turnstilePromise) {
+      turnstilePromise = new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+        script.async = true;
+        script.onload = () => window.turnstile ? resolve(window.turnstile) : reject(new Error('Turnstile non disponibile'));
+        script.onerror = () => reject(new Error('Impossibile caricare la verifica antispam'));
+        document.head.appendChild(script);
+      }).catch(error => { turnstilePromise = null; throw error; });
+    }
+    return turnstilePromise;
+  };
   const init = () => {
     const en = (document.documentElement.lang || 'it').startsWith('en');
     for (const form of document.querySelectorAll('[data-interconnection-form]')) {
       const status = form.querySelector('[data-form-status]');
+      const submit = form.querySelector('button[type="submit"]');
+      const mount = form.querySelector('[data-turnstile-container]');
+      const key = form.dataset.turnstileSitekey || '';
+      let widgetId = null;
+      let busy = false;
+      const say = message => { if (status) status.textContent = message; };
+      const setBusy = value => {
+        busy = value;
+        submit.disabled = value;
+        submit.textContent = value
+          ? (en ? 'Sending...' : 'Invio in corso...')
+          : (en ? 'Send request' : 'Invia richiesta');
+      };
       const detail = () => {
         const d = new FormData(form);
-        const value = key => String(d.get(key) || '').trim();
+        const value = name => String(d.get(name) || '').trim();
         const labels = en
           ? [['company','Company'],['email','Contact email'],['machine','Machine make and model'],['machines','Number of machines'],['erp','Current business software'],['location','Location'],['notes','Details']]
           : [['company','Azienda'],['email','Email di contatto'],['machine','Marca e modello macchina'],['machines','Numero macchine'],['erp','Gestionale attuale'],['location','Località'],['notes','Dati da collegare / note']];
         const subject = (en ? 'Machine interconnection review - ' : 'Verifica interconnessione macchine - ') + value('company') + ' - JDEVPRO';
-        const body = (en ? 'Hello JDEVPRO, I would like a technical review.\n\n' : 'Buongiorno JDEVPRO, richiedo una verifica tecnica.\n\n')
-          + labels.map(([key,label]) => label + ': ' + (value(key) || '—')).join('\n') + '\n';
-        return { subject, body };
+        const body = labels.map(([name,label]) => label + ': ' + (value(name) || '—')).join('\n');
+        return {subject,body};
       };
-      form.addEventListener('submit', event => {
+      const fail = message => {
+        say(message);
+        setBusy(false);
+        if (widgetId !== null && window.turnstile) window.turnstile.reset(widgetId);
+      };
+      const send = async token => {
+        try {
+          const body = new FormData(form);
+          body.set('cf-turnstile-response', token);
+          const response = await fetch(form.action, {
+            method:'POST',
+            mode:'cors',
+            credentials:'omit',
+            headers:{'Accept':'application/json'},
+            body
+          });
+          const data = await response.json().catch(() => ({}));
+          if (!response.ok || !data.ok) throw new Error(data.message || (en ? 'Unable to send the request.' : 'Invio non riuscito.'));
+          form.reset();
+          say(en ? 'Request sent successfully. We will contact you at the email provided.' : 'Richiesta inviata correttamente. Ti risponderemo all’indirizzo indicato.');
+          document.dispatchEvent(new Event('jdevpro:lead-success'));
+          setBusy(false);
+          if (widgetId !== null && window.turnstile) window.turnstile.reset(widgetId);
+        } catch (error) {
+          fail(error instanceof Error ? error.message : (en ? 'Unable to send.' : 'Invio non riuscito.'));
+        }
+      };
+      form.addEventListener('submit', async event => {
         event.preventDefault();
-        if (!form.reportValidity()) return;
-        const {subject,body} = detail();
-        status.textContent = en ? 'Your email application should open. Please confirm sending there.' : 'Si apre il programma di posta: conferma lì l’invio del messaggio.';
-        window.location.href = 'mailto:info@jdevpro.it?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        if (busy || !form.reportValidity()) return;
+        if (!key || key.startsWith('INSERISCI_')) {
+          say(en ? 'Form activation pending: contact us at info@jdevpro.it.' : 'Modulo non ancora attivato: scrivici a info@jdevpro.it.');
+          return;
+        }
+        setBusy(true);
+        say(en ? 'Running antispam verification...' : 'Verifica antispam in corso...');
+        try {
+          const turnstile = await loadTurnstile();
+          if (widgetId === null) {
+            widgetId = turnstile.render(mount, {
+              sitekey:key,
+              execution:'execute',
+              action:'contact',
+              callback:token => { void send(token); },
+              'error-callback':() => fail(en ? 'Antispam verification failed. Please retry.' : 'Verifica antispam non riuscita. Riprova.'),
+              'expired-callback':() => fail(en ? 'Verification expired. Please retry.' : 'Verifica scaduta. Riprova.')
+            });
+          }
+          turnstile.execute(widgetId);
+        } catch (_) {
+          fail(en ? 'Antispam verification unavailable. Please retry later.' : 'Verifica antispam non disponibile. Riprova più tardi.');
+        }
       });
       const copy = form.querySelector('[data-lead-copy]');
       if (copy) copy.addEventListener('click', async () => {
@@ -423,9 +496,9 @@
         const {subject,body} = detail();
         try {
           await navigator.clipboard.writeText(subject + '\n\n' + body);
-          status.textContent = en ? 'Request copied. Paste it into an email to info@jdevpro.it.' : 'Richiesta copiata. Incollala in un’email a info@jdevpro.it.';
+          say(en ? 'Request copied. Paste it into an email to info@jdevpro.it.' : 'Richiesta copiata. Incollala in un’email a info@jdevpro.it.');
         } catch (_) {
-          status.textContent = en ? 'Copying is unavailable. Use Prepare email instead.' : 'Impossibile copiare. Usa il pulsante Prepara l’email.';
+          say(en ? 'Unable to copy. Email us at info@jdevpro.it.' : 'Impossibile copiare. Scrivici a info@jdevpro.it.');
         }
       });
     }
