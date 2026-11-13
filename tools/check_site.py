@@ -140,6 +140,8 @@ def check() -> list[str]:
         if not page.lang:
             errors.append(f"{name}: attributo lang mancante")
         expected = ORIGIN if name == "index.html" else ORIGIN + name
+        if name == "chi-sono.html":
+            expected = ORIGIN + "chi-siamo.html"  # alias legacy: canonical della destinazione
         if len(page.canonical) != 1 or page.canonical[0] != expected:
             errors.append(f"{name}: canonical incoerente ({page.canonical})")
         if name in NOT_INDEXABLE and name == "404.html" and "noindex" not in page.robots.lower():
