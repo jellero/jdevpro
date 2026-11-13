@@ -1649,6 +1649,13 @@ def about(lang="it"):
                 alternates=[("it", ABOUT["it"]["slug"]), ("en", ABOUT["en"]["slug"])]) + body + footer(lang)
 
 
+def method_standards(lang="it"):
+    """Reference checklists, not certifications or service-level guarantees."""
+    if lang == "it":
+        return "<section class=\"section section-tight section-white\" id=\"standard-documentazione\"><div class=\"shell\">\n<div class=\"section-heading reveal\"><p class=\"eyebrow\">Metodo e standard operativi</p><h2>Collaudo, consegna e sicurezza: <span>cosa viene verificato.</span></h2><p>La documentazione viene definita in funzione del perimetro dell'intervento. Il modello pubblico serve come riferimento, non sostituisce un verbale compilato e sottoscritto.</p></div>\n<div class=\"outcome-grid\">\n<article class=\"outcome reveal\"><h3>Verbale di collaudo tipo</h3><p>Identificazione macchina e software, prerequisiti, prove di lettura e scrittura dati, esito, evidenze con data e ora, anomalie e firme di presa visione.</p></article>\n<article class=\"outcome reveal\"><h3>Dossier di consegna</h3><p>Architettura, schema rete, inventario, versioni e configurazioni, mappa dei dati scambiati, log, istruzioni operative, backup e procedure di ripristino.</p></article>\n<article class=\"outcome reveal\"><h3>Accessi remoti e sicurezza</h3><p>Accessi autorizzati per intervento, account nominativi, privilegi minimi, VPN/MFA quando disponibili, tracciamento delle attività e revoca degli accessi.</p></article>\n</div><p class=\"reveal\"><a class=\"card-link\" href=\"https://github.com/jellero/jdevpro/blob/main/docs/modello-verbale-collaudo.md\" rel=\"noreferrer\" target=\"_blank\">Consulta il modello compilabile di verbale di collaudo →</a> · <a class=\"card-link\" href=\"assistenza.html\">Assistenza e manutenzione →</a></p>\n</div></section>\n"
+    return "<section class=\"section section-tight section-white\" id=\"operational-standards\"><div class=\"shell\">\n<div class=\"section-heading reveal\"><p class=\"eyebrow\">Method and operating standards</p><h2>Acceptance tests, handover and security.</h2><p>Documentation is tailored to the actual scope of each engagement. The public template is an example, not a completed or certified acceptance report.</p></div>\n<div class=\"outcome-grid\">\n<article class=\"outcome reveal\"><h3>Acceptance report template</h3><p>Machine and system identification, prerequisites, data exchange tests, results, time-stamped evidence, exceptions and client acknowledgement.</p></article>\n<article class=\"outcome reveal\"><h3>Handover dossier</h3><p>Architecture, network diagrams, device inventory, versions, configurations, data mapping, logs, operating instructions, backups and recovery steps.</p></article>\n<article class=\"outcome reveal\"><h3>Remote access and security</h3><p>Access authorised per intervention, individual accounts, least privilege, VPN/MFA where available, logged activity and revocation.</p></article>\n</div><p class=\"reveal\"><a class=\"card-link\" href=\"https://github.com/jellero/jdevpro/blob/main/docs/modello-verbale-collaudo.md\" rel=\"noreferrer\" target=\"_blank\">View acceptance report template (Italian) →</a> · <a class=\"card-link\" href=\"en-support.html\">Support and maintenance →</a></p>\n</div></section>\n"
+
+
 # ---------------------------------------------------------------- come lavoriamo
 
 def work_method(lang="it"):
@@ -1704,7 +1711,7 @@ def work_method(lang="it"):
 <div class="section-heading reveal"><p class="eyebrow">{a['identityEyebrow']}</p><h2>{a['identityTitle']}</h2></div>
 <div class="profile-copy reveal">{identity}<a class="card-link" href="{a['identityHref']}">{a['identityLink']} →</a></div>
 </div></section>
-{contact(lang, ("Raccontaci il progetto.", "Descrivici cosa vuoi realizzare, i sistemi presenti e gli obiettivi.") if lang == "it" else ("Tell us about your project.", "Describe what you want to build, your existing systems and your goals."))}</main>"""
+{method_standards(lang)}{contact(lang, ("Raccontaci il progetto.", "Descrivici cosa vuoi realizzare, i sistemi presenti e gli obiettivi.") if lang == "it" else ("Tell us about your project.", "Describe what you want to build, your existing systems and your goals."))}</main>"""
     return head(a["title"], a["desc"], a["slug"], jsonld, lang,
                 alternates=[("it", METHOD["it"]["slug"]), ("en", METHOD["en"]["slug"])]) + body + footer(lang)
 
