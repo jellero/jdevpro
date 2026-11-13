@@ -538,6 +538,15 @@ HOME_BODY = {
 </div>
 </section>
 
+<section class="section section-tight section-paper" id="rete-partner-tecnici"><div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">Organizzazione tecnica</p><h2>La nostra rete di partner tecnici.</h2>
+<p>Per ogni commessa individuiamo le competenze necessarie e coordiniamo gli incarichi, senza confondere collaboratori esterni e personale JDEVPRO.</p></div>
+<div class="outcome-grid">
+<article class="outcome reveal"><h3>Installatori abilitati</h3><p>Impianti, cablaggi, quadri e interventi riservati alle figure in possesso delle abilitazioni richieste.</p></article>
+<article class="outcome reveal"><h3>Periti e ingegneri</h3><p>Valutazioni, attestazioni e verifiche indipendenti affidate ai professionisti incaricati dal cliente.</p></article>
+<article class="outcome reveal"><h3>Fornitori hardware</h3><p>PLC, HMI, rete e componenti industriali selezionati in base alla compatibilità tecnica del progetto.</p></article>
+</div><p class="reveal"><a class="card-link" href="periti-ingegneri-consulenti.html">Ruoli e collaborazione con i professionisti →</a> · <a class="card-link" href="come-lavoriamo.html">Metodo e collaudo →</a></p>
+</div></section>
 <section class="contact-section" id="contatto">
 <div class="shell contact-card reveal">
 <div>
@@ -634,6 +643,15 @@ HOME_BODY = {
 </div>
 </section>
 
+<section class="section section-tight section-paper" id="technical-partners"><div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">Project organisation</p><h2>Our technical partner network.</h2>
+<p>Specialist professionals and suppliers are involved according to each project's requirements, with roles clearly defined and without presenting them as JDEVPRO employees.</p></div>
+<div class="outcome-grid">
+<article class="outcome reveal"><h3>Qualified installers</h3><p>Electrical installation, wiring and control panels are handled by appropriately licensed tradespeople.</p></article>
+<article class="outcome reveal"><h3>Independent assessors</h3><p>Engineers and technical experts assess formal requirements under their own appointments and responsibilities.</p></article>
+<article class="outcome reveal"><h3>Hardware suppliers</h3><p>PLCs, HMIs, networking and industrial components selected to meet each integration's technical requirements.</p></article>
+</div><p class="reveal"><a class="card-link" href="en-how-we-work.html">Method, responsibilities and acceptance testing →</a></p>
+</div></section>
 <section class="contact-section" id="contatto">
 <div class="shell contact-card reveal">
 <div>
