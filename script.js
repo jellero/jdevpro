@@ -47,23 +47,8 @@
       }, { passive: true });
     }
 
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const items = document.querySelectorAll('.reveal');
-
-    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
-      items.forEach((item) => item.classList.add('visible'));
-    } else {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-      items.forEach((item) => observer.observe(item));
-    }
+    // Tutti i contenuti sono immediatamente visibili, anche durante lo scroll rapido.
+    document.querySelectorAll('.reveal').forEach((item) => item.classList.add('visible'));
   });
 })();
 
