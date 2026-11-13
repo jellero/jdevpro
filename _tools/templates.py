@@ -1544,6 +1544,11 @@ def legal_page(kind, lang):
 
 # ---------------------------------------------------------------- chi sono
 
+def about_technical_network(lang="it"):
+    """Describes specialist collaboration, not employees or unapproved vendor endorsements."""
+    return "<section class=\"section section-tight section-paper\" id=\"rete-tecnica\"><div class=\"shell\">\n<div class=\"section-heading reveal\"><p class=\"eyebrow\">Collaborazioni specialistiche</p><h2>La rete di partner tecnici JDEVPRO.</h2>\n<p>Un responsabile tecnico coordina le attività del progetto e coinvolge, quando necessario, professionisti esterni secondo incarichi e competenze effettive. Nessun collaboratore esterno viene presentato come dipendente.</p></div>\n<div class=\"outcome-grid\">\n<article class=\"outcome reveal\"><h3>Installatori abilitati</h3><p>Cablaggi, quadri e attività impiantistiche riservate a professionisti in possesso dei requisiti richiesti.</p></article>\n<article class=\"outcome reveal\"><h3>Periti e ingegneri</h3><p>Verifiche e attestazioni indipendenti di competenza del professionista incaricato, separate dal lavoro tecnico di integrazione.</p></article>\n<article class=\"outcome reveal\"><h3>Fornitori hardware e componenti</h3><p>Dispositivi e tecnologie scelti in base a compatibilità, assistenza e requisiti reali delle macchine e dei sistemi.</p></article>\n</div><p class=\"reveal\"><a class=\"card-link\" href=\"periti-ingegneri-consulenti.html\">Ruoli e collaborazione con periti e installatori →</a> · <a class=\"card-link\" href=\"assistenza.html\">Assistenza e manutenzione →</a></p>\n</div></section>\n" if lang == "it" else "<section class=\"section section-tight section-paper\" id=\"technical-network\"><div class=\"shell\">\n<div class=\"section-heading reveal\"><p class=\"eyebrow\">Specialist collaboration</p><h2>JDEVPRO's technical partner network.</h2>\n<p>A designated technical contact coordinates each project and involves external professionals for specific assignments where needed. External partners are not presented as employees.</p></div>\n<div class=\"outcome-grid\">\n<article class=\"outcome reveal\"><h3>Qualified installers</h3><p>Electrical wiring, panels and regulated site work performed by professionals with the relevant qualifications.</p></article>\n<article class=\"outcome reveal\"><h3>Independent technical assessors</h3><p>Engineers and assessors carry out independent checks and certifications under their own appointment.</p></article>\n<article class=\"outcome reveal\"><h3>Hardware suppliers</h3><p>Components and platforms selected according to compatibility, serviceability and the project's technical requirements.</p></article>\n</div><p class=\"reveal\"><a class=\"card-link\" href=\"en-how-we-work.html\">Project method and responsibilities →</a> · <a class=\"card-link\" href=\"en-support.html\">Support and maintenance →</a></p>\n</div></section>\n"
+
+
 def about(lang="it"):
     a = ABOUT[lang]
     other = ABOUT["en" if lang == "it" else "it"]["slug"]
@@ -1643,7 +1648,7 @@ def about(lang="it"):
 <div class="build-grid">{projects}</div>
 </div>
 </section>
-{contact(lang, ("Parliamo del tuo progetto.", "Raccontaci cosa vuoi realizzare, quali sistemi utilizzi e quali risultati vuoi ottenere.") if lang == "it" else ("Tell us about your project.", "Describe what you want to build, which systems you use and the results you want to achieve."))}</main>
+{about_technical_network(lang)}{contact(lang, ("Parliamo del tuo progetto.", "Raccontaci cosa vuoi realizzare, quali sistemi utilizzi e quali risultati vuoi ottenere.") if lang == "it" else ("Tell us about your project.", "Describe what you want to build, which systems you use and the results you want to achieve."))}</main>
 """
     return head(a["title"], a["desc"], a["slug"], jsonld, lang,
                 alternates=[("it", ABOUT["it"]["slug"]), ("en", ABOUT["en"]["slug"])]) + body + footer(lang)
