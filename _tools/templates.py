@@ -171,7 +171,7 @@ ORG = {
                  {"@type": "AdministrativeArea", "name": "Veneto"}, {"@type": "Country", "name": "Italia"}],
   "description": "JDEVPRO sviluppa software, integrazioni industriali e sistemi connessi per imprese: interconnessione macchine 4.0, gestionali, automazione e infrastrutture, in Friuli Venezia Giulia e Veneto.",
   "knowsLanguage": ["it", "en"],
-  "sameAs": ["https://github.com/jellero", LI],
+  "sameAs": [LI],
   "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Competenze JDEVPRO", "itemListElement": [
     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": p["service_type"], "url": BASE + p["slug"]}} for p in PAGES]},
 }
@@ -374,7 +374,7 @@ def footer(lang="it"):
 <div class="shell footer-grid footer-wide">
 <div><strong>JDEVPRO</strong><span>{u['f_who']}</span></div>
 <div class="footer-links">{links}</div>
-<div><span>{u['f_legal']}</span><a href="{u['privacy']}">Privacy</a><a href="{u['cookie']}">Cookie</a><a href="https://github.com/jellero" rel="noreferrer" target="_blank">GitHub</a><a href="{LI}" rel="noreferrer" target="_blank">LinkedIn JDEVPRO</a></div>
+<div><span>{u['f_legal']}</span><a href="{u['privacy']}">Privacy</a><a href="{u['cookie']}">Cookie</a><a href="{LI}" rel="noreferrer" target="_blank">LinkedIn JDEVPRO</a></div>
 </div>
 <div class="shell"><div class="footer-local">{services}</div></div>
 </footer>
@@ -534,14 +534,14 @@ HOME_BODY = {
 </section>
 <section class="section section-tight section-white why-band">
 <div class="shell split">
-<div class="section-heading reveal"><p class="eyebrow">Perché JDEVPRO</p><h2>Un referente tecnico, <span>dall’analisi al collaudo.</span></h2></div>
-<div class="reveal"><p class="why-copy">JDEVPRO segue ogni progetto con un responsabile tecnico dedicato, dall’analisi al collaudo. Quando servono interventi specialistici, coordina installatori abilitati e professionisti incaricati con compiti e responsabilità definiti.</p><p><a class="card-link" href="chi-siamo.html">Chi siamo →</a> · <a class="card-link" href="come-lavoriamo.html">Come lavoriamo →</a></p></div>
+<div class="section-heading reveal"><p class="eyebrow">Perché JDEVPRO</p><h2>Coordinamento tecnico, <span>dall’analisi al collaudo.</span></h2></div>
+<div class="reveal"><p class="why-copy">JDEVPRO coordina ogni progetto con responsabilità tecniche definite, dall’analisi al collaudo. Quando servono interventi specialistici, coordina installatori abilitati e professionisti incaricati con compiti e responsabilità definiti.</p><p><a class="card-link" href="chi-siamo.html">Chi siamo →</a> · <a class="card-link" href="come-lavoriamo.html">Come lavoriamo →</a></p></div>
 </div>
 </section>
 
 <section class="section section-tight section-paper" id="rete-partner-tecnici"><div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">Organizzazione tecnica</p><h2>La nostra rete di partner tecnici.</h2>
-<p>Per ogni commessa individuiamo le competenze necessarie e coordiniamo gli incarichi, senza confondere collaboratori esterni e personale JDEVPRO.</p></div>
+<p>Per ogni commessa definiamo le competenze necessarie, coordiniamo le attività specialistiche e documentiamo le responsabilità tecniche.</p></div>
 <div class="outcome-grid">
 <article class="outcome reveal"><h3>Installatori abilitati</h3><p>Impianti, cablaggi, quadri e interventi riservati alle figure in possesso delle abilitazioni richieste.</p></article>
 <article class="outcome reveal"><h3>Periti e ingegneri</h3><p>Valutazioni, attestazioni e verifiche indipendenti affidate ai professionisti incaricati dal cliente.</p></article>
@@ -639,14 +639,14 @@ HOME_BODY = {
 </section>
 <section class="section section-tight section-white why-band">
 <div class="shell split">
-<div class="section-heading reveal"><p class="eyebrow">Why JDEVPRO</p><h2>One technical point of contact, <span>from assessment to commissioning.</span></h2></div>
-<div class="reveal"><p class="why-copy">JDEVPRO follows each project through a dedicated technical lead, from assessment through commissioning. Qualified installers and specialist professionals are involved where required, with responsibilities defined for each engagement.</p><p><a class="card-link" href="en-about.html">About us →</a> · <a class="card-link" href="en-how-we-work.html">How we work →</a></p></div>
+<div class="section-heading reveal"><p class="eyebrow">Why JDEVPRO</p><h2>Technical coordination, <span>from assessment to commissioning.</span></h2></div>
+<div class="reveal"><p class="why-copy">JDEVPRO coordinates projects with clear technical responsibilities, from assessment to commissioning. Qualified installers and specialist professionals are involved where required, with responsibilities defined for each engagement.</p><p><a class="card-link" href="en-about.html">About us →</a> · <a class="card-link" href="en-how-we-work.html">How we work →</a></p></div>
 </div>
 </section>
 
 <section class="section section-tight section-paper" id="technical-partners"><div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">Project organisation</p><h2>Our technical partner network.</h2>
-<p>Specialist professionals and suppliers are involved according to each project's requirements, with roles clearly defined and without presenting them as JDEVPRO employees.</p></div>
+<p>Specialist professionals and suppliers are involved as needed, with clear assignments and coordinated technical responsibilities.</p></div>
 <div class="outcome-grid">
 <article class="outcome reveal"><h3>Qualified installers</h3><p>Electrical installation, wiring and control panels are handled by appropriately licensed tradespeople.</p></article>
 <article class="outcome reveal"><h3>Independent assessors</h3><p>Engineers and technical experts assess formal requirements under their own appointments and responsibilities.</p></article>
@@ -1547,7 +1547,7 @@ def legal_page(kind, lang):
 
 def about_technical_network(lang="it"):
     """Describes specialist collaboration, not employees or unapproved vendor endorsements."""
-    return "<section class=\"section section-tight section-paper\" id=\"rete-tecnica\"><div class=\"shell\">\n<div class=\"section-heading reveal\"><p class=\"eyebrow\">Collaborazioni specialistiche</p><h2>La rete di partner tecnici JDEVPRO.</h2>\n<p>Un responsabile tecnico coordina le attività del progetto e coinvolge, quando necessario, professionisti esterni secondo incarichi e competenze effettive. Nessun collaboratore esterno viene presentato come dipendente.</p></div>\n<div class=\"outcome-grid\">\n<article class=\"outcome reveal\"><h3>Installatori abilitati</h3><p>Cablaggi, quadri e attività impiantistiche riservate a professionisti in possesso dei requisiti richiesti.</p></article>\n<article class=\"outcome reveal\"><h3>Periti e ingegneri</h3><p>Verifiche e attestazioni indipendenti di competenza del professionista incaricato, separate dal lavoro tecnico di integrazione.</p></article>\n<article class=\"outcome reveal\"><h3>Fornitori hardware e componenti</h3><p>Dispositivi e tecnologie scelti in base a compatibilità, assistenza e requisiti reali delle macchine e dei sistemi.</p></article>\n</div><p class=\"reveal\"><a class=\"card-link\" href=\"periti-ingegneri-consulenti.html\">Ruoli e collaborazione con periti e installatori →</a> · <a class=\"card-link\" href=\"assistenza.html\">Assistenza e manutenzione →</a></p>\n</div></section>\n" if lang == "it" else "<section class=\"section section-tight section-paper\" id=\"technical-network\"><div class=\"shell\">\n<div class=\"section-heading reveal\"><p class=\"eyebrow\">Specialist collaboration</p><h2>JDEVPRO's technical partner network.</h2>\n<p>A designated technical contact coordinates each project and involves external professionals for specific assignments where needed. External partners are not presented as employees.</p></div>\n<div class=\"outcome-grid\">\n<article class=\"outcome reveal\"><h3>Qualified installers</h3><p>Electrical wiring, panels and regulated site work performed by professionals with the relevant qualifications.</p></article>\n<article class=\"outcome reveal\"><h3>Independent technical assessors</h3><p>Engineers and assessors carry out independent checks and certifications under their own appointment.</p></article>\n<article class=\"outcome reveal\"><h3>Hardware suppliers</h3><p>Components and platforms selected according to compatibility, serviceability and the project's technical requirements.</p></article>\n</div><p class=\"reveal\"><a class=\"card-link\" href=\"en-how-we-work.html\">Project method and responsibilities →</a> · <a class=\"card-link\" href=\"en-support.html\">Support and maintenance →</a></p>\n</div></section>\n"
+    return "<section class=\"section section-tight section-paper\" id=\"rete-tecnica\"><div class=\"shell\">\n<div class=\"section-heading reveal\"><p class=\"eyebrow\">Collaborazioni specialistiche</p><h2>La rete di partner tecnici JDEVPRO.</h2>\n<p>Un responsabile tecnico coordina le attività del progetto e coinvolge, quando necessario, professionisti esterni secondo incarichi e competenze effettive. Nessun collaboratore esterno viene presentato come dipendente.</p></div>\n<div class=\"outcome-grid\">\n<article class=\"outcome reveal\"><h3>Installatori abilitati</h3><p>Cablaggi, quadri e attività impiantistiche riservate a professionisti in possesso dei requisiti richiesti.</p></article>\n<article class=\"outcome reveal\"><h3>Periti e ingegneri</h3><p>Verifiche e attestazioni indipendenti di competenza del professionista incaricato, separate dal lavoro tecnico di integrazione.</p></article>\n<article class=\"outcome reveal\"><h3>Fornitori hardware e componenti</h3><p>Dispositivi e tecnologie scelti in base a compatibilità, assistenza e requisiti reali delle macchine e dei sistemi.</p></article>\n</div><p class=\"reveal\"><a class=\"card-link\" href=\"periti-ingegneri-consulenti.html\">Ruoli e collaborazione con periti e installatori →</a> · <a class=\"card-link\" href=\"assistenza.html\">Assistenza e manutenzione →</a></p>\n</div></section>\n" if lang == "it" else "<section class=\"section section-tight section-paper\" id=\"technical-network\"><div class=\"shell\">\n<div class=\"section-heading reveal\"><p class=\"eyebrow\">Specialist collaboration</p><h2>JDEVPRO's technical partner network.</h2>\n<p>JDEVPRO coordinates project activities and involves external specialists for defined technical assignments as needed.</p></div>\n<div class=\"outcome-grid\">\n<article class=\"outcome reveal\"><h3>Qualified installers</h3><p>Electrical wiring, panels and regulated site work performed by professionals with the relevant qualifications.</p></article>\n<article class=\"outcome reveal\"><h3>Independent technical assessors</h3><p>Engineers and assessors carry out independent checks and certifications under their own appointment.</p></article>\n<article class=\"outcome reveal\"><h3>Hardware suppliers</h3><p>Components and platforms selected according to compatibility, serviceability and the project's technical requirements.</p></article>\n</div><p class=\"reveal\"><a class=\"card-link\" href=\"en-how-we-work.html\">Project method and responsibilities →</a> · <a class=\"card-link\" href=\"en-support.html\">Support and maintenance →</a></p>\n</div></section>\n"
 
 
 def about(lang="it"):
