@@ -5,20 +5,20 @@ Ogni voce: (valore in evidenza, descrizione, link o None).
 
 STATS = {
   "home": {
-    "it": [("Decine", "di macchine collegate a sistemi aziendali in produzione", "interconnessione-macchine-industria-4-0.html"),
+    "it": [("25 macchine", "collegate in 15 aziende, con dati nei sistemi gestionali", "interconnessione-macchine-industria-4-0.html"),
            ("JD Industry", "il nostro gestionale di produzione collegato alle macchine", "gestionale-produzione-erpnext.html"),
            ("PLC e CNC", "verifichiamo interfacce e compatibilità, anche su macchine datate", "interconnessione-macchine-industria-4-0.html"),
            ("Metodo", "analisi, sviluppo, collaudo e documentazione", "come-lavoriamo.html")],
-    "en": [("Dozens", "machines connected to business systems in production", "en-machine-interconnection.html"),
+    "en": [("25 machines", "connected in 15 companies, with production data in business systems", "en-machine-interconnection.html"),
            ("JD Industry", "our production software connected to machines", "en-erpnext-manufacturing.html"),
            ("PLC and CNC", "interfaces and compatibility assessed, including older machines", "en-machine-interconnection.html"),
            ("Method", "analysis, implementation, testing and documentation", "en-how-we-work.html")],
   },
   "area:industria": {
-    "it": [("Decine", "di macchine collegate in produzione", "interconnessione-macchine-industria-4-0.html"),
+    "it": [("25 macchine", "collegate in 15 aziende", "interconnessione-macchine-industria-4-0.html"),
            ("JD Industry", "gestionale di produzione collegato a macchine SCM ed Essetre", None),
            ("Verifiche tecniche", "collegamenti e collaudi documentati; agevolazioni valutate dal perito", "guida-interconnessione-iperammortamento.html")],
-    "en": [("Dozens", "machines connected in production", "en-machine-interconnection.html"),
+    "en": [("25 machines", "connected in 15 companies", "en-machine-interconnection.html"),
            ("JD Industry", "production software connected to SCM and Essetre machines", None),
            ("Technical evidence", "connections and tests documented; tax eligibility assessed independently", "en-machine-interconnection.html")],
   },
@@ -39,11 +39,11 @@ STATS = {
            ("4 languages", "Lauco Experience tourism portal with back office", "https://www.laucoexperience.it/")],
   },
   "interconnessione-macchine-industria-4-0.html": {
-    "it": [("Decine", "di macchine collegate in produzione", None),
+    "it": [("25 macchine", "collegate in 15 aziende", None),
            ("Analisi", "interfacce, rete e compatibilità", None),
            ("Collaudo", "verifiche sui dati di produzione", None),
            ("Documentazione", "evidenze tecniche per i professionisti incaricati", None)],
-    "en": [("Dozens", "machines connected in production", None),
+    "en": [("25 machines", "connected in 15 companies", None),
            ("Analysis", "interfaces, networks and compatibility", None),
            ("Testing", "checks against real production data", None),
            ("Documentation", "technical records for appointed assessors", None)],
