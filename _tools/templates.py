@@ -263,8 +263,6 @@ def header(current, lang="it", home=False, switch=None):
     psub = f'<a class="nav-sub-all" href="{pp["slug"]}"{cur(current == pp["slug"])}>{"Tutti i prodotti" if lang == "it" else "All products"} →</a>\n' + "\n".join(
         f'<a href="{x["slug"]}"{ext(x["slug"])}{cur(x["slug"] == current)}>{x["nav"]}{" ↗" if x.get("external") else ""}</a>' for x in prods)
     psub += f'\n<a href="{drive_slug}"{cur(current == drive_slug)}>SmartDrive · {"presto disponibile" if lang == "it" else "coming soon"}</a>'
-    receptionist_slug = "digital-receptionist.html" if lang == "it" else "en-digital-receptionist.html"
-    psub += f'\n<a href="{receptionist_slug}"{cur(current == receptionist_slug)}>Digital Receptionist · {"in sviluppo" if lang == "it" else "in development"}</a>'
     links += (f'<div class="nav-group{" is-current" if active else ""}">'
               f'<a class="nav-group-label" href="{pp["slug"]}">{pp["nav"]} <span aria-hidden="true">▾</span></a>'
               f'<div class="nav-sub">\n{psub}\n</div></div>\n')
@@ -819,42 +817,9 @@ def products_index(lang):
 <div class="product-side"><ul class="status-list">{''.join(f'<li>{p}</li>' for p in drive_points)}</ul></div>
 </article>
 """
-    receptionist_slug = "digital-receptionist.html" if lang == "it" else "en-digital-receptionist.html"
-    if lang == "it":
-        receptionist_label = "Progetto in sviluppo · AI e telefonia"
-        receptionist_desc = ("Digital Receptionist è l'assistente AI per le telefonate che stiamo sviluppando. "
-                             "Il motore conversazionale testuale e le API funzionano già; l'adattatore vocale "
-                             "è in sviluppo, mentre VoIP e connettori gestionali sono pianificati.")
-        receptionist_cta = "Scopri Digital Receptionist →"
-        receptionist_points = [
-            "Motore conversazionale testuale e API già implementati",
-            "Riconoscimento e sintesi vocale in sviluppo",
-            "Centralini VoIP e connettori gestionali pianificati",
-            "Non ancora disponibile per gestire telefonate reali",
-        ]
-    else:
-        receptionist_label = "Project in development · AI and telephony"
-        receptionist_desc = ("Digital Receptionist is an AI phone assistant under development. "
-                             "The text-based conversation engine and API are implemented; speech is in development, "
-                             "while VoIP and business software connectors are planned.")
-        receptionist_cta = "Explore Digital Receptionist →"
-        receptionist_points = [
-            "Text conversation engine and API implemented",
-            "Speech recognition and synthesis in development",
-            "VoIP and business software connectors planned",
-            "Not yet available for live phone calls",
-        ]
-    rows += f"""<article class="product-row product-card-receptionist reveal">
-<div><p class="eyebrow">{receptionist_label}</p><h2>Digital Receptionist</h2>
-<p class="product-card-text">{receptionist_desc}</p>
-<a class="button primary" href="{receptionist_slug}">{receptionist_cta}</a></div>
-<div class="product-side"><ul class="status-list">{''.join(f'<li>{p}</li>' for p in receptionist_points)}</ul></div>
-</article>
-"""
     jsonld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": pp["nav"], "description": pp["desc"], "url": url_of(pp["slug"]),
                "hasPart": [{"@type": "CreativeWork", "name": x["nav"], "url": x["slug"] if x.get("external") else BASE + x["slug"]} for x in products(lang)]
-               + [{"@type": "SoftwareApplication", "name": "SmartDrive", "url": BASE + drive_target},
-                  {"@type": "SoftwareApplication", "name": "Digital Receptionist", "url": BASE + receptionist_slug}]},
+               + [{"@type": "SoftwareApplication", "name": "SmartDrive", "url": BASE + drive_target}]},
               {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
                   {"@type": "ListItem", "position": 1, "name": u["home"], "item": url_of(home_slug)},
                   {"@type": "ListItem", "position": 2, "name": pp["nav"], "item": url_of(pp["slug"])}]}, ORG_REF]
