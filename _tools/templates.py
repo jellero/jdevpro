@@ -171,7 +171,7 @@ ORG = {
                  {"@type": "AdministrativeArea", "name": "Veneto"}, {"@type": "Country", "name": "Italia"}],
   "description": "JDEVPRO sviluppa software, integrazioni industriali e sistemi connessi per imprese: interconnessione macchine 4.0, gestionali, automazione e infrastrutture, in Friuli Venezia Giulia e Veneto.",
   "knowsLanguage": ["it", "en"],
-  "sameAs": ["https://github.com/jellero", LI],
+  "sameAs": ["https://github.com/jellero"],
   "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Competenze JDEVPRO", "itemListElement": [
     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": p["service_type"], "url": BASE + p["slug"]}} for p in PAGES]},
 }
@@ -346,7 +346,7 @@ def contact(lang="it", cta=None, show_form=False):
 <div class="contact-actions">
 <a class="button light big" href="{u['mailto']}">{u['c_mail']}</a>
 <button class="contact-copy" type="button" data-copy-email="{EMAIL}" data-copied-label="{u['copied']}"><span>{EMAIL}</span><em>{u['copy']}</em></button>
-<a class="contact-alt" href="{LI}" rel="noreferrer" target="_blank">{u['li']}</a>
+<a class="contact-alt" href="{'assistenza.html' if lang == 'it' else 'en-support.html'}">{'Assistenza tecnica →' if lang == 'it' else 'Technical support →'}</a>
 <span>{u['where']}</span>
 </div>
 </div>
@@ -358,6 +358,7 @@ def footer(lang="it"):
     u = UI[lang]
     links = "".join(f'<a href="{a["slug"]}">{a["nav"]}</a>' for a in AREAS[lang])
     links += f'<a href="{PRODUCTS_PAGE[lang]["slug"]}">{PRODUCTS_PAGE[lang]["nav"]}</a>'
+    links += f'<a href="{"assistenza.html" if lang == "it" else "en-support.html"}">{"Assistenza" if lang == "it" else "Support"}</a>'
     drive_slug = "smartdrive.html" if lang == "it" else "en-smartdrive.html"
     links += f'<a href="{drive_slug}">SmartDrive</a>'
     if lang == "it":
@@ -373,7 +374,7 @@ def footer(lang="it"):
 <div class="shell footer-grid footer-wide">
 <div><strong>JDEVPRO</strong><span>{u['f_who']}</span></div>
 <div class="footer-links">{links}</div>
-<div><span>{u['f_legal']}</span><a href="{u['privacy']}">Privacy</a><a href="{u['cookie']}">Cookie</a><a href="https://github.com/jellero" rel="noreferrer" target="_blank">GitHub</a><a href="{LI}" rel="noreferrer" target="_blank">LinkedIn</a></div>
+<div><span>{u['f_legal']}</span><a href="{u['privacy']}">Privacy</a><a href="{u['cookie']}">Cookie</a><a href="https://github.com/jellero" rel="noreferrer" target="_blank">GitHub</a></div>
 </div>
 <div class="shell"><div class="footer-local">{services}</div></div>
 </footer>
@@ -574,7 +575,7 @@ HOME_BODY = {
 <div class="contact-actions">
 <a class="button light big" href="mailto:info@jdevpro.it?subject=Richiesta%20progetto%20-%20JDEVPRO&amp;body=Buongiorno%2C%0A%0ACosa%20c%27%C3%A8%20da%20fare%3A%0A%0ADove%20%28comune%29%3A%0A%0AMacchine%2C%20camere%20o%20utenti%20coinvolti%3A%0A%0ASistemi%20gi%C3%A0%20presenti%3A%0A%0ATempistiche%20indicative%3A%0A%0AIncentivi%20o%20contributi%20previsti%20%28se%20ci%20sono%29%3A%0A%0AAzienda%20/%20riferimento%3A%0A">Scrivici una email</a>
 <button class="contact-copy" type="button" data-copy-email="info@jdevpro.it" data-copied-label="Copiato ✓"><span>info@jdevpro.it</span><em>Copia</em></button>
-<a class="contact-alt" href="https://www.linkedin.com/in/jacopo-ellero-a006499a/" rel="noreferrer" target="_blank">Oppure su LinkedIn ↗</a>
+
 <span>Friuli Venezia Giulia e Veneto · trasferte · da remoto ovunque</span>
 </div>
 </div>
@@ -679,7 +680,7 @@ HOME_BODY = {
 <div class="contact-actions">
 <a class="button light big" href="mailto:info@jdevpro.it?subject=Project%20enquiry%20-%20JDEVPRO&amp;body=Hello%2C%0A%0AWhat%20needs%20doing%3A%0A%0AWhere%20%28town%29%3A%0A%0AMachines%2C%20rooms%20or%20users%20involved%3A%0A%0AExisting%20systems%3A%0A%0ARough%20timeline%3A%0A%0AIncentives%20or%20grants%20expected%20%28if%20any%29%3A%0A%0ACompany%20/%20contact%3A%0A">Send us an email</a>
 <button class="contact-copy" type="button" data-copy-email="info@jdevpro.it" data-copied-label="Copied ✓"><span>info@jdevpro.it</span><em>Copy</em></button>
-<a class="contact-alt" href="https://www.linkedin.com/in/jacopo-ellero-a006499a/" rel="noreferrer" target="_blank">Or on LinkedIn ↗</a>
+
 <span>Friuli Venezia Giulia, Italy · north-east Italy · travel · remote work anywhere</span>
 </div>
 </div>
@@ -1966,7 +1967,7 @@ for old, target in OLD_URLS.items():
 
 urls = (["", "en.html"] + [p["slug"] for p in PAGES] + [EN_SLUG[p["slug"]] for p in PAGES]
         + [c["slug"] for c in CITIES] + ["guide.html", TEST["slug"]] + [g["slug"] for g in GUIDES]
-        + [x["slug"] for l in ("it", "en") for x in PRODUCTS[l] if not x.get("external")] + ["smartdrive.html", "en-smartdrive.html", "smartdrive-privacy.html"] + [a["slug"] for l in ("it", "en") for a in AREAS[l]] + [PRODUCTS_PAGE["it"]["slug"], PRODUCTS_PAGE["en"]["slug"], WHERE_PAGE["slug"], PARTNERS["slug"]] + ["casi-studio-industriali.html", "en-industrial-case-studies.html"] + ["chi-siamo.html", "en-about.html", "come-lavoriamo.html", "en-how-we-work.html", "privacy.html", "privacy-en.html", "cookie-policy.html", "cookie-policy-en.html"])
+        + [x["slug"] for l in ("it", "en") for x in PRODUCTS[l] if not x.get("external")] + ["smartdrive.html", "en-smartdrive.html", "smartdrive-privacy.html"] + [a["slug"] for l in ("it", "en") for a in AREAS[l]] + [PRODUCTS_PAGE["it"]["slug"], PRODUCTS_PAGE["en"]["slug"], WHERE_PAGE["slug"], PARTNERS["slug"]] + ["casi-studio-industriali.html", "en-industrial-case-studies.html", "assistenza.html", "en-support.html"] + ["chi-siamo.html", "en-about.html", "come-lavoriamo.html", "en-how-we-work.html", "privacy.html", "privacy-en.html", "cookie-policy.html", "cookie-policy-en.html"])
 sitemap = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 sitemap += [f"  <url><loc>{BASE}{u}</loc><lastmod>{TODAY}</lastmod></url>" for u in urls]
 sitemap.append("</urlset>")
