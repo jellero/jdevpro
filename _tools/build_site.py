@@ -8,7 +8,7 @@ from urllib.parse import quote
 REPO = pathlib.Path(sys.argv[1])
 BASE = "https://www.jdevpro.it/"
 EMAIL = "info@jdevpro.it"
-LI = "https://www.linkedin.com/in/jacopo-ellero-a006499a/"
+LI = "https://www.linkedin.com/company/jdevpro/"
 MAILTO = ("mailto:info@jdevpro.it?subject=" + quote("Richiesta progetto - JDEVPRO") + "&amp;body=" + quote(
     "Buongiorno,\n\nCosa c'è da fare:\n\nDove (comune):\n\nMacchine, camere o utenti coinvolti:\n\nSistemi già presenti:\n\nTempistiche indicative:\n\nIncentivi o contributi previsti (se ci sono):\n\nAzienda / riferimento:\n"))
 ORG_ID = BASE + "#jdevpro"
