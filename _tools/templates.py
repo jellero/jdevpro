@@ -478,19 +478,19 @@ HOME_BODY = {
 <div aria-hidden="true" class="hero-grid"></div>
 <div class="shell hero-min-copy reveal">
 <p class="eyebrow">JDEVPRO · Software e integrazione per le imprese</p>
-<h1>JDEVPRO: software e integrazione per le imprese. <span>Interconnessione macchine 4.0, dal PLC al gestionale.</span></h1>
-<p class="hero-lead">Progettiamo software, integrazioni e sistemi connessi per le imprese. Nell’industria colleghiamo le macchine ai gestionali già in uso, sviluppando integrazioni e adattamenti dove tecnicamente possibile, senza imporre un nuovo ERP. Se manca un gestionale utilizzabile, possiamo fornire un applicativo essenziale dedicato. Seguiamo analisi, sviluppo, collaudo e documentazione tecnica in Friuli Venezia Giulia, Veneto e in trasferta.</p>
+<h1>Interconnessione macchine 4.0: <span>25 macchine collegate in 15 aziende.</span></h1>
+<p class="hero-lead">Colleghiamo PLC, CNC e macchine industriali ai gestionali aziendali, con collaudo e documentazione tecnica.</p>
 <div class="hero-actions">
 <a class="button primary" href="#contatto">Richiedi una verifica tecnica</a>
 <a class="button ghost" href="interconnessione-macchine-industria-4-0.html">Scopri come lavoriamo</a>
 </div>
-<ul class="hero-stats"><li><a class="stat" href="interconnessione-macchine-industria-4-0.html"><strong>Decine</strong><span>di macchine collegate a sistemi aziendali in produzione</span></a></li><li><a class="stat" href="gestionale-produzione-erpnext.html"><strong>JD Industry</strong><span>il nostro gestionale di produzione collegato alle macchine</span></a></li><li><a class="stat" href="interconnessione-macchine-industria-4-0.html"><strong class="stat-long">PLC e CNC</strong><span>verifichiamo interfacce e compatibilità, anche su macchine datate</span></a></li><li><a class="stat" href="come-lavoriamo.html"><strong>Metodo</strong><span>analisi, sviluppo, collaudo e documentazione</span></a></li></ul>
+<ul class="hero-stats"><li><a class="stat" href="interconnessione-macchine-industria-4-0.html"><strong>25 macchine</strong><span>collegate in 15 aziende</span></a></li><li><a class="stat" href="gestionale-produzione-erpnext.html"><strong>JD Industry</strong><span>il nostro gestionale di produzione collegato alle macchine</span></a></li><li><a class="stat" href="interconnessione-macchine-industria-4-0.html"><strong class="stat-long">PLC e CNC</strong><span>verifichiamo interfacce e compatibilità, anche su macchine datate</span></a></li><li><a class="stat" href="come-lavoriamo.html"><strong>Metodo</strong><span>analisi, sviluppo, collaudo e documentazione</span></a></li></ul>
 </div>
 </section>
 <section class="section section-tight section-white" id="integrazione-industriale">
 <div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">Integrazione industriale</p><h2>Dalla macchina al gestionale: sviluppo e documentazione per le pratiche.</h2><p>Sviluppiamo l'integrazione tra macchine e sistemi aziendali, gestiamo lo scambio dei dati e documentiamo collegamenti e collaudi per le pratiche tecniche.</p></div>
-<div class="outcome-grid"><article class="outcome reveal"><h3>Interconnessione macchine 4.0</h3><p>Torni, centri di lavoro, laser, presse, macchine tessili e da stampa, riempitrici: valutiamo il collegamento di macchine nuove e datate in base alle interfacce disponibili.</p><a class="card-link" href="interconnessione-macchine-industria-4-0.html">Vedi i tipi di macchine →</a></article><article class="outcome reveal"><h3>Documentazione per le verifiche 4.0</h3><p>Prepariamo le evidenze tecniche dei collegamenti e dei collaudi. I requisiti fiscali e le attestazioni restano in capo ai professionisti incaricati.</p><a class="card-link" href="periti-ingegneri-consulenti.html">Come collaboriamo con i periti →</a></article><article class="outcome reveal"><h3>JD Industry</h3><p>Il nostro gestionale di produzione: dalle macchine collegate all'ERP su ERPNext, con la migrazione dei dati dal vecchio programma.</p><a class="card-link" href="gestionale-produzione-erpnext.html">Scopri JD Industry →</a></article></div>
+<div class="outcome-grid"><article class="outcome reveal"><h3>Interconnessione macchine 4.0</h3><p>Macchine con PLC o CNC, nuove e datate. Esempi reali: bordatrici SCM Maestro Active e CNC Essetre/Tecnoessetre.</p><a class="card-link" href="interconnessione-macchine-industria-4-0.html">Vedi i tipi di macchine →</a></article><article class="outcome reveal"><h3>Documentazione per le verifiche 4.0</h3><p>Prepariamo tracciati, schemi e prove di collaudo per la verifica tecnica dell’interconnessione.</p><a class="card-link" href="periti-ingegneri-consulenti.html">Come collaboriamo con i periti →</a></article><article class="outcome reveal"><h3>JD Industry</h3><p>Il nostro gestionale di produzione: dalle macchine collegate all'ERP su ERPNext, con la migrazione dei dati dal vecchio programma.</p><a class="card-link" href="gestionale-produzione-erpnext.html">Scopri JD Industry →</a></article></div>
 </div>
 </section>
 <section class="section section-tight proof-band" id="progetti-reali">
@@ -527,25 +527,16 @@ HOME_BODY = {
 <section class="section section-tight section-paper">
 <div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">Interconnessione e requisiti</p><h2>Parte tecnica documentata, valutazioni fiscali separate.</h2><p>Per i beni agevolabili, l’interconnessione ai sistemi aziendali è un requisito da verificare. JDEVPRO realizza e documenta l’integrazione tecnica; l’ammissibilità fiscale resta da valutare con il perito e il consulente incaricati. <a href="periti-ingegneri-consulenti.html">Collaborazioni con periti e consulenti →</a></p></div>
-<div class="outcome-grid"><article class="outcome reveal"><h3>Iperammortamento 2026–2028</h3><p>Le macchine nuove rientrano solo se interconnesse al sistema aziendale e se un perito lo attesta. Requisiti, scadenze e procedura passo per passo.</p><a class="card-link" href="guida-interconnessione-iperammortamento.html">Leggi la guida →</a></article><article class="outcome reveal"><h3>Contributi FVG per hotel e alberghi diffusi</h3><p>La Regione sostiene l'ammodernamento e l'efficienza delle strutture ricettive: clima, accessi e domotica possono far parte del progetto.</p><a class="card-link" href="guida-contributi-fvg-hotel.html">Leggi la guida →</a></article><article class="outcome reveal"><h3>Anche il software di produzione</h3><p>Gestionali di produzione, MES e piattaforme possono rientrare nell'iperammortamento se compresi nell'Allegato V e interconnessi.</p><a class="card-link" href="guida-iperammortamento-software-erp-mes.html">Leggi la guida →</a></article></div>
+<div class="outcome-grid"><article class="outcome reveal"><h3>Iperammortamento 2026–2028</h3><p>Le macchine nuove rientrano solo se interconnesse al sistema aziendale e se un perito lo attesta. Requisiti, scadenze e procedura passo per passo.</p><a class="card-link" href="guida-interconnessione-iperammortamento.html">Leggi la guida →</a></article><article class="outcome reveal"><h3>Anche il software di produzione</h3><p>Gestionali di produzione, MES e piattaforme possono rientrare nell'iperammortamento se compresi nell'Allegato V e interconnessi.</p><a class="card-link" href="guida-iperammortamento-software-erp-mes.html">Leggi la guida →</a></article></div>
 </div>
 </section>
 <section class="section section-tight section-white why-band">
 <div class="shell split">
-<div class="section-heading reveal"><p class="eyebrow">Perché JDEVPRO</p><h2>Un progetto completo richiede <span>competenze coordinate e responsabilità chiare.</span></h2></div>
-<div class="reveal"><p class="why-copy">JDEVPRO affronta i progetti come sistemi completi: analisi, architettura software, collegamenti tra dispositivi e applicazioni, collaudo e documentazione. Coordiniamo gli aspetti tecnici e collaboriamo con installatori abilitati per cablaggi e quadri elettrici. Il cliente ha un percorso di lavoro chiaro, dall’obiettivo iniziale alla messa in esercizio.</p><p><a class="card-link" href="chi-siamo.html">Chi siamo →</a> · <a class="card-link" href="come-lavoriamo.html">Come lavoriamo →</a></p><p class="why-partners">Partner: <strong>Efficasa</strong> per il fotovoltaico, <strong>DWIN</strong> per i display HMI, <strong>Aruba Business</strong> per l'hosting, <strong>Siportal</strong> per il VoIP.<br>Tecnologie e servizi che usiamo nei progetti: <strong>Open Fiber</strong> per la fibra FTTH, <strong>Aruba</strong> per connettività e cloud, <strong>MikroTik</strong> e <strong>Ubiquiti</strong> per reti, connettività e videosorveglianza, <strong>WuBook</strong> per le OTA.</p></div>
+<div class="section-heading reveal"><p class="eyebrow">Perché JDEVPRO</p><h2>Un referente tecnico, <span>dall’analisi al collaudo.</span></h2></div>
+<div class="reveal"><p class="why-copy">JDEVPRO è l’attività tecnica di Jacopo Ellero: un referente unico che segue il progetto dalla verifica iniziale al collaudo e alla documentazione. Per cablaggi e quadri elettrici collabora con installatori abilitati.</p><p><a class="card-link" href="chi-siamo.html">Chi siamo →</a> · <a class="card-link" href="come-lavoriamo.html">Come lavoriamo →</a></p></div>
 </div>
 </section>
-<section class="section section-tight section-white" id="aree">
-<div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">Aree operative</p><h2>Competenze integrate per progetti tecnologici completi.</h2><p>Sviluppiamo applicazioni, integriamo macchine e piattaforme aziendali e realizziamo sistemi di automazione e infrastruttura. Ogni intervento parte dai processi esistenti e viene seguito fino alla messa in esercizio.</p></div>
-<div class="outcome-grid">
-<article class="outcome reveal"><h3>Hotel e B&amp;B</h3><p>Check-in e accessi, domotica, videosorveglianza, telefonia VoIP e connettività per strutture ricettive.</p><a class="card-link" href="strutture-edifici.html">Scopri le soluzioni →</a></article>
-<article class="outcome reveal"><h3>Software su misura</h3><p>Gestionali e applicazioni costruiti intorno ai processi reali, con migrazioni dai sistemi esistenti.</p><a class="card-link" href="software-web.html">Esplora software e web →</a></article>
-<article class="outcome reveal"><h3>Integrazioni e automazioni</h3><p>API e flussi dati tra gestionali, e-commerce, marketplace, corrieri e piattaforme esterne.</p><a class="card-link" href="integrazione-software-api.html">Vedi le integrazioni →</a></article>
-</div>
-</div>
-</section>
+
 <section class="contact-section" id="contatto">
 <div class="shell contact-card reveal">
 <div>
@@ -584,19 +575,19 @@ HOME_BODY = {
 <div aria-hidden="true" class="hero-grid"></div>
 <div class="shell hero-min-copy reveal">
 <p class="eyebrow">JDEVPRO · Software and systems integration for businesses</p>
-<h1>JDEVPRO: software and integration for businesses. <span>Industry 4.0 connections, from PLCs to business software.</span></h1>
-<p class="hero-lead">We design software, integrations and connected systems for businesses. In manufacturing, we connect machines to the management software already in use, building integrations and adaptations where technically feasible rather than requiring a new ERP. Where no suitable application is available, we can provide a simple dedicated management tool. We manage review, development, testing and documentation in north-east Italy and on site where needed.</p>
+<h1>Industrial machine integration: <span>25 machines connected in 15 companies.</span></h1>
+<p class="hero-lead">We connect industrial PLCs, CNCs and machines to existing business software, with testing and technical documentation.</p>
 <div class="hero-actions">
 <a class="button primary" href="#contatto">Request a technical review</a>
 <a class="button ghost" href="en-machine-interconnection.html">How we work</a>
 </div>
-<ul class="hero-stats"><li><a class="stat" href="en-machine-interconnection.html"><strong>Dozens</strong><span>machines connected to business systems in production</span></a></li><li><a class="stat" href="en-erpnext-manufacturing.html"><strong>JD Industry</strong><span>our production software connected to machines</span></a></li><li><a class="stat" href="en-machine-interconnection.html"><strong>PLC and CNC</strong><span>interfaces and compatibility assessed, including older machines</span></a></li><li><a class="stat" href="en-how-we-work.html"><strong>Method</strong><span>analysis, implementation, testing and documentation</span></a></li></ul>
+<ul class="hero-stats"><li><a class="stat" href="en-machine-interconnection.html"><strong>25 machines</strong><span>connected in 15 companies</span></a></li><li><a class="stat" href="en-erpnext-manufacturing.html"><strong>JD Industry</strong><span>our production software connected to machines</span></a></li><li><a class="stat" href="en-machine-interconnection.html"><strong>PLC and CNC</strong><span>interfaces and compatibility assessed, including older machines</span></a></li><li><a class="stat" href="en-how-we-work.html"><strong>Method</strong><span>analysis, implementation, testing and documentation</span></a></li></ul>
 </div>
 </section>
 <section class="section section-tight section-white" id="integrazione-industriale">
 <div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">Industrial integration</p><h2>From machines to business software: integration development and technical documentation.</h2><p>We develop integration between machines and business systems, manage data exchange and document connections and testing for technical procedures.</p></div>
-<div class="outcome-grid"><article class="outcome reveal"><h3>Industry 4.0 machine interconnection</h3><p>Lathes, machining centres, lasers, presses, textile and printing machines, fillers: we assess new and older machines against the interfaces available.</p><a class="card-link" href="en-machine-interconnection.html">See machine types →</a></article><article class="outcome reveal"><h3>Evidence for technical assessments</h3><p>We prepare technical records of connections and tests. Tax eligibility and formal certification remain with the appointed independent professionals.</p><a class="card-link" href="en-machine-interconnection.html">Review interconnection requirements →</a></article><article class="outcome reveal"><h3>JD Industry</h3><p>Our production software: from connected machines to a full ERP on ERPNext, with data migration from the old program.</p><a class="card-link" href="en-erpnext-manufacturing.html">Discover JD Industry →</a></article></div>
+<div class="outcome-grid"><article class="outcome reveal"><h3>Industry 4.0 machine interconnection</h3><p>Machines equipped with PLCs or CNCs, new or older. Actual integrations include SCM Maestro Active edgebanders and Essetre/Tecnoessetre CNCs.</p><a class="card-link" href="en-machine-interconnection.html">See machine types →</a></article><article class="outcome reveal"><h3>Evidence for technical assessments</h3><p>We deliver connection diagrams, data records and technical testing evidence.</p><a class="card-link" href="en-machine-interconnection.html">Review interconnection requirements →</a></article><article class="outcome reveal"><h3>JD Industry</h3><p>Our production software: from connected machines to a full ERP on ERPNext, with data migration from the old program.</p><a class="card-link" href="en-erpnext-manufacturing.html">Discover JD Industry →</a></article></div>
 </div>
 </section>
 <section class="section section-tight proof-band" id="real-projects">
@@ -631,22 +622,16 @@ HOME_BODY = {
 <section class="section section-tight section-paper">
 <div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">Interconnection and requirements</p><h2>Documented technical work, independent tax assessment.</h2><p>Interconnection is one of the requirements to assess for eligible investments. JDEVPRO delivers and documents the technical integration; tax eligibility must be evaluated by the appointed specialists.</p></div>
-<div class="outcome-grid"><article class="outcome reveal"><h3>Italian hyper-depreciation 2026–2028</h3><p>New machines qualify only when interconnected with company systems and certified by an appraiser.</p><a class="card-link" href="en-machine-interconnection.html">Machine interconnection →</a></article><article class="outcome reveal"><h3>Regional grants for hotels</h3><p>Friuli Venezia Giulia supports modernisation and efficiency of accommodation: climate, access and automation can be part of the project.</p><a class="card-link" href="en-hotel-bnb-automation.html">Hotel automation →</a></article><article class="outcome reveal"><h3>Production software too</h3><p>Production management, MES and platforms can qualify for hyper-depreciation when listed in Annex V and interconnected.</p><a class="card-link" href="en-erpnext-manufacturing.html">Discover JD Industry →</a></article></div>
+<div class="outcome-grid"><article class="outcome reveal"><h3>Italian hyper-depreciation 2026–2028</h3><p>New machines qualify only when interconnected with company systems and certified by an appraiser.</p><a class="card-link" href="en-machine-interconnection.html">Machine interconnection →</a></article><article class="outcome reveal"><h3>Production software too</h3><p>Production management, MES and platforms can qualify for hyper-depreciation when listed in Annex V and interconnected.</p><a class="card-link" href="en-erpnext-manufacturing.html">Discover JD Industry →</a></article></div>
 </div>
 </section>
 <section class="section section-tight section-white why-band">
 <div class="shell split">
-<div class="section-heading reveal"><p class="eyebrow">Why JDEVPRO</p><h2>Complete projects need <span>coordinated expertise and clear responsibilities.</span></h2></div>
-<div class="reveal"><p class="why-copy">JDEVPRO approaches projects as integrated systems: assessment, software architecture, connections between devices and applications, testing and documentation. We coordinate the technical work and collaborate with licensed installers for wiring and electrical panels. Clients get a clear delivery process from initial requirements through commissioning.</p><p><a class="card-link" href="en-about.html">About us →</a> · <a class="card-link" href="en-how-we-work.html">How we work →</a></p><p class="why-partners">Partners: <strong>Efficasa</strong> for solar, <strong>DWIN</strong> for HMI displays, <strong>Aruba Business</strong> for hosting, <strong>Siportal</strong> for VoIP.<br>Technologies and services we use in projects: <strong>Open Fiber</strong> for FTTH fibre, <strong>Aruba</strong> for connectivity and cloud, <strong>MikroTik</strong> and <strong>Ubiquiti</strong> for networks, connectivity and video surveillance, <strong>WuBook</strong> for OTA channels.</p></div>
+<div class="section-heading reveal"><p class="eyebrow">Why JDEVPRO</p><h2>One technical point of contact, <span>from assessment to commissioning.</span></h2></div>
+<div class="reveal"><p class="why-copy">JDEVPRO is the technical business of Jacopo Ellero, providing one point of contact from initial assessment through testing and documentation. Qualified installers handle wiring and electrical panels.</p><p><a class="card-link" href="en-about.html">About us →</a> · <a class="card-link" href="en-how-we-work.html">How we work →</a></p></div>
 </div>
 </section>
-<section class="section section-tight section-white" id="aree"><div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">What we do</p><h2>Integrated capabilities for complete technology projects.</h2><p>We develop applications, integrate industrial equipment and business platforms, and deliver automation and infrastructure systems. Every project starts with existing processes and is followed through to commissioning.</p></div>
-<div class="outcome-grid">
-<article class="outcome reveal"><h3>Hotels and B&amp;Bs</h3><p>Check-in and access control, building automation, video surveillance, VoIP and connectivity for accommodation.</p><a class="card-link" href="en-properties-buildings.html">Explore hospitality solutions →</a></article>
-<article class="outcome reveal"><h3>Custom software</h3><p>Business applications built around actual processes, including migrations from existing systems.</p><a class="card-link" href="en-software-web.html">Explore software services →</a></article>
-<article class="outcome reveal"><h3>Integrations and automation</h3><p>APIs and data flows for ERP, e-commerce, marketplaces, couriers and other platforms.</p><a class="card-link" href="en-software-integration-api.html">See integration services →</a></article>
-</div></div></section>
+
 <section class="contact-section" id="contatto">
 <div class="shell contact-card reveal">
 <div>
