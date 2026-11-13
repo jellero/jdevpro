@@ -302,12 +302,33 @@
   }
 
   function writeConsent(choice) {
+    const previous = readConsent();
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify({ choice, version: CONSENT_VERSION, updatedAt: new Date().toISOString() }));
     } catch (_) {}
     applyConsent(choice);
     hideBanner();
+    // Il tag GA già caricato non è disinstallabile in modo affidabile:
+    // al ritiro del consenso ricarichiamo senza reiniettarlo.
+    if (previous === 'accepted' && choice === 'rejected' && analyticsLoaded) {
+      location.reload();
+    }
   }
+
+  // Consenso sincronizzato fra le schede: revoca immediata anche in altre tab.
+  window.addEventListener('storage', (event) => {
+    if (event.key !== STORAGE_KEY) return;
+    const choice = readConsent();
+    if (choice === 'rejected' && analyticsLoaded) {
+      applyConsent('rejected');
+      location.reload();
+    } else if (choice === 'accepted') {
+      applyConsent('accepted');
+    } else if (choice !== 'rejected') {
+      applyConsent('rejected');
+      showBanner();
+    }
+  });
 
   // banner non modale: non blocca la pagina; il focus si sposta solo quando lo apre l'utente
   function hideBanner() {
