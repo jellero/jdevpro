@@ -1225,8 +1225,13 @@ def guide(g):
     url = url_of(g["slug"])
     parts = [f'<h2>{h}</h2>\n' + "\n".join(render_block(b) for b in blocks) for h, blocks in g["sections"]]
     # la guida può portare a un servizio o a un prodotto
-    target = next((dict(p, label=p["card_title"], key=p["slug"]) for p in PAGES if p["slug"] == g["cta"]), None) or \
-        next(dict(x, label=x["nav"]) for x in PRODUCTS["it"] if x["slug"] == g["cta"])
+    target = (
+        next((dict(p, label=p["card_title"], key=p["slug"]) for p in PAGES if p["slug"] == g["cta"]), None)
+        or next((dict(x, label=x["nav"]) for x in PRODUCTS["it"] if x["slug"] == g["cta"]), None)
+        or next((dict(a, label=a["nav"]) for a in AREAS["it"] if a["slug"] == g["cta"]), None)
+    )
+    if target is None:
+        raise ValueError(f"Guida {g['slug']}: CTA sconosciuta {g['cta']}")
     cta = g.get("contact") or CTAS.get(target["key"], {}).get("it")
     inline_h = cta[0] if cta else "Vuoi capire se fa per te?"
     parts.insert(1, f'<div class="article-cta"><p><strong>{inline_h}</strong> Rispondiamo per iscritto entro 24 ore.</p>'
