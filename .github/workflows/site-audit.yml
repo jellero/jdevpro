@@ -21,3 +21,14 @@ jobs:
         run: python3 tools/check_site.py
       - name: Verifica sintassi JavaScript
         run: node --check script.js
+      - name: Test rigenerazione senza pubblicazione
+        run: |
+          mkdir -p "$RUNNER_TEMP/jdevpro-preview"
+          cp -a . "$RUNNER_TEMP/jdevpro-preview/"
+          python3 _tools/build_site.py "$RUNNER_TEMP/jdevpro-preview"
+          python3 "$RUNNER_TEMP/jdevpro-preview/tools/check_site.py"
+          grep -q 'Digital Receptionist' "$RUNNER_TEMP/jdevpro-preview/digital-receptionist.html"
+          grep -q 'Digital Receptionist' "$RUNNER_TEMP/jdevpro-preview/en-digital-receptionist.html"
+          grep -q 'digital-receptionist.html' "$RUNNER_TEMP/jdevpro-preview/prodotti.html"
+          grep -q 'en-digital-receptionist.html' "$RUNNER_TEMP/jdevpro-preview/en-products.html"
+
