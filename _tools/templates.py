@@ -778,10 +778,10 @@ def products_index(lang):
     rows = ""
     for idx, x in enumerate(products(lang)):
         if idx == 1:
-            rows += f'<div class="section-heading reveal"><h2>{"Altri prodotti" if lang == "it" else "Other products"}</h2></div>\n'
+            rows += f'<div class="section-heading reveal product-group-heading"><h2>{"Altri prodotti" if lang == "it" else "Other products"}</h2></div>\n'
         pts = "".join(f"<li>{p}</li>" for p in pp["points"][x["key"]])
         label = x["slug"].split("//")[1].rstrip("/") + " ↗" if x.get("external") else u["more"]
-        rows += f"""<article class="product-row product-card-{x['key']} reveal">
+        rows += f"""<article class="product-row product-card-{x['key']}{" product-row-secondary" if idx else ""} reveal">
 <div><p class="eyebrow">{x['eyebrow']}</p><h2>{x['nav']}</h2><p class="product-card-text">{x['card']}</p>
 <a class="button primary" href="{x['slug']}"{ext(x['slug'])}>{label}</a>{(' <a class="button ghost" href="' + x['site'] + '" target="_blank" rel="noreferrer">' + x['site'].split('//')[1].rstrip('/') + ' ↗</a>') if x.get('site') else ''}</div>
 <div class="product-side">{(lambda s: f'<img class="product-thumb" src="{s[0]}" alt="{s[3]}" width="{s[1]}" height="{s[2]}" loading="lazy" decoding="async">' if s else '')(PRODUCT_SHOTS.get(x["key"]))}<ul class="status-list">{pts}</ul></div>
@@ -798,7 +798,7 @@ def products_index(lang):
         drive_desc = "Incremental backup, file versions and recovery for businesses. SmartDrive is standalone or optionally integrated with SmartAgent, with simple multi-device management."
         drive_more = "Explore SmartDrive →"
         drive_points = ["Windows, Mac, Android and iPhone", "Photo, video, folder and selected data backup", "Standalone or with SmartAgent", "File versioning and recovery"]
-    rows += f"""<article class="product-row product-card-smartdrive reveal">
+    rows += f"""<article class="product-row product-card-smartdrive product-row-secondary reveal">
 <div><p class="eyebrow">{drive_label}</p><h2>{drive_title}</h2><p class="product-card-text">{drive_desc}</p>
 <a class="button primary" href="{drive_target}">{drive_more}</a></div>
 <div class="product-side"><ul class="status-list">{''.join(f'<li>{p}</li>' for p in drive_points)}</ul></div>
