@@ -7,6 +7,9 @@ on:
       - 'script.js'
       - 'index.html'
       - 'en.html'
+      - 'interconnessione-macchine-industria-4-0.html'
+      - 'en-machine-interconnection.html'
+      - 'sitemap.xml'
       - 'composer.json'
       - '.github/workflows/contact-form-checks.yml'
 
@@ -26,5 +29,7 @@ jobs:
         run: |
           grep -q 'api/contact.php' index.html
           grep -q 'api/contact.php' en.html
+          grep -q 'api/contact.php' interconnessione-macchine-industria-4-0.html
+          grep -q 'api/contact.php' en-machine-interconnection.html
           grep -q 'out.postassl.it' api/contact.php
           grep -q 'siteverify' api/contact.php
