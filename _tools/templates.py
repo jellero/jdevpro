@@ -259,10 +259,12 @@ def header(current, lang="it", home=False, switch=None):
     pp = PRODUCTS_PAGE[lang]
     prods = products(lang)
     drive_slug = "smartdrive.html" if lang == "it" else "en-smartdrive.html"
-    active = current in (pp["slug"], drive_slug) or any(x["slug"] == current for x in prods)
+    active = current in (pp["slug"], drive_slug, "digital-receptionist.html", "en-digital-receptionist.html") or any(x["slug"] == current for x in prods)
     psub = f'<a class="nav-sub-all" href="{pp["slug"]}"{cur(current == pp["slug"])}>{"Tutti i prodotti" if lang == "it" else "All products"} →</a>\n' + "\n".join(
         f'<a href="{x["slug"]}"{ext(x["slug"])}{cur(x["slug"] == current)}>{x["nav"]}{" ↗" if x.get("external") else ""}</a>' for x in prods)
     psub += f'\n<a href="{drive_slug}"{cur(current == drive_slug)}>SmartDrive · {"presto disponibile" if lang == "it" else "coming soon"}</a>'
+    receptionist_slug = "digital-receptionist.html" if lang == "it" else "en-digital-receptionist.html"
+    psub += f'\n<a href="{receptionist_slug}"{cur(current == receptionist_slug)}>Digital Receptionist · {"in sviluppo" if lang == "it" else "in development"}</a>'
     links += (f'<div class="nav-group{" is-current" if active else ""}">'
               f'<a class="nav-group-label" href="{pp["slug"]}">{pp["nav"]} <span aria-hidden="true">▾</span></a>'
               f'<div class="nav-sub">\n{psub}\n</div></div>\n')
@@ -817,6 +819,26 @@ def products_index(lang):
 <div class="product-side"><ul class="status-list">{''.join(f'<li>{p}</li>' for p in drive_points)}</ul></div>
 </article>
 """
+    receptionist_slug = "digital-receptionist.html" if lang == "it" else "en-digital-receptionist.html"
+    if lang == "it":
+        receptionist_label = "Progetto in sviluppo"
+        receptionist_desc = ("Digital Receptionist è l'assistente AI per le telefonate che stiamo sviluppando. "
+                             "Il motore conversazionale testuale funziona già; voce, VoIP e integrazioni gestionali "
+                             "non sono ancora disponibili.")
+        receptionist_cta = "Scopri lo stato del progetto →"
+    else:
+        receptionist_label = "Project in development"
+        receptionist_desc = ("Digital Receptionist is an AI telephone assistant under development. "
+                             "The text-based engine is already implemented; voice, VoIP and business software "
+                             "integrations are not yet available.")
+        receptionist_cta = "View development status →"
+    dev_teaser = f"""<section class="section section-tight section-white" id="progetti-in-sviluppo">
+<div class="shell">
+<div class="section-heading reveal"><p class="eyebrow">{receptionist_label}</p>
+<h2>Digital Receptionist</h2><p>{receptionist_desc}</p>
+<a class="card-link" href="{receptionist_slug}">{receptionist_cta}</a></div>
+</div></section>
+"""
     jsonld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": pp["nav"], "description": pp["desc"], "url": url_of(pp["slug"]),
                "hasPart": [{"@type": "CreativeWork", "name": x["nav"], "url": x["slug"] if x.get("external") else BASE + x["slug"]} for x in products(lang)]
                + [{"@type": "SoftwareApplication", "name": "SmartDrive", "url": BASE + drive_target}]},
@@ -837,7 +859,7 @@ def products_index(lang):
 <div class="shell product-rows">
 {rows}</div>
 </section>
-{contact(lang)}</main>
+{dev_teaser}{contact(lang)}</main>
 """
     return head(pp["title"], pp["desc"], pp["slug"], jsonld, lang,
                 alternates=[("it", PRODUCTS_PAGE["it"]["slug"]), ("en", PRODUCTS_PAGE["en"]["slug"])]) + body + footer(lang)
@@ -1203,8 +1225,13 @@ def guide(g):
     url = url_of(g["slug"])
     parts = [f'<h2>{h}</h2>\n' + "\n".join(render_block(b) for b in blocks) for h, blocks in g["sections"]]
     # la guida può portare a un servizio o a un prodotto
-    target = next((dict(p, label=p["card_title"], key=p["slug"]) for p in PAGES if p["slug"] == g["cta"]), None) or \
-        next(dict(x, label=x["nav"]) for x in PRODUCTS["it"] if x["slug"] == g["cta"])
+    target = (
+        next((dict(p, label=p["card_title"], key=p["slug"]) for p in PAGES if p["slug"] == g["cta"]), None)
+        or next((dict(x, label=x["nav"]) for x in PRODUCTS["it"] if x["slug"] == g["cta"]), None)
+        or next((dict(a, label=a["nav"]) for a in AREAS["it"] if a["slug"] == g["cta"]), None)
+    )
+    if target is None:
+        raise ValueError(f"Guida {g['slug']}: CTA sconosciuta {g['cta']}")
     cta = g.get("contact") or CTAS.get(target["key"], {}).get("it")
     inline_h = cta[0] if cta else "Vuoi capire se fa per te?"
     parts.insert(1, f'<div class="article-cta"><p><strong>{inline_h}</strong> Rispondiamo per iscritto entro 24 ore.</p>'
@@ -1838,6 +1865,10 @@ def product_page(pr, lang):
                    "serviceType": "ERP", "provider": {"@id": ORG_ID}, "areaServed": "IT",
                    "offers": {"@type": "Offer", "priceCurrency": "EUR",
                               "priceSpecification": {"@type": "PriceSpecification", "minPrice": 990, "priceCurrency": "EUR"}}}
+    elif pr["key"] == "receptionist":
+        main_ld = {"@context": "https://schema.org", "@type": "SoftwareApplication",
+                   "name": "Digital Receptionist", "description": pr["desc"], "url": url,
+                   "applicationCategory": "BusinessApplication", "publisher": {"@id": ORG_ID}}
     elif pr["key"] == "akios":
         main_ld = {"@context": "https://schema.org", "@type": "Product", "name": "AKIOS", "description": pr["desc"], "url": url,
                    "brand": {"@type": "Brand", "name": "AKIOS"}, "manufacturer": {"@id": ORG_ID}, "sameAs": ["https://akios.cloud/", "https://akios-pilot.com/"]}
@@ -1937,7 +1968,7 @@ for old, target in OLD_URLS.items():
 
 urls = (["", "en.html"] + [p["slug"] for p in PAGES] + [EN_SLUG[p["slug"]] for p in PAGES]
         + [c["slug"] for c in CITIES] + ["guide.html", TEST["slug"]] + [g["slug"] for g in GUIDES]
-        + [x["slug"] for l in ("it", "en") for x in PRODUCTS[l] if not x.get("external")] + ["smartdrive.html", "en-smartdrive.html"] + [a["slug"] for l in ("it", "en") for a in AREAS[l]] + [PRODUCTS_PAGE["it"]["slug"], PRODUCTS_PAGE["en"]["slug"], WHERE_PAGE["slug"], PARTNERS["slug"]] + ["casi-studio-industriali.html", "en-industrial-case-studies.html"] + ["chi-siamo.html", "en-about.html", "come-lavoriamo.html", "en-how-we-work.html", "privacy.html", "privacy-en.html", "cookie-policy.html", "cookie-policy-en.html"])
+        + [x["slug"] for l in ("it", "en") for x in PRODUCTS[l] if not x.get("external")] + ["smartdrive.html", "en-smartdrive.html", "smartdrive-privacy.html"] + [a["slug"] for l in ("it", "en") for a in AREAS[l]] + [PRODUCTS_PAGE["it"]["slug"], PRODUCTS_PAGE["en"]["slug"], WHERE_PAGE["slug"], PARTNERS["slug"]] + ["casi-studio-industriali.html", "en-industrial-case-studies.html"] + ["chi-siamo.html", "en-about.html", "come-lavoriamo.html", "en-how-we-work.html", "privacy.html", "privacy-en.html", "cookie-policy.html", "cookie-policy-en.html"])
 sitemap = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 sitemap += [f"  <url><loc>{BASE}{u}</loc><lastmod>{TODAY}</lastmod></url>" for u in urls]
 sitemap.append("</urlset>")
