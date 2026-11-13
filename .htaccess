@@ -1,3 +1,11 @@
+# Header di sicurezza: applicati quando Apache mod_headers è disponibile.
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
 # Usato solo se il server passa le richieste ad Apache (Plesk nginx + Apache).
 <IfModule mod_rewrite.c>
 RewriteEngine On
