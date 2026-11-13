@@ -247,6 +247,40 @@ PRODUCTS = {
       ],
     ),
     dict(
+      key="receptionist", dev=True, slug="digital-receptionist.html", nav="Digital Receptionist",
+      title="Digital Receptionist: assistente AI per le telefonate | JDEVPRO",
+      desc="Digital Receptionist è il progetto JDEVPRO per gestire le chiamate con un assistente AI. Motore testuale disponibile; voce, centralini VoIP e connettori sono ancora in sviluppo.",
+      card="Assistente AI telefonico in sviluppo: raccoglie richieste e prepara schede strutturate. Il motore conversazionale testuale funziona già; la gestione delle telefonate reali non è ancora disponibile.",
+      eyebrow="Progetto in sviluppo · AI e telefonia",
+      h1="Digital Receptionist: <span>un assistente AI per le chiamate, collegato ai tuoi sistemi.</span>",
+      lead="Digital Receptionist è un progetto JDEVPRO in sviluppo. L’obiettivo è rispondere al telefono in italiano, capire la richiesta e trasformarla in una scheda utile o in un’azione autorizzata nel gestionale. Il motore conversazionale testuale e le API sono implementati; riconoscimento e sintesi vocale, integrazione con i centralini VoIP e connettori gestionali non sono ancora pronti per l’utilizzo telefonico reale.",
+      links=[],
+      blocks=[
+        ("cards", "Cosa vogliamo risolvere", "Meno chiamate perse e richieste da ricopiare.", "", [
+          ("Risposta con linguaggio naturale", "L'assistente dichiarerà sempre di essere virtuale e dialogherà senza menu numerici; la parte vocale è ancora in sviluppo."),
+          ("Schede chiamata ordinate", "Dal dialogo ricava motivo, recapiti confermati, urgenza e dati mancanti, con riepiloghi strutturati."),
+          ("Regole prima delle azioni", "Le future operazioni su appuntamenti e gestionali passeranno da controlli applicativi, senza lasciare decisioni non autorizzate al modello."),
+          ("Compatibilità con la telefonia esistente", "È prevista un'architettura ad adattatori per SIP e PBX, senza imporre un nuovo centralino. Il connettore telefonico è pianificato."),
+        ]),
+        ("flow", "Architettura", "Un motore, diversi canali e sistemi aziendali.", [
+          ("Motore conversazionale", "La conversazione testuale, l'estrazione dei dati e la classificazione delle richieste sono già implementate."),
+          ("Adattatore vocale", "Riconoscimento e sintesi del parlato sono in sviluppo e non ancora disponibili per le chiamate."),
+          ("Centralino VoIP", "Il collegamento a SIP e PBX e lo smistamento delle chiamate sono pianificati."),
+          ("Connettori gestionali", "Integrazioni con SmartAgent, Welora, CRM e calendari previste, non ancora operative."),
+        ]),
+        ("status", "Stato del progetto", "Cosa è pronto e cosa manca.", [
+          "Disponibili nel repository: motore conversazionale testuale, API, raccolta e validazione dati, priorità, riepiloghi e notifiche.",
+          "Base di conoscenza strutturata, con contenuti ancora da completare e approvare.",
+          "In sviluppo: adattatore per riconoscimento e sintesi vocale.",
+          "Pianificati: telefonia VoIP, trasferimento chiamate e connettori a gestionali e agende.",
+        ], "Progetto in sviluppo: non è attualmente un centralino AI pronto per l'uso e non è disponibile un servizio telefonico commerciale."),
+        ("split", "Collaborazioni future", "Dalla telefonia al gestionale, senza promesse premature.", [
+          "L'obiettivo è collegare il sistema a centralini già in uso e a gestionali come SmartAgent e Welora, mantenendo nel software aziendale la verifica di disponibilità, prezzi e autorizzazioni.",
+          "Per informazioni sul progetto e sulle possibili integrazioni puoi scrivere a info@jdevpro.it. Nessuna data di lancio è stata annunciata.",
+        ], ["Motore testuale e API", "Adattatori telefonici previsti", "Connettori gestionali previsti", "Regole e validazioni applicative"]),
+      ],
+    ),
+    dict(
       key="akios", dev=True, slug="https://akios.cloud/", external=True, nav="AKIOS",
       title="AKIOS: aggiornamenti sicuri e ripristino per dispositivi IoT | JDEVPRO",
       desc="AKIOS governa il ciclo di vita dei dispositivi IoT: aggiornamenti firmati in prova, ritorno automatico e ripristino locale. Per produttori europei e CRA.",
@@ -572,6 +606,40 @@ PRODUCTS = {
           "The software is based on ERPNext, an ERP platform used by thousands of companies worldwide. We design it around your production, connect it to SdI, fiscal printers, machines and tablets, and look after it over time.",
           "Your data is yours: the database can be exported at any time in standard formats and handed to you or another supplier. ERPNext is a trademark of Frappe Technologies; JDEVPRO is not affiliated with Frappe.",
         ], ["No per-user licences", "Data always exportable", "Cloud, server or NAS"]),
+      ],
+    ),
+    dict(
+      key="receptionist", dev=True, slug="en-digital-receptionist.html", nav="Digital Receptionist",
+      title="Digital Receptionist: AI telephone assistant | JDEVPRO",
+      desc="Digital Receptionist is JDEVPRO's AI phone assistant project. The text-based engine and API are implemented; voice, VoIP integration and business software connectors are still in development.",
+      card="AI phone assistant under development. The text-based conversation engine and structured call summaries are implemented, but live telephone handling is not yet available.",
+      eyebrow="Project in development · AI and telephony",
+      h1="Digital Receptionist: <span>an AI telephone assistant connected to your business systems.</span>",
+      lead="Digital Receptionist is a JDEVPRO project under development. Its goal is to answer calls in natural Italian, understand requests and turn conversations into structured records or authorised actions. The text-based engine and API already exist; speech recognition and synthesis, VoIP connectivity and business software connectors are not yet ready for real telephone calls.",
+      links=[],
+      blocks=[
+        ("cards", "The goal", "Fewer missed calls and less manual data entry.", "", [
+          ("Natural conversation", "The assistant will identify itself as virtual and avoid keypad menus. Live voice operation is still in development."),
+          ("Structured call records", "The text engine extracts the request, confirmed contact details, urgency and missing information."),
+          ("Rule-controlled actions", "Future bookings and CRM updates will be validated by application rules rather than authorised by the language model alone."),
+          ("Existing phone systems", "The architecture is designed for SIP and PBX adapters without requiring a replacement phone system. The VoIP adapter is planned."),
+        ]),
+        ("flow", "Architecture", "One conversation engine, multiple channels and business systems.", [
+          ("Conversation engine", "Text-based conversations, data extraction and classification are implemented."),
+          ("Voice adapter", "Speech recognition and synthesis are being developed and are not yet available for telephone calls."),
+          ("VoIP integration", "SIP/PBX connectivity and call routing are planned."),
+          ("Business connectors", "SmartAgent, Welora, CRM and calendar integration is planned, not operational yet."),
+        ]),
+        ("status", "Development status", "What works and what is still missing.", [
+          "Implemented in the repository: text engine, API, data validation, priorities, summaries and notifications.",
+          "Knowledge base structure exists; content still needs review and approval.",
+          "In development: speech recognition and synthesis adapter.",
+          "Planned: VoIP connectivity, call transfers and connectors to business software.",
+        ], "This is a development project, not a production-ready telephone service. No commercial launch date has been announced."),
+        ("split", "Future integrations", "Telephony and business software without premature claims.", [
+          "The goal is to connect existing phone systems with software such as SmartAgent and Welora, while keeping pricing, availability and authorisation checks within the business application.",
+          "For project and integration enquiries, contact info@jdevpro.it. No launch date has been announced.",
+        ], ["Text engine and API", "Planned VoIP adapters", "Planned CRM connectors", "Application-level safeguards"]),
       ],
     ),
     dict(
