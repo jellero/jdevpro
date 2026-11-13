@@ -480,6 +480,7 @@ HOME_BODY = {
 <p class="eyebrow">JDEVPRO · Software e integrazione per le imprese</p>
 <h1>Interconnessione macchine 4.0: <span>25 macchine collegate in 15 aziende.</span></h1>
 <p class="hero-lead">Colleghiamo PLC, CNC e macchine industriali ai gestionali aziendali, con collaudo e documentazione tecnica.</p>
+<p class="hero-price">Interconnessione macchine <strong>da 1.500 €</strong> · preventivo dopo verifica tecnica. <a href="interconnessione-macchine-industria-4-0.html">Dettagli e condizioni →</a></p>
 <div class="hero-actions">
 <a class="button primary" href="#contatto">Richiedi una verifica tecnica</a>
 <a class="button ghost" href="interconnessione-macchine-industria-4-0.html">Scopri come lavoriamo</a>
@@ -499,7 +500,7 @@ HOME_BODY = {
 <div class="proof-grid proof-links reveal">
 <a href="casi-studio-industriali.html#scm-maestro-active"><strong>Bordatrice SCM · Maestro Active</strong><span>Stato e allarmi in tempo reale, commesse gestite dalla macchina, produzione acquisita e costi per commessa.</span></a>
 <a href="casi-studio-industriali.html#cnc-essetre"><strong>CNC Essetre / Tecnoessetre</strong><span>Più macchine in un'unica schermata, file di lavoro, eventi di commessa, magazzino e report.</span></a>
-<a href="gestionale-produzione-erpnext.html"><strong>Gestionale e MES</strong><span>Macchine, commesse e avanzamento della produzione collegati al gestionale: dati raccolti da PLC e CNC, senza reinserimenti manuali.</span></a>
+<a href="casi-studio-industriali.html#gestionale-mes"><strong>Gestionale e MES</strong><span>Nei lavori SCM ed Essetre, dati macchina, commesse e avanzamento della produzione collegati al gestionale.</span></a>
 </div>
 </div>
 </section>
@@ -577,6 +578,7 @@ HOME_BODY = {
 <p class="eyebrow">JDEVPRO · Software and systems integration for businesses</p>
 <h1>Industrial machine integration: <span>25 machines connected in 15 companies.</span></h1>
 <p class="hero-lead">We connect industrial PLCs, CNCs and machines to existing business software, with testing and technical documentation.</p>
+<p class="hero-price">Machine integration <strong>from €1,500</strong> · quoted after a technical assessment. <a href="en-machine-interconnection.html">Pricing details →</a></p>
 <div class="hero-actions">
 <a class="button primary" href="#contatto">Request a technical review</a>
 <a class="button ghost" href="en-machine-interconnection.html">How we work</a>
@@ -596,7 +598,7 @@ HOME_BODY = {
 <div class="proof-grid proof-links reveal">
 <a href="en-industrial-case-studies.html#scm-maestro-active"><strong>SCM edgebander · Maestro Active</strong><span>Live status and alarms, work orders managed by the machine, automatic production data and job costing.</span></a>
 <a href="en-industrial-case-studies.html#cnc-essetre"><strong>Essetre / Tecnoessetre CNC</strong><span>Multiple machines in one view, job events, work files, inventory and reports.</span></a>
-<a href="en-erpnext-manufacturing.html"><strong>ERP and MES</strong><span>Machines, production orders and shop-floor progress linked to business software, with data collected from PLCs and CNCs.</span></a>
+<a href="en-industrial-case-studies.html#gestionale-mes"><strong>ERP and MES</strong><span>Real SCM and Essetre integrations connecting machine data, production jobs and shop-floor progress to business software.</span></a>
 </div></div></section>
 <section class="section section-tight section-white" id="project-delivery">
 <div class="shell">
