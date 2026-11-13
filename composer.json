@@ -1,0 +1,9 @@
+{
+  "name": "jdevpro/contact-form",
+  "description": "Backend SMTP per il modulo contatto JDEVPRO",
+  "type": "project",
+  "require": {
+    "php": "^8.1",
+    "phpmailer/phpmailer": "^6.10"
+  }
+}
