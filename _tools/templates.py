@@ -534,7 +534,7 @@ HOME_BODY = {
 <section class="section section-tight section-white why-band">
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">Perché JDEVPRO</p><h2>Un referente tecnico, <span>dall’analisi al collaudo.</span></h2></div>
-<div class="reveal"><p class="why-copy">JDEVPRO è l’attività tecnica di Jacopo Ellero: un referente unico che segue il progetto dalla verifica iniziale al collaudo e alla documentazione. Per cablaggi e quadri elettrici collabora con installatori abilitati.</p><p><a class="card-link" href="chi-siamo.html">Chi siamo →</a> · <a class="card-link" href="come-lavoriamo.html">Come lavoriamo →</a></p></div>
+<div class="reveal"><p class="why-copy">JDEVPRO segue ogni progetto con un responsabile tecnico dedicato, dall’analisi al collaudo. Quando servono interventi specialistici, coordina installatori abilitati e professionisti incaricati con compiti e responsabilità definiti.</p><p><a class="card-link" href="chi-siamo.html">Chi siamo →</a> · <a class="card-link" href="come-lavoriamo.html">Come lavoriamo →</a></p></div>
 </div>
 </section>
 
@@ -630,7 +630,7 @@ HOME_BODY = {
 <section class="section section-tight section-white why-band">
 <div class="shell split">
 <div class="section-heading reveal"><p class="eyebrow">Why JDEVPRO</p><h2>One technical point of contact, <span>from assessment to commissioning.</span></h2></div>
-<div class="reveal"><p class="why-copy">JDEVPRO is the technical business of Jacopo Ellero, providing one point of contact from initial assessment through testing and documentation. Qualified installers handle wiring and electrical panels.</p><p><a class="card-link" href="en-about.html">About us →</a> · <a class="card-link" href="en-how-we-work.html">How we work →</a></p></div>
+<div class="reveal"><p class="why-copy">JDEVPRO follows each project through a dedicated technical lead, from assessment through commissioning. Qualified installers and specialist professionals are involved where required, with responsibilities defined for each engagement.</p><p><a class="card-link" href="en-about.html">About us →</a> · <a class="card-link" href="en-how-we-work.html">How we work →</a></p></div>
 </div>
 </section>
 
