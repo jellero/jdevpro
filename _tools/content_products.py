@@ -11,10 +11,10 @@ PRODUCTS = {
       key="smartagent", slug="smartagent.html", site="https://smartagent.jdevpro.it/", nav="SmartAgent",
       title="SmartAgent: gestionale per professionisti e agenti | JDEVPRO",
       desc="SmartAgent unisce clienti, email e PEC, agenda e giro visite, preventivi, fatture e spese. Gestionale per professionisti e agenti, da 29,90 € al mese.",
-      card="SmartAgent è in preparazione: il gestionale riunirà clienti, mail, agenda con giro visite, pratiche, preventivi, fatture e documenti. SmartDrive è un pacchetto separato, utilizzabile anche senza SmartAgent (in arrivo). Piani SmartAgent previsti da 29,90 € al mese.",
+      card="SmartAgent riunisce clienti, posta, agenda, giro visite, pratiche, preventivi, fatture e documenti. SmartDrive è un pacchetto separato, utilizzabile anche senza SmartAgent.",
       eyebrow="Prodotto · Gestionale per professionisti e agenti",
       h1="SmartAgent: meno tempo in ufficio, <span>più tempo dai clienti.</span>",
-      lead="SmartAgent riunisce clienti, mail, appuntamenti, giro visite, pratiche, preventivi, fatture, documenti e spese in un'unica app che si aggiorna da sola. Colleghi posta, calendario e rubrica che usi già: le mail vanno nella scheda giusta, la giornata si organizza sulla mappa e il lavoro fatto diventa preventivo, fattura e rimborso senza ricopiare niente. SmartDrive è un pacchetto autonomo, utilizzabile da solo o integrato in SmartAgent per organizzare i file di clienti e pratiche. In arrivo.",
+      lead="SmartAgent riunisce clienti, mail, appuntamenti, giro visite, pratiche, preventivi, fatture, documenti e spese in un'unica app che si aggiorna da sola. Colleghi posta, calendario e rubrica che usi già: le mail vanno nella scheda giusta, la giornata si organizza sulla mappa e il lavoro fatto diventa preventivo, fattura e rimborso senza ricopiare niente. SmartDrive è un pacchetto autonomo, utilizzabile da solo o integrato in SmartAgent per organizzare i file di clienti e pratiche..",
       links=[("Scopri SmartAgent ↗", "https://smartagent.jdevpro.it/")],
       blocks=[
         ("cards", "Il problema", "Il lavoro è dai clienti, ma il tempo se ne va a organizzarlo.", "", [
@@ -74,7 +74,7 @@ PRODUCTS = {
           "SmartAgent si collega a Gmail, Microsoft 365, Aruba, PEC e qualunque casella IMAP; a Google, Microsoft e iCloud per il calendario; alla rubrica di iPhone e Android. Le mail restano anche nella tua casella e gli appuntamenti si aggiornano nei due sensi.",
           "Funziona dal browser su computer, tablet e telefono, senza installare niente. Con le API e i webhook si collega al tuo gestionale o al tuo sito.",
         ], ["Posta e PEC", "Calendario nei due sensi", "Rubrica del telefono", "API e webhook"]),
-        ("prices", "Prezzi", "Un prezzo chiaro per SmartAgent: SmartDrive è separato.", "Piani previsti per il lancio. Prova di 30 giorni prevista, con carta di pagamento verificata e senza addebiti durante la prova.", [
+        ("prices", "Prezzi", "Un prezzo chiaro per SmartAgent: SmartDrive è separato.", "Informazioni sui piani e sulle configurazioni. Prova di 30 giorni prevista, con carta di pagamento verificata e senza addebiti durante la prova.", [
           ("Professionista · 1 utente", "29,90 € al mese", "Tutte le funzioni"),
           ("Studio · fino a 3 utenti", "49,90 € al mese", "Tutte le funzioni, per lavorare in squadra"),
           ("Studio Plus · fino a 6 utenti", "79,90 € al mese", "Tutte le funzioni, per studi più grandi"),
@@ -87,21 +87,21 @@ PRODUCTS = {
         ], "Prezzi IVA esclusa."),
         ("split", "Il sito di SmartAgent", "Tutto il resto è su smartagent.jdevpro.it.", [
           "Su <a href='https://smartagent.jdevpro.it/' target='_blank' rel='noreferrer'>smartagent.jdevpro.it</a> trovi la presentazione completa con le schermate, i mestieri, SmartDrive, la firma digitale e i prezzi.",
-          "Il lancio e l'attivazione della prova saranno comunicati sul sito SmartAgent. La prova prevista sarà di 30 giorni, con carta di pagamento verificata e senza addebiti durante il periodo gratuito.",
-        ], ["Presentazione del prodotto", "Prova prevista al lancio", "Informazioni sullo sviluppo"]),
-        ("status", "Stato e prossime novità", "SmartAgent è in preparazione al lancio.", [
-          "Lancio ancora da completare; prova di 30 giorni prevista con carta di pagamento verificata e senza addebiti durante la prova",
-          "SmartDrive in arrivo: archivio e backup autonomi, utilizzabili anche senza SmartAgent",
-          "A breve la firma digitale: firmi con la tua firma remota e i clienti firmano dal telefono",
+          "Per conoscere i piani e le condizioni consulta il sito SmartAgent. La prova prevista sarà di 30 giorni, con carta di pagamento verificata e senza addebiti durante il periodo gratuito.",
+        ], ["Presentazione del prodotto", "Informazioni sui piani", "Informazioni sullo sviluppo"]),
+        ("status", "Stato e prossime novità", "Organizza clienti, pratiche e documenti in un’unica piattaforma.", [
+          "Gestione clienti, posta, agenda e attività",
+          "SmartDrive: archivio e backup autonomi, anche senza SmartAgent",
+          "Firma elettronica e gestione dei documenti",
           "Database separato per ogni attività, verifica in due passaggi e dati sempre esportabili",
-        ], "Le funzioni «a breve» non sono ancora disponibili."),
+        ], "Le funzionalità e le integrazioni vanno definite in fase di configurazione."),
       ],
     ),
     dict(
       key="welora", slug="https://welora.it/", external=True, nav="Welora",
       title="Welora: gestionale per strutture ricettive a 29 € al mese | JDEVPRO",
       desc="Welora riunisce PMS, booking engine, canali, check-in, pagamenti, fatture, pulizie, cassa e automazioni per B&B e hotel. 29 € al mese, tutto incluso.",
-      card="In pre-lancio, disponibile dal 15 febbraio 2027: il gestionale completo per B&B, affittacamere e hotel, tutto incluso a 29 € al mese.",
+      card="Welora è il gestionale per B&B, affittacamere e hotel: PMS, booking engine, canali, check-in online, pagamenti, fatture, pulizie e cassa, in un’unica piattaforma.",
       eyebrow="Prodotto · Gestionale per strutture ricettive",
       h1="Welora: tutto il gestionale della struttura <span>a 29 € al mese.</span>",
       lead="Welora riunisce in un solo gestionale PMS, booking engine, canali OTA, check-in digitale, pagamenti e POS, fatture, pulizie, cassa e automazioni, tutti sugli stessi dati. Per B&B, affittacamere, hotel e attività su prenotazione.",
@@ -128,9 +128,9 @@ PRODUCTS = {
         ], ["Importazione guidata", "Reception e turni", "Pulizie dal telefono", "Cassa e prima nota", "Domotica e serrature"]),
         ("split", "Prezzo", "29 € al mese, tutto incluso.", [
           "Nessun modulo da sbloccare e nessun piano superiore. Si paga in più solo ciò che ha un costo reale: 10 € al mese per ogni canale OTA oltre il primo.",
-          "Prezzi IVA esclusa. Le commissioni dei provider esterni (pagamenti, verifica dell'identità, portali) sono a parte. In pre-lancio su welora.it si può bloccare lo sconto del 50% per 12 mesi.",
+          "Prezzi IVA esclusa. Le commissioni dei provider esterni (pagamenti, verifica dell'identità, portali) sono a parte. Le condizioni economiche e i dettagli del servizio sono sul sito Welora.",
         ], ["Tutte le funzioni incluse", "Nessuna commissione sulle prenotazioni dirette", "Passaggio da altri gestionali senza perdere dati"]),
-        ("status", "Stato", "In pre-lancio, arrivo previsto il 15 febbraio 2027.", [
+        ("status", "Stato", "Gestionale dedicato alla gestione operativa delle strutture ricettive.", [
           "Piattaforma con 25 moduli, dalle prenotazioni alla cassa",
           "Motore di automazione separato, che non perde dati se un servizio è fermo",
           "Collegamenti con Booking.com, Stripe, Alloggiati Web, ISTAT, fatturazione elettronica, termostati",
@@ -249,11 +249,11 @@ PRODUCTS = {
     dict(
       key="receptionist", slug="digital-receptionist.html", nav="Digital Receptionist",
       title="Digital Receptionist: receptionist AI per aziende | JDEVPRO",
-      desc="Digital Receptionist è il receptionist AI di JDEVPRO: risponde alle telefonate, riconosce le richieste, gestisce prenotazioni e si integra con VoIP e gestionali. A breve disponibile.",
-      card="Il receptionist AI per la tua azienda: risponde in italiano senza menu numerici, filtra e smista le chiamate, gestisce appuntamenti e richieste, invia notifiche e aggiorna i sistemi aziendali. Prodotto sviluppato, a breve disponibile.",
-      eyebrow="Prodotto · Receptionist AI · A breve disponibile",
+      desc="Digital Receptionist è il receptionist AI di JDEVPRO: risponde alle telefonate, riconosce le richieste, gestisce prenotazioni e si integra con VoIP e gestionali. Software per telefonia e sistemi gestionali.",
+      card="Digital Receptionist risponde in italiano naturale, filtra e smista le chiamate, gestisce appuntamenti, richieste, notifiche e integrazioni VoIP e gestionali.",
+      eyebrow="Prodotto · Receptionist AI",
       h1="Digital Receptionist: <span>il receptionist AI che risponde e lavora con i tuoi sistemi.</span>",
-      lead="Digital Receptionist è il nostro receptionist AI per aziende, professionisti e strutture ricettive. Risponde alle chiamate in italiano naturale, si presenta come assistente virtuale e comprende cosa serve al cliente. Può rispondere direttamente, filtrare e smistare, oppure intervenire quando non risponde nessuno. Si integra con centralini VoIP, gestionali, CRM e agende per raccogliere dati, gestire appuntamenti, disdette, note e avvisi. Il prodotto è sviluppato; la disponibilità commerciale è prevista a breve.",
+      lead="Digital Receptionist è il nostro receptionist AI per aziende, professionisti e strutture ricettive. Risponde alle chiamate in italiano naturale, si presenta come assistente virtuale e comprende cosa serve al cliente. Può rispondere direttamente, filtrare e smistare, oppure intervenire quando non risponde nessuno. Si integra con centralini VoIP, gestionali, CRM e agende per raccogliere dati, gestire appuntamenti, disdette, note e avvisi.",
       links=[],
       blocks=[
         ("cards", "Cosa fa", "Dalla telefonata a un'azione concreta.", "", [
@@ -274,12 +274,12 @@ PRODUCTS = {
           ("Azione", "Smista la chiamata o interagisce con agenda e gestionale secondo le autorizzazioni configurate."),
           ("Tracciamento", "Crea una scheda strutturata e notifica il referente quando occorre."),
         ]),
-        ("status", "Disponibilità", "Prodotto sviluppato. A breve disponibile.", [
+        ("status", "Disponibilità", "Receptionist AI per telefonia e gestionali.", [
           "Motore conversazionale, interfaccia vocale e gestione delle richieste.",
           "Connettori per centralini VoIP e per gestionali, CRM e agende.",
           "Prenotazioni, disdette, avvisi, smistamento e schede chiamata.",
           "Configurazione e compatibilità da verificare sulla telefonia e sui sistemi del cliente.",
-        ], "A breve disponibile. Prezzi, modalità di attivazione e data di apertura saranno comunicati successivamente."),
+        ], "Configurazione e compatibilità dipendono dal centralino e dai gestionali utilizzati."),
         ("split", "Controllo e affidabilità", "L'AI propone, il software verifica.", [
           "I contenuti della base di conoscenza vengono approvati dall'azienda. Prezzi, disponibilità, permessi e operazioni sono verificati dalle regole applicative e dal gestionale collegato.",
           "Digital Receptionist si presenta sempre come assistente virtuale. Ogni implementazione viene configurata in base alle procedure dell'azienda e all'infrastruttura telefonica esistente.",
@@ -381,10 +381,10 @@ PRODUCTS = {
       key="smartagent", slug="en-smartagent.html", site="https://smartagent.jdevpro.it/", nav="SmartAgent",
       title="SmartAgent: CRM for professionals and agents | JDEVPRO",
       desc="SmartAgent brings clients, email, appointments, routes, quotes and invoices into one app for professionals and sales agents. In Italian, from €29.90/month.",
-      card="SmartAgent is being prepared: the management app will bring together clients, email, route planning, cases, quotes, invoices and documents. SmartDrive is a separate package you can use without SmartAgent (coming soon). SmartAgent plans expected from €29.90/month.",
+      card="SmartAgent brings together customers, email, calendars, route planning, cases, quotes, invoices and documents. SmartDrive is a separate package, also usable without SmartAgent.",
       eyebrow="Product · Management software for professionals and agents",
       h1="SmartAgent: less time in the office, <span>more time with clients.</span>",
-      lead="SmartAgent brings clients, email, appointments, route planning, cases, quotes, invoices, documents and expenses into one app that keeps itself up to date. Connect the email, calendar and contacts you already use: emails land in the right client record, your day is planned on a map, and finished work becomes a quote, an invoice and a mileage claim without retyping. SmartDrive is a standalone package for storage and backup, with optional SmartAgent integration for client and case files. Coming soon. The SmartAgent app is in Italian.",
+      lead="SmartAgent brings clients, email, appointments, route planning, cases, quotes, invoices, documents and expenses into one app that keeps itself up to date. Connect the email, calendar and contacts you already use: emails land in the right client record, your day is planned on a map, and finished work becomes a quote, an invoice and a mileage claim without retyping. SmartDrive is a standalone package for storage and backup, with optional SmartAgent integration for client and case files.. The SmartAgent interface is in Italian.",
       links=[("Explore SmartAgent ↗", "https://smartagent.jdevpro.it/")],
       blocks=[
         ("cards", "The problem", "Your work is with clients, but organising it eats your time.", "", [
@@ -459,10 +459,10 @@ PRODUCTS = {
           "On <a href='https://smartagent.jdevpro.it/' target='_blank' rel='noreferrer'>smartagent.jdevpro.it</a> you find the full presentation (in Italian) with screenshots, trades, SmartDrive, digital signatures and pricing.",
           "Launch and trial activation details will be published on the SmartAgent website. A 30-day trial is planned with payment-card verification and no charge during the trial period.",
         ], ["Product overview", "Trial planned for launch", "Development information"]),
-        ("status", "Status and what's next", "SmartAgent is being prepared for launch.", [
-          "Launch is still in preparation; a 30-day trial with verified payment card and no charge during the trial is planned",
-          "SmartDrive coming soon: standalone storage and backup, also usable without SmartAgent",
-          "Coming soon digital signatures: sign with your remote digital signature, clients sign from their phone",
+        ("status", "Status and what's next", "One workspace for customers, cases, documents and daily work.", [
+          "Customer records, email, calendar and task management",
+          "SmartDrive: standalone storage and backup, also without SmartAgent",
+          "Digital signatures and document workflows",
           "Separate database for each business, two-step verification and data always exportable",
         ], "\"Coming soon\" features are not available yet."),
       ],
@@ -471,7 +471,7 @@ PRODUCTS = {
       key="welora", slug="https://welora.it/", external=True, nav="Welora",
       title="Welora: property management software for €29/month | JDEVPRO",
       desc="Welora brings PMS, booking engine, channels, check-in, payments, invoices, housekeeping, till and automation together for B&Bs and hotels. €29/month, all in.",
-      card="Pre-launch, available from 15 February 2027: complete management software for B&Bs, guest houses and hotels, everything included for €29 a month.",
+      card="Welora brings PMS, booking engine, channels, online check-in, payments, invoicing, housekeeping and cash management together for B&Bs and hotels.",
       eyebrow="Product · Hospitality management software",
       h1="Welora: all your property software <span>for €29 a month.</span>",
       lead="Welora brings PMS, booking engine, OTA channels, digital check-in, payments and POS, invoices, housekeeping, till and automation into one system, on the same data. For B&Bs, guest houses, hotels and booking-based businesses.",
@@ -498,9 +498,9 @@ PRODUCTS = {
         ], ["Guided import", "Reception and shifts", "Housekeeping on the phone", "Till and ledger", "Smart building and locks"]),
         ("split", "Price", "€29 a month, all included.", [
           "No modules to unlock and no higher plans. You only pay extra for real costs: €10 a month for each OTA channel beyond the first.",
-          "Prices exclude VAT. External provider fees (payments, identity checks, portals) are separate. During pre-launch you can lock a 50% discount for 12 months on welora.it.",
+          "Prices exclude VAT. External provider fees (payments, identity checks, portals) are separate. See the Welora website for commercial terms and product information.",
         ], ["All features included", "No commission on direct bookings", "Switch without losing data"]),
-        ("status", "Status", "Pre-launch, expected on 15 February 2027.", [
+        ("status", "Status", "Hospitality management platform for B&Bs, guest houses and hotels.", [
           "Platform with 25 modules, from bookings to the till",
           "Separate automation engine that loses no data when a service is down",
           "Connections with Booking.com, Stripe, Italian police and statistics portals, e-invoicing, thermostats",
@@ -618,10 +618,10 @@ PRODUCTS = {
       key="receptionist", slug="en-digital-receptionist.html", nav="Digital Receptionist",
       title="Digital Receptionist: AI phone receptionist for business | JDEVPRO",
       desc="JDEVPRO Digital Receptionist answers calls, routes requests, handles appointments and connects with VoIP, CRM and business software. Product developed, coming soon.",
-      card="An AI receptionist for your business: answers in natural Italian without keypad menus, filters and routes calls, handles appointments and requests, sends notifications and connects with business systems. Developed and coming soon.",
+      card="Digital Receptionist answers in natural Italian, screens and routes calls, handles appointments and requests, and connects with VoIP and business software.",
       eyebrow="Product · AI receptionist · Coming soon",
       h1="Digital Receptionist: <span>the AI receptionist that answers and works with your systems.</span>",
-      lead="Digital Receptionist is JDEVPRO's AI receptionist for businesses, professionals and hospitality. It answers calls in natural Italian, identifies itself as a virtual assistant and understands each caller's request. It can answer directly, screen and route calls, or cover busy lines and out-of-hours calls. It integrates with VoIP phone systems, business software, CRMs and calendars to collect details, handle appointments and cancellations, add notes and send alerts. The product is developed and will be available soon.",
+      lead="Digital Receptionist is JDEVPRO's AI receptionist for businesses, professionals and hospitality. It answers calls in natural Italian, identifies itself as a virtual assistant and understands each caller's request. It can answer directly, screen and route calls, or cover busy lines and out-of-hours calls. It integrates with VoIP phone systems, business software, CRMs and calendars to collect details, handle appointments and cancellations, add notes and send alerts.",
       links=[],
       blocks=[
         ("cards", "Features", "From phone call to useful action.", "", [
@@ -642,12 +642,12 @@ PRODUCTS = {
           ("Act", "Routes the call or uses calendars and connected software within configured permissions."),
           ("Record", "Creates structured call summaries and alerts staff when needed."),
         ]),
-        ("status", "Availability", "Developed product. Coming soon.", [
+        ("status", "Availability", "AI receptionist for calls and business software.", [
           "Conversation engine, voice interface and request handling.",
           "VoIP/SIP-PBX and business software, CRM and calendar connectors.",
           "Bookings, cancellations, notifications, call routing and structured summaries.",
           "Installation and compatibility assessed for each customer environment.",
-        ], "Coming soon. Pricing, activation and launch date will be announced separately."),
+        ], "Configuration and compatibility depend on each phone system and business application."),
         ("split", "Control and reliability", "The AI proposes; the software validates.", [
           "Company-approved knowledge is used for responses. Prices, availability, permissions and transactions are checked by application rules and the connected business system.",
           "Digital Receptionist always identifies itself as a virtual assistant. Each implementation is configured around the company's procedures and existing telephony.",
