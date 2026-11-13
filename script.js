@@ -43,7 +43,7 @@
         if (!header?.contains(event.target)) closeMenu();
       });
       window.addEventListener('resize', () => {
-        if (window.matchMedia('(min-width: 761px)').matches) closeMenu();
+        if (window.matchMedia('(min-width: 1101px)').matches) closeMenu();
       }, { passive: true });
     }
 
