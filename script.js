@@ -206,8 +206,8 @@
     privacy: 'Privacy',
     policy: 'Cookie policy',
     settings: 'Cookie preferences',
-    privacyHref: 'privacy-en.html',
-    policyHref: 'cookie-policy-en.html'
+    privacyHref: 'privacy-en',
+    policyHref: 'cookie-policy-en'
   } : {
     title: 'Preferenze cookie',
     body: 'Questo sito usa solo memorizzazione tecnica necessaria e, soltanto con il tuo consenso, Google Analytics per misurare le visite e capire come viene usato il sito.',
@@ -216,8 +216,8 @@
     privacy: 'Privacy',
     policy: 'Cookie policy',
     settings: 'Preferenze cookie',
-    privacyHref: 'privacy.html',
-    policyHref: 'cookie-policy.html'
+    privacyHref: 'privacy',
+    policyHref: 'cookie-policy'
   };
 
   function injectStyles() {
