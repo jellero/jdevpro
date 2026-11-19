@@ -27,6 +27,11 @@ RewriteRule ^privacy-policy-en(?:\.html)?/?$ /privacy-en [R=301,L]
 RewriteCond %{THE_REQUEST} \s/+index\.html(?:[\s?]) [NC]
 RewriteRule ^index\.html$ / [R=301,L]
 
+# Anche /index e /pagina/ puntano a una sola URL canonica.
+RewriteRule ^index/?$ / [R=301,L]
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([A-Za-z0-9][A-Za-z0-9_-]*)/$ /$1 [R=301,L]
+
 # Le richieste pubbliche *.html vanno alla versione canonica senza estensione.
 # THE_REQUEST evita loop dovuti alla riscrittura interna della regola successiva.
 RewriteCond %{THE_REQUEST} \s/+[^\s?]+\.html(?:[\s?]) [NC]
