@@ -1,4 +1,4 @@
-# Header di sicurezza: applicati quando Apache mod_headers è disponibile.
+# Sicurezza HTTP, quando mod_headers e disponibile.
 <IfModule mod_headers.c>
 Header always set X-Content-Type-Options "nosniff"
 Header always set Referrer-Policy "strict-origin-when-cross-origin"
@@ -6,28 +6,37 @@ Header always set X-Frame-Options "SAMEORIGIN"
 Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
 </IfModule>
 
-# Usato solo se il server passa le richieste ad Apache (Plesk nginx + Apache).
+# URL canoniche prive di estensione. Configurazione Apache (Plesk nginx + Apache).
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteRule ^chi-sono\.html$ /chi-siamo.html [R=301,L]
 
-# Un solo indirizzo: https://www.jdevpro.it
+# Non esporre sorgenti del generatore.
+RewriteRule ^_tools(?:/|$) - [F,L]
+
+# Dominio canonico.
 RewriteCond %{HTTP_HOST} ^jdevpro\.it$ [NC]
 RewriteRule ^(.*)$ https://www.jdevpro.it/$1 [R=301,L]
 
-# Indirizzi del sito precedente ancora presenti su Google
-RewriteRule ^privacy-policy/?$ /privacy.html [R=301,L]
-RewriteRule ^privacy-policy\.html$ /privacy.html [R=301,L]
-RewriteRule ^privacy/?$ /privacy.html [R=301,L]
-RewriteRule ^cookie-policy/?$ /cookie-policy.html [R=301,L]
-RewriteRule ^privacy-policy-en/?$ /privacy-en.html [R=301,L]
-RewriteRule ^privacy-en/?$ /privacy-en.html [R=301,L]
-RewriteRule ^cookie-policy-en/?$ /cookie-policy-en.html [R=301,L]
+# Vecchi indirizzi da conservare per SEO e link esterni.
+RewriteRule ^chi-sono(?:\.html)?/?$ /chi-siamo [R=301,L]
+RewriteRule ^domotica-home-assistant(?:\.html)?/?$ /domotica-professionale [R=301,L]
+RewriteRule ^privacy-policy(?:\.html)?/?$ /privacy [R=301,L]
+RewriteRule ^privacy-policy-en(?:\.html)?/?$ /privacy-en [R=301,L]
+
+# Una sola homepage, anche se qualcuno digita /index.html.
+RewriteCond %{THE_REQUEST} \s/+index\.html(?:[\s?]) [NC]
+RewriteRule ^index\.html$ / [R=301,L]
+
+# Le richieste pubbliche *.html vanno alla versione canonica senza estensione.
+# THE_REQUEST evita loop dovuti alla riscrittura interna della regola successiva.
+RewriteCond %{THE_REQUEST} \s/+[^\s?]+\.html(?:[\s?]) [NC]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+
+# Apache continua a servire gli HTML originali, senza cambiare file o directory.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([A-Za-z0-9][A-Za-z0-9_-]*)$ $1.html [L]
 </IfModule>
 
 ErrorDocument 404 /404.html
-
-# Il generatore non va servito al pubblico
-<IfModule mod_rewrite.c>
-RewriteRule ^_tools/ - [F,L]
-</IfModule>
