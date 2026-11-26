@@ -517,3 +517,22 @@
 .interconnection-form .interconnection-form-status[data-state="pending"]{color:#1e40af;font-weight:650}
 .interconnection-form button[type="submit"]:disabled{cursor:wait;opacity:.7}
 @media(max-width:760px){.contact-success{margin-top:20px;min-height:260px;scroll-margin-block:72px}}
+
+/* Accessible foregrounds on light surfaces. Keep the bright blue on navy cards. */
+.outcome .card-link,
+:is(.section-white,.section-paper) p > .card-link:not(:where(.section-dark *, .contact-card *, .example *, .tier *, .project-card *, .featured-project *, .article-cta *, .competence-cta *)),
+:is(.section-white,.section-paper) .section-heading > .card-link {
+  color:#164c93;
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+}
+.outcome .card-link:hover,
+:is(.section-white,.section-paper) p > .card-link:not(:where(.section-dark *, .contact-card *, .example *, .tier *, .project-card *, .featured-project *, .article-cta *, .competence-cta *)):hover,
+:is(.section-white,.section-paper) .section-heading > .card-link:hover {color:#10366c}
+/* The outer dark contact card sets pale paragraph text; override it inside the white form only. */
+.interconnection-form > p:not([data-state]),
+.contact-card .interconnection-form > p:not([data-state]) {color:#40566e}
+.interconnection-form .interconnection-disclaimer a {color:#164c93;text-decoration:underline;text-underline-offset:2px}
+.interconnection-fields input::placeholder,
+.interconnection-fields textarea::placeholder {color:#526070;opacity:1}
