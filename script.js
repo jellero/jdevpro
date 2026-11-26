@@ -422,14 +422,43 @@
     document.querySelectorAll('[data-interconnection-form], [data-support-form]').forEach(form => {
       const status = form.querySelector('[data-form-status], [data-support-status]');
       const submit = form.querySelector('[type="submit"]');
+      const idleLabel = submit.textContent;
       let sending = false;
+      const showSuccess = () => {
+        const confirmation = document.createElement('section');
+        confirmation.className = 'contact-success';
+        confirmation.setAttribute('aria-labelledby', 'contact-success-title');
+        confirmation.setAttribute('tabindex', '-1');
+        const icon = document.createElement('span');
+        icon.className = 'contact-success-icon';
+        icon.setAttribute('aria-hidden', 'true');
+        icon.textContent = '✓';
+        const title = document.createElement('h3');
+        title.id = 'contact-success-title';
+        title.textContent = en ? 'Request sent!' : 'Richiesta inviata!';
+        const message = document.createElement('p');
+        message.textContent = en
+          ? 'Thank you for contacting us. We have received your request and will reply to the email address you provided.'
+          : 'Grazie per averci contattato. Abbiamo ricevuto la tua richiesta e ti risponderemo all’indirizzo email che hai indicato.';
+        confirmation.append(icon, title, message);
+        form.replaceWith(confirmation);
+        confirmation.focus({ preventScroll: true });
+        confirmation.scrollIntoView({ block: 'center', behavior: 'instant' });
+      };
+      const showError = message => {
+        status.dataset.state = 'error';
+        status.textContent = message;
+        status.scrollIntoView({ block: 'nearest', behavior: 'instant' });
+      };
       form.addEventListener('submit', async event => {
         event.preventDefault();
         if (sending || !form.reportValidity()) return;
         sending = true;
         submit.disabled = true;
+        submit.textContent = en ? 'Sending…' : 'Invio in corso…';
         form.setAttribute('aria-busy', 'true');
-        status.textContent = en ? 'Sending…' : 'Invio in corso…';
+        status.dataset.state = 'pending';
+        status.textContent = en ? 'Sending your request…' : 'Invio della richiesta in corso…';
         try {
           const response = await fetch(form.action, {
             method: 'POST', headers: { Accept: 'application/json' },
@@ -437,16 +466,16 @@
           });
           const result = await response.json();
           if (!response.ok || result.ok !== true) {
-            status.textContent = result.message || (en ? 'Could not send. Please try again.' : 'Invio non riuscito. Riprova.');
+            showError(result.message || (en ? 'Could not send. Please try again.' : 'Invio non riuscito. Riprova.'));
             return;
           }
-          form.reset();
-          status.textContent = result.message;
+          showSuccess();
         } catch (_) {
-          status.textContent = en ? 'Sending could not be confirmed. Please try again later or contact info@jdevpro.it.' : 'Impossibile confermare l’invio. Riprova più tardi o contatta info@jdevpro.it.';
+          showError(en ? 'Sending could not be confirmed. Please try again later or contact info@jdevpro.it.' : 'Impossibile confermare l’invio. Riprova più tardi o contatta info@jdevpro.it.');
         } finally {
           sending = false;
           submit.disabled = false;
+          submit.textContent = idleLabel;
           form.removeAttribute('aria-busy');
         }
       });
