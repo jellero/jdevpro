@@ -419,40 +419,69 @@
 (() => {
   const init = () => {
     const en = (document.documentElement.lang || 'it').startsWith('en');
-    document.querySelectorAll('[data-interconnection-form], [data-support-form]').forEach(form => {
+    const moveTo = (element, block) => {
+      try { element.scrollIntoView({ block, behavior: 'auto' }); } catch (_) {}
+    };
+    document.querySelectorAll('[data-interconnection-form], [data-support-form]').forEach((form, index) => {
       const status = form.querySelector('[data-form-status], [data-support-status]');
       const submit = form.querySelector('[type="submit"]');
       const idleLabel = submit.textContent;
       let sending = false;
+      let sent = false;
+      const titleText = en ? 'Request sent!' : 'Richiesta inviata!';
+      const messageText = en
+        ? 'Thank you for contacting us. We have received your request and will reply to the email address you provided.'
+        : 'Grazie per averci contattato. Abbiamo ricevuto la tua richiesta e ti risponderemo all’indirizzo email che hai indicato.';
+      // Prepare the confirmation before submitting, not after the server accepts the email.
+      const confirmation = document.createElement('section');
+      confirmation.className = 'contact-success';
+      confirmation.setAttribute('aria-labelledby', 'contact-success-title-' + index);
+      confirmation.setAttribute('tabindex', '-1');
+      const icon = document.createElement('span');
+      icon.className = 'contact-success-icon';
+      icon.setAttribute('aria-hidden', 'true');
+      icon.textContent = '✓';
+      const title = document.createElement('h3');
+      title.id = 'contact-success-title-' + index;
+      title.textContent = titleText;
+      const message = document.createElement('p');
+      message.textContent = messageText;
+      confirmation.appendChild(icon);
+      confirmation.appendChild(title);
+      confirmation.appendChild(message);
       const showSuccess = () => {
-        const confirmation = document.createElement('section');
-        confirmation.className = 'contact-success';
-        confirmation.setAttribute('aria-labelledby', 'contact-success-title');
-        confirmation.setAttribute('tabindex', '-1');
-        const icon = document.createElement('span');
-        icon.className = 'contact-success-icon';
-        icon.setAttribute('aria-hidden', 'true');
-        icon.textContent = '✓';
-        const title = document.createElement('h3');
-        title.id = 'contact-success-title';
-        title.textContent = en ? 'Request sent!' : 'Richiesta inviata!';
-        const message = document.createElement('p');
-        message.textContent = en
-          ? 'Thank you for contacting us. We have received your request and will reply to the email address you provided.'
-          : 'Grazie per averci contattato. Abbiamo ricevuto la tua richiesta e ti risponderemo all’indirizzo email che hai indicato.';
-        confirmation.append(icon, title, message);
-        form.replaceWith(confirmation);
-        confirmation.focus({ preventScroll: true });
-        confirmation.scrollIntoView({ block: 'center', behavior: 'instant' });
+        // SMTP success is already established. Presentation cannot change the send result.
+        try {
+          form.parentNode.replaceChild(confirmation, form);
+        } catch (error) {
+          console.error('Contact confirmation rendering:', error);
+          form.textContent = '';
+          form.className = 'contact-success';
+          form.appendChild(icon);
+          form.appendChild(title);
+          form.appendChild(message);
+          form.setAttribute('tabindex', '-1');
+          try { form.focus(); } catch (_) {}
+          moveTo(form, 'center');
+          return;
+        }
+        try { confirmation.focus({ preventScroll: true }); } catch (_) {}
+        moveTo(confirmation, 'center');
       };
       const showError = message => {
         status.dataset.state = 'error';
         status.textContent = message;
-        status.scrollIntoView({ block: 'nearest', behavior: 'instant' });
+        moveTo(status, 'nearest');
+      };
+      const httpError = code => {
+        if (code === 429) return en ? 'Too many requests. Please wait a few minutes before trying again.' : 'Troppe richieste. Attendi qualche minuto prima di riprovare.';
+        if (code === 422) return en ? 'Check the required fields and try again.' : 'Controlla i campi obbligatori e riprova.';
+        return en ? 'Unable to confirm submission (HTTP ' + code + '). Contact info@jdevpro.it.'
+          : 'Impossibile confermare l’invio (HTTP ' + code + '). Contatta info@jdevpro.it.';
       };
       form.addEventListener('submit', async event => {
         event.preventDefault();
-        if (sending || !form.reportValidity()) return;
+        if (sending || sent || !form.reportValidity()) return;
         sending = true;
         submit.disabled = true;
         submit.textContent = en ? 'Sending…' : 'Invio in corso…';
@@ -460,23 +489,38 @@
         status.dataset.state = 'pending';
         status.textContent = en ? 'Sending your request…' : 'Invio della richiesta in corso…';
         try {
-          const response = await fetch(form.action, {
-            method: 'POST', headers: { Accept: 'application/json' },
-            body: new URLSearchParams(new FormData(form)), credentials: 'same-origin'
-          });
-          const result = await response.json();
-          if (!response.ok || result.ok !== true) {
-            showError(result.message || (en ? 'Could not send. Please try again.' : 'Invio non riuscito. Riprova.'));
+          let response;
+          let raw;
+          try {
+            response = await fetch(form.action, {
+              method: 'POST', headers: { Accept: 'application/json' },
+              body: new URLSearchParams(new FormData(form)), credentials: 'same-origin'
+            });
+            raw = await response.text();
+          } catch (error) {
+            console.error('Contact request network failure:', error);
+            showError(en ? 'Connection interrupted. Submission could not be confirmed. Contact info@jdevpro.it.' : 'Connessione interrotta. Impossibile confermare l’invio. Contatta info@jdevpro.it.');
             return;
           }
+          let result;
+          try { result = JSON.parse(raw); } catch (_) {
+            console.error('Contact endpoint returned non-JSON', { status: response.status, contentType: response.headers.get('content-type') });
+            showError(httpError(response.status));
+            return;
+          }
+          if (!response.ok || result?.ok !== true) {
+            showError(typeof result?.message === 'string' && result.message ? result.message : httpError(response.status));
+            return;
+          }
+          sent = true;
           showSuccess();
-        } catch (_) {
-          showError(en ? 'Sending could not be confirmed. Please try again later or contact info@jdevpro.it.' : 'Impossibile confermare l’invio. Riprova più tardi o contatta info@jdevpro.it.');
         } finally {
           sending = false;
-          submit.disabled = false;
-          submit.textContent = idleLabel;
           form.removeAttribute('aria-busy');
+          if (!sent) {
+            submit.disabled = false;
+            submit.textContent = idleLabel;
+          }
         }
       });
     });
