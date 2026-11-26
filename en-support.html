@@ -62,11 +62,14 @@
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="en">Home</a><span>/</span><span aria-current="page">Support</span></nav>
 <p class="eyebrow">JDEVPRO · Technical support</p><h1>Technical support: <span>one place for requests about deployed systems.</span></h1>
 <p class="hero-lead">For software, industrial machine integrations and connected systems handled by JDEVPRO, support scope, priorities and intervention arrangements depend on the agreed service.</p>
-<div class="hero-actions"><a class="button primary" href="#request">Prepare support email</a><a class="button ghost" href="en-how-we-work">Method and validation</a></div></div></section>
+<div class="hero-actions"><a class="button primary" href="#request">Send support request</a><a class="button ghost" href="en-how-we-work">Method and validation</a></div></div></section>
 <section class="section section-tight section-white" id="request"><div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">Support</p><h2>Prepare a support request</h2>
-<p>This form prepares an email in your email application. It does not automatically create a ticket or send data through the website. You must send the message yourself.</p></div>
-<div class="contact-card"><form data-support-form action="mailto:info@jdevpro.it" method="post" enctype="text/plain" class="interconnection-form">
+<p>This form sends the request directly to our email service. It does not automatically create a ticket.</p></div>
+<div class="contact-card"><form data-support-form action="/contact.php" method="post" class="interconnection-form">
+<input type="hidden" name="kind" value="support">
+<input type="hidden" name="lang" value="en">
+<div hidden aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></div>
 <div class="interconnection-fields">
 <label>Company or organisation<input name="company" autocomplete="organization" maxlength="120" required></label>
 <label>Contact email<input name="email" type="email" autocomplete="email" maxlength="160" required></label>
@@ -74,10 +77,10 @@
 <label>Operational impact<select name="impact" required><option value="Normal">Ordinary request</option><option value="Degraded">Partially unavailable</option><option value="Stopped">Operations stopped</option></select></label>
 <label>Describe the issue<textarea name="description" rows="5" minlength="15" maxlength="3000" required></textarea></label>
 </div>
-<label><input name="consent" type="checkbox" required> I have read the <a href="privacy-en">Privacy Policy</a> and will send this request using my email application.</label>
-<div class="hero-actions"><button type="submit" class="button primary">Prepare support email</button><button type="button" class="button ghost dark" data-support-copy>Copy request</button></div>
+<label><input name="consent" type="checkbox" required> I have read the <a href="privacy-en">Privacy Policy</a>.</label>
+<div class="hero-actions"><button type="submit" class="button primary">Send support request</button></div>
 <p data-support-status class="interconnection-form-status" aria-live="polite"></p>
-<p class="catalog-note">No automatic submission. Support scope and any guaranteed response times must be agreed in writing.</p>
+<p class="catalog-note">Submission does not guarantee acceptance. Support scope and any guaranteed response times must be agreed in writing.</p>
 </form></div></div></section>
 <section class="section section-tight section-paper"><div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">Support</p><h2>How requests are handled</h2>
@@ -107,6 +110,6 @@
 </div>
 <div class="shell"><div class="footer-local"><a href="en-machine-interconnection">Machine interconnection 4.0</a><a href="en-custom-business-software">Custom business software</a><a href="en-software-integration-api">Integrations and automation</a><a href="en-data-migration">Data migration</a><a href="en-iot-monitoring">IoT and energy monitoring</a><a href="en-hotel-bnb-automation">Hotel and B&B automation</a><a href="en-home-assistant-automation">Professional building automation</a><a href="en-video-surveillance-intercom-access">Video surveillance, intercoms and access</a><a href="en-voip-phone-systems">VoIP phone systems</a><a href="en-offgrid-internet">Off-grid internet and remote sites</a><a href="en-websites-platforms">Websites and platforms</a></div></div>
 </footer>
-<script src="script.js?v=20261113support"></script>
+<script src="script.js?v=20261126smtp"></script>
 </body>
 </html>

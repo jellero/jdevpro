@@ -382,7 +382,7 @@
   document.addEventListener('submit', (event) => {
     if (!analyticsLoaded || !(event.target instanceof Element)) return;
     if (event.target.matches('[data-interconnection-form]'))
-      window.gtag('event', 'contact_intent', {channel:'email_draft', page_path:location.pathname});
+      window.gtag('event', 'contact_intent', {channel:'contact_form', page_path:location.pathname});
   });
 
   ready(() => {
@@ -415,88 +415,43 @@
 })();
 
 
-/* Interconnection enquiry: compose/copy locally; no backend transmission. */
+/* Contact and support: HTTPS submission; SMTP stays server-side. */
 (() => {
   const init = () => {
     const en = (document.documentElement.lang || 'it').startsWith('en');
-    for (const form of document.querySelectorAll('[data-interconnection-form]')) {
-      const status = form.querySelector('[data-form-status]');
-      const detail = () => {
-        const d = new FormData(form);
-        const value = key => String(d.get(key) || '').trim();
-        const labels = en
-          ? [['company','Company'],['email','Contact email'],['machine','Machine make and model'],['machines','Number of machines'],['erp','Current business software'],['location','Location'],['notes','Details']]
-          : [['company','Azienda'],['email','Email di contatto'],['machine','Marca e modello macchina'],['machines','Numero macchine'],['erp','Gestionale attuale'],['location','Località'],['notes','Dati da collegare / note']];
-        const subject = (en ? 'Machine interconnection review - ' : 'Verifica interconnessione macchine - ') + value('company') + ' - JDEVPRO';
-        const body = (en ? 'Hello JDEVPRO, I would like a technical review.\n\n' : 'Buongiorno JDEVPRO, richiedo una verifica tecnica.\n\n')
-          + labels.map(([key,label]) => label + ': ' + (value(key) || '—')).join('\n') + '\n';
-        return { subject, body };
-      };
-      form.addEventListener('submit', event => {
+    document.querySelectorAll('[data-interconnection-form], [data-support-form]').forEach(form => {
+      const status = form.querySelector('[data-form-status], [data-support-status]');
+      const submit = form.querySelector('[type="submit"]');
+      let sending = false;
+      form.addEventListener('submit', async event => {
         event.preventDefault();
-        if (!form.reportValidity()) return;
-        const {subject,body} = detail();
-        status.textContent = en ? 'Your email application should open. Please confirm sending there.' : 'Si apre il programma di posta: conferma lì l’invio del messaggio.';
-        window.location.href = 'mailto:info@jdevpro.it?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-      });
-      const copy = form.querySelector('[data-lead-copy]');
-      if (copy) copy.addEventListener('click', async () => {
-        if (!form.reportValidity()) return;
-        const {subject,body} = detail();
+        if (sending || !form.reportValidity()) return;
+        sending = true;
+        submit.disabled = true;
+        form.setAttribute('aria-busy', 'true');
+        status.textContent = en ? 'Sending…' : 'Invio in corso…';
         try {
-          await navigator.clipboard.writeText(subject + '\n\n' + body);
-          status.textContent = en ? 'Request copied. Paste it into an email to info@jdevpro.it.' : 'Richiesta copiata. Incollala in un’email a info@jdevpro.it.';
+          const response = await fetch(form.action, {
+            method: 'POST', headers: { Accept: 'application/json' },
+            body: new URLSearchParams(new FormData(form)), credentials: 'same-origin'
+          });
+          const result = await response.json();
+          if (!response.ok || result.ok !== true) {
+            status.textContent = result.message || (en ? 'Could not send. Please try again.' : 'Invio non riuscito. Riprova.');
+            return;
+          }
+          form.reset();
+          status.textContent = result.message;
         } catch (_) {
-          status.textContent = en ? 'Copying is unavailable. Use Prepare email instead.' : 'Impossibile copiare. Usa il pulsante Prepara l’email.';
-        }
-      });
-    }
-  };
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, {once:true});
-  else init();
-})();
-
-/* Structured support request: prepares an email draft; does not create a server-side ticket. */
-(() => {
-  const initialize = () => {
-    const en = (document.documentElement.lang || 'it').toLowerCase().startsWith('en');
-    document.querySelectorAll('[data-support-form]').forEach((form) => {
-      const status = form.querySelector('[data-support-status]');
-      const dataText = () => {
-        const values = new FormData(form);
-        const fields = en
-          ? [['Company', 'company'], ['Contact email', 'email'], ['System', 'system'], ['Operational impact', 'impact'], ['Issue', 'description']]
-          : [['Azienda', 'company'], ['Email', 'email'], ['Sistema o commessa', 'system'], ['Impatto operativo', 'impact'], ['Problema', 'description']];
-        return fields.map(([label, name]) => label + ': ' + String(values.get(name) || '').trim()).join('\n\n');
-      };
-      const validate = () => form.reportValidity();
-      form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        if (!validate()) return;
-        const values = new FormData(form);
-        const reference = String(values.get('system') || '').trim();
-        const subject = (en ? 'JDEVPRO technical support - ' : 'JDEVPRO assistenza tecnica - ') + reference;
-        window.location.href = 'mailto:info@jdevpro.it?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(dataText());
-        if (status) status.textContent = en
-          ? 'Email draft prepared. Send it from your email app to complete the request.'
-          : "Bozza email preparata. Per completare la richiesta, inviala dal programma di posta.";
-      });
-      form.querySelector('[data-support-copy]')?.addEventListener('click', async () => {
-        if (!validate()) return;
-        try {
-          await navigator.clipboard.writeText(dataText());
-          if (status) status.textContent = en
-            ? 'Request copied. Email it to info@jdevpro.it to submit.'
-            : 'Richiesta copiata. Inviala a info@jdevpro.it per completare la segnalazione.';
-        } catch (_) {
-          if (status) status.textContent = en
-            ? 'Copy unavailable in this browser. Use the email button.'
-            : "Copia non disponibile in questo browser. Usa il pulsante per l'email.";
+          status.textContent = en ? 'Sending could not be confirmed. Please try again later or contact info@jdevpro.it.' : 'Impossibile confermare l’invio. Riprova più tardi o contatta info@jdevpro.it.';
+        } finally {
+          sending = false;
+          submit.disabled = false;
+          form.removeAttribute('aria-busy');
         }
       });
     });
   };
-  if (document.readyState === 'loading')
-    document.addEventListener('DOMContentLoaded', initialize, { once: true });
-  else initialize();
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, {once:true});
+  else init();
 })();

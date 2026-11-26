@@ -6,7 +6,7 @@ Modifica i testi in build_site.py (pagine italiane) e content_extra.py (prezzi, 
 
 
 Le pagine `casi-studio-industriali.html` ed `en-industrial-case-studies.html` sono schede redazionali HTML mantenute direttamente nel repository: il generatore non le riscrive, ma include i relativi URL nella sitemap. Nessun dato di cliente non autorizzato o metrica economica non verificata va aggiunto alle schede.
-Il modulo di verifica tecnica non invia dati dal browser a un server: prepara una bozza email e offre la copia del testo. Un invio diretto dal sito richiede la successiva configurazione di un endpoint sicuro.
+I moduli di verifica tecnica e assistenza inviano tramite `POST /contact.php`. Vedi `CONTACT-SMTP.md` per la configurazione server.
 
 Le pagine Digital Receptionist sono generate da `content_products.py`,
 `content_areas.py` e `templates.py`, nel catalogo dei prodotti.
