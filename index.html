@@ -317,9 +317,12 @@
 <h2>Raccontaci cosa devi collegare.</h2>
 <p>Descrivici i sistemi che hai, cosa vuoi ottenere e i tempi. Ti rispondiamo per iscritto entro 24 ore, con domande mirate o con una proposta.</p>
 <ol class="contact-steps" aria-label="Come funziona"><li><strong>Scrivici</strong> i sistemi presenti e l'obiettivo, anche in poche righe.</li><li><strong>Ti rispondiamo entro 24 ore</strong> con domande mirate o una proposta di incontro.</li><li><strong>Definiamo</strong> insieme perimetro, tempi e modalità di lavoro.</li></ol>
-<form class="interconnection-form" data-interconnection-form action="mailto:info@jdevpro.it" method="post" enctype="text/plain">
+<form class="interconnection-form" data-interconnection-form action="/contact.php" method="post">
+<input type="hidden" name="kind" value="interconnection">
+<input type="hidden" name="lang" value="it">
+<div hidden aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></div>
 <h3>Richiedi una verifica di interconnessione</h3>
-<p>Inserisci i dati essenziali: prepariamo la richiesta per il nostro indirizzo email.</p>
+<p>Inserisci i dati essenziali e invia la richiesta direttamente al nostro team tecnico.</p>
 <div class="interconnection-fields">
 <label>Azienda <input name="company" autocomplete="organization" maxlength="120" required placeholder="Ragione sociale"></label>
 <label>Email di contatto <input name="email" type="email" autocomplete="email" maxlength="160" required placeholder="nome@azienda.it"></label>
@@ -329,8 +332,8 @@
 <label>Provincia / località <input name="location" maxlength="100" placeholder="Dove si trovano le macchine"></label>
 <label class="field-wide">Dati da collegare o altre informazioni <textarea name="notes" rows="3" maxlength="1200" placeholder="Commesse, tempi, allarmi, produzione..."></textarea></label>
 </div>
-<div class="interconnection-form-actions"><button type="submit" class="button primary">Prepara l'email</button><button type="button" class="button ghost dark" data-lead-copy>Copia la richiesta</button></div>
-<p class="interconnection-disclaimer">Questo modulo non invia dati a un server: apre il tuo programma di posta con la richiesta compilata. L'invio avviene solo dopo la tua conferma. <a href="privacy">Privacy</a>.</p>
+<div class="interconnection-form-actions"><button type="submit" class="button primary">Invia richiesta</button></div>
+<p class="interconnection-disclaimer">La richiesta viene inviata direttamente tramite una connessione sicura al nostro servizio di posta. <a href="privacy">Privacy</a>.</p>
 <p class="interconnection-form-status" aria-live="polite" data-form-status></p>
 </form>
 </div>
@@ -351,6 +354,6 @@
 </div>
 <div class="shell"><div class="footer-local"><a href="interconnessione-macchine-industria-4-0">Interconnessione macchine 4.0</a><a href="gestionale-su-misura">Gestionali su misura</a><a href="integrazione-software-api">Integrazioni e automazioni</a><a href="migrazione-dati">Migrazione dati</a><a href="monitoraggio-iot">Monitoraggio IoT ed energia</a><a href="automazione-hotel-bnb">Automazione per hotel e B&B</a><a href="domotica-professionale">Domotica professionale</a><a href="videosorveglianza-citofonia-accessi">Videosorveglianza, citofonia e accessi</a><a href="centralini-voip-telefonia">Centralini VoIP e telefonia</a><a href="internet-offgrid-siti-remoti">Internet offgrid e siti remoti</a><a href="siti-web-piattaforme">Siti e piattaforme web</a><a href="software-gestionali-integrazioni-udine">Udine</a><a href="software-gestionali-integrazioni-pordenone">Pordenone</a><a href="software-gestionali-integrazioni-trieste-gorizia">Trieste e Gorizia</a></div></div>
 </footer>
-<script src="script.js?v=20261113scrollfix"></script>
+<script src="script.js?v=20261126smtp"></script>
 </body>
 </html>

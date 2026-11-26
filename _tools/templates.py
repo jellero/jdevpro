@@ -290,11 +290,14 @@ def header(current, lang="it", home=False, switch=None):
 """
 
 
-# Modulo statico: i dati sono inviati soltanto tramite il programma di posta del visitatore.
+# Modulo di contatto: invio HTTPS a contact.php, SMTP solo lato server.
 INQUIRY_FORM = {
-    "it": """<form class="interconnection-form" data-interconnection-form action="mailto:info@jdevpro.it" method="post" enctype="text/plain">
+    "it": """<form class="interconnection-form" data-interconnection-form action="/contact.php" method="post">
+<input type="hidden" name="kind" value="interconnection">
+<input type="hidden" name="lang" value="it">
+<div hidden aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></div>
 <h3>Richiedi una verifica di interconnessione</h3>
-<p>Inserisci i dati essenziali: prepariamo la richiesta per il nostro indirizzo email.</p>
+<p>Inserisci i dati essenziali e invia la richiesta direttamente al nostro team tecnico.</p>
 <div class="interconnection-fields">
 <label>Azienda <input name="company" autocomplete="organization" maxlength="120" required placeholder="Ragione sociale"></label>
 <label>Email di contatto <input name="email" type="email" autocomplete="email" maxlength="160" required placeholder="nome@azienda.it"></label>
@@ -304,13 +307,16 @@ INQUIRY_FORM = {
 <label>Provincia / località <input name="location" maxlength="100" placeholder="Dove si trovano le macchine"></label>
 <label class="field-wide">Dati da collegare o altre informazioni <textarea name="notes" rows="3" maxlength="1200" placeholder="Commesse, tempi, allarmi, produzione..."></textarea></label>
 </div>
-<div class="interconnection-form-actions"><button type="submit" class="button primary">Prepara l'email</button><button type="button" class="button ghost dark" data-lead-copy>Copia la richiesta</button></div>
-<p class="interconnection-disclaimer">Questo modulo non invia dati a un server: apre il tuo programma di posta con la richiesta compilata. L'invio avviene solo dopo la tua conferma. <a href="privacy.html">Privacy</a>.</p>
+<div class="interconnection-form-actions"><button type="submit" class="button primary">Invia richiesta</button></div>
+<p class="interconnection-disclaimer">La richiesta viene inviata direttamente tramite una connessione sicura al nostro servizio di posta. <a href="privacy.html">Privacy</a>.</p>
 <p class="interconnection-form-status" aria-live="polite" data-form-status></p>
 </form>""",
-    "en": """<form class="interconnection-form" data-interconnection-form action="mailto:info@jdevpro.it" method="post" enctype="text/plain">
+    "en": """<form class="interconnection-form" data-interconnection-form action="/contact.php" method="post">
+<input type="hidden" name="kind" value="interconnection">
+<input type="hidden" name="lang" value="en">
+<div hidden aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></div>
 <h3>Request an interconnection review</h3>
-<p>Add the essential details and prepare an email to our technical team.</p>
+<p>Add the essential details and send your request directly to our technical team.</p>
 <div class="interconnection-fields">
 <label>Company <input name="company" autocomplete="organization" maxlength="120" required placeholder="Company name"></label>
 <label>Contact email <input name="email" type="email" autocomplete="email" maxlength="160" required placeholder="name@company.com"></label>
@@ -320,8 +326,8 @@ INQUIRY_FORM = {
 <label>Location <input name="location" maxlength="100" placeholder="Machine location"></label>
 <label class="field-wide">Data to exchange or other details <textarea name="notes" rows="3" maxlength="1200" placeholder="Jobs, time, alarms, production..."></textarea></label>
 </div>
-<div class="interconnection-form-actions"><button type="submit" class="button primary">Prepare email</button><button type="button" class="button ghost dark" data-lead-copy>Copy request</button></div>
-<p class="interconnection-disclaimer">This form does not send data to a server. It opens your email application with the request filled in; you confirm sending there. <a href="privacy-en.html">Privacy</a>.</p>
+<div class="interconnection-form-actions"><button type="submit" class="button primary">Send request</button></div>
+<p class="interconnection-disclaimer">Your request is sent directly through a secure connection to our email service. <a href="privacy-en.html">Privacy</a>.</p>
 <p class="interconnection-form-status" aria-live="polite" data-form-status></p>
 </form>""",
 }
@@ -555,9 +561,12 @@ HOME_BODY = {
 <h2>Raccontaci cosa devi collegare.</h2>
 <p>Descrivici i sistemi che hai, cosa vuoi ottenere e i tempi. Ti rispondiamo per iscritto entro 24 ore, con domande mirate o con una proposta.</p>
 <ol class="contact-steps" aria-label="Come funziona"><li><strong>Scrivici</strong> i sistemi presenti e l'obiettivo, anche in poche righe.</li><li><strong>Ti rispondiamo entro 24 ore</strong> con domande mirate o una proposta di incontro.</li><li><strong>Definiamo</strong> insieme perimetro, tempi e modalità di lavoro.</li></ol>
-<form class="interconnection-form" data-interconnection-form action="mailto:info@jdevpro.it" method="post" enctype="text/plain">
+<form class="interconnection-form" data-interconnection-form action="/contact.php" method="post">
+<input type="hidden" name="kind" value="interconnection">
+<input type="hidden" name="lang" value="it">
+<div hidden aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></div>
 <h3>Richiedi una verifica di interconnessione</h3>
-<p>Inserisci i dati essenziali: prepariamo la richiesta per il nostro indirizzo email.</p>
+<p>Inserisci i dati essenziali e invia la richiesta direttamente al nostro team tecnico.</p>
 <div class="interconnection-fields">
 <label>Azienda <input name="company" autocomplete="organization" maxlength="120" required placeholder="Ragione sociale"></label>
 <label>Email di contatto <input name="email" type="email" autocomplete="email" maxlength="160" required placeholder="nome@azienda.it"></label>
@@ -567,8 +576,8 @@ HOME_BODY = {
 <label>Provincia / località <input name="location" maxlength="100" placeholder="Dove si trovano le macchine"></label>
 <label class="field-wide">Dati da collegare o altre informazioni <textarea name="notes" rows="3" maxlength="1200" placeholder="Commesse, tempi, allarmi, produzione..."></textarea></label>
 </div>
-<div class="interconnection-form-actions"><button type="submit" class="button primary">Prepara l'email</button><button type="button" class="button ghost dark" data-lead-copy>Copia la richiesta</button></div>
-<p class="interconnection-disclaimer">Questo modulo non invia dati a un server: apre il tuo programma di posta con la richiesta compilata. L'invio avviene solo dopo la tua conferma. <a href="privacy.html">Privacy</a>.</p>
+<div class="interconnection-form-actions"><button type="submit" class="button primary">Invia richiesta</button></div>
+<p class="interconnection-disclaimer">La richiesta viene inviata direttamente tramite una connessione sicura al nostro servizio di posta. <a href="privacy.html">Privacy</a>.</p>
 <p class="interconnection-form-status" aria-live="polite" data-form-status></p>
 </form>
 </div>
@@ -660,9 +669,12 @@ HOME_BODY = {
 <h2>Tell us what you need to connect.</h2>
 <p>Describe your systems, what you want to achieve and your timeline. We reply in writing within 24 hours, with focused questions or a proposal.</p>
 <ol class="contact-steps" aria-label="How it works"><li><strong>Write to us</strong> about your current systems and goal, even in a few lines.</li><li><strong>We reply within 24 hours</strong> with focused questions or a proposal for a meeting.</li><li><strong>We define</strong> scope, timeline and way of working together.</li></ol>
-<form class="interconnection-form" data-interconnection-form action="mailto:info@jdevpro.it" method="post" enctype="text/plain">
+<form class="interconnection-form" data-interconnection-form action="/contact.php" method="post">
+<input type="hidden" name="kind" value="interconnection">
+<input type="hidden" name="lang" value="en">
+<div hidden aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></div>
 <h3>Request an interconnection review</h3>
-<p>Add the essential details and prepare an email to our technical team.</p>
+<p>Add the essential details and send your request directly to our technical team.</p>
 <div class="interconnection-fields">
 <label>Company <input name="company" autocomplete="organization" maxlength="120" required placeholder="Company name"></label>
 <label>Contact email <input name="email" type="email" autocomplete="email" maxlength="160" required placeholder="name@company.com"></label>
@@ -672,8 +684,8 @@ HOME_BODY = {
 <label>Location <input name="location" maxlength="100" placeholder="Machine location"></label>
 <label class="field-wide">Data to exchange or other details <textarea name="notes" rows="3" maxlength="1200" placeholder="Jobs, time, alarms, production..."></textarea></label>
 </div>
-<div class="interconnection-form-actions"><button type="submit" class="button primary">Prepare email</button><button type="button" class="button ghost dark" data-lead-copy>Copy request</button></div>
-<p class="interconnection-disclaimer">This form does not send data to a server. It opens your email application with the request filled in; you confirm sending there. <a href="privacy-en.html">Privacy</a>.</p>
+<div class="interconnection-form-actions"><button type="submit" class="button primary">Send request</button></div>
+<p class="interconnection-disclaimer">Your request is sent directly through a secure connection to our email service. <a href="privacy-en.html">Privacy</a>.</p>
 <p class="interconnection-form-status" aria-live="polite" data-form-status></p>
 </form>
 </div>

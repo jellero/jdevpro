@@ -74,11 +74,14 @@
 <section class="hero page-hero"><div aria-hidden="true" class="hero-grid"></div><div class="shell page-hero-copy reveal">
 <nav aria-label="Percorso" class="breadcrumb"><a href="/">Home</a><span>/</span><span aria-current="page">Assistenza</span></nav>
 <p class="eyebrow">JDEVPRO · Assistenza</p><h1>Assistenza tecnica: <span>un riferimento per i sistemi in esercizio.</span></h1><p class="hero-lead">Per software, interconnessioni industriali, integrazioni e infrastrutture seguite da JDEVPRO, raccogliamo segnalazioni tecniche e definiamo manutenzione, priorità e modalità d'intervento in base al servizio concordato.</p>
-<div class="hero-actions"><a class="button primary" href="#richiesta">Prepara email di assistenza</a><a class="button ghost" href="come-lavoriamo">Metodo e collaudo</a></div>
+<div class="hero-actions"><a class="button primary" href="#richiesta">Invia richiesta di assistenza</a><a class="button ghost" href="come-lavoriamo">Metodo e collaudo</a></div>
 </div></section>
 <section class="section section-tight section-white" id="richiesta"><div class="shell">
-<div class="section-heading reveal"><p class="eyebrow">Assistenza</p><h2>Invia una richiesta strutturata</h2><p>Questo modulo prepara un'email sul tuo dispositivo: non crea automaticamente un ticket e non invia i dati dal sito. Per ricevere assistenza è necessario completare l'invio nel programma di posta.</p></div>
-<div class="contact-card"><form data-support-form action="mailto:info@jdevpro.it" method="post" enctype="text/plain" class="interconnection-form">
+<div class="section-heading reveal"><p class="eyebrow">Assistenza</p><h2>Invia una richiesta strutturata</h2><p>Questo modulo invia la segnalazione direttamente al nostro servizio di posta. Non crea automaticamente un ticket.</p></div>
+<div class="contact-card"><form data-support-form action="/contact.php" method="post" class="interconnection-form">
+<input type="hidden" name="kind" value="support">
+<input type="hidden" name="lang" value="it">
+<div hidden aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></div>
 <div class="interconnection-fields">
 <label>Azienda o struttura<input name="company" autocomplete="organization" maxlength="120" required></label>
 <label>Email di contatto<input name="email" type="email" autocomplete="email" maxlength="160" required></label>
@@ -86,10 +89,10 @@
 <label>Impatto sul lavoro<select name="impact" required><option value="Normale">Richiesta ordinaria</option><option value="Ridotto">Funzione parzialmente compromessa</option><option value="Blocco">Operatività bloccata</option></select></label>
 <label>Descrizione del problema<textarea name="description" rows="5" minlength="15" maxlength="3000" required></textarea></label>
 </div>
-<label><input name="consent" type="checkbox" required> Ho letto la privacy policy e userò il mio programma di posta per inviare la richiesta. <a href="privacy">Privacy</a></label>
-<div class="hero-actions"><button class="button primary" type="submit">Prepara email di assistenza</button><button class="button ghost dark" type="button" data-support-copy>Copia il testo</button></div>
+<label><input name="consent" type="checkbox" required> Ho letto l'informativa privacy. <a href="privacy">Privacy</a></label>
+<div class="hero-actions"><button class="button primary" type="submit">Invia richiesta di assistenza</button></div>
 <p class="interconnection-form-status" data-support-status aria-live="polite"></p>
-<p class="catalog-note">Nessun invio automatico dal sito. L'assistenza e gli eventuali SLA si definiscono nel contratto.</p>
+<p class="catalog-note">La conferma dell'invio non costituisce presa in carico. L'assistenza e gli eventuali SLA si definiscono nel contratto.</p>
 </form></div></div></section>
 <section class="section section-tight section-paper"><div class="shell">
 <div class="section-heading reveal"><p class="eyebrow">Assistenza</p><h2>Come gestiamo la segnalazione</h2><p>La priorità indicata aiuta a descrivere l'impatto ma non costituisce una presa in carico garantita. Per i sistemi critici valgono solo gli accordi di assistenza sottoscritti.</p></div>
@@ -111,6 +114,6 @@
 </div>
 <div class="shell"><div class="footer-local"><a href="interconnessione-macchine-industria-4-0">Interconnessione macchine 4.0</a><a href="gestionale-su-misura">Gestionali su misura</a><a href="integrazione-software-api">Integrazioni e automazioni</a><a href="migrazione-dati">Migrazione dati</a><a href="monitoraggio-iot">Monitoraggio IoT ed energia</a><a href="automazione-hotel-bnb">Automazione per hotel e B&B</a><a href="domotica-professionale">Domotica professionale</a><a href="videosorveglianza-citofonia-accessi">Videosorveglianza, citofonia e accessi</a><a href="centralini-voip-telefonia">Centralini VoIP e telefonia</a><a href="internet-offgrid-siti-remoti">Internet offgrid e siti remoti</a><a href="siti-web-piattaforme">Siti e piattaforme web</a><a href="software-gestionali-integrazioni-udine">Udine</a><a href="software-gestionali-integrazioni-pordenone">Pordenone</a><a href="software-gestionali-integrazioni-trieste-gorizia">Trieste e Gorizia</a></div></div>
 </footer>
-<script src="script.js?v=20261113support"></script>
+<script src="script.js?v=20261126smtp"></script>
 </body>
 </html>
